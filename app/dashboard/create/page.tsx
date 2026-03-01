@@ -75,7 +75,7 @@ export default function CreateExamPage() {
         if (localStorage.getItem("assessly_auth") !== "true") router.replace("/login");
     }, [router]);
 
-    const set = (key: keyof ExamForm, value: string | number) =>
+    const set = (key: keyof ExamForm, value: string | number | boolean) =>
         setForm((f) => ({ ...f, [key]: value }));
 
     // ── Step 1 → next ─────────────────────────────────────────────────────────
@@ -219,6 +219,22 @@ export default function CreateExamPage() {
                                 </div>
                             </Field>
 
+                            {/* Show Results Toggle */}
+                            <Field label="Show Results to Students">
+                                <button
+                                    type="button"
+                                    onClick={() => set("showResults", !form.showResults)}
+                                    className={`relative inline-flex h-6 w-11 items-center rounded-full border-2 transition-colors focus:outline-none ${form.showResults ? "bg-blue-600 border-blue-600" : "bg-gray-200 border-gray-300"}`}
+                                >
+                                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${form.showResults ? "translate-x-5" : "translate-x-1"}`} />
+                                </button>
+                                <p className="text-[11px] text-gray-400 mt-1">
+                                    {form.showResults
+                                        ? "Students will see their score immediately after submitting."
+                                        : "Students will see \"Your result is being processed\" after submitting."}
+                                </p>
+                            </Field>
+
                             {step1Error && (
                                 <p className="text-xs text-red-600 bg-red-50 border border-red-200 px-3 py-2 rounded-lg">{step1Error}</p>
                             )}
@@ -228,6 +244,7 @@ export default function CreateExamPage() {
                             </button>
                         </div>
                     )}
+
 
                     {/* ── MANUAL STEP 1: Enter Questions ──────────────────────── */}
                     {step === 1 && mode === "manual" && (

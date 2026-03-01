@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { getExams, deleteExam, updateExamStatus } from "@/lib/examService";
+import { getExams, deleteExam, updateExamStatus, updateShowResults } from "@/lib/examService";
 import type { DbExam } from "@/lib/examService";
 
 const statusStyle: Record<string, string> = {
@@ -68,6 +68,7 @@ export default function DashboardPage() {
     const [error, setError] = useState("");
     const [deletingId, setDeletingId] = useState<string | null>(null);
     const [togglingId, setTogglingId] = useState<string | null>(null);
+    const [togglingResultsId, setTogglingResultsId] = useState<string | null>(null);
 
     useEffect(() => {
         if (localStorage.getItem("assessly_auth") !== "true") {
@@ -126,6 +127,22 @@ export default function DashboardPage() {
             alert("Failed to update status.");
         } finally {
             setTogglingId(null);
+        }
+    };
+
+    const handleToggleShowResults = async (exam: DbExam) => {
+        const next = !exam.show_results;
+        setTogglingResultsId(exam.id);
+        // Optimistic update
+        setExams((prev) => prev.map((e) => (e.id === exam.id ? { ...e, show_results: next } : e)));
+        try {
+            await updateShowResults(exam.id, next);
+        } catch {
+            // Revert on failure
+            setExams((prev) => prev.map((e) => (e.id === exam.id ? { ...e, show_results: !next } : e)));
+            alert("Could not update — run the SQL migration in Supabase first.");
+        } finally {
+            setTogglingResultsId(null);
         }
     };
 
@@ -239,7 +256,7 @@ export default function DashboardPage() {
                         <table className="w-full text-sm">
                             <thead>
                                 <tr className="border-b border-gray-100 bg-gray-50">
-                                    {["Exam Title", "Subject", "Class", "Type", "Difficulty", "Questions", "Duration", "Status", "Created", "Actions"].map((h) => (
+                                    {["Exam Title", "Subject", "Class", "Type", "Difficulty", "Questions", "Duration", "Results Visible", "Status", "Created", "Actions"].map((h) => (
                                         <th key={h} className="px-4 py-3 text-left text-[11px] font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">{h}</th>
                                     ))}
                                 </tr>
@@ -289,8 +306,36 @@ export default function DashboardPage() {
                                                 </button>
                                             </td>
                                             <td className="px-4 py-3.5 text-xs text-gray-400 whitespace-nowrap">{formatDate(exam.created_at)}</td>
+                                            {/* Results Visible toggle */}
+                                            <td className="px-4 py-3.5 whitespace-nowrap">
+                                                <button
+                                                    onClick={() => handleToggleShowResults(exam)}
+                                                    disabled={togglingResultsId === exam.id}
+                                                    title={exam.show_results ? "Students see results — click to hide" : "Students don't see results — click to show"}
+                                                    className={`relative inline-flex h-5 w-9 items-center rounded-full border transition-colors focus:outline-none disabled:opacity-50 ${exam.show_results
+                                                            ? "bg-green-500 border-green-500"
+                                                            : "bg-gray-200 border-gray-300"
+                                                        }`}
+                                                >
+                                                    <span className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow transition-transform ${exam.show_results ? "translate-x-4" : "translate-x-1"
+                                                        }`} />
+                                                </button>
+                                            </td>
+                                            <td className="px-4 py-3.5 text-xs text-gray-400 whitespace-nowrap">{formatDate(exam.created_at)}</td>
                                             <td className="px-4 py-3.5 whitespace-nowrap">
                                                 <div className="flex items-center gap-1.5">
+                                                    <button
+                                                        onClick={() => router.push(`/dashboard/results/${exam.id}`)}
+                                                        className="text-[11px] font-semibold text-purple-600 hover:text-purple-800 px-2 py-1 rounded hover:bg-purple-50 transition-colors"
+                                                    >
+                                                        Results
+                                                    </button>
+                                                    <button
+                                                        onClick={() => router.push(`/dashboard/edit/${exam.id}`)}
+                                                        className="text-[11px] font-semibold text-blue-600 hover:text-blue-800 px-2 py-1 rounded hover:bg-blue-50 transition-colors"
+                                                    >
+                                                        Edit
+                                                    </button>
                                                     <button
                                                         onClick={() => handleDelete(exam.id)}
                                                         disabled={deletingId === exam.id}

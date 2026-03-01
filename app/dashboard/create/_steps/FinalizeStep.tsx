@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { createExam } from "@/lib/examService";
+import { createExam, updateExam } from "@/lib/examService";
 import type { Question, ExamForm, Difficulty } from "../types";
 
 interface Props {
     questions: Question[];
     form: ExamForm;
+    examId?: string; // if present → edit mode
 }
 
 function DiffBar({ counts, total }: { counts: Record<Difficulty, number>; total: number }) {
@@ -31,7 +32,7 @@ function DiffBar({ counts, total }: { counts: Record<Difficulty, number>; total:
     );
 }
 
-export default function FinalizeStep({ questions, form }: Props) {
+export default function FinalizeStep({ questions, form, examId }: Props) {
     const router = useRouter();
     const [saving, setSaving] = useState<"draft" | "publish" | null>(null);
     const [saveError, setSaveError] = useState("");
@@ -49,7 +50,11 @@ export default function FinalizeStep({ questions, form }: Props) {
         setSaving(publish ? "publish" : "draft");
         setSaveError("");
         try {
-            await createExam(form, approved, status);
+            if (examId) {
+                await updateExam(examId, form, approved, status);
+            } else {
+                await createExam(form, approved, status);
+            }
             router.push("/dashboard");
         } catch (e: unknown) {
             const msg = e instanceof Error ? e.message : "Unknown error";
@@ -147,7 +152,7 @@ export default function FinalizeStep({ questions, form }: Props) {
                 >
                     {saving === "draft"
                         ? <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>Saving…</>
-                        : <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>Save as Draft</>
+                        : <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>{examId ? "Save Changes" : "Save as Draft"}</>
                     }
                 </button>
                 <button
@@ -156,8 +161,8 @@ export default function FinalizeStep({ questions, form }: Props) {
                     className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 disabled:opacity-50 text-white font-bold text-sm px-8 py-3 rounded-lg transition-colors shadow-sm"
                 >
                     {saving === "publish"
-                        ? <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>Publishing…</>
-                        : <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Publish Exam</>
+                        ? <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>Saving…</>
+                        : <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>{examId ? "Update & Publish" : "Publish Exam"}</>
                     }
                 </button>
             </div>

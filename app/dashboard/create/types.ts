@@ -12,6 +12,7 @@ export interface Question {
   id: number;
   text: string;
   options?: Option[];
+  correctAnswer?: number; // 0-based index of the correct option (MCQ only)
   type: "MCQ" | "Theory";
   topic: string;
   commandWord: string;
@@ -33,6 +34,7 @@ export interface ExamForm {
   ratioSimple: number;
   ratioMedium: number;
   ratioHard: number;
+  showResults: boolean; // teacher controls whether student sees score
 }
 
 export const defaultForm: ExamForm = {
@@ -48,6 +50,7 @@ export const defaultForm: ExamForm = {
   ratioSimple: 40,
   ratioMedium: 40,
   ratioHard: 20,
+  showResults: true,
 };
 
 // ─── Mock question generation ────────────────────────────────────────────────

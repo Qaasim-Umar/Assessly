@@ -16,6 +16,8 @@ const difficultyColors: Record<Difficulty, string> = {
     Hard: "bg-red-100 text-red-700",
 };
 
+const LETTERS = ["A", "B", "C", "D"] as const;
+
 const blank = {
     text: "",
     type: "MCQ" as "MCQ" | "Theory",
@@ -24,6 +26,7 @@ const blank = {
     optB: "",
     optC: "",
     optD: "",
+    correctAnswer: -1, // -1 = not selected
 };
 
 export default function ManualEntryStep({ questions, onChange, onNext, onBack }: Props) {
@@ -31,13 +34,16 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
     const [editingId, setEditingId] = useState<number | null>(null);
     const [error, setError] = useState("");
 
-    const setF = (key: keyof typeof blank, val: string) => setForm((f) => ({ ...f, [key]: val }));
+    const setF = (key: keyof typeof blank, val: string | number) =>
+        setForm((f) => ({ ...f, [key]: val }));
 
     const validate = () => {
         if (!form.text.trim()) return "Question text is required.";
         if (form.type === "MCQ") {
             if (!form.optA.trim() || !form.optB.trim() || !form.optC.trim() || !form.optD.trim())
                 return "All 4 MCQ options are required.";
+            if (form.correctAnswer < 0)
+                return "Please select the correct answer.";
         }
         return "";
     };
@@ -55,7 +61,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
             commandWord: form.text.trim().split(" ")[0],
             aiDifficulty: form.difficulty,
             userDifficulty: form.difficulty,
-            approved: true, // manual questions are always approved
+            approved: true,
             options:
                 form.type === "MCQ"
                     ? [
@@ -65,6 +71,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                         { label: "D", text: form.optD.trim() },
                     ]
                     : undefined,
+            correctAnswer: form.type === "MCQ" ? form.correctAnswer : undefined,
         };
 
         if (editingId !== null) {
@@ -86,6 +93,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
             optB: q.options?.[1]?.text ?? "",
             optC: q.options?.[2]?.text ?? "",
             optD: q.options?.[3]?.text ?? "",
+            correctAnswer: q.correctAnswer ?? -1,
         });
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
@@ -158,18 +166,30 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                     </div>
                 </div>
 
-                {/* MCQ Options */}
+                {/* MCQ Options + Correct Answer */}
                 {form.type === "MCQ" && (
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                         <label className="text-xs font-bold text-gray-500 uppercase tracking-wide block">Answer Options</label>
                         <div className="grid sm:grid-cols-2 gap-2">
-                            {(["A", "B", "C", "D"] as const).map((letter, idx) => {
+                            {LETTERS.map((letter, idx) => {
                                 const key = `opt${letter}` as keyof typeof form;
+                                const isCorrect = form.correctAnswer === idx;
                                 return (
                                     <div key={letter} className="flex items-center gap-2">
-                                        <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center flex-shrink-0">{letter}</span>
+                                        {/* Correct answer toggle */}
+                                        <button
+                                            type="button"
+                                            title={`Mark ${letter} as correct answer`}
+                                            onClick={() => setF("correctAnswer", isCorrect ? -1 : idx)}
+                                            className={`w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold border-2 transition-all ${isCorrect
+                                                ? "bg-green-500 border-green-500 text-white"
+                                                : "border-gray-300 text-gray-500 hover:border-green-400 hover:text-green-600"
+                                                }`}
+                                        >
+                                            {letter}
+                                        </button>
                                         <input
-                                            className={inputCls}
+                                            className={`${inputCls} ${isCorrect ? "border-green-400 bg-green-50" : ""}`}
                                             placeholder={`Option ${letter}`}
                                             value={form[key] as string}
                                             onChange={(e) => setF(key, e.target.value)}
@@ -178,6 +198,11 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                                 );
                             })}
                         </div>
+                        <p className="text-[11px] text-gray-400">
+                            {form.correctAnswer >= 0
+                                ? <span className="text-green-600 font-semibold">✓ Correct answer: {LETTERS[form.correctAnswer]}</span>
+                                : "Click a letter (A–D) to mark the correct answer."}
+                        </p>
                     </div>
                 )}
 
@@ -216,9 +241,19 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                                 <span className="text-xs font-bold text-gray-400 mt-0.5 w-6 flex-shrink-0">Q{idx + 1}</span>
                                 <div className="flex-1 min-w-0">
                                     <p className="text-xs font-medium text-gray-800 line-clamp-2">{q.text}</p>
-                                    <div className="flex items-center gap-2 mt-1.5">
+                                    <div className="flex items-center gap-2 mt-1.5 flex-wrap">
                                         <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${q.type === "MCQ" ? "bg-blue-50 text-blue-600" : "bg-purple-50 text-purple-600"}`}>{q.type}</span>
                                         <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${difficultyColors[q.userDifficulty]}`}>{q.userDifficulty}</span>
+                                        {q.type === "MCQ" && q.correctAnswer !== undefined && q.correctAnswer >= 0 && (
+                                            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 text-green-700">
+                                                ✓ {LETTERS[q.correctAnswer]}
+                                            </span>
+                                        )}
+                                        {q.type === "MCQ" && (q.correctAnswer === undefined || q.correctAnswer < 0) && (
+                                            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-50 text-amber-600">
+                                                No answer key
+                                            </span>
+                                        )}
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-1 flex-shrink-0">
