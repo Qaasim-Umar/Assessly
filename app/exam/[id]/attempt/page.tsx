@@ -62,8 +62,16 @@ function SubmitModal({ onConfirm, onCancel, answeredCount, total }: {
 }
 
 // ─── Result Screen ─────────────────────────────────────────────────────────────
-function ResultScreen({ score, total, percentage, showResults, onHome }: {
-    score: number; total: number; percentage: number; showResults: boolean; onHome: () => void;
+function ResultScreen({
+    score, total, percentage, showResults, onHome, questions, answers,
+}: {
+    score: number;
+    total: number;
+    percentage: number;
+    showResults: boolean;
+    onHome: () => void;
+    questions: DbQuestion[];
+    answers: Record<number, number>;
 }) {
     if (!showResults) {
         return (
@@ -90,50 +98,158 @@ function ResultScreen({ score, total, percentage, showResults, onHome }: {
                 percentage >= 50 ? { label: "Pass", color: "text-amber-600", bg: "bg-amber-50 border-amber-200" } :
                     { label: "Below Pass", color: "text-red-600", bg: "bg-red-50 border-red-200" };
 
+    const OPTION_LETTERS = ["A", "B", "C", "D", "E"];
+
     return (
-        <div className="min-h-screen bg-[#f0f2f5] flex items-center justify-center px-4">
-            <div className="bg-white border border-gray-200 rounded-2xl shadow-lg max-w-sm w-full p-8 text-center">
-                {/* Score ring */}
-                <div className="relative w-28 h-28 mx-auto mb-5">
-                    <svg className="w-28 h-28 -rotate-90" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="42" fill="none" stroke="#e5e7eb" strokeWidth="10" />
-                        <circle cx="50" cy="50" r="42" fill="none"
-                            stroke={percentage >= 70 ? "#16a34a" : percentage >= 50 ? "#d97706" : "#dc2626"}
-                            strokeWidth="10"
-                            strokeDasharray={`${2 * Math.PI * 42}`}
-                            strokeDashoffset={`${2 * Math.PI * 42 * (1 - percentage / 100)}`}
-                            strokeLinecap="round" />
-                    </svg>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center">
-                        <span className="text-2xl font-extrabold text-gray-900">{percentage}%</span>
+        <div className="min-h-screen bg-[#f0f2f5] py-8 px-4">
+            <div className="max-w-2xl mx-auto space-y-5">
+
+                {/* ── Score card ── */}
+                <div className="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 text-center">
+                    <div className="relative w-28 h-28 mx-auto mb-5">
+                        <svg className="w-28 h-28 -rotate-90" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="42" fill="none" stroke="#e5e7eb" strokeWidth="10" />
+                            <circle cx="50" cy="50" r="42" fill="none"
+                                stroke={percentage >= 70 ? "#16a34a" : percentage >= 50 ? "#d97706" : "#dc2626"}
+                                strokeWidth="10"
+                                strokeDasharray={`${2 * Math.PI * 42}`}
+                                strokeDashoffset={`${2 * Math.PI * 42 * (1 - percentage / 100)}`}
+                                strokeLinecap="round" />
+                        </svg>
+                        <div className="absolute inset-0 flex flex-col items-center justify-center">
+                            <span className="text-2xl font-extrabold text-gray-900">{percentage}%</span>
+                        </div>
                     </div>
+
+                    <h2 className="text-xl font-bold text-gray-900 mb-1">Result</h2>
+                    <div className={`inline-block text-xs font-bold px-3 py-1 rounded-full border mb-4 ${grade.bg} ${grade.color}`}>
+                        {grade.label}
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3 mb-4">
+                        <div className="bg-green-50 border border-green-200 rounded-xl p-3">
+                            <p className="text-2xl font-extrabold text-green-700">{score}</p>
+                            <p className="text-xs text-green-600">Correct</p>
+                        </div>
+                        <div className="bg-red-50 border border-red-200 rounded-xl p-3">
+                            <p className="text-2xl font-extrabold text-red-600">{total - score}</p>
+                            <p className="text-xs text-red-500">Incorrect</p>
+                        </div>
+                    </div>
+
+                    <p className="text-xs text-gray-400 mb-6">{score} of {total} questions answered correctly</p>
+
+                    <button onClick={onHome} className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-lg text-sm transition-colors">
+                        Return to Dashboard
+                    </button>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-900 mb-1">Result</h2>
-                <div className={`inline-block text-xs font-bold px-3 py-1 rounded-full border mb-4 ${grade.bg} ${grade.color}`}>
-                    {grade.label}
-                </div>
+                {/* ── Per-question review ── */}
+                {questions.length > 0 && (
+                    <div className="space-y-3">
+                        <h3 className="text-sm font-bold text-gray-700 px-1">Answer Review</h3>
+                        {questions.map((q, idx) => {
+                            const isMCQ = q.options && q.options.length > 0;
+                            const chosen = answers[idx]; // undefined if skipped
+                            const correct = q.correct_answer;
 
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                    <div className="bg-gray-50 rounded-xl p-3">
-                        <p className="text-2xl font-extrabold text-gray-900">{score}</p>
-                        <p className="text-xs text-gray-500">Correct</p>
+                            // Determine outcome for MCQ
+                            const isCorrect = isMCQ && correct !== null && correct !== undefined && chosen === correct;
+                            const isWrong = isMCQ && correct !== null && correct !== undefined && chosen !== correct;
+                            const isSkipped = isMCQ && chosen === undefined;
+
+                            return (
+                                <div
+                                    key={q.id}
+                                    className={`bg-white border rounded-xl overflow-hidden shadow-sm ${isCorrect ? "border-green-300" :
+                                            isWrong ? "border-red-300" :
+                                                "border-gray-200"
+                                        }`}
+                                >
+                                    {/* Header row */}
+                                    <div className={`px-4 py-2.5 flex items-center gap-3 ${isCorrect ? "bg-green-50" :
+                                            isWrong ? "bg-red-50" :
+                                                "bg-gray-50"
+                                        }`}>
+                                        {/* Status icon */}
+                                        {isCorrect && (
+                                            <span className="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
+                                        )}
+                                        {isWrong && (
+                                            <span className="w-6 h-6 rounded-full bg-red-500 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">✗</span>
+                                        )}
+                                        {(isSkipped || !isMCQ) && (
+                                            <span className="w-6 h-6 rounded-full bg-gray-300 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">—</span>
+                                        )}
+                                        <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider">
+                                            Q{idx + 1}
+                                        </span>
+                                        <span className={`ml-auto text-[11px] font-bold ${isCorrect ? "text-green-700" :
+                                                isWrong ? "text-red-600" :
+                                                    "text-gray-400"
+                                            }`}>
+                                            {isCorrect ? "Correct" : isWrong ? "Incorrect" : isSkipped ? "Not answered" : "Theory"}
+                                        </span>
+                                    </div>
+
+                                    <div className="px-4 py-3 space-y-3">
+                                        {/* Question text */}
+                                        <p className="text-sm font-semibold text-gray-800 leading-snug">{q.text}</p>
+
+                                        {/* MCQ options */}
+                                        {isMCQ && q.options && (
+                                            <div className="space-y-1.5 mt-1">
+                                                {q.options.map((opt, oi) => {
+                                                    const letter = opt.label || OPTION_LETTERS[oi] || String(oi + 1);
+                                                    const isChosen = chosen === oi;
+                                                    const isCorrectOpt = correct === oi;
+
+                                                    let optCls = "bg-gray-50 border-gray-200 text-gray-700";
+                                                    let letterCls = "bg-gray-200 text-gray-600";
+
+                                                    if (isCorrectOpt) {
+                                                        optCls = "bg-green-50 border-green-300 text-green-800";
+                                                        letterCls = "bg-green-500 text-white";
+                                                    }
+                                                    if (isChosen && !isCorrectOpt) {
+                                                        optCls = "bg-red-50 border-red-300 text-red-700";
+                                                        letterCls = "bg-red-500 text-white";
+                                                    }
+
+                                                    return (
+                                                        <div key={oi} className={`flex items-start gap-2.5 px-3 py-2 rounded-lg border text-sm ${optCls}`}>
+                                                            <span className={`w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center text-[10px] font-bold mt-0.5 ${letterCls}`}>
+                                                                {letter}
+                                                            </span>
+                                                            <span className="font-medium leading-snug flex-1">{opt.text}</span>
+                                                            {isCorrectOpt && (
+                                                                <span className="text-green-600 font-bold text-xs mt-0.5 flex-shrink-0">✓ Correct</span>
+                                                            )}
+                                                            {isChosen && !isCorrectOpt && (
+                                                                <span className="text-red-500 font-bold text-xs mt-0.5 flex-shrink-0">Your answer</span>
+                                                            )}
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        )}
+
+                                        {/* Theory: no review since not auto-graded */}
+                                        {!isMCQ && (
+                                            <p className="text-xs text-gray-400 italic">Theory question — marked by your teacher.</p>
+                                        )}
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
-                    <div className="bg-gray-50 rounded-xl p-3">
-                        <p className="text-2xl font-extrabold text-gray-900">{total - score}</p>
-                        <p className="text-xs text-gray-500">Incorrect</p>
-                    </div>
-                </div>
+                )}
 
-                <p className="text-xs text-gray-400 mb-6">{score} of {total} questions answered correctly</p>
-
-                <button onClick={onHome} className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-lg text-sm transition-colors">
-                    Return to Dashboard
-                </button>
             </div>
         </div>
     );
 }
+
 
 // ─── Main Page ─────────────────────────────────────────────────────────────────
 export default function ExamAttemptPage() {
@@ -276,6 +392,8 @@ export default function ExamAttemptPage() {
                 percentage={result.percentage}
                 showResults={showScore}
                 onHome={() => router.push("/")}
+                questions={examData.questions}
+                answers={answers}
             />
         );
     }
