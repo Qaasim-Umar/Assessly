@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createExam, updateExam } from "@/lib/examService";
+import { getAdminProfile } from "@/lib/authService";
 import type { Question, ExamForm, Difficulty } from "../types";
 
 interface Props {
@@ -53,7 +54,8 @@ export default function FinalizeStep({ questions, form, examId }: Props) {
             if (examId) {
                 await updateExam(examId, form, approved, status);
             } else {
-                await createExam(form, approved, status);
+                const profile = await getAdminProfile();
+                await createExam(form, approved, status, profile?.school_code ?? undefined);
             }
             router.push("/dashboard");
         } catch (e: unknown) {

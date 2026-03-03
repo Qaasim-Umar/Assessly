@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { getExams, deleteExam, updateExamStatus, updateShowResults } from "@/lib/examService";
 import type { DbExam } from "@/lib/examService";
+import { getAdminProfile, signOut } from "@/lib/authService";
 
 const statusStyle: Record<string, string> = {
     Live: "bg-green-100 text-green-700 border border-green-300",
@@ -66,23 +67,27 @@ export default function DashboardPage() {
     const [exams, setExams] = useState<DbExam[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const [adminName, setAdminName] = useState("");
+    const [schoolCode, setSchoolCode] = useState("");
+    const [codeCopied, setCodeCopied] = useState(false);
     const [deletingId, setDeletingId] = useState<string | null>(null);
     const [togglingId, setTogglingId] = useState<string | null>(null);
     const [togglingResultsId, setTogglingResultsId] = useState<string | null>(null);
 
     useEffect(() => {
-        if (localStorage.getItem("assessly_auth") !== "true") {
-            router.replace("/login");
-            return;
-        }
-        fetchExams();
+        getAdminProfile().then((profile) => {
+            if (!profile) { router.replace("/dashboard/login"); return; }
+            setAdminName(profile.username);
+            setSchoolCode(profile.school_code);
+            fetchExams(profile.school_code);
+        });
     }, [router]);
 
-    async function fetchExams() {
+    async function fetchExams(code?: string) {
         try {
             setLoading(true);
             setError("");
-            const data = await getExams();
+            const data = await getExams(code ?? schoolCode);
             setExams(data);
         } catch (e: unknown) {
             setError("Failed to load exams. Check your Supabase connection.");
@@ -92,9 +97,15 @@ export default function DashboardPage() {
         }
     }
 
-    const handleLogout = () => {
-        localStorage.removeItem("assessly_auth");
-        router.push("/login");
+    const handleLogout = async () => {
+        await signOut();
+        router.push("/dashboard/login");
+    };
+
+    const copyCode = () => {
+        navigator.clipboard.writeText(schoolCode);
+        setCodeCopied(true);
+        setTimeout(() => setCodeCopied(false), 2000);
     };
 
     const handleDelete = async (id: string) => {
@@ -168,13 +179,28 @@ export default function DashboardPage() {
                         </div>
                     </div>
                     <div className="flex items-center gap-3">
+                        {/* School Code chip */}
+                        {schoolCode && (
+                            <button onClick={copyCode} title="Click to copy school code"
+                                className={`hidden sm:flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border transition-colors ${codeCopied
+                                    ? "bg-green-50 border-green-300 text-green-700"
+                                    : "bg-amber-50 border-amber-200 text-amber-700 hover:bg-amber-100"
+                                    }`}>
+                                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                                </svg>
+                                {codeCopied ? "Copied!" : `Code: ${schoolCode}`}
+                            </button>
+                        )}
                         <Link href="/" className="text-xs text-gray-500 hover:text-blue-600 font-medium transition-colors hidden sm:block">
                             Student View
                         </Link>
                         <div className="h-4 w-px bg-gray-200 hidden sm:block" />
                         <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold text-xs">TC</div>
-                            <span className="hidden sm:block text-sm text-gray-700 font-medium">Teacher Console</span>
+                            <div className="w-7 h-7 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold text-xs">
+                                {adminName ? adminName.slice(0, 2).toUpperCase() : "TC"}
+                            </div>
+                            <span className="hidden sm:block text-sm text-gray-700 font-medium">{adminName || "Teacher Console"}</span>
                         </div>
                         <button
                             onClick={handleLogout}
@@ -198,7 +224,7 @@ export default function DashboardPage() {
                     </div>
                     <div className="flex items-center gap-2">
                         <button
-                            onClick={fetchExams}
+                            onClick={() => fetchExams()}
                             disabled={loading}
                             className="flex items-center gap-1.5 text-xs font-semibold text-gray-600 border border-gray-200 hover:bg-gray-50 px-3 py-2 rounded-lg transition-colors disabled:opacity-40"
                         >
@@ -226,7 +252,7 @@ export default function DashboardPage() {
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clipRule="evenodd" />
                         </svg>
                         {error}
-                        <button onClick={fetchExams} className="ml-auto underline font-semibold">Retry</button>
+                        <button onClick={() => fetchExams()} className="ml-auto underline font-semibold">Retry</button>
                     </div>
                 )}
 
@@ -313,8 +339,8 @@ export default function DashboardPage() {
                                                     disabled={togglingResultsId === exam.id}
                                                     title={exam.show_results ? "Students see results — click to hide" : "Students don't see results — click to show"}
                                                     className={`relative inline-flex h-5 w-9 items-center rounded-full border transition-colors focus:outline-none disabled:opacity-50 ${exam.show_results
-                                                            ? "bg-green-500 border-green-500"
-                                                            : "bg-gray-200 border-gray-300"
+                                                        ? "bg-green-500 border-green-500"
+                                                        : "bg-gray-200 border-gray-300"
                                                         }`}
                                                 >
                                                     <span className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow transition-transform ${exam.show_results ? "translate-x-4" : "translate-x-1"

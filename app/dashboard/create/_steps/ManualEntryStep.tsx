@@ -131,8 +131,9 @@ function BatchImportPanel({ onImport }: { onImport: (qs: Question[]) => void }) 
     const handleImport = () => {
         if (!previews) return;
         const valid = previews.filter((p) => p.valid);
-        const qs: Question[] = valid.map((p) => ({
-            id: Date.now() + Math.random(),
+        const base = Date.now();
+        const qs: Question[] = valid.map((p, i) => ({
+            id: base + i,
             text: p.text,
             type: "MCQ",
             topic: "Batch Import",

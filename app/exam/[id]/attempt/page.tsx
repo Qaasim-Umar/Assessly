@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { getExamById, submitExamResult, type DbExamWithQuestions, type DbQuestion } from "@/lib/examService";
+import { getProfile } from "@/lib/authService";
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
 type QuestionStatus = "not-viewed" | "not-answered" | "answered" | "review";
@@ -162,14 +163,14 @@ function ResultScreen({
                                 <div
                                     key={q.id}
                                     className={`bg-white border rounded-xl overflow-hidden shadow-sm ${isCorrect ? "border-green-300" :
-                                            isWrong ? "border-red-300" :
-                                                "border-gray-200"
+                                        isWrong ? "border-red-300" :
+                                            "border-gray-200"
                                         }`}
                                 >
                                     {/* Header row */}
                                     <div className={`px-4 py-2.5 flex items-center gap-3 ${isCorrect ? "bg-green-50" :
-                                            isWrong ? "bg-red-50" :
-                                                "bg-gray-50"
+                                        isWrong ? "bg-red-50" :
+                                            "bg-gray-50"
                                         }`}>
                                         {/* Status icon */}
                                         {isCorrect && (
@@ -185,8 +186,8 @@ function ResultScreen({
                                             Q{idx + 1}
                                         </span>
                                         <span className={`ml-auto text-[11px] font-bold ${isCorrect ? "text-green-700" :
-                                                isWrong ? "text-red-600" :
-                                                    "text-gray-400"
+                                            isWrong ? "text-red-600" :
+                                                "text-gray-400"
                                             }`}>
                                             {isCorrect ? "Correct" : isWrong ? "Incorrect" : isSkipped ? "Not answered" : "Theory"}
                                         </span>
@@ -273,6 +274,12 @@ export default function ExamAttemptPage() {
     const warned30s = useRef(false);
     const submittingRef = useRef(false); // guard against double-submission
     const [hasVisitedLast, setHasVisitedLast] = useState(false);
+    const [studentName, setStudentName] = useState("Student");
+
+    // Load student profile
+    useEffect(() => {
+        getProfile().then((p) => { if (p) setStudentName(p.full_name); });
+    }, []);
 
     useEffect(() => {
         let cancelled = false;
@@ -297,10 +304,10 @@ export default function ExamAttemptPage() {
         if (!examData || submittingRef.current) return;
         submittingRef.current = true;
         setShowSubmitModal(false);
-        const res = await submitExamResult(examId, answers, examData.questions, theoryAnswers);
+        const res = await submitExamResult(examId, answers, examData.questions, theoryAnswers, studentName);
         setResult(res);
         setSubmitted(true);
-    }, [examId, answers, theoryAnswers, examData]);
+    }, [examId, answers, theoryAnswers, examData, studentName]);
 
     // Auto-submit on timer expiry, fire 30s warning once
     useEffect(() => {

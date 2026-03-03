@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getPublishedExams, type DbExam } from "@/lib/examService";
+import { getProfile, signOut } from "@/lib/authService";
+import { getSession } from "@/lib/authService";
 
 function getUrgencyColor(duration: number | null): string {
   if (!duration) return "text-green-700";
@@ -100,26 +102,31 @@ export default function LiveExamsPage() {
   const [exams, setExams] = useState<DbExam[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [username, setUsername] = useState<string>("Student");
 
-  // Auth guard
+  // Auth guard — require Supabase session
   useEffect(() => {
-    if (localStorage.getItem("assessly_auth") !== "true") {
-      router.replace("/login");
-    }
+    getSession().then((session) => {
+      if (!session) router.replace("/login");
+    });
   }, [router]);
 
-  // Fetch live exams from Supabase
+  // Load profile (username + school code) then fetch scoped exams
   useEffect(() => {
-    let cancelled = false;
-    setLoading(true);
-    getPublishedExams()
-      .then((data) => { if (!cancelled) { setExams(data); setLoading(false); } })
-      .catch(() => { if (!cancelled) { setError("Failed to load exams. Please refresh."); setLoading(false); } });
-    return () => { cancelled = true; };
+    getProfile().then((profile) => {
+      if (profile) {
+        setUsername(profile.full_name);
+        getPublishedExams(profile.school_code)
+          .then((data) => { setExams(data); setLoading(false); })
+          .catch(() => { setError("Failed to load exams. Please refresh."); setLoading(false); });
+      } else {
+        setLoading(false);
+      }
+    });
   }, []);
 
-  const handleLogout = () => {
-    localStorage.removeItem("assessly_auth");
+  const handleLogout = async () => {
+    await signOut();
     router.push("/login");
   };
 
@@ -139,9 +146,9 @@ export default function LiveExamsPage() {
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
               <div className="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-semibold text-xs">
-                ST
+                {username.slice(0, 2).toUpperCase()}
               </div>
-              <span className="hidden sm:block text-sm text-gray-700 font-medium">Student</span>
+              <span className="hidden sm:block text-sm text-gray-700 font-medium">{username}</span>
             </div>
             <button
               onClick={handleLogout}

@@ -5,6 +5,7 @@ import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
 import { getExamById, getExamResults, updateTheoryMarks } from "@/lib/examService";
 import type { DbExam, DbSubmission, DbExamWithQuestions } from "@/lib/examService";
+import { getAdminProfile } from "@/lib/authService";
 
 function formatDate(iso: string) {
     return new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" });
@@ -259,16 +260,17 @@ export default function ExamResultsPage() {
     const [error, setError] = useState("");
 
     useEffect(() => {
-        if (localStorage.getItem("assessly_auth") !== "true") { router.replace("/login"); return; }
-
-        Promise.all([getExamById(examId), getExamResults(examId)])
-            .then(([examData, subs]) => {
-                if (!examData) { setError("Exam not found."); setLoading(false); return; }
-                setExam(examData);
-                setSubmissions(subs);
-                setLoading(false);
-            })
-            .catch(() => { setError("Failed to load results."); setLoading(false); });
+        getAdminProfile().then((profile) => {
+            if (!profile) { router.replace("/dashboard/login"); return; }
+            Promise.all([getExamById(examId), getExamResults(examId)])
+                .then(([examData, subs]) => {
+                    if (!examData) { setError("Exam not found."); setLoading(false); return; }
+                    setExam(examData);
+                    setSubmissions(subs);
+                    setLoading(false);
+                })
+                .catch(() => { setError("Failed to load results."); setLoading(false); });
+        });
     }, [examId, router]);
 
     const handleGraded = (updated: DbSubmission) => {

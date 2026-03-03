@@ -9,8 +9,8 @@ import { defaultForm } from "../../create/types";
 import type { ExamForm, Question } from "../../create/types";
 import { getExamById } from "@/lib/examService";
 import type { DbExamWithQuestions } from "@/lib/examService";
+import { getAdminProfile } from "@/lib/authService";
 
-// The edit flow is always manual: Setup → Edit Questions → Finalize
 const EDIT_STEPS = ["Exam Setup", "Edit Questions", "Finalize"];
 
 function StepIndicator({ current, steps }: { current: number; steps: string[] }) {
@@ -49,7 +49,6 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 const inputCls = "w-full text-sm border border-gray-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white";
 const selectCls = inputCls;
 
-// Convert DbQuestion options to Question format
 function mapDbToQuestions(exam: DbExamWithQuestions): Question[] {
     return exam.questions.map((q, i) => ({
         id: i + 1,
@@ -65,7 +64,6 @@ function mapDbToQuestions(exam: DbExamWithQuestions): Question[] {
     }));
 }
 
-// Convert DbExam to ExamForm
 function mapDbToForm(exam: DbExamWithQuestions): ExamForm {
     return {
         ...defaultForm,
@@ -90,15 +88,18 @@ export default function EditExamPage() {
     const [form, setForm] = useState<ExamForm>(defaultForm);
     const [questions, setQuestions] = useState<Question[]>([]);
     const [step1Error, setStep1Error] = useState("");
-
     const [loadingExam, setLoadingExam] = useState(true);
     const [notFound, setNotFound] = useState(false);
 
+    // Auth guard — require admin Supabase session
     useEffect(() => {
-        if (localStorage.getItem("assessly_auth") !== "true") {
-            router.replace("/login");
-            return;
-        }
+        getAdminProfile().then((profile) => {
+            if (!profile) router.replace("/dashboard/login");
+        });
+    }, [router]);
+
+    // Fetch exam data
+    useEffect(() => {
         let cancelled = false;
         getExamById(examId)
             .then((data) => {
@@ -110,7 +111,7 @@ export default function EditExamPage() {
             })
             .catch(() => { if (!cancelled) { setNotFound(true); setLoadingExam(false); } });
         return () => { cancelled = true; };
-    }, [examId, router]);
+    }, [examId]);
 
     const set = (key: keyof ExamForm, value: string | number | boolean) =>
         setForm((f) => ({ ...f, [key]: value }));
@@ -177,8 +178,7 @@ export default function EditExamPage() {
                 <StepIndicator current={step} steps={EDIT_STEPS} />
 
                 <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 sm:p-8">
-
-                    {/* ── STEP 0: Exam Setup ─────────────────────────────────────── */}
+                    {/* Step 0: Setup */}
                     {step === 0 && (
                         <div className="space-y-5 max-w-2xl">
                             <div>
@@ -228,23 +228,16 @@ export default function EditExamPage() {
                             </div>
 
                             <Field label="Show Results to Students">
-                                <button
-                                    type="button"
-                                    onClick={() => set("showResults", !form.showResults)}
-                                    className={`relative inline-flex h-6 w-11 items-center rounded-full border-2 transition-colors focus:outline-none ${form.showResults ? "bg-blue-600 border-blue-600" : "bg-gray-200 border-gray-300"}`}
-                                >
+                                <button type="button" onClick={() => set("showResults", !form.showResults)}
+                                    className={`relative inline-flex h-6 w-11 items-center rounded-full border-2 transition-colors focus:outline-none ${form.showResults ? "bg-blue-600 border-blue-600" : "bg-gray-200 border-gray-300"}`}>
                                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${form.showResults ? "translate-x-5" : "translate-x-1"}`} />
                                 </button>
                                 <p className="text-[11px] text-gray-400 mt-1">
-                                    {form.showResults
-                                        ? "Students will see their score immediately after submitting."
-                                        : "Students will see \"Your result is being processed\" after submitting."}
+                                    {form.showResults ? "Students will see their score immediately after submitting." : "Students will see \"Your result is being processed\" after submitting."}
                                 </p>
                             </Field>
 
-                            {step1Error && (
-                                <p className="text-xs text-red-600 bg-red-50 border border-red-200 px-3 py-2 rounded-lg">{step1Error}</p>
-                            )}
+                            {step1Error && <p className="text-xs text-red-600 bg-red-50 border border-red-200 px-3 py-2 rounded-lg">{step1Error}</p>}
                             <button onClick={handleStep1Next}
                                 className="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors">
                                 Next <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
@@ -252,32 +245,23 @@ export default function EditExamPage() {
                         </div>
                     )}
 
-                    {/* ── STEP 1: Edit Questions ─────────────────────────────────── */}
+                    {/* Step 1: Edit Questions */}
                     {step === 1 && (
                         <div className="space-y-4">
                             <div>
                                 <h2 className="text-lg font-bold text-gray-900">Edit Questions</h2>
-                                <p className="text-sm text-gray-500 mt-0.5">
-                                    Add, remove, or modify questions. All changes will be saved when you finalize.
-                                </p>
+                                <p className="text-sm text-gray-500 mt-0.5">Add, remove, or modify questions. All changes will be saved when you finalize.</p>
                             </div>
-                            <ManualEntryStep
-                                questions={questions}
-                                onChange={setQuestions}
-                                onNext={() => setStep(2)}
-                                onBack={() => setStep(0)}
-                            />
+                            <ManualEntryStep questions={questions} onChange={setQuestions} onNext={() => setStep(2)} onBack={() => setStep(0)} />
                         </div>
                     )}
 
-                    {/* ── STEP 2: Finalize ──────────────────────────────────────── */}
+                    {/* Step 2: Finalize */}
                     {step === 2 && (
                         <div className="space-y-4">
                             <div>
                                 <h2 className="text-lg font-bold text-gray-900">Finalize Exam</h2>
-                                <p className="text-sm text-gray-500 mt-0.5">
-                                    Review and save your changes. You can save as draft or publish directly.
-                                </p>
+                                <p className="text-sm text-gray-500 mt-0.5">Review and save your changes. You can save as draft or publish directly.</p>
                             </div>
                             <FinalizeStep questions={questions} form={form} examId={examId} />
                         </div>

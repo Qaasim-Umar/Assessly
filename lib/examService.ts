@@ -52,25 +52,33 @@ export interface DbSubmission {
   final_percentage: number;
 }
 
-// ── READ: fetch all exams ─────────────────────────────────────────────────────
-export async function getExams(): Promise<DbExam[]> {
-  const { data, error } = await supabase
+// ── READ: fetch all exams (teacher dashboard — scoped to their school) ────────────
+export async function getExams(schoolCode?: string): Promise<DbExam[]> {
+  let query = supabase
     .from("exams")
     .select("*")
     .order("created_at", { ascending: false });
 
+  if (schoolCode) query = query.eq("school_code", schoolCode);
+
+  const { data, error } = await query;
   if (error) throw error;
   return data ?? [];
 }
 
-// ── READ: fetch published/live exams for student portal ──────────────────────
-export async function getPublishedExams(): Promise<DbExam[]> {
-  const { data, error } = await supabase
+// ── READ: fetch published/live exams for student portal (scoped by school code) ───
+export async function getPublishedExams(
+  schoolCode?: string,
+): Promise<DbExam[]> {
+  let query = supabase
     .from("exams")
     .select("*")
     .in("status", ["Published", "Live"])
     .order("created_at", { ascending: false });
 
+  if (schoolCode) query = query.eq("school_code", schoolCode);
+
+  const { data, error } = await query;
   if (error) throw error;
   return data ?? [];
 }
@@ -115,6 +123,7 @@ export async function createExam(
   form: ExamForm,
   questions: Question[],
   status: "Draft" | "Published",
+  schoolCode?: string,
 ): Promise<string> {
   const { data: examRow, error: examErr } = await supabase
     .from("exams")
@@ -128,6 +137,7 @@ export async function createExam(
       question_type: form.questionType,
       status,
       question_count: questions.length,
+      school_code: schoolCode ?? null,
     })
     .select("id")
     .single();
@@ -229,6 +239,7 @@ export async function submitExamResult(
   answers: Record<number, number>, // questionIndex → chosen option index (MCQ)
   questions: DbQuestion[],
   theoryAnswers: Record<number, string>, // questionIndex → typed text (theory)
+  studentName = "Student",
 ): Promise<{
   score: number;
   total: number;
@@ -274,7 +285,7 @@ export async function submitExamResult(
 
     await supabase.from("submissions").insert({
       exam_id: examId,
-      student_name: "Student",
+      student_name: studentName,
       answers: answersJson,
       score: mcqScore,
       total,
