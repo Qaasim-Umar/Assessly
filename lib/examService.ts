@@ -14,6 +14,7 @@ export interface DbExam {
   status: "Draft" | "Published" | "Live";
   question_count: number;
   show_results: boolean;
+  is_general: boolean;
   created_at: string;
 }
 
@@ -76,9 +77,22 @@ export async function getPublishedExams(
     .in("status", ["Published", "Live"])
     .order("created_at", { ascending: false });
 
-  if (schoolCode) query = query.eq("school_code", schoolCode);
+  if (schoolCode)
+    query = query.eq("school_code", schoolCode).eq("is_general", false);
 
   const { data, error } = await query;
+  if (error) throw error;
+  return data ?? [];
+}
+
+// ── READ: fetch published/live General Mode exams (no auth, no school code) ───────
+export async function getGeneralExams(): Promise<DbExam[]> {
+  const { data, error } = await supabase
+    .from("exams")
+    .select("*")
+    .in("status", ["Published", "Live"])
+    .eq("is_general", true)
+    .order("created_at", { ascending: false });
   if (error) throw error;
   return data ?? [];
 }
@@ -124,6 +138,7 @@ export async function createExam(
   questions: Question[],
   status: "Draft" | "Published",
   schoolCode?: string,
+  isGeneral = false,
 ): Promise<string> {
   const { data: examRow, error: examErr } = await supabase
     .from("exams")
@@ -137,7 +152,8 @@ export async function createExam(
       question_type: form.questionType,
       status,
       question_count: questions.length,
-      school_code: schoolCode ?? null,
+      school_code: isGeneral ? null : (schoolCode ?? null),
+      is_general: isGeneral,
     })
     .select("id")
     .single();

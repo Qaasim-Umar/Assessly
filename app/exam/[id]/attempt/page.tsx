@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter, useParams, useSearchParams } from "next/navigation";
 import { getExamById, submitExamResult, type DbExamWithQuestions, type DbQuestion } from "@/lib/examService";
 import { getProfile } from "@/lib/authService";
 
@@ -26,6 +26,40 @@ function getStatusColor(status: QuestionStatus, isCurrent: boolean): string {
         case "not-answered": return `${base} bg-red-50 text-red-700 border-red-300 hover:bg-red-100`;
         case "not-viewed": return `${base} bg-white text-gray-500 border-gray-300 hover:bg-gray-50`;
     }
+}
+
+// ─── Name Entry Modal (General Mode) ────────────────────────────────────
+function NameEntryModal({ onSubmit }: { onSubmit: (name: string) => void }) {
+    const [name, setName] = useState("");
+    return (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
+            <div className="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-7">
+                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-indigo-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                </div>
+                <h2 className="text-lg font-bold text-gray-900 text-center mb-1">What’s your name?</h2>
+                <p className="text-xs text-gray-500 text-center mb-5">This is a practice exam — no account needed. Just enter your name to begin.</p>
+                <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    onKeyDown={(e) => { if (e.key === "Enter" && name.trim()) onSubmit(name.trim()); }}
+                    placeholder="e.g. John Doe"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4"
+                    autoFocus
+                />
+                <button
+                    onClick={() => name.trim() && onSubmit(name.trim())}
+                    disabled={!name.trim()}
+                    className="w-full bg-indigo-700 hover:bg-indigo-800 disabled:opacity-50 text-white font-bold py-3 rounded-lg text-sm transition-colors"
+                >
+                    Start Exam
+                </button>
+            </div>
+        </div>
+    );
 }
 
 // ─── Submit Modal ──────────────────────────────────────────────────────────────
@@ -256,7 +290,9 @@ function ResultScreen({
 export default function ExamAttemptPage() {
     const router = useRouter();
     const params = useParams();
+    const searchParams = useSearchParams();
     const examId = params.id as string;
+    const isGeneral = searchParams.get("mode") === "general";
 
     const [examData, setExamData] = useState<DbExamWithQuestions | null>(null);
     const [loading, setLoading] = useState(true);
@@ -275,11 +311,16 @@ export default function ExamAttemptPage() {
     const submittingRef = useRef(false); // guard against double-submission
     const [hasVisitedLast, setHasVisitedLast] = useState(false);
     const [studentName, setStudentName] = useState("Student");
+    const [showNameModal, setShowNameModal] = useState(false);
 
-    // Load student profile
+    // Load student profile (only for non-general mode)
     useEffect(() => {
+        if (isGeneral) {
+            // Show name modal once exam data is loaded
+            return;
+        }
         getProfile().then((p) => { if (p) setStudentName(p.full_name); });
-    }, []);
+    }, [isGeneral]);
 
     useEffect(() => {
         let cancelled = false;
@@ -294,10 +335,12 @@ export default function ExamAttemptPage() {
                 if (data.questions.length > 0) init[0] = "not-answered";
                 setStatuses(init);
                 setLoading(false);
+                // For general mode, show name modal after exam loads
+                if (isGeneral) setShowNameModal(true);
             })
             .catch(() => { if (!cancelled) { setNotFound(true); setLoading(false); } });
         return () => { cancelled = true; };
-    }, [examId]);
+    }, [examId, isGeneral]);
 
     // Auto-submit on timer expiry
     const handleSubmit = useCallback(async () => {
@@ -389,16 +432,17 @@ export default function ExamAttemptPage() {
     }
 
     if (submitted && result) {
-        // If exam has any theory questions, always show the pending screen
-        // (teacher must grade before score is revealed)
-        const showScore = !result.hasTheory && (examData.show_results ?? true);
+        // General exams always show results instantly
+        const showScore = isGeneral
+            ? true
+            : (!result.hasTheory && (examData.show_results ?? true));
         return (
             <ResultScreen
                 score={result.score}
                 total={result.total}
                 percentage={result.percentage}
                 showResults={showScore}
-                onHome={() => router.push("/")}
+                onHome={() => router.push(isGeneral ? "/general" : "/")}
                 questions={examData.questions}
                 answers={answers}
             />
@@ -550,6 +594,11 @@ export default function ExamAttemptPage() {
 
             {showSubmitModal && (
                 <SubmitModal answeredCount={answeredCount} total={totalQuestions} onConfirm={handleSubmit} onCancel={() => setShowSubmitModal(false)} />
+            )}
+
+            {/* General Mode: Name entry modal */}
+            {isGeneral && showNameModal && (
+                <NameEntryModal onSubmit={(name) => { setStudentName(name); setShowNameModal(false); }} />
             )}
 
             {/* 30-second warning toast */}

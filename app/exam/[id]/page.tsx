@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter, useParams, useSearchParams } from "next/navigation";
 import { getExamById, type DbExamWithQuestions } from "@/lib/examService";
 
 const examRules = [
@@ -60,7 +60,10 @@ function Skeleton() {
 export default function ExamInfoPage() {
     const router = useRouter();
     const params = useParams();
+    const searchParams = useSearchParams();
     const examId = params.id as string;
+    const isGeneral = searchParams.get("mode") === "general";
+    const backHref = isGeneral ? "/general" : "/";
 
     const [exam, setExam] = useState<DbExamWithQuestions | null>(null);
     const [loading, setLoading] = useState(true);
@@ -103,7 +106,7 @@ export default function ExamInfoPage() {
             <header className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center gap-4">
                     <button
-                        onClick={() => router.push("/")}
+                        onClick={() => router.push(backHref)}
                         className="flex items-center gap-2 text-gray-500 hover:text-gray-800 transition-colors text-sm"
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -240,7 +243,7 @@ export default function ExamInfoPage() {
                             </p>
                         </div>
                         <button
-                            onClick={() => router.push(`/exam/${exam.id}/attempt`)}
+                            onClick={() => router.push(`/exam/${exam.id}/attempt${isGeneral ? "?mode=general" : ""}`)}
                             className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 active:bg-blue-900 text-white font-bold text-sm px-8 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                         >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
