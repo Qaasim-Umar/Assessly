@@ -305,7 +305,7 @@
 .hero-split {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 1.5rem 3rem;
+  padding: 2rem 1.5rem 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -316,6 +316,7 @@
   .hero-split {
     grid-template-columns: 1fr;
     min-height: auto;
+    padding: 1.5rem 1.25rem 2.5rem;
   }
 }
 
@@ -333,12 +334,20 @@
 }
 @media (max-width: 900px) {
   .hero-pane {
-    padding: 2.5rem 0;
+    padding: 2rem 0 1.5rem;
   }
   .hero-pane-right {
-    padding: 2.5rem 0;
+    padding: 2rem 0 2rem;
     border-left: none;
     border-top: 1.5px solid var(--blue-200);
+  }
+}
+@media (max-width: 480px) {
+  .hero-pane {
+    padding: 1.5rem 0 1.25rem;
+  }
+  .hero-pane-right {
+    padding: 1.5rem 0 1.5rem;
   }
 }
 
@@ -1316,4 +1325,90 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVENESS FIXES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Global overflow safety ───────────────────────────────────────────── */
+html, body { overflow-x: hidden; }
+.landing-root { overflow-x: hidden; }
+
+/* ── Section padding scales down ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  .features-section,
+  .hiw-section,
+  .testimonials-section,
+  .pricing-section { padding: 4rem 0; }
+
+  .cta-section { padding: 4rem 1.25rem; }
+
+  .section-subtext { margin-bottom: 2.5rem; }
+
+  /* Ensure pricing card featured doesn't scale-overflow */
+  .pricing-card-featured { transform: none; }
+}
+
+@media (max-width: 480px) {
+  .features-section,
+  .hiw-section,
+  .testimonials-section,
+  .pricing-section { padding: 3rem 0; }
+
+  .cta-section { padding: 3rem 1rem; }
+
+  .section-headline { font-size: 1.625rem; }
+}
+
+/* ── Hero pane sub-headline ────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .hero-pane-headline { font-size: 1.75rem; }
+  .hero-pane-sub { font-size: 0.9rem; }
+  .hero-pane-actions { gap: 0.5rem; }
+  .btn-primary, .btn-ghost, .practice-cta {
+    font-size: 0.875rem;
+    padding: 0.65rem 1.25rem;
+  }
+}
+
+/* ── Hide heavy dashboard mockup & keep practice card below 600px ──────── */
+@media (max-width: 600px) {
+  .pane-mockup-wrap {
+    display: none;
+  }
+  .hero-pane-proof { flex-wrap: wrap; }
+}
+
+/* ── Practice card — constrain width on small phones ───────────────────── */
+@media (max-width: 480px) {
+  .pc-card {
+    font-size: 0.85rem;
+  }
+  .pc-subject { font-size: 1rem; }
+  .pc-q-text { font-size: 0.825rem; }
+
+  /* perks go single column */
+  .practice-perks { grid-template-columns: 1fr; }
+}
+
+/* ── Footer stacks cleanly ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .footer-inner { gap: 2rem; flex-direction: column; }
+  .footer-links { gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.25rem; }
+}
+
+/* ── CTA buttons stack on tiny screens ────────────────────────────────── */
+@media (max-width: 420px) {
+  .cta-actions { flex-direction: column; align-items: stretch; }
+  .cta-btn, .cta-btn-ghost { text-align: center; }
+  .hero-pane-actions { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Prevent mockup sidebar from shrinking content area ───────────────── */
+@media (max-width: 400px) {
+  .mockup-sidebar { width: 100px; }
+  .mockup-exam-name { font-size: 0.65rem; }
 }

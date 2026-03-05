@@ -15,7 +15,7 @@ export default function StudentLoginPage() {
 
     // Already logged in → go to student portal
     useEffect(() => {
-        getSession().then((session) => { if (session) router.replace("/"); });
+        getSession().then((session) => { if (session) router.replace("/student"); });
     }, [router]);
 
     const validate = () => {
@@ -34,7 +34,7 @@ export default function StudentLoginPage() {
         setLoading(true);
         try {
             await studentLogin(username.trim(), password, schoolCode.trim().toUpperCase());
-            router.push("/");
+            router.push("/student");
         } catch (e: unknown) {
             setError(e instanceof Error ? e.message : "Something went wrong.");
         } finally {

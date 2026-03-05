@@ -63,7 +63,7 @@ export default function ExamInfoPage() {
     const searchParams = useSearchParams();
     const examId = params.id as string;
     const isGeneral = searchParams.get("mode") === "general";
-    const backHref = isGeneral ? "/general" : "/";
+    const backHref = isGeneral ? "/general" : "/student";
 
     const [exam, setExam] = useState<DbExamWithQuestions | null>(null);
     const [loading, setLoading] = useState(true);
@@ -92,7 +92,7 @@ export default function ExamInfoPage() {
             <div className="min-h-screen bg-[#f0f2f5] flex items-center justify-center">
                 <div className="text-center">
                     <p className="text-gray-500 text-sm">Exam not found.</p>
-                    <button onClick={() => router.push("/")} className="mt-3 text-blue-600 text-sm hover:underline">
+                    <button onClick={() => router.push("/student")} className="mt-3 text-blue-600 text-sm hover:underline">
                         Go back
                     </button>
                 </div>

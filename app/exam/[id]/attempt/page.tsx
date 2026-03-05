@@ -294,6 +294,9 @@ export default function ExamAttemptPage() {
     const examId = params.id as string;
     const isGeneral = searchParams.get("mode") === "general";
 
+    // ── sessionStorage key for this exam session ──
+    const storageKey = `exam_session_${examId}`;
+
     const [examData, setExamData] = useState<DbExamWithQuestions | null>(null);
     const [loading, setLoading] = useState(true);
     const [notFound, setNotFound] = useState(false);
@@ -313,6 +316,22 @@ export default function ExamAttemptPage() {
     const [studentName, setStudentName] = useState("Student");
     const [showNameModal, setShowNameModal] = useState(false);
 
+    // ── Persist state to sessionStorage whenever key values change ──
+    const persistedRef = useRef(false); // only persist after initial load
+    useEffect(() => {
+        if (!persistedRef.current) return;
+        const session = {
+            timeLeft,
+            answers,
+            theoryAnswers,
+            statuses,
+            currentIndex,
+            hasVisitedLast,
+            studentName,
+        };
+        sessionStorage.setItem(storageKey, JSON.stringify(session));
+    }, [storageKey, timeLeft, answers, theoryAnswers, statuses, currentIndex, hasVisitedLast, studentName]);
+
     // Load student profile (only for non-general mode)
     useEffect(() => {
         if (isGeneral) {
@@ -329,28 +348,71 @@ export default function ExamAttemptPage() {
                 if (cancelled) return;
                 if (!data) { setNotFound(true); setLoading(false); return; }
                 setExamData(data);
-                setTimeLeft((data.duration ?? 60) * 60);
-                const init: Record<number, QuestionStatus> = {};
-                data.questions.forEach((_, i) => { init[i] = "not-viewed"; });
-                if (data.questions.length > 0) init[0] = "not-answered";
-                setStatuses(init);
+
+                // ── Try to restore a saved session ──
+                const savedRaw = sessionStorage.getItem(storageKey);
+                if (savedRaw) {
+                    try {
+                        const saved = JSON.parse(savedRaw);
+                        setTimeLeft(saved.timeLeft ?? (data.duration ?? 60) * 60);
+                        setAnswers(saved.answers ?? {});
+                        setTheoryAnswers(saved.theoryAnswers ?? {});
+                        setStatuses(saved.statuses ?? (() => {
+                            const init: Record<number, QuestionStatus> = {};
+                            data.questions.forEach((_, i) => { init[i] = "not-viewed"; });
+                            if (data.questions.length > 0) init[0] = "not-answered";
+                            return init;
+                        })());
+                        setCurrentIndex(saved.currentIndex ?? 0);
+                        setHasVisitedLast(saved.hasVisitedLast ?? false);
+                        if (saved.studentName && saved.studentName !== "Student") {
+                            setStudentName(saved.studentName);
+                        }
+                        // General mode: don't re-show name modal if name was already entered
+                        if (isGeneral && saved.studentName && saved.studentName !== "Student") {
+                            setShowNameModal(false);
+                        } else if (isGeneral) {
+                            setShowNameModal(true);
+                        }
+                    } catch {
+                        // Corrupted session — start fresh
+                        sessionStorage.removeItem(storageKey);
+                        setTimeLeft((data.duration ?? 60) * 60);
+                        const init: Record<number, QuestionStatus> = {};
+                        data.questions.forEach((_, i) => { init[i] = "not-viewed"; });
+                        if (data.questions.length > 0) init[0] = "not-answered";
+                        setStatuses(init);
+                        if (isGeneral) setShowNameModal(true);
+                    }
+                } else {
+                    // No saved session — fresh start
+                    setTimeLeft((data.duration ?? 60) * 60);
+                    const init: Record<number, QuestionStatus> = {};
+                    data.questions.forEach((_, i) => { init[i] = "not-viewed"; });
+                    if (data.questions.length > 0) init[0] = "not-answered";
+                    setStatuses(init);
+                    if (isGeneral) setShowNameModal(true);
+                }
+
                 setLoading(false);
-                // For general mode, show name modal after exam loads
-                if (isGeneral) setShowNameModal(true);
+                // Allow persistence after state is fully initialized
+                persistedRef.current = true;
             })
             .catch(() => { if (!cancelled) { setNotFound(true); setLoading(false); } });
         return () => { cancelled = true; };
-    }, [examId, isGeneral]);
+    }, [examId, isGeneral, storageKey]);
 
     // Auto-submit on timer expiry
     const handleSubmit = useCallback(async () => {
         if (!examData || submittingRef.current) return;
         submittingRef.current = true;
         setShowSubmitModal(false);
+        // Clear the saved session on submit so it doesn't restore after exam is done
+        sessionStorage.removeItem(storageKey);
         const res = await submitExamResult(examId, answers, examData.questions, theoryAnswers, studentName);
         setResult(res);
         setSubmitted(true);
-    }, [examId, answers, theoryAnswers, examData, studentName]);
+    }, [examId, answers, theoryAnswers, examData, studentName, storageKey]);
 
     // Auto-submit on timer expiry, fire 30s warning once
     useEffect(() => {
@@ -425,7 +487,7 @@ export default function ExamAttemptPage() {
             <div className="min-h-screen bg-[#f0f2f5] flex items-center justify-center px-4">
                 <div className="text-center">
                     <p className="text-gray-500 text-sm">{notFound ? "Exam not found." : "This exam has no questions yet."}</p>
-                    <button onClick={() => router.push("/")} className="mt-3 text-blue-600 text-sm hover:underline">Go back</button>
+                    <button onClick={() => router.push("/student")} className="mt-3 text-blue-600 text-sm hover:underline">Go back</button>
                 </div>
             </div>
         );
@@ -442,7 +504,7 @@ export default function ExamAttemptPage() {
                 total={result.total}
                 percentage={result.percentage}
                 showResults={showScore}
-                onHome={() => router.push(isGeneral ? "/general" : "/")}
+                onHome={() => router.push(isGeneral ? "/general" : "/student")}
                 questions={examData.questions}
                 answers={answers}
             />
