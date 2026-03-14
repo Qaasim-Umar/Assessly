@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { getProfile, signOut } from "@/lib/authService";
+import { getProfile, signOut, getSession } from "@/lib/authService";
 import { getPublishedExams, type DbExam } from "@/lib/examService";
 
 const statusStyle: Record<string, string> = {
@@ -34,13 +34,26 @@ export default function StudentPortalPage() {
     const [signingOut, setSigningOut] = useState(false);
 
     useEffect(() => {
-        getProfile().then((profile) => {
-            if (!profile) { router.replace("/login"); return; }
-            setName(profile.full_name);
-            setSchoolCode(profile.school_code);
-            getPublishedExams(profile.school_code).then((data) => {
-                setExams(data);
-                setLoading(false);
+        getSession().then((session) => {
+            if (!session) {
+                router.replace("/login");
+                return;
+            }
+            if (session.user.email?.endsWith("@assessly.admin")) {
+                router.replace("/dashboard");
+                return;
+            }
+            getProfile().then((profile) => {
+                if (!profile) {
+                    signOut().then(() => router.replace("/login"));
+                    return;
+                }
+                setName(profile.full_name);
+                setSchoolCode(profile.school_code);
+                getPublishedExams(profile.school_code).then((data) => {
+                    setExams(data);
+                    setLoading(false);
+                });
             });
         });
     }, [router]);

@@ -13,9 +13,17 @@ export default function StudentLoginPage() {
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
 
-    // Already logged in → go to student portal
+    // Already logged in → go to correct portal
     useEffect(() => {
-        getSession().then((session) => { if (session) router.replace("/student"); });
+        getSession().then((session) => {
+            if (session) {
+                if (session.user.email?.endsWith("@assessly.admin")) {
+                    router.replace("/dashboard");
+                } else {
+                    router.replace("/student");
+                }
+            }
+        });
     }, [router]);
 
     const validate = () => {
