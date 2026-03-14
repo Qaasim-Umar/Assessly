@@ -14,3 +14,6 @@ function getUrgencyColor(duration: number | null): string {
 }
 
 function formatDuration(minutes: number | null): string {
+  if (!minutes) return "Untimed";
+  return `${minutes} mins`;
+}
