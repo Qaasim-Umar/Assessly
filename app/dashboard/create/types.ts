@@ -1,6 +1,14 @@
 export type Difficulty = "Simple" | "Medium" | "Hard";
 export type QuestionType = "MCQ" | "Theory" | "Mixed";
-export type ExamType = "Test" | "Mock" | "Practice";
+export type ExamType =
+  | "Test"
+  | "Mock"
+  | "Practice"
+  | "WAEC"
+  | "JAMB / UTME"
+  | "NECO"
+  | "BECE"
+  | "Post-UTME";
 export type Source = "manual" | "pdf";
 
 export interface Option {

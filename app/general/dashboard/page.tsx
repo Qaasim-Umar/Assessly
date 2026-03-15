@@ -190,7 +190,7 @@ export default function GeneralDashboardPage() {
                         <table className="w-full text-sm">
                             <thead>
                                 <tr className="border-b border-gray-100 bg-gray-50">
-                                    {["Exam Title", "Subject", "Class", "Questions", "Duration", "Status", "Created", "Actions"].map((h) => (
+                                    {["Exam Title", "Subject", "Class", "Type", "Questions", "Duration", "Status", "Created", "Actions"].map((h) => (
                                         <th key={h} className="px-4 py-3 text-left text-[11px] font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">{h}</th>
                                     ))}
                                 </tr>
@@ -199,7 +199,7 @@ export default function GeneralDashboardPage() {
                                 {loading
                                     ? Array.from({ length: 3 }).map((_, i) => (
                                         <tr key={i} className="animate-pulse">
-                                            {Array.from({ length: 8 }).map((_, j) => (
+                                            {Array.from({ length: 9 }).map((_, j) => (
                                                 <td key={j} className="px-4 py-4"><div className="h-3 bg-gray-100 rounded w-3/4" /></td>
                                             ))}
                                         </tr>
@@ -211,6 +211,7 @@ export default function GeneralDashboardPage() {
                                             </td>
                                             <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">{exam.subject}</td>
                                             <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">{exam.class_level}</td>
+                                            <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">{exam.type}</td>
                                             <td className="px-4 py-3.5 text-xs text-gray-600 text-center">{exam.question_count}</td>
                                             <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">
                                                 {exam.duration ? `${exam.duration} min` : <span className="text-gray-400">—</span>}

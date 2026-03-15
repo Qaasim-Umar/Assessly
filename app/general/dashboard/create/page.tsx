@@ -7,7 +7,7 @@ import ProcessingStep from "@/app/dashboard/create/_steps/ProcessingStep";
 import ReviewStep from "@/app/dashboard/create/_steps/ReviewStep";
 import ManualEntryStep from "@/app/dashboard/create/_steps/ManualEntryStep";
 import { defaultForm, generateQuestions } from "@/app/dashboard/create/types";
-import type { ExamForm, Question, Difficulty, QuestionType } from "@/app/dashboard/create/types";
+import type { ExamForm, Question, Difficulty, QuestionType, ExamType } from "@/app/dashboard/create/types";
 import { createExam } from "@/lib/examService";
 
 const MANUAL_STEPS = ["Exam Setup", "Enter Questions", "Finalize"];
@@ -175,8 +175,15 @@ export default function GeneralCreateExamPage() {
                                     </select>
                                 </Field>
                                 <Field label="Exam Type">
-                                    <select className={selectCls} value={form.type} onChange={(e) => set("type", e.target.value)}>
-                                        <option>Practice</option><option>Test</option><option>Mock</option>
+                                    <select className={selectCls} value={form.type} onChange={(e) => set("type", e.target.value as ExamType)}>
+                                        <option value="Practice">Practice</option>
+                                        <option value="Test">Test</option>
+                                        <option value="Mock">Mock</option>
+                                        <option value="WAEC">WAEC</option>
+                                        <option value="JAMB / UTME">JAMB / UTME</option>
+                                        <option value="NECO">NECO</option>
+                                        <option value="BECE">BECE</option>
+                                        <option value="Post-UTME">Post-UTME</option>
                                     </select>
                                 </Field>
                                 <Field label="Duration (minutes)">

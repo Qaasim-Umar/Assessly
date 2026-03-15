@@ -63,12 +63,17 @@ export default function GeneralModePage() {
     const [exams, setExams] = useState<DbExam[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
     useEffect(() => {
         getGeneralExams()
             .then((data) => { setExams(data); setLoading(false); })
             .catch(() => { setError("Failed to load exams. Please refresh."); setLoading(false); });
     }, []);
+
+    const filteredExams = selectedCategory === "All"
+        ? exams
+        : exams.filter(e => e.type === selectedCategory);
 
     return (
         <div className="min-h-screen bg-[#f0f2f5]">
@@ -130,6 +135,32 @@ export default function GeneralModePage() {
                     </div>
                 )}
 
+                {/* Category Filter */}
+                {!loading && exams.length > 0 && (
+                    <div className="mb-6 -mx-4 sm:mx-0 overflow-x-auto pb-2 scrollbar-hide">
+                        <div className="flex items-center gap-2 px-4 sm:px-0 min-w-max">
+                            {["All", "WAEC", "JAMB / UTME", "NECO", "BECE", "Post-UTME", "Practice", "Mock", "Test"].map((cat) => {
+                                // Only show categories that actually have exams, plus "All"
+                                if (cat !== "All" && !exams.some(e => e.type === cat)) return null;
+
+                                const isSelected = selectedCategory === cat;
+                                return (
+                                    <button
+                                        key={cat}
+                                        onClick={() => setSelectedCategory(cat)}
+                                        className={`px-4 py-2 rounded-full text-xs font-bold transition-all shadow-sm active:scale-95 ${isSelected
+                                            ? "bg-indigo-700 text-white border-transparent"
+                                            : "bg-white text-gray-600 border border-gray-200 hover:border-indigo-300 hover:text-indigo-600"
+                                            }`}
+                                    >
+                                        {cat}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                )}
+
                 {/* Exam cards */}
                 <div className="grid gap-4 sm:grid-cols-2">
                     {loading ? (
@@ -138,10 +169,10 @@ export default function GeneralModePage() {
                             <SkeletonCard />
                             <SkeletonCard />
                         </>
-                    ) : exams.length === 0 ? (
+                    ) : filteredExams.length === 0 ? (
                         <EmptyState />
                     ) : (
-                        exams.map((exam) => (
+                        filteredExams.map((exam) => (
                             <button
                                 key={exam.id}
                                 onClick={() => router.push(`/exam/${exam.id}?mode=general`)}
@@ -153,13 +184,18 @@ export default function GeneralModePage() {
                                             {exam.title}
                                         </h2>
                                     </div>
-                                    <span className="flex-shrink-0 inline-flex items-center gap-1 text-[10px] font-bold text-white bg-indigo-600 px-2 py-0.5 rounded-full tracking-wide">
-                                        <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                                            <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-                                        </svg>
-                                        OPEN
-                                    </span>
+                                    <div className="flex items-center gap-1.5 flex-shrink-0">
+                                        <span className="inline-flex items-center text-[10px] font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded-full tracking-wide">
+                                            {exam.type}
+                                        </span>
+                                        <span className="inline-flex items-center gap-1 text-[10px] font-bold text-white bg-indigo-600 px-2 py-0.5 rounded-full tracking-wide">
+                                            <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                                <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
+                                            </svg>
+                                            OPEN
+                                        </span>
+                                    </div>
                                 </div>
 
                                 <div className="space-y-2 mb-4">
