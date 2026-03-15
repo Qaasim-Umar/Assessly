@@ -2,20 +2,11 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import Navbar, { LogoIcon } from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./landing.css";
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
-function LogoIcon({ size = 32 }: { size?: number }) {
-    return (
-        <svg width={size} height={size} viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" fill="#2563EB" />
-            <path d="M16 6.5L7 10.5V16C7 20.694 10.896 25.122 16 26.5C21.104 25.122 25 20.694 25 16V10.5L16 6.5Z"
-                fill="white" fillOpacity="0.15" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
-            <path d="M11 16L14.5 19.5L21 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-    );
-}
-
 function ArrowRight() {
     return (
         <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
@@ -101,41 +92,9 @@ function Testimonial({ quote, name, role, initials }: { quote: string; name: str
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 export default function LandingPage() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-    useEffect(() => {
-        const h = () => setScrolled(window.scrollY > 20);
-        window.addEventListener("scroll", h);
-        return () => window.removeEventListener("scroll", h);
-    }, []);
-
     return (
         <div className="landing-root">
-
-            {/* ── Navbar ──────────────────────────────────────────────────────── */}
-            <nav className={`landing-nav ${scrolled ? "nav-scrolled" : ""}`}>
-                <div className="nav-inner">
-                    <Link href="/landing" className="nav-logo">
-                        <LogoIcon size={30} />
-                        <span className="nav-logo-text">Assessly</span>
-                    </Link>
-                    <div className={`nav-links ${menuOpen ? "nav-links-open" : ""}`}>
-                        <a href="#features" onClick={() => setMenuOpen(false)}>Features</a>
-                        <a href="#practice" onClick={() => setMenuOpen(false)}>Practice Exams</a>
-                        <a href="#how-it-works" onClick={() => setMenuOpen(false)}>How it works</a>
-                        <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
-                    </div>
-                    <div className="nav-cta">
-                        <Link href="/login" className="nav-btn-ghost">Student Login</Link>
-                        <Link href="/dashboard/login" className="nav-btn-solid">Admin Login</Link>
-                    </div>
-                    <button className="hamburger" onClick={() => setMenuOpen(v => !v)} aria-label="Menu">
-                        <span className={menuOpen ? "bar bar-1-open" : "bar"} />
-                        <span className={menuOpen ? "bar bar-2-open" : "bar"} />
-                        <span className={menuOpen ? "bar bar-3-open" : "bar"} />
-                    </button>
-                </div>
-            </nav>
+            <Navbar />
 
             {/* ══════════════════════════════════════════════════════════════════
           COMBINED HERO — left: Schools/Admin · right: Students/Practice
@@ -444,39 +403,7 @@ export default function LandingPage() {
                 <div className="cta-glow" />
             </section>
 
-            {/* ── Footer ───────────────────────────────────────────────────────── */}
-            <footer className="landing-footer">
-                <div className="footer-inner">
-                    <div className="footer-brand">
-                        <div className="footer-logo"><LogoIcon size={26} /><span className="footer-logo-text">Assessly</span></div>
-                        <p className="footer-tagline">AI-powered Computer-Based Testing for modern Nigerian schools.</p>
-                    </div>
-                    <div className="footer-links">
-                        <div className="footer-col">
-                            <div className="footer-col-title">Product</div>
-                            <a href="#features">Features</a>
-                            <a href="#how-it-works">How it works</a>
-                            <a href="#pricing">Pricing</a>
-                        </div>
-                        <div className="footer-col">
-                            <div className="footer-col-title">Access</div>
-                            <Link href="/dashboard/login">Admin Login</Link>
-                            <Link href="/login">Student Login</Link>
-                            <Link href="/general">Free Practice Exams</Link>
-                        </div>
-                        <div className="footer-col">
-                            <div className="footer-col-title">Company</div>
-                            <a href="mailto:hello@assessly.app">Contact</a>
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Terms of Service</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="footer-bottom">
-                    <span>© {new Date().getFullYear()} Assessly. All rights reserved.</span>
-                    <span>Built for Nigerian educators 🇳🇬</span>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }
