@@ -59,11 +59,12 @@ export default function AdminLoginPage() {
     const inputBase = "w-full pl-10 pr-4 py-2.5 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-800 bg-gray-50 placeholder-gray-400 text-gray-900";
 
     return (
-        <div className="landing-root min-h-screen flex flex-col pt-[68px]">
+        <div className="landing-root min-h-screen flex flex-col hero-section">
+            <div className="hero-bg-grid" />
             <Navbar />
 
-            <div className="flex-1 flex flex-col items-center justify-center px-4 py-12 bg-[#f0f2f5]">
-                <div className="w-full max-w-sm bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+            <div className="flex-1 flex flex-col items-center justify-center px-4 py-12">
+                <div className="w-full max-w-sm bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden z-10 relative">
                     {/* Header */}
                     <div className="bg-gray-900 px-8 py-7 text-center">
                         <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center mx-auto mb-3">
