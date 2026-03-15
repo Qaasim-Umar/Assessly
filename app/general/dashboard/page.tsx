@@ -150,7 +150,7 @@ export default function GeneralDashboardPage() {
                 </div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                     {[
                         { label: "Total Exams", value: exams.length, color: "bg-indigo-50 text-indigo-600" },
                         { label: "Published / Live", value: published, color: "bg-green-50 text-green-600" },
