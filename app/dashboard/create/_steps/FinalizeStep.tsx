@@ -10,6 +10,9 @@ interface Props {
     questions: Question[];
     form: ExamForm;
     examId?: string; // if present → edit mode
+    isGeneral?: boolean;
+    redirectPath?: string;
+    themeColor?: "blue" | "indigo";
 }
 
 function DiffBar({ counts, total }: { counts: Record<Difficulty, number>; total: number }) {
@@ -33,7 +36,7 @@ function DiffBar({ counts, total }: { counts: Record<Difficulty, number>; total:
     );
 }
 
-export default function FinalizeStep({ questions, form, examId }: Props) {
+export default function FinalizeStep({ questions, form, examId, isGeneral = false, redirectPath = "/dashboard", themeColor = "blue" }: Props) {
     const router = useRouter();
     const [saving, setSaving] = useState<"draft" | "publish" | null>(null);
     const [saveError, setSaveError] = useState("");
@@ -54,10 +57,14 @@ export default function FinalizeStep({ questions, form, examId }: Props) {
             if (examId) {
                 await updateExam(examId, form, approved, status);
             } else {
-                const profile = await getAdminProfile();
-                await createExam(form, approved, status, profile?.school_code ?? undefined);
+                let schoolCode: string | undefined = undefined;
+                if (!isGeneral) {
+                    const profile = await getAdminProfile();
+                    schoolCode = profile?.school_code ?? undefined;
+                }
+                await createExam(form, approved, status, schoolCode, isGeneral);
             }
-            router.push("/dashboard");
+            router.push(redirectPath);
         } catch (e: unknown) {
             const msg = e instanceof Error ? e.message : "Unknown error";
             setSaveError(`Failed to save: ${msg}`);
@@ -66,14 +73,21 @@ export default function FinalizeStep({ questions, form, examId }: Props) {
         }
     };
 
+    const isIndigo = themeColor === "indigo";
+    const accentBg = isIndigo ? "bg-indigo-50" : "bg-blue-50";
+    const accentBorder = isIndigo ? "border-indigo-200" : "border-blue-200";
+    const accentText = isIndigo ? "text-indigo-600" : "text-blue-600";
+    const accentStrongText = isIndigo ? "text-indigo-800" : "text-blue-800";
+    const primaryBtn = isIndigo ? "bg-indigo-700 hover:bg-indigo-800" : "bg-blue-700 hover:bg-blue-800";
+
     return (
         <div className="space-y-5">
             {/* AI Suggestions Banner */}
-            <div className="flex items-start gap-3 bg-blue-50 border border-blue-200 rounded-lg px-4 py-3">
-                <svg className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <div className={`flex items-start gap-3 ${accentBg} border ${accentBorder} rounded-lg px-4 py-3`}>
+                <svg className={`w-4 h-4 ${accentText} flex-shrink-0 mt-0.5`} fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                 </svg>
-                <p className="text-xs text-blue-800">
+                <p className={`text-xs ${accentStrongText}`}>
                     <strong>AI Suggestion:</strong> Based on question complexity and type, a duration of <strong>{suggestedTime} minutes</strong> is recommended.
                     Questions will be randomized and MCQ options shuffled automatically.
                 </p>
@@ -125,7 +139,7 @@ export default function FinalizeStep({ questions, form, examId }: Props) {
                         { icon: "🔀", title: "Randomized Order", desc: "Question order will be shuffled for each student" },
                         { icon: "🔁", title: "Shuffled Options", desc: "MCQ answer options will be randomized per attempt" },
                         { icon: "⏱️", title: "Auto-Submit", desc: "Exam auto-submits when the timer expires" },
-                        { icon: "🔒", title: "Access Control", desc: "Only assigned classes can access this exam" },
+                        { icon: "🔒", title: "Access Control", desc: isGeneral ? "Publicly accessible exam" : "Only assigned classes can access this exam" },
                         { icon: "📋", title: "Single Attempt", desc: "Students cannot retake once submitted" },
                         { icon: "🤖", title: "AI-Assisted", desc: "Difficulty reviewed and approved by creator" },
                     ].map(({ icon, title, desc }) => (
@@ -160,7 +174,7 @@ export default function FinalizeStep({ questions, form, examId }: Props) {
                 <button
                     onClick={() => handleSave(true)}
                     disabled={!!saving || approved.length === 0}
-                    className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 disabled:opacity-50 text-white font-bold text-sm px-8 py-3 rounded-lg transition-colors shadow-sm"
+                    className={`w-full sm:w-auto flex items-center justify-center gap-2 ${primaryBtn} disabled:opacity-50 text-white font-bold text-sm px-8 py-3 rounded-lg transition-colors shadow-sm`}
                 >
                     {saving === "publish"
                         ? <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>Saving…</>

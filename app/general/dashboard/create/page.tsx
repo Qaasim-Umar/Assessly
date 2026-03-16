@@ -6,9 +6,9 @@ import Link from "next/link";
 import ProcessingStep from "@/app/dashboard/create/_steps/ProcessingStep";
 import ReviewStep from "@/app/dashboard/create/_steps/ReviewStep";
 import ManualEntryStep from "@/app/dashboard/create/_steps/ManualEntryStep";
+import FinalizeStep from "@/app/dashboard/create/_steps/FinalizeStep";
 import { defaultForm, generateQuestions } from "@/app/dashboard/create/types";
 import type { ExamForm, Question, Difficulty, QuestionType, ExamType } from "@/app/dashboard/create/types";
-import { createExam } from "@/lib/examService";
 
 const MANUAL_STEPS = ["Exam Setup", "Enter Questions", "Finalize"];
 const PDF_STEPS = ["Exam Setup", "Upload & Configure", "AI Processing", "Review & Approve", "Finalize"];
@@ -36,8 +36,6 @@ export default function GeneralCreateExamPage() {
     const [dragOver, setDragOver] = useState(false);
     const [questions, setQuestions] = useState<Question[]>([]);
     const [step1Error, setStep1Error] = useState("");
-    const [saving, setSaving] = useState<"draft" | "publish" | null>(null);
-    const [saveError, setSaveError] = useState("");
     const fileRef = useRef<HTMLInputElement>(null);
 
     // Auth guard
@@ -76,23 +74,6 @@ export default function GeneralCreateExamPage() {
         if (f?.type === "application/pdf") setPdfFile(f);
     };
 
-    const handleSave = async (publish: boolean) => {
-        const status = publish ? "Published" : "Draft";
-        setSaving(publish ? "publish" : "draft");
-        setSaveError("");
-        const approved = questions.filter((q) => q.approved);
-        try {
-            // Pass isGeneral = true; show_results is always true for general mode
-            await createExam({ ...form, showResults: true }, approved, status, undefined, true);
-            router.push("/general/dashboard");
-        } catch (e: unknown) {
-            setSaveError(`Failed to save: ${e instanceof Error ? e.message : "Unknown error"}`);
-        } finally {
-            setSaving(null);
-        }
-    };
-
-    const approved = questions.filter((q) => q.approved);
     const isFinalizeStep = (step === 4 && mode === "pdf") || (step === 2 && mode === "manual");
     const steps = mode === "manual" ? MANUAL_STEPS : PDF_STEPS;
 
@@ -318,56 +299,18 @@ export default function GeneralCreateExamPage() {
 
                     {/* ── FINALIZE ───────────────────────────────────────────────────── */}
                     {isFinalizeStep && (
-                        <div className="space-y-5">
+                        <div className="space-y-4">
                             <div>
                                 <h2 className="text-lg font-bold text-gray-900">Finalize Exam</h2>
                                 <p className="text-sm text-gray-500 mt-0.5">Review, then save as draft or publish to the public.</p>
                             </div>
-
-                            <div className="flex items-start gap-3 bg-indigo-50 border border-indigo-200 rounded-lg px-4 py-3">
-                                <svg className="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                                </svg>
-                                <p className="text-xs text-indigo-800">
-                                    <strong>General Mode exam:</strong> No school code · Results always shown instantly · Open to everyone at <code>/general</code>.
-                                </p>
-                            </div>
-
-                            {/* Exam summary */}
-                            <div className="bg-white border border-gray-200 rounded-xl px-5 py-4 space-y-2">
-                                {[
-                                    { label: "Title", value: form.title || "Untitled" },
-                                    { label: "Subject", value: form.subject || "—" },
-                                    { label: "Class / Level", value: form.classLevel },
-                                    { label: "Type", value: form.type },
-                                    { label: "Duration", value: form.duration ? `${form.duration} min` : "TBD" },
-                                    { label: "Approved Questions", value: `${approved.length}` },
-                                ].map(({ label, value }) => (
-                                    <div key={label} className="flex items-center justify-between">
-                                        <span className="text-xs text-gray-500">{label}</span>
-                                        <span className="text-xs font-semibold text-gray-800">{value}</span>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {saveError && <p className="text-xs text-red-600 bg-red-50 border border-red-200 px-3 py-2 rounded-lg">{saveError}</p>}
-
-                            <div className="flex flex-col sm:flex-row items-center gap-3 justify-end">
-                                <button
-                                    onClick={() => handleSave(false)}
-                                    disabled={!!saving}
-                                    className="w-full sm:w-auto flex items-center justify-center gap-2 border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 font-bold text-sm px-6 py-3 rounded-lg transition-colors disabled:opacity-50"
-                                >
-                                    {saving === "draft" ? "Saving…" : "Save as Draft"}
-                                </button>
-                                <button
-                                    onClick={() => handleSave(true)}
-                                    disabled={!!saving || approved.length === 0}
-                                    className="w-full sm:w-auto flex items-center justify-center gap-2 bg-indigo-700 hover:bg-indigo-800 disabled:opacity-50 text-white font-bold text-sm px-8 py-3 rounded-lg transition-colors shadow-sm"
-                                >
-                                    {saving === "publish" ? "Publishing…" : "Publish to General Mode"}
-                                </button>
-                            </div>
+                            <FinalizeStep
+                                questions={questions}
+                                form={{ ...form, showResults: true }}
+                                isGeneral={true}
+                                redirectPath="/general/dashboard"
+                                themeColor="indigo"
+                            />
                         </div>
                     )}
                 </div>

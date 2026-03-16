@@ -16,6 +16,7 @@ export interface DbExam {
   show_results: boolean;
   is_general: boolean;
   created_at: string;
+  takes?: number;
 }
 
 export interface DbQuestion {
@@ -57,14 +58,18 @@ export interface DbSubmission {
 export async function getExams(schoolCode?: string): Promise<DbExam[]> {
   let query = supabase
     .from("exams")
-    .select("*")
+    .select("*, submissions(count)")
     .order("created_at", { ascending: false });
 
   if (schoolCode) query = query.eq("school_code", schoolCode);
 
   const { data, error } = await query;
   if (error) throw error;
-  return data ?? [];
+
+  return (data ?? []).map((exam: any) => ({
+    ...exam,
+    takes: exam.submissions?.[0]?.count ?? 0,
+  }));
 }
 
 // ── READ: fetch published/live exams for student portal (scoped by school code) ───

@@ -190,7 +190,7 @@ export default function GeneralDashboardPage() {
                         <table className="w-full text-sm">
                             <thead>
                                 <tr className="border-b border-gray-100 bg-gray-50">
-                                    {["Exam Title", "Subject", "Class", "Type", "Questions", "Duration", "Status", "Created", "Actions"].map((h) => (
+                                    {["Exam Title", "Subject", "Class", "Type", "Questions", "Duration", "Takes", "Status", "Created", "Actions"].map((h) => (
                                         <th key={h} className="px-4 py-3 text-left text-[11px] font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">{h}</th>
                                     ))}
                                 </tr>
@@ -199,7 +199,7 @@ export default function GeneralDashboardPage() {
                                 {loading
                                     ? Array.from({ length: 3 }).map((_, i) => (
                                         <tr key={i} className="animate-pulse">
-                                            {Array.from({ length: 9 }).map((_, j) => (
+                                            {Array.from({ length: 10 }).map((_, j) => (
                                                 <td key={j} className="px-4 py-4"><div className="h-3 bg-gray-100 rounded w-3/4" /></td>
                                             ))}
                                         </tr>
@@ -215,6 +215,9 @@ export default function GeneralDashboardPage() {
                                             <td className="px-4 py-3.5 text-xs text-gray-600 text-center">{exam.question_count}</td>
                                             <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">
                                                 {exam.duration ? `${exam.duration} min` : <span className="text-gray-400">—</span>}
+                                            </td>
+                                            <td className="px-4 py-3.5 text-xs text-indigo-600 font-bold text-center whitespace-nowrap">
+                                                {exam.takes ?? 0}
                                             </td>
                                             <td className="px-4 py-3.5 whitespace-nowrap">
                                                 <button
@@ -236,10 +239,10 @@ export default function GeneralDashboardPage() {
                                             <td className="px-4 py-3.5 whitespace-nowrap">
                                                 <div className="flex items-center gap-1.5">
                                                     <button
-                                                        onClick={() => router.push(`/dashboard/results/${exam.id}`)}
-                                                        className="text-[11px] font-semibold text-purple-600 hover:text-purple-800 px-2 py-1 rounded hover:bg-purple-50 transition-colors"
+                                                        onClick={() => router.push(`/general/dashboard/edit/${exam.id}`)}
+                                                        className="text-[11px] font-semibold text-indigo-600 hover:text-indigo-800 px-2 py-1 rounded hover:bg-indigo-50 transition-colors"
                                                     >
-                                                        Results
+                                                        Edit
                                                     </button>
                                                     <button
                                                         onClick={() => handleDelete(exam.id)}
