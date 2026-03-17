@@ -9,6 +9,7 @@ import { defaultForm } from "@/app/dashboard/create/types";
 import type { ExamForm, Question } from "@/app/dashboard/create/types";
 import { getExamById } from "@/lib/examService";
 import type { DbExamWithQuestions } from "@/lib/examService";
+import { uploadGeneralQuestionImage } from "@/lib/questionAssets";
 
 const EDIT_STEPS = ["Exam Setup", "Edit Questions", "Finalize"];
 
@@ -52,6 +53,7 @@ function mapDbToQuestions(exam: DbExamWithQuestions): Question[] {
     return exam.questions.map((q, i) => ({
         id: i + 1,
         text: q.text,
+        imageUrl: (q as any).image_url ?? undefined,
         type: q.type as "MCQ" | "Theory",
         topic: q.topic ?? "General",
         commandWord: q.command_word ?? "Answer",
@@ -239,7 +241,14 @@ export default function GeneralEditExamPage() {
                                 <h2 className="text-lg font-bold text-gray-900">Edit Questions</h2>
                                 <p className="text-sm text-gray-500 mt-0.5">Modify practice questions for this general exam.</p>
                             </div>
-                            <ManualEntryStep questions={questions} onChange={setQuestions} onNext={() => setStep(2)} onBack={() => setStep(0)} />
+                            <ManualEntryStep
+                                questions={questions}
+                                onChange={setQuestions}
+                                onNext={() => setStep(2)}
+                                onBack={() => setStep(0)}
+                                enableImages
+                                uploadImage={uploadGeneralQuestionImage}
+                            />
                         </div>
                     )}
 

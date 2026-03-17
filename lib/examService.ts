@@ -23,6 +23,7 @@ export interface DbQuestion {
   id: string;
   exam_id: string;
   text: string;
+  image_url?: string | null;
   type: string;
   topic: string | null;
   command_word: string | null;
@@ -182,6 +183,7 @@ export async function createExam(
     const rows = approved.map((q, idx) => ({
       exam_id: examId,
       text: q.text,
+      image_url: q.imageUrl ?? null,
       type: q.type,
       topic: q.topic,
       command_word: q.commandWord,
@@ -241,6 +243,7 @@ export async function updateExam(
     const rows = questions.map((q, idx) => ({
       exam_id: id,
       text: q.text,
+      image_url: q.imageUrl ?? null,
       type: q.type,
       topic: q.topic,
       command_word: q.commandWord,

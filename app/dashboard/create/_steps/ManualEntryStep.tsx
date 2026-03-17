@@ -8,6 +8,8 @@ interface Props {
     onChange: (questions: Question[]) => void;
     onNext: () => void;
     onBack: () => void;
+    enableImages?: boolean;
+    uploadImage?: (file: File) => Promise<string>;
 }
 
 const difficultyColors: Record<Difficulty, string> = {
@@ -27,6 +29,7 @@ const blank = {
     optC: "",
     optD: "",
     correctAnswer: -1,
+    imageUrl: "" as string,
 };
 
 // ─── Batch Parser ─────────────────────────────────────────────────────────────
@@ -307,6 +310,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
     const [form, setForm] = useState({ ...blank });
     const [editingId, setEditingId] = useState<number | null>(null);
     const [error, setError] = useState("");
+    const [uploading, setUploading] = useState(false);
 
     const setF = (key: keyof typeof blank, val: string | number) =>
         setForm((f) => ({ ...f, [key]: val }));
@@ -330,6 +334,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
         const newQ: Question = {
             id: editingId ?? Date.now(),
             text: form.text.trim(),
+            imageUrl: form.imageUrl ? form.imageUrl : undefined,
             type: form.type,
             topic: "Manual",
             commandWord: form.text.trim().split(" ")[0],
@@ -369,6 +374,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
             optC: q.options?.[2]?.text ?? "",
             optD: q.options?.[3]?.text ?? "",
             correctAnswer: q.correctAnswer ?? -1,
+            imageUrl: q.imageUrl ?? "",
         });
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
@@ -419,6 +425,63 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                             onChange={(e) => setF("text", e.target.value)}
                         />
                     </div>
+
+                    {/* Optional diagram/image (General Mode only) */}
+                    {(arguments[0] as Props).enableImages && (
+                        <div className="space-y-2">
+                            <label className="text-xs font-bold text-gray-500 uppercase tracking-wide block">Question Image (optional)</label>
+                            {form.imageUrl ? (
+                                <div className="flex items-start gap-3">
+                                    <img
+                                        src={form.imageUrl}
+                                        alt="Question"
+                                        className="w-28 h-20 object-cover rounded-lg border border-gray-200 bg-white"
+                                    />
+                                    <div className="flex-1 min-w-0">
+                                        <p className="text-xs text-gray-500">
+                                            This image will be shown above the question during the exam.
+                                        </p>
+                                        <div className="flex items-center gap-2 mt-2">
+                                            <button
+                                                type="button"
+                                                onClick={() => setF("imageUrl", "")}
+                                                className="text-xs font-bold text-red-600 hover:text-red-700 border border-red-200 hover:border-red-300 bg-red-50 px-3 py-2 rounded-lg transition-colors"
+                                            >
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="flex items-center gap-3 flex-wrap">
+                                    <input
+                                        type="file"
+                                        accept="image/*"
+                                        disabled={uploading}
+                                        onChange={async (e) => {
+                                            const file = e.target.files?.[0];
+                                            e.target.value = "";
+                                            const uploadImage = (arguments[0] as Props).uploadImage;
+                                            if (!file) return;
+                                            if (!uploadImage) { setError("Image upload is not configured."); return; }
+                                            setError("");
+                                            setUploading(true);
+                                            try {
+                                                const url = await uploadImage(file);
+                                                setF("imageUrl", url);
+                                            } catch (err: unknown) {
+                                                setError(err instanceof Error ? err.message : "Failed to upload image.");
+                                            } finally {
+                                                setUploading(false);
+                                            }
+                                        }}
+                                        className="block text-xs text-gray-600 file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-blue-700 file:text-white hover:file:bg-blue-800"
+                                    />
+                                    {uploading && <span className="text-xs text-gray-500 font-semibold">Uploading…</span>}
+                                </div>
+                            )}
+                        </div>
+                    )}
 
                     <div className="grid sm:grid-cols-2 gap-4">
                         {/* Type */}
@@ -541,6 +604,11 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                                     <div className="flex items-center gap-2 mt-1.5 flex-wrap">
                                         <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${q.type === "MCQ" ? "bg-blue-50 text-blue-600" : "bg-purple-50 text-purple-600"}`}>{q.type}</span>
                                         <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${difficultyColors[q.userDifficulty]}`}>{q.userDifficulty}</span>
+                                        {q.imageUrl && (
+                                            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700">
+                                                🖼 Image
+                                            </span>
+                                        )}
                                         {q.type === "MCQ" && q.correctAnswer !== undefined && q.correctAnswer >= 0 && (
                                             <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 text-green-700">
                                                 ✓ {LETTERS[q.correctAnswer]}

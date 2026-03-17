@@ -63,7 +63,6 @@ export default function GeneralModePage() {
     const [exams, setExams] = useState<DbExam[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
     useEffect(() => {
         getGeneralExams()
@@ -71,9 +70,91 @@ export default function GeneralModePage() {
             .catch(() => { setError("Failed to load exams. Please refresh."); setLoading(false); });
     }, []);
 
-    const filteredExams = selectedCategory === "All"
-        ? exams
-        : exams.filter(e => e.type === selectedCategory);
+    const CATEGORY_CARDS: Array<{
+        label: string;
+        subtitle: string;
+        accent: string;
+        href: string;
+        icon: React.ReactNode;
+    }> = [
+            {
+                label: "All",
+                subtitle: "Everything available",
+                accent: "from-indigo-600 to-purple-600",
+                href: "/general/all",
+                icon: (
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                ),
+            },
+            {
+                label: "WAEC",
+                subtitle: "Past questions & practice",
+                accent: "from-emerald-600 to-teal-600",
+                href: "/general/category/waec",
+                icon: (
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                ),
+            },
+            {
+                label: "JAMB / UTME",
+                subtitle: "UTME drills & speed",
+                accent: "from-blue-600 to-indigo-600",
+                href: "/general/category/jamb-utme",
+                icon: (
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                ),
+            },
+            {
+                label: "NECO",
+                subtitle: "Objective practice sets",
+                accent: "from-fuchsia-600 to-pink-600",
+                href: "/general/category/neco",
+                icon: (
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h3.75M9 15h3.75M9 18h3.75M6 21h12a2 2 0 002-2V7.5L12 3 4 7.5V19a2 2 0 002 2z" />
+                    </svg>
+                ),
+            },
+            {
+                label: "BECE",
+                subtitle: "Junior secondary prep",
+                accent: "from-amber-600 to-orange-600",
+                href: "/general/category/bece",
+                icon: (
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292" />
+                    </svg>
+                ),
+            },
+            {
+                label: "Post-UTME",
+                subtitle: "University screening",
+                accent: "from-slate-700 to-gray-700",
+                href: "/general/category/post-utme",
+                icon: (
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.1a7.5 7.5 0 0115 0A17.9 17.9 0 0112 21.75c-2.7 0-5.2-.6-7.5-1.65z" />
+                    </svg>
+                ),
+            },
+            {
+                label: "Mock Tests",
+                subtitle: "Full-length mock exams",
+                accent: "from-indigo-700 to-violet-700",
+                href: "/general/category/mock",
+                icon: (
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01" />
+                    </svg>
+                ),
+            },
+        ];
 
     return (
         <div className="min-h-screen bg-[#f0f2f5]">
@@ -137,100 +218,46 @@ export default function GeneralModePage() {
 
                 {/* Category Filter */}
                 {!loading && exams.length > 0 && (
-                    <div className="mb-6 -mx-4 sm:mx-0 overflow-x-auto pb-2 scrollbar-hide">
-                        <div className="flex items-center gap-2 px-4 sm:px-0 min-w-max">
-                            {["All", "WAEC", "JAMB / UTME", "NECO", "BECE", "Post-UTME", "Practice", "Mock", "Test"].map((cat) => {
-                                // Only show categories that actually have exams, plus "All"
-                                if (cat !== "All" && !exams.some(e => e.type === cat)) return null;
-
-                                const isSelected = selectedCategory === cat;
-                                return (
-                                    <button
-                                        key={cat}
-                                        onClick={() => setSelectedCategory(cat)}
-                                        className={`px-4 py-2 rounded-full text-xs font-bold transition-all shadow-sm active:scale-95 ${isSelected
-                                            ? "bg-indigo-700 text-white border-transparent"
-                                            : "bg-white text-gray-600 border border-gray-200 hover:border-indigo-300 hover:text-indigo-600"
-                                            }`}
-                                    >
-                                        {cat}
-                                    </button>
-                                );
-                            })}
+                    <div className="mb-7">
+                        <h2 className="text-sm font-bold text-gray-800 mb-3">Choose a category</h2>
+                        <div className="grid gap-3 sm:grid-cols-2">
+                            {CATEGORY_CARDS
+                                .filter((c) => c.href === "/general/all" || exams.length > 0)
+                                .map((c) => {
+                                    const count = exams.length; // counts are shown on per-category pages
+                                    return (
+                                        <button
+                                            key={c.label}
+                                            onClick={() => {
+                                                router.push(c.href);
+                                            }}
+                                            className="group text-left bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 hover:shadow-md hover:border-indigo-300 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                        >
+                                            <div className="flex items-start justify-between gap-3">
+                                                <div className="min-w-0">
+                                                    <p className="text-sm font-extrabold text-gray-900 group-hover:text-indigo-700 transition-colors truncate">
+                                                        {c.label}
+                                                    </p>
+                                                    <p className="text-xs text-gray-500 mt-0.5">{c.subtitle}</p>
+                                                </div>
+                                                <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${c.accent} flex items-center justify-center flex-shrink-0 shadow-sm`}>
+                                                    {c.icon}
+                                                </div>
+                                            </div>
+                                            <div className="mt-4 flex items-center justify-between">
+                                                <span className="text-[11px] font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-1 rounded-full">
+                                                    Browse
+                                                </span>
+                                                <span className="text-xs font-bold text-gray-500 group-hover:text-indigo-700 transition-colors">
+                                                    View →
+                                                </span>
+                                            </div>
+                                        </button>
+                                    );
+                                })}
                         </div>
                     </div>
                 )}
-
-                {/* Exam cards */}
-                <div className="grid gap-4 sm:grid-cols-2">
-                    {loading ? (
-                        <>
-                            <SkeletonCard />
-                            <SkeletonCard />
-                            <SkeletonCard />
-                        </>
-                    ) : filteredExams.length === 0 ? (
-                        <EmptyState />
-                    ) : (
-                        filteredExams.map((exam) => (
-                            <button
-                                key={exam.id}
-                                onClick={() => router.push(`/exam/${exam.id}?mode=general`)}
-                                className="group w-full text-left bg-white border border-gray-200 rounded-xl p-5 hover:border-indigo-400 hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                            >
-                                <div className="flex items-start justify-between gap-3 mb-4">
-                                    <div className="flex-1 min-w-0">
-                                        <h2 className="text-sm font-bold text-gray-900 leading-snug group-hover:text-indigo-700 transition-colors line-clamp-2">
-                                            {exam.title}
-                                        </h2>
-                                    </div>
-                                    <div className="flex items-center gap-1.5 flex-shrink-0">
-                                        <span className="inline-flex items-center text-[10px] font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded-full tracking-wide">
-                                            {exam.type}
-                                        </span>
-                                        <span className="inline-flex items-center gap-1 text-[10px] font-bold text-white bg-indigo-600 px-2 py-0.5 rounded-full tracking-wide">
-                                            <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                                                <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-                                            </svg>
-                                            OPEN
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div className="space-y-2 mb-4">
-                                    <div className="flex items-center gap-2 text-xs text-gray-500">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8"
-                                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                        </svg>
-                                        <span>{exam.subject}</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 text-xs text-gray-500">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8"
-                                                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                                        </svg>
-                                        <span>{exam.class_level}</span>
-                                    </div>
-                                </div>
-
-                                <div className="border-t border-gray-100 pt-3 flex items-center justify-between">
-                                    <div className={`flex items-center gap-1.5 text-xs font-semibold ${getUrgencyColor(exam.duration)}`}>
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <circle cx="12" cy="12" r="10" strokeWidth="1.8" />
-                                            <polyline points="12,6 12,12 16,14" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
-                                        <span>{formatDuration(exam.duration)} duration</span>
-                                    </div>
-                                    <svg className="w-5 h-5 text-gray-400 group-hover:text-indigo-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 18l6-6-6-6" />
-                                    </svg>
-                                </div>
-                            </button>
-                        ))
-                    )}
-                </div>
 
                 <div className="mt-10 text-center text-xs text-gray-400">
                     Assessly General Mode · Open Exams · {new Date().getFullYear()}

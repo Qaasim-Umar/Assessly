@@ -315,6 +315,23 @@ export default function DashboardPage() {
                                             <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">
                                                 {exam.duration ? `${exam.duration} min` : <span className="text-gray-400">—</span>}
                                             </td>
+                                            {/* Results Visible toggle */}
+                                            <td className="px-4 py-3.5 whitespace-nowrap">
+                                                <button
+                                                    onClick={() => handleToggleShowResults(exam)}
+                                                    disabled={togglingResultsId === exam.id}
+                                                    title={exam.show_results ? "Students see results — click to hide" : "Students don't see results — click to show"}
+                                                    className={`relative inline-flex h-5 w-9 items-center rounded-full border transition-colors focus:outline-none disabled:opacity-50 ${exam.show_results
+                                                        ? "bg-green-500 border-green-500"
+                                                        : "bg-gray-200 border-gray-300"
+                                                        }`}
+                                                >
+                                                    <span
+                                                        className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow transition-transform ${exam.show_results ? "translate-x-4" : "translate-x-1"
+                                                            }`}
+                                                    />
+                                                </button>
+                                            </td>
                                             <td className="px-4 py-3.5 whitespace-nowrap">
                                                 <button
                                                     onClick={() => handleToggleStatus(exam)}
@@ -329,22 +346,6 @@ export default function DashboardPage() {
                                                         </span>
                                                     )}
                                                     {togglingId === exam.id ? "…" : exam.status}
-                                                </button>
-                                            </td>
-                                            <td className="px-4 py-3.5 text-xs text-gray-400 whitespace-nowrap">{formatDate(exam.created_at)}</td>
-                                            {/* Results Visible toggle */}
-                                            <td className="px-4 py-3.5 whitespace-nowrap">
-                                                <button
-                                                    onClick={() => handleToggleShowResults(exam)}
-                                                    disabled={togglingResultsId === exam.id}
-                                                    title={exam.show_results ? "Students see results — click to hide" : "Students don't see results — click to show"}
-                                                    className={`relative inline-flex h-5 w-9 items-center rounded-full border transition-colors focus:outline-none disabled:opacity-50 ${exam.show_results
-                                                        ? "bg-green-500 border-green-500"
-                                                        : "bg-gray-200 border-gray-300"
-                                                        }`}
-                                                >
-                                                    <span className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow transition-transform ${exam.show_results ? "translate-x-4" : "translate-x-1"
-                                                        }`} />
                                                 </button>
                                             </td>
                                             <td className="px-4 py-3.5 text-xs text-gray-400 whitespace-nowrap">{formatDate(exam.created_at)}</td>

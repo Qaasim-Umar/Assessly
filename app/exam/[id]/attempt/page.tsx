@@ -515,6 +515,7 @@ export default function ExamAttemptPage() {
     const currentAnswer = answers[currentIndex];
     const currentStatus = statuses[currentIndex];
     const options: { label: string; text: string }[] = currentQuestion.options ?? [];
+    const questionImageUrl = (currentQuestion as any).image_url as string | null | undefined;
 
     return (
         <div className="min-h-screen bg-[#f0f2f5] flex flex-col">
@@ -556,6 +557,15 @@ export default function ExamAttemptPage() {
                             )}
                         </div>
                         <div className="px-6 py-5">
+                            {questionImageUrl && (
+                                <div className="mb-4">
+                                    <img
+                                        src={questionImageUrl}
+                                        alt="Question diagram"
+                                        className="w-full max-h-[360px] object-contain rounded-lg border border-gray-200 bg-white"
+                                    />
+                                </div>
+                            )}
                             <p className="text-base font-semibold text-gray-900 leading-relaxed">{currentQuestion.text}</p>
                         </div>
 

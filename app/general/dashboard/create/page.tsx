@@ -9,6 +9,7 @@ import ManualEntryStep from "@/app/dashboard/create/_steps/ManualEntryStep";
 import FinalizeStep from "@/app/dashboard/create/_steps/FinalizeStep";
 import { defaultForm, generateQuestions } from "@/app/dashboard/create/types";
 import type { ExamForm, Question, Difficulty, QuestionType, ExamType } from "@/app/dashboard/create/types";
+import { uploadGeneralQuestionImage } from "@/lib/questionAssets";
 
 const MANUAL_STEPS = ["Exam Setup", "Enter Questions", "Finalize"];
 const PDF_STEPS = ["Exam Setup", "Upload & Configure", "AI Processing", "Review & Approve", "Finalize"];
@@ -213,6 +214,8 @@ export default function GeneralCreateExamPage() {
                                 onChange={setQuestions}
                                 onNext={handleManualNext}
                                 onBack={() => setStep(0)}
+                                enableImages
+                                uploadImage={uploadGeneralQuestionImage}
                             />
                         </div>
                     )}
