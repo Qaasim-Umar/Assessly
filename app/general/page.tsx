@@ -78,17 +78,6 @@ export default function GeneralModePage() {
         icon: React.ReactNode;
     }> = [
             {
-                label: "All",
-                subtitle: "Everything available",
-                accent: "from-indigo-600 to-purple-600",
-                href: "/general/all",
-                icon: (
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                ),
-            },
-            {
                 label: "WAEC",
                 subtitle: "Past questions & practice",
                 accent: "from-emerald-600 to-teal-600",
@@ -216,48 +205,52 @@ export default function GeneralModePage() {
                     </div>
                 )}
 
-                {/* Category Filter */}
-                {!loading && exams.length > 0 && (
-                    <div className="mb-7">
-                        <h2 className="text-sm font-bold text-gray-800 mb-3">Choose a category</h2>
-                        <div className="grid gap-3 sm:grid-cols-2">
-                            {CATEGORY_CARDS
-                                .filter((c) => c.href === "/general/all" || exams.length > 0)
-                                .map((c) => {
-                                    const count = exams.length; // counts are shown on per-category pages
-                                    return (
-                                        <button
-                                            key={c.label}
-                                            onClick={() => {
-                                                router.push(c.href);
-                                            }}
-                                            className="group text-left bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 hover:shadow-md hover:border-indigo-300 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                        >
-                                            <div className="flex items-start justify-between gap-3">
-                                                <div className="min-w-0">
-                                                    <p className="text-sm font-extrabold text-gray-900 group-hover:text-indigo-700 transition-colors truncate">
-                                                        {c.label}
-                                                    </p>
-                                                    <p className="text-xs text-gray-500 mt-0.5">{c.subtitle}</p>
-                                                </div>
-                                                <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${c.accent} flex items-center justify-center flex-shrink-0 shadow-sm`}>
-                                                    {c.icon}
-                                                </div>
-                                            </div>
-                                            <div className="mt-4 flex items-center justify-between">
-                                                <span className="text-[11px] font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-1 rounded-full">
-                                                    Browse
-                                                </span>
-                                                <span className="text-xs font-bold text-gray-500 group-hover:text-indigo-700 transition-colors">
-                                                    View →
-                                                </span>
-                                            </div>
-                                        </button>
-                                    );
-                                })}
-                        </div>
+                {/* Category Grid — skeleton while loading, real cards after */}
+                <div className="mb-7">
+                    <h2 className="text-sm font-bold text-gray-800 mb-3">Choose a category</h2>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                        {loading
+                            ? Array.from({ length: 6 }).map((_, i) => (
+                                <div key={i} className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 animate-pulse">
+                                    <div className="flex items-start justify-between gap-3">
+                                        <div className="flex-1 space-y-2">
+                                            <div className="h-3.5 bg-gray-200 rounded w-2/5" />
+                                            <div className="h-3 bg-gray-100 rounded w-3/5" />
+                                        </div>
+                                        <div className="w-10 h-10 rounded-xl bg-gray-200 flex-shrink-0" />
+                                    </div>
+                                    <div className="mt-4 flex justify-end">
+                                        <div className="h-3 bg-gray-100 rounded w-10" />
+                                    </div>
+                                </div>
+                            ))
+                            : CATEGORY_CARDS.map((c) => (
+                                <button
+                                    key={c.label}
+                                    onClick={() => router.push(c.href)}
+                                    className="group text-left bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 hover:shadow-md hover:border-indigo-300 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                >
+                                    <div className="flex items-start justify-between gap-3">
+                                        <div className="min-w-0">
+                                            <p className="text-sm font-extrabold text-gray-900 group-hover:text-indigo-700 transition-colors truncate">
+                                                {c.label}
+                                            </p>
+                                            <p className="text-xs text-gray-500 mt-0.5">{c.subtitle}</p>
+                                        </div>
+                                        <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${c.accent} flex items-center justify-center flex-shrink-0 shadow-sm`}>
+                                            {c.icon}
+                                        </div>
+                                    </div>
+                                    <div className="mt-4 flex items-center justify-end">
+                                        <span className="text-xs font-bold text-gray-500 group-hover:text-indigo-700 transition-colors">
+                                            View →
+                                        </span>
+                                    </div>
+                                </button>
+                            ))
+                        }
                     </div>
-                )}
+                </div>
 
                 <div className="mt-10 text-center text-xs text-gray-400">
                     Assessly General Mode · Open Exams · {new Date().getFullYear()}

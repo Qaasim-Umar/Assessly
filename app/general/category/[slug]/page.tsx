@@ -119,7 +119,8 @@ export default function GeneralCategoryPage() {
 
   const filtered = useMemo(() => {
     if (!categoryType) return exams;
-    return exams.filter((e) => e.type === categoryType);
+    const target = categoryType.trim().toLowerCase();
+    return exams.filter((e) => e.type?.trim().toLowerCase() === target);
   }, [categoryType, exams]);
 
   return (
