@@ -45,3 +45,21 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Prevent mobile browsers from auto-zooming into input fields.
+   iOS/Android zoom when focused field font-size < 16px.
+   This overrides visual font sizes on small screens to meet the threshold. */
+@media screen and (max-width: 768px) {
+  input,
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
