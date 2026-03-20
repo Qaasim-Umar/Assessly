@@ -145,8 +145,28 @@ export default function GeneralModePage() {
             },
         ];
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Free Practice Exams — Assessly General Mode",
+        description: "Free CBT practice exams for WAEC, JAMB/UTME, NECO, BECE, Post-UTME and Mock Tests.",
+        url: "https://assessly.app/general",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "WAEC Past Questions", url: "https://assessly.app/general/category/waec" },
+            { "@type": "ListItem", position: 2, name: "JAMB / UTME Practice", url: "https://assessly.app/general/category/jamb-utme" },
+            { "@type": "ListItem", position: 3, name: "NECO Practice Sets", url: "https://assessly.app/general/category/neco" },
+            { "@type": "ListItem", position: 4, name: "BECE Past Questions", url: "https://assessly.app/general/category/bece" },
+            { "@type": "ListItem", position: 5, name: "Post-UTME Screening", url: "https://assessly.app/general/category/post-utme" },
+            { "@type": "ListItem", position: 6, name: "Mock Tests", url: "https://assessly.app/general/category/mock" },
+        ],
+    };
+
     return (
         <div className="min-h-screen bg-[#f0f2f5]">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Header */}
             <header className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">

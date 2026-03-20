@@ -92,8 +92,60 @@ function Testimonial({ quote, name, role, initials }: { quote: string; name: str
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 export default function LandingPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://assessly.app/#organization",
+                name: "Assessly",
+                url: "https://assessly.app",
+                logo: {
+                    "@type": "ImageObject",
+                    url: "https://assessly.app/opengraph-image.png",
+                    width: 1200,
+                    height: 630,
+                },
+                description:
+                    "Nigeria's leading Computer-Based Testing (CBT) platform for secondary schools. AI-powered exam creation, instant results, and free practice for WAEC, JAMB, and NECO students.",
+                sameAs: [],
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://assessly.app/#website",
+                url: "https://assessly.app",
+                name: "Assessly",
+                description:
+                    "Smart CBT exam platform for Nigerian schools and students.",
+                publisher: { "@id": "https://assessly.app/#organization" },
+                potentialAction: {
+                    "@type": "SearchAction",
+                    target: {
+                        "@type": "EntryPoint",
+                        urlTemplate: "https://assessly.app/general?q={search_term_string}",
+                    },
+                    "query-input": "required name=search_term_string",
+                },
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://assessly.app/landing",
+                url: "https://assessly.app/landing",
+                name: "Assessly — Smart CBT Exams for Nigerian Schools",
+                isPartOf: { "@id": "https://assessly.app/#website" },
+                about: { "@id": "https://assessly.app/#organization" },
+                description:
+                    "Create, manage and deliver Computer-Based Tests in minutes. Free WAEC, JAMB & NECO practice for every student.",
+            },
+        ],
+    };
+
     return (
         <div className="landing-root">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <Navbar />
 
             {/* ══════════════════════════════════════════════════════════════════
