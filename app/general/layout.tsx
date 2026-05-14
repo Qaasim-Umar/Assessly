@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Practice Exams — WAEC, JAMB & NECO",
+  title: "Free Practice Exams - WAEC, JAMB & NECO",
   description:
-    "Access thousands of free WAEC, JAMB/UTME, NECO, BECE and Post-UTME past questions. No login, no account — just pick a category and start practising instantly.",
+    "Access thousands of free WAEC, JAMB/UTME, NECO, BECE and Post-UTME past questions. No login, no account - just pick a category and start practising instantly.",
   keywords: [
     "free WAEC practice questions",
     "JAMB past questions free",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://assessly.app/general",
-    title: "Free Practice Exams — WAEC, JAMB & NECO | Assessly",
+    title: "Free Practice Exams - WAEC, JAMB & NECO | Assessly",
     description:
       "Thousands of free past questions for WAEC, JAMB/UTME, NECO, BECE and Post-UTME. No account required. Instant results.",
   },

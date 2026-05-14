@@ -9,7 +9,7 @@ import { getAdminProfile, signOut } from "@/lib/authService";
 
 const statusStyle: Record<string, string> = {
     Live: "bg-green-100 text-green-700 border border-green-300",
-    Published: "bg-blue-100 text-blue-700 border border-blue-300",
+    Published: "bg-green-100 text-green-700 border border-green-300",
     Draft: "bg-gray-100 text-gray-600 border border-gray-300",
 };
 
@@ -21,8 +21,8 @@ const difficultyStyle: Record<string, string> = {
 };
 
 const typeStyle: Record<string, string> = {
-    Test: "bg-blue-50 text-blue-700",
-    Mock: "bg-indigo-50 text-indigo-700",
+    Test: "bg-green-50 text-green-700",
+    Mock: "bg-green-50 text-green-800",
     Practice: "bg-teal-50 text-teal-700",
 };
 
@@ -46,7 +46,7 @@ function StatCard({
             </div>
             <div>
                 <p className={`text-2xl font-bold text-gray-900 leading-none ${loading ? "animate-pulse text-gray-300" : ""}`}>
-                    {loading ? "—" : value}
+                    {loading ? "-" : value}
                 </p>
                 <p className="text-xs text-gray-500 mt-0.5">{label}</p>
             </div>
@@ -151,7 +151,7 @@ export default function DashboardPage() {
         } catch {
             // Revert on failure
             setExams((prev) => prev.map((e) => (e.id === exam.id ? { ...e, show_results: !next } : e)));
-            alert("Could not update — run the SQL migration in Supabase first.");
+            alert("Could not update. Run the SQL migration in Supabase first.");
         } finally {
             setTogglingResultsId(null);
         }
@@ -168,14 +168,14 @@ export default function DashboardPage() {
             <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-md bg-blue-700 flex items-center justify-center">
+                        <div className="w-8 h-8 rounded-md bg-green-700 flex items-center justify-center">
                             <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                             </svg>
                         </div>
                         <div>
                             <span className="text-base font-bold text-gray-900">Assessly</span>
-                            <span className="ml-2 text-[10px] font-semibold text-blue-600 bg-blue-50 border border-blue-200 px-1.5 py-0.5 rounded uppercase tracking-wide">Creator</span>
+                            <span className="ml-2 text-[10px] font-semibold text-green-600 bg-green-50 border border-green-200 px-1.5 py-0.5 rounded uppercase tracking-wide">Creator</span>
                         </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -192,12 +192,12 @@ export default function DashboardPage() {
                                 {codeCopied ? "Copied!" : `Code: ${schoolCode}`}
                             </button>
                         )}
-                        <Link href="/" className="text-xs text-gray-500 hover:text-blue-600 font-medium transition-colors hidden sm:block">
+                        <Link href="/" className="text-xs text-gray-500 hover:text-green-600 font-medium transition-colors hidden sm:block">
                             Student View
                         </Link>
                         <div className="h-4 w-px bg-gray-200 hidden sm:block" />
                         <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold text-xs">
+                            <div className="w-7 h-7 rounded-full bg-green-700 flex items-center justify-center text-white font-bold text-xs">
                                 {adminName ? adminName.slice(0, 2).toUpperCase() : "TC"}
                             </div>
                             <span className="hidden sm:block text-sm text-gray-700 font-medium">{adminName || "Teacher Console"}</span>
@@ -235,7 +235,7 @@ export default function DashboardPage() {
                         </button>
                         <Link
                             href="/dashboard/create"
-                            className="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors shadow-sm"
+                            className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors shadow-sm"
                         >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 4.5v15m7.5-7.5h-15" />
@@ -258,7 +258,7 @@ export default function DashboardPage() {
 
                 {/* Stats */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-                    <StatCard label="Total Exams" value={exams.length} loading={loading} color="bg-blue-50 text-blue-600"
+                    <StatCard label="Total Exams" value={exams.length} loading={loading} color="bg-green-50 text-green-600"
                         icon={<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>}
                     />
                     <StatCard label="Published / Live" value={published} loading={loading} color="bg-green-50 text-green-600"
@@ -313,14 +313,14 @@ export default function DashboardPage() {
                                             </td>
                                             <td className="px-4 py-3.5 text-xs text-gray-600 text-center">{exam.question_count}</td>
                                             <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">
-                                                {exam.duration ? `${exam.duration} min` : <span className="text-gray-400">—</span>}
+                                                {exam.duration ? `${exam.duration} min` : <span className="text-gray-400">N/A</span>}
                                             </td>
                                             {/* Results Visible toggle */}
                                             <td className="px-4 py-3.5 whitespace-nowrap">
                                                 <button
                                                     onClick={() => handleToggleShowResults(exam)}
                                                     disabled={togglingResultsId === exam.id}
-                                                    title={exam.show_results ? "Students see results — click to hide" : "Students don't see results — click to show"}
+                                                    title={exam.show_results ? "Students see results. Click to hide" : "Students don't see results. Click to show"}
                                                     className={`relative inline-flex h-5 w-9 items-center rounded-full border transition-colors focus:outline-none disabled:opacity-50 ${exam.show_results
                                                         ? "bg-green-500 border-green-500"
                                                         : "bg-gray-200 border-gray-300"
@@ -359,7 +359,7 @@ export default function DashboardPage() {
                                                     </button>
                                                     <button
                                                         onClick={() => router.push(`/dashboard/edit/${exam.id}`)}
-                                                        className="text-[11px] font-semibold text-blue-600 hover:text-blue-800 px-2 py-1 rounded hover:bg-blue-50 transition-colors"
+                                                        className="text-[11px] font-semibold text-green-600 hover:text-green-800 px-2 py-1 rounded hover:bg-green-50 transition-colors"
                                                     >
                                                         Edit
                                                     </button>
@@ -384,7 +384,7 @@ export default function DashboardPage() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
                             </svg>
                             <p className="text-sm font-medium text-gray-400">No exams yet.</p>
-                            <Link href="/dashboard/create" className="mt-3 inline-block text-sm text-blue-600 font-semibold hover:underline">Create your first exam</Link>
+                            <Link href="/dashboard/create" className="mt-3 inline-block text-sm text-green-600 font-semibold hover:underline">Create your first exam</Link>
                         </div>
                     )}
                 </div>

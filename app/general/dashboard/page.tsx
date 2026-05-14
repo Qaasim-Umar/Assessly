@@ -8,7 +8,7 @@ import type { DbExam } from "@/lib/examService";
 
 const statusStyle: Record<string, string> = {
     Live: "bg-green-100 text-green-700 border border-green-300",
-    Published: "bg-blue-100 text-blue-700 border border-blue-300",
+    Published: "bg-green-100 text-green-700 border border-green-300",
     Draft: "bg-gray-100 text-gray-600 border border-gray-300",
 };
 
@@ -91,18 +91,18 @@ export default function GeneralDashboardPage() {
             <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-md bg-indigo-700 flex items-center justify-center">
+                        <div className="w-8 h-8 rounded-md bg-green-700 flex items-center justify-center">
                             <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
                             </svg>
                         </div>
                         <div>
                             <span className="text-base font-bold text-gray-900">Assessly</span>
-                            <span className="ml-2 text-[10px] font-semibold text-indigo-600 bg-indigo-50 border border-indigo-200 px-1.5 py-0.5 rounded uppercase tracking-wide">General Mode</span>
+                            <span className="ml-2 text-[10px] font-semibold text-green-600 bg-green-50 border border-green-200 px-1.5 py-0.5 rounded uppercase tracking-wide">General Mode</span>
                         </div>
                     </div>
                     <div className="flex items-center gap-3">
-                        <Link href="/general" target="_blank" className="text-xs text-gray-500 hover:text-indigo-600 font-medium transition-colors hidden sm:block">
+                        <Link href="/general" target="_blank" className="text-xs text-gray-500 hover:text-green-600 font-medium transition-colors hidden sm:block">
                             Public View ↗
                         </Link>
                         <div className="h-4 w-px bg-gray-200 hidden sm:block" />
@@ -124,7 +124,7 @@ export default function GeneralDashboardPage() {
                 <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
                     <div>
                         <h1 className="text-xl font-bold text-gray-900">General Mode Exams</h1>
-                        <p className="text-sm text-gray-500 mt-0.5">Manage open practice exams — visible to anyone at <code className="text-indigo-600 bg-indigo-50 px-1 rounded">/general</code></p>
+                        <p className="text-sm text-gray-500 mt-0.5">Manage open practice exams - visible to anyone at <code className="text-green-600 bg-green-50 px-1 rounded">/general</code></p>
                     </div>
                     <div className="flex items-center gap-2">
                         <button
@@ -139,7 +139,7 @@ export default function GeneralDashboardPage() {
                         </button>
                         <Link
                             href="/general/dashboard/create"
-                            className="flex items-center gap-2 bg-indigo-700 hover:bg-indigo-800 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors shadow-sm"
+                            className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors shadow-sm"
                         >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 4.5v15m7.5-7.5h-15" />
@@ -152,7 +152,7 @@ export default function GeneralDashboardPage() {
                 {/* Stats */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                     {[
-                        { label: "Total Exams", value: exams.length, color: "bg-indigo-50 text-indigo-600" },
+                        { label: "Total Exams", value: exams.length, color: "bg-green-50 text-green-600" },
                         { label: "Published / Live", value: published, color: "bg-green-50 text-green-600" },
                         { label: "Drafts", value: drafts, color: "bg-amber-50 text-amber-600" },
                     ].map(({ label, value, color }) => (
@@ -164,7 +164,7 @@ export default function GeneralDashboardPage() {
                             </div>
                             <div>
                                 <p className={`text-2xl font-bold text-gray-900 leading-none ${loading ? "animate-pulse text-gray-300" : ""}`}>
-                                    {loading ? "—" : value}
+                                    {loading ? "-" : value}
                                 </p>
                                 <p className="text-xs text-gray-500 mt-0.5">{label}</p>
                             </div>
@@ -214,9 +214,9 @@ export default function GeneralDashboardPage() {
                                             <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">{exam.type}</td>
                                             <td className="px-4 py-3.5 text-xs text-gray-600 text-center">{exam.question_count}</td>
                                             <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">
-                                                {exam.duration ? `${exam.duration} min` : <span className="text-gray-400">—</span>}
+                                                {exam.duration ? `${exam.duration} min` : <span className="text-gray-400">N/A</span>}
                                             </td>
-                                            <td className="px-4 py-3.5 text-xs text-indigo-600 font-bold text-center whitespace-nowrap">
+                                            <td className="px-4 py-3.5 text-xs text-green-600 font-bold text-center whitespace-nowrap">
                                                 {exam.takes ?? 0}
                                             </td>
                                             <td className="px-4 py-3.5 whitespace-nowrap">
@@ -240,7 +240,7 @@ export default function GeneralDashboardPage() {
                                                 <div className="flex items-center gap-1.5">
                                                     <button
                                                         onClick={() => router.push(`/general/dashboard/edit/${exam.id}`)}
-                                                        className="text-[11px] font-semibold text-indigo-600 hover:text-indigo-800 px-2 py-1 rounded hover:bg-indigo-50 transition-colors"
+                                                        className="text-[11px] font-semibold text-green-600 hover:text-green-800 px-2 py-1 rounded hover:bg-green-50 transition-colors"
                                                     >
                                                         Edit
                                                     </button>
@@ -266,7 +266,7 @@ export default function GeneralDashboardPage() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
                             </svg>
                             <p className="text-sm font-medium text-gray-400">No general exams yet.</p>
-                            <Link href="/general/dashboard/create" className="mt-3 inline-block text-sm text-indigo-600 font-semibold hover:underline">Upload your first exam</Link>
+                            <Link href="/general/dashboard/create" className="mt-3 inline-block text-sm text-green-600 font-semibold hover:underline">Upload your first exam</Link>
                         </div>
                     )}
                 </div>

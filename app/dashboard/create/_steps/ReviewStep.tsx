@@ -48,16 +48,16 @@ export default function ReviewStep({ questions, onChange, onApproveAll, onNext }
     return (
         <div className="space-y-4">
             {/* Header banner */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-blue-50 border border-blue-200 rounded-lg px-4 py-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-green-50 border border-green-200 rounded-lg px-4 py-3">
                 <div>
-                    <p className="text-sm font-bold text-blue-800">{questions.length} questions detected by AI</p>
-                    <p className="text-xs text-blue-600 mt-0.5">
+                    <p className="text-sm font-bold text-green-800">{questions.length} questions detected by AI</p>
+                    <p className="text-xs text-green-600 mt-0.5">
                         {approvedCount} approved &bull; Review each question and confirm its difficulty before proceeding.
                     </p>
                 </div>
                 <button
                     onClick={onApproveAll}
-                    className="flex items-center gap-1.5 text-xs font-bold text-white bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
+                    className="flex items-center gap-1.5 text-xs font-bold text-white bg-green-700 hover:bg-green-800 px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
                 >
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -75,11 +75,11 @@ export default function ReviewStep({ questions, onChange, onApproveAll, onNext }
                             value={editText}
                             onChange={(e) => setEditText(e.target.value)}
                             rows={4}
-                            className="w-full text-sm border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full text-sm border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500"
                         />
                         <div className="flex gap-2 justify-end mt-3">
                             <button onClick={() => setEditingId(null)} className="text-xs font-semibold text-gray-600 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50">Cancel</button>
-                            <button onClick={saveEdit} className="text-xs font-bold text-white bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-lg">Save</button>
+                            <button onClick={saveEdit} className="text-xs font-bold text-white bg-green-700 hover:bg-green-800 px-4 py-2 rounded-lg">Save</button>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ export default function ReviewStep({ questions, onChange, onApproveAll, onNext }
                                         <p className="text-[10px] text-gray-400 mt-0.5 font-semibold">{q.commandWord}</p>
                                     </td>
                                     <td className="px-3 py-3">
-                                        <span className={`inline-block text-[10px] font-bold px-1.5 py-0.5 rounded ${q.type === "MCQ" ? "bg-blue-50 text-blue-600" : "bg-purple-50 text-purple-600"}`}>
+                                        <span className={`inline-block text-[10px] font-bold px-1.5 py-0.5 rounded ${q.type === "MCQ" ? "bg-green-50 text-green-600" : "bg-green-50 text-green-600"}`}>
                                             {q.type}
                                         </span>
                                     </td>
@@ -124,7 +124,7 @@ export default function ReviewStep({ questions, onChange, onApproveAll, onNext }
                                         <select
                                             value={q.userDifficulty}
                                             onChange={(e) => setDifficulty(q.id, e.target.value as Difficulty)}
-                                            className="text-[11px] font-semibold border border-gray-200 rounded px-2 py-1 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
+                                            className="text-[11px] font-semibold border border-gray-200 rounded px-2 py-1 bg-white focus:outline-none focus:ring-2 focus:ring-green-400 w-full"
                                         >
                                             <option value="Simple">Simple</option>
                                             <option value="Medium">Medium</option>
@@ -146,7 +146,7 @@ export default function ReviewStep({ questions, onChange, onApproveAll, onNext }
                                     </td>
                                     <td className="px-3 py-3 text-center">
                                         <div className="flex items-center justify-center gap-1">
-                                            <button onClick={() => startEdit(q)} title="Edit" className="p-1 text-blue-500 hover:bg-blue-50 rounded transition-colors">
+                                            <button onClick={() => startEdit(q)} title="Edit" className="p-1 text-green-500 hover:bg-green-50 rounded transition-colors">
                                                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931z" />
                                                 </svg>
@@ -170,7 +170,7 @@ export default function ReviewStep({ questions, onChange, onApproveAll, onNext }
                 <button
                     onClick={onNext}
                     disabled={approvedCount === 0}
-                    className="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 disabled:opacity-40 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors"
+                    className="flex items-center gap-2 bg-green-700 hover:bg-green-800 disabled:opacity-40 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors"
                 >
                     Proceed to Finalize
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

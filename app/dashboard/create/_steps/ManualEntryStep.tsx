@@ -159,9 +159,9 @@ function BatchImportPanel({ onImport }: { onImport: (qs: Question[]) => void }) 
     return (
         <div className="space-y-4">
             {/* Instructions */}
-            <div className="bg-blue-50 border border-blue-200 rounded-xl px-4 py-3 space-y-1.5">
-                <p className="text-xs font-bold text-blue-800">📋 Paste MCQ questions in this format:</p>
-                <pre className="text-[11px] text-blue-700 leading-relaxed whitespace-pre-wrap">
+            <div className="bg-green-50 border border-green-200 rounded-xl px-4 py-3 space-y-1.5">
+                <p className="text-xs font-bold text-green-800">Paste MCQ questions in this format:</p>
+                <pre className="text-[11px] text-green-700 leading-relaxed whitespace-pre-wrap">
                     {`Which structure is present in plant cells but absent in animal cells?
 A. Mitochondrion
 B. Ribosome
@@ -174,8 +174,8 @@ B. Replication
 C. Transcription *
 D. Mutation`}
                 </pre>
-                <p className="text-[11px] text-blue-600">
-                    Tip: Mark the correct answer with <code className="bg-blue-100 px-1 rounded">*</code> after the option text.
+                <p className="text-[11px] text-green-600">
+                    Tip: Mark the correct answer with <code className="bg-green-100 px-1 rounded">*</code> after the option text.
                     Separate questions with a blank line.
                 </p>
             </div>
@@ -183,7 +183,7 @@ D. Mutation`}
             {/* Textarea */}
             <textarea
                 rows={12}
-                className="w-full text-sm border border-gray-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white resize-y font-mono"
+                className="w-full text-sm border border-gray-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white resize-y font-mono"
                 placeholder={`Which of the following is correct?\nA. Option one\nB. Option two *\nC. Option three\nD. Option four\n\nNext question goes here...`}
                 value={raw}
                 onChange={(e) => { setRaw(e.target.value); setPreviews(null); setImported(false); }}
@@ -228,7 +228,7 @@ D. Mutation`}
                 <div className="space-y-3">
                     <div className="flex items-center justify-between">
                         <p className="text-xs font-bold text-gray-700">
-                            Preview — {validCount} of {previews.length} question{previews.length !== 1 ? "s" : ""} ready
+                            Preview: {validCount} of {previews.length} question{previews.length !== 1 ? "s" : ""} ready
                         </p>
                         {warnCount > 0 && (
                             <p className="text-[11px] text-amber-600 font-semibold">
@@ -265,7 +265,7 @@ D. Mutation`}
                                         </div>
                                         {p.correctAnswer < 0 && (
                                             <p className="text-amber-600 font-semibold text-[11px]">
-                                                ⚠ No correct answer marked — add <code className="bg-amber-100 px-1 rounded">*</code> after the correct option
+                                                ⚠ No correct answer marked. Add <code className="bg-amber-100 px-1 rounded">*</code> after the correct option
                                             </p>
                                         )}
                                     </>
@@ -277,7 +277,7 @@ D. Mutation`}
                     {validCount > 0 && (
                         <button
                             onClick={handleImport}
-                            className="w-full flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm py-3 rounded-xl transition-colors shadow-sm"
+                            className="w-full flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm py-3 rounded-xl transition-colors shadow-sm"
                         >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.5v15m7.5-7.5h-15" />
@@ -382,15 +382,15 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
     const cancelEdit = () => { setEditingId(null); setForm({ ...blank }); setError(""); };
     const deleteQ = (id: number) => onChange(questions.filter((q) => q.id !== id));
 
-    const inputCls = "w-full text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white";
+    const inputCls = "w-full text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white";
 
     return (
         <div className="space-y-6">
             {/* ── Tab switcher ── */}
             <div className="flex items-center gap-1 bg-gray-100 p-1 rounded-xl w-fit">
                 {([
-                    { key: "single", label: "✏️ Add One" },
-                    { key: "batch", label: "⚡ Batch Import" },
+                    { key: "single", label: "Add One" },
+                    { key: "batch", label: "Batch Import" },
                 ] as const).map(({ key, label }) => (
                     <button
                         key={key}
@@ -475,7 +475,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                                                 setUploading(false);
                                             }
                                         }}
-                                        className="block text-xs text-gray-600 file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-blue-700 file:text-white hover:file:bg-blue-800"
+                                        className="block text-xs text-gray-600 file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-green-700 file:text-white hover:file:bg-green-800"
                                     />
                                     {uploading && <span className="text-xs text-gray-500 font-semibold">Uploading…</span>}
                                 </div>
@@ -493,7 +493,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                                         key={t}
                                         type="button"
                                         onClick={() => setF("type", t)}
-                                        className={`flex-1 text-xs font-bold py-2 rounded-lg border-2 transition-all ${form.type === t ? "border-blue-500 bg-blue-50 text-blue-700" : "border-gray-200 text-gray-500 hover:border-gray-300"}`}
+                                        className={`flex-1 text-xs font-bold py-2 rounded-lg border-2 transition-all ${form.type === t ? "border-green-500 bg-green-50 text-green-700" : "border-gray-200 text-gray-500 hover:border-gray-300"}`}
                                     >
                                         {t}
                                     </button>
@@ -575,7 +575,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                         )}
                         <button
                             onClick={handleAdd}
-                            className="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm px-5 py-2 rounded-lg transition-colors"
+                            className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm px-5 py-2 rounded-lg transition-colors"
                         >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 4.5v15m7.5-7.5h-15" />
@@ -602,11 +602,11 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                                 <div className="flex-1 min-w-0">
                                     <p className="text-xs font-medium text-gray-800 line-clamp-2">{q.text}</p>
                                     <div className="flex items-center gap-2 mt-1.5 flex-wrap">
-                                        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${q.type === "MCQ" ? "bg-blue-50 text-blue-600" : "bg-purple-50 text-purple-600"}`}>{q.type}</span>
+                                        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${q.type === "MCQ" ? "bg-green-50 text-green-600" : "bg-purple-50 text-purple-600"}`}>{q.type}</span>
                                         <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${difficultyColors[q.userDifficulty]}`}>{q.userDifficulty}</span>
                                         {q.imageUrl && (
-                                            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700">
-                                                🖼 Image
+                                            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 text-green-700">
+                                                Image
                                             </span>
                                         )}
                                         {q.type === "MCQ" && q.correctAnswer !== undefined && q.correctAnswer >= 0 && (
@@ -622,7 +622,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-1 flex-shrink-0">
-                                    <button onClick={() => startEdit(q)} className="p-1.5 text-blue-500 hover:bg-blue-50 rounded transition-colors">
+                                    <button onClick={() => startEdit(q)} className="p-1.5 text-green-500 hover:bg-green-50 rounded transition-colors">
                                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931z" />
                                         </svg>
@@ -658,7 +658,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                 <button
                     onClick={onNext}
                     disabled={questions.length === 0}
-                    className="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 disabled:opacity-40 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors"
+                    className="flex items-center gap-2 bg-green-700 hover:bg-green-800 disabled:opacity-40 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors"
                 >
                     Proceed to Finalize
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -25,7 +25,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
     );
 }
 
-const inputCls = "w-full text-sm border border-gray-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white";
+const inputCls = "w-full text-sm border border-gray-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white";
 const selectCls = inputCls;
 
 export default function GeneralCreateExamPage() {
@@ -90,7 +90,7 @@ export default function GeneralCreateExamPage() {
                     </Link>
                     <div className="h-4 w-px bg-gray-200" />
                     <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded bg-indigo-700 flex items-center justify-center">
+                        <div className="w-6 h-6 rounded bg-green-700 flex items-center justify-center">
                             <svg className="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
                             </svg>
@@ -109,12 +109,12 @@ export default function GeneralCreateExamPage() {
                         return (
                             <div key={i} className="flex items-center flex-shrink-0">
                                 <div className="flex flex-col items-center">
-                                    <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-all ${done ? "bg-indigo-600 border-indigo-600 text-white" : active ? "bg-white border-indigo-600 text-indigo-600" : "bg-white border-gray-300 text-gray-400"}`}>
+                                    <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-all ${done ? "bg-green-600 border-green-600 text-white" : active ? "bg-white border-green-600 text-green-600" : "bg-white border-gray-300 text-gray-400"}`}>
                                         {done ? <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg> : i + 1}
                                     </div>
-                                    <span className={`text-[10px] mt-1 font-semibold whitespace-nowrap ${active ? "text-indigo-700" : done ? "text-indigo-500" : "text-gray-400"}`}>{label}</span>
+                                    <span className={`text-[10px] mt-1 font-semibold whitespace-nowrap ${active ? "text-green-700" : done ? "text-green-500" : "text-gray-400"}`}>{label}</span>
                                 </div>
-                                {i < steps.length - 1 && <div className={`h-0.5 w-8 sm:w-14 mb-4 mx-1 flex-shrink-0 ${i < step ? "bg-indigo-500" : "bg-gray-200"}`} />}
+                                {i < steps.length - 1 && <div className={`h-0.5 w-8 sm:w-14 mb-4 mx-1 flex-shrink-0 ${i < step ? "bg-green-500" : "bg-gray-200"}`} />}
                             </div>
                         );
                     })}
@@ -127,15 +127,15 @@ export default function GeneralCreateExamPage() {
                         <div className="space-y-5 max-w-2xl">
                             <div>
                                 <h2 className="text-lg font-bold text-gray-900">Exam Setup</h2>
-                                <p className="text-sm text-gray-500 mt-0.5">Fill in the details. This exam will be public — no login needed.</p>
+                                <p className="text-sm text-gray-500 mt-0.5">Fill in the details. This exam will be public - no login needed.</p>
                             </div>
 
                             {/* General Mode notice */}
-                            <div className="flex items-start gap-3 bg-indigo-50 border border-indigo-200 rounded-lg px-4 py-3">
-                                <svg className="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-lg px-4 py-3">
+                                <svg className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                                 </svg>
-                                <p className="text-xs text-indigo-800">
+                                <p className="text-xs text-green-800">
                                     <strong>General Mode:</strong> This exam will be open to everyone at <code>/general</code>. Results are always shown instantly. No school code required.
                                 </p>
                             </div>
@@ -178,15 +178,14 @@ export default function GeneralCreateExamPage() {
                             <Field label="Question Source">
                                 <div className="grid sm:grid-cols-2 gap-3">
                                     {[
-                                        { val: "manual" as Mode, label: "Manual Entry", desc: "Type your questions directly", icon: "✏️" },
-                                        { val: "pdf" as Mode, label: "AI from PDF", desc: "Upload a PDF — AI extracts questions", icon: "🤖" },
-                                    ].map(({ val, label, desc, icon }) => (
+                                        { val: "manual" as Mode, label: "Manual Entry", desc: "Type your questions directly" },
+                                        { val: "pdf" as Mode, label: "AI from PDF", desc: "Upload a PDF - AI extracts questions" },
+                                    ].map(({ val, label, desc }) => (
                                         <button key={val} type="button"
                                             onClick={() => { setMode(val); set("source", val); }}
-                                            className={`flex items-start gap-3 p-4 rounded-xl border-2 text-left transition-all ${mode === val ? "border-indigo-500 bg-indigo-50" : "border-gray-200 hover:border-gray-300"}`}>
-                                            <span className="text-xl">{icon}</span>
+                                            className={`flex items-start gap-3 p-4 rounded-xl border-2 text-left transition-all ${mode === val ? "border-green-500 bg-green-50" : "border-gray-200 hover:border-gray-300"}`}>
                                             <div>
-                                                <p className={`text-sm font-bold ${mode === val ? "text-indigo-700" : "text-gray-700"}`}>{label}</p>
+                                                <p className={`text-sm font-bold ${mode === val ? "text-green-700" : "text-gray-700"}`}>{label}</p>
                                                 <p className="text-xs text-gray-500 mt-0.5">{desc}</p>
                                             </div>
                                         </button>
@@ -196,7 +195,7 @@ export default function GeneralCreateExamPage() {
 
                             {step1Error && <p className="text-xs text-red-600 bg-red-50 border border-red-200 px-3 py-2 rounded-lg">{step1Error}</p>}
                             <button onClick={handleStep1Next}
-                                className="flex items-center gap-2 bg-indigo-700 hover:bg-indigo-800 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors">
+                                className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors">
                                 Next <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
                             </button>
                         </div>
@@ -232,7 +231,7 @@ export default function GeneralCreateExamPage() {
                                 onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
                                 onDragLeave={() => setDragOver(false)}
                                 onDrop={handleDrop}
-                                className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all ${dragOver ? "border-indigo-500 bg-indigo-50" : pdfFile ? "border-green-400 bg-green-50" : "border-gray-300 hover:border-indigo-400 hover:bg-gray-50"}`}>
+                                className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all ${dragOver ? "border-green-500 bg-green-50" : pdfFile ? "border-green-400 bg-green-50" : "border-gray-300 hover:border-green-400 hover:bg-gray-50"}`}>
                                 <input ref={fileRef} type="file" accept=".pdf" className="hidden"
                                     onChange={(e) => { const f = e.target.files?.[0]; if (f) setPdfFile(f); }} />
                                 {pdfFile ? (
@@ -277,7 +276,7 @@ export default function GeneralCreateExamPage() {
                             <div className="flex gap-3">
                                 <button onClick={() => setStep(0)} className="text-sm font-semibold text-gray-600 border border-gray-300 px-4 py-2.5 rounded-lg hover:bg-gray-50">Back</button>
                                 <button onClick={handleProcessPDF}
-                                    className="flex items-center gap-2 bg-indigo-700 hover:bg-indigo-800 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors">
+                                    className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors">
                                     Process PDF with AI
                                 </button>
                             </div>

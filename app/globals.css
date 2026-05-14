@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #f0f2f5;
+  --color-bg: #ffffff;
   --color-surface: #ffffff;
   --color-border: #d1d5db;
   --color-text-primary: #111827;
   --color-text-secondary: #4b5563;
   --color-text-muted: #9ca3af;
-  --color-brand: #1d4ed8;
-  --color-brand-dark: #1e3a8a;
-  --color-brand-light: #dbeafe;
+  --color-brand: #16a34a;
+  --color-brand-dark: #14532d;
+  --color-brand-light: #dcfce7;
   --color-answered: #16a34a;
   --color-review: #d97706;
   --color-not-answered: #dc2626;
@@ -24,11 +24,15 @@
 
 html,
 body {
-  font-family: "Inter", sans-serif;
-  background-color: var(--color-bg);
+  font-family: "Manrope", sans-serif;
+  background-color: #ffffff;
   color: var(--color-text-primary);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Space Grotesk", sans-serif;
 }
 
 /* Scrollbar */

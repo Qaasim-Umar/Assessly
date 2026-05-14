@@ -22,13 +22,13 @@ function StepIndicator({ current, steps }: { current: number; steps: string[] })
                 return (
                     <div key={i} className="flex items-center flex-shrink-0">
                         <div className="flex flex-col items-center">
-                            <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-all ${done ? "bg-indigo-600 border-indigo-600 text-white" : active ? "bg-white border-indigo-600 text-indigo-600" : "bg-white border-gray-300 text-gray-400"}`}>
+                            <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-all ${done ? "bg-green-600 border-green-600 text-white" : active ? "bg-white border-green-600 text-green-600" : "bg-white border-gray-300 text-gray-400"}`}>
                                 {done ? <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg> : i + 1}
                             </div>
-                            <span className={`text-[10px] mt-1 font-semibold whitespace-nowrap ${active ? "text-indigo-700" : done ? "text-indigo-500" : "text-gray-400"}`}>{label}</span>
+                            <span className={`text-[10px] mt-1 font-semibold whitespace-nowrap ${active ? "text-green-700" : done ? "text-green-500" : "text-gray-400"}`}>{label}</span>
                         </div>
                         {i < steps.length - 1 && (
-                            <div className={`h-0.5 w-8 sm:w-14 mb-4 mx-1 flex-shrink-0 ${i < current ? "bg-indigo-500" : "bg-gray-200"}`} />
+                            <div className={`h-0.5 w-8 sm:w-14 mb-4 mx-1 flex-shrink-0 ${i < current ? "bg-green-500" : "bg-gray-200"}`} />
                         )}
                     </div>
                 );
@@ -46,7 +46,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
     );
 }
 
-const inputCls = "w-full text-sm border border-gray-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white";
+const inputCls = "w-full text-sm border border-gray-300 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white";
 const selectCls = inputCls;
 
 function mapDbToQuestions(exam: DbExamWithQuestions): Question[] {
@@ -92,7 +92,7 @@ export default function GeneralEditExamPage() {
     const [loadingExam, setLoadingExam] = useState(true);
     const [notFound, setNotFound] = useState(false);
 
-    // Auth guard — require general admin session
+    // Auth guard, require general admin session
     useEffect(() => {
         if (typeof window !== "undefined" && sessionStorage.getItem("generalAdmin") !== "1") {
             router.replace("/general/dashboard/login");
@@ -130,7 +130,7 @@ export default function GeneralEditExamPage() {
         return (
             <div className="min-h-screen bg-[#f0f2f5] flex items-center justify-center">
                 <div className="text-center">
-                    <svg className="w-8 h-8 animate-spin text-indigo-600 mx-auto mb-3" fill="none" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8 animate-spin text-green-600 mx-auto mb-3" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                     </svg>
@@ -145,7 +145,7 @@ export default function GeneralEditExamPage() {
             <div className="min-h-screen bg-[#f0f2f5] flex items-center justify-center">
                 <div className="text-center">
                     <p className="text-sm text-gray-500">Exam not found.</p>
-                    <button onClick={() => router.push("/general/dashboard")} className="mt-3 text-indigo-600 text-sm hover:underline">Back to Dashboard</button>
+                    <button onClick={() => router.push("/general/dashboard")} className="mt-3 text-green-600 text-sm hover:underline">Back to Dashboard</button>
                 </div>
             </div>
         );
@@ -163,7 +163,7 @@ export default function GeneralEditExamPage() {
                     </Link>
                     <div className="h-4 w-px bg-gray-200" />
                     <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded bg-indigo-700 flex items-center justify-center">
+                        <div className="w-6 h-6 rounded bg-green-700 flex items-center justify-center">
                             <svg className="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
                             </svg>
@@ -228,7 +228,7 @@ export default function GeneralEditExamPage() {
 
                             {step1Error && <p className="text-xs text-red-600 bg-red-50 border border-red-200 px-3 py-2 rounded-lg">{step1Error}</p>}
                             <button onClick={handleStep1Next}
-                                className="flex items-center gap-2 bg-indigo-700 hover:bg-indigo-800 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors">
+                                className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors">
                                 Next <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
                             </button>
                         </div>

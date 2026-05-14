@@ -18,8 +18,8 @@ function ArrowRight() {
 function CheckIcon() {
     return (
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <circle cx="8" cy="8" r="7" fill="#DBEAFE" />
-            <path d="M5 8L7 10L11 6" stroke="#2563EB" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            <circle cx="8" cy="8" r="7" fill="#DCFCE7" />
+            <path d="M5 8L7 10L11 6" stroke="#16a34a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     );
 }
@@ -46,6 +46,147 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
         return () => observer.disconnect();
     }, [target]);
     return <span ref={ref}>{count.toLocaleString()}{suffix}</span>;
+}
+
+// ── Hero Section Component ────────────────────────────────────────────────────
+function HeroSection() {
+    return (
+        <section id="hero" className="hero-section-modern">
+            <div className="hero-bg-grid" />
+            
+            {/* Main Content Container */}
+            <div className="hero-container-modern">
+                
+                {/* Top Badge */}
+                <div className="hero-badge-modern">
+                    <span className="badge-dot"></span>
+                    <span>Nigeria's #1 CBT Platform</span>
+                </div>
+
+                {/* Main Headline */}
+                <h1 className="hero-headline-modern">
+                    Run School Exams <span className="gradient-text">Smarter.</span>
+                    <br />
+                    Practice for <span className="gradient-text">Free.</span>
+                </h1>
+
+                {/* Subheadline */}
+                <p className="hero-subheadline-modern">
+                    Nigeria's smartest CBT platform. Educators can create exams in minutes using AI, 
+                    while students can access thousands of past WAEC, JAMB, and NECO questions - completely free.
+                </p>
+
+                {/* CTA Buttons */}
+                <div className="hero-cta-group">
+                    <Link href="/dashboard/login" className="cta-button cta-primary">
+                        <div className="cta-text">
+                            <span className="cta-label">For Schools</span>
+                            <span className="cta-action">Get Started Free</span>
+                        </div>
+                        <div className="cta-arrow"><ArrowRight /></div>
+                    </Link>
+                    <Link href="/general" className="cta-button cta-secondary">
+                        <div className="cta-text">
+                            <span className="cta-label">For Students</span>
+                            <span className="cta-action">Start Practising</span>
+                        </div>
+                        <div className="cta-arrow"><ArrowRight /></div>
+                    </Link>
+                </div>
+
+                {/* Social Proof */}
+                <div className="hero-social-proof">
+                    <div className="avatar-stack-modern">
+                        {["MO", "SA", "TA", "ED", "FH"].map((initials, i) => (
+                            <div key={i} className="avatar-modern" style={{ zIndex: 5 - i }}>
+                                {initials}
+                            </div>
+                        ))}
+                    </div>
+                    <div className="proof-text">
+                        <strong>500+ teachers</strong> and <strong>thousands of students</strong> trust Assessly
+                    </div>
+                </div>
+
+                {/* Dashboard Preview Mockup */}
+                <div className="hero-mockup-modern">
+                    <div className="mockup-window">
+                        <div className="mockup-titlebar">
+                            <div className="mockup-dots">
+                                <span className="dot red"></span>
+                                <span className="dot yellow"></span>
+                                <span className="dot green"></span>
+                            </div>
+                            <span className="mockup-url">assessly.app/dashboard</span>
+                            <div className="mockup-spacer"></div>
+                        </div>
+                        <div className="mockup-content-modern">
+                            <div className="mockup-sidebar-modern">
+                                <div className="sidebar-logo">
+                                    <LogoIcon size={18} />
+                                    <span>Assessly</span>
+                                </div>
+                                <div className="sidebar-nav">
+                                    <div className="nav-item active">
+                                        <span>Exams</span>
+                                        <span className="nav-badge">12</span>
+                                    </div>
+                                    <div className="nav-item">
+                                        <span>Results</span>
+                                    </div>
+                                    <div className="nav-item">
+                                        <span>Students</span>
+                                    </div>
+                                    <div className="nav-item">
+                                        <span>Settings</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mockup-main-modern">
+                                <div className="main-header">
+                                    <div>
+                                        <h3 className="main-title">Live Exams</h3>
+                                        <p className="main-subtitle">Active assessments</p>
+                                    </div>
+                                    <div className="live-indicator">
+                                        <span className="pulse-dot"></span>
+                                        <span>3 LIVE</span>
+                                    </div>
+                                </div>
+                                <div className="exam-cards">
+                                    {[
+                                        { subject: "Mathematics", class: "SS3", icon: "M", time: "2h", students: 87, color: "#16a34a" },
+                                        { subject: "English Language", class: "JS2", icon: "E", time: "1h 30m", students: 54, color: "#8b5cf6" },
+                                        { subject: "Biology", class: "SS1", icon: "B", time: "45m", students: 63, color: "#10b981" },
+                                    ].map((exam, i) => (
+                                        <div key={i} className="exam-card-mini">
+                                            <div className="exam-icon-modern" style={{ background: exam.color }}>
+                                                {exam.icon}
+                                            </div>
+                                            <div className="exam-info-modern">
+                                                <div className="exam-name-modern">{exam.subject} - {exam.class}</div>
+                                                <div className="exam-meta-modern">
+                                                    <span>{exam.time}</span>
+                                                    <span>•</span>
+                                                    <span>{exam.students} students</span>
+                                                </div>
+                                            </div>
+                                            <div className="exam-status-badge">Live</div>
+                                        </div>
+                                    ))}
+                                </div>
+                                <button className="create-exam-btn">
+                                    <span>+</span>
+                                    Create New Exam
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    );
 }
 
 function FeatureCard({ icon, title, description, accent }: { icon: React.ReactNode; title: string; description: string; accent: string }) {
@@ -131,7 +272,7 @@ export default function LandingPage() {
                 "@type": "WebPage",
                 "@id": "https://assessly.app/landing",
                 url: "https://assessly.app/landing",
-                name: "Assessly — Smart CBT Exams for Nigerian Schools",
+                name: "Assessly - Smart CBT Exams for Nigerian Schools",
                 isPartOf: { "@id": "https://assessly.app/#website" },
                 about: { "@id": "https://assessly.app/#organization" },
                 description:
@@ -149,153 +290,9 @@ export default function LandingPage() {
             <Navbar />
 
             {/* ══════════════════════════════════════════════════════════════════
-          COMBINED HERO — left: Schools/Admin · right: Students/Practice
+          UNIFIED HERO - Reusable component for both audiences
          ══════════════════════════════════════════════════════════════════ */}
-            <section id="practice" className="hero-section">
-                <div className="hero-bg-grid" />
-                <div className="hero-split">
-
-                    {/* ── LEFT PANE: For Schools ───────────────────────────────── */}
-                    <div className="hero-pane">
-                        <div className="hero-pane-label">
-                            <span className="pane-dot" />
-                            For Educators &amp; Schools
-                        </div>
-
-                        <h1 className="hero-pane-headline">
-                            Run School Exams
-                            <span className="headline-blue"> Smarter &amp; Faster</span>
-                        </h1>
-
-                        <p className="hero-pane-sub">
-                            Assessly lets teachers create, manage, and deliver Computer-Based Tests in minutes.
-                            Upload a PDF — our AI structures the questions automatically.
-                        </p>
-
-                        <div className="hero-pane-actions">
-                            <Link href="/dashboard/login" className="btn-primary">
-                                Get Started Free <ArrowRight />
-                            </Link>
-                            <a href="#how-it-works" className="btn-ghost">See how it works</a>
-                        </div>
-
-                        <div className="hero-pane-proof">
-                            <div className="avatar-stack">
-                                {["MO", "SA", "TA"].map(i => (
-                                    <div key={i} className="avatar-chip">{i}</div>
-                                ))}
-                            </div>
-                            <span className="social-proof-text">Trusted by 500+ teachers across Nigeria</span>
-                        </div>
-
-                        {/* Mini dashboard mockup */}
-                        <div className="pane-mockup-wrap">
-                            <div className="mockup-bar">
-                                <div className="mockup-dot red" /><div className="mockup-dot yellow" /><div className="mockup-dot green" />
-                                <span className="mockup-url">assessly.app/dashboard</span>
-                            </div>
-                            <div className="mockup-body">
-                                <div className="mockup-sidebar">
-                                    <div className="mockup-logo-sm"><LogoIcon size={20} /></div>
-                                    <div className="mockup-nav-item active-nav">📋 Exams</div>
-                                    <div className="mockup-nav-item">📊 Results</div>
-                                    <div className="mockup-nav-item">⚙️ Settings</div>
-                                </div>
-                                <div className="mockup-content">
-                                    <div className="mockup-header">
-                                        <span className="mockup-title">Live Exams</span>
-                                        <div className="mockup-badge-live"><span className="live-dot" />LIVE</div>
-                                    </div>
-                                    {[
-                                        { name: "Mathematics — SS3", subject: "M", time: "2h", students: "87" },
-                                        { name: "English Language — JS2", subject: "E", time: "1h 30m", students: "54" },
-                                        { name: "Biology — SS1", subject: "B", time: "45m", students: "63" },
-                                    ].map((exam, i) => (
-                                        <div key={i} className="mockup-exam-row">
-                                            <div className="mockup-exam-icon">{exam.subject}</div>
-                                            <div className="mockup-exam-info">
-                                                <div className="mockup-exam-name">{exam.name}</div>
-                                                <div className="mockup-exam-meta">⏱ {exam.time} · 👥 {exam.students}</div>
-                                            </div>
-                                            <div className="mockup-exam-status">Published</div>
-                                        </div>
-                                    ))}
-                                    <div className="mockup-create-btn">+ Create New Exam</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* ── RIGHT PANE: For Students / Practice ─────────────────── */}
-                    <div className="hero-pane hero-pane-right">
-                        <div className="hero-pane-label" style={{ background: "#eff6ff", borderColor: "#bfdbfe", color: "#1d4ed8" }}>
-                            Free for Every Student
-                        </div>
-
-                        <h2 className="hero-pane-headline">
-                            Ace WAEC, JAMB &amp; NECO
-                            <span className="headline-blue"> — no login needed</span>
-                        </h2>
-
-                        <p className="hero-pane-sub">
-                            Access thousands of past questions across all major Nigerian exams — completely free.
-                            No school code, no account, no cost. Just pick and practise.
-                        </p>
-
-                        <div className="practice-exam-tags">
-                            {["WAEC", "JAMB / UTME", "NECO", "BECE", "Post-UTME", "Mock Tests"].map(tag => (
-                                <span key={tag} className="exam-tag">{tag}</span>
-                            ))}
-                        </div>
-
-                        <div className="practice-perks">
-                            {[
-                                { icon: "⚡", text: "Instant score & review" },
-                                { icon: "📚", text: "Thousands of past questions" },
-                                { icon: "🔓", text: "Zero account required" },
-                                { icon: "🏆", text: "Track your personal best" },
-                            ].map(({ icon, text }) => (
-                                <div key={text} className="practice-perk">
-                                    <span className="perk-icon">{icon}</span>
-                                    <span>{text}</span>
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="hero-pane-actions">
-                            <Link href="/general" className="practice-cta">
-                                Start Practising Free <ArrowRight />
-                            </Link>
-                            <Link href="/login" className="practice-cta-ghost">
-                                Student login →
-                            </Link>
-                        </div>
-
-                        {/* Mini exam card mockup */}
-                        <div className="pc-card">
-                            <div className="pc-header">
-                                <div className="pc-exam-badge">WAEC 2024</div>
-                                <div className="pc-subject">Mathematics</div>
-                                <div className="pc-meta">50 Questions · 90 mins</div>
-                            </div>
-                            <div className="pc-question">
-                                <div className="pc-q-num">Question 12 of 50</div>
-                                <div className="pc-q-text">If 3x + 5 = 20, find the value of x.</div>
-                                <div className="pc-options">
-                                    {["A. 3", "B. 5", "C. 7", "D. 8"].map((opt, i) => (
-                                        <div key={i} className={`pc-option ${i === 1 ? "pc-option-selected" : ""}`}>{opt}</div>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="pc-footer">
-                                <div className="pc-score-bar"><div className="pc-score-fill" /></div>
-                                <span className="pc-score-text">24% complete</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
+            <HeroSection />
 
             {/* ── Stats ───────────────────────────────────────────────────────── */}
             <section className="stats-section">
@@ -319,12 +316,12 @@ export default function LandingPage() {
                 <div className="section-inner">
                     <div className="section-tag">Features</div>
                     <h2 className="section-headline">Everything your school needs</h2>
-                    <p className="section-subtext">From exam creation to result analysis — Assessly handles it all in one place.</p>
+                    <p className="section-subtext">From exam creation to result analysis - Assessly handles it all in one place.</p>
                     <div className="features-grid">
                         <FeatureCard accent="accent-blue"
                             icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 001.357 2.059l1.286.6M14.25 3.104c.251.023.501.05.75.082M19.5 7.5l-1.607 7.929A2.25 2.25 0 0115.694 18H8.306a2.25 2.25 0 01-2.199-1.571L4.5 7.5" /></svg>}
                             title="AI Question Parser"
-                            description="Upload any PDF question paper and our AI automatically extracts, classifies, and structures questions by difficulty — saving hours of manual work."
+                            description="Upload any PDF question paper and our AI automatically extracts, classifies, and structures questions by difficulty - saving hours of manual work."
                         />
                         <FeatureCard accent="accent-purple"
                             icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}
@@ -334,12 +331,12 @@ export default function LandingPage() {
                         <FeatureCard accent="accent-green"
                             icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>}
                             title="Multi-Tenant Schools"
-                            description="Each school gets a unique code. Students log in with their school code ensuring complete data isolation — your exams are only visible to your students."
+                            description="Each school gets a unique code. Students log in with their school code ensuring complete data isolation - your exams are only visible to your students."
                         />
                         <FeatureCard accent="accent-orange"
                             icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zm6.75-6.75c0-.621.504-1.125 1.125-1.125h2.25C13.496 5.25 14 5.754 14 6.375v13.5c0 .621-.504 1.125-1.125 1.125h-2.25A1.125 1.125 0 019.75 19.875V6.375zm6.75 3.75c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v10.5c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V10.125z" /></svg>}
                             title="Instant Results"
-                            description="Exam results and scores are computed and displayed instantly — no manual grading. Track student performance with per-question analytics."
+                            description="Exam results and scores are computed and displayed instantly - no manual grading. Track student performance with per-question analytics."
                         />
                         <FeatureCard accent="accent-blue"
                             icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>}
@@ -349,7 +346,7 @@ export default function LandingPage() {
                         <FeatureCard accent="accent-teal"
                             icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" /></svg>}
                             title="General Mode Exams"
-                            description="Create public practice exams open to anyone — no school code needed. Perfect for mock tests, demos, or open assessments with instant score display."
+                            description="Create public practice exams open to anyone - no school code needed. Perfect for mock tests, demos, or open assessments with instant score display."
                         />
                     </div>
                 </div>
@@ -369,7 +366,7 @@ export default function LandingPage() {
                             { n: "03", t: "Configure & publish", d: "Set subject, class level, duration, and question count. Save as draft or publish live instantly." },
                             { n: "04", t: "Students sit the exam", d: "Students log in with the school code. They get a timed, question-by-question exam interface." },
                             { n: "05", t: "View instant results", d: "Scores are computed automatically. Review per-student and per-question analytics in your dashboard." },
-                            { n: "06", t: "Iterate & improve", d: "Reuse questions across exams, edit drafts, and track progress over time — all in one place." },
+                            { n: "06", t: "Iterate & improve", d: "Reuse questions across exams, edit drafts, and track progress over time - all in one place." },
                         ].map(({ n, t, d }) => <StepCard key={n} number={n} title={t} description={d} />)}
                     </div>
                 </div>
@@ -383,7 +380,7 @@ export default function LandingPage() {
                     <p className="section-subtext">Real feedback from educators using the platform every day.</p>
                     <div className="testimonials-grid">
                         <Testimonial
-                            quote="Setting up our first CBT exam took less than 10 minutes. The AI parsed our question bank PDF perfectly — it was like magic."
+                            quote="Setting up our first CBT exam took less than 10 minutes. The AI parsed our question bank PDF perfectly - it was like magic."
                             name="Mrs. Adeyemi" role="Senior Teacher, Government Sec. School Lagos" initials="MA"
                         />
                         <Testimonial
@@ -391,7 +388,7 @@ export default function LandingPage() {
                             name="Mr. Okonkwo" role="HOD Mathematics, Bright Future Academy" initials="BO"
                         />
                         <Testimonial
-                            quote="The school code system is genius. Each of our campuses has its own code — students only ever see their own exams."
+                            quote="The school code system is genius. Each of our campuses has its own code - students only ever see their own exams."
                             name="Dr. Fatima Hassan" role="Principal, Hillside Group of Schools" initials="FH"
                         />
                     </div>

@@ -55,7 +55,7 @@ export interface DbSubmission {
   final_percentage: number;
 }
 
-// ── READ: fetch all exams (teacher dashboard — scoped to their school) ────────────
+// ── READ: fetch all exams (teacher dashboard - scoped to their school) ────────────
 export async function getExams(schoolCode?: string): Promise<DbExam[]> {
   let query = supabase
     .from("exams")
@@ -175,7 +175,7 @@ export async function createExam(
       .update({ show_results: form.showResults ?? true })
       .eq("id", examId);
   } catch {
-    /* ignore — column doesn't exist yet */
+    /* ignore - column doesn't exist yet */
   }
 
   const approved = questions.filter((q) => q.approved);
@@ -295,7 +295,7 @@ export async function submitExamResult(
     total > 0 ? Math.round((mcqScore / total) * 100) : 0;
   const theoryStatus = hasTheory ? "pending_review" : "none";
 
-  // Persist submission (fire-and-forget — don't block student on DB error)
+  // Persist submission (fire-and-forget - don't block student on DB error)
   try {
     const answersJson: Record<string, number> = {};
     Object.entries(answers).forEach(([k, v]) => {
@@ -322,7 +322,7 @@ export async function submitExamResult(
       final_percentage: initialPercentage,
     });
   } catch {
-    // Non-fatal — score still returned to client
+    // Non-fatal - score still returned to client
   }
 
   return { score: mcqScore, total, percentage: initialPercentage, hasTheory };

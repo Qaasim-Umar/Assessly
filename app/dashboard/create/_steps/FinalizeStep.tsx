@@ -74,11 +74,11 @@ export default function FinalizeStep({ questions, form, examId, isGeneral = fals
     };
 
     const isIndigo = themeColor === "indigo";
-    const accentBg = isIndigo ? "bg-indigo-50" : "bg-blue-50";
-    const accentBorder = isIndigo ? "border-indigo-200" : "border-blue-200";
-    const accentText = isIndigo ? "text-indigo-600" : "text-blue-600";
-    const accentStrongText = isIndigo ? "text-indigo-800" : "text-blue-800";
-    const primaryBtn = isIndigo ? "bg-indigo-700 hover:bg-indigo-800" : "bg-blue-700 hover:bg-blue-800";
+    const accentBg = isIndigo ? "bg-green-50" : "bg-green-50";
+    const accentBorder = isIndigo ? "border-green-200" : "border-green-200";
+    const accentText = isIndigo ? "text-green-600" : "text-green-600";
+    const accentStrongText = isIndigo ? "text-green-800" : "text-green-800";
+    const primaryBtn = isIndigo ? "bg-green-700 hover:bg-green-800" : "bg-green-700 hover:bg-green-800";
 
     return (
         <div className="space-y-5">
@@ -102,7 +102,7 @@ export default function FinalizeStep({ questions, form, examId, isGeneral = fals
                     <div className="px-4 py-4 space-y-3">
                         {[
                             { label: "Title", value: form.title || "Untitled Exam" },
-                            { label: "Subject", value: form.subject || "—" },
+                            { label: "Subject", value: form.subject || "N/A" },
                             { label: "Class", value: form.classLevel },
                             { label: "Type", value: form.type },
                             { label: "Duration", value: `${suggestedTime} minutes` },
@@ -136,15 +136,14 @@ export default function FinalizeStep({ questions, form, examId, isGeneral = fals
                 <h3 className="text-xs font-bold text-gray-600 uppercase tracking-wider mb-3">Exam Configuration</h3>
                 <div className="grid sm:grid-cols-3 gap-3">
                     {[
-                        { icon: "🔀", title: "Randomized Order", desc: "Question order will be shuffled for each student" },
-                        { icon: "🔁", title: "Shuffled Options", desc: "MCQ answer options will be randomized per attempt" },
-                        { icon: "⏱️", title: "Auto-Submit", desc: "Exam auto-submits when the timer expires" },
-                        { icon: "🔒", title: "Access Control", desc: isGeneral ? "Publicly accessible exam" : "Only assigned classes can access this exam" },
-                        { icon: "📋", title: "Single Attempt", desc: "Students cannot retake once submitted" },
-                        { icon: "🤖", title: "AI-Assisted", desc: "Difficulty reviewed and approved by creator" },
-                    ].map(({ icon, title, desc }) => (
+                        { title: "Randomized Order", desc: "Question order will be shuffled for each student" },
+                        { title: "Shuffled Options", desc: "MCQ answer options will be randomized per attempt" },
+                        { title: "Auto-Submit", desc: "Exam auto-submits when the timer expires" },
+                        { title: "Access Control", desc: isGeneral ? "Publicly accessible exam" : "Only assigned classes can access this exam" },
+                        { title: "Single Attempt", desc: "Students cannot retake once submitted" },
+                        { title: "AI-Assisted", desc: "Difficulty reviewed and approved by creator" },
+                    ].map(({ title, desc }) => (
                         <div key={title} className="flex items-start gap-2.5 p-2.5 bg-gray-50 rounded-lg">
-                            <span className="text-base leading-none mt-0.5">{icon}</span>
                             <div>
                                 <p className="text-[11px] font-bold text-gray-700">{title}</p>
                                 <p className="text-[10px] text-gray-500 mt-0.5">{desc}</p>

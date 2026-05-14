@@ -15,7 +15,7 @@ const examRules = [
 ];
 
 function formatDuration(minutes: number | null): string {
-    if (!minutes) return "—";
+    if (!minutes) return "N/A";
     const h = Math.floor(minutes / 60);
     const m = minutes % 60;
     if (h > 0 && m > 0) return `${h}h ${m}m`;
@@ -26,7 +26,7 @@ function formatDuration(minutes: number | null): string {
 function InfoRow({ label, value, icon }: { label: string; value: string; icon: React.ReactNode }) {
     return (
         <div className="flex items-center gap-4 py-3.5 border-b border-gray-100 last:border-0">
-            <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
+            <div className="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center text-green-600 flex-shrink-0">
                 {icon}
             </div>
             <div className="flex-1 min-w-0">
@@ -92,7 +92,7 @@ export default function ExamInfoPage() {
             <div className="min-h-screen bg-[#f0f2f5] flex items-center justify-center">
                 <div className="text-center">
                     <p className="text-gray-500 text-sm">Exam not found.</p>
-                    <button onClick={() => router.push("/student")} className="mt-3 text-blue-600 text-sm hover:underline">
+                    <button onClick={() => router.push("/student")} className="mt-3 text-green-600 text-sm hover:underline">
                         Go back
                     </button>
                 </div>
@@ -116,7 +116,7 @@ export default function ExamInfoPage() {
                     </button>
                     <div className="h-4 w-px bg-gray-200" />
                     <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded bg-blue-700 flex items-center justify-center">
+                        <div className="w-6 h-6 rounded bg-green-700 flex items-center justify-center">
                             <svg className="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                             </svg>
@@ -144,7 +144,7 @@ export default function ExamInfoPage() {
                 </div>
 
                 <div className="grid gap-5 sm:grid-cols-2">
-                    {/* Left Column — Exam Details */}
+                    {/* Left Column */}
                     <div className="space-y-5">
                         <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
                             <div className="px-5 py-3 border-b border-gray-100 bg-gray-50">
@@ -205,11 +205,11 @@ export default function ExamInfoPage() {
                         </div>
                     </div>
 
-                    {/* Right Column — Rules */}
+                    {/* Right Column */}
                     <div className="space-y-5">
                         <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                            <div className="px-5 py-3 border-b border-gray-100 bg-amber-50">
-                                <h2 className="text-xs font-bold text-amber-700 uppercase tracking-wider flex items-center gap-1.5">
+                            <div className="px-5 py-3 border-b border-gray-100 bg-green-50">
+                                <h2 className="text-xs font-bold text-green-700 uppercase tracking-wider flex items-center gap-1.5">
                                     <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd"
                                             d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z"
@@ -222,7 +222,7 @@ export default function ExamInfoPage() {
                             <ul className="px-5 py-4 space-y-3">
                                 {examRules.map((rule, i) => (
                                     <li key={i} className="flex items-start gap-2.5">
-                                        <span className="flex-shrink-0 w-4 h-4 rounded-full bg-blue-100 text-blue-700 text-[10px] font-bold flex items-center justify-center mt-0.5">
+                                        <span className="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 text-green-700 text-[10px] font-bold flex items-center justify-center mt-0.5">
                                             {i + 1}
                                         </span>
                                         <span className="text-xs text-gray-700 leading-relaxed">{rule}</span>
@@ -244,7 +244,7 @@ export default function ExamInfoPage() {
                         </div>
                         <button
                             onClick={() => router.push(`/exam/${exam.id}/attempt${isGeneral ? "?mode=general" : ""}`)}
-                            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 active:bg-blue-900 text-white font-bold text-sm px-8 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 active:bg-green-900 text-white font-bold text-sm px-8 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                         >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"

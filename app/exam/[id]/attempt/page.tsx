@@ -18,8 +18,8 @@ function formatTime(seconds: number): string {
 }
 
 function getStatusColor(status: QuestionStatus, isCurrent: boolean): string {
-    const base = "w-8 h-8 text-xs font-bold rounded flex items-center justify-center border transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1";
-    if (isCurrent) return `${base} ring-2 ring-blue-600 ring-offset-1 bg-blue-600 text-white border-blue-600`;
+    const base = "w-8 h-8 text-xs font-bold rounded flex items-center justify-center border transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-1";
+    if (isCurrent) return `${base} ring-2 ring-green-600 ring-offset-1 bg-green-600 text-white border-green-600`;
     switch (status) {
         case "answered": return `${base} bg-green-100 text-green-800 border-green-400 hover:bg-green-200`;
         case "review": return `${base} bg-amber-100 text-amber-800 border-amber-400 hover:bg-amber-200`;
@@ -34,26 +34,26 @@ function NameEntryModal({ onSubmit }: { onSubmit: (name: string) => void }) {
     return (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
             <div className="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-7">
-                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-6 h-6 text-indigo-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                     </svg>
                 </div>
                 <h2 className="text-lg font-bold text-gray-900 text-center mb-1">What’s your name?</h2>
-                <p className="text-xs text-gray-500 text-center mb-5">This is a practice exam — no account needed. Just enter your name to begin.</p>
+                <p className="text-xs text-gray-500 text-center mb-5">This is a practice exam - no account needed. Just enter your name to begin.</p>
                 <input
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     onKeyDown={(e) => { if (e.key === "Enter" && name.trim()) onSubmit(name.trim()); }}
                     placeholder="e.g. John Doe"
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 mb-4"
                     autoFocus
                 />
                 <button
                     onClick={() => name.trim() && onSubmit(name.trim())}
                     disabled={!name.trim()}
-                    className="w-full bg-indigo-700 hover:bg-indigo-800 disabled:opacity-50 text-white font-bold py-3 rounded-lg text-sm transition-colors"
+                    className="w-full bg-green-700 hover:bg-green-800 disabled:opacity-50 text-white font-bold py-3 rounded-lg text-sm transition-colors"
                 >
                     Start Exam
                 </button>
@@ -70,8 +70,8 @@ function SubmitModal({ onConfirm, onCancel, answeredCount, total }: {
     return (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
             <div className="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </div>
@@ -89,7 +89,7 @@ function SubmitModal({ onConfirm, onCancel, answeredCount, total }: {
                 )}
                 <div className="flex gap-3">
                     <button onClick={onCancel} className="flex-1 py-2.5 rounded-lg border border-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-50 transition-colors">Cancel</button>
-                    <button onClick={onConfirm} className="flex-1 py-2.5 rounded-lg bg-blue-700 text-white font-bold text-sm hover:bg-blue-800 transition-colors">Submit Now</button>
+                    <button onClick={onConfirm} className="flex-1 py-2.5 rounded-lg bg-green-700 text-white font-bold text-sm hover:bg-green-800 transition-colors">Submit Now</button>
                 </div>
             </div>
         </div>
@@ -112,14 +112,14 @@ function ResultScreen({
         return (
             <div className="min-h-screen bg-[#f0f2f5] flex items-center justify-center px-4">
                 <div className="bg-white border border-gray-200 rounded-2xl shadow-lg max-w-sm w-full p-8 text-center">
-                    <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
                         </svg>
                     </div>
                     <h2 className="text-xl font-bold text-gray-900 mb-2">Exam Submitted!</h2>
                     <p className="text-sm text-gray-500 mb-6">Your result is being processed. Your teacher will release the scores shortly.</p>
-                    <button onClick={onHome} className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-lg text-sm transition-colors">
+                    <button onClick={onHome} className="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-3 rounded-lg text-sm transition-colors">
                         Return to Dashboard
                     </button>
                 </div>
@@ -129,7 +129,7 @@ function ResultScreen({
 
     const grade =
         percentage >= 90 ? { label: "Excellent", color: "text-green-600", bg: "bg-green-50 border-green-200" } :
-            percentage >= 70 ? { label: "Good", color: "text-blue-600", bg: "bg-blue-50 border-blue-200" } :
+            percentage >= 70 ? { label: "Good", color: "text-green-600", bg: "bg-green-50 border-green-200" } :
                 percentage >= 50 ? { label: "Pass", color: "text-amber-600", bg: "bg-amber-50 border-amber-200" } :
                     { label: "Below Pass", color: "text-red-600", bg: "bg-red-50 border-red-200" };
 
@@ -174,7 +174,7 @@ function ResultScreen({
 
                     <p className="text-xs text-gray-400 mb-6">{score} of {total} questions answered correctly</p>
 
-                    <button onClick={onHome} className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-lg text-sm transition-colors">
+                    <button onClick={onHome} className="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-3 rounded-lg text-sm transition-colors">
                         Return to Dashboard
                     </button>
                 </div>
@@ -214,7 +214,7 @@ function ResultScreen({
                                             <span className="w-6 h-6 rounded-full bg-red-500 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">✗</span>
                                         )}
                                         {(isSkipped || !isMCQ) && (
-                                            <span className="w-6 h-6 rounded-full bg-gray-300 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">—</span>
+                                            <span className="w-6 h-6 rounded-full bg-gray-300 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">-</span>
                                         )}
                                         <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider">
                                             Q{idx + 1}
@@ -271,7 +271,7 @@ function ResultScreen({
 
                                         {/* Theory: no review since not auto-graded */}
                                         {!isMCQ && (
-                                            <p className="text-xs text-gray-400 italic">Theory question — marked by your teacher.</p>
+                                            <p className="text-xs text-gray-400 italic">Theory question - marked by your teacher.</p>
                                         )}
                                     </div>
                                 </div>
@@ -375,7 +375,7 @@ export default function ExamAttemptPage() {
                             setShowNameModal(true);
                         }
                     } catch {
-                        // Corrupted session — start fresh
+                        // Corrupted session, start fresh
                         sessionStorage.removeItem(storageKey);
                         setTimeLeft((data.duration ?? 60) * 60);
                         const init: Record<number, QuestionStatus> = {};
@@ -385,7 +385,7 @@ export default function ExamAttemptPage() {
                         if (isGeneral) setShowNameModal(true);
                     }
                 } else {
-                    // No saved session — fresh start
+                    // No saved session, fresh start
                     setTimeLeft((data.duration ?? 60) * 60);
                     const init: Record<number, QuestionStatus> = {};
                     data.questions.forEach((_, i) => { init[i] = "not-viewed"; });
@@ -473,7 +473,7 @@ export default function ExamAttemptPage() {
                     <div className="text-sm font-bold text-gray-400 animate-pulse">Loading exam…</div>
                 </header>
                 <div className="flex-1 flex items-center justify-center">
-                    <svg className="w-8 h-8 animate-spin text-blue-600" fill="none" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8 animate-spin text-green-600" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                     </svg>
@@ -487,7 +487,7 @@ export default function ExamAttemptPage() {
             <div className="min-h-screen bg-[#f0f2f5] flex items-center justify-center px-4">
                 <div className="text-center">
                     <p className="text-gray-500 text-sm">{notFound ? "Exam not found." : "This exam has no questions yet."}</p>
-                    <button onClick={() => router.push("/student")} className="mt-3 text-blue-600 text-sm hover:underline">Go back</button>
+                    <button onClick={() => router.push("/student")} className="mt-3 text-green-600 text-sm hover:underline">Go back</button>
                 </div>
             </div>
         );
@@ -523,7 +523,7 @@ export default function ExamAttemptPage() {
             <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
                     <div className="flex items-center gap-3 min-w-0">
-                        <div className="w-7 h-7 rounded bg-blue-700 flex items-center justify-center flex-shrink-0">
+                        <div className="w-7 h-7 rounded bg-green-700 flex items-center justify-center flex-shrink-0">
                             <svg className="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                             </svg>
@@ -576,16 +576,16 @@ export default function ExamAttemptPage() {
                                     const letter = option.label || (["A", "B", "C", "D", "E"][idx] ?? String(idx + 1));
                                     const isSelected = currentAnswer === idx;
                                     return (
-                                        <label key={idx} className={`flex items-center gap-3.5 p-3.5 rounded-lg border-2 cursor-pointer transition-all select-none ${isSelected ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"}`}>
+                                        <label key={idx} className={`flex items-center gap-3.5 p-3.5 rounded-lg border-2 cursor-pointer transition-all select-none ${isSelected ? "border-green-500 bg-green-50" : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"}`}>
                                             <input type="radio" name={`q${currentIndex}`} checked={isSelected} onChange={() => handleOptionSelect(idx)} className="sr-only" />
-                                            <span className={`w-7 h-7 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold border-2 ${isSelected ? "bg-blue-600 border-blue-600 text-white" : "border-gray-300 text-gray-500"}`}>{letter}</span>
-                                            <span className={`text-sm font-medium leading-snug ${isSelected ? "text-blue-800" : "text-gray-800"}`}>{option.text}</span>
+                                            <span className={`w-7 h-7 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold border-2 ${isSelected ? "bg-green-600 border-green-600 text-white" : "border-gray-300 text-gray-500"}`}>{letter}</span>
+                                            <span className={`text-sm font-medium leading-snug ${isSelected ? "text-green-800" : "text-gray-800"}`}>{option.text}</span>
                                         </label>
                                     );
                                 })
                             ) : (
                                 <textarea
-                                    className="w-full border border-gray-300 rounded-lg p-3 text-sm text-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full border border-gray-300 rounded-lg p-3 text-sm text-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-green-500"
                                     rows={6}
                                     placeholder="Type your answer here…"
                                     value={theoryAnswers[currentIndex] ?? ""}
@@ -613,7 +613,7 @@ export default function ExamAttemptPage() {
                             <button
                                 onClick={() => setShowSubmitModal(true)}
                                 disabled={!hasVisitedLast}
-                                className="w-full flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold text-sm py-3.5 rounded-xl transition-colors shadow-sm"
+                                className="w-full flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold text-sm py-3.5 rounded-xl transition-colors shadow-sm"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                 Submit Exam

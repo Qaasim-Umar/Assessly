@@ -85,7 +85,7 @@ export async function getAdminProfile(): Promise<{
 
 // ── Student Auth ───────────────────────────────────────────────────────────────
 /**
- * Unified student login — validates the school code, then either:
+ * Unified student login - validates the school code, then either:
  *  - signs in an existing account, or
  *  - auto-creates a new account on first access.
  */
@@ -96,7 +96,7 @@ export async function studentLogin(
 ): Promise<void> {
   const code = schoolCode.trim().toUpperCase();
 
-  // 1. Validate school code exists (using anon key — select is open to all)
+  // 1. Validate school code exists (using anon key - select is open to all)
   const { data: adminRow } = await supabase
     .from("admin_profiles")
     .select("school_code")
@@ -115,7 +115,7 @@ export async function studentLogin(
     });
 
   if (!signInErr && signInData.user) {
-    // Signed in — upsert profile with latest school code
+    // Signed in - upsert profile with latest school code
     await supabase
       .from("profiles")
       .upsert(
@@ -174,6 +174,6 @@ export async function signUp(
   username: string,
   password: string,
 ): Promise<void> {
-  // No-op legacy shim — new flow uses studentLogin
+  // No-op legacy shim - new flow uses studentLogin
   throw new Error("Use studentLogin() with a school code instead.");
 }
