@@ -42,7 +42,7 @@ const SLUG_LABEL: Record<string, string> = {
 
 function SkeletonCard() {
   return (
-    <div className="bg-white border border-gray-200 rounded-green-5 animate-pulse">
+    <div className="bg-white border border-gray-200 rounded-xl p-5 animate-pulse">
       <div className="flex items-start justify-between gap-3 mb-4">
         <div className="flex-1 space-y-2">
           <div className="h-3.5 bg-gray-200 rounded w-3/4" />
@@ -64,9 +64,9 @@ function SkeletonCard() {
 function EmptyState({ label }: { label: string }) {
   return (
     <div className="col-span-2 flex flex-col items-center justify-center py-20 text-center">
-      <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center mb-4">
+      <div className="w-16 h-16 rounded-full bg-indigo-50 flex items-center justify-center mb-4">
         <svg
-          className="w-8 h-8 text-green-400"
+          className="w-8 h-8 text-indigo-400"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -129,7 +129,7 @@ export default function GeneralCategoryPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <button
             onClick={() => router.push("/general")}
-            className="flex items-center gap-2 text-gray-600 hover:text-green-700 text-sm font-semibold transition-colors"
+            className="flex items-center gap-2 text-gray-600 hover:text-indigo-700 text-sm font-semibold transition-colors"
           >
             <svg
               className="w-4 h-4"
@@ -198,19 +198,19 @@ export default function GeneralCategoryPage() {
               <button
                 key={exam.id}
                 onClick={() => router.push(`/exam/${exam.id}?mode=general`)}
-                className="group w-full text-left bg-white border border-gray-200 rounded-green-5 hover:border-green-400 hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                className="group w-full text-left bg-white border border-gray-200 rounded-xl p-5 hover:border-indigo-400 hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 <div className="flex items-start justify-between gap-3 mb-4">
                   <div className="flex-1 min-w-0">
-                    <h2 className="text-sm font-bold text-gray-900 leading-snug group-hover:text-green-700 transition-colors line-clamp-2">
+                    <h2 className="text-sm font-bold text-gray-900 leading-snug group-hover:text-indigo-700 transition-colors line-clamp-2">
                       {exam.title}
                     </h2>
                   </div>
                   <div className="flex items-center gap-1.5 flex-shrink-0">
-                    <span className="inline-flex items-center text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2 py-0.5 rounded-full tracking-wide">
+                    <span className="inline-flex items-center text-[10px] font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded-full tracking-wide uppercase">
                       {exam.type}
                     </span>
-                    <span className="inline-flex items-center gap-1 text-[10px] font-bold text-white bg-green-600 px-2 py-0.5 rounded-full tracking-wide">
+                    <span className="inline-flex items-center gap-1 text-[10px] font-bold text-white bg-gradient-to-r from-indigo-600 to-blue-600 px-2 py-0.5 rounded-full tracking-wide uppercase">
                       <svg
                         className="w-2.5 h-2.5"
                         fill="currentColor"
@@ -284,7 +284,7 @@ export default function GeneralCategoryPage() {
                     <span>{formatDuration(exam.duration)} duration</span>
                   </div>
                   <svg
-                    className="w-5 h-5 text-gray-400 group-hover:text-green-600 transition-colors"
+                    className="w-5 h-5 text-gray-400 group-hover:text-indigo-600 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

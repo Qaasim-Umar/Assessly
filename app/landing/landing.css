@@ -2056,11 +2056,11 @@ html, body { overflow-x: hidden; }
 
   .hero-cta-group {
     flex-direction: column;
-    width: 100%;
+    align-items: center;
   }
 
   .cta-button {
-    width: 100%;
+    /* Removed width: 100% to prevent full-width buttons on mobile */
     justify-content: center;
   }
 
