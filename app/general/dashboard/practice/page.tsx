@@ -28,6 +28,7 @@ export default function PracticeSetupPage() {
     const [selectedTopic, setSelectedTopic] = useState("");
     const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty>("");
     const [questionCount, setQuestionCount] = useState<QuestionCount>("20");
+    const [starting, setStarting] = useState(false);
 
     // Fetch distinct subjects + topics from the question pool
     useEffect(() => {
@@ -77,7 +78,8 @@ export default function PracticeSetupPage() {
     const availableCount = currentSubjectInfo?.count ?? 0;
 
     const handleStart = () => {
-        if (!selectedSubject) return;
+        if (!selectedSubject || starting) return;
+        setStarting(true);
         const params = new URLSearchParams();
         params.set("subject", selectedSubject);
         if (selectedTopic) params.set("topic", selectedTopic);
@@ -287,12 +289,25 @@ export default function PracticeSetupPage() {
                         {selectedSubject && (
                             <button
                                 onClick={handleStart}
-                                className="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-3.5 rounded-xl transition-colors shadow-sm"
+                                disabled={starting}
+                                className={`w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-3.5 rounded-xl transition-colors shadow-sm ${starting ? "opacity-70 cursor-not-allowed" : ""}`}
                             >
-                                Start Practice
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
-                                </svg>
+                                {starting ? (
+                                    <>
+                                        <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                                        </svg>
+                                        Loading Session…
+                                    </>
+                                ) : (
+                                    <>
+                                        Start Practice
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </>
+                                )}
                             </button>
                         )}
 

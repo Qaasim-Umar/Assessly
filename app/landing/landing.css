@@ -1883,9 +1883,9 @@ html, body { overflow-x: hidden; }
 
 /* Headline */
 .hero-headline-modern {
-  font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+  font-size: clamp(2.8rem, 5vw, 3.4rem);
   font-weight: 900;
-  line-height: 1.15;
+  line-height: 1.25;
   letter-spacing: -0.02em;
   color: #0f172a;
   margin: 0;
@@ -1893,10 +1893,17 @@ html, body { overflow-x: hidden; }
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #16a34a 0%, #4ade80 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: linear-gradient(160deg, #166534 0%, #16a34a 55%, #22c55e 100%);
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  padding: 0.05em 0.4em;
+  border-radius: 0;
+  display: inline-block;
+  transform: skewX(-8deg);
+}
+.gradient-text > * {
+  display: inline-block;
+  transform: skewX(4deg);
 }
 
 /* Subheadline */
@@ -2403,10 +2410,9 @@ html, body { overflow-x: hidden; }
   background: linear-gradient(135deg, #fb923c, #c2410c);
 }
 .schools-theme .gradient-text {
-  background: linear-gradient(135deg, #c2410c 0%, #fb923c 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
 }
 .schools-theme .cta-primary {
   background: linear-gradient(160deg, #7c2d12 0%, #c2410c 55%, #ea580c 100%);

@@ -122,6 +122,11 @@ function PracticeSessionPage() {
     // Session over
     const [finished, setFinished] = useState(false);
 
+    // Button loading states
+    const [submitting, setSubmitting] = useState(false);
+    const [navigatingNew, setNavigatingNew] = useState(false);
+    const [retrying, setRetrying] = useState(false);
+
     // Track whether we restored from sessionStorage (skip fetch if so)
     const restoredRef = useRef(false);
 
@@ -214,7 +219,8 @@ function PracticeSessionPage() {
     // ── Submit answer ────────────────────────────────────────────────────────
     const handleSubmit = useCallback(() => {
         const state = qStates[currentIndex] ?? defaultQState();
-        if (state.selectedOption === null || !currentQ) return;
+        if (state.selectedOption === null || !currentQ || submitting) return;
+        setSubmitting(true);
         const isCorrect = state.selectedOption === currentQ.correct_answer;
         setAnswers((prev) => {
             if (prev.some((a) => a.questionId === currentQ.id)) return prev;
@@ -233,7 +239,8 @@ function PracticeSessionPage() {
             ...prev,
             [currentIndex]: { ...state, isAnswered: true, showExplanation: true },
         }));
-    }, [qStates, currentIndex, currentQ]);
+        setTimeout(() => setSubmitting(false), 300);
+    }, [qStates, currentIndex, currentQ, submitting]);
 
     // ── Next question ────────────────────────────────────────────────────────
     const handleNext = useCallback(() => {
@@ -446,16 +453,30 @@ function PracticeSessionPage() {
                     <div className="flex flex-col sm:flex-row gap-3">
                         <Link
                             href="/general/dashboard/practice"
-                            onClick={() => clearSession(sKey)}
-                            className="flex-1 flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-700 font-bold text-sm py-3 rounded-xl hover:bg-gray-50 transition-colors"
+                            onClick={() => { clearSession(sKey); setNavigatingNew(true); }}
+                            className={`flex-1 flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-700 font-bold text-sm py-3 rounded-xl hover:bg-gray-50 transition-colors ${navigatingNew ? "opacity-70 pointer-events-none" : ""}`}
                         >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                            </svg>
-                            New Session
+                            {navigatingNew ? (
+                                <>
+                                    <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                                    </svg>
+                                    Loading…
+                                </>
+                            ) : (
+                                <>
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                    New Session
+                                </>
+                            )}
                         </Link>
                         <button
+                            disabled={retrying}
                             onClick={() => {
+                                setRetrying(true);
                                 clearSession(sKey);
                                 setCurrentIndex(0);
                                 setAnswers([]);
@@ -464,12 +485,24 @@ function PracticeSessionPage() {
                                 setFinished(false);
                                 setQuestions(shuffle(questions));
                             }}
-                            className="flex-1 flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-3 rounded-xl transition-colors"
+                            className={`flex-1 flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-3 rounded-xl transition-colors ${retrying ? "opacity-70 cursor-not-allowed" : ""}`}
                         >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                            </svg>
-                            Retry Same Set
+                            {retrying ? (
+                                <>
+                                    <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                                    </svg>
+                                    Restarting…
+                                </>
+                            ) : (
+                                <>
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                    </svg>
+                                    Retry Same Set
+                                </>
+                            )}
                         </button>
                     </div>
 
@@ -700,13 +733,25 @@ function PracticeSessionPage() {
                         {!qs.isAnswered ? (
                             <button
                                 onClick={handleSubmit}
-                                disabled={qs.selectedOption === null}
-                                className="w-full flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold text-sm py-3.5 rounded-xl transition-colors shadow-sm"
+                                disabled={qs.selectedOption === null || submitting}
+                                className={`w-full flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold text-sm py-3.5 rounded-xl transition-colors shadow-sm`}
                             >
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Submit Answer
+                                {submitting ? (
+                                    <>
+                                        <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                                        </svg>
+                                        Checking…
+                                    </>
+                                ) : (
+                                    <>
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        Submit Answer
+                                    </>
+                                )}
                             </button>
                         ) : (
                             <button
