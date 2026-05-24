@@ -349,8 +349,8 @@ export default function ExamAttemptPage() {
                 if (!data) { setNotFound(true); setLoading(false); return; }
                 setExamData(data);
 
-                // ── Try to restore a saved session ──
-                const savedRaw = sessionStorage.getItem(storageKey);
+                // ── Try to restore a saved session (skipped for general mode — always fresh) ──
+                const savedRaw = isGeneral ? null : sessionStorage.getItem(storageKey);
                 if (savedRaw) {
                     try {
                         const saved = JSON.parse(savedRaw);
@@ -368,12 +368,6 @@ export default function ExamAttemptPage() {
                         if (saved.studentName && saved.studentName !== "Student") {
                             setStudentName(saved.studentName);
                         }
-                        // General mode: don't re-show name modal if name was already entered
-                        if (isGeneral && saved.studentName && saved.studentName !== "Student") {
-                            setShowNameModal(false);
-                        } else if (isGeneral) {
-                            setShowNameModal(true);
-                        }
                     } catch {
                         // Corrupted session, start fresh
                         sessionStorage.removeItem(storageKey);
@@ -382,10 +376,10 @@ export default function ExamAttemptPage() {
                         data.questions.forEach((_, i) => { init[i] = "not-viewed"; });
                         if (data.questions.length > 0) init[0] = "not-answered";
                         setStatuses(init);
-                        if (isGeneral) setShowNameModal(true);
                     }
                 } else {
-                    // No saved session, fresh start
+                    // No saved session (or general mode) — fresh start
+                    if (isGeneral) sessionStorage.removeItem(storageKey);
                     setTimeLeft((data.duration ?? 60) * 60);
                     const init: Record<number, QuestionStatus> = {};
                     data.questions.forEach((_, i) => { init[i] = "not-viewed"; });

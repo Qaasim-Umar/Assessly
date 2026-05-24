@@ -4,15 +4,16 @@ import { useState, useEffect } from "react";
 import { useRouter, useParams, useSearchParams } from "next/navigation";
 import { getExamById, type DbExamWithQuestions } from "@/lib/examService";
 
-const examRules = [
+const BASE_EXAM_RULES = [
     "The countdown timer begins immediately after you click Start Exam.",
     "The exam will be auto-submitted when the timer reaches zero.",
-    "You are not allowed to retake this exam once submitted.",
     "Do not refresh or close the browser tab during the exam.",
     "All questions must be attempted before submission.",
     "Switching browser tabs may flag your session.",
     "Each question has only one correct answer.",
 ];
+
+const SINGLE_ATTEMPT_RULE = "You are not allowed to retake this exam once submitted.";
 
 function formatDuration(minutes: number | null): string {
     if (!minutes) return "N/A";
@@ -64,6 +65,7 @@ export default function ExamInfoPage() {
     const examId = params.id as string;
     const isGeneral = searchParams.get("mode") === "general";
     const backHref = isGeneral ? "/general" : "/student";
+    const examRules = isGeneral ? BASE_EXAM_RULES : [BASE_EXAM_RULES[0], BASE_EXAM_RULES[1], SINGLE_ATTEMPT_RULE, ...BASE_EXAM_RULES.slice(2)];
 
     const [exam, setExam] = useState<DbExamWithQuestions | null>(null);
     const [loading, setLoading] = useState(true);

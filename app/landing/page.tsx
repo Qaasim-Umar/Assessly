@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar, { LogoIcon } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./landing.css";
@@ -66,29 +66,19 @@ function HeroSection() {
                 {/* Main Headline */}
                 <h1 className="hero-headline-modern">
                     Run School Exams <span className="gradient-text">Smarter.</span>
-                    <br />
-                    Practice for <span className="gradient-text">Free.</span>
                 </h1>
 
                 {/* Subheadline */}
                 <p className="hero-subheadline-modern">
-                    Nigeria's smartest CBT platform. Educators can create exams in minutes using AI, 
-                    while students can access thousands of past WAEC, JAMB, and NECO questions - completely free.
+                    Nigeria's smartest CBT platform. Create exams in minutes using AI, publish instantly, and get results the moment students finish.
                 </p>
 
                 {/* CTA Buttons */}
                 <div className="hero-cta-group">
                     <Link href="/dashboard/login" className="cta-button cta-primary">
                         <div className="cta-text">
-                            <span className="cta-label">For Schools</span>
-                            <span className="cta-action">Get Started Free</span>
-                        </div>
-                        <div className="cta-arrow"><ArrowRight /></div>
-                    </Link>
-                    <Link href="/general" className="cta-button cta-secondary">
-                        <div className="cta-text">
-                            <span className="cta-label">For Students</span>
-                            <span className="cta-action">Start Practising</span>
+                            <span className="cta-label">Free to get started</span>
+                            <span className="cta-action">Create your school account</span>
                         </div>
                         <div className="cta-arrow"><ArrowRight /></div>
                     </Link>
@@ -231,6 +221,227 @@ function Testimonial({ quote, name, role, initials }: { quote: string; name: str
     );
 }
 
+// ── Modes Data (moved here for use in Hero) ──────────────────────────────────
+const MODES_DATA = [
+    {
+        id: "practice", name: "Practice Mode", tagline: "Learn at your own pace",
+        desc: "Pick a subject and topic. Get hints when stuck and full explanations after every answer. No timer, no pressure.",
+        tags: ["Hints", "Explanations", "No timer"],
+        iconColor: "#059669", iconBg: "#d1fae5", borderColor: "#a7f3d0",
+        icon: <svg width="28" height="28" fill="none" stroke="#059669" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>,
+    },
+    {
+        id: "mock", name: "Mock Exam", tagline: "Simulate real exam conditions",
+        desc: "Timed, exam-board style practice. Choose JAMB, WAEC, or NECO and experience the real pressure of exam day.",
+        tags: ["Timed", "Exam-board style", "Score report"],
+        iconColor: "#2563eb", iconBg: "#dbeafe", borderColor: "#bfdbfe",
+        icon: <svg width="28" height="28" fill="none" stroke="#2563eb" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
+    },
+    {
+        id: "survival", name: "Survival Mode", tagline: "How far can you go?",
+        desc: "One question at a time. One wrong answer and it's over. Beat your streak and climb the leaderboard.",
+        tags: ["Streak-based", "One life", "High stakes"],
+        iconColor: "#ea580c", iconBg: "#ffedd5", borderColor: "#fed7aa",
+        icon: <svg width="28" height="28" fill="none" stroke="#ea580c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>,
+    },
+    {
+        id: "past", name: "Past Questions", tagline: "Practice with real exam papers",
+        desc: "Authentic past questions from JAMB, WAEC, NECO, and BECE. Organised by exam board and year.",
+        tags: ["Real papers", "By year", "Full explanations"],
+        iconColor: "#7c3aed", iconBg: "#ede9fe", borderColor: "#ddd6fe",
+        icon: <svg width="28" height="28" fill="none" stroke="#7c3aed" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>,
+    },
+    {
+        id: "teacher", name: "Teacher Mode", tagline: "Create & manage CBT exams",
+        desc: "Upload questions, set timers, publish exams, and view instant results - all from one dashboard.",
+        tags: ["AI parsing", "Instant results", "School code"],
+        iconColor: "#0369a1", iconBg: "#e0f2fe", borderColor: "#bae6fd",
+        icon: <svg width="28" height="28" fill="none" stroke="#0369a1" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" /></svg>,
+    },
+];
+
+// ── Exam board badges ────────────────────────────────────────────────────────
+const EXAM_BOARDS = [
+    { name: "JAMB", color: "#16a34a", bg: "#dcfce7" },
+    { name: "WAEC", color: "#2563eb", bg: "#dbeafe" },
+    { name: "NECO", color: "#7c3aed", bg: "#ede9fe" },
+    { name: "BECE", color: "#ea580c", bg: "#ffedd5" },
+];
+
+// ── Hero ─────────────────────────────────────────────────────────────────────
+function HeroSectionUnified() {
+    return (
+        <>
+            <section id="hero" className="hero-section-modern">
+                <div className="hero-bg-grid" />
+                <div className="hero-split-container">
+
+                    {/* Left: copy */}
+                    <div className="hero-split-left">
+
+                        <h1 className="hero-headline-modern">
+                            The Smartest Way to<br />
+                            <span className="gradient-text">Prep &amp; Test.</span>
+                        </h1>
+                        <p className="hero-subheadline-modern">
+                            <strong>15,000+ past questions</strong> from JAMB, WAEC, NECO &amp; BECE with hints and explanations - free for every student. Plus a full CBT platform for schools to create, run, and grade exams in minutes.
+                        </p>
+
+                        {/* Exam board badges */}
+                        <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "4px" }}>
+                            {EXAM_BOARDS.map((board) => (
+                                <span key={board.name} style={{
+                                    fontSize: "12px", fontWeight: 700, color: board.color, background: board.bg,
+                                    border: `1.5px solid ${board.color}20`, padding: "4px 14px", borderRadius: "999px",
+                                    letterSpacing: "0.04em",
+                                }}>
+                                    {board.name}
+                                </span>
+                            ))}
+                        </div>
+
+                        {/* Dual CTAs */}
+                        <div className="hero-cta-group">
+                            <Link href="/general" className="cta-button cta-primary">
+                                <div className="cta-text">
+                                    <span className="cta-label">For students</span>
+                                    <span className="cta-action">Start Practising Free</span>
+                                </div>
+                                <div className="cta-arrow"><ArrowRight /></div>
+                            </Link>
+                            <Link href="/dashboard/login" className="cta-button cta-secondary">
+                                <div className="cta-text">
+                                    <span className="cta-label">For schools</span>
+                                    <span className="cta-action">Set Up Your School</span>
+                                </div>
+                                <div className="cta-arrow"><ArrowRight /></div>
+                            </Link>
+                        </div>
+
+                        <div className="hero-social-proof">
+                            <div className="avatar-stack-modern">
+                                {["MO", "SA", "TA", "ED", "FH"].map((initials, i) => (
+                                    <div key={i} className="avatar-modern" style={{ zIndex: 5 - i }}>{initials}</div>
+                                ))}
+                            </div>
+                            <div className="proof-text">
+                                <strong>500+ schools</strong> &amp; <strong>thousands of students</strong> trust Assessly
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right: hero image */}
+                    <div className="hero-split-right">
+                        <div className="hero-image-wrapper">
+                            <img
+                                src="/hero.png"
+                                alt="Assessly - CBT platform for students and schools"
+                                style={{ width: "100%", height: "auto", borderRadius: "16px", display: "block", position: "relative", zIndex: 2 }}
+                            />
+                            {/* Floating boxes */}
+                            <div className="hero-float-box hero-float-1">
+                                <svg className="hero-float-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
+                                <span className="hero-float-label">15K+ Questions</span>
+                            </div>
+                            <div className="hero-float-box hero-float-2">
+                                <svg className="hero-float-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" /></svg>
+                                <span className="hero-float-label">500+ Schools</span>
+                            </div>
+                            <div className="hero-float-box hero-float-3">
+                                <svg className="hero-float-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+                                <span className="hero-float-label">Instant Results</span>
+                            </div>
+                            <div className="hero-float-box hero-float-4">
+                                <svg className="hero-float-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span className="hero-float-label">JAMB Ready</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            {/* Overlapping Modes Card */}
+            <div className="hero-modes-card">
+                <div className="hero-modes-badge">Modes</div>
+                <div className="hero-modes-scroll">
+                    {MODES_DATA.map((mode) => (
+                        <div key={mode.id} className="hero-mode-item" style={{ borderColor: mode.borderColor, background: mode.iconBg }}>
+                            <div className="hero-mode-icon" style={{ background: mode.iconBg, color: mode.iconColor }}>
+                                {mode.icon}
+                            </div>
+                            <div className="hero-mode-text">
+                                <span className="hero-mode-name" style={{ color: mode.iconColor }}>{mode.name}</span>
+                                <span className="hero-mode-tagline">{mode.tagline}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Trust numbers strip */}
+            <div className="hero-trust-strip">
+                {[
+                    { value: "15,000+", label: "Past Questions" },
+                    { value: "500+", label: "Schools" },
+                    { value: "85,000+", label: "Students" },
+                    { value: "4", label: "Exam Boards" },
+                ].map(({ value, label }) => (
+                    <div key={label} className="hero-trust-item">
+                        <span className="hero-trust-value">{value}</span>
+                        <span className="hero-trust-label">{label}</span>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
+}
+
+// ── Student Features ──────────────────────────────────────────────────────────
+function StudentFeaturesSection() {
+    return (
+        <section id="features" className="features-section">
+            <div className="section-inner">
+                <div className="section-tag">For Students</div>
+                <h2 className="section-headline">Everything you need to ace your exams</h2>
+                <p className="section-subtext">15,000+ questions across JAMB, WAEC, NECO, and BECE. Practice for free with hints, explanations, and instant feedback.</p>
+                <div className="features-grid">
+                    <FeatureCard accent="accent-green"
+                        icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}
+                        title="No Account Required"
+                        description="Jump straight in. No signup, no login, no barriers. Just pick a mode and start answering questions instantly."
+                    />
+                    <FeatureCard accent="accent-blue"
+                        icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>}
+                        title="Hints &amp; Explanations"
+                        description="Stuck on a question? Request a hint. After answering, get a full explanation of why the correct answer is right."
+                    />
+                    <FeatureCard accent="accent-purple"
+                        icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>}
+                        title="15,000+ Past Questions"
+                        description="Authentic questions from JAMB, WAEC, NECO, and BECE organised by year and subject. Practice the exact papers from any exam year."
+                    />
+                    <FeatureCard accent="accent-orange"
+                        icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>}
+                        title="Survival Mode"
+                        description="Think you know your stuff? One wrong answer ends your run. Beat your personal best and compete with others."
+                    />
+                    <FeatureCard accent="accent-blue"
+                        icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}
+                        title="Timed Mock Exams"
+                        description="Simulate the real exam environment with countdowns, question navigation, and automatic submission when time runs out."
+                    />
+                    <FeatureCard accent="accent-teal"
+                        icon={<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zm6.75-6.75c0-.621.504-1.125 1.125-1.125h2.25C13.496 5.25 14 5.754 14 6.375v13.5c0 .621-.504 1.125-1.125 1.125h-2.25A1.125 1.125 0 019.75 19.875V6.375zm6.75 3.75c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v10.5c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V10.125z" /></svg>}
+                        title="Instant Scoring"
+                        description="See your score the moment you finish. Review every question, see what you got wrong, and understand exactly why."
+                    />
+                </div>
+            </div>
+        </section>
+    );
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 export default function LandingPage() {
     const jsonLd = {
@@ -289,12 +500,13 @@ export default function LandingPage() {
             />
             <Navbar />
 
-            {/* ══════════════════════════════════════════════════════════════════
-          UNIFIED HERO - Reusable component for both audiences
-         ══════════════════════════════════════════════════════════════════ */}
-            <HeroSection />
+            {/* ── Hero ── */}
+            <HeroSectionUnified />
 
-            {/* ── Stats ───────────────────────────────────────────────────────── */}
+            {/* ── Student Features ── */}
+            <StudentFeaturesSection />
+
+            {/* ── Stats ── */}
             <section className="stats-section">
                 <div className="stats-inner">
                     {[
@@ -311,10 +523,10 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* ── Features ────────────────────────────────────────────────────── */}
-            <section id="features" className="features-section">
+            {/* ── School Features ── */}
+            <section id="school-features" className="features-section">
                 <div className="section-inner">
-                    <div className="section-tag">Features</div>
+                    <div className="section-tag">For Schools</div>
                     <h2 className="section-headline">Everything your school needs</h2>
                     <p className="section-subtext">From exam creation to result analysis - Assessly handles it all in one place.</p>
                     <div className="features-grid">
@@ -352,7 +564,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* ── How it Works ─────────────────────────────────────────────────── */}
+            {/* ── How it Works ── */}
             <section id="how-it-works" className="hiw-section">
                 <div className="hiw-bg" />
                 <div className="section-inner hiw-inner">
@@ -372,7 +584,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* ── Testimonials ─────────────────────────────────────────────────── */}
+            {/* ── Testimonials ── */}
             <section id="testimonials" className="testimonials-section">
                 <div className="section-inner">
                     <div className="section-tag">Testimonials</div>
@@ -395,7 +607,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* ── Pricing ──────────────────────────────────────────────────────── */}
+            {/* ── Pricing ── */}
             <section id="pricing" className="pricing-section">
                 <div className="section-inner">
                     <div className="section-tag">Pricing</div>
@@ -437,16 +649,16 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* ── CTA ──────────────────────────────────────────────────────────── */}
+            {/* ── CTA ── */}
             <section className="cta-section">
                 <div className="cta-inner">
-                    <h2 className="cta-headline">Ready to modernise your exams?</h2>
-                    <p className="cta-subtext">Join hundreds of Nigerian schools running smarter, fairer Computer-Based Tests with Assessly.</p>
+                    <h2 className="cta-headline">Ready to get started?</h2>
+                    <p className="cta-subtext">Whether you&apos;re a student looking to practise or a school modernising exams - Assessly has you covered.</p>
                     <div className="cta-actions">
-                        <Link href="/dashboard/login" className="btn-primary cta-btn">
-                            Create free account <ArrowRight />
+                        <Link href="/general" className="btn-primary cta-btn">
+                            Start Practising Free <ArrowRight />
                         </Link>
-                        <Link href="/general" className="cta-btn-ghost">Start practising free →</Link>
+                        <Link href="/dashboard/login" className="cta-btn-ghost">School Admin Login →</Link>
                     </div>
                 </div>
                 <div className="cta-glow" />
