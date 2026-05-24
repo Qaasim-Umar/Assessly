@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback, useMemo, useRef } from "react";
+import { Suspense, useEffect, useState, useCallback, useMemo, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
@@ -78,7 +78,25 @@ function clearSession(key: string) {
 }
 
 // ─── Page ────────────────────────────────────────────────────────────────────
-export default function PracticeSessionPage() {
+export default function PracticeSessionWrapper() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen bg-[#f0f2f5] flex items-center justify-center">
+                <div className="flex flex-col items-center gap-3">
+                    <svg className="w-8 h-8 animate-spin text-emerald-600" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                    </svg>
+                    <p className="text-sm text-gray-500 font-medium">Loading questions…</p>
+                </div>
+            </div>
+        }>
+            <PracticeSessionPage />
+        </Suspense>
+    );
+}
+
+function PracticeSessionPage() {
     const router = useRouter();
     const searchParams = useSearchParams();
 
