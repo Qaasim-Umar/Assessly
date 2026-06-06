@@ -375,7 +375,7 @@ export default function SurvivalSetupPage() {
                                         ))}
                                     </div>
                                     <span className={`text-sm font-bold ${selectedLives === n ? "text-red-600" : "text-gray-500"}`}>
-                                        {n} {n === 1 ? "life" : "lives"}
+                                        {n} lives
                                     </span>
                                 </button>
                             ))}
