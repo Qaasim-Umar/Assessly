@@ -8,6 +8,24 @@ import { supabase } from "@/lib/supabase";
 // ─── Types ───────────────────────────────────────────────────────────────────
 type Difficulty = "easy" | "medium" | "hard" | "extreme" | "";
 type QuestionCount = "10" | "20" | "50" | "all";
+type ExamType = "jamb" | "post_utme" | "waec" | "neco" | "bece" | "";
+
+// ─── Constants ──────────────────────────────────────────────────────────────
+const EXAM_TYPES: { value: ExamType; label: string; full: string; color: string; active: string }[] = [
+    { value: "jamb",      label: "JAMB",      full: "Joint Admissions",     color: "text-indigo-700 bg-indigo-50 border-indigo-200",   active: "border-indigo-500 bg-indigo-50" },
+    { value: "post_utme", label: "Post UTME", full: "University Screening",  color: "text-violet-700 bg-violet-50 border-violet-200",  active: "border-violet-500 bg-violet-50" },
+    { value: "waec",      label: "WAEC",      full: "W. Africa Exam Council", color: "text-blue-700 bg-blue-50 border-blue-200",         active: "border-blue-500 bg-blue-50" },
+    { value: "neco",      label: "NECO",      full: "National Exams Council", color: "text-amber-700 bg-amber-50 border-amber-200",      active: "border-amber-500 bg-amber-50" },
+    { value: "bece",      label: "BECE",      full: "Basic Cert. Exams",     color: "text-teal-700 bg-teal-50 border-teal-200",         active: "border-teal-500 bg-teal-50" },
+];
+
+const POST_UTME_SCHOOLS = [
+    "UNILAG", "UI", "OAU", "UNN", "ABU", "UNIBEN", "UNILORIN", "UNIPORT",
+    "FUTA", "FUNAAB", "LASU", "OOU", "DELSU", "KWASU", "UNIOSUN", "RSU",
+    "ABUAD", "CU", "BUK", "FUOYE", "FULOKOJA", "FUPRE", "FUDMA", "FULAFIA",
+    "FUTMINNA", "ATBU", "BAUCHI", "UNIMAID", "EBSU", "IMSU", "ESUT",
+    "TASUED", "TAI-SOLARIN", "BABCOCK", "BOWEN",
+];
 
 interface SubjectInfo {
     subject: string;
@@ -24,22 +42,31 @@ export default function PracticeSetupPage() {
     const [error, setError] = useState("");
 
     // Selection state
+    const [examType, setExamType] = useState<ExamType>("");
+    const [selectedSchool, setSelectedSchool] = useState("");
+    const [schoolSearch, setSchoolSearch] = useState("");
     const [selectedSubject, setSelectedSubject] = useState("");
     const [selectedTopic, setSelectedTopic] = useState("");
     const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty>("");
     const [questionCount, setQuestionCount] = useState<QuestionCount>("20");
     const [starting, setStarting] = useState(false);
 
-    // Fetch distinct subjects + topics from the question pool
+    // Fetch distinct subjects + topics filtered by exam type
     useEffect(() => {
+        if (!examType) { setSubjects([]); setLoading(false); return; }
         async function load() {
             setLoading(true);
             try {
-                const { data, error: err } = await supabase
+                let q = supabase
                     .from("questions")
                     .select("subject, topic")
                     .is("exam_id", null)
-                    .eq("is_active", true);
+                    .eq("is_active", true)
+                    .eq("exam_type", examType);
+
+                if (examType === "post_utme" && selectedSchool) q = q.eq("university", selectedSchool);
+
+                const { data, error: err } = await q;
 
                 if (err) throw err;
 
@@ -71,22 +98,29 @@ export default function PracticeSetupPage() {
             }
         }
         load();
-    }, []);
+    }, [examType, selectedSchool]);
 
     const currentSubjectInfo = subjects.find((s) => s.subject === selectedSubject);
     const availableTopics = currentSubjectInfo?.topics ?? [];
     const availableCount = currentSubjectInfo?.count ?? 0;
 
     const handleStart = () => {
-        if (!selectedSubject || starting) return;
+        if (!examType || !selectedSubject || starting) return;
+        if (examType === "post_utme" && !selectedSchool) return;
         setStarting(true);
         const params = new URLSearchParams();
+        params.set("examType", examType);
+        if (examType === "post_utme" && selectedSchool) params.set("school", selectedSchool);
         params.set("subject", selectedSubject);
         if (selectedTopic) params.set("topic", selectedTopic);
         if (selectedDifficulty) params.set("difficulty", selectedDifficulty);
         params.set("count", questionCount);
         router.push(`/general/dashboard/practice/session?${params.toString()}`);
     };
+
+    const filteredSchools = POST_UTME_SCHOOLS.filter((s) =>
+        s.toLowerCase().includes(schoolSearch.toLowerCase())
+    );
 
     const DIFFICULTIES: { label: string; value: Difficulty; color: string }[] = [
         { label: "All", value: "", color: "bg-gray-100 text-gray-700 border-gray-300" },
@@ -142,34 +176,100 @@ export default function PracticeSetupPage() {
                     </p>
                 </div>
 
-                {loading ? (
-                    <div className="flex items-center justify-center py-20">
-                        <svg className="w-6 h-6 animate-spin text-emerald-600" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                        </svg>
-                    </div>
-                ) : error ? (
-                    <div className="bg-red-50 border border-red-200 text-red-700 text-sm font-medium px-5 py-4 rounded-xl">
-                        {error}
-                    </div>
-                ) : subjects.length === 0 ? (
-                    <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-10 text-center">
-                        <div className="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-4">
-                            <svg className="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                            </svg>
-                        </div>
-                        <h3 className="text-lg font-bold text-gray-900">No questions yet</h3>
-                        <p className="text-sm text-gray-500 mt-1">The question bank is empty. Check back later!</p>
-                    </div>
-                ) : (
-                    <div className="space-y-6">
+                <div className="space-y-6">
 
-                        {/* ── Step 1: Subject ── */}
+                        {/* ── Step 0: Exam Type — always visible ── */}
                         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">1</div>
+                                <h2 className="text-base font-bold text-gray-900">Select Exam Type</h2>
+                            </div>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                {EXAM_TYPES.map((et) => (
+                                    <button
+                                        key={et.value}
+                                        onClick={() => { setExamType(et.value as ExamType); setSelectedSchool(""); setSchoolSearch(""); setSelectedSubject(""); setSelectedTopic(""); }}
+                                        className={`text-left p-4 rounded-xl border-2 transition-all ${
+                                            examType === et.value
+                                                ? et.active + " shadow-sm"
+                                                : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"
+                                        }`}
+                                    >
+                                        <p className={`text-sm font-bold ${examType === et.value ? et.color.split(" ")[0] : "text-gray-900"}`}>
+                                            {et.label}
+                                        </p>
+                                        <p className="text-xs text-gray-400 mt-0.5">{et.full}</p>
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* ── Step 0b: School (Post UTME only) ── */}
+                        {examType === "post_utme" && (
+                            <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">2</div>
+                                    <div>
+                                        <h2 className="text-base font-bold text-gray-900">Select Your School</h2>
+                                        <p className="text-xs text-gray-400">Post UTME screening is school-specific</p>
+                                    </div>
+                                </div>
+                                <input
+                                    type="text"
+                                    value={schoolSearch}
+                                    onChange={(e) => setSchoolSearch(e.target.value)}
+                                    placeholder="Search school…"
+                                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 mb-3"
+                                />
+                                <div className="flex flex-wrap gap-2 max-h-48 overflow-y-auto pr-1">
+                                    {filteredSchools.map((school) => (
+                                        <button
+                                            key={school}
+                                            onClick={() => setSelectedSchool(school)}
+                                            className={`text-xs font-semibold px-3 py-1.5 rounded-lg border transition-all ${
+                                                selectedSchool === school
+                                                    ? "border-violet-500 bg-violet-50 text-violet-700"
+                                                    : "border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50"
+                                            }`}
+                                        >
+                                            {school}
+                                        </button>
+                                    ))}
+                                    {filteredSchools.length === 0 && (
+                                        <p className="text-xs text-gray-400 py-2">No schools match your search.</p>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* ── Loading / error / empty states (only after exam type chosen) ── */}
+                        {examType && (examType !== "post_utme" || selectedSchool) && loading && (
+                            <div className="flex items-center justify-center py-12">
+                                <svg className="w-6 h-6 animate-spin text-emerald-600" fill="none" viewBox="0 0 24 24">
+                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                                </svg>
+                            </div>
+                        )}
+                        {examType && (examType !== "post_utme" || selectedSchool) && !loading && error && (
+                            <div className="bg-red-50 border border-red-200 text-red-700 text-sm font-medium px-5 py-4 rounded-xl">
+                                {error}
+                            </div>
+                        )}
+                        {examType && (examType !== "post_utme" || selectedSchool) && !loading && !error && subjects.length === 0 && (
+                            <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-8 text-center">
+                                <p className="text-sm font-bold text-gray-700">No questions available</p>
+                                <p className="text-xs text-gray-400 mt-1">No {EXAM_TYPES.find(e => e.value === examType)?.label} questions found{examType === "post_utme" && selectedSchool ? ` for ${selectedSchool}` : ""}. Check back later.</p>
+                            </div>
+                        )}
+
+                        {/* ── Step 1: Subject ── */}
+                        {examType && (examType !== "post_utme" || selectedSchool) && !loading && !error && subjects.length > 0 && (
+                        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">
+                                    {examType === "post_utme" ? "3" : "2"}
+                                </div>
                                 <h2 className="text-base font-bold text-gray-900">Choose a Subject</h2>
                             </div>
                             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -191,12 +291,15 @@ export default function PracticeSetupPage() {
                                 ))}
                             </div>
                         </div>
+                        )}
 
                         {/* ── Step 2: Topic (optional) ── */}
-                        {selectedSubject && availableTopics.length > 0 && (
+                        {examType && (examType !== "post_utme" || selectedSchool) && selectedSubject && availableTopics.length > 0 && (
                             <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">2</div>
+                                    <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">
+                                        {examType === "post_utme" ? "4" : "3"}
+                                    </div>
                                     <div>
                                         <h2 className="text-base font-bold text-gray-900">Filter by Topic</h2>
                                         <p className="text-xs text-gray-400">Optional — leave blank for all topics</p>
@@ -231,11 +334,13 @@ export default function PracticeSetupPage() {
                         )}
 
                         {/* ── Step 3: Difficulty + Count ── */}
-                        {selectedSubject && (
+                        {examType && (examType !== "post_utme" || selectedSchool) && selectedSubject && (
                             <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
                                 <div className="flex items-center gap-3 mb-5">
                                     <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">
-                                        {availableTopics.length > 0 ? "3" : "2"}
+                                        {examType === "post_utme"
+                                            ? (availableTopics.length > 0 ? "5" : "4")
+                                            : (availableTopics.length > 0 ? "4" : "3")}
                                     </div>
                                     <h2 className="text-base font-bold text-gray-900">Customise</h2>
                                 </div>
@@ -286,7 +391,7 @@ export default function PracticeSetupPage() {
                         )}
 
                         {/* ── Start Button ── */}
-                        {selectedSubject && (
+                        {examType && (examType !== "post_utme" || selectedSchool) && selectedSubject && (
                             <button
                                 onClick={handleStart}
                                 disabled={starting}
@@ -312,7 +417,6 @@ export default function PracticeSetupPage() {
                         )}
 
                     </div>
-                )}
 
                 <p className="mt-10 text-center text-xs text-gray-400">
                     Assessly · Practice Mode · Learn at your own pace

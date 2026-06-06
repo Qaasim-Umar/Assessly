@@ -1697,8 +1697,8 @@ html, body { overflow-x: hidden; }
   .hero-float-4 { bottom: -6px; }
 }
 
-/* Overlapping Modes Card */
-.hero-modes-card {
+/* Modes — shared */
+.hero-modes-ticker-wrap {
   width: 85%;
   max-width: 900px;
   margin: -100px auto 0;
@@ -1720,17 +1720,47 @@ html, body { overflow-x: hidden; }
   border-radius: 999px;
   margin-bottom: 12px;
 }
-.hero-modes-scroll {
+.hero-modes-ticker {
   display: flex;
   gap: 12px;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-bottom: 4px;
 }
-.hero-modes-scroll::-webkit-scrollbar {
+.hero-modes-ticker::-webkit-scrollbar {
   display: none;
+}
+
+/* Mobile only: full-width infinite ticker */
+@media (max-width: 768px) {
+  .hero-modes-ticker-wrap {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    background: transparent;
+    border-radius: 0;
+    padding: 20px 0;
+    box-shadow: none;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  }
+  .hero-modes-badge {
+    display: none;
+  }
+  .hero-modes-ticker {
+    gap: 12px;
+    width: max-content;
+    overflow: visible;
+    animation: ticker-scroll 28s linear infinite;
+  }
+  .hero-modes-ticker:hover {
+    animation-play-state: paused;
+  }
+}
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 .hero-mode-item {
   flex: 0 0 auto;
@@ -1774,22 +1804,6 @@ html, body { overflow-x: hidden; }
     flex-direction: column;
     align-items: stretch;
     padding: 40px 20px 60px;
-  }
-  .hero-modes-card {
-    width: 95%;
-    margin: -40px auto 0;
-    transform: none;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-    border: 1px solid #e5e7eb;
-    padding: 16px;
-  }
-  .hero-modes-badge {
-    margin-left: 0;
-  }
-  .hero-modes-scroll {
-    gap: 10px;
-    padding: 0;
   }
   .hero-mode-item {
     flex: 0 0 120px;

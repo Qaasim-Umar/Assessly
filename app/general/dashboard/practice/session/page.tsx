@@ -57,8 +57,8 @@ interface SavedSession {
     showNavigator: boolean;
 }
 
-function sessionKey(subject: string, topic: string, difficulty: string, count: string) {
-    return `practice_${subject}_${topic}_${difficulty}_${count}`;
+function sessionKey(subject: string, topic: string, difficulty: string, count: string, examType: string, school: string) {
+    return `practice_${examType}_${school}_${subject}_${topic}_${difficulty}_${count}`;
 }
 
 function saveSession(key: string, data: SavedSession) {
@@ -104,7 +104,9 @@ function PracticeSessionPage() {
     const topic = searchParams.get("topic") ?? "";
     const difficulty = searchParams.get("difficulty") ?? "";
     const countParam = searchParams.get("count") ?? "20";
-    const sKey = sessionKey(subject, topic, difficulty, countParam);
+    const examType = searchParams.get("examType") ?? "";
+    const school = searchParams.get("school") ?? "";
+    const sKey = sessionKey(subject, topic, difficulty, countParam, examType, school);
 
     // State
     const [loading, setLoading] = useState(true);
@@ -163,6 +165,8 @@ function PracticeSessionPage() {
                     .eq("is_active", true)
                     .eq("subject", subject);
 
+                if (examType) query = query.eq("exam_type", examType);
+                if (examType === "post-utme" && school) query = query.eq("university", school);
                 if (topic) query = query.eq("topic", topic);
                 if (difficulty) query = query.eq("difficulty", difficulty);
 

@@ -97,6 +97,7 @@ type ModeId = (typeof MODES)[number]["id"];
 // Modes that are ready (have a route)
 const READY_MODES: Record<string, string> = {
     practice: "/general/dashboard/practice",
+    survival: "/general/dashboard/survival",
 };
 
 export default function GeneralModePage() {
