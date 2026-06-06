@@ -1,7 +1,7 @@
 "use client";
 
 import { Suspense, useEffect, useState, useCallback, useRef } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 
@@ -88,7 +88,6 @@ function clearSurvivalSession(key: string) {
 }
 
 function SurvivalSessionPage() {
-    const router       = useRouter();
     const searchParams = useSearchParams();
 
     const subject    = searchParams.get("subject")    ?? "";
@@ -114,14 +113,35 @@ function SurvivalSessionPage() {
     const [totalCorrect,    setTotalCorrect]     = useState(0);
     const [totalAnswered,   setTotalAnswered]    = useState(0);
 
-    // Game states: "playing" | "game-over" | "completed"
-    const [gameState, setGameState] = useState<"playing" | "game-over" | "completed">("playing");
+    // Game states: "playing" | "game-over" | "completed" | "quit"
+    const [gameState, setGameState] = useState<"playing" | "game-over" | "completed" | "quit">("playing");
 
     // Shake animation on wrong answer
     const [shaking, setShaking] = useState(false);
 
     // Prevent double submit
     const submitting = useRef(false);
+
+    // Incrementing this triggers a fresh fetch without navigating away
+    const [fetchKey, setFetchKey] = useState(0);
+
+    // ── Reset all state and re-fetch ──────────────────────────────────────────
+    const handleReset = useCallback(() => {
+        clearSurvivalSession(sKey);
+        setQuestions([]);
+        setCurrentIndex(0);
+        setSelectedOption(null);
+        setIsAnswered(false);
+        setLivesLeft(livesParam);
+        setStreak(0);
+        setBestStreak(0);
+        setTotalCorrect(0);
+        setTotalAnswered(0);
+        setGameState("playing");
+        setLoading(true);
+        setError("");
+        setFetchKey((k) => k + 1);
+    }, [sKey, livesParam]);
 
     // ── Fetch questions (or restore from sessionStorage) ──────────────────────
     useEffect(() => {
@@ -185,7 +205,13 @@ function SurvivalSessionPage() {
         }
         load();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [fetchKey]);
+
+    // ── Quit session ──────────────────────────────────────────────────────────
+    const handleQuit = useCallback(() => {
+        clearSurvivalSession(sKey);
+        setGameState("quit");
+    }, [sKey]);
 
     // ── Persist game state on every meaningful change ─────────────────────────
     useEffect(() => {
@@ -231,6 +257,7 @@ function SurvivalSessionPage() {
         if (gameState === "game-over") return;
         const nextIdx = currentIndex + 1;
         if (nextIdx >= questions.length) {
+            clearSurvivalSession(sKey);
             setGameState("completed");
             return;
         }
@@ -334,7 +361,7 @@ function SurvivalSessionPage() {
 
                 <div className="flex flex-col gap-3 pt-1">
                     <button
-                        onClick={() => router.push(`/general/dashboard/survival/session?${searchParams.toString()}`)}
+                        onClick={handleReset}
                         className="w-full flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm py-3 rounded-xl transition-colors"
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -391,9 +418,66 @@ function SurvivalSessionPage() {
 
                 <div className="flex flex-col gap-3 pt-1">
                     <button
-                        onClick={() => router.push(`/general/dashboard/survival/session?${searchParams.toString()}`)}
+                        onClick={handleReset}
                         className="w-full flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm py-3 rounded-xl transition-colors"
                     >
+                        Play Again
+                    </button>
+                    <Link
+                        href="/general/dashboard/survival"
+                        className="w-full flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-700 font-bold text-sm py-3 rounded-xl hover:bg-gray-50 transition-colors"
+                    >
+                        Change Settings
+                    </Link>
+                </div>
+            </div>
+        </div>
+    );
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // QUIT
+    if (gameState === "quit") return (
+        <div className="min-h-screen bg-[#f0f2f5] flex items-center justify-center p-6">
+            <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-10 max-w-md w-full text-center space-y-6">
+                <div className="text-6xl">🏳️</div>
+                <div>
+                    <h2 className="text-2xl font-extrabold text-gray-900">Session Ended</h2>
+                    <p className="text-sm text-gray-500 mt-1">You stopped after {totalAnswered} question{totalAnswered !== 1 ? "s" : ""}</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+                        <p className="text-2xl font-extrabold text-gray-900">{totalCorrect}</p>
+                        <p className="text-xs text-gray-500 mt-0.5">Correct answers</p>
+                    </div>
+                    <div className="bg-orange-50 border border-orange-200 rounded-xl p-4">
+                        <p className="text-2xl font-extrabold text-orange-600">{bestStreak}</p>
+                        <p className="text-xs text-gray-500 mt-0.5">Best streak</p>
+                    </div>
+                    <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+                        <div className={`flex gap-1 justify-center ${livesLeft > 0 ? "text-red-500" : "text-gray-300"}`}>
+                            {Array.from({ length: livesParam }).map((_, i) => (
+                                <HeartIcon key={i} filled={i < livesLeft} size={18} />
+                            ))}
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{livesLeft} {livesLeft === 1 ? "life" : "lives"} remaining</p>
+                    </div>
+                    <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+                        <p className="text-2xl font-extrabold text-gray-900">
+                            {totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0}%
+                        </p>
+                        <p className="text-xs text-gray-500 mt-0.5">Accuracy</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col gap-3 pt-1">
+                    <button
+                        onClick={handleReset}
+                        className="w-full flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm py-3 rounded-xl transition-colors"
+                    >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
                         Play Again
                     </button>
                     <Link
@@ -451,13 +535,21 @@ function SurvivalSessionPage() {
                         </div>
                     )}
 
-                    {/* Right: lives */}
-                    <div className="flex items-center gap-1 flex-shrink-0">
-                        {Array.from({ length: livesParam }).map((_, i) => (
-                            <span key={i} className={`transition-colors ${i < livesLeft ? "text-red-500" : "text-gray-200"}`}>
-                                <HeartIcon filled={i < livesLeft} size={20} />
-                            </span>
-                        ))}
+                    {/* Right: lives + stop */}
+                    <div className="flex items-center gap-3 flex-shrink-0">
+                        <div className="flex items-center gap-1">
+                            {Array.from({ length: livesParam }).map((_, i) => (
+                                <span key={i} className={`transition-colors ${i < livesLeft ? "text-red-500" : "text-gray-200"}`}>
+                                    <HeartIcon filled={i < livesLeft} size={20} />
+                                </span>
+                            ))}
+                        </div>
+                        <button
+                            onClick={handleQuit}
+                            className="text-xs font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors"
+                        >
+                            Stop
+                        </button>
                     </div>
                 </div>
 
