@@ -56,6 +56,37 @@ export default function SurvivalSessionWrapper() {
     );
 }
 
+// ─── Session persistence ──────────────────────────────────────────────────────
+interface SavedSurvivalSession {
+    questions:     Question[];
+    currentIndex:  number;
+    livesLeft:     number;
+    streak:        number;
+    bestStreak:    number;
+    totalCorrect:  number;
+    totalAnswered: number;
+    gameState:     "playing" | "game-over" | "completed";
+}
+
+function survivalKey(subject: string, examBody: string, difficulty: string, lives: number, topic: string, school: string) {
+    return `survival_${examBody}_${school}_${subject}_${topic}_${difficulty}_${lives}`;
+}
+
+function saveSurvivalSession(key: string, data: SavedSurvivalSession) {
+    try { sessionStorage.setItem(key, JSON.stringify(data)); } catch { /* quota */ }
+}
+
+function loadSurvivalSession(key: string): SavedSurvivalSession | null {
+    try {
+        const raw = sessionStorage.getItem(key);
+        return raw ? JSON.parse(raw) as SavedSurvivalSession : null;
+    } catch { return null; }
+}
+
+function clearSurvivalSession(key: string) {
+    try { sessionStorage.removeItem(key); } catch { /* */ }
+}
+
 function SurvivalSessionPage() {
     const router       = useRouter();
     const searchParams = useSearchParams();
@@ -67,6 +98,8 @@ function SurvivalSessionPage() {
     const topic      = searchParams.get("topic")      ?? "";
     const school     = searchParams.get("school")     ?? "";
 
+    const sKey = survivalKey(subject, examBody, difficulty, livesParam, topic, school);
+
     // ── State ─────────────────────────────────────────────────────────────────
     const [loading,  setLoading]  = useState(true);
     const [error,    setError]    = useState("");
@@ -75,7 +108,7 @@ function SurvivalSessionPage() {
     const [currentIndex,    setCurrentIndex]    = useState(0);
     const [selectedOption,  setSelectedOption]  = useState<number | null>(null);
     const [isAnswered,      setIsAnswered]       = useState(false);
-    const [livesLeft,       setLivesLeft]        = useState(livesParam);
+    const [livesLeft,       setLivesLeft]        = useState<number>(livesParam);
     const [streak,          setStreak]           = useState(0);
     const [bestStreak,      setBestStreak]       = useState(0);
     const [totalCorrect,    setTotalCorrect]     = useState(0);
@@ -90,10 +123,25 @@ function SurvivalSessionPage() {
     // Prevent double submit
     const submitting = useRef(false);
 
-    // ── Fetch questions ───────────────────────────────────────────────────────
+    // ── Fetch questions (or restore from sessionStorage) ──────────────────────
     useEffect(() => {
         async function load() {
             if (!subject) { setError("No subject selected."); setLoading(false); return; }
+
+            // Restore in-progress session if one exists
+            const saved = loadSurvivalSession(sKey);
+            if (saved && saved.questions.length > 0 && saved.gameState === "playing") {
+                setQuestions(saved.questions);
+                setCurrentIndex(saved.currentIndex);
+                setLivesLeft(saved.livesLeft);
+                setStreak(saved.streak);
+                setBestStreak(saved.bestStreak);
+                setTotalCorrect(saved.totalCorrect);
+                setTotalAnswered(saved.totalAnswered);
+                setGameState(saved.gameState);
+                setLoading(false);
+                return;
+            }
 
             try {
                 let query = supabase
@@ -139,6 +187,15 @@ function SurvivalSessionPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    // ── Persist game state on every meaningful change ─────────────────────────
+    useEffect(() => {
+        if (questions.length === 0 || gameState !== "playing") return;
+        saveSurvivalSession(sKey, {
+            questions, currentIndex, livesLeft,
+            streak, bestStreak, totalCorrect, totalAnswered, gameState,
+        });
+    }, [sKey, questions, currentIndex, livesLeft, streak, bestStreak, totalCorrect, totalAnswered, gameState]);
+
     // ── Submit answer ─────────────────────────────────────────────────────────
     const handleSubmit = useCallback(() => {
         const q = questions[currentIndex];
@@ -161,7 +218,7 @@ function SurvivalSessionPage() {
             setShaking(true);
             setTimeout(() => setShaking(false), 600);
             if (newLives === 0) {
-                // Show game over after a brief delay so the user sees the wrong answer highlighted
+                clearSurvivalSession(sKey);
                 setTimeout(() => setGameState("game-over"), 1200);
             }
         }
