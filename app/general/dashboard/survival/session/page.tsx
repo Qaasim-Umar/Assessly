@@ -75,7 +75,7 @@ function SurvivalSessionPage() {
     const [currentIndex,    setCurrentIndex]    = useState(0);
     const [selectedOption,  setSelectedOption]  = useState<number | null>(null);
     const [isAnswered,      setIsAnswered]       = useState(false);
-    const [livesLeft,       setLivesLeft]        = useState(livesParam);
+    const [livesLeft,       setLivesLeft]        = useState<number>(livesParam);
     const [streak,          setStreak]           = useState(0);
     const [bestStreak,      setBestStreak]       = useState(0);
     const [totalCorrect,    setTotalCorrect]     = useState(0);
