@@ -181,8 +181,7 @@ function JambSessionPage() {
                 status: "completed",
                 completed_at: new Date().toISOString(),
             })
-            .eq("id", sid)
-            .then(() => {}).catch(() => {});
+            .eq("id", sid);
 
         // Bulk insert answers
         const answerRows = currentQuestions
@@ -195,7 +194,7 @@ function JambSessionPage() {
                 is_correct: currentAnswers[q.id] === q.correct_answer,
             }));
         if (answerRows.length > 0) {
-            await supabase.from("mock_exam_answers").insert(answerRows).then(() => {}).catch(() => {});
+            await supabase.from("mock_exam_answers").insert(answerRows);
         }
 
         // upsert_topic_stat per answered question
@@ -207,8 +206,7 @@ function JambSessionPage() {
                     p_topic: q.topic,
                     p_is_correct: currentAnswers[q.id] === q.correct_answer,
                 })
-                .then(() => {})
-                .catch(() => {});
+                ;
         }
 
         clearBackup();
