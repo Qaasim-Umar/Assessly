@@ -206,8 +206,7 @@ function JambSessionPage() {
                     p_topic: q.topic,
                     p_is_correct: currentAnswers[q.id] === q.correct_answer,
                 })
-                .then(() => {})
-                .catch(() => {});
+                ;
         }
 
         clearBackup();
