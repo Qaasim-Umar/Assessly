@@ -14,6 +14,8 @@ interface JambQuestion {
     topic: string | null;
     explanation: string | null;
     image_url: string | null;
+    instruction: string | null;
+    passage: string | null;
     options: { label: string; text: string }[];
     correct_answer: number;
 }
@@ -295,7 +297,7 @@ function JambSessionPage() {
                 // Fetch English Language questions (fetch generous pool, shuffle + take 60)
                 const { data: engData, error: engErr } = await supabase
                     .from("questions")
-                    .select("id, text, topic, explanation, image_url, options, correct_answer")
+                    .select("id, text, topic, explanation, image_url, instruction, passage, options, correct_answer")
                     .eq("exam_type", "jamb")
                     .eq("subject", "English Language")
                     .eq("is_active", true);
@@ -306,7 +308,7 @@ function JambSessionPage() {
                     chosenSubjects.map((subj) =>
                         supabase
                             .from("questions")
-                            .select("id, text, topic, explanation, image_url, options, correct_answer")
+                            .select("id, text, topic, explanation, image_url, instruction, passage, options, correct_answer")
                             .eq("exam_type", "jamb")
                             .eq("subject", subj)
                             .eq("is_active", true)
@@ -325,6 +327,8 @@ function JambSessionPage() {
                         topic: r.topic as string | null,
                         explanation: r.explanation as string | null,
                         image_url: r.image_url as string | null,
+                        instruction: r.instruction as string | null,
+                        passage: r.passage as string | null,
                         options: (r.options as { label: string; text: string }[]) ?? [],
                         correct_answer: (r.correct_answer as number) ?? 0,
                     }))
@@ -339,6 +343,8 @@ function JambSessionPage() {
                             topic: r.topic as string | null,
                             explanation: r.explanation as string | null,
                             image_url: r.image_url as string | null,
+                            instruction: r.instruction as string | null,
+                            passage: r.passage as string | null,
                             options: (r.options as { label: string; text: string }[]) ?? [],
                             correct_answer: (r.correct_answer as number) ?? 0,
                         }))
@@ -992,6 +998,15 @@ function JambSessionPage() {
                                         className="w-full max-h-64 object-contain rounded-lg border border-gray-200"
                                     />
                                 </div>
+                            )}
+                            {currentQ.passage && (
+                                <div className="mb-4 bg-gray-50 border border-gray-200 rounded-lg px-4 sm:px-5 py-4 max-h-72 overflow-y-auto">
+                                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Passage</p>
+                                    <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">{currentQ.passage}</p>
+                                </div>
+                            )}
+                            {currentQ.instruction && (
+                                <p className="text-xs font-medium text-gray-500 italic mb-2">{currentQ.instruction}</p>
                             )}
                             <p className="text-sm sm:text-base font-semibold text-gray-900 leading-relaxed">
                                 {currentQ.text}
