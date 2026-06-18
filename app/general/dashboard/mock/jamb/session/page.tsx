@@ -677,7 +677,8 @@ function JambSessionPage() {
                         <div className="flex items-center gap-2.5">
                             <button
                                 onClick={() => setPageState("results")}
-                                className="flex items-center gap-2 text-gray-500 hover:text-gray-800 transition-colors"
+                                aria-label="Back to results"
+                                className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-colors cursor-pointer"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
@@ -719,7 +720,11 @@ function JambSessionPage() {
 
                     {filtered.length === 0 ? (
                         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-12 text-center">
-                            <div className="text-5xl mb-3">🎯</div>
+                            <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-3">
+                                <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
                             <p className="text-sm font-bold text-gray-900">No wrong answers here!</p>
                             <p className="text-xs text-gray-400 mt-1">
                                 {reviewSubject === "all"
@@ -825,11 +830,11 @@ function JambSessionPage() {
     const tabStartIdx = subjectStartIndex(activeTab);
 
     return (
-        <div className="min-h-screen bg-gray-950 flex flex-col select-none">
+        <div className="min-h-screen bg-gray-950 flex flex-col">
 
             {/* ── Top bar ── */}
             <header className="bg-gray-900 border-b border-gray-800 sticky top-0 z-30">
-                <div className="max-w-screen-xl mx-auto px-3 sm:px-5 h-13 flex items-center justify-between gap-3">
+                <div className="max-w-screen-xl mx-auto px-3 sm:px-5 h-14 flex items-center justify-between gap-3">
 
                     {/* Left: branding */}
                     <div className="flex items-center gap-2 flex-shrink-0">
@@ -864,7 +869,7 @@ function JambSessionPage() {
                         </span>
                         <button
                             onClick={() => setShowSubmitModal(true)}
-                            className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm px-4 py-1.5 rounded-lg transition-colors"
+                            className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm px-4 py-2.5 rounded-lg transition-colors min-h-[44px]"
                         >
                             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
@@ -876,7 +881,7 @@ function JambSessionPage() {
             </header>
 
             {/* ── Subject tabs ── */}
-            <nav className="bg-gray-900 border-b border-gray-800 sticky top-13 z-20 overflow-x-auto scrollbar-hide">
+            <nav className="bg-gray-900 border-b border-gray-800 sticky top-14 z-20 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 <div className="max-w-screen-xl mx-auto px-3 sm:px-5 flex gap-0">
                     {allSubjects.map((subj) => {
                         const answered = answeredCountForSubject(subj);
@@ -909,7 +914,7 @@ function JambSessionPage() {
 
                 {/* ── Navigator sidebar (desktop) ── */}
                 <aside className="hidden lg:flex flex-col gap-4 w-56 flex-shrink-0">
-                    <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 sticky top-28">
+                    <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 sticky top-[112px]">
                         <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">
                             {activeTab.length > 20 ? activeTab.slice(0, 18) + "…" : activeTab}
                         </p>
@@ -927,7 +932,8 @@ function JambSessionPage() {
                                     <button
                                         key={q.id}
                                         onClick={() => navigateTo(absIdx)}
-                                        className={`aspect-square flex items-center justify-center text-[11px] font-bold rounded transition-colors ${cls}`}
+                                        aria-label={`Go to question ${relIdx + 1}`}
+                                        className={`aspect-square min-w-[28px] min-h-[28px] flex items-center justify-center text-[11px] font-bold rounded transition-colors cursor-pointer ${cls}`}
                                     >
                                         {relIdx + 1}
                                     </button>
@@ -967,7 +973,9 @@ function JambSessionPage() {
                         {/* Flag button */}
                         <button
                             onClick={() => toggleFlag(currentQ.id)}
-                            className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg border transition-colors flex-shrink-0 ${
+                            aria-label={flags[currentQ.id] ? "Remove flag from this question" : "Flag this question for review"}
+                            aria-pressed={!!flags[currentQ.id]}
+                            className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-lg border transition-colors flex-shrink-0 cursor-pointer min-h-[36px] ${
                                 flags[currentQ.id]
                                     ? "bg-yellow-500 border-yellow-500 text-gray-900"
                                     : "border-gray-700 text-gray-400 hover:border-yellow-500 hover:text-yellow-400"
@@ -1039,7 +1047,7 @@ function JambSessionPage() {
                         <button
                             onClick={() => currentIdx > 0 && navigateTo(currentIdx - 1)}
                             disabled={currentIdx === 0}
-                            className="flex items-center gap-2 border border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors"
+                            className="flex items-center gap-2 border border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors min-h-[44px]"
                         >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
@@ -1078,7 +1086,7 @@ function JambSessionPage() {
                         <button
                             onClick={() => currentIdx < questions.length - 1 && navigateTo(currentIdx + 1)}
                             disabled={currentIdx === questions.length - 1}
-                            className="flex items-center gap-2 border border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors"
+                            className="flex items-center gap-2 border border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors min-h-[44px]"
                         >
                             Next
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py \"C:\\\\Users\\\\Qaasim\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"Nigerian CBT exam simulator educational student timed assessment\" --design-system -p \"Assessly JAMB Simulator\" -f markdown)",
+      "Bash(dir \"C:\\\\Users\\\\Qaasim\\\\.claude\\\\skills\\\\ui-ux-pro-max\" /s /b)",
+      "Bash(ls \"C:\\\\Users\\\\Qaasim\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\\" 2>&1)",
+      "Read(//c/Users/Qaasim/.claude/skills/ui-ux-pro-max/**)",
+      "PowerShell(head -10)",
+      "PowerShell($scriptsTarget = Get-Content \"C:\\\\Users\\\\Qaasim\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\"; $dataTarget = Get-Content \"C:\\\\Users\\\\Qaasim\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\data\"; Write-Output \"scripts -> $scriptsTarget\"; Write-Output \"data -> $dataTarget\")",
+      "Read(//c/Users/Qaasim/.claude/src/ui-ux-pro-max/**)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(npx playwright *)"
+    ]
+  }
+}
