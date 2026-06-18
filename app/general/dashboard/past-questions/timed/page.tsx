@@ -13,6 +13,8 @@ interface PastQuestion {
     difficulty: string | null;
     explanation: string | null;
     image_url: string | null;
+    instruction: string | null;
+    passage: string | null;
     options: { label: string; text: string }[];
     correct_answer: number;
 }
@@ -116,7 +118,7 @@ function TimedExamPage() {
             try {
                 let q = supabase
                     .from("questions")
-                    .select("id, text, topic, difficulty, explanation, image_url, options, correct_answer")
+                    .select("id, text, topic, difficulty, explanation, image_url, instruction, passage, options, correct_answer")
                     .is("exam_id", null)
                     .eq("is_active", true)
                     .eq("subject", subject)
@@ -136,6 +138,8 @@ function TimedExamPage() {
                     difficulty: row.difficulty,
                     explanation: row.explanation,
                     image_url: row.image_url,
+                    instruction: row.instruction,
+                    passage: row.passage,
                     options: row.options ?? [],
                     correct_answer: row.correct_answer ?? 0,
                 }));
@@ -523,6 +527,15 @@ function TimedExamPage() {
                                 // eslint-disable-next-line @next/next/no-img-element
                                 <img src={currentQ.image_url} alt="Question diagram"
                                     className="w-full max-h-[360px] object-contain rounded-lg border border-gray-200 bg-white mb-4" />
+                            )}
+                            {currentQ.passage && (
+                                <div className="mb-4 bg-gray-50 border border-gray-200 rounded-lg px-5 py-4 max-h-72 overflow-y-auto">
+                                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Passage</p>
+                                    <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">{currentQ.passage}</p>
+                                </div>
+                            )}
+                            {currentQ.instruction && (
+                                <p className="text-xs font-medium text-gray-500 italic mb-2">{currentQ.instruction}</p>
                             )}
                             <p className="text-base font-semibold text-gray-900 leading-relaxed">{currentQ.text}</p>
                         </div>
