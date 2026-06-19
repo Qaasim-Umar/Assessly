@@ -20,6 +20,8 @@ export interface Question {
   id: number;
   text: string;
   imageUrl?: string; // General Mode: optional diagram/image
+  instruction?: string | null;
+  passage?: string | null;
   options?: Option[];
   correctAnswer?: number; // 0-based index of the correct option (MCQ only)
   type: "MCQ" | "Theory";

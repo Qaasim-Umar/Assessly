@@ -22,6 +22,8 @@ const LETTERS = ["A", "B", "C", "D"] as const;
 
 const blank = {
     text: "",
+    instruction: "",
+    passage: "",
     type: "MCQ" as "MCQ" | "Theory",
     difficulty: "Medium" as Difficulty,
     optA: "",
@@ -335,6 +337,8 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
             id: editingId ?? Date.now(),
             text: form.text.trim(),
             imageUrl: form.imageUrl ? form.imageUrl : undefined,
+            instruction: form.instruction.trim() || null,
+            passage: form.passage.trim() || null,
             type: form.type,
             topic: "Manual",
             commandWord: form.text.trim().split(" ")[0],
@@ -367,6 +371,8 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
         setTab("single");
         setForm({
             text: q.text,
+            instruction: q.instruction ?? "",
+            passage: q.passage ?? "",
             type: q.type,
             difficulty: q.userDifficulty,
             optA: q.options?.[0]?.text ?? "",
@@ -423,6 +429,33 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                             placeholder="Type your question here…"
                             value={form.text}
                             onChange={(e) => setF("text", e.target.value)}
+                        />
+                    </div>
+
+                    {/* Passage (English comprehension) */}
+                    <div className="space-y-1.5">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-wide block">
+                            Passage <span className="font-normal text-gray-400 normal-case">(optional — English comprehension)</span>
+                        </label>
+                        <textarea
+                            rows={4}
+                            className={inputCls}
+                            placeholder="Paste the reading passage here. It will appear above the question during the exam."
+                            value={form.passage}
+                            onChange={(e) => setF("passage", e.target.value)}
+                        />
+                    </div>
+
+                    {/* Instruction */}
+                    <div className="space-y-1.5">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-wide block">
+                            Instruction <span className="font-normal text-gray-400 normal-case">(optional — e.g. "From the passage, choose the best answer")</span>
+                        </label>
+                        <input
+                            className={inputCls}
+                            placeholder="e.g. Choose the option that best explains the word in bold."
+                            value={form.instruction}
+                            onChange={(e) => setF("instruction", e.target.value)}
                         />
                     </div>
 
@@ -604,6 +637,16 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                                     <div className="flex items-center gap-2 mt-1.5 flex-wrap">
                                         <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${q.type === "MCQ" ? "bg-green-50 text-green-600" : "bg-purple-50 text-purple-600"}`}>{q.type}</span>
                                         <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${difficultyColors[q.userDifficulty]}`}>{q.userDifficulty}</span>
+                                        {q.passage && (
+                                            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-sky-50 text-sky-700">
+                                                Passage
+                                            </span>
+                                        )}
+                                        {q.instruction && (
+                                            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-violet-50 text-violet-700">
+                                                Instruction
+                                            </span>
+                                        )}
                                         {q.imageUrl && (
                                             <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 text-green-700">
                                                 Image

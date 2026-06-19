@@ -513,6 +513,12 @@ function PracticeSessionPage() {
                             )}
                         </button>
                     </div>
+                    <Link
+                        href="/general"
+                        className="w-full flex items-center justify-center gap-2 border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 font-semibold text-sm py-3 rounded-xl transition-colors"
+                    >
+                        ← Choose a Mode
+                    </Link>
 
                 </main>
             </div>

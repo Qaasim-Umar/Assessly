@@ -19,6 +19,8 @@ interface PoolQuestion {
     difficulty: DifficultyEnum;
     explanation: string;
     hint: string;
+    instruction: string;
+    passage: string;
     imageUrl?: string;
     options: { label: string; text: string }[];
     correctAnswer: number;
@@ -49,6 +51,8 @@ interface RawQuestion {
     difficulty?: string;
     explanation?: string;
     hint?: string;
+    instruction?: string;
+    passage?: string;
     has_diagram?: boolean;
     diagram_note?: string;
     options: RawOption[];
@@ -117,6 +121,8 @@ function parseJson(raw: string, config: BatchConfig): {
             difficulty: diff,
             explanation: q.explanation ?? "",
             hint: q.hint ?? "",
+            instruction: q.instruction ?? "",
+            passage: q.passage ?? "",
             options: q.options.map((o) => ({ label: o.key, text: o.text })),
             correctAnswer: correctIndex,
             hasDiagram: q.has_diagram,
@@ -136,6 +142,8 @@ function emptyQuestion(id: number, config: BatchConfig): PoolQuestion {
         difficulty: config.defaultDifficulty,
         explanation: "",
         hint: "",
+        instruction: "",
+        passage: "",
         options: [
             { label: "A", text: "" },
             { label: "B", text: "" },
@@ -262,6 +270,28 @@ function ManualQuestionCard({
                     value={q.hint}
                     onChange={(e) => set("hint", e.target.value)}
                     placeholder="A nudge to help the student…"
+                    className="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+            </div>
+
+            <div className="space-y-1.5">
+                <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">Passage <span className="normal-case font-normal text-gray-400">(optional — English comprehension)</span></label>
+                <textarea
+                    rows={3}
+                    value={q.passage}
+                    onChange={(e) => set("passage", e.target.value)}
+                    placeholder="Paste the reading passage here. Shown above the question during the exam."
+                    className="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"
+                />
+            </div>
+
+            <div className="space-y-1.5">
+                <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">Instruction <span className="normal-case font-normal text-gray-400">(optional — e.g. "From the passage above, answer the following")</span></label>
+                <input
+                    type="text"
+                    value={q.instruction}
+                    onChange={(e) => set("instruction", e.target.value)}
+                    placeholder="e.g. Choose the word that best replaces the underlined word."
                     className="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
             </div>
@@ -446,6 +476,8 @@ export default function QuestionBankPage() {
             difficulty: q.difficulty,
             explanation: q.explanation.trim() || null,
             hint: q.hint.trim() || null,
+            instruction: q.instruction.trim() || null,
+            passage: q.passage.trim() || null,
             image_url: q.imageUrl ?? null,
             options: q.options,
             correct_answer: q.correctAnswer,
@@ -639,7 +671,7 @@ export default function QuestionBankPage() {
                             <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-lg px-4 py-3 text-xs text-green-800 space-y-0.5">
                                 <div>
                                     <p><strong>Required per question:</strong> <code className="bg-green-100 px-1 rounded">question</code>, <code className="bg-green-100 px-1 rounded">options[]</code> with one <code className="bg-green-100 px-1 rounded">&quot;is_correct&quot;: true</code></p>
-                                    <p className="mt-0.5"><strong>Optional:</strong> <code className="bg-green-100 px-1 rounded">topic</code>, <code className="bg-green-100 px-1 rounded">difficulty</code>, <code className="bg-green-100 px-1 rounded">explanation</code>, <code className="bg-green-100 px-1 rounded">hint</code>, <code className="bg-green-100 px-1 rounded">has_diagram</code></p>
+                                    <p className="mt-0.5"><strong>Optional:</strong> <code className="bg-green-100 px-1 rounded">topic</code>, <code className="bg-green-100 px-1 rounded">difficulty</code>, <code className="bg-green-100 px-1 rounded">explanation</code>, <code className="bg-green-100 px-1 rounded">hint</code>, <code className="bg-green-100 px-1 rounded">instruction</code>, <code className="bg-green-100 px-1 rounded">passage</code>, <code className="bg-green-100 px-1 rounded">has_diagram</code></p>
                                 </div>
                             </div>
                             <textarea

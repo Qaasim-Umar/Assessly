@@ -376,12 +376,20 @@ function StudySessionPage() {
                                 <p className="text-sm font-bold text-sky-800">You&apos;ve reached the end!</p>
                                 <p className="text-xs text-sky-600 mt-0.5">Reviewed {questions.length} question{questions.length !== 1 ? "s" : ""}.</p>
                             </div>
-                            <Link
-                                href="/general/dashboard/study"
-                                className="flex-shrink-0 text-xs font-bold bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-lg transition-colors"
-                            >
-                                New Session
-                            </Link>
+                            <div className="flex flex-col gap-2 flex-shrink-0">
+                                <Link
+                                    href="/general/dashboard/study"
+                                    className="text-xs font-bold bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-lg transition-colors text-center"
+                                >
+                                    New Session
+                                </Link>
+                                <Link
+                                    href="/general"
+                                    className="text-xs font-semibold text-sky-700 hover:text-sky-900 px-4 py-1.5 rounded-lg border border-sky-200 bg-white hover:bg-sky-50 transition-colors text-center"
+                                >
+                                    ← Choose a Mode
+                                </Link>
+                            </div>
                         </div>
                     )}
                 </main>

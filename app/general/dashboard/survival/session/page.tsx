@@ -379,6 +379,12 @@ function SurvivalSessionPage() {
                     >
                         Change Settings
                     </Link>
+                    <Link
+                        href="/general"
+                        className="w-full flex items-center justify-center gap-2 border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 font-semibold text-sm py-3 rounded-xl transition-colors"
+                    >
+                        ← Choose a Mode
+                    </Link>
                 </div>
             </div>
         </div>
@@ -432,6 +438,12 @@ function SurvivalSessionPage() {
                         className="w-full flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-700 font-bold text-sm py-3 rounded-xl hover:bg-gray-50 transition-colors"
                     >
                         Change Settings
+                    </Link>
+                    <Link
+                        href="/general"
+                        className="w-full flex items-center justify-center gap-2 border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 font-semibold text-sm py-3 rounded-xl transition-colors"
+                    >
+                        ← Choose a Mode
                     </Link>
                 </div>
             </div>
@@ -489,6 +501,12 @@ function SurvivalSessionPage() {
                         className="w-full flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-700 font-bold text-sm py-3 rounded-xl hover:bg-gray-50 transition-colors"
                     >
                         Change Settings
+                    </Link>
+                    <Link
+                        href="/general"
+                        className="w-full flex items-center justify-center gap-2 border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 font-semibold text-sm py-3 rounded-xl transition-colors"
+                    >
+                        ← Choose a Mode
                     </Link>
                 </div>
             </div>
