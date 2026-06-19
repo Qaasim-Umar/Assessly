@@ -4,13 +4,13 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4">
       <div className="text-center max-w-md">
-        <p className="text-8xl font-bold text-[#16a34a] leading-none" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+        <p className="text-8xl font-bold text-[#16a34a] leading-none">
           404
         </p>
-        <h1 className="mt-4 text-2xl font-semibold text-gray-900" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+        <h1 className="mt-4 text-2xl font-semibold text-gray-900">
           Page not found
         </h1>
-        <p className="mt-3 text-base text-gray-500" style={{ fontFamily: "'Manrope', sans-serif" }}>
+        <p className="mt-3 text-base text-gray-500">
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">

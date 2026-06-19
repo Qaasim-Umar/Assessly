@@ -9,12 +9,12 @@ import { supabase } from "@/lib/supabase";
 type ExamType = "jamb" | "post_utme" | "waec" | "neco" | "bece" | "";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
-const EXAM_TYPES: { value: ExamType; label: string; full: string; color: string; active: string }[] = [
-    { value: "jamb",      label: "JAMB",      full: "Joint Admissions",      color: "text-indigo-700 bg-indigo-50 border-indigo-200",  active: "border-indigo-500 bg-indigo-50" },
-    { value: "post_utme", label: "Post UTME", full: "University Screening",  color: "text-violet-700 bg-violet-50 border-violet-200", active: "border-violet-500 bg-violet-50" },
-    { value: "waec",      label: "WAEC",      full: "W. Africa Exam Council", color: "text-blue-700 bg-blue-50 border-blue-200",        active: "border-blue-500 bg-blue-50" },
-    { value: "neco",      label: "NECO",      full: "National Exams Council", color: "text-amber-700 bg-amber-50 border-amber-200",     active: "border-amber-500 bg-amber-50" },
-    { value: "bece",      label: "BECE",      full: "Basic Cert. Exams",     color: "text-teal-700 bg-teal-50 border-teal-200",        active: "border-teal-500 bg-teal-50" },
+const EXAM_TYPES: { value: ExamType; label: string; full: string; active: string }[] = [
+    { value: "jamb",      label: "JAMB",      full: "Joint Admissions",      active: "border-green-600 bg-green-50" },
+    { value: "post_utme", label: "Post UTME", full: "University Screening",  active: "border-green-600 bg-green-50" },
+    { value: "waec",      label: "WAEC",      full: "W. Africa Exam Council", active: "border-green-600 bg-green-50" },
+    { value: "neco",      label: "NECO",      full: "National Exams Council", active: "border-green-600 bg-green-50" },
+    { value: "bece",      label: "BECE",      full: "Basic Cert. Exams",     active: "border-green-600 bg-green-50" },
 ];
 
 const POST_UTME_SCHOOLS = [
@@ -159,7 +159,7 @@ export default function StudySetupPage() {
         <div className="min-h-screen bg-[#f0f2f5]">
 
             {/* ── Header ── */}
-            <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
+            <header className="bg-white/90 backdrop-blur-md border-b border-gray-200 sticky top-0 z-20">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
                         <Link href="/general" className="flex items-center gap-2 text-gray-500 hover:text-gray-800 transition-colors">
@@ -168,7 +168,7 @@ export default function StudySetupPage() {
                             </svg>
                         </Link>
                         <div className="h-4 w-px bg-gray-200" />
-                        <div className="w-7 h-7 rounded-lg bg-sky-600 flex items-center justify-center">
+                        <div className="w-7 h-7 rounded-lg bg-green-700 flex items-center justify-center">
                             <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8"
                                     d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
@@ -176,7 +176,7 @@ export default function StudySetupPage() {
                         </div>
                         <span className="text-sm font-bold text-gray-900 tracking-tight">Study Mode</span>
                     </div>
-                    <span className="text-[10px] font-bold text-sky-700 bg-sky-50 border border-sky-200 px-2.5 py-1 rounded-full uppercase tracking-wide">
+                    <span className="text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2.5 py-1 rounded-full uppercase tracking-wide">
                         No pressure
                     </span>
                 </div>
@@ -186,6 +186,7 @@ export default function StudySetupPage() {
 
                 {/* ── Hero ── */}
                 <div className="mb-8">
+                    <p className="text-xs font-bold text-green-700 uppercase tracking-widest mb-2">Study Mode</p>
                     <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
                         Set Up Your Study Session
                     </h1>
@@ -199,7 +200,7 @@ export default function StudySetupPage() {
                     {/* ── Step 1: Exam Type ── */}
                     <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs font-bold">1</div>
+                            <div className="w-7 h-7 rounded-full bg-green-700 text-white flex items-center justify-center text-xs font-bold">1</div>
                             <h2 className="text-base font-bold text-gray-900">Select Exam Type</h2>
                         </div>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -218,7 +219,7 @@ export default function StudySetupPage() {
                                             : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"
                                     }`}
                                 >
-                                    <p className={`text-sm font-bold ${examType === et.value ? et.color.split(" ")[0] : "text-gray-900"}`}>
+                                    <p className={`text-sm font-bold ${examType === et.value ? "text-green-700" : "text-gray-900"}`}>
                                         {et.label}
                                     </p>
                                     <p className="text-xs text-gray-400 mt-0.5">{et.full}</p>
@@ -231,7 +232,7 @@ export default function StudySetupPage() {
                     {examType === "post_utme" && (
                         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs font-bold">2</div>
+                                <div className="w-7 h-7 rounded-full bg-green-700 text-white flex items-center justify-center text-xs font-bold">2</div>
                                 <div>
                                     <h2 className="text-base font-bold text-gray-900">Select Your School</h2>
                                     <p className="text-xs text-gray-400">Post UTME questions are school-specific</p>
@@ -242,7 +243,7 @@ export default function StudySetupPage() {
                                 value={schoolSearch}
                                 onChange={(e) => setSchoolSearch(e.target.value)}
                                 placeholder="Search school…"
-                                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 mb-3"
+                                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-600 mb-3"
                             />
                             <div className="flex flex-wrap gap-2 max-h-48 overflow-y-auto pr-1">
                                 {filteredSchools.map((school) => (
@@ -251,7 +252,7 @@ export default function StudySetupPage() {
                                         onClick={() => { setSelectedSchool(school); setSelectedSubject(""); setSelectedTopic(""); setSelectedYear(null); }}
                                         className={`text-xs font-semibold px-3 py-1.5 rounded-lg border transition-all ${
                                             selectedSchool === school
-                                                ? "border-sky-500 bg-sky-50 text-sky-700"
+                                                ? "border-green-600 bg-green-50 text-green-700"
                                                 : "border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50"
                                         }`}
                                     >
@@ -268,7 +269,7 @@ export default function StudySetupPage() {
                     {/* ── Loading / error / empty (after exam type chosen) ── */}
                     {examType && (examType !== "post_utme" || selectedSchool) && loading && (
                         <div className="flex items-center justify-center py-12">
-                            <svg className="w-6 h-6 animate-spin text-sky-600" fill="none" viewBox="0 0 24 24">
+                            <svg className="w-6 h-6 animate-spin text-green-700" fill="none" viewBox="0 0 24 24">
                                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                             </svg>
@@ -293,7 +294,7 @@ export default function StudySetupPage() {
                     {examType && (examType !== "post_utme" || selectedSchool) && !loading && !error && subjects.length > 0 && (
                         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs font-bold">
+                                <div className="w-7 h-7 rounded-full bg-green-700 text-white flex items-center justify-center text-xs font-bold">
                                     {stepOffset + 2}
                                 </div>
                                 <h2 className="text-base font-bold text-gray-900">Choose a Subject</h2>
@@ -305,11 +306,11 @@ export default function StudySetupPage() {
                                         onClick={() => { setSelectedSubject(s.subject); setSelectedTopic(""); setSelectedYear(null); }}
                                         className={`text-left p-4 rounded-xl border-2 transition-all ${
                                             selectedSubject === s.subject
-                                                ? "border-sky-500 bg-sky-50 shadow-sm"
+                                                ? "border-green-600 bg-green-50 shadow-sm"
                                                 : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"
                                         }`}
                                     >
-                                        <p className={`text-sm font-bold ${selectedSubject === s.subject ? "text-sky-700" : "text-gray-900"}`}>
+                                        <p className={`text-sm font-bold ${selectedSubject === s.subject ? "text-green-700" : "text-gray-900"}`}>
                                             {s.subject}
                                         </p>
                                         <p className="text-xs text-gray-400 mt-0.5">{s.count} questions</p>
@@ -323,7 +324,7 @@ export default function StudySetupPage() {
                     {examType && (examType !== "post_utme" || selectedSchool) && selectedSubject && availableTopics.length > 0 && (
                         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs font-bold">
+                                <div className="w-7 h-7 rounded-full bg-green-700 text-white flex items-center justify-center text-xs font-bold">
                                     {stepOffset + 3}
                                 </div>
                                 <div>
@@ -336,7 +337,7 @@ export default function StudySetupPage() {
                                     onClick={() => { setSelectedTopic(""); setSelectedYear(null); }}
                                     className={`text-xs font-semibold px-3.5 py-2 rounded-lg border transition-all ${
                                         selectedTopic === ""
-                                            ? "border-sky-500 bg-sky-50 text-sky-700"
+                                            ? "border-green-600 bg-green-50 text-green-700"
                                             : "border-gray-200 text-gray-600 hover:border-gray-300"
                                     }`}
                                 >
@@ -348,7 +349,7 @@ export default function StudySetupPage() {
                                         onClick={() => { setSelectedTopic(t); setSelectedYear(null); }}
                                         className={`text-xs font-semibold px-3.5 py-2 rounded-lg border transition-all ${
                                             selectedTopic === t
-                                                ? "border-sky-500 bg-sky-50 text-sky-700"
+                                                ? "border-green-600 bg-green-50 text-green-700"
                                                 : "border-gray-200 text-gray-600 hover:border-gray-300"
                                         }`}
                                     >
@@ -363,7 +364,7 @@ export default function StudySetupPage() {
                     {selectedSubject && !yearsLoading && availableYears.length > 0 && (
                         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs font-bold">
+                                <div className="w-7 h-7 rounded-full bg-green-700 text-white flex items-center justify-center text-xs font-bold">
                                     {stepOffset + (availableTopics.length > 0 ? 4 : 3)}
                                 </div>
                                 <div>
@@ -376,7 +377,7 @@ export default function StudySetupPage() {
                                     onClick={() => setSelectedYear(null)}
                                     className={`text-xs font-semibold px-3.5 py-2 rounded-lg border transition-all ${
                                         selectedYear === null
-                                            ? "border-sky-500 bg-sky-50 text-sky-700"
+                                            ? "border-green-600 bg-green-50 text-green-700"
                                             : "border-gray-200 text-gray-600 hover:border-gray-300"
                                     }`}
                                 >
@@ -388,7 +389,7 @@ export default function StudySetupPage() {
                                         onClick={() => setSelectedYear(y)}
                                         className={`text-xs font-semibold px-3.5 py-2 rounded-lg border transition-all ${
                                             selectedYear === y
-                                                ? "border-sky-500 bg-sky-50 text-sky-700"
+                                                ? "border-green-600 bg-green-50 text-green-700"
                                                 : "border-gray-200 text-gray-600 hover:border-gray-300"
                                         }`}
                                     >
@@ -404,7 +405,7 @@ export default function StudySetupPage() {
                         <button
                             onClick={handleStart}
                             disabled={starting}
-                            className={`w-full flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm py-3.5 rounded-xl transition-colors shadow-sm ${starting ? "opacity-70 cursor-not-allowed" : ""}`}
+                            className={`w-full flex items-center justify-center gap-2 bg-green-700 hover:bg-green-700 text-white font-bold text-sm py-3.5 rounded-xl transition-colors shadow-sm ${starting ? "opacity-70 cursor-not-allowed" : ""}`}
                         >
                             {starting ? (
                                 <>

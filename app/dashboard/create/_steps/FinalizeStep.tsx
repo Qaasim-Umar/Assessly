@@ -66,7 +66,9 @@ export default function FinalizeStep({ questions, form, examId, isGeneral = fals
             }
             router.push(redirectPath);
         } catch (e: unknown) {
-            const msg = e instanceof Error ? e.message : "Unknown error";
+            // Re-throw Next.js internal navigation signals (router.push throws these)
+            if (e && typeof e === "object" && "digest" in e) throw e;
+            const msg = e instanceof Error ? e.message : (e as any)?.message ?? "Unknown error";
             setSaveError(`Failed to save: ${msg}`);
         } finally {
             setSaving(null);

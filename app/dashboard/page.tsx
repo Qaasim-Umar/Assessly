@@ -182,7 +182,7 @@ export default function DashboardPage() {
                         {/* School Code chip */}
                         {schoolCode && (
                             <button onClick={copyCode} title="Click to copy school code"
-                                className={`hidden sm:flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border transition-colors ${codeCopied
+                                className={`flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border transition-colors ${codeCopied
                                     ? "bg-green-50 border-green-300 text-green-700"
                                     : "bg-amber-50 border-amber-200 text-amber-700 hover:bg-amber-100"
                                     }`}>

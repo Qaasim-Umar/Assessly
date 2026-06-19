@@ -740,8 +740,16 @@ function PracticeSessionPage() {
                             Previous
                         </button>
                         <button
-                            onClick={() => currentIndex < questions.length - 1 && navigateTo(currentIndex + 1)}
-                            disabled={currentIndex === questions.length - 1}
+                            onClick={() => {
+                                if (!qs.isAnswered) {
+                                    handleSubmit();
+                                } else {
+                                    const allAnswered = questions.every((_, i) => (qStates[i] ?? defaultQState()).isAnswered);
+                                    if (allAnswered) { clearSession(sKey); setFinished(true); return; }
+                                    handleNext();
+                                }
+                            }}
+                            disabled={!qs.isAnswered && qs.selectedOption === null}
                             className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-sm font-semibold text-gray-700 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                         >
                             Next

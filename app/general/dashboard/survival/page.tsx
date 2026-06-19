@@ -36,7 +36,7 @@ const EXAM_BODIES: { value: ExamBody; label: string; sub: string }[] = [
 const DIFFICULTIES: { value: Difficulty; label: string; desc: string; bg: string; text: string }[] = [
     { value: "easy",   label: "Easy",   desc: "Foundational questions", bg: "bg-green-50",  text: "text-green-700"  },
     { value: "medium", label: "Medium", desc: "Standard exam level",    bg: "bg-amber-50",  text: "text-amber-700"  },
-    { value: "hard",   label: "Hard",   desc: "Challenging questions",  bg: "bg-orange-50", text: "text-orange-700" },
+    { value: "hard",   label: "Hard",   desc: "Challenging questions",  bg: "bg-amber-50", text: "text-amber-700" },
     { value: "mixed",  label: "Mixed",  desc: "All difficulty levels",  bg: "bg-violet-50", text: "text-violet-700" },
 ];
 
@@ -56,7 +56,7 @@ function HeartIcon({ size = 20 }: { size?: number }) {
 function StepHeader({ n, label, done }: { n: number; label: string; done: boolean }) {
     return (
         <div className="flex items-center gap-3 mb-4">
-            <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 transition-colors ${done ? "bg-green-500 text-white" : "bg-orange-500 text-white"}`}>
+            <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 transition-colors ${done ? "bg-green-700 text-white" : "bg-amber-500 text-white"}`}>
                 {done ? (
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
@@ -153,7 +153,7 @@ export default function SurvivalSetupPage() {
     const pill = (active: boolean, activeExtra = "") =>
         `text-left px-4 py-3 rounded-xl border-2 text-sm font-semibold transition-all ${
             active
-                ? `border-orange-500 bg-orange-50 text-orange-700 shadow-sm ${activeExtra}`
+                ? `border-amber-500 bg-amber-50 text-amber-700 shadow-sm ${activeExtra}`
                 : "border-gray-200 text-gray-700 hover:border-gray-300 hover:bg-gray-50"
         }`;
 
@@ -161,7 +161,7 @@ export default function SurvivalSetupPage() {
         <div className="min-h-screen bg-[#f0f2f5]">
 
             {/* ── Header ── */}
-            <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
+            <header className="bg-white/90 backdrop-blur-md border-b border-gray-200 sticky top-0 z-20">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
                         <Link href="/general" className="flex items-center gap-2 text-gray-500 hover:text-gray-800 transition-colors">
@@ -170,7 +170,7 @@ export default function SurvivalSetupPage() {
                             </svg>
                         </Link>
                         <div className="h-4 w-px bg-gray-200" />
-                        <div className="w-7 h-7 rounded-lg bg-orange-500 flex items-center justify-center text-white">
+                        <div className="w-7 h-7 rounded-lg bg-amber-500 flex items-center justify-center text-white">
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8"
                                     d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
@@ -178,7 +178,7 @@ export default function SurvivalSetupPage() {
                         </div>
                         <span className="text-sm font-bold text-gray-900 tracking-tight">Survival Mode</span>
                     </div>
-                    <span className="text-[10px] font-bold text-orange-600 bg-orange-50 border border-orange-200 px-2.5 py-1 rounded-full uppercase tracking-wide">
+                    <span className="text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full uppercase tracking-wide">
                         One life per wrong answer
                     </span>
                 </div>
@@ -188,6 +188,7 @@ export default function SurvivalSetupPage() {
 
                 {/* ── Hero ── */}
                 <div className="mb-8">
+                    <p className="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">Survival Mode</p>
                     <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
                         Set Up Survival
                     </h1>
@@ -204,7 +205,7 @@ export default function SurvivalSetupPage() {
 
                         {loadingSubjects && (
                             <div className="flex items-center gap-2 py-4">
-                                <svg className="w-5 h-5 animate-spin text-orange-500" fill="none" viewBox="0 0 24 24">
+                                <svg className="w-5 h-5 animate-spin text-amber-600" fill="none" viewBox="0 0 24 24">
                                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                                 </svg>
@@ -235,8 +236,8 @@ export default function SurvivalSetupPage() {
                     {selectedSubject && availableTopics.length > 0 && (
                         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-7 h-7 rounded-full bg-orange-100 border border-orange-200 flex items-center justify-center flex-shrink-0">
-                                    <svg className="w-3.5 h-3.5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-7 h-7 rounded-full bg-orange-100 border border-amber-200 flex items-center justify-center flex-shrink-0">
+                                    <svg className="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
                                     </svg>
                                 </div>
@@ -250,7 +251,7 @@ export default function SurvivalSetupPage() {
                                     onClick={() => setSelectedTopic("")}
                                     className={`text-xs font-semibold px-3.5 py-2 rounded-lg border-2 transition-all ${
                                         selectedTopic === ""
-                                            ? "border-orange-500 bg-orange-50 text-orange-700"
+                                            ? "border-amber-500 bg-amber-50 text-amber-700"
                                             : "border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50"
                                     }`}
                                 >
@@ -262,7 +263,7 @@ export default function SurvivalSetupPage() {
                                         onClick={() => setSelectedTopic(t)}
                                         className={`text-xs font-semibold px-3.5 py-2 rounded-lg border-2 transition-all ${
                                             selectedTopic === t
-                                                ? "border-orange-500 bg-orange-50 text-orange-700"
+                                                ? "border-amber-500 bg-amber-50 text-amber-700"
                                                 : "border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50"
                                         }`}
                                     >
@@ -287,11 +288,11 @@ export default function SurvivalSetupPage() {
                                     }}
                                     className={`text-left px-4 py-3 rounded-xl border-2 transition-all ${
                                         selectedExamBody === eb.value
-                                            ? "border-orange-500 bg-orange-50 shadow-sm"
+                                            ? "border-amber-500 bg-amber-50 shadow-sm"
                                             : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"
                                     }`}
                                 >
-                                    <p className={`text-sm font-bold ${selectedExamBody === eb.value ? "text-orange-700" : "text-gray-900"}`}>
+                                    <p className={`text-sm font-bold ${selectedExamBody === eb.value ? "text-amber-700" : "text-gray-900"}`}>
                                         {eb.label}
                                     </p>
                                     <p className="text-xs text-gray-400 mt-0.5">{eb.sub}</p>
@@ -308,7 +309,7 @@ export default function SurvivalSetupPage() {
                                     value={schoolSearch}
                                     onChange={(e) => setSchoolSearch(e.target.value)}
                                     placeholder="Search school…"
-                                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 mb-3"
+                                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 mb-3"
                                 />
                                 <div className="flex flex-wrap gap-2 max-h-44 overflow-y-auto pr-1">
                                     {filteredSchools.map((school) => (
@@ -317,7 +318,7 @@ export default function SurvivalSetupPage() {
                                             onClick={() => setSelectedSchool(school)}
                                             className={`text-xs font-semibold px-3 py-1.5 rounded-lg border transition-all ${
                                                 selectedSchool === school
-                                                    ? "border-orange-500 bg-orange-50 text-orange-700"
+                                                    ? "border-amber-500 bg-amber-50 text-amber-700"
                                                     : "border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50"
                                             }`}
                                         >
@@ -342,7 +343,7 @@ export default function SurvivalSetupPage() {
                                     onClick={() => setSelectedDifficulty(d.value)}
                                     className={`text-left px-4 py-3.5 rounded-xl border-2 transition-all ${
                                         selectedDifficulty === d.value
-                                            ? `border-orange-500 ${d.bg} shadow-sm`
+                                            ? `border-amber-500 ${d.bg} shadow-sm`
                                             : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"
                                     }`}
                                 >
@@ -387,11 +388,11 @@ export default function SurvivalSetupPage() {
 
                     {/* ── Progress summary ── */}
                     {(selectedSubject || selectedExamBody || selectedDifficulty || selectedLives) && (
-                        <div className="bg-orange-50 border border-orange-200 rounded-xl px-5 py-3 flex flex-wrap gap-x-4 gap-y-1">
-                            {selectedSubject    && <span className="text-xs font-semibold text-orange-700">Subject: {selectedSubject}{selectedTopic ? ` · ${selectedTopic}` : ""}</span>}
-                            {selectedExamBody   && <span className="text-xs font-semibold text-orange-700">Exam: {EXAM_BODIES.find(e => e.value === selectedExamBody)?.label}{selectedSchool ? ` (${selectedSchool})` : ""}</span>}
-                            {selectedDifficulty && <span className="text-xs font-semibold text-orange-700">Difficulty: {selectedDifficulty.charAt(0).toUpperCase() + selectedDifficulty.slice(1)}</span>}
-                            {selectedLives !== 0 && <span className="text-xs font-semibold text-orange-700">Lives: {"❤️".repeat(selectedLives)}</span>}
+                        <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-3 flex flex-wrap gap-x-4 gap-y-1">
+                            {selectedSubject    && <span className="text-xs font-semibold text-amber-700">Subject: {selectedSubject}{selectedTopic ? ` · ${selectedTopic}` : ""}</span>}
+                            {selectedExamBody   && <span className="text-xs font-semibold text-amber-700">Exam: {EXAM_BODIES.find(e => e.value === selectedExamBody)?.label}{selectedSchool ? ` (${selectedSchool})` : ""}</span>}
+                            {selectedDifficulty && <span className="text-xs font-semibold text-amber-700">Difficulty: {selectedDifficulty.charAt(0).toUpperCase() + selectedDifficulty.slice(1)}</span>}
+                            {selectedLives !== 0 && <span className="text-xs font-semibold text-amber-700">Lives: {"❤️".repeat(selectedLives)}</span>}
                         </div>
                     )}
 
@@ -401,7 +402,7 @@ export default function SurvivalSetupPage() {
                         disabled={!allSelected || starting}
                         className={`w-full flex items-center justify-center gap-2 font-bold text-sm py-3.5 rounded-xl transition-all shadow-sm ${
                             allSelected
-                                ? "bg-orange-500 hover:bg-orange-600 text-white"
+                                ? "bg-amber-500 hover:bg-amber-600 text-white"
                                 : "bg-gray-100 text-gray-400 cursor-not-allowed"
                         } ${starting ? "opacity-70 cursor-not-allowed" : ""}`}
                     >

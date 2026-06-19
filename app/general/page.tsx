@@ -38,13 +38,13 @@ const CARDS: ModeCard[] = [
     description: "Topic-based questions with hints on request and full explanations after every answer.",
     tag: "Hints",
     accent: {
-      border: "hover:border-emerald-400",
-      iconBg: "bg-emerald-50",
-      iconText: "text-emerald-600",
-      tagBg: "bg-emerald-50",
-      tagText: "text-emerald-700",
-      tagBorder: "border-emerald-200",
-      bar: "bg-emerald-500",
+      border: "hover:border-green-300",
+      iconBg: "bg-green-50",
+      iconText: "text-green-700",
+      tagBg: "bg-green-50",
+      tagText: "text-green-700",
+      tagBorder: "border-green-200",
+      bar: "bg-green-600",
     },
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,13 +59,13 @@ const CARDS: ModeCard[] = [
     description: "Keep answering until your lives run out. One subject, infinite pressure.",
     tag: "Lives",
     accent: {
-      border: "hover:border-orange-400",
-      iconBg: "bg-orange-50",
-      iconText: "text-orange-500",
-      tagBg: "bg-orange-50",
-      tagText: "text-orange-700",
-      tagBorder: "border-orange-200",
-      bar: "bg-orange-500",
+      border: "hover:border-amber-300",
+      iconBg: "bg-amber-50",
+      iconText: "text-amber-700",
+      tagBg: "bg-amber-50",
+      tagText: "text-amber-700",
+      tagBorder: "border-amber-200",
+      bar: "bg-amber-500",
     },
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,13 +80,13 @@ const CARDS: ModeCard[] = [
     description: "Browse real papers from JAMB, WAEC, NECO and BECE — organised by year.",
     tag: "Archive",
     accent: {
-      border: "hover:border-violet-400",
-      iconBg: "bg-violet-50",
-      iconText: "text-violet-600",
-      tagBg: "bg-violet-50",
-      tagText: "text-violet-700",
-      tagBorder: "border-violet-200",
-      bar: "bg-violet-500",
+      border: "hover:border-green-300",
+      iconBg: "bg-green-50",
+      iconText: "text-green-700",
+      tagBg: "bg-green-50",
+      tagText: "text-green-700",
+      tagBorder: "border-green-200",
+      bar: "bg-green-700",
     },
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,13 +101,13 @@ const CARDS: ModeCard[] = [
     description: "Untimed practice with answers and explanations always visible. Perfect for revision.",
     tag: "Learn",
     accent: {
-      border: "hover:border-sky-400",
-      iconBg: "bg-sky-50",
-      iconText: "text-sky-600",
-      tagBg: "bg-sky-50",
-      tagText: "text-sky-700",
-      tagBorder: "border-sky-200",
-      bar: "bg-sky-500",
+      border: "hover:border-green-300",
+      iconBg: "bg-green-50",
+      iconText: "text-green-700",
+      tagBg: "bg-green-50",
+      tagText: "text-green-700",
+      tagBorder: "border-green-200",
+      bar: "bg-green-500",
     },
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -198,20 +198,18 @@ export default function GeneralModePage() {
     <div className="min-h-screen bg-[#f0f2f5]">
 
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
+      <header className="bg-white/90 backdrop-blur-md border-b border-gray-200 sticky top-0 z-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+          <Link href="/landing" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
             <div className="w-7 h-7 rounded-lg bg-green-700 flex items-center justify-center">
               <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
               </svg>
             </div>
             <span className="text-sm font-bold text-gray-900 tracking-tight">Assessly</span>
-            <span className="hidden sm:block text-gray-300 text-sm" aria-hidden="true">·</span>
-            <span className="hidden sm:block text-xs font-semibold text-gray-500">General Mode</span>
           </Link>
           <span className="text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2.5 py-1 rounded-full uppercase tracking-wide">
-            Student
+            Free Practice
           </span>
         </div>
       </header>
@@ -220,8 +218,9 @@ export default function GeneralModePage() {
 
         {/* Hero text */}
         <div className="mb-8">
+          <p className="text-xs font-bold text-green-700 uppercase tracking-widest mb-2">General Mode</p>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
-            How do you want to practice?
+            How do you want to practise?
           </h1>
           <p className="mt-2 text-sm text-gray-500 max-w-lg">
             Five ways to prepare. Pick a quick drill, simulate the real UTME, or push your limits until you run out of lives.

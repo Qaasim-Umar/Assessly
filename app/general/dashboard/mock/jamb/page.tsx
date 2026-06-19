@@ -74,7 +74,7 @@ export default function JambSetupPage() {
         <div className="min-h-screen bg-[#f0f2f5]">
 
             {/* ── Header ── */}
-            <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
+            <header className="bg-white/90 backdrop-blur-md border-b border-gray-200 sticky top-0 z-20">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
                         <Link href="/general" aria-label="Back to mode selection" className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-colors">
@@ -83,14 +83,14 @@ export default function JambSetupPage() {
                             </svg>
                         </Link>
                         <div className="h-4 w-px bg-gray-200" />
-                        <div className="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center">
+                        <div className="w-7 h-7 rounded-lg bg-green-700 flex items-center justify-center">
                             <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
                         <span className="text-sm font-bold text-gray-900 tracking-tight">JAMB Simulator</span>
                     </div>
-                    <span className="text-[10px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-full uppercase tracking-wide">
+                    <span className="text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2.5 py-1 rounded-full uppercase tracking-wide">
                         Mock Exam
                     </span>
                 </div>
@@ -99,6 +99,7 @@ export default function JambSetupPage() {
             <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
 
                 <div className="mb-8">
+                    <p className="text-xs font-bold text-green-700 uppercase tracking-widest mb-2">JAMB Simulator</p>
                     <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
                         Choose Your Subjects
                     </h1>
@@ -110,11 +111,11 @@ export default function JambSetupPage() {
                 <div className="space-y-5">
 
                     {/* English Language — locked */}
-                    <div className="bg-white border-2 border-blue-200 rounded-2xl shadow-sm p-5">
+                    <div className="bg-white border-2 border-green-200 rounded-2xl shadow-sm p-5">
                         <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center">
-                                    <span className="text-sm font-bold text-blue-700">1</span>
+                                <div className="w-9 h-9 rounded-full bg-green-100 flex items-center justify-center">
+                                    <span className="text-sm font-bold text-green-700">1</span>
                                 </div>
                                 <div>
                                     <p className="text-sm font-bold text-gray-900">English Language</p>
@@ -122,10 +123,10 @@ export default function JambSetupPage() {
                                 </div>
                             </div>
                             <div className="flex items-center gap-2">
-                                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-4 h-4 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                                 </svg>
-                                <span className="text-[10px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-full uppercase tracking-wide">
+                                <span className="text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2.5 py-1 rounded-full uppercase tracking-wide">
                                     Locked
                                 </span>
                             </div>
@@ -135,7 +136,7 @@ export default function JambSetupPage() {
                     {/* Subject dropdowns */}
                     {loading ? (
                         <div className="flex items-center justify-center py-12">
-                            <svg className="w-6 h-6 animate-spin text-blue-600" fill="none" viewBox="0 0 24 24">
+                            <svg className="w-6 h-6 animate-spin text-green-700" fill="none" viewBox="0 0 24 24">
                                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                             </svg>
@@ -147,9 +148,9 @@ export default function JambSetupPage() {
                     ) : (
                         <>
                             {([0, 1, 2] as const).map((idx) => (
-                                <div key={idx} className={`bg-white border-2 rounded-2xl shadow-sm p-5 transition-colors ${picks[idx] ? "border-blue-200" : "border-gray-200"}`}>
+                                <div key={idx} className={`bg-white border-2 rounded-2xl shadow-sm p-5 transition-colors ${picks[idx] ? "border-green-200" : "border-gray-200"}`}>
                                     <div className="flex items-center gap-3 mb-3">
-                                        <div className={`w-9 h-9 rounded-full flex items-center justify-center ${picks[idx] ? "bg-blue-600" : "bg-gray-100"}`}>
+                                        <div className={`w-9 h-9 rounded-full flex items-center justify-center ${picks[idx] ? "bg-green-700" : "bg-gray-100"}`}>
                                             <span className={`text-sm font-bold ${picks[idx] ? "text-white" : "text-gray-500"}`}>{idx + 2}</span>
                                         </div>
                                         <div>
@@ -157,7 +158,7 @@ export default function JambSetupPage() {
                                             <p className="text-xs text-gray-400 mt-0.5">40 questions</p>
                                         </div>
                                         {picks[idx] && (
-                                            <svg className="w-4 h-4 text-blue-600 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <svg className="w-4 h-4 text-green-700 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                                             </svg>
                                         )}
@@ -166,7 +167,7 @@ export default function JambSetupPage() {
                                         value={picks[idx]}
                                         onChange={(e) => setPick(idx, e.target.value)}
                                         aria-label={`Subject ${idx + 2}`}
-                                        className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white cursor-pointer min-h-[44px]"
+                                        className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-600 bg-white cursor-pointer min-h-[44px]"
                                     >
                                         <option value="">— Select a subject —</option>
                                         {getOptions(idx).map((s) => (
@@ -180,11 +181,11 @@ export default function JambSetupPage() {
 
                     {/* Summary pill */}
                     {canProceed && (
-                        <div className="bg-blue-50 border border-blue-200 rounded-xl px-5 py-3 flex items-center gap-3">
-                            <svg className="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="bg-green-50 border border-green-200 rounded-xl px-5 py-3 flex items-center gap-3">
+                            <svg className="w-4 h-4 text-green-700 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <p className="text-xs font-semibold text-blue-700">
+                            <p className="text-xs font-semibold text-green-700">
                                 4 subjects selected · 180 questions · 400 marks · 2 hours
                             </p>
                         </div>
@@ -195,7 +196,7 @@ export default function JambSetupPage() {
                         <button
                             onClick={() => setStep("instructions")}
                             disabled={!canProceed}
-                            className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold text-sm py-3.5 rounded-xl transition-colors shadow-sm"
+                            className="w-full flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold text-sm py-3.5 rounded-xl transition-colors shadow-sm"
                         >
                             Continue to Instructions
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -246,7 +247,7 @@ function InstructionsScreen({
     return (
         <div className="min-h-screen bg-[#f0f2f5]">
 
-            <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
+            <header className="bg-white/90 backdrop-blur-md border-b border-gray-200 sticky top-0 z-20">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center gap-2.5">
                     <button
                         onClick={onBack}
@@ -258,7 +259,7 @@ function InstructionsScreen({
                         </svg>
                     </button>
                     <div className="h-4 w-px bg-gray-200" />
-                    <div className="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center">
+                    <div className="w-7 h-7 rounded-lg bg-green-700 flex items-center justify-center">
                         <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
@@ -270,6 +271,7 @@ function InstructionsScreen({
             <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10 space-y-6">
 
                 <div>
+                    <p className="text-xs font-bold text-green-700 uppercase tracking-widest mb-2">JAMB Simulator</p>
                     <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">
                         Before You Begin
                     </h1>
@@ -287,12 +289,12 @@ function InstructionsScreen({
                         {subjects.map((s, i) => (
                             <div key={i} className="px-6 py-3.5 flex items-center justify-between">
                                 <div className="flex items-center gap-3">
-                                    <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-[11px] font-bold flex items-center justify-center flex-shrink-0">
+                                    <span className="w-6 h-6 rounded-full bg-green-100 text-green-700 text-[11px] font-bold flex items-center justify-center flex-shrink-0">
                                         {i + 1}
                                     </span>
                                     <span className="text-sm font-semibold text-gray-900">{s.name}</span>
                                     {s.compulsory && (
-                                        <span className="text-[10px] font-bold text-blue-600 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">
+                                        <span className="text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2 py-0.5 rounded-full">
                                             Compulsory
                                         </span>
                                     )}
@@ -313,7 +315,7 @@ function InstructionsScreen({
                     <ul className="space-y-3">
                         {rules.map((rule, i) => (
                             <li key={i} className="flex items-start gap-3 text-sm text-gray-600">
-                                <span className="w-5 h-5 rounded-full bg-blue-100 text-blue-700 text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span className="w-5 h-5 rounded-full bg-green-100 text-green-700 text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
                                     {i + 1}
                                 </span>
                                 <span className="leading-relaxed">{rule}</span>
@@ -334,7 +336,7 @@ function InstructionsScreen({
 
                 <button
                     onClick={onEnter}
-                    className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm py-4 rounded-xl transition-colors shadow-sm"
+                    className="w-full flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm py-4 rounded-xl transition-colors shadow-sm"
                 >
                     Enter Exam Hall
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
             <div className="footer-bottom">
                 <span>© {new Date().getFullYear()} Assessly. All rights reserved.</span>
-                <span>Built for Nigerian educators 🇳🇬</span>
+                <span>Built for Nigerian educators</span>
             </div>
         </footer>
     );

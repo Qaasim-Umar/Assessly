@@ -31,8 +31,8 @@ export default function Navbar({ audience = "students", onAudienceChange }: Navb
     }, []);
 
     const navLinks = [
-        { href: "/landing#features", label: "Features" },
-        { href: "/landing#how-it-works", label: "How it works" },
+        { href: "/landing#students", label: "For Students" },
+        { href: "/landing#schools", label: "For Schools" },
         { href: "/landing#pricing", label: "Pricing" },
     ];
 
@@ -54,8 +54,8 @@ export default function Navbar({ audience = "students", onAudienceChange }: Navb
 
                 {/* Desktop CTA */}
                 <div className="nav-cta">
-                    <Link href="/dashboard/login" className="nav-btn-ghost">Admin Login</Link>
-                    <Link href="/login" className="nav-btn-solid">Student Login</Link>
+                    <Link href="/login" className="nav-btn-ghost">Student Login</Link>
+                    <Link href="/dashboard/login" className="nav-btn-solid">Admin Login</Link>
                 </div>
 
                 <button className="hamburger" onClick={() => setMenuOpen(v => !v)} aria-label="Menu">
@@ -71,8 +71,8 @@ export default function Navbar({ audience = "students", onAudienceChange }: Navb
                     <Link key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</Link>
                 ))}
                 <div className="nav-links-row-cta">
-                    <Link href="/dashboard/login" className="nav-btn-ghost" onClick={() => setMenuOpen(false)}>Admin Login</Link>
-                    <Link href="/login" className="nav-btn-solid" onClick={() => setMenuOpen(false)}>Student Login</Link>
+                    <Link href="/login" className="nav-btn-ghost" onClick={() => setMenuOpen(false)}>Student Login</Link>
+                    <Link href="/dashboard/login" className="nav-btn-solid" onClick={() => setMenuOpen(false)}>Admin Login</Link>
                 </div>
             </div>
 
