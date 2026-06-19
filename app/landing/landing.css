@@ -33,6 +33,9 @@
   color: var(--lp-ink);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+body:has(.lp-root) {
   overflow-x: hidden;
 }
 
