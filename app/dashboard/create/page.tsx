@@ -225,9 +225,9 @@ export default function CreateExamPage() {
                                 <button
                                     type="button"
                                     onClick={() => set("showResults", !form.showResults)}
-                                    className={`relative inline - flex h - 6 w - 11 items - center rounded - full border - 2 transition - colors focus: outline - none ${form.showResults ? "bg-green-600 border-green-600" : "bg-gray-200 border-gray-300"} `}
+                                    className={`relative inline-flex h-6 w-11 items-center rounded-full border-2 transition-colors focus:outline-none ${form.showResults ? "bg-green-600 border-green-600" : "bg-gray-200 border-gray-300"}`}
                                 >
-                                    <span className={`inline - block h - 4 w - 4 transform rounded - full bg - white shadow transition - transform ${form.showResults ? "translate-x-5" : "translate-x-1"} `} />
+                                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${form.showResults ? "translate-x-5" : "translate-x-1"}`} />
                                 </button>
                                 <p className="text-[11px] text-gray-400 mt-1">
                                     {form.showResults
