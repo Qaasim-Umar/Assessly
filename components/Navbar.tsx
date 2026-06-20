@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
 export function LogoIcon({ size = 32 }: { size?: number }) {
@@ -23,6 +24,7 @@ interface NavbarProps {
 export default function Navbar({ audience = "students", onAudienceChange }: NavbarProps) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const h = () => setScrolled(window.scrollY > 20);
@@ -33,6 +35,7 @@ export default function Navbar({ audience = "students", onAudienceChange }: Navb
     const navLinks = [
         { href: "/landing#students", label: "For Students" },
         { href: "/landing#schools", label: "For Schools" },
+        { href: "/admissions", label: "Admissions Hub" },
         { href: "/landing#pricing", label: "Pricing" },
     ];
 
@@ -47,9 +50,18 @@ export default function Navbar({ audience = "students", onAudienceChange }: Navb
 
                 {/* Desktop nav links */}
                 <div className="nav-desktop-links">
-                    {navLinks.map(({ href, label }) => (
-                        <Link key={href} href={href}>{label}</Link>
-                    ))}
+                    {navLinks.map(({ href, label }) => {
+                        const active = pathname === href.split("#")[0] && href.startsWith("/admissions");
+                        return (
+                            <Link
+                                key={href}
+                                href={href}
+                                style={active ? { textDecoration: "underline", textUnderlineOffset: "4px", color: "#16a34a" } : {}}
+                            >
+                                {label}
+                            </Link>
+                        );
+                    })}
                 </div>
 
                 {/* Desktop CTA */}
@@ -67,9 +79,19 @@ export default function Navbar({ audience = "students", onAudienceChange }: Navb
 
             {/* Mobile dropdown */}
             <div className={`nav-links-row ${menuOpen ? "nav-links-row-open" : ""}`}>
-                {navLinks.map(({ href, label }) => (
-                    <Link key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</Link>
-                ))}
+                {navLinks.map(({ href, label }) => {
+                    const active = pathname === href.split("#")[0] && href.startsWith("/admissions");
+                    return (
+                        <Link
+                            key={href}
+                            href={href}
+                            onClick={() => setMenuOpen(false)}
+                            style={active ? { textDecoration: "underline", textUnderlineOffset: "4px", color: "#16a34a" } : {}}
+                        >
+                            {label}
+                        </Link>
+                    );
+                })}
                 <div className="nav-links-row-cta">
                     <Link href="/login" className="nav-btn-ghost" onClick={() => setMenuOpen(false)}>Student Login</Link>
                     <Link href="/dashboard/login" className="nav-btn-solid" onClick={() => setMenuOpen(false)}>Admin Login</Link>

@@ -1,10 +1,10 @@
 "use client";
 
+import "./landing.css";
 import Link from "next/link";
 import { useState } from "react";
 import { Lightbulb, Timer, Flame, BarChart3, Sparkles, KeyRound, Zap, ShieldCheck, Globe, BookOpen, PenLine, Trophy, Medal, Star, type LucideIcon } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import "./landing.css";
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 
@@ -309,6 +309,7 @@ export default function LandingPage() {
                             <div className="lp-footer-col-title">Access</div>
                             <ul className="lp-footer-links">
                                 <li><Link href="/general">Student Practice</Link></li>
+                                <li><Link href="/admissions">Admissions Hub</Link></li>
                                 <li><Link href="/login">Student Login</Link></li>
                                 <li><Link href="/dashboard/login">Admin Login</Link></li>
                             </ul>

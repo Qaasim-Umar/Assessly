@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import StudentNav from "@/components/StudentNav";
 
 type ModeId = "practice" | "mock" | "survival" | "past-questions" | "study";
 
@@ -197,22 +198,7 @@ export default function GeneralModePage() {
   return (
     <div className="min-h-screen bg-[#f0f2f5]">
 
-      {/* Header */}
-      <header className="bg-white/90 backdrop-blur-md border-b border-gray-200 sticky top-0 z-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-          <Link href="/landing" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
-            <div className="w-7 h-7 rounded-lg bg-green-700 flex items-center justify-center">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
-              </svg>
-            </div>
-            <span className="text-sm font-bold text-gray-900 tracking-tight">Assessly</span>
-          </Link>
-          <span className="text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2.5 py-1 rounded-full uppercase tracking-wide">
-            Free Practice
-          </span>
-        </div>
-      </header>
+      <StudentNav badge="Free Practice" />
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
 
@@ -303,7 +289,24 @@ export default function GeneralModePage() {
           ))}
         </div>
 
-        <p className="mt-10 text-center text-xs text-gray-400">
+        {/* Admissions Hub banner */}
+        <Link
+          href="/admissions"
+          className="mt-10 flex items-center justify-between bg-[#0d1a0f] rounded-2xl px-6 py-5 hover:-translate-y-0.5 transition-transform group"
+        >
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-xl bg-green-600/20 flex items-center justify-center text-xl flex-shrink-0">🎓</div>
+            <div>
+              <p className="text-[11px] font-extrabold uppercase tracking-widest text-green-400 mb-0.5">New</p>
+              <p className="text-sm font-bold text-white leading-snug">Admissions Hub — scholarships, deadlines &amp; school gists</p>
+            </div>
+          </div>
+          <svg className="w-5 h-5 text-white/30 group-hover:text-white/70 transition-colors flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </Link>
+
+        <p className="mt-6 text-center text-xs text-gray-400">
           Assessly General Mode · All modes pull from the same question bank
         </p>
       </main>
