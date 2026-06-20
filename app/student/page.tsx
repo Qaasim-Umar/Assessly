@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { getProfile, signOut, getSession } from "@/lib/authService";
+import { getStudentSession, studentSignOut } from "@/lib/authService";
 import { getPublishedExams, type DbExam } from "@/lib/examService";
 
 const statusStyle: Record<string, string> = {
@@ -34,33 +34,22 @@ export default function StudentPortalPage() {
     const [signingOut, setSigningOut] = useState(false);
 
     useEffect(() => {
-        getSession().then((session) => {
-            if (!session) {
-                router.replace("/login");
-                return;
-            }
-            if (session.user.email?.endsWith("@assessly.admin")) {
-                router.replace("/dashboard");
-                return;
-            }
-            getProfile().then((profile) => {
-                if (!profile) {
-                    signOut().then(() => router.replace("/login"));
-                    return;
-                }
-                setName(profile.full_name);
-                setSchoolCode(profile.school_code);
-                getPublishedExams(profile.school_code).then((data) => {
-                    setExams(data);
-                    setLoading(false);
-                });
-            });
+        const session = getStudentSession();
+        if (!session) {
+            router.replace("/login");
+            return;
+        }
+        setName(session.name);
+        setSchoolCode(session.schoolCode);
+        getPublishedExams(session.schoolCode).then((data) => {
+            setExams(data);
+            setLoading(false);
         });
     }, [router]);
 
     const handleSignOut = async () => {
         setSigningOut(true);
-        await signOut();
+        studentSignOut();
         router.replace("/login");
     };
 

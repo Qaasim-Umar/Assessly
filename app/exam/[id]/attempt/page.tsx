@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useRouter, useParams, useSearchParams } from "next/navigation";
 import { getExamById, submitExamResult, type DbExamWithQuestions, type DbQuestion } from "@/lib/examService";
-import { getProfile } from "@/lib/authService";
+import { getStudentSession } from "@/lib/authService";
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
 type QuestionStatus = "not-viewed" | "not-answered" | "answered" | "review";
@@ -338,7 +338,7 @@ export default function ExamAttemptPage() {
             // Show name modal once exam data is loaded
             return;
         }
-        getProfile().then((p) => { if (p) setStudentName(p.full_name); });
+        const session = getStudentSession(); if (session) setStudentName(session.name);
     }, [isGeneral]);
 
     useEffect(() => {

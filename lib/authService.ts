@@ -83,97 +83,34 @@ export async function getAdminProfile(): Promise<{
   return data ?? null;
 }
 
-// ── Student Auth ───────────────────────────────────────────────────────────────
-/**
- * Unified student login - validates the school code, then either:
- *  - signs in an existing account, or
- *  - auto-creates a new account on first access.
- */
-export async function studentLogin(
-  username: string,
-  password: string,
+// ── Student Auth (no password) ─────────────────────────────────────────────────
+export async function studentEnter(
+  fullName: string,
   schoolCode: string,
 ): Promise<void> {
   const code = schoolCode.trim().toUpperCase();
+  const name = fullName.trim();
 
-  // 1. Validate school code exists (using anon key - select is open to all)
   const { data: adminRow } = await supabase
     .from("admin_profiles")
     .select("school_code")
     .eq("school_code", code)
     .single();
-  if (!adminRow)
-    throw new Error("Invalid school code. Check with your teacher.");
 
-  const email = toStudentEmail(username);
+  if (!adminRow) throw new Error("Invalid school code. Check with your teacher.");
 
-  // 2. Try sign in
-  const { data: signInData, error: signInErr } =
-    await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-
-  if (!signInErr && signInData.user) {
-    // Signed in - upsert profile with latest school code
-    await supabase
-      .from("profiles")
-      .upsert(
-        {
-          id: signInData.user.id,
-          full_name: username.trim(),
-          school_code: code,
-        },
-        { onConflict: "id" },
-      );
-    return;
-  }
-
-  // 3. Sign up might have failed because account doesn't exist yet
-  //    Try creating the account. If the email is already taken → wrong password.
-  const { data: signUpData, error: signUpErr } = await supabase.auth.signUp({
-    email,
-    password,
-  });
-
-  if (signUpErr) {
-    // "User already registered" → account exists → wrong password
-    throw new Error("Invalid username or password.");
-  }
-
-  const userId = signUpData.user?.id;
-  if (!userId) throw new Error("Sign-up succeeded but no user ID returned.");
-
-  // Insert profile for the new student
-  const { error: profileErr } = await supabase
-    .from("profiles")
-    .insert({ id: userId, full_name: username.trim(), school_code: code });
-  if (profileErr) throw new Error(profileErr.message);
+  sessionStorage.setItem("student_name", name);
+  sessionStorage.setItem("student_school_code", code);
 }
 
-// ── Student Profile ────────────────────────────────────────────────────────────
-export async function getProfile(): Promise<{
-  id: string;
-  full_name: string;
-  school_code: string;
-} | null> {
-  const session = await getSession();
-  if (!session) return null;
-  const { data } = await supabase
-    .from("profiles")
-    .select("id, full_name, school_code")
-    .eq("id", session.user.id)
-    .single();
-  return data as { id: string; full_name: string; school_code: string } | null;
+export function getStudentSession(): { name: string; schoolCode: string } | null {
+  const name = sessionStorage.getItem("student_name");
+  const schoolCode = sessionStorage.getItem("student_school_code");
+  if (!name || !schoolCode) return null;
+  return { name, schoolCode };
 }
 
-// ── Legacy ─────────────────────────────────────────────────────────────────────
-// Keep old signUp/signIn for any legacy callers (attempt page uses getProfile, no signIn)
-export { studentLogin as signIn };
-export async function signUp(
-  username: string,
-  password: string,
-): Promise<void> {
-  // No-op legacy shim - new flow uses studentLogin
-  throw new Error("Use studentLogin() with a school code instead.");
+export function studentSignOut(): void {
+  sessionStorage.removeItem("student_name");
+  sessionStorage.removeItem("student_school_code");
 }
