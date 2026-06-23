@@ -2,7 +2,7 @@ import { supabase } from "./supabase";
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 function toStudentEmail(username: string) {
-  return `${username.trim().toLowerCase()}@assessly.internal`;
+  return `${username.trim().toLowerCase()}@assessly.student`;
 }
 function toAdminEmail(username: string) {
   return `${username.trim().toLowerCase()}@assessly.admin`;
@@ -83,34 +83,73 @@ export async function getAdminProfile(): Promise<{
   return data ?? null;
 }
 
-// ── Student Auth (no password) ─────────────────────────────────────────────────
-export async function studentEnter(
-  fullName: string,
-  schoolCode: string,
-): Promise<void> {
-  const code = schoolCode.trim().toUpperCase();
-  const name = fullName.trim();
+// ── Student Auth ───────────────────────────────────────────────────────────────
 
-  const { data: adminRow } = await supabase
-    .from("admin_profiles")
-    .select("school_code")
-    .eq("school_code", code)
+export async function signUpStudent(
+  displayName: string,
+  username: string,
+  password: string,
+): Promise<void> {
+  const uname = username.trim().toLowerCase();
+
+  const { data: existing } = await supabase
+    .from("student_profiles")
+    .select("id")
+    .eq("username", uname)
+    .maybeSingle();
+  if (existing) throw new Error("This phone number or username is already taken.");
+
+  const { data, error } = await supabase.auth.signUp({
+    email: toStudentEmail(uname),
+    password,
+  });
+  if (error) throw new Error(error.message);
+  const userId = data.user?.id;
+  if (!userId) throw new Error("Account created but no user ID returned.");
+
+  const { error: profileErr } = await supabase
+    .from("student_profiles")
+    .insert({ id: userId, username: uname, display_name: displayName.trim() });
+  if (profileErr) throw new Error(profileErr.message);
+}
+
+export async function signInStudent(
+  username: string,
+  password: string,
+): Promise<void> {
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: toStudentEmail(username.trim()),
+    password,
+  });
+  if (error) throw new Error("Invalid phone number/username or password.");
+
+  const { data: profile } = await supabase
+    .from("student_profiles")
+    .select("id")
+    .eq("id", data.user.id)
     .single();
 
-  if (!adminRow) throw new Error("Invalid school code. Check with your teacher.");
-
-  sessionStorage.setItem("student_name", name);
-  sessionStorage.setItem("student_school_code", code);
+  if (!profile) {
+    await supabase.auth.signOut();
+    throw new Error("No student account found.");
+  }
 }
 
-export function getStudentSession(): { name: string; schoolCode: string } | null {
-  const name = sessionStorage.getItem("student_name");
-  const schoolCode = sessionStorage.getItem("student_school_code");
-  if (!name || !schoolCode) return null;
-  return { name, schoolCode };
+export async function getStudentProfile(): Promise<{
+  id: string;
+  username: string;
+  display_name: string;
+} | null> {
+  const session = await getSession();
+  if (!session) return null;
+  const { data } = await supabase
+    .from("student_profiles")
+    .select("id, username, display_name")
+    .eq("id", session.user.id)
+    .single();
+  return data ?? null;
 }
 
-export function studentSignOut(): void {
-  sessionStorage.removeItem("student_name");
-  sessionStorage.removeItem("student_school_code");
+export async function studentSignOut(): Promise<void> {
+  await supabase.auth.signOut();
 }

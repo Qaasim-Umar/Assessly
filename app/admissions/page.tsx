@@ -3,9 +3,10 @@ import Navbar from "@/components/Navbar";
 import TabBar from "./_components/TabBar";
 import FilterBar from "./_components/FilterBar";
 import ReactionBar from "./_components/ReactionBar";
+import { supabase } from "@/lib/supabase";
 import "../landing/landing.css";
 
-// ── Metadata ───────────────────────────────────────────────────────────────────
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Admissions Hub | Assessly — Nigerian University Scholarships & Deadlines",
@@ -30,79 +31,62 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Admissions Hub | Assessly",
-    description:
-      "Nigerian university scholarships, JAMB deadlines, and school gists — updated weekly.",
+    description: "Nigerian university scholarships, JAMB deadlines, and school gists — updated weekly.",
   },
-  alternates: {
-    canonical: "https://assessly.ng/admissions",
-  },
+  alternates: { canonical: "https://assessly.ng/admissions" },
 };
 
-// ── JSON-LD structured data ────────────────────────────────────────────────────
+// ── Types ─────────────────────────────────────────────────────────────────────
 
-const scholarshipJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "Nigerian University Scholarships 2024/25",
-  description: "Open scholarships for Nigerian university students",
-  numberOfItems: 3,
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      item: {
-        "@type": "EducationalOccupationalProgram",
-        name: "Shell Nigeria University Scholarship 2024/25",
-        description:
-          "Open to 100-level students in Engineering, Sciences, and Social Sciences with minimum 3.5 GPA. Covers tuition and stipend.",
-        applicationDeadline: "2024-07-31",
-        offers: { "@type": "Offer", price: "500000", priceCurrency: "NGN" },
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      item: {
-        "@type": "EducationalOccupationalProgram",
-        name: "Federal Government Scholarship Board — Bilateral Education",
-        description:
-          "Full overseas scholarship for undergraduate and postgraduate study. Open to all Nigerian students with minimum 5 O'Level credits.",
-        applicationDeadline: "2024-08-15",
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      item: {
-        "@type": "EducationalOccupationalProgram",
-        name: "MTN Foundation Science & Technology Scholarship",
-        description:
-          "For 200-level students in Science, Technology, Engineering, and Mathematics. Minimum 3.0 GPA required.",
-        applicationDeadline: "2024-09-01",
-        offers: { "@type": "Offer", price: "200000", priceCurrency: "NGN" },
-      },
-    },
-  ],
-};
-
-// ── Sub-components (server-renderable) ────────────────────────────────────────
-
-function GistCard({
-  slug,
-  tag,
-  tagColor,
-  title,
-  desc,
-  date,
-  reactions,
-}: {
+interface DbGist {
+  id: string;
   slug: string;
   tag: string;
-  tagColor: string;
+  tag_color: string;
   title: string;
   desc: string;
-  date: string;
+  date_label: string;
+  school: string;
+  views: string;
   reactions: { fire: number; shock: number; check: number; think: number };
+  is_trending: boolean;
+  is_featured: boolean;
+  is_new_this_week: boolean;
+}
+
+interface DbScholarship {
+  id: string;
+  slug: string;
+  icon: string;
+  icon_bg: string;
+  title: string;
+  description: string;
+  amount_label: string;
+  deadline_label: string;
+  days_left: string;
+  category: string;
+  is_open: boolean;
+}
+
+interface DbDeadline {
+  id: string;
+  title: string;
+  desc: string;
+  day_label: string;
+  month_label: string;
+  urgency: "urgent" | "soon" | "open";
+  badge: string;
+}
+
+// ── Sub-components ────────────────────────────────────────────────────────────
+
+function GistCard({
+  slug, tag, tagColor, title, desc, date, reactions, gistId,
+}: {
+  slug: string; tag: string; tagColor: string; title: string;
+  desc: string; date: string;
+  reactions: { fire: number; shock: number; check: number; think: number };
+  gistId: string;
 }) {
   return (
     <a
@@ -113,60 +97,37 @@ function GistCard({
       <h3 className="text-[19px] font-bold text-[#0d1a0f] leading-snug mb-2">{title}</h3>
       <p className="text-base text-[#4a5e4e] leading-relaxed mb-3.5">{desc}</p>
       <span className="text-sm text-[#9db5a3]">{date}</span>
-      <ReactionBar initial={reactions} />
+      <ReactionBar initial={reactions} gistId={gistId} />
     </a>
   );
 }
 
 function ScholarshipCard({
-  slug,
-  icon,
-  iconBg,
-  title,
-  desc,
-  tags,
-  open,
-  dimmed = false,
+  slug, icon, iconBg, title, desc, tags, open, dimmed = false,
 }: {
-  slug: string;
-  icon: string;
-  iconBg: string;
-  title: string;
-  desc: string;
-  tags: { label: string; style: string }[];
-  open: boolean;
-  dimmed?: boolean;
+  slug: string; icon: string; iconBg: string; title: string; desc: string;
+  tags: { label: string; style: string }[]; open: boolean; dimmed?: boolean;
 }) {
   return (
     <a
       href={`/admissions/scholarships/${slug}`}
-      className={`bg-white border border-gray-300 rounded-[18px] p-5 sm:p-6 grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] gap-4 items-start transition-all hover:border-amber-200 hover:shadow-[0_4px_20px_rgba(217,119,6,0.08)] cursor-pointer ${
-        dimmed ? "opacity-60" : ""
-      }`}
+      className={`bg-white border border-gray-300 rounded-[18px] p-5 sm:p-6 grid grid-cols-[auto_1fr_auto] gap-4 items-start transition-all hover:border-amber-200 hover:shadow-[0_4px_20px_rgba(217,119,6,0.08)] cursor-pointer ${dimmed ? "opacity-60" : ""}`}
     >
-      <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 ${iconBg}`}>
-        {icon}
-      </div>
+      <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 ${iconBg}`}>{icon}</div>
       <div>
         <h3 className="text-[19px] font-bold text-[#0d1a0f] mb-1.5">{title}</h3>
         <p className="text-base text-[#4a5e4e] leading-relaxed mb-2.5">{desc}</p>
         <div className="flex flex-wrap gap-1.5">
           {tags.map((t, i) => (
-            <span key={i} className={`text-[13px] font-bold px-2.5 py-1 rounded-full ${t.style}`}>
-              {t.label}
-            </span>
+            <span key={i} className={`text-[13px] font-bold px-2.5 py-1 rounded-full ${t.style}`}>{t.label}</span>
           ))}
         </div>
       </div>
       <div className="hidden sm:flex items-end flex-shrink-0">
         {open ? (
-          <span className="text-base font-bold text-white bg-amber-500 rounded-lg px-4 py-2">
-            Apply Now
-          </span>
+          <span className="text-base font-bold text-white bg-amber-500 rounded-lg px-4 py-2">Apply Now</span>
         ) : (
-          <span className="text-base font-bold text-[#9db5a3] bg-[#f7faf8] rounded-lg px-4 py-2">
-            Closed
-          </span>
+          <span className="text-base font-bold text-[#9db5a3] bg-[#f7faf8] rounded-lg px-4 py-2">Closed</span>
         )}
       </div>
     </a>
@@ -174,39 +135,16 @@ function ScholarshipCard({
 }
 
 const URGENCY_STYLES = {
-  urgent: {
-    block: "bg-rose-100 border border-rose-200",
-    text: "text-rose-600",
-    badge: "bg-rose-100 text-rose-600",
-  },
-  soon: {
-    block: "bg-amber-100 border border-amber-200",
-    text: "text-amber-600",
-    badge: "bg-amber-100 text-amber-600",
-  },
-  open: {
-    block: "bg-green-100 border border-green-200",
-    text: "text-green-600",
-    badge: "bg-green-100 text-green-700",
-  },
+  urgent: { block: "bg-rose-100 border border-rose-200", text: "text-rose-600", badge: "bg-rose-100 text-rose-600" },
+  soon:   { block: "bg-amber-100 border border-amber-200", text: "text-amber-600", badge: "bg-amber-100 text-amber-600" },
+  open:   { block: "bg-green-100 border border-green-200", text: "text-green-600", badge: "bg-green-100 text-green-700" },
 };
 
-function DeadlineCard({
-  day,
-  month,
-  urgency,
-  title,
-  desc,
-  badge,
-}: {
-  day: string;
-  month: string;
-  urgency: "urgent" | "soon" | "open";
-  title: string;
-  desc: string;
-  badge: string;
+function DeadlineCard({ day, month, urgency, title, desc, badge }: {
+  day: string; month: string; urgency: "urgent" | "soon" | "open";
+  title: string; desc: string; badge: string;
 }) {
-  const s = URGENCY_STYLES[urgency];
+  const s = URGENCY_STYLES[urgency] ?? URGENCY_STYLES.open;
   return (
     <div className="bg-white border border-gray-300 rounded-[18px] px-5 py-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center hover:border-green-200 transition-colors cursor-pointer">
       <div className={`w-[60px] h-[60px] rounded-xl flex flex-col items-center justify-center flex-shrink-0 ${s.block}`}>
@@ -217,36 +155,21 @@ function DeadlineCard({
         <h3 className="text-base font-bold text-[#0d1a0f] mb-0.5">{title}</h3>
         <p className="text-base text-[#4a5e4e]">{desc}</p>
       </div>
-      <span className={`text-[13px] font-extrabold tracking-wide px-3 py-1.5 rounded-full flex-shrink-0 ${s.badge}`}>
-        {badge}
-      </span>
+      <span className={`text-[13px] font-extrabold tracking-wide px-3 py-1.5 rounded-full flex-shrink-0 ${s.badge}`}>{badge}</span>
     </div>
   );
 }
 
-function SidebarCard({
-  icon,
-  title,
-  action,
-  children,
-}: {
-  icon?: string;
-  title: string;
-  action?: { label: string; href: string };
-  children: React.ReactNode;
+function SidebarCard({ icon, title, action, children }: {
+  icon?: string; title: string; action?: { label: string; href: string }; children: React.ReactNode;
 }) {
   return (
     <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">
       <div className="px-5 py-4 border-b border-gray-200 flex items-center justify-between">
         <h3 className="text-base font-extrabold text-[#0d1a0f]">
-          {icon && <span className="mr-2">{icon}</span>}
-          {title}
+          {icon && <span className="mr-2">{icon}</span>}{title}
         </h3>
-        {action && (
-          <a href={action.href} className="text-sm font-bold text-green-600">
-            {action.label}
-          </a>
-        )}
+        {action && <a href={action.href} className="text-sm font-bold text-green-600">{action.label}</a>}
       </div>
       <div className="px-5 py-4">{children}</div>
     </div>
@@ -255,19 +178,39 @@ function SidebarCard({
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 
-export default function AdmissionsHubPage() {
+export default async function AdmissionsHubPage() {
+  const [{ data: gistsRaw }, { data: scholarshipsRaw }, { data: deadlinesRaw }] = await Promise.all([
+    supabase.from("admissions_gists").select("id,slug,tag,tag_color,title,desc,date_label,school,views,reactions,is_trending,is_featured,is_new_this_week").eq("published", true).order("created_at", { ascending: false }),
+    supabase.from("admissions_scholarships").select("id,slug,icon,icon_bg,title,description,amount_label,deadline_label,days_left,category,is_open").eq("published", true).order("created_at", { ascending: false }),
+    supabase.from("admissions_deadlines").select("id,title,desc,day_label,month_label,urgency,badge").eq("published", true).order("deadline_date", { ascending: true }),
+  ]);
+
+  const gists: DbGist[] = (gistsRaw ?? []) as DbGist[];
+  const scholarships: DbScholarship[] = (scholarshipsRaw ?? []) as DbScholarship[];
+  const deadlines: DbDeadline[] = (deadlinesRaw ?? []) as DbDeadline[];
+
+  const featuredGist = gists.find(g => g.is_featured) ?? gists[0] ?? null;
+  const regularGists = gists.filter(g => g.id !== featuredGist?.id);
+  const newThisWeek = gists.find(g => g.is_new_this_week) ?? null;
+  const trendingGists = [...gists].slice(0, 5);
+
+  const dotColor: Record<string, string> = { urgent: "bg-rose-500", soon: "bg-amber-500", open: "bg-green-500" };
+
+  function scholarshipTags(s: DbScholarship): { label: string; style: string }[] {
+    const tags: { label: string; style: string }[] = [];
+    if (s.amount_label) tags.push({ label: s.amount_label, style: "bg-amber-100 text-amber-600" });
+    if (s.deadline_label) tags.push({ label: s.deadline_label, style: "bg-rose-100 text-rose-600" });
+    tags.push(s.is_open
+      ? { label: "Open Now", style: "bg-green-100 text-green-700" }
+      : { label: "Closed", style: "bg-gray-100 text-gray-400" });
+    if (s.category) tags.push({ label: s.category, style: "bg-blue-100 text-blue-600" });
+    return tags;
+  }
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(scholarshipJsonLd) }}
-      />
-
       <style>{`
-        @keyframes ticker {
-          0%   { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
-        }
+        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         .ticker-anim { animation: ticker 22s -8s linear infinite; }
       `}</style>
 
@@ -275,10 +218,8 @@ export default function AdmissionsHubPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <div className="bg-[#0d1a0f] relative overflow-hidden pt-14 px-6">
-        <div
-          className="absolute right-[-80px] top-[-80px] w-96 h-96 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(22,163,74,0.08) 0%, transparent 70%)" }}
-        />
+        <div className="absolute right-[-80px] top-[-80px] w-96 h-96 rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(22,163,74,0.08) 0%, transparent 70%)" }} />
 
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_auto] items-end gap-10">
           <div>
@@ -286,10 +227,7 @@ export default function AdmissionsHubPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 flex-shrink-0" />
               Admissions Hub
             </div>
-            <h1
-              className="text-[clamp(40px,5vw,68px)] text-white leading-[1.08] tracking-[-1.5px] mb-3.5"
-              style={{ fontFamily: "'Lora', Georgia, serif" }}
-            >
+            <h1 className="text-[clamp(40px,5vw,68px)] text-white leading-[1.08] tracking-[-1.5px] mb-3.5" style={{ fontFamily: "'Lora', Georgia, serif" }}>
               Your path to <em className="not-italic text-green-500">university</em>, sorted.
             </h1>
             <p className="text-lg text-white/45 max-w-[520px] leading-relaxed">
@@ -299,8 +237,8 @@ export default function AdmissionsHubPage() {
 
           <div className="flex flex-row gap-6 pb-10 self-center">
             {[
-              { num: "47", label: "Scholarships" },
-              { num: "12", label: "Deadlines" },
+              { num: scholarships.length.toString(), label: "Scholarships" },
+              { num: deadlines.length.toString(), label: "Deadlines" },
             ].map((s, i, arr) => (
               <div key={s.label} className={`text-right ${i < arr.length - 1 ? "pr-6 border-r border-white/10" : ""}`}>
                 <span className="block text-3xl font-extrabold text-white tracking-tight leading-none">{s.num}</span>
@@ -312,18 +250,19 @@ export default function AdmissionsHubPage() {
 
         {/* Ticker */}
         <div className="max-w-[1100px] mx-auto mt-8 flex items-center gap-3 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 overflow-hidden">
-          <span className="text-[12px] font-extrabold tracking-widest uppercase text-rose-600 bg-rose-100 px-2 py-1 rounded flex-shrink-0">
-            LIVE
-          </span>
+          <span className="text-[12px] font-extrabold tracking-widest uppercase text-rose-600 bg-rose-100 px-2 py-1 rounded flex-shrink-0">LIVE</span>
           <span className="text-base text-white/60 whitespace-nowrap ticker-anim">
-            UNILAG Post-UTME screening begins July 14 &nbsp;·&nbsp; Shell Nigeria Scholarship portal now open
-            &nbsp;·&nbsp; OAU releases 2024/25 admission list &nbsp;·&nbsp; JAMB CAPS upgrade window closes June 30
-            &nbsp;·&nbsp; UI admission cut-off: 200 for Sciences &nbsp;·&nbsp; Federal Scholarship Board applications open
+            {deadlines.slice(0, 3).map(d => `${d.title} · ${d.badge}`).join("  ·  ") ||
+              "UNILAG Post-UTME screening begins July 14 · Shell Nigeria Scholarship portal now open · OAU releases 2024/25 admission list"}
           </span>
         </div>
 
-        {/* Tabs — client island */}
-        <TabBar />
+        <TabBar counts={{
+          all: gists.length + scholarships.length + deadlines.length,
+          gists: gists.length,
+          scholarships: scholarships.length,
+          deadlines: deadlines.length,
+        }} />
       </div>
 
       {/* ── MAIN ─────────────────────────────────────────────────────────── */}
@@ -336,180 +275,226 @@ export default function AdmissionsHubPage() {
             <svg className="w-5 h-5 text-[#9db5a3] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
             </svg>
-            <input
-              type="text"
-              placeholder="Search scholarships, schools, deadlines..."
-              className="flex-1 text-base text-[#0d1a0f] placeholder:text-[#9db5a3] bg-transparent outline-none"
-            />
+            <input type="text" placeholder="Search scholarships, schools, deadlines..." className="flex-1 text-base text-[#0d1a0f] placeholder:text-[#9db5a3] bg-transparent outline-none" />
           </div>
 
-          {/* Filter bar — client island */}
           <FilterBar />
 
           {/* ── SCHOOL GISTS ── */}
           <section className="mb-12" aria-label="School Gists">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-lg" aria-hidden="true">📰</div>
-                <h2 className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-                  School Gists
-                </h2>
+                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-lg">📰</div>
+                <h2 className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]" style={{ fontFamily: "'Lora', Georgia, serif" }}>School Gists</h2>
               </div>
               <a href="#" className="text-base font-bold text-green-600 hover:underline">See all →</a>
             </div>
 
-            {/* Featured */}
-            <a href="/admissions/gists/unilag-post-utme-2024" className="bg-[#0d1a0f] rounded-2xl overflow-hidden mb-4 grid grid-cols-1 md:grid-cols-2 min-h-[260px] cursor-pointer hover:-translate-y-0.5 transition-transform">
-              <div className="p-8 flex flex-col justify-between">
-                <div>
-                  <span className="inline-flex items-center gap-1.5 text-[13px] font-extrabold tracking-wide uppercase text-green-500 bg-green-500/15 px-2.5 py-1 rounded-full mb-4">
-                    🔥 Trending
-                  </span>
-                  <h3 className="text-[26px] text-white leading-tight tracking-[-0.5px] mb-2.5" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-                    UNILAG Post-UTME 2024/25: Everything You Need to Know
-                  </h3>
-                  <p className="text-base text-white/50 leading-relaxed mb-5">
-                    Screening dates, subject combinations, registration portal link, and what past students say about the process.
-                  </p>
-                </div>
-                <div>
-                  <div className="flex items-center gap-3 text-sm text-white/35 flex-wrap">
-                    <span>📅 June 18, 2026</span>
-                    <span>👁 14.2k views</span>
-                    <span>🏫 UNILAG</span>
+            {/* Featured gist */}
+            {featuredGist ? (
+              <a href={`/admissions/gists/${featuredGist.slug}`} className="bg-[#0d1a0f] rounded-2xl overflow-hidden mb-4 grid grid-cols-1 md:grid-cols-2 min-h-[260px] cursor-pointer hover:-translate-y-0.5 transition-transform">
+                <div className="p-8 flex flex-col justify-between">
+                  <div>
+                    {featuredGist.is_trending && (
+                      <span className="inline-flex items-center gap-1.5 text-[13px] font-extrabold tracking-wide uppercase text-green-500 bg-green-500/15 px-2.5 py-1 rounded-full mb-4">
+                        🔥 Trending
+                      </span>
+                    )}
+                    <h3 className="text-[26px] text-white leading-tight tracking-[-0.5px] mb-2.5" style={{ fontFamily: "'Lora', Georgia, serif" }}>
+                      {featuredGist.title}
+                    </h3>
+                    <p className="text-base text-white/50 leading-relaxed mb-5">{featuredGist.desc}</p>
                   </div>
-                  <ReactionBar initial={{ fire: 312, shock: 89, check: 204, think: 47 }} dark />
+                  <div>
+                    <div className="flex items-center gap-3 text-sm text-white/35 flex-wrap">
+                      <span>📅 {featuredGist.date_label}</span>
+                      <span>👁 {featuredGist.views} views</span>
+                      <span>🏫 {featuredGist.school}</span>
+                    </div>
+                    <ReactionBar initial={featuredGist.reactions} dark gistId={featuredGist.id} />
+                  </div>
                 </div>
+                <div className="hidden md:flex items-center justify-center text-[80px] opacity-40"
+                  style={{ background: "linear-gradient(135deg, rgba(22,163,74,0.2) 0%, rgba(22,163,74,0.05) 100%)" }}>
+                  🎓
+                </div>
+              </a>
+            ) : (
+              <div className="bg-[#0d1a0f]/10 border-2 border-dashed border-[#0d1a0f]/20 rounded-2xl p-8 mb-4 text-center">
+                <p className="text-[#4a5e4e]">No gists published yet. Add some in the admin dashboard.</p>
               </div>
-              <div
-                className="hidden md:flex items-center justify-center text-[80px] opacity-40"
-                style={{ background: "linear-gradient(135deg, rgba(22,163,74,0.2) 0%, rgba(22,163,74,0.05) 100%)" }}
-                aria-hidden="true"
-              >
-                🎓
-              </div>
-            </a>
+            )}
 
             {/* Gist grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-              <GistCard slug="oau-admission-list-2024" tag="OAU" tagColor="text-rose-600" title="OAU releases 2024/25 admission list: how to check your status" desc="Step-by-step guide to checking your name on the JAMB CAPS portal and what to do next." date="June 15, 2026" reactions={{ fire: 98, shock: 34, check: 71, think: 12 }} />
-              <GistCard slug="ui-cut-off-marks-2024" tag="UI" tagColor="text-violet-600" title="University of Ibadan cut-off marks for all faculties, 2024/25" desc="Full breakdown of departmental cut-offs. Sciences, Arts, Social Sciences, and Law all listed." date="June 12, 2026" reactions={{ fire: 143, shock: 21, check: 89, think: 8 }} />
-              <GistCard slug="futa-post-utme-score" tag="FUTA" tagColor="text-amber-600" title="FUTA Post-UTME: what score do you actually need?" desc="Students share their experiences. Real cut-off data from the last 3 years compared." date="June 10, 2026" reactions={{ fire: 67, shock: 55, check: 30, think: 19 }} />
-              <GistCard slug="jamb-caps-how-to-accept" tag="JAMB" tagColor="text-[#4a5e4e]" title="JAMB CAPS: How to accept your admission offer before the deadline" desc="Many students miss this step. Full walkthrough with screenshots of the acceptance process." date="June 8, 2026" reactions={{ fire: 201, shock: 44, check: 158, think: 23 }} />
-            </div>
-            <div className="text-center mt-6">
-              <button className="text-base font-bold text-[#4a5e4e] bg-white border border-gray-300 rounded-lg px-7 py-3 hover:border-green-400 hover:text-green-600 transition-all">
-                Load more gists
-              </button>
-            </div>
+            {regularGists.length > 0 && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                {regularGists.slice(0, 4).map(g => (
+                  <GistCard
+                    key={g.id}
+                    slug={g.slug}
+                    tag={g.tag}
+                    tagColor={g.tag_color}
+                    title={g.title}
+                    desc={g.desc}
+                    date={g.date_label}
+                    reactions={g.reactions}
+                    gistId={g.id}
+                  />
+                ))}
+              </div>
+            )}
+
+            {regularGists.length > 4 && (
+              <div className="text-center mt-6">
+                <button className="text-base font-bold text-[#4a5e4e] bg-white border border-gray-300 rounded-lg px-7 py-3 hover:border-green-400 hover:text-green-600 transition-all">
+                  Load more gists
+                </button>
+              </div>
+            )}
           </section>
 
           {/* ── SCHOLARSHIPS ── */}
           <section className="mb-12" aria-label="Scholarships">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-lg" aria-hidden="true">🏆</div>
-                <h2 className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-                  Scholarships
-                </h2>
+                <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-lg">🏆</div>
+                <h2 className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]" style={{ fontFamily: "'Lora', Georgia, serif" }}>Scholarships</h2>
               </div>
               <a href="#" className="text-base font-bold text-green-600 hover:underline">See all →</a>
             </div>
-            <div className="flex flex-col gap-3.5">
-              <ScholarshipCard slug="shell-nigeria-2024" icon="🛢️" iconBg="bg-amber-100" title="Shell Nigeria University Scholarship 2024/25" desc="Open to 100-level students in Engineering, Sciences, and Social Sciences with minimum 3.5 GPA. Covers tuition and stipend." tags={[{ label: "₦500,000/yr", style: "bg-amber-100 text-amber-600" }, { label: "Closes Jul 31", style: "bg-rose-100 text-rose-600" }, { label: "Open Now", style: "bg-green-100 text-green-700" }, { label: "STEM", style: "bg-blue-100 text-blue-600" }]} open />
-              <ScholarshipCard slug="federal-scholarship-board-bilateral" icon="🇳🇬" iconBg="bg-blue-100" title="Federal Government Scholarship Board, Bilateral Education" desc="Full overseas scholarship for undergraduate and postgraduate study. Open to all Nigerian students with minimum 5 O'Level credits." tags={[{ label: "Full funding", style: "bg-amber-100 text-amber-600" }, { label: "Closes Aug 15", style: "bg-rose-100 text-rose-600" }, { label: "Open Now", style: "bg-green-100 text-green-700" }]} open />
-              <ScholarshipCard slug="mtn-foundation-stem" icon="📚" iconBg="bg-violet-100" title="MTN Foundation Science & Technology Scholarship" desc="For 200-level students in Science, Technology, Engineering, and Mathematics. Minimum 3.0 GPA required at point of application." tags={[{ label: "₦200,000/yr", style: "bg-amber-100 text-amber-600" }, { label: "Closes Sept 1", style: "bg-rose-100 text-rose-600" }, { label: "Open Now", style: "bg-green-100 text-green-700" }, { label: "STEM", style: "bg-blue-100 text-blue-600" }]} open />
-              <ScholarshipCard slug="zenith-bank-undergraduate" icon="🏦" iconBg="bg-gray-100" title="Zenith Bank Undergraduate Scholarship" desc="Annual scholarship for students in Banking, Finance, and Economics. Applications closed for this cycle." tags={[{ label: "₦150,000/yr", style: "bg-amber-100 text-amber-600" }, { label: "Closed", style: "bg-gray-100 text-gray-400" }, { label: "Business", style: "bg-violet-100 text-violet-600" }]} open={false} dimmed />
-            </div>
-            <div className="text-center mt-6">
-              <button className="text-base font-bold text-[#4a5e4e] bg-white border border-gray-300 rounded-lg px-7 py-3 hover:border-green-400 hover:text-green-600 transition-all">
-                Load more scholarships
-              </button>
-            </div>
+
+            {scholarships.length > 0 ? (
+              <div className="flex flex-col gap-3.5">
+                {scholarships.map(s => (
+                  <ScholarshipCard
+                    key={s.id}
+                    slug={s.slug}
+                    icon={s.icon}
+                    iconBg={s.icon_bg}
+                    title={s.title}
+                    desc={s.description}
+                    tags={scholarshipTags(s)}
+                    open={s.is_open}
+                    dimmed={!s.is_open}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center">
+                <p className="text-[#9db5a3]">No scholarships published yet.</p>
+              </div>
+            )}
           </section>
 
           {/* ── DEADLINES ── */}
           <section className="mb-12" aria-label="Admission Deadlines">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center text-lg" aria-hidden="true">📅</div>
-                <h2 className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-                  Admission Deadlines
-                </h2>
+                <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center text-lg">📅</div>
+                <h2 className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]" style={{ fontFamily: "'Lora', Georgia, serif" }}>Admission Deadlines</h2>
               </div>
               <a href="#" className="text-base font-bold text-green-600 hover:underline">See all →</a>
             </div>
-            <div className="flex flex-col gap-3">
-              <DeadlineCard day="30" month="Jun" urgency="urgent" title="JAMB CAPS Acceptance Window Closes" desc="Accept your admission offer on the JAMB portal before this date or lose your spot" badge="10 days left" />
-              <DeadlineCard day="14" month="Jul" urgency="urgent" title="UNILAG Post-UTME Screening Begins" desc="Register on admissions.unilag.edu.ng, portal closes 3 days before screening" badge="24 days left" />
-              <DeadlineCard day="31" month="Jul" urgency="soon" title="Shell Nigeria Scholarship Application Closes" desc="Apply at shellscholarship.ng, you'll need your WAEC result and transcript" badge="41 days left" />
-              <DeadlineCard day="15" month="Aug" urgency="open" title="Federal Scholarship Board: BEA Applications" desc="Bilateral Education Agreement scholarship for overseas study" badge="56 days left" />
-            </div>
+
+            {deadlines.length > 0 ? (
+              <div className="flex flex-col gap-3">
+                {deadlines.map(d => (
+                  <DeadlineCard
+                    key={d.id}
+                    day={d.day_label}
+                    month={d.month_label}
+                    urgency={d.urgency}
+                    title={d.title}
+                    desc={d.desc}
+                    badge={d.badge}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center">
+                <p className="text-[#9db5a3]">No deadlines published yet.</p>
+              </div>
+            )}
           </section>
         </div>
 
         {/* ── SIDEBAR ── */}
         <div className="flex flex-col gap-6">
 
-          {/* Quick Apply */}
-          <div className="bg-[#0d1a0f] rounded-2xl p-6">
-            <div className="flex items-center gap-1.5 text-[13px] font-extrabold tracking-widest uppercase text-[#bbf7d0] mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 flex-shrink-0" />
-              New This Week
+          {/* New This Week */}
+          {newThisWeek ? (
+            <div className="bg-[#0d1a0f] rounded-2xl p-6">
+              <div className="flex items-center gap-1.5 text-[13px] font-extrabold tracking-widest uppercase text-[#bbf7d0] mb-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500 flex-shrink-0" />
+                New This Week
+              </div>
+              <h3 className="text-[24px] text-white leading-tight tracking-[-0.5px] mb-2" style={{ fontFamily: "'Lora', Georgia, serif" }}>
+                {newThisWeek.title}
+              </h3>
+              <p className="text-base text-white/45 leading-relaxed mb-5">{newThisWeek.desc}</p>
+              <a href={`/admissions/gists/${newThisWeek.slug}`} className="block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity">
+                Read more →
+              </a>
             </div>
-            <h3 className="text-[24px] text-white leading-tight tracking-[-0.5px] mb-2" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-              Shell Scholarship portal is now open
-            </h3>
-            <p className="text-base text-white/45 leading-relaxed mb-5">
-              ₦500,000/year for Science and Engineering students. Closes July 31, don&apos;t miss it.
-            </p>
-            <a href="#" className="block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity">
-              Apply on Shell&apos;s site →
-            </a>
-          </div>
+          ) : scholarships.find(s => s.is_open) ? (
+            // Fallback: show latest open scholarship
+            (() => {
+              const s = scholarships.find(sc => sc.is_open)!;
+              return (
+                <div className="bg-[#0d1a0f] rounded-2xl p-6">
+                  <div className="flex items-center gap-1.5 text-[13px] font-extrabold tracking-widest uppercase text-[#bbf7d0] mb-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 flex-shrink-0" />
+                    New This Week
+                  </div>
+                  <h3 className="text-[24px] text-white leading-tight tracking-[-0.5px] mb-2" style={{ fontFamily: "'Lora', Georgia, serif" }}>
+                    {s.title}
+                  </h3>
+                  <p className="text-base text-white/45 leading-relaxed mb-5">
+                    {s.amount_label && `${s.amount_label} · `}{s.deadline_label}
+                  </p>
+                  <a href={`/admissions/scholarships/${s.slug}`} className="block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity">
+                    View scholarship →
+                  </a>
+                </div>
+              );
+            })()
+          ) : null}
 
           {/* Coming Up */}
-          <SidebarCard icon="📅" title="Coming Up" action={{ label: "All deadlines", href: "#" }}>
-            {[
-              { dot: "bg-rose-500", title: "JAMB CAPS closes", sub: "June 30 · 10 days left" },
-              { dot: "bg-rose-500", title: "UNILAG Post-UTME", sub: "July 14 · 24 days left" },
-              { dot: "bg-amber-500", title: "Shell Scholarship", sub: "July 31 · 41 days left" },
-              { dot: "bg-green-500", title: "Federal Scholarship Board", sub: "Aug 15 · 56 days left" },
-            ].map((item, i, arr) => (
-              <div key={i} className={`flex items-start gap-3 py-3 ${i < arr.length - 1 ? "border-b border-gray-200" : ""}`}>
-                <span className={`w-2 h-2 rounded-full flex-shrink-0 mt-1.5 ${item.dot}`} />
-                <div>
-                  <strong className="text-base font-bold text-[#0d1a0f] block">{item.title}</strong>
-                  <span className="text-sm text-[#9db5a3]">{item.sub}</span>
+          {deadlines.length > 0 && (
+            <SidebarCard icon="📅" title="Coming Up" action={{ label: "All deadlines", href: "#" }}>
+              {deadlines.slice(0, 4).map((d, i, arr) => (
+                <div key={d.id} className={`flex items-start gap-3 py-3 ${i < arr.length - 1 ? "border-b border-gray-200" : ""}`}>
+                  <span className={`w-2 h-2 rounded-full flex-shrink-0 mt-1.5 ${dotColor[d.urgency] ?? "bg-gray-400"}`} />
+                  <div>
+                    <strong className="text-base font-bold text-[#0d1a0f] block">{d.title}</strong>
+                    <span className="text-sm text-[#9db5a3]">{d.badge}</span>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </SidebarCard>
+              ))}
+            </SidebarCard>
+          )}
 
           {/* Trending */}
-          <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">
-            <div className="px-5 py-4 border-b border-gray-200">
-              <h3 className="text-base font-extrabold text-[#0d1a0f]">🔥 Trending</h3>
+          {trendingGists.length > 0 && (
+            <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">
+              <div className="px-5 py-4 border-b border-gray-200">
+                <h3 className="text-base font-extrabold text-[#0d1a0f]">🔥 Trending</h3>
+              </div>
+              <div className="px-5 py-1">
+                {trendingGists.map((g, i, arr) => (
+                  <a key={g.id} href={`/admissions/gists/${g.slug}`} className={`flex items-center gap-3 py-3 no-underline ${i < arr.length - 1 ? "border-b border-gray-200" : ""}`}>
+                    <span className="text-base font-extrabold text-[#9db5a3] w-5 text-center flex-shrink-0">{i + 1}</span>
+                    <div className="flex-1 min-w-0">
+                      <strong className="text-base font-bold text-[#0d1a0f] block leading-tight">{g.title}</strong>
+                      <span className="text-sm text-[#9db5a3]">{g.views} views</span>
+                    </div>
+                    <span className="text-[#9db5a3] flex-shrink-0 text-base">→</span>
+                  </a>
+                ))}
+              </div>
             </div>
-            <div className="px-5 py-1">
-              {[
-                { title: "UNILAG Post-UTME guide", views: "14.2k views" },
-                { title: "How to check admission on CAPS", views: "9.8k views" },
-                { title: "Shell scholarship requirements", views: "7.1k views" },
-                { title: "OAU admission list is out", views: "5.4k views" },
-                { title: "UI cut-off marks by faculty", views: "4.9k views" },
-              ].map((item, i, arr) => (
-                <a key={i} href="#" className={`flex items-center gap-3 py-3 no-underline ${i < arr.length - 1 ? "border-b border-gray-200" : ""}`}>
-                  <span className="text-base font-extrabold text-[#9db5a3] w-5 text-center flex-shrink-0">{i + 1}</span>
-                  <div className="flex-1 min-w-0">
-                    <strong className="text-base font-bold text-[#0d1a0f] block leading-tight">{item.title}</strong>
-                    <span className="text-sm text-[#9db5a3]">{item.views}</span>
-                  </div>
-                  <span className="text-[#9db5a3] flex-shrink-0 text-base">→</span>
-                </a>
-              ))}
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </>

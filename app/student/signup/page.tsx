@@ -1,50 +1,29 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
-import { signInStudent, getStudentProfile } from "@/lib/authService";
-import { supabase } from "@/lib/supabase";
+import { signUpStudent } from "@/lib/authService";
 
-export default function StudentLoginPage() {
+export default function StudentSignupPage() {
     const router = useRouter();
-    const searchParams = useSearchParams();
-    const justCreated = searchParams.get("created") === "1";
+    const [displayName, setDisplayName] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [schoolCode, setSchoolCode] = useState("");
+    const [confirm, setConfirm] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        getStudentProfile().then(p => { if (p) router.replace("/student"); });
-    }, [router]);
-
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!username.trim()) { setError("Enter your phone number or username."); return; }
-        if (!password) { setError("Enter your password."); return; }
-        if (!schoolCode.trim()) { setError("Enter your school code."); return; }
+        if (!displayName.trim() || displayName.trim().length < 2) { setError("Enter your full name."); return; }
+        if (!username.trim() || username.trim().length < 3) { setError("Phone number or username must be at least 3 characters."); return; }
+        if (password.length < 6) { setError("Password must be at least 6 characters."); return; }
+        if (password !== confirm) { setError("Passwords do not match."); return; }
         setError("");
         setLoading(true);
         try {
-            await signInStudent(username.trim(), password);
-
-            const code = schoolCode.trim().toUpperCase();
-            const { data: adminRow } = await supabase
-                .from("admin_profiles")
-                .select("school_code")
-                .eq("school_code", code)
-                .single();
-            if (!adminRow) {
-                await import("@/lib/authService").then(m => m.studentSignOut());
-                setError("Invalid school code. Ask your teacher.");
-                setLoading(false);
-                return;
-            }
-
-            localStorage.setItem("last_school_code", code);
-            router.push("/student");
+            await signUpStudent(displayName.trim(), username.trim(), password);
+            router.push("/login?created=1");
         } catch (e: unknown) {
             setError(e instanceof Error ? e.message : "Something went wrong.");
         } finally {
@@ -57,15 +36,15 @@ export default function StudentLoginPage() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-green-50 via-white to-green-100 px-4 py-10">
             <div className="w-full max-w-4xl mb-3 flex">
-                <a href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-gray-800 transition-colors group">
+                <a href="/login" className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-gray-800 transition-colors group">
                     <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
-                    Back to home
+                    Back to sign in
                 </a>
             </div>
             <div className="w-full max-w-4xl flex rounded-3xl shadow-2xl shadow-green-900/15 overflow-hidden ring-1 ring-black/5">
 
                 {/* ── Left branding panel ── */}
-                <div className="hidden lg:flex lg:w-[45%] bg-green-800 relative overflow-hidden flex-col items-center justify-center min-h-[580px]">
+                <div className="hidden lg:flex lg:w-[45%] bg-green-800 relative overflow-hidden flex-col items-center justify-center min-h-[600px]">
                     <svg className="absolute inset-0 w-full h-full" viewBox="0 0 500 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
                         <path d="M-60,180 C20,80 160,20 280,60 C400,100 480,220 460,360 C440,500 320,580 200,560 C80,540 -140,440 -60,180Z" fill="rgba(255,255,255,0.07)" />
                         <path d="M200,500 C320,460 480,520 520,640 C560,760 440,820 300,800 C160,780 60,700 80,600 C100,500 80,540 200,500Z" fill="rgba(255,255,255,0.05)" />
@@ -78,12 +57,12 @@ export default function StudentLoginPage() {
                             </svg>
                         </div>
                         <span className="text-white/60 text-xs font-semibold uppercase tracking-widest mb-3">Assessly</span>
-                        <h2 className="text-3xl font-bold text-white leading-tight mb-3">Welcome Back!</h2>
+                        <h2 className="text-3xl font-bold text-white leading-tight mb-3">Create Your Account</h2>
                         <p className="text-green-200/70 text-sm leading-relaxed max-w-[260px]">
-                            Sign in to access timed CBT exams and see your results instantly.
+                            One account for all your school exams. Use your phone number as your username — you&apos;ll never forget it.
                         </p>
                         <div className="mt-10 flex flex-col gap-3 w-full max-w-[260px]">
-                            {["Timed CBT exam conditions", "Instant results after submission", "WAEC, JAMB & NECO practice"].map((text) => (
+                            {["Works with any school's code", "Your name shows on results", "Access exams anytime"].map((text) => (
                                 <div key={text} className="flex items-center gap-2.5">
                                     <div className="w-4 h-4 rounded-full bg-green-400/25 border border-green-300/30 flex items-center justify-center flex-shrink-0">
                                         <svg className="w-2 h-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3.5" d="M5 13l4 4L19 7" /></svg>
@@ -114,16 +93,9 @@ export default function StudentLoginPage() {
                         </div>
 
                         <div className="mb-8">
-                            <h1 className="text-2xl font-bold text-gray-900">Student Sign In</h1>
-                            <p className="text-sm text-gray-400 mt-1.5">Enter your details to access your school&apos;s exams</p>
+                            <h1 className="text-2xl font-bold text-gray-900">Create Account</h1>
+                            <p className="text-sm text-gray-400 mt-1.5">Sign up to take school exams on Assessly</p>
                         </div>
-
-                        {justCreated && (
-                            <div className="flex items-start gap-2.5 bg-green-50 border border-green-200 text-green-700 text-xs px-4 py-3 rounded-xl mb-5">
-                                <svg className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                                <span>Account created — sign in to get started.</span>
-                            </div>
-                        )}
 
                         {error && (
                             <div className="flex items-start gap-2.5 bg-red-50 border border-red-100 text-red-700 text-xs px-4 py-3 rounded-xl mb-5">
@@ -135,16 +107,30 @@ export default function StudentLoginPage() {
                         )}
 
                         <form onSubmit={handleSubmit} className="space-y-4">
+                            {/* Full name */}
+                            <div className="space-y-1.5">
+                                <label className="block text-xs font-semibold text-gray-500">Full Name</label>
+                                <div className="relative">
+                                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300">
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                                    </span>
+                                    <input type="text" value={displayName} onChange={e => setDisplayName(e.target.value)}
+                                        placeholder="e.g. John Doe" required className={inputCls} />
+                                </div>
+                                <p className="text-[11px] text-gray-400">This is what shows on your exam results.</p>
+                            </div>
+
                             {/* Username */}
                             <div className="space-y-1.5">
                                 <label className="block text-xs font-semibold text-gray-500">Phone number or username</label>
                                 <div className="relative">
                                     <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 8.25h3" /></svg>
                                     </span>
                                     <input type="text" value={username} onChange={e => setUsername(e.target.value)}
                                         placeholder="e.g. 08012345678" required className={inputCls} autoComplete="username" />
                                 </div>
+                                <p className="text-[11px] text-gray-400">You&apos;ll use this to log in. Must be unique.</p>
                             </div>
 
                             {/* Password */}
@@ -155,41 +141,34 @@ export default function StudentLoginPage() {
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
                                     </span>
                                     <input type="password" value={password} onChange={e => setPassword(e.target.value)}
-                                        placeholder="Your password" required className={inputCls} autoComplete="current-password" />
+                                        placeholder="At least 6 characters" required className={inputCls} autoComplete="new-password" />
                                 </div>
                             </div>
 
-                            {/* School Code */}
+                            {/* Confirm password */}
                             <div className="space-y-1.5">
-                                <label className="block text-xs font-semibold text-gray-500">School Code</label>
+                                <label className="block text-xs font-semibold text-gray-500">Confirm Password</label>
                                 <div className="relative">
                                     <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
                                     </span>
-                                    <input type="text" value={schoolCode}
-                                        onChange={e => setSchoolCode(e.target.value.toUpperCase())}
-                                        placeholder="e.g. KF9X2P" required maxLength={8}
-                                        className={`${inputCls} font-mono tracking-widest uppercase`} />
+                                    <input type="password" value={confirm} onChange={e => setConfirm(e.target.value)}
+                                        placeholder="Repeat your password" required className={inputCls} autoComplete="new-password" />
                                 </div>
-                                <p className="text-[11px] text-gray-400">Ask your teacher for the school code.</p>
                             </div>
 
                             <button type="submit" disabled={loading}
                                 className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm py-3 rounded-xl shadow-md shadow-green-600/20 transition-all mt-2">
                                 {loading
-                                    ? <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg> Signing in…</>
-                                    : "Sign In"
+                                    ? <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg> Creating account…</>
+                                    : "Create Account"
                                 }
                             </button>
                         </form>
 
-                        <p className="text-center text-xs text-gray-400 mt-5">
-                            New student?{" "}
-                            <a href="/student/signup" className="text-green-700 hover:underline font-semibold">Create an account →</a>
-                        </p>
-                        <p className="text-center text-xs text-gray-400 mt-2">
-                            Teacher?{" "}
-                            <a href="/dashboard/login" className="text-green-700 hover:underline font-semibold">Admin Dashboard →</a>
+                        <p className="text-center text-xs text-gray-400 mt-6">
+                            Already have an account?{" "}
+                            <a href="/login" className="text-green-700 hover:underline font-semibold">Sign in →</a>
                         </p>
                     </div>
                 </div>
