@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
+import { useState, useEffect, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { signInStudent, getStudentProfile } from "@/lib/authService";
 import { supabase } from "@/lib/supabase";
 
-export default function StudentLoginPage() {
+function LoginForm() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const justCreated = searchParams.get("created") === "1";
@@ -195,5 +194,13 @@ export default function StudentLoginPage() {
                 </div>
             </div>
         </div>
+    );
+}
+
+export default function StudentLoginPage() {
+    return (
+        <Suspense>
+            <LoginForm />
+        </Suspense>
     );
 }
