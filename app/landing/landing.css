@@ -18,7 +18,7 @@
   --lp-border:      #e2ede6;
 
   --lp-sans:   'Plus Jakarta Sans', system-ui, sans-serif;
-  --lp-serif:  'Instrument Serif', Georgia, serif;
+  --lp-serif:  'Lora', Georgia, serif;
 
   --lp-r-sm: 8px;
   --lp-r-md: 14px;
@@ -761,10 +761,11 @@ body:has(.lp-root) {
   margin-bottom: 10px;
 }
 .lp-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
   color: #f59e0b;
-  font-size: 14px;
   margin-bottom: 14px;
-  letter-spacing: 2px;
 }
 .lp-t-quote {
   font-size: 15px;
