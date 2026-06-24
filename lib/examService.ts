@@ -298,6 +298,9 @@ export async function submitExamResult(
   const theoryStatus = hasTheory ? "pending_review" : "none";
 
   // Persist submission (fire-and-forget - don't block student on DB error)
+  const { data: sessionData } = await supabase.auth.getSession();
+  const studentId = sessionData?.session?.user?.id ?? null;
+
   try {
     const answersJson: Record<string, number> = {};
     Object.entries(answers).forEach(([k, v]) => {
@@ -311,6 +314,7 @@ export async function submitExamResult(
 
     await supabase.from("submissions").insert({
       exam_id: examId,
+      student_id: studentId,
       student_name: studentName,
       answers: answersJson,
       score: mcqScore,

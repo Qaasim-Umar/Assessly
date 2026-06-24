@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import { uploadGeneralQuestionImage } from "@/lib/questionAssets";
+import { getGeneralAdminSession } from "@/lib/generalAdminAuth";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type ImportMode = "json" | "manual";
@@ -419,9 +420,9 @@ export default function QuestionBankPage() {
     const [savedCount, setSavedCount] = useState<number | null>(null);
 
     useEffect(() => {
-        if (typeof window !== "undefined" && sessionStorage.getItem("generalAdmin") !== "1") {
-            router.replace("/general/dashboard/login");
-        }
+        getGeneralAdminSession().then((session) => {
+            if (!session) router.replace("/general/dashboard/login");
+        });
     }, [router]);
 
     const setConfigField = (key: keyof BatchConfig, value: unknown) =>

@@ -10,6 +10,7 @@ import type { ExamForm, Question } from "@/app/dashboard/create/types";
 import { getExamById } from "@/lib/examService";
 import type { DbExamWithQuestions } from "@/lib/examService";
 import { uploadGeneralQuestionImage } from "@/lib/questionAssets";
+import { getGeneralAdminSession } from "@/lib/generalAdminAuth";
 
 const EDIT_STEPS = ["Exam Setup", "Edit Questions", "Finalize"];
 
@@ -94,9 +95,9 @@ export default function GeneralEditExamPage() {
 
     // Auth guard, require general admin session
     useEffect(() => {
-        if (typeof window !== "undefined" && sessionStorage.getItem("generalAdmin") !== "1") {
-            router.replace("/general/dashboard/login");
-        }
+        getGeneralAdminSession().then((session) => {
+            if (!session) router.replace("/general/dashboard/login");
+        });
     }, [router]);
 
     // Fetch exam data

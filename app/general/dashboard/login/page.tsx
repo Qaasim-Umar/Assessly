@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { signInGeneralAdmin, getGeneralAdminSession } from "@/lib/generalAdminAuth";
 
 export default function GeneralDashboardLoginPage() {
     const router = useRouter();
@@ -13,28 +14,22 @@ export default function GeneralDashboardLoginPage() {
 
     // Already logged in?
     useEffect(() => {
-        if (typeof window !== "undefined" && sessionStorage.getItem("generalAdmin") === "1") {
-            router.replace("/general/dashboard");
-        }
+        getGeneralAdminSession().then((session) => {
+            if (session) router.replace("/general/dashboard");
+        });
     }, [router]);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setError("");
         setLoading(true);
-
-        const validUser = process.env.NEXT_PUBLIC_GENERAL_ADMIN_USER ?? "admin";
-        const validPass = process.env.NEXT_PUBLIC_GENERAL_ADMIN_PASS ?? "assessly2026";
-
-        setTimeout(() => {
-            if (username.trim() === validUser && password === validPass) {
-                sessionStorage.setItem("generalAdmin", "1");
-                router.push("/general/dashboard");
-            } else {
-                setError("Invalid username or password.");
-                setLoading(false);
-            }
-        }, 400);
+        try {
+            await signInGeneralAdmin(username, password);
+            router.push("/general/dashboard");
+        } catch {
+            setError("Invalid username or password.");
+            setLoading(false);
+        }
     };
 
     const inputCls =

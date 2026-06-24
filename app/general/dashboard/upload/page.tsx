@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import ManualEntryStep from "@/app/dashboard/create/_steps/ManualEntryStep";
+import { getGeneralAdminSession } from "@/lib/generalAdminAuth";
 import FinalizeStep from "@/app/dashboard/create/_steps/FinalizeStep";
 import { defaultForm } from "@/app/dashboard/create/types";
 import type { ExamForm, Question, ExamType, QuestionType, Difficulty } from "@/app/dashboard/create/types";
@@ -40,9 +41,9 @@ export default function GeneralUploadExamPage() {
     });
 
     useEffect(() => {
-        if (typeof window !== "undefined" && sessionStorage.getItem("generalAdmin") !== "1") {
-            router.replace("/general/dashboard/login");
-        }
+        getGeneralAdminSession().then((session) => {
+            if (!session) router.replace("/general/dashboard/login");
+        });
     }, [router]);
 
     const set = (key: keyof ExamForm, value: string | number | boolean) =>

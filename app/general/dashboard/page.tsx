@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { getExams, deleteExam, updateExamStatus } from "@/lib/examService";
 import type { DbExam } from "@/lib/examService";
+import { getGeneralAdminSession, signOutGeneralAdmin } from "@/lib/generalAdminAuth";
 
 const statusStyle: Record<string, string> = {
     Live: "bg-green-100 text-green-700 border border-green-300",
@@ -26,13 +27,13 @@ export default function GeneralDashboardPage() {
 
     // Auth guard
     useEffect(() => {
-        if (typeof window !== "undefined") {
-            if (sessionStorage.getItem("generalAdmin") !== "1") {
+        getGeneralAdminSession().then((session) => {
+            if (!session) {
                 router.replace("/general/dashboard/login");
-                return;
+            } else {
+                fetchExams();
             }
-            fetchExams();
-        }
+        });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -50,8 +51,8 @@ export default function GeneralDashboardPage() {
         }
     }
 
-    const handleLogout = () => {
-        sessionStorage.removeItem("generalAdmin");
+    const handleLogout = async () => {
+        await signOutGeneralAdmin();
         router.push("/general/dashboard/login");
     };
 
