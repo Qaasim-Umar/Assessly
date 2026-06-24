@@ -3,92 +3,81 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { getExams, deleteExam, updateExamStatus } from "@/lib/examService";
-import type { DbExam } from "@/lib/examService";
-import { getGeneralAdminSession, signOutGeneralAdmin } from "@/lib/generalAdminAuth";
+import { supabase } from "@/lib/supabase";
 
-const statusStyle: Record<string, string> = {
-    Live: "bg-green-100 text-green-700 border border-green-300",
-    Published: "bg-green-100 text-green-700 border border-green-300",
-    Draft: "bg-gray-100 text-gray-600 border border-gray-300",
-};
-
-function formatDate(iso: string) {
-    return new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+interface Stats {
+    total: number;
+    byExamType: { exam_type: string; count: number }[];
+    bySubject: { subject: string; count: number }[];
 }
 
 export default function GeneralDashboardPage() {
     const router = useRouter();
-    const [exams, setExams] = useState<DbExam[]>([]);
+    const [stats, setStats] = useState<Stats | null>(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState("");
-    const [deletingId, setDeletingId] = useState<string | null>(null);
-    const [togglingId, setTogglingId] = useState<string | null>(null);
 
-    // Auth guard
     useEffect(() => {
-        getGeneralAdminSession().then((session) => {
-            if (!session) {
-                router.replace("/general/dashboard/login");
-            } else {
-                fetchExams();
-            }
-        });
+        if (sessionStorage.getItem("generalAdmin") !== "1") {
+            router.replace("/general/dashboard/login");
+            return;
+        }
+        fetchStats();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    async function fetchExams() {
+    async function fetchStats() {
+        setLoading(true);
         try {
-            setLoading(true);
-            setError("");
-            // Fetch all exams, then filter locally for is_general
-            const all = await getExams();
-            setExams(all.filter((e) => e.is_general));
+            const { data } = await supabase
+                .from("questions")
+                .select("exam_type, subject")
+                .is("exam_id", null)
+                .eq("is_active", true);
+
+            const rows = data ?? [];
+
+            // Count by exam_type
+            const examTypeMap: Record<string, number> = {};
+            const subjectMap: Record<string, number> = {};
+
+            for (const row of rows) {
+                const et = row.exam_type ?? "Unknown";
+                examTypeMap[et] = (examTypeMap[et] ?? 0) + 1;
+
+                const sub = row.subject ?? "Unknown";
+                subjectMap[sub] = (subjectMap[sub] ?? 0) + 1;
+            }
+
+            setStats({
+                total: rows.length,
+                byExamType: Object.entries(examTypeMap)
+                    .map(([exam_type, count]) => ({ exam_type, count }))
+                    .sort((a, b) => b.count - a.count),
+                bySubject: Object.entries(subjectMap)
+                    .map(([subject, count]) => ({ subject, count }))
+                    .sort((a, b) => b.count - a.count),
+            });
         } catch {
-            setError("Failed to load exams.");
+            setStats({ total: 0, byExamType: [], bySubject: [] });
         } finally {
             setLoading(false);
         }
     }
 
-    const handleLogout = async () => {
-        await signOutGeneralAdmin();
+    const handleLogout = () => {
+        sessionStorage.removeItem("generalAdmin");
         router.push("/general/dashboard/login");
     };
 
-    const handleDelete = async (id: string) => {
-        if (!confirm("Delete this exam? This cannot be undone.")) return;
-        setDeletingId(id);
-        try {
-            await deleteExam(id);
-            setExams((prev) => prev.filter((e) => e.id !== id));
-        } catch {
-            alert("Failed to delete exam.");
-        } finally {
-            setDeletingId(null);
-        }
+    const examTypeColors: Record<string, string> = {
+        JAMB: "bg-green-50 text-green-700 border-green-200",
+        WAEC: "bg-blue-50 text-blue-700 border-blue-200",
+        NECO: "bg-violet-50 text-violet-700 border-violet-200",
+        "Post-UTME": "bg-amber-50 text-amber-700 border-amber-200",
     };
-
-    const handleToggleStatus = async (exam: DbExam) => {
-        const next: "Draft" | "Published" | "Live" =
-            exam.status === "Draft" ? "Published" : exam.status === "Published" ? "Live" : "Draft";
-        setTogglingId(exam.id);
-        try {
-            await updateExamStatus(exam.id, next);
-            setExams((prev) => prev.map((e) => (e.id === exam.id ? { ...e, status: next } : e)));
-        } catch {
-            alert("Failed to update status.");
-        } finally {
-            setTogglingId(null);
-        }
-    };
-
-    const published = exams.filter((e) => e.status === "Published" || e.status === "Live").length;
-    const drafts = exams.filter((e) => e.status === "Draft").length;
 
     return (
         <div className="min-h-screen bg-[#f0f2f5]">
-            {/* Header */}
             <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
                     <div className="flex items-center gap-3">
@@ -120,30 +109,20 @@ export default function GeneralDashboardPage() {
                 </div>
             </header>
 
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 py-7">
-                {/* Title */}
-                <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+                {/* Title + actions */}
+                <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
                     <div>
-                        <h1 className="text-xl font-bold text-gray-900">General Mode Exams</h1>
-                        <p className="text-sm text-gray-500 mt-0.5">Manage open practice exams - visible to anyone at <code className="text-green-600 bg-green-50 px-1 rounded">/general</code></p>
+                        <h1 className="text-xl font-bold text-gray-900">General Console</h1>
+                        <p className="text-sm text-gray-500 mt-0.5">Overview of your question bank and admissions content</p>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <button
-                            onClick={fetchExams}
-                            disabled={loading}
-                            className="flex items-center gap-1.5 text-xs font-semibold text-gray-600 border border-gray-200 hover:bg-gray-50 px-3 py-2 rounded-lg transition-colors disabled:opacity-40"
-                        >
-                            <svg className={`w-3.5 h-3.5 ${loading ? "animate-spin" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                            </svg>
-                            Refresh
-                        </button>
+                    <div className="flex items-center gap-3">
                         <Link
                             href="/general/dashboard/admissions"
                             className="flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-700 font-bold text-sm px-4 py-2.5 rounded-lg transition-colors shadow-sm border border-gray-200"
                         >
                             <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
                             </svg>
                             Admissions Hub
                         </Link>
@@ -154,131 +133,115 @@ export default function GeneralDashboardPage() {
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 4.5v15m7.5-7.5h-15" />
                             </svg>
-                            Question Bank
+                            Upload Questions
                         </Link>
                     </div>
                 </div>
 
-                {/* Stats */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-                    {[
-                        { label: "Total Exams", value: exams.length, color: "bg-green-50 text-green-600" },
-                        { label: "Published / Live", value: published, color: "bg-green-50 text-green-600" },
-                        { label: "Drafts", value: drafts, color: "bg-amber-50 text-amber-600" },
-                    ].map(({ label, value, color }) => (
-                        <div key={label} className="bg-white border border-gray-200 rounded-xl p-5 flex items-center gap-4">
-                            <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${color}`}>
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <p className={`text-2xl font-bold text-gray-900 leading-none ${loading ? "animate-pulse text-gray-300" : ""}`}>
-                                    {loading ? "-" : value}
-                                </p>
-                                <p className="text-xs text-gray-500 mt-0.5">{label}</p>
-                            </div>
-                        </div>
-                    ))}
+                {/* Total */}
+                <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-6 flex items-center gap-5">
+                    <div className="w-14 h-14 rounded-xl bg-green-50 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-7 h-7 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 2.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p className={`text-4xl font-extrabold text-gray-900 leading-none ${loading ? "animate-pulse text-gray-200" : ""}`}>
+                            {loading ? "—" : stats?.total.toLocaleString()}
+                        </p>
+                        <p className="text-sm text-gray-500 mt-1">Total questions in the bank</p>
+                    </div>
+                    <button
+                        onClick={fetchStats}
+                        disabled={loading}
+                        className="ml-auto flex items-center gap-1.5 text-xs font-semibold text-gray-400 hover:text-gray-700 transition-colors disabled:opacity-40"
+                    >
+                        <svg className={`w-3.5 h-3.5 ${loading ? "animate-spin" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                        Refresh
+                    </button>
                 </div>
 
-                {/* Error */}
-                {error && (
-                    <div className="mb-4 flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 text-xs font-medium px-4 py-2.5 rounded-lg">
-                        {error}
-                        <button onClick={fetchExams} className="ml-auto underline">Retry</button>
-                    </div>
-                )}
-
-                {/* Table */}
-                <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-                    <div className="px-5 py-3.5 border-b border-gray-100 flex items-center justify-between">
-                        <h2 className="text-sm font-bold text-gray-700">All General Exams</h2>
-                        <span className="text-xs text-gray-400">{loading ? "Loading…" : `${exams.length} exams`}</span>
-                    </div>
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-sm">
-                            <thead>
-                                <tr className="border-b border-gray-100 bg-gray-50">
-                                    {["Exam Title", "Subject", "Class", "Type", "Questions", "Duration", "Takes", "Status", "Created", "Actions"].map((h) => (
-                                        <th key={h} className="px-4 py-3 text-left text-[11px] font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">{h}</th>
-                                    ))}
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-gray-50">
-                                {loading
-                                    ? Array.from({ length: 3 }).map((_, i) => (
-                                        <tr key={i} className="animate-pulse">
-                                            {Array.from({ length: 10 }).map((_, j) => (
-                                                <td key={j} className="px-4 py-4"><div className="h-3 bg-gray-100 rounded w-3/4" /></td>
-                                            ))}
-                                        </tr>
-                                    ))
-                                    : exams.map((exam) => (
-                                        <tr key={exam.id} className="hover:bg-gray-50 transition-colors">
-                                            <td className="px-4 py-3.5">
-                                                <p className="font-semibold text-gray-900 text-xs max-w-[200px] truncate">{exam.title}</p>
-                                            </td>
-                                            <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">{exam.subject}</td>
-                                            <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">{exam.class_level}</td>
-                                            <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">{exam.type}</td>
-                                            <td className="px-4 py-3.5 text-xs text-gray-600 text-center">{exam.question_count}</td>
-                                            <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">
-                                                {exam.duration ? `${exam.duration} min` : <span className="text-gray-400">N/A</span>}
-                                            </td>
-                                            <td className="px-4 py-3.5 text-xs text-green-600 font-bold text-center whitespace-nowrap">
-                                                {exam.takes ?? 0}
-                                            </td>
-                                            <td className="px-4 py-3.5 whitespace-nowrap">
-                                                <button
-                                                    onClick={() => handleToggleStatus(exam)}
-                                                    disabled={togglingId === exam.id}
-                                                    title="Click to cycle status"
-                                                    className={`inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full cursor-pointer hover:opacity-80 disabled:opacity-40 ${statusStyle[exam.status]}`}
-                                                >
-                                                    {exam.status === "Live" && (
-                                                        <span className="relative flex h-1.5 w-1.5">
-                                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75" />
-                                                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500" />
-                                                        </span>
-                                                    )}
-                                                    {togglingId === exam.id ? "…" : exam.status}
-                                                </button>
-                                            </td>
-                                            <td className="px-4 py-3.5 text-xs text-gray-400 whitespace-nowrap">{formatDate(exam.created_at)}</td>
-                                            <td className="px-4 py-3.5 whitespace-nowrap">
-                                                <div className="flex items-center gap-1.5">
-                                                    <button
-                                                        onClick={() => router.push(`/general/dashboard/edit/${exam.id}`)}
-                                                        className="text-[11px] font-semibold text-green-600 hover:text-green-800 px-2 py-1 rounded hover:bg-green-50 transition-colors"
-                                                    >
-                                                        Edit
-                                                    </button>
-                                                    <button
-                                                        onClick={() => handleDelete(exam.id)}
-                                                        disabled={deletingId === exam.id}
-                                                        className="text-[11px] font-semibold text-red-500 hover:text-red-700 px-2 py-1 rounded hover:bg-red-50 transition-colors disabled:opacity-40"
-                                                    >
-                                                        {deletingId === exam.id ? "…" : "Delete"}
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    ))
-                                }
-                            </tbody>
-                        </table>
-                    </div>
-
-                    {!loading && exams.length === 0 && !error && (
-                        <div className="py-16 text-center">
-                            <svg className="w-10 h-10 text-gray-300 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                            </svg>
-                            <p className="text-sm font-medium text-gray-400">No general exams yet.</p>
-                            <Link href="/general/dashboard/create" className="mt-3 inline-block text-sm text-green-600 font-semibold hover:underline">Upload to Question Bank</Link>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* By Exam Type */}
+                    <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                        <div className="px-5 py-4 border-b border-gray-100">
+                            <h2 className="text-sm font-bold text-gray-700">By Exam Type</h2>
                         </div>
-                    )}
+                        <div className="p-5 space-y-3">
+                            {loading ? (
+                                Array.from({ length: 4 }).map((_, i) => (
+                                    <div key={i} className="animate-pulse flex items-center gap-3">
+                                        <div className="h-4 bg-gray-100 rounded w-20" />
+                                        <div className="flex-1 h-2 bg-gray-100 rounded-full" />
+                                        <div className="h-4 bg-gray-100 rounded w-10" />
+                                    </div>
+                                ))
+                            ) : stats?.byExamType.length === 0 ? (
+                                <p className="text-sm text-gray-400 text-center py-4">No questions yet</p>
+                            ) : (
+                                stats?.byExamType.map(({ exam_type, count }) => {
+                                    const pct = stats.total > 0 ? Math.round((count / stats.total) * 100) : 0;
+                                    const colorCls = examTypeColors[exam_type] ?? "bg-gray-50 text-gray-600 border-gray-200";
+                                    return (
+                                        <div key={exam_type} className="flex items-center gap-3">
+                                            <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full border w-24 text-center flex-shrink-0 ${colorCls}`}>
+                                                {exam_type}
+                                            </span>
+                                            <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+                                                <div
+                                                    className="h-full bg-green-500 rounded-full transition-all"
+                                                    style={{ width: `${pct}%` }}
+                                                />
+                                            </div>
+                                            <span className="text-xs font-bold text-gray-700 w-16 text-right flex-shrink-0">
+                                                {count.toLocaleString()} <span className="text-gray-400 font-normal">({pct}%)</span>
+                                            </span>
+                                        </div>
+                                    );
+                                })
+                            )}
+                        </div>
+                    </div>
+
+                    {/* By Subject */}
+                    <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                        <div className="px-5 py-4 border-b border-gray-100">
+                            <h2 className="text-sm font-bold text-gray-700">By Subject</h2>
+                        </div>
+                        <div className="p-5 space-y-3 max-h-80 overflow-y-auto">
+                            {loading ? (
+                                Array.from({ length: 6 }).map((_, i) => (
+                                    <div key={i} className="animate-pulse flex items-center gap-3">
+                                        <div className="h-4 bg-gray-100 rounded w-24" />
+                                        <div className="flex-1 h-2 bg-gray-100 rounded-full" />
+                                        <div className="h-4 bg-gray-100 rounded w-10" />
+                                    </div>
+                                ))
+                            ) : stats?.bySubject.length === 0 ? (
+                                <p className="text-sm text-gray-400 text-center py-4">No questions yet</p>
+                            ) : (
+                                stats?.bySubject.map(({ subject, count }) => {
+                                    const pct = stats.total > 0 ? Math.round((count / stats.total) * 100) : 0;
+                                    return (
+                                        <div key={subject} className="flex items-center gap-3">
+                                            <span className="text-xs text-gray-600 w-32 truncate flex-shrink-0">{subject}</span>
+                                            <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+                                                <div
+                                                    className="h-full bg-blue-400 rounded-full transition-all"
+                                                    style={{ width: `${pct}%` }}
+                                                />
+                                            </div>
+                                            <span className="text-xs font-bold text-gray-700 w-16 text-right flex-shrink-0">
+                                                {count.toLocaleString()} <span className="text-gray-400 font-normal">({pct}%)</span>
+                                            </span>
+                                        </div>
+                                    );
+                                })
+                            )}
+                        </div>
+                    </div>
                 </div>
 
                 <div className="mt-8 text-center text-xs text-gray-400">

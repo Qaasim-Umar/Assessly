@@ -262,9 +262,9 @@ export async function updateExam(
 // ── SUBMIT: score a student attempt and persist it ────────────────────────────
 export async function submitExamResult(
   examId: string,
-  answers: Record<number, number>, // questionIndex → chosen option index (MCQ)
-  questions: DbQuestion[],
-  theoryAnswers: Record<number, string>, // questionIndex → typed text (theory)
+  answers: Record<number, number>,
+  _questions: DbQuestion[], // kept for signature compatibility, scoring now server-side
+  theoryAnswers: Record<number, string>,
   studentName = "Student",
 ): Promise<{
   score: number;
@@ -272,66 +272,33 @@ export async function submitExamResult(
   percentage: number;
   hasTheory: boolean;
 }> {
-  const total = questions.length;
-
-  // Separate MCQ questions (have correct_answer) from theory questions
-  let mcqScore = 0;
-  let mcqTotal = 0;
-  let hasTheory = false;
-
-  questions.forEach((q, idx) => {
-    const isTheory =
-      q.correct_answer === null || q.correct_answer === undefined;
-    if (isTheory) {
-      hasTheory = true;
-    } else {
-      mcqTotal++;
-      if (answers[idx] === q.correct_answer) {
-        mcqScore++;
-      }
-    }
-  });
-
-  // Initial score shows MCQ only; final will be updated after teacher grades theory
-  const initialPercentage =
-    total > 0 ? Math.round((mcqScore / total) * 100) : 0;
-  const theoryStatus = hasTheory ? "pending_review" : "none";
-
-  // Persist submission (fire-and-forget - don't block student on DB error)
   const { data: sessionData } = await supabase.auth.getSession();
-  const studentId = sessionData?.session?.user?.id ?? null;
+  const accessToken = sessionData?.session?.access_token;
 
-  try {
-    const answersJson: Record<string, number> = {};
-    Object.entries(answers).forEach(([k, v]) => {
-      answersJson[k] = v;
-    });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/submit-exam`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "apiKey": process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+        "Authorization": `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify({
+        examId,
+        answers,
+        theoryAnswers,
+        studentName,
+      }),
+    }
+  );
 
-    const theoryAnswersJson: Record<string, string> = {};
-    Object.entries(theoryAnswers).forEach(([k, v]) => {
-      theoryAnswersJson[k] = v;
-    });
-
-    await supabase.from("submissions").insert({
-      exam_id: examId,
-      student_id: studentId,
-      student_name: studentName,
-      answers: answersJson,
-      score: mcqScore,
-      total,
-      percentage: initialPercentage,
-      theory_answers: theoryAnswersJson,
-      theory_status: theoryStatus,
-      theory_marks: {},
-      mcq_score: mcqScore,
-      final_score: mcqScore,
-      final_percentage: initialPercentage,
-    });
-  } catch {
-    // Non-fatal - score still returned to client
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err?.error ?? "Failed to submit exam");
   }
 
-  return { score: mcqScore, total, percentage: initialPercentage, hasTheory };
+  return res.json();
 }
 
 // ── UPDATE: teacher grades theory answers and recalculates final score ─────────

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
-import { getGeneralAdminSession } from "@/lib/generalAdminAuth";
 
 type Tab = "gists" | "scholarships" | "deadlines";
 
@@ -59,13 +58,11 @@ export default function AdmissionsAdminPage() {
     const [error, setError] = useState("");
 
     useEffect(() => {
-        getGeneralAdminSession().then((session) => {
-            if (!session) {
-                router.replace("/general/dashboard/login");
-            } else {
-                fetchAll();
-            }
-        });
+        if (sessionStorage.getItem("generalAdmin") !== "1") {
+            router.replace("/general/dashboard/login");
+            return;
+        }
+        fetchAll();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

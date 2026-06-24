@@ -32,6 +32,9 @@ export default function StudentPortalPage() {
     const [name, setName] = useState("");
     const [schoolCode, setSchoolCode] = useState("");
     const [signingOut, setSigningOut] = useState(false);
+    const [codeInput, setCodeInput] = useState("");
+    const [codeError, setCodeError] = useState("");
+    const [codeLoading, setCodeLoading] = useState(false);
 
     useEffect(() => {
         getStudentProfile().then(profile => {
@@ -51,6 +54,33 @@ export default function StudentPortalPage() {
         setSigningOut(true);
         await studentSignOut();
         router.replace("/login");
+    };
+
+    const handleLoadCode = async (e: React.FormEvent) => {
+        e.preventDefault();
+        const code = codeInput.trim().toUpperCase();
+        if (!code) { setCodeError("Enter a school code."); return; }
+        setCodeLoading(true);
+        setCodeError("");
+        try {
+            const { supabase } = await import("@/lib/supabase");
+            const { data } = await supabase
+                .from("admin_profiles")
+                .select("school_code")
+                .eq("school_code", code)
+                .single();
+            if (!data) { setCodeError("Invalid school code. Ask your teacher."); return; }
+            localStorage.setItem("last_school_code", code);
+            setSchoolCode(code);
+            setLoading(true);
+            const examsData = await getPublishedExams(code);
+            setExams(examsData);
+        } catch {
+            setCodeError("Something went wrong. Try again.");
+        } finally {
+            setCodeLoading(false);
+            setLoading(false);
+        }
     };
 
     const liveCount = exams.filter(e => e.status === "Live").length;
@@ -116,6 +146,39 @@ export default function StudentPortalPage() {
                     <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">{loading ? "Loading…" : `${exams.length} exam${exams.length !== 1 ? "s" : ""}`}</span>
                 </div>
 
+                {/* School code entry — shown when no code is set */}
+                {!schoolCode && !loading && (
+                    <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm text-center max-w-md mx-auto">
+                        <div className="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
+                            <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                            </svg>
+                        </div>
+                        <h3 className="text-base font-bold text-gray-900 mb-1">Enter your school code</h3>
+                        <p className="text-sm text-gray-500 mb-6">Your teacher will give you this code. It loads your school&apos;s exams.</p>
+                        <form onSubmit={handleLoadCode} className="flex flex-col gap-3">
+                            <input
+                                type="text"
+                                value={codeInput}
+                                onChange={e => { setCodeInput(e.target.value.toUpperCase()); setCodeError(""); }}
+                                placeholder="e.g. SCH-4820"
+                                className="w-full text-center text-lg font-bold tracking-widest py-3 px-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 bg-gray-50 uppercase"
+                            />
+                            {codeError && <p className="text-xs text-red-600 font-medium">{codeError}</p>}
+                            <button
+                                type="submit"
+                                disabled={codeLoading}
+                                className="w-full flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm py-3 rounded-xl transition-colors disabled:opacity-50"
+                            >
+                                {codeLoading
+                                    ? <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg> Loading…</>
+                                    : "Load My Exams"
+                                }
+                            </button>
+                        </form>
+                    </div>
+                )}
+
                 {loading ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                         {Array.from({ length: 3 }).map((_, i) => (
@@ -137,7 +200,7 @@ export default function StudentPortalPage() {
                             </div>
                         ))}
                     </div>
-                ) : exams.length === 0 ? (
+                ) : schoolCode && exams.length === 0 ? (
                     <div className="bg-white border border-gray-100 rounded-2xl py-16 text-center shadow-sm">
                         <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-100">
                             <svg className="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
