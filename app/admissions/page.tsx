@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import TabBar from "./_components/TabBar";
 import FilterBar from "./_components/FilterBar";
 import ReactionBar from "./_components/ReactionBar";
+import InlineMarkdown from "@/components/InlineMarkdown";
 import { supabase } from "@/lib/supabase";
 import "../landing/landing.css";
 
@@ -95,7 +96,7 @@ function GistCard({
     >
       <span className={`text-[13px] font-extrabold tracking-wide uppercase mb-2.5 block ${tagColor}`}>{tag}</span>
       <h3 className="text-[19px] font-bold text-[#0d1a0f] leading-snug mb-2">{title}</h3>
-      <p className="text-base text-[#4a5e4e] leading-relaxed mb-3.5">{desc}</p>
+      <p className="text-base text-[#4a5e4e] leading-relaxed mb-3.5"><InlineMarkdown content={desc} /></p>
       <span className="text-sm text-[#9db5a3]">{date}</span>
       <ReactionBar initial={reactions} gistId={gistId} />
     </a>
@@ -116,7 +117,7 @@ function ScholarshipCard({
       <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 ${iconBg}`}>{icon}</div>
       <div>
         <h3 className="text-[19px] font-bold text-[#0d1a0f] mb-1.5">{title}</h3>
-        <p className="text-base text-[#4a5e4e] leading-relaxed mb-2.5">{desc}</p>
+        <p className="text-base text-[#4a5e4e] leading-relaxed mb-2.5"><InlineMarkdown content={desc} /></p>
         <div className="flex flex-wrap gap-1.5">
           {tags.map((t, i) => (
             <span key={i} className={`text-[13px] font-bold px-2.5 py-1 rounded-full ${t.style}`}>{t.label}</span>
@@ -153,7 +154,7 @@ function DeadlineCard({ day, month, urgency, title, desc, badge }: {
       </div>
       <div>
         <h3 className="text-base font-bold text-[#0d1a0f] mb-0.5">{title}</h3>
-        <p className="text-base text-[#4a5e4e]">{desc}</p>
+        <p className="text-base text-[#4a5e4e]"><InlineMarkdown content={desc} /></p>
       </div>
       <span className={`text-[13px] font-extrabold tracking-wide px-3 py-1.5 rounded-full flex-shrink-0 ${s.badge}`}>{badge}</span>
     </div>

@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import GistMarkdown from "@/components/GistMarkdown";
+import InlineMarkdown from "@/components/InlineMarkdown";
 import { supabase } from "@/lib/supabase";
+import { stripMarkdown } from "@/lib/stripMarkdown";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
@@ -28,10 +31,11 @@ export async function generateMetadata({
     .eq("published", true)
     .single();
   if (!data) return { title: "Not Found" };
+  const desc = stripMarkdown(data.description ?? "");
   return {
     title: `${data.title} | Assessly Admissions Hub`,
-    description: data.description,
-    openGraph: { title: data.title, description: data.description, type: "website" },
+    description: desc,
+    openGraph: { title: data.title, description: desc, type: "website" },
   };
 }
 
@@ -137,7 +141,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
 
             {/* Description */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
-              <p className="text-[17px] text-[#1a2e1d] leading-[1.8]">{s.description}</p>
+              <GistMarkdown content={s.description} />
             </div>
 
             {/* Eligibility */}
@@ -150,7 +154,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
                   {s.eligibility.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center flex-shrink-0 text-[11px] font-extrabold mt-0.5">✓</span>
-                      <span className="text-base text-[#1a2e1d] leading-relaxed">{item}</span>
+                      <span className="text-base text-[#1a2e1d] leading-relaxed"><InlineMarkdown content={item} /></span>
                     </li>
                   ))}
                 </ul>
@@ -167,7 +171,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
                   {s.requiredDocuments.map((doc: string, i: number) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="text-[#9db5a3] flex-shrink-0 mt-1">📄</span>
-                      <span className="text-base text-[#1a2e1d] leading-relaxed">{doc}</span>
+                      <span className="text-base text-[#1a2e1d] leading-relaxed"><InlineMarkdown content={doc} /></span>
                     </li>
                   ))}
                 </ul>
@@ -184,7 +188,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
                   {s.covers.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="text-amber-500 flex-shrink-0 mt-1">★</span>
-                      <span className="text-base text-[#1a2e1d] leading-relaxed">{item}</span>
+                      <span className="text-base text-[#1a2e1d] leading-relaxed"><InlineMarkdown content={item} /></span>
                     </li>
                   ))}
                 </ul>

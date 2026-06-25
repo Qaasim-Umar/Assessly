@@ -5,19 +5,10 @@ import Navbar from "@/components/Navbar";
 import GistMarkdown from "@/components/GistMarkdown";
 import ReactionBar from "../../_components/ReactionBar";
 import { supabase } from "@/lib/supabase";
+import { stripMarkdown } from "@/lib/stripMarkdown";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
-
-// Plain-text version of a markdown string, for meta/OG descriptions.
-function stripMarkdown(md: string): string {
-  return md
-    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")      // images
-    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")   // links → keep text
-    .replace(/[*_~`>#-]/g, "")                  // emphasis / heading / quote markers
-    .replace(/\s+/g, " ")
-    .trim();
-}
 
 interface DbGist {
   id: string;

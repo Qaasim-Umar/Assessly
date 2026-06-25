@@ -144,6 +144,7 @@ export default function DeadlineForm({ initial, mode }: { initial?: DeadlineData
 
                 <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                     <Label>Description</Label>
+                    <p className="text-[11px] text-gray-400 mt-0.5 mb-1">Inline Markdown like <code className="bg-gray-100 px-1 rounded">**bold**</code> and <code className="bg-gray-100 px-1 rounded">[link](url)</code> works here.</p>
                     <textarea value={form.desc} onChange={e => set("desc", e.target.value)} placeholder="Brief explanation of what students need to do before this date…" rows={2} className="w-full text-sm text-gray-700 placeholder:text-gray-300 border-0 outline-none resize-none mt-1" />
                 </div>
 
