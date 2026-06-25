@@ -2,11 +2,22 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import GistMarkdown from "@/components/GistMarkdown";
 import ReactionBar from "../../_components/ReactionBar";
 import { supabase } from "@/lib/supabase";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
+
+// Plain-text version of a markdown string, for meta/OG descriptions.
+function stripMarkdown(md: string): string {
+  return md
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")      // images
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")   // links → keep text
+    .replace(/[*_~`>#-]/g, "")                  // emphasis / heading / quote markers
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
 interface DbGist {
   id: string;
@@ -36,7 +47,7 @@ export async function generateMetadata({
     .eq("published", true)
     .single();
   if (!data) return { title: "Not Found" };
-  const first = (data.paragraphs as string[])[0] ?? "";
+  const first = stripMarkdown((data.paragraphs as string[])[0] ?? "");
   return {
     title: `${data.title} | Assessly Admissions Hub`,
     description: first,
@@ -117,11 +128,7 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
           {/* Article */}
           <article>
             <div className="bg-white border border-gray-200 rounded-2xl p-8 sm:p-10">
-              {g.paragraphs.map((p, i) => (
-                <p key={i} className="text-[17px] text-[#1a2e1d] leading-[1.8] mb-5 last:mb-0">
-                  {p}
-                </p>
-              ))}
+              <GistMarkdown content={g.paragraphs.join("\n\n")} />
             </div>
 
             {g.related && g.related.length > 0 && (
