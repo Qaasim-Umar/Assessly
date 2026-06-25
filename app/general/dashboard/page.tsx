@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
+import { getGeneralAdminSession, signOutGeneralAdmin } from "@/lib/generalAdminAuth";
 
 interface Stats {
     total: number;
@@ -17,11 +18,13 @@ export default function GeneralDashboardPage() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (sessionStorage.getItem("generalAdmin") !== "1") {
-            router.replace("/general/dashboard/login");
-            return;
-        }
-        fetchStats();
+        getGeneralAdminSession().then((session) => {
+            if (!session) {
+                router.replace("/general/dashboard/login");
+                return;
+            }
+            fetchStats();
+        });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -64,8 +67,8 @@ export default function GeneralDashboardPage() {
         }
     }
 
-    const handleLogout = () => {
-        sessionStorage.removeItem("generalAdmin");
+    const handleLogout = async () => {
+        await signOutGeneralAdmin();
         router.push("/general/dashboard/login");
     };
 
