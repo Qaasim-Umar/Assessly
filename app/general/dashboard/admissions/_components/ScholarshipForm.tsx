@@ -158,7 +158,10 @@ export default function ScholarshipForm({ initial, mode }: { initial?: Scholarsh
                         </div>
 
                         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                            <Label>Description <span className="text-gray-400 font-normal normal-case">(shown on the card)</span></Label>
+                            <Label>Description <span className="text-gray-400 font-normal normal-case">(shown on the card &amp; detail page)</span></Label>
+                            <p className="text-[11px] text-gray-400 mt-0.5 mb-1 leading-relaxed">
+                                Markdown supported: <code className="bg-gray-100 px-1 rounded">**bold**</code>, <code className="bg-gray-100 px-1 rounded">## Heading</code>, <code className="bg-gray-100 px-1 rounded">- list</code>, <code className="bg-gray-100 px-1 rounded">[link](url)</code>.
+                            </p>
                             <textarea value={form.description} onChange={e => set("description", e.target.value)} placeholder="Brief description of who qualifies and what it covers…" rows={3} className="w-full text-sm text-gray-700 placeholder:text-gray-300 border-0 outline-none resize-none mt-1" />
                         </div>
 
@@ -166,6 +169,7 @@ export default function ScholarshipForm({ initial, mode }: { initial?: Scholarsh
                         {(["eligibility", "required_documents", "covers"] as const).map(key => (
                             <div key={key} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                                 <Label>{key === "eligibility" ? "Eligibility Criteria" : key === "required_documents" ? "Required Documents" : "What it Covers"}</Label>
+                                <p className="text-[11px] text-gray-400 mt-0.5">Inline Markdown like <code className="bg-gray-100 px-1 rounded">**bold**</code> and <code className="bg-gray-100 px-1 rounded">[link](url)</code> works in each item.</p>
                                 <div className="mt-2 space-y-2">
                                     {form[key].map((item, i) => (
                                         <div key={i} className="flex items-center gap-2">

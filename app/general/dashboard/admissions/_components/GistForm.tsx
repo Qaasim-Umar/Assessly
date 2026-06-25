@@ -176,10 +176,13 @@ export default function GistForm({ initial, mode }: { initial?: GistData; mode: 
 
                         {/* Body paragraphs */}
                         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                            <div className="flex items-center justify-between mb-3">
+                            <div className="flex items-center justify-between mb-1">
                                 <Label>Body Paragraphs</Label>
                                 <span className="text-[10px] text-gray-400">{form.paragraphs.filter(p => p.trim()).length} paragraph{form.paragraphs.filter(p => p.trim()).length !== 1 ? "s" : ""}</span>
                             </div>
+                            <p className="text-[11px] text-gray-400 mb-3 leading-relaxed">
+                                Markdown supported: <code className="bg-gray-100 px-1 rounded">**bold**</code>, <code className="bg-gray-100 px-1 rounded">*italic*</code>, <code className="bg-gray-100 px-1 rounded">## Heading</code>, <code className="bg-gray-100 px-1 rounded">- list item</code>, <code className="bg-gray-100 px-1 rounded">[link](url)</code>. Each box renders as its own block.
+                            </p>
                             <div className="space-y-3">
                                 {form.paragraphs.map((para, i) => (
                                     <div key={i} className="flex gap-2">
