@@ -34,13 +34,27 @@ export default function ReactionBar({
   const [counts, setCounts] = useState({ ...initial });
   const [active, setActive] = useState<ReactionType | null>(null);
 
-  // Restore the user's previous reaction from localStorage
+  // On mount: fetch live counts from DB + restore user's saved reaction
   useEffect(() => {
     if (!gistId) return;
+
+    // Restore active selection
     const saved = localStorage.getItem(`reaction_${gistId}`);
     if (saved && VALID.includes(saved as ReactionType)) {
       setActive(saved as ReactionType);
     }
+
+    // Fetch fresh counts from DB so cached page counts don't mislead
+    supabase
+      .from("admissions_gists")
+      .select("reactions")
+      .eq("id", gistId)
+      .single()
+      .then(({ data }) => {
+        if (data?.reactions) {
+          setCounts(data.reactions as Record<ReactionType, number>);
+        }
+      });
   }, [gistId]);
 
   async function react(type: ReactionType, e: React.MouseEvent) {
