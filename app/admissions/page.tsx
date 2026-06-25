@@ -4,6 +4,7 @@ import TabBar from "./_components/TabBar";
 import FilterBar from "./_components/FilterBar";
 import ReactionBar from "./_components/ReactionBar";
 import InlineMarkdown from "@/components/InlineMarkdown";
+import LiveTicker from "./_components/LiveTicker";
 import { supabase } from "@/lib/supabase";
 import "../landing/landing.css";
 
@@ -252,10 +253,7 @@ export default async function AdmissionsHubPage() {
         {/* Ticker */}
         <div className="max-w-[1100px] mx-auto mt-8 flex items-center gap-3 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 overflow-hidden">
           <span className="text-[12px] font-extrabold tracking-widest uppercase text-rose-600 bg-rose-100 px-2 py-1 rounded flex-shrink-0">LIVE</span>
-          <span className="text-base text-white/60 whitespace-nowrap ticker-anim">
-            {deadlines.slice(0, 3).map(d => `${d.title} · ${d.badge}`).join("  ·  ") ||
-              "UNILAG Post-UTME screening begins July 14 · Shell Nigeria Scholarship portal now open · OAU releases 2024/25 admission list"}
-          </span>
+          <LiveTicker />
         </div>
 
         <TabBar counts={{
