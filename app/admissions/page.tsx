@@ -291,8 +291,8 @@ export default async function AdmissionsHubPage() {
 
             {/* Featured gist */}
             {featuredGist ? (
-              <a href={`/admissions/gists/${featuredGist.slug}`} className="bg-[#0d1a0f] rounded-2xl overflow-hidden mb-4 grid grid-cols-1 md:grid-cols-2 min-h-[260px] cursor-pointer hover:-translate-y-0.5 transition-transform">
-                <div className="p-8 flex flex-col justify-between">
+              <a href={`/admissions/gists/${featuredGist.slug}`} className="bg-[#0d1a0f] rounded-2xl overflow-hidden mb-4 min-h-[260px] cursor-pointer hover:-translate-y-0.5 transition-transform block">
+                <div className="p-8 flex flex-col justify-between h-full">
                   <div>
                     {featuredGist.is_trending && (
                       <span className="inline-flex items-center gap-1.5 text-[13px] font-extrabold tracking-wide uppercase text-green-500 bg-green-500/15 px-2.5 py-1 rounded-full mb-4">
@@ -312,10 +312,6 @@ export default async function AdmissionsHubPage() {
                     </div>
                     <ReactionBar initial={featuredGist.reactions} dark gistId={featuredGist.id} />
                   </div>
-                </div>
-                <div className="hidden md:flex items-center justify-center text-[80px] opacity-40"
-                  style={{ background: "linear-gradient(135deg, rgba(22,163,74,0.2) 0%, rgba(22,163,74,0.05) 100%)" }}>
-                  🎓
                 </div>
               </a>
             ) : (

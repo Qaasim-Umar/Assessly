@@ -22,10 +22,6 @@ const ACTIVE_DARK: Record<ReactionType, string> = {
 
 const VALID: ReactionType[] = ["fire", "think"];
 
-function storageKey(gistId: string) { return `reaction_v2_${gistId}`; }
-
-interface Stored { type: ReactionType; counts: Record<ReactionType, number> }
-
 export default function ReactionBar({
   initial,
   dark = false,
@@ -41,20 +37,13 @@ export default function ReactionBar({
   useEffect(() => {
     if (!gistId) return;
 
-    // Restore saved counts + active immediately — no flash
-    try {
-      const raw = localStorage.getItem(storageKey(gistId));
-      if (raw) {
-        const saved: Stored = JSON.parse(raw);
-        if (VALID.includes(saved.type)) {
-          setActive(saved.type);
-          setCounts(saved.counts);
-          return; // skip DB fetch — user already has fresh counts stored
-        }
-      }
-    } catch { /* ignore parse errors */ }
+    // Restore which emoji this user picked (local only — not counts)
+    const saved = localStorage.getItem(`reaction_${gistId}`);
+    if (saved && VALID.includes(saved as ReactionType)) {
+      setActive(saved as ReactionType);
+    }
 
-    // No localStorage record — fetch fresh from DB
+    // Always fetch real counts from DB — the source of truth
     supabase
       .from("admissions_gists")
       .select("reactions")
@@ -70,25 +59,22 @@ export default function ReactionBar({
     e.stopPropagation();
 
     if (active === type) {
-      const next = { ...counts, [type]: Math.max(0, counts[type] - 1) };
-      setCounts(next);
+      setCounts(p => ({ ...p, [type]: Math.max(0, p[type] - 1) }));
       setActive(null);
       if (gistId) {
-        localStorage.removeItem(storageKey(gistId));
+        localStorage.removeItem(`reaction_${gistId}`);
         supabase.rpc("decrement_reaction", { gist_id: gistId, reaction_type: type });
       }
     } else {
-      let next = { ...counts };
       if (active) {
-        next = { ...next, [active]: Math.max(0, next[active] - 1) };
+        setCounts(p => ({ ...p, [active]: Math.max(0, p[active] - 1) }));
         if (gistId) supabase.rpc("decrement_reaction", { gist_id: gistId, reaction_type: active });
       }
-      next = { ...next, [type]: next[type] + 1 };
-      setCounts(next);
+      setCounts(p => ({ ...p, [type]: p[type] + 1 }));
       setActive(type);
       if (gistId) {
-        // Store both the chosen type AND the updated counts so refresh is instant
-        localStorage.setItem(storageKey(gistId), JSON.stringify({ type, counts: next } satisfies Stored));
+        // Only save which emoji they picked — never save counts
+        localStorage.setItem(`reaction_${gistId}`, type);
         supabase.rpc("increment_reaction", { gist_id: gistId, reaction_type: type });
       }
     }
