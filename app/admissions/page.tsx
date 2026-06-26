@@ -5,6 +5,7 @@ import FilterBar from "./_components/FilterBar";
 import ReactionBar from "./_components/ReactionBar";
 import InlineMarkdown from "@/components/InlineMarkdown";
 import LiveTicker from "./_components/LiveTicker";
+import SearchBar from "./_components/SearchBar";
 import { supabase } from "@/lib/supabase";
 import "../landing/landing.css";
 
@@ -94,6 +95,9 @@ function GistCard({
     <a
       href={`/admissions/gists/${slug}`}
       className="bg-white border border-gray-300 rounded-[18px] p-5 block cursor-pointer hover:border-green-200 hover:shadow-[0_4px_20px_rgba(22,163,74,0.08)] hover:-translate-y-0.5 transition-all"
+      data-ph-capture-attribute-item-type="gist"
+      data-ph-capture-attribute-item-title={title}
+      data-ph-capture-attribute-item-tag={tag}
     >
       <span className={`text-[13px] font-extrabold tracking-wide uppercase mb-2.5 block ${tagColor}`}>{tag}</span>
       <h3 className="text-[19px] font-bold text-[#0d1a0f] leading-snug mb-2">{title}</h3>
@@ -114,6 +118,9 @@ function ScholarshipCard({
     <a
       href={`/admissions/scholarships/${slug}`}
       className={`bg-white border border-gray-300 rounded-[18px] p-5 sm:p-6 grid grid-cols-[auto_1fr_auto] gap-4 items-start transition-all hover:border-amber-200 hover:shadow-[0_4px_20px_rgba(217,119,6,0.08)] cursor-pointer ${dimmed ? "opacity-60" : ""}`}
+      data-ph-capture-attribute-item-type="scholarship"
+      data-ph-capture-attribute-item-title={title}
+      data-ph-capture-attribute-item-open={open ? "yes" : "no"}
     >
       <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 ${iconBg}`}>{icon}</div>
       <div>
@@ -269,13 +276,7 @@ export default async function AdmissionsHubPage() {
 
         {/* FEED */}
         <div>
-          {/* Search bar */}
-          <div className="flex items-center gap-3 bg-white border border-gray-300 rounded-xl px-4 py-3 mb-5 hover:border-green-400 transition-colors cursor-text">
-            <svg className="w-5 h-5 text-[#9db5a3] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
-            </svg>
-            <input type="text" placeholder="Search scholarships, schools, deadlines..." className="flex-1 text-base text-[#0d1a0f] placeholder:text-[#9db5a3] bg-transparent outline-none" />
-          </div>
+          <SearchBar />
 
           <FilterBar />
 
@@ -291,7 +292,13 @@ export default async function AdmissionsHubPage() {
 
             {/* Featured gist */}
             {featuredGist ? (
-              <a href={`/admissions/gists/${featuredGist.slug}`} className="bg-[#0d1a0f] rounded-2xl overflow-hidden mb-4 min-h-[260px] cursor-pointer hover:-translate-y-0.5 transition-transform block">
+              <a
+              href={`/admissions/gists/${featuredGist.slug}`}
+              className="bg-[#0d1a0f] rounded-2xl overflow-hidden mb-4 min-h-[260px] cursor-pointer hover:-translate-y-0.5 transition-transform block"
+              data-ph-capture-attribute-item-type="featured_gist"
+              data-ph-capture-attribute-item-title={featuredGist.title}
+              data-ph-capture-attribute-item-school={featuredGist.school}
+            >
                 <div className="p-8 flex flex-col justify-between h-full">
                   <div>
                     {featuredGist.is_trending && (
@@ -478,7 +485,11 @@ export default async function AdmissionsHubPage() {
               </div>
               <div className="px-5 py-1">
                 {trendingGists.map((g, i, arr) => (
-                  <a key={g.id} href={`/admissions/gists/${g.slug}`} className={`flex items-center gap-3 py-3 no-underline ${i < arr.length - 1 ? "border-b border-gray-200" : ""}`}>
+                  <a key={g.id} href={`/admissions/gists/${g.slug}`} className={`flex items-center gap-3 py-3 no-underline ${i < arr.length - 1 ? "border-b border-gray-200" : ""}`}
+                    data-ph-capture-attribute-item-type="trending_gist"
+                    data-ph-capture-attribute-item-title={g.title}
+                    data-ph-capture-attribute-item-rank={(i + 1).toString()}
+                  >
                     <span className="text-base font-extrabold text-[#9db5a3] w-5 text-center flex-shrink-0">{i + 1}</span>
                     <div className="flex-1 min-w-0">
                       <strong className="text-base font-bold text-[#0d1a0f] block leading-tight">{g.title}</strong>

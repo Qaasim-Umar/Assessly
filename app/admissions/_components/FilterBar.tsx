@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { usePostHog } from "posthog-js/react";
 
 const FILTERS = ["All Schools", "UNILAG", "OAU", "UI", "FUTA", "UNIBEN", "ABU"];
 
 export default function FilterBar() {
   const [activeFilter, setActiveFilter] = useState("All Schools");
+  const posthog = usePostHog();
 
   return (
     <div className="flex items-center gap-2 mb-7 flex-wrap">
@@ -13,7 +15,10 @@ export default function FilterBar() {
       {FILTERS.map((f) => (
         <button
           key={f}
-          onClick={() => setActiveFilter(f)}
+          onClick={() => {
+            setActiveFilter(f);
+            posthog.capture("admissions_filter_clicked", { school: f });
+          }}
           className={`text-base font-semibold px-3.5 py-1.5 rounded-full border transition-all ${
             activeFilter === f
               ? "bg-green-600 border-green-600 text-white"

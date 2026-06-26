@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePostHog } from "posthog-js/react";
 
 type TabId = "All" | "School Gists" | "Scholarships" | "Deadlines" | "Cut-off Marks";
 
@@ -13,6 +14,7 @@ interface Counts {
 
 export default function TabBar({ counts }: { counts: Counts }) {
   const [activeTab, setActiveTab] = useState<TabId>("All");
+  const posthog = usePostHog();
 
   const TABS: { id: TabId; count: number }[] = [
     { id: "All",           count: counts.all },
@@ -26,7 +28,10 @@ export default function TabBar({ counts }: { counts: Counts }) {
       {TABS.map((t) => (
         <button
           key={t.id}
-          onClick={() => setActiveTab(t.id)}
+          onClick={() => {
+            setActiveTab(t.id);
+            posthog.capture("admissions_tab_clicked", { tab: t.id });
+          }}
           className={`text-base font-semibold px-6 py-3.5 border-b-2 transition-colors flex items-center gap-2 whitespace-nowrap
             ${activeTab === t.id ? "text-white border-green-500" : "text-white/40 border-transparent hover:text-white/70"}`}
         >

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { PostHogProvider } from "@/components/PostHogProvider";
 import "./globals.css";
 
 const BASE_URL = "https://assessly.app";
@@ -88,7 +89,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-white">
-        {children}
+        <PostHogProvider>
+          {children}
+        </PostHogProvider>
         <Analytics />
       </body>
     </html>

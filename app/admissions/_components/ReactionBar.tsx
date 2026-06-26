@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
+import { usePostHog } from "posthog-js/react";
 
 type ReactionType = "fire" | "think";
 
@@ -33,6 +34,7 @@ export default function ReactionBar({
 }) {
   const [counts, setCounts] = useState({ ...initial });
   const [active, setActive] = useState<ReactionType | null>(null);
+  const posthog = usePostHog();
 
   useEffect(() => {
     if (!gistId) return;
@@ -64,6 +66,7 @@ export default function ReactionBar({
       if (gistId) {
         localStorage.removeItem(`reaction_${gistId}`);
         supabase.rpc("decrement_reaction", { gist_id: gistId, reaction_type: type });
+        posthog.capture("admissions_reaction_removed", { gist_id: gistId, reaction: type });
       }
     } else {
       if (active) {
@@ -73,9 +76,9 @@ export default function ReactionBar({
       setCounts(p => ({ ...p, [type]: p[type] + 1 }));
       setActive(type);
       if (gistId) {
-        // Only save which emoji they picked — never save counts
         localStorage.setItem(`reaction_${gistId}`, type);
         supabase.rpc("increment_reaction", { gist_id: gistId, reaction_type: type });
+        posthog.capture("admissions_reaction_added", { gist_id: gistId, reaction: type });
       }
     }
   }
