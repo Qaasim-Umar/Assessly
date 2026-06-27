@@ -4,6 +4,7 @@ import posthog from "posthog-js";
 import { PostHogProvider as PHProvider, usePostHog } from "posthog-js/react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, Suspense } from "react";
+import { supabase } from "@/lib/supabase";
 
 function PageViewTracker() {
   const pathname = usePathname();
@@ -20,10 +21,28 @@ function PageViewTracker() {
   return null;
 }
 
+function AuthTracker() {
+  const ph = usePostHog();
+
+  useEffect(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (session?.user) {
+        ph.identify(session.user.id);
+      } else if (event === "SIGNED_OUT") {
+        ph.reset();
+      }
+    });
+    return () => subscription.unsubscribe();
+  }, [ph]);
+
+  return null;
+}
+
 if (typeof window !== "undefined") {
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
     api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
-    capture_pageview: false, // manual via PageViewTracker
+    defaults: "2026-05-30",
+    capture_pageview: false,
     capture_pageleave: true,
     person_profiles: "identified_only",
   });
@@ -34,6 +53,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     <PHProvider client={posthog}>
       <Suspense fallback={null}>
         <PageViewTracker />
+        <AuthTracker />
       </Suspense>
       {children}
     </PHProvider>
