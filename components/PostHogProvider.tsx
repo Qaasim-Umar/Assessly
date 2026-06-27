@@ -44,7 +44,7 @@ if (typeof window !== "undefined") {
     defaults: "2026-05-30",
     capture_pageview: false,
     capture_pageleave: true,
-    person_profiles: "identified_only",
+    person_profiles: "always",
   });
 }
 
