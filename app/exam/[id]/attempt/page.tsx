@@ -208,10 +208,10 @@ function ResultScreen({
                                         }`}>
                                         {/* Status icon */}
                                         {isCorrect && (
-                                            <span className="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
+                                            <span className="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
                                         )}
                                         {isWrong && (
-                                            <span className="w-6 h-6 rounded-full bg-red-500 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">✗</span>
+                                            <span className="w-6 h-6 rounded-full bg-red-500 text-white flex items-center justify-center flex-shrink-0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
                                         )}
                                         {(isSkipped || !isMCQ) && (
                                             <span className="w-6 h-6 rounded-full bg-gray-300 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">-</span>
@@ -258,7 +258,7 @@ function ResultScreen({
                                                             </span>
                                                             <span className="font-medium leading-snug flex-1">{opt.text}</span>
                                                             {isCorrectOpt && (
-                                                                <span className="text-green-600 font-bold text-xs mt-0.5 flex-shrink-0">✓ Correct</span>
+                                                                <span className="text-green-600 font-bold text-xs mt-0.5 flex-shrink-0 flex items-center gap-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Correct</span>
                                                             )}
                                                             {isChosen && !isCorrectOpt && (
                                                                 <span className="text-red-500 font-bold text-xs mt-0.5 flex-shrink-0">Your answer</span>

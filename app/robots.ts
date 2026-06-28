@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: ["/landing", "/general", "/login"],
+        allow: ["/", "/general", "/login", "/admissions"],
         disallow: [
           "/dashboard",
           "/student",
@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: "https://assessly.app/sitemap.xml",
-    host: "https://assessly.app",
+    sitemap: "https://www.assessly.ng/sitemap.xml",
+    host: "https://www.assessly.ng",
   };
 }

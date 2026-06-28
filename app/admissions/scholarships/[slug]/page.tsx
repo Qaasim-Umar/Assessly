@@ -6,6 +6,7 @@ import GistMarkdown from "@/components/GistMarkdown";
 import InlineMarkdown from "@/components/InlineMarkdown";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
+import { Check, FileText, Star } from "lucide-react";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
@@ -32,10 +33,13 @@ export async function generateMetadata({
     .single();
   if (!data) return { title: "Not Found" };
   const desc = stripMarkdown(data.description ?? "");
+  const url = `https://www.assessly.ng/admissions/scholarships/${slug}`;
   return {
     title: `${data.title} | Assessly Admissions Hub`,
     description: desc,
-    openGraph: { title: data.title, description: desc, type: "website" },
+    alternates: { canonical: url },
+    openGraph: { title: data.title, description: desc, type: "website", url, siteName: "Assessly" },
+    twitter: { card: "summary_large_image", title: data.title, description: desc },
   };
 }
 
@@ -108,8 +112,8 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
               {s.category}
             </span>
             {s.isOpen ? (
-              <span className="text-[13px] font-bold px-3 py-1.5 rounded-full bg-green-500/20 text-green-400">
-                ✓ Open Now
+              <span className="inline-flex items-center gap-1 text-[13px] font-bold px-3 py-1.5 rounded-full bg-green-500/20 text-green-400">
+                <Check size={12} /> Open Now
               </span>
             ) : (
               <span className="text-[13px] font-bold px-3 py-1.5 rounded-full bg-white/10 text-white/40">
@@ -153,7 +157,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
                 <ul className="flex flex-col gap-3">
                   {s.eligibility.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center flex-shrink-0 text-[11px] font-extrabold mt-0.5">✓</span>
+                      <span className="w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center flex-shrink-0 mt-0.5"><Check size={11} strokeWidth={3} /></span>
                       <span className="text-base text-[#1a2e1d] leading-relaxed"><InlineMarkdown content={item} /></span>
                     </li>
                   ))}
@@ -170,7 +174,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
                 <ul className="flex flex-col gap-3">
                   {s.requiredDocuments.map((doc: string, i: number) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="text-[#9db5a3] flex-shrink-0 mt-1">📄</span>
+                      <span className="text-[#9db5a3] flex-shrink-0 mt-1"><FileText size={15} /></span>
                       <span className="text-base text-[#1a2e1d] leading-relaxed"><InlineMarkdown content={doc} /></span>
                     </li>
                   ))}
@@ -187,7 +191,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
                 <ul className="flex flex-col gap-3">
                   {s.covers.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="text-amber-500 flex-shrink-0 mt-1">★</span>
+                      <span className="text-amber-500 flex-shrink-0 mt-1"><Star size={15} fill="currentColor" /></span>
                       <span className="text-base text-[#1a2e1d] leading-relaxed"><InlineMarkdown content={item} /></span>
                     </li>
                   ))}

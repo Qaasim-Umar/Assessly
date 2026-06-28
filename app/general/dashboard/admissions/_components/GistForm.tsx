@@ -244,9 +244,9 @@ export default function GistForm({ initial, mode }: { initial?: GistData; mode: 
                             <Label>Pins &amp; Badges</Label>
                             <p className="text-[11px] text-gray-400 mb-3">Manual flags that control how this gist is featured</p>
                             <div className="space-y-2">
-                                <Toggle label="🖼 Featured Hero" sub="Big dark card at top of gists section" checked={form.is_featured} onChange={v => set("is_featured", v)} />
-                                <Toggle label="🔥 Trending" sub="Shows the trending badge on this gist" checked={form.is_trending} onChange={v => set("is_trending", v)} />
-                                <Toggle label="✨ New This Week" sub="Pinned to the New This Week sidebar card" checked={form.is_new_this_week} onChange={v => set("is_new_this_week", v)} />
+                                <Toggle label="Featured Hero" sub="Big dark card at top of gists section" checked={form.is_featured} onChange={v => set("is_featured", v)} />
+                                <Toggle label="Trending" sub="Shows the trending badge on this gist" checked={form.is_trending} onChange={v => set("is_trending", v)} />
+                                <Toggle label="New This Week" sub="Pinned to the New This Week sidebar card" checked={form.is_new_this_week} onChange={v => set("is_new_this_week", v)} />
                             </div>
                         </div>
 

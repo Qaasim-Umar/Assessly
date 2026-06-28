@@ -392,7 +392,13 @@ export default function SurvivalSetupPage() {
                             {selectedSubject    && <span className="text-xs font-semibold text-amber-700">Subject: {selectedSubject}{selectedTopic ? ` · ${selectedTopic}` : ""}</span>}
                             {selectedExamBody   && <span className="text-xs font-semibold text-amber-700">Exam: {EXAM_BODIES.find(e => e.value === selectedExamBody)?.label}{selectedSchool ? ` (${selectedSchool})` : ""}</span>}
                             {selectedDifficulty && <span className="text-xs font-semibold text-amber-700">Difficulty: {selectedDifficulty.charAt(0).toUpperCase() + selectedDifficulty.slice(1)}</span>}
-                            {selectedLives !== 0 && <span className="text-xs font-semibold text-amber-700">Lives: {"❤️".repeat(selectedLives)}</span>}
+                            {selectedLives !== 0 && (
+                                <span className="flex items-center gap-0.5 text-xs font-semibold text-amber-700">
+                                    Lives:&nbsp;{Array.from({ length: selectedLives }).map((_, i) => (
+                                        <svg key={i} width="11" height="11" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" className="text-red-500"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                    ))}
+                                </span>
+                            )}
                         </div>
                     )}
 

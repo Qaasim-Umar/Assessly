@@ -361,7 +361,8 @@ function PracticeSessionPage() {
 
     // ─── SUMMARY SCREEN ─────────────────────────────────────────────────────
     if (finished) {
-        const emoji = stats.pct >= 80 ? "🎉" : stats.pct >= 50 ? "👍" : "💪";
+        const resultColor = stats.pct >= 80 ? "#22c55e" : stats.pct >= 50 ? "#f59e0b" : "#ef4444";
+        const resultBg = stats.pct >= 80 ? "#f0fdf4" : stats.pct >= 50 ? "#fffbeb" : "#fef2f2";
         return (
             <div className="min-h-screen bg-[#f0f2f5]">
                 <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
@@ -380,7 +381,14 @@ function PracticeSessionPage() {
 
                     {/* Score card */}
                     <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-8 text-center">
-                        <p className="text-4xl mb-3">{emoji}</p>
+                        <div className="flex items-center justify-center w-16 h-16 rounded-full mx-auto mb-3" style={{ background: resultBg }}>
+                            {stats.pct >= 80
+                                ? <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={resultColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                                : stats.pct >= 50
+                                ? <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={resultColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                                : <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={resultColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+                            }
+                        </div>
                         <h2 className="text-2xl font-extrabold text-gray-900">
                             {stats.correct} / {stats.total}
                         </h2>
@@ -553,7 +561,7 @@ function PracticeSessionPage() {
                     <div className="flex items-center gap-2">
                         <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100 border border-gray-200 text-xs font-semibold text-gray-600 select-none">
                             <span className="text-emerald-600">{answeredCount}/{questions.length}</span>
-                            {correctSoFar > 0 && <><span className="text-gray-300">·</span><span className="text-green-600">{correctSoFar} ✓</span></>}
+                            {correctSoFar > 0 && <><span className="text-gray-300">·</span><span className="text-green-600 flex items-center gap-0.5">{correctSoFar}<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></>}
                         </div>
                         <button
                             onClick={() => setShowNavigator((v) => !v)}

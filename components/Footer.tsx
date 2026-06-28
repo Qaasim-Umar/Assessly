@@ -14,9 +14,9 @@ export default function Footer() {
                 <div className="footer-links">
                     <div className="footer-col">
                         <div className="footer-col-title">Product</div>
-                        <Link href="/landing#features">Features</Link>
-                        <Link href="/landing#how-it-works">How it works</Link>
-                        <Link href="/landing#pricing">Pricing</Link>
+                        <Link href="/#students">Features</Link>
+                        <Link href="/#how">How it works</Link>
+                        <Link href="/#pricing">Pricing</Link>
                     </div>
                     <div className="footer-col">
                         <div className="footer-col-title">Access</div>
@@ -26,7 +26,7 @@ export default function Footer() {
                     </div>
                     <div className="footer-col">
                         <div className="footer-col-title">Company</div>
-                        <a href="mailto:hello@assessly.app">Contact</a>
+                        <a href="mailto:hello@assessly.ng">Contact</a>
                         <Link href="#">Privacy Policy</Link>
                         <Link href="#">Terms of Service</Link>
                     </div>

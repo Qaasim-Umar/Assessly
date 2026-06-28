@@ -295,7 +295,7 @@ export default function GeneralModePage() {
           className="mt-10 flex items-center justify-between bg-[#0d1a0f] rounded-2xl px-6 py-5 hover:-translate-y-0.5 transition-transform group"
         >
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl bg-green-600/20 flex items-center justify-center text-xl flex-shrink-0">🎓</div>
+            <div className="w-10 h-10 rounded-xl bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
             <div>
               <p className="text-[11px] font-extrabold uppercase tracking-widest text-green-400 mb-0.5">New</p>
               <p className="text-sm font-bold text-white leading-snug">Admissions Hub — scholarships, deadlines &amp; school gists</p>

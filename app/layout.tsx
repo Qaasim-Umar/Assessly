@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { PostHogProvider } from "@/components/PostHogProvider";
 import "./globals.css";
 
-const BASE_URL = "https://assessly.app";
+const BASE_URL = "https://www.assessly.ng";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       "Create, manage and deliver Computer-Based Tests in minutes. Free practice exams for WAEC, JAMB & NECO. No account needed.",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: `${BASE_URL}/opengraph-image.png`,
         width: 1200,
         height: 630,
         alt: "Assessly - Smart CBT Exam Platform for Nigerian Schools",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Assessly - Smart CBT Exams for Nigerian Schools",
     description:
       "Create, manage and deliver Computer-Based Tests in minutes. Free WAEC, JAMB & NECO practice exams.",
-    images: ["/opengraph-image.png"],
+    images: [`${BASE_URL}/opengraph-image.png`],
     creator: "@assessly",
   },
   alternates: {

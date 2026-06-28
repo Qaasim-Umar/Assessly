@@ -234,7 +234,7 @@ D. Mutation`}
                         </p>
                         {warnCount > 0 && (
                             <p className="text-[11px] text-amber-600 font-semibold">
-                                ⚠ {warnCount} question{warnCount > 1 ? "s" : ""} missing a correct answer
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>{warnCount} question{warnCount > 1 ? "s" : ""} missing a correct answer
                             </p>
                         )}
                     </div>
@@ -261,13 +261,13 @@ D. Mutation`}
                                                         {LETTERS[oi]}
                                                     </span>
                                                     <span className={p.correctAnswer === oi ? "text-green-800 font-medium" : "text-gray-700"}>{opt}</span>
-                                                    {p.correctAnswer === oi && <span className="ml-auto text-green-600 font-bold">✓</span>}
+                                                    {p.correctAnswer === oi && <span className="ml-auto text-green-600"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>}
                                                 </div>
                                             ))}
                                         </div>
                                         {p.correctAnswer < 0 && (
                                             <p className="text-amber-600 font-semibold text-[11px]">
-                                                ⚠ No correct answer marked. Add <code className="bg-amber-100 px-1 rounded">*</code> after the correct option
+                                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-1"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>No correct answer marked. Add <code className="bg-amber-100 px-1 rounded">*</code> after the correct option
                                             </p>
                                         )}
                                     </>
@@ -592,7 +592,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                             </div>
                             <p className="text-[11px] text-gray-400">
                                 {form.correctAnswer >= 0
-                                    ? <span className="text-green-600 font-semibold">✓ Correct answer: {LETTERS[form.correctAnswer]}</span>
+                                    ? <span className="text-green-600 font-semibold inline-flex items-center gap-0.5"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Correct answer: {LETTERS[form.correctAnswer]}</span>
                                     : "Click a letter (A–D) to mark the correct answer."}
                             </p>
                         </div>
@@ -654,7 +654,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                                         )}
                                         {q.type === "MCQ" && q.correctAnswer !== undefined && q.correctAnswer >= 0 && (
                                             <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 text-green-700">
-                                                ✓ {LETTERS[q.correctAnswer]}
+                                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="inline mr-0.5"><path d="M20 6 9 17l-5-5"/></svg>{LETTERS[q.correctAnswer]}
                                             </span>
                                         )}
                                         {q.type === "MCQ" && (q.correctAnswer === undefined || q.correctAnswer < 0) && (

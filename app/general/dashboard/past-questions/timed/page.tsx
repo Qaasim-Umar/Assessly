@@ -279,7 +279,8 @@ function TimedExamPage() {
 
     // ── RESULTS SCREEN ────────────────────────────────────────────────────────
     if (submitted && results) {
-        const emoji = results.pct >= 80 ? "🎉" : results.pct >= 50 ? "👍" : "💪";
+        const resultColor = results.pct >= 80 ? "#22c55e" : results.pct >= 50 ? "#f59e0b" : "#ef4444";
+        const resultBg = results.pct >= 80 ? "#f0fdf4" : results.pct >= 50 ? "#fffbeb" : "#fef2f2";
         const autoSubmitted = timeLeft === 0;
         return (
             <div className="min-h-screen bg-[#f0f2f5]">
@@ -307,7 +308,14 @@ function TimedExamPage() {
 
                     {/* Score card */}
                     <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-8 text-center">
-                        <p className="text-4xl mb-3">{emoji}</p>
+                        <div className="flex items-center justify-center w-16 h-16 rounded-full mx-auto mb-3" style={{ background: resultBg }}>
+                            {results.pct >= 80
+                                ? <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={resultColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                                : results.pct >= 50
+                                ? <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={resultColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                                : <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={resultColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+                            }
+                        </div>
                         <h2 className="text-2xl font-extrabold text-gray-900">{results.correct} / {results.total}</h2>
                         <p className="text-sm text-gray-500 mt-1">{results.pct}% correct · {subject} {year}</p>
                         <div className="mt-5 w-full bg-gray-100 rounded-full h-3 overflow-hidden">

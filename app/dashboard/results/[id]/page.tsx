@@ -190,7 +190,7 @@ function SubmissionRow({
                         )}
                         {isGraded && (
                             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-100 text-green-700 border border-green-200 whitespace-nowrap">
-                                ✓ Graded
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="inline mr-0.5"><path d="M20 6 9 17l-5-5"/></svg>Graded
                             </span>
                         )}
                     </div>

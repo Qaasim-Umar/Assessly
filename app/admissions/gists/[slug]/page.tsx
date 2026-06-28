@@ -6,6 +6,7 @@ import GistMarkdown from "@/components/GistMarkdown";
 import ReactionBar from "../../_components/ReactionBar";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
+import { Calendar, Eye, Building2 } from "lucide-react";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
@@ -39,10 +40,13 @@ export async function generateMetadata({
     .single();
   if (!data) return { title: "Not Found" };
   const first = stripMarkdown((data.paragraphs as string[])[0] ?? "");
+  const url = `https://www.assessly.ng/admissions/gists/${slug}`;
   return {
     title: `${data.title} | Assessly Admissions Hub`,
     description: first,
-    openGraph: { title: data.title, description: first, type: "article" },
+    alternates: { canonical: url },
+    openGraph: { title: data.title, description: first, type: "article", url, siteName: "Assessly" },
+    twitter: { card: "summary_large_image", title: data.title, description: first },
   };
 }
 
@@ -92,7 +96,7 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
           </nav>
 
           <span className={`inline-flex items-center gap-1.5 text-[13px] font-extrabold tracking-wide uppercase mb-4 bg-white/10 px-3 py-1.5 rounded-full ${g.tag_color}`}>
-            🏫 {g.tag}
+            <Building2 size={13} /> {g.tag}
           </span>
 
           <h1
@@ -103,9 +107,9 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
           </h1>
 
           <div className="flex items-center gap-4 text-sm text-white/35 flex-wrap mb-5">
-            <span>📅 {g.date_label}</span>
-            <span>👁 {g.views} views</span>
-            <span>🏫 {g.school}</span>
+            <span className="flex items-center gap-1"><Calendar size={13} /> {g.date_label}</span>
+            <span className="flex items-center gap-1"><Eye size={13} /> {g.views} views</span>
+            <span className="flex items-center gap-1"><Building2 size={13} /> {g.school}</span>
           </div>
 
           <ReactionBar initial={g.reactions} dark gistId={g.id} />
@@ -161,7 +165,7 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
             {upcomingDeadlines && upcomingDeadlines.length > 0 && (
               <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">
                 <div className="px-5 py-4 border-b border-gray-200">
-                  <h3 className="text-base font-extrabold text-[#0d1a0f]">📅 Coming Up</h3>
+                  <h3 className="text-base font-extrabold text-[#0d1a0f] flex items-center gap-2"><Calendar size={15} /> Coming Up</h3>
                 </div>
                 <div className="px-5 py-4">
                   {upcomingDeadlines.map((d, i, arr) => (

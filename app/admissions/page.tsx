@@ -7,6 +7,7 @@ import InlineMarkdown from "@/components/InlineMarkdown";
 import LiveTicker from "./_components/LiveTicker";
 import SearchBar from "./_components/SearchBar";
 import { supabase } from "@/lib/supabase";
+import { Newspaper, Trophy, Calendar, Eye, Building2, Flame } from "lucide-react";
 import "../landing/landing.css";
 
 export const revalidate = 60;
@@ -29,14 +30,14 @@ export const metadata: Metadata = {
     description:
       "Scholarships, admission deadlines, cut-off marks, and school gists for Nigerian university applicants — all in one place.",
     type: "website",
-    url: "https://assessly.ng/admissions",
+    url: "https://www.assessly.ng/admissions",
   },
   twitter: {
     card: "summary_large_image",
     title: "Admissions Hub | Assessly",
     description: "Nigerian university scholarships, JAMB deadlines, and school gists — updated weekly.",
   },
-  alternates: { canonical: "https://assessly.ng/admissions" },
+  alternates: { canonical: "https://www.assessly.ng/admissions" },
 };
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -170,13 +171,13 @@ function DeadlineCard({ day, month, urgency, title, desc, badge }: {
 }
 
 function SidebarCard({ icon, title, action, children }: {
-  icon?: string; title: string; action?: { label: string; href: string }; children: React.ReactNode;
+  icon?: React.ReactNode; title: string; action?: { label: string; href: string }; children: React.ReactNode;
 }) {
   return (
     <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">
       <div className="px-5 py-4 border-b border-gray-200 flex items-center justify-between">
-        <h3 className="text-base font-extrabold text-[#0d1a0f]">
-          {icon && <span className="mr-2">{icon}</span>}{title}
+        <h3 className="text-base font-extrabold text-[#0d1a0f] flex items-center gap-2">
+          {icon && <span className="text-[#4a5e4e]">{icon}</span>}{title}
         </h3>
         {action && <a href={action.href} className="text-sm font-bold text-green-600">{action.label}</a>}
       </div>
@@ -187,18 +188,49 @@ function SidebarCard({ icon, title, action, children }: {
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 
-export default async function AdmissionsHubPage() {
+export default async function AdmissionsHubPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>;
+}) {
+  const { q } = await searchParams;
+  const query = q?.trim() ?? "";
+
+  const gistsQuery = supabase
+    .from("admissions_gists")
+    .select("id,slug,tag,tag_color,title,desc,date_label,school,views,reactions,is_trending,is_featured,is_new_this_week")
+    .eq("published", true)
+    .order("created_at", { ascending: false });
+
+  const scholarshipsQuery = supabase
+    .from("admissions_scholarships")
+    .select("id,slug,icon,icon_bg,title,description,amount_label,deadline_label,days_left,category,is_open")
+    .eq("published", true)
+    .order("created_at", { ascending: false });
+
+  const deadlinesQuery = supabase
+    .from("admissions_deadlines")
+    .select("id,title,desc,day_label,month_label,urgency,badge")
+    .eq("published", true)
+    .order("deadline_date", { ascending: true });
+
+  if (query) {
+    gistsQuery.or(`title.ilike.%${query}%,desc.ilike.%${query}%`);
+    scholarshipsQuery.or(`title.ilike.%${query}%,description.ilike.%${query}%`);
+    deadlinesQuery.or(`title.ilike.%${query}%,desc.ilike.%${query}%`);
+  }
+
   const [{ data: gistsRaw }, { data: scholarshipsRaw }, { data: deadlinesRaw }] = await Promise.all([
-    supabase.from("admissions_gists").select("id,slug,tag,tag_color,title,desc,date_label,school,views,reactions,is_trending,is_featured,is_new_this_week").eq("published", true).order("created_at", { ascending: false }),
-    supabase.from("admissions_scholarships").select("id,slug,icon,icon_bg,title,description,amount_label,deadline_label,days_left,category,is_open").eq("published", true).order("created_at", { ascending: false }),
-    supabase.from("admissions_deadlines").select("id,title,desc,day_label,month_label,urgency,badge").eq("published", true).order("deadline_date", { ascending: true }),
+    gistsQuery,
+    scholarshipsQuery,
+    deadlinesQuery,
   ]);
 
   const gists: DbGist[] = (gistsRaw ?? []) as DbGist[];
   const scholarships: DbScholarship[] = (scholarshipsRaw ?? []) as DbScholarship[];
   const deadlines: DbDeadline[] = (deadlinesRaw ?? []) as DbDeadline[];
 
-  const featuredGist = gists.find(g => g.is_featured) ?? gists[0] ?? null;
+  const featuredGist = query ? null : (gists.find(g => g.is_featured) ?? gists[0] ?? null);
   const regularGists = gists.filter(g => g.id !== featuredGist?.id);
   const newThisWeek = gists.find(g => g.is_new_this_week) ?? null;
   const trendingGists = [...gists].slice(0, 5);
@@ -278,13 +310,20 @@ export default async function AdmissionsHubPage() {
         <div>
           <SearchBar />
 
-          <FilterBar />
+          {query && (
+            <p className="text-sm text-[#4a5e4e] mb-5">
+              Showing results for <span className="font-bold text-[#0d1a0f]">&ldquo;{query}&rdquo;</span>
+              {" · "}{gists.length + scholarships.length + deadlines.length} found
+            </p>
+          )}
+
+          {!query && <FilterBar />}
 
           {/* ── SCHOOL GISTS ── */}
           <section className="mb-12" aria-label="School Gists">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-lg">📰</div>
+                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-600"><Newspaper size={20} /></div>
                 <h2 className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]" style={{ fontFamily: "'Lora', Georgia, serif" }}>School Gists</h2>
               </div>
               <a href="#" className="text-base font-bold text-green-600 hover:underline">See all →</a>
@@ -303,7 +342,7 @@ export default async function AdmissionsHubPage() {
                   <div>
                     {featuredGist.is_trending && (
                       <span className="inline-flex items-center gap-1.5 text-[13px] font-extrabold tracking-wide uppercase text-green-500 bg-green-500/15 px-2.5 py-1 rounded-full mb-4">
-                        🔥 Trending
+                        <Flame size={13} /> Trending
                       </span>
                     )}
                     <h3 className="text-[26px] text-white leading-tight tracking-[-0.5px] mb-2.5" style={{ fontFamily: "'Lora', Georgia, serif" }}>
@@ -313,9 +352,9 @@ export default async function AdmissionsHubPage() {
                   </div>
                   <div>
                     <div className="flex items-center gap-3 text-sm text-white/35 flex-wrap">
-                      <span>📅 {featuredGist.date_label}</span>
-                      <span>👁 {featuredGist.views} views</span>
-                      <span>🏫 {featuredGist.school}</span>
+                      <span className="flex items-center gap-1"><Calendar size={13} /> {featuredGist.date_label}</span>
+                      <span className="flex items-center gap-1"><Eye size={13} /> {featuredGist.views} views</span>
+                      <span className="flex items-center gap-1"><Building2 size={13} /> {featuredGist.school}</span>
                     </div>
                     <ReactionBar initial={featuredGist.reactions} dark gistId={featuredGist.id} />
                   </div>
@@ -359,7 +398,7 @@ export default async function AdmissionsHubPage() {
           <section className="mb-12" aria-label="Scholarships">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-lg">🏆</div>
+                <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600"><Trophy size={20} /></div>
                 <h2 className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]" style={{ fontFamily: "'Lora', Georgia, serif" }}>Scholarships</h2>
               </div>
               <a href="#" className="text-base font-bold text-green-600 hover:underline">See all →</a>
@@ -392,7 +431,7 @@ export default async function AdmissionsHubPage() {
           <section className="mb-12" aria-label="Admission Deadlines">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center text-lg">📅</div>
+                <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center text-rose-600"><Calendar size={20} /></div>
                 <h2 className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]" style={{ fontFamily: "'Lora', Georgia, serif" }}>Admission Deadlines</h2>
               </div>
               <a href="#" className="text-base font-bold text-green-600 hover:underline">See all →</a>
@@ -464,7 +503,7 @@ export default async function AdmissionsHubPage() {
 
           {/* Coming Up */}
           {deadlines.length > 0 && (
-            <SidebarCard icon="📅" title="Coming Up" action={{ label: "All deadlines", href: "#" }}>
+            <SidebarCard icon={<Calendar size={16} />} title="Coming Up" action={{ label: "All deadlines", href: "#" }}>
               {deadlines.slice(0, 4).map((d, i, arr) => (
                 <div key={d.id} className={`flex items-start gap-3 py-3 ${i < arr.length - 1 ? "border-b border-gray-200" : ""}`}>
                   <span className={`w-2 h-2 rounded-full flex-shrink-0 mt-1.5 ${dotColor[d.urgency] ?? "bg-gray-400"}`} />
@@ -481,7 +520,7 @@ export default async function AdmissionsHubPage() {
           {trendingGists.length > 0 && (
             <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">
               <div className="px-5 py-4 border-b border-gray-200">
-                <h3 className="text-base font-extrabold text-[#0d1a0f]">🔥 Trending</h3>
+                <h3 className="text-base font-extrabold text-[#0d1a0f] flex items-center gap-2"><Flame size={15} className="text-orange-500" /> Trending</h3>
               </div>
               <div className="px-5 py-1">
                 {trendingGists.map((g, i, arr) => (
