@@ -23,6 +23,14 @@ const ACTIVE_DARK: Record<ReactionType, string> = {
 
 const VALID: ReactionType[] = ["fire", "think"];
 
+async function callReaction(gistId: string, type: ReactionType, action: "increment" | "decrement") {
+  await fetch("/api/reactions", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ gistId, type, action }),
+  });
+}
+
 export default function ReactionBar({
   initial,
   dark = false,
@@ -39,13 +47,13 @@ export default function ReactionBar({
   useEffect(() => {
     if (!gistId) return;
 
-    // Restore which emoji this user picked (local only — not counts)
+    // Restore which reaction this user picked
     const saved = localStorage.getItem(`reaction_${gistId}`);
     if (saved && VALID.includes(saved as ReactionType)) {
       setActive(saved as ReactionType);
     }
 
-    // Always fetch real counts from DB — the source of truth
+    // Fetch real counts from DB
     supabase
       .from("admissions_gists")
       .select("reactions")
@@ -59,27 +67,26 @@ export default function ReactionBar({
   async function react(type: ReactionType, e: React.MouseEvent) {
     e.preventDefault();
     e.stopPropagation();
+    if (!gistId) return;
 
     if (active === type) {
+      // Toggle off
       setCounts(p => ({ ...p, [type]: Math.max(0, p[type] - 1) }));
       setActive(null);
-      if (gistId) {
-        localStorage.removeItem(`reaction_${gistId}`);
-        supabase.rpc("decrement_reaction", { gist_id: gistId, reaction_type: type });
-        posthog.capture("admissions_reaction_removed", { gist_id: gistId, reaction: type });
-      }
+      localStorage.removeItem(`reaction_${gistId}`);
+      callReaction(gistId, type, "decrement");
+      posthog.capture("admissions_reaction_removed", { gist_id: gistId, reaction: type });
     } else {
+      // Switch from previous reaction if any
       if (active) {
         setCounts(p => ({ ...p, [active]: Math.max(0, p[active] - 1) }));
-        if (gistId) supabase.rpc("decrement_reaction", { gist_id: gistId, reaction_type: active });
+        callReaction(gistId, active, "decrement");
       }
       setCounts(p => ({ ...p, [type]: p[type] + 1 }));
       setActive(type);
-      if (gistId) {
-        localStorage.setItem(`reaction_${gistId}`, type);
-        supabase.rpc("increment_reaction", { gist_id: gistId, reaction_type: type });
-        posthog.capture("admissions_reaction_added", { gist_id: gistId, reaction: type });
-      }
+      localStorage.setItem(`reaction_${gistId}`, type);
+      callReaction(gistId, type, "increment");
+      posthog.capture("admissions_reaction_added", { gist_id: gistId, reaction: type });
     }
   }
 
