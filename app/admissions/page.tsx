@@ -516,6 +516,26 @@ export default async function AdmissionsHubPage({
             </SidebarCard>
           )}
 
+          {/* Practice CTA */}
+          <div className="bg-green-600 rounded-2xl p-6">
+            <div className="flex items-center gap-1.5 text-[13px] font-extrabold tracking-widest uppercase text-green-100 mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-white flex-shrink-0" />
+              Free Practice
+            </div>
+            <h3 className="text-[22px] text-white font-extrabold leading-tight tracking-tight mb-2">
+              Prep for JAMB &amp; WAEC, right here
+            </h3>
+            <p className="text-base text-white/70 leading-relaxed mb-5">
+              Practice Mode, Past Questions, JAMB Simulator and more. No sign-up needed.
+            </p>
+            <a
+              href="/general"
+              className="block text-center text-base font-bold text-green-700 bg-white rounded-lg py-3 hover:opacity-90 transition-opacity"
+            >
+              Start practising →
+            </a>
+          </div>
+
           {/* Trending */}
           {trendingGists.length > 0 && (
             <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">

@@ -163,8 +163,13 @@ function SmallCard({
           <p className="text-sm text-gray-500 mt-1 leading-relaxed">{card.description}</p>
         </div>
 
-        {/* tag / loading */}
-        {isLoading ? (
+        {/* tag */}
+        {!isLoading && (
+          <span className={`self-start text-[11px] font-semibold px-2.5 py-1 rounded-full border ${card.accent.tagBg} ${card.accent.tagText} ${card.accent.tagBorder}`}>
+            {card.tag}
+          </span>
+        )}
+        {isLoading && (
           <div className="flex items-center gap-2">
             <svg className="w-3.5 h-3.5 animate-spin text-gray-400" fill="none" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" className="opacity-25" />
@@ -172,12 +177,15 @@ function SmallCard({
             </svg>
             <span className="text-xs text-gray-400 font-medium">Opening…</span>
           </div>
-        ) : (
-          <span className={`self-start text-[11px] font-semibold px-2.5 py-1 rounded-full border ${card.accent.tagBg} ${card.accent.tagText} ${card.accent.tagBorder}`}>
-            {card.tag}
-          </span>
         )}
       </div>
+
+      {/* Start button — bottom right */}
+      {!isLoading && (
+        <span className="absolute bottom-4 right-4 text-xs font-bold text-white bg-gray-800 group-hover:bg-gray-900 px-3 py-1.5 rounded-lg transition-colors">
+          Start
+        </span>
+      )}
     </div>
   );
 }
@@ -267,13 +275,18 @@ export default function GeneralModePage() {
                     <span className="text-sm text-gray-400 font-medium">Opening…</span>
                   </div>
                 ) : (
-                  <div className="flex gap-6">
-                    {([["180", "Questions"], ["4", "Subjects"], ["2 hr", "Timer"]] as const).map(([v, k]) => (
-                      <div key={k}>
-                        <div className="text-lg font-extrabold text-green-700">{v}</div>
-                        <div className="text-[10px] text-gray-400 font-semibold uppercase tracking-wide">{k}</div>
-                      </div>
-                    ))}
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="flex gap-6">
+                      {([["180", "Questions"], ["4", "Subjects"], ["2 hr", "Timer"]] as const).map(([v, k]) => (
+                        <div key={k}>
+                          <div className="text-lg font-extrabold text-green-700">{v}</div>
+                          <div className="text-[10px] text-gray-400 font-semibold uppercase tracking-wide">{k}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <span className="text-sm font-bold text-white bg-green-600 px-4 py-2 rounded-lg group-hover:bg-green-700 transition-colors flex-shrink-0">
+                      Start →
+                    </span>
                   </div>
                 )}
               </div>
