@@ -7,6 +7,7 @@ import ReactionBar from "../../_components/ReactionBar";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
 import { Calendar, Eye, Building2 } from "lucide-react";
+import ShareBar from "@/components/ShareBar";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
@@ -113,6 +114,9 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
           </div>
 
           <ReactionBar initial={g.reactions} dark gistId={g.id} />
+          <div className="mt-4">
+            <ShareBar title={g.title} url={`https://www.assessly.ng/admissions/gists/${g.slug}`} />
+          </div>
         </div>
       </div>
 
