@@ -12,33 +12,46 @@ import "../landing/landing.css";
 
 export const revalidate = 60;
 
-export const metadata: Metadata = {
-  title: "Admissions Hub | Assessly — Nigerian University Scholarships & Deadlines",
-  description:
-    "Find Nigerian university scholarships, admission deadlines, cut-off marks, and school gists. Shell, FGN, MTN scholarships and JAMB CAPS deadlines — all updated weekly.",
-  keywords: [
-    "Nigerian university scholarships",
-    "JAMB CAPS",
-    "UNILAG Post-UTME",
-    "university admission deadlines Nigeria",
-    "Shell Nigeria scholarship",
-    "OAU admission list",
-    "university cut-off marks",
-  ],
-  openGraph: {
-    title: "Admissions Hub | Assessly",
-    description:
-      "Scholarships, admission deadlines, cut-off marks, and school gists for Nigerian university applicants — all in one place.",
-    type: "website",
-    url: "https://www.assessly.ng/admissions",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Admissions Hub | Assessly",
-    description: "Nigerian university scholarships, JAMB deadlines, and school gists — updated weekly.",
-  },
-  alternates: { canonical: "https://www.assessly.ng/admissions" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { data } = await supabase
+    .from("admissions_deadlines")
+    .select("title")
+    .eq("published", true)
+    .order("deadline_date", { ascending: true })
+    .limit(3);
+
+  const top = (data ?? []) as { title: string }[];
+
+  const dynamicDesc = top.length > 0
+    ? `Upcoming deadlines: ${top.map((d) => d.title).join(" · ")}. Find Nigerian university scholarships, admission cut-off marks, and school gists — updated weekly.`
+    : "Find Nigerian university scholarships, admission deadlines, cut-off marks, and school gists. Shell, FGN, MTN scholarships and JAMB CAPS deadlines — all updated weekly.";
+
+  return {
+    title: "Admissions Hub | Assessly — Nigerian University Scholarships & Deadlines",
+    description: dynamicDesc,
+    keywords: [
+      "Nigerian university scholarships",
+      "JAMB CAPS",
+      "UNILAG Post-UTME",
+      "university admission deadlines Nigeria",
+      "Shell Nigeria scholarship",
+      "OAU admission list",
+      "university cut-off marks",
+    ],
+    openGraph: {
+      title: "Admissions Hub | Assessly",
+      description: dynamicDesc,
+      type: "website",
+      url: "https://www.assessly.ng/admissions",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Admissions Hub | Assessly",
+      description: dynamicDesc,
+    },
+    alternates: { canonical: "https://www.assessly.ng/admissions" },
+  };
+}
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -237,6 +250,31 @@ export default async function AdmissionsHubPage({
 
   const dotColor: Record<string, string> = { urgent: "bg-rose-500", soon: "bg-amber-500", open: "bg-green-500" };
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Nigerian University Admission Deadlines",
+    "description": "Upcoming admission deadlines for Nigerian universities, updated weekly.",
+    "url": "https://www.assessly.ng/admissions",
+    "numberOfItems": deadlines.length,
+    "itemListElement": deadlines.map((d, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Event",
+        "name": d.title,
+        "description": d.desc,
+        "url": "https://www.assessly.ng/admissions",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "organizer": {
+          "@type": "Organization",
+          "name": "Assessly",
+          "url": "https://www.assessly.ng",
+        },
+      },
+    })),
+  };
+
   function scholarshipTags(s: DbScholarship): { label: string; style: string }[] {
     const tags: { label: string; style: string }[] = [];
     if (s.amount_label) tags.push({ label: s.amount_label, style: "bg-amber-100 text-amber-600" });
@@ -250,6 +288,10 @@ export default async function AdmissionsHubPage({
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <style>{`
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         .ticker-anim { animation: ticker 22s -8s linear infinite; }
