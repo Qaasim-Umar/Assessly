@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
+import { Suspense, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
-import TabBar from "./_components/TabBar";
+import TabBar, { type TabId } from "./_components/TabBar";
 import FilterBar from "./_components/FilterBar";
 import ReactionBar from "./_components/ReactionBar";
 import InlineMarkdown from "@/components/InlineMarkdown";
@@ -9,49 +11,6 @@ import SearchBar from "./_components/SearchBar";
 import { supabase } from "@/lib/supabase";
 import { Newspaper, Trophy, Calendar, Eye, Building2, Flame } from "lucide-react";
 import "../landing/landing.css";
-
-export const revalidate = 60;
-
-export async function generateMetadata(): Promise<Metadata> {
-  const { data } = await supabase
-    .from("admissions_deadlines")
-    .select("title")
-    .eq("published", true)
-    .order("deadline_date", { ascending: true })
-    .limit(3);
-
-  const top = (data ?? []) as { title: string }[];
-
-  const dynamicDesc = top.length > 0
-    ? `Upcoming deadlines: ${top.map((d) => d.title).join(" · ")}. Find Nigerian university scholarships, admission cut-off marks, and school gists — updated weekly.`
-    : "Find Nigerian university scholarships, admission deadlines, cut-off marks, and school gists. Shell, FGN, MTN scholarships and JAMB CAPS deadlines — all updated weekly.";
-
-  return {
-    title: "Admissions Hub | Assessly — Nigerian University Scholarships & Deadlines",
-    description: dynamicDesc,
-    keywords: [
-      "Nigerian university scholarships",
-      "JAMB CAPS",
-      "UNILAG Post-UTME",
-      "university admission deadlines Nigeria",
-      "Shell Nigeria scholarship",
-      "OAU admission list",
-      "university cut-off marks",
-    ],
-    openGraph: {
-      title: "Admissions Hub | Assessly",
-      description: dynamicDesc,
-      type: "website",
-      url: "https://www.assessly.ng/admissions",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "Admissions Hub | Assessly",
-      description: dynamicDesc,
-    },
-    alternates: { canonical: "https://www.assessly.ng/admissions" },
-  };
-}
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -201,54 +160,53 @@ function SidebarCard({ icon, title, action, children }: {
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 
-export default async function AdmissionsHubPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ q?: string }>;
-}) {
-  const { q } = await searchParams;
-  const query = q?.trim() ?? "";
+export default function AdmissionsHubPage() {
+  const [activeTab, setActiveTab] = useState<TabId>("all");
+  const [gists, setGists] = useState<DbGist[]>([]);
+  const [scholarships, setScholarships] = useState<DbScholarship[]>([]);
+  const [deadlines, setDeadlines] = useState<DbDeadline[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const gistsQuery = supabase
-    .from("admissions_gists")
-    .select("id,slug,tag,tag_color,title,desc,date_label,school,views,reactions,is_trending,is_featured,is_new_this_week")
-    .eq("published", true)
-    .order("created_at", { ascending: false });
+  useEffect(() => {
+    async function fetchData() {
+      const [{ data: gistsRaw }, { data: scholarshipsRaw }, { data: deadlinesRaw }] = await Promise.all([
+        supabase
+          .from("admissions_gists")
+          .select("id,slug,tag,tag_color,title,desc,date_label,school,views,reactions,is_trending,is_featured,is_new_this_week")
+          .eq("published", true)
+          .order("created_at", { ascending: false }),
+        supabase
+          .from("admissions_scholarships")
+          .select("id,slug,icon,icon_bg,title,description,amount_label,deadline_label,days_left,category,is_open")
+          .eq("published", true)
+          .order("created_at", { ascending: false }),
+        supabase
+          .from("admissions_deadlines")
+          .select("id,title,desc,day_label,month_label,urgency,badge")
+          .eq("published", true)
+          .order("deadline_date", { ascending: true }),
+      ]);
 
-  const scholarshipsQuery = supabase
-    .from("admissions_scholarships")
-    .select("id,slug,icon,icon_bg,title,description,amount_label,deadline_label,days_left,category,is_open")
-    .eq("published", true)
-    .order("created_at", { ascending: false });
+      setGists((gistsRaw ?? []) as DbGist[]);
+      setScholarships((scholarshipsRaw ?? []) as DbScholarship[]);
+      setDeadlines((deadlinesRaw ?? []) as DbDeadline[]);
+      setLoading(false);
+    }
 
-  const deadlinesQuery = supabase
-    .from("admissions_deadlines")
-    .select("id,title,desc,day_label,month_label,urgency,badge")
-    .eq("published", true)
-    .order("deadline_date", { ascending: true });
+    fetchData();
+  }, []);
 
-  if (query) {
-    gistsQuery.or(`title.ilike.%${query}%,desc.ilike.%${query}%`);
-    scholarshipsQuery.or(`title.ilike.%${query}%,description.ilike.%${query}%`);
-    deadlinesQuery.or(`title.ilike.%${query}%,desc.ilike.%${query}%`);
-  }
-
-  const [{ data: gistsRaw }, { data: scholarshipsRaw }, { data: deadlinesRaw }] = await Promise.all([
-    gistsQuery,
-    scholarshipsQuery,
-    deadlinesQuery,
-  ]);
-
-  const gists: DbGist[] = (gistsRaw ?? []) as DbGist[];
-  const scholarships: DbScholarship[] = (scholarshipsRaw ?? []) as DbScholarship[];
-  const deadlines: DbDeadline[] = (deadlinesRaw ?? []) as DbDeadline[];
-
-  const featuredGist = query ? null : (gists.find(g => g.is_featured) ?? gists[0] ?? null);
+  const featuredGist = gists.find(g => g.is_featured) ?? gists[0] ?? null;
   const regularGists = gists.filter(g => g.id !== featuredGist?.id);
   const newThisWeek = gists.find(g => g.is_new_this_week) ?? null;
   const trendingGists = [...gists].slice(0, 5);
 
   const dotColor: Record<string, string> = { urgent: "bg-rose-500", soon: "bg-amber-500", open: "bg-green-500" };
+
+  // Filter content based on active tab
+  const showGists = activeTab === "all" || activeTab === "gists";
+  const showScholarships = activeTab === "all" || activeTab === "scholarships";
+  const showDeadlines = activeTab === "all" || activeTab === "deadlines";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -337,12 +295,16 @@ export default async function AdmissionsHubPage({
           <LiveTicker />
         </div>
 
-        <TabBar counts={{
-          all: gists.length + scholarships.length + deadlines.length,
-          gists: gists.length,
-          scholarships: scholarships.length,
-          deadlines: deadlines.length,
-        }} />
+        <TabBar 
+          counts={{
+            all: gists.length + scholarships.length + deadlines.length,
+            gists: gists.length,
+            scholarships: scholarships.length,
+            deadlines: deadlines.length,
+          }}
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
+        />
       </div>
 
       {/* ── MAIN ─────────────────────────────────────────────────────────── */}
@@ -350,19 +312,28 @@ export default async function AdmissionsHubPage({
 
         {/* FEED */}
         <div>
-          <SearchBar />
+          <Suspense fallback={
+            <div className="flex items-center gap-3 bg-white border border-gray-300 rounded-xl px-4 py-3 mb-5">
+              <svg className="w-5 h-5 text-[#9db5a3] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
+              </svg>
+              <div className="flex-1 text-base text-[#9db5a3]">Search...</div>
+            </div>
+          }>
+            <SearchBar />
+          </Suspense>
 
-          {query && (
-            <p className="text-sm text-[#4a5e4e] mb-5">
-              Showing results for <span className="font-bold text-[#0d1a0f]">&ldquo;{query}&rdquo;</span>
-              {" · "}{gists.length + scholarships.length + deadlines.length} found
-            </p>
+          {loading && (
+            <div className="flex items-center justify-center py-12">
+              <div className="animate-spin w-8 h-8 border-4 border-green-600 border-t-transparent rounded-full"></div>
+            </div>
           )}
 
-          {!query && <FilterBar />}
+          {!loading && <FilterBar />}
 
           {/* ── SCHOOL GISTS ── */}
-          <section className="mb-12" aria-label="School Gists">
+          {!loading && showGists && (
+            <section className="mb-12" aria-label="School Gists">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-600"><Newspaper size={20} /></div>
@@ -435,9 +406,11 @@ export default async function AdmissionsHubPage({
               </div>
             )}
           </section>
+          )}
 
           {/* ── SCHOLARSHIPS ── */}
-          <section className="mb-12" aria-label="Scholarships">
+          {!loading && showScholarships && (
+            <section className="mb-12" aria-label="Scholarships">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600"><Trophy size={20} /></div>
@@ -468,9 +441,11 @@ export default async function AdmissionsHubPage({
               </div>
             )}
           </section>
+          )}
 
           {/* ── DEADLINES ── */}
-          <section className="mb-12" aria-label="Admission Deadlines">
+          {!loading && showDeadlines && (
+            <section className="mb-12" aria-label="Admission Deadlines">
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center text-rose-600"><Calendar size={20} /></div>
@@ -499,6 +474,7 @@ export default async function AdmissionsHubPage({
               </div>
             )}
           </section>
+          )}
         </div>
 
         {/* ── SIDEBAR ── */}
