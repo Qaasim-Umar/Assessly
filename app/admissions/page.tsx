@@ -128,16 +128,34 @@ function DeadlineCard({ day, month, urgency, title, desc, badge }: {
 }) {
   const s = URGENCY_STYLES[urgency] ?? URGENCY_STYLES.open;
   return (
-    <div className="bg-white border border-gray-300 rounded-[18px] px-5 py-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center hover:border-green-200 transition-colors cursor-pointer">
-      <div className={`w-[60px] h-[60px] rounded-xl flex flex-col items-center justify-center flex-shrink-0 ${s.block}`}>
-        <span className={`text-2xl font-extrabold leading-none ${s.text}`}>{day}</span>
-        <span className={`text-[12px] font-extrabold tracking-wide uppercase ${s.text}`}>{month}</span>
+    <div className="bg-white border border-gray-300 rounded-[18px] p-4 sm:px-5 sm:py-4 hover:border-green-200 transition-colors cursor-pointer">
+      {/* Mobile: Stack vertically */}
+      <div className="flex sm:hidden flex-col gap-3">
+        <div className="flex items-center justify-between gap-3">
+          <div className={`w-[60px] h-[60px] rounded-xl flex flex-col items-center justify-center flex-shrink-0 ${s.block}`}>
+            <span className={`text-2xl font-extrabold leading-none ${s.text}`}>{day}</span>
+            <span className={`text-[12px] font-extrabold tracking-wide uppercase ${s.text}`}>{month}</span>
+          </div>
+          <span className={`text-[13px] font-extrabold tracking-wide px-3 py-1.5 rounded-full ${s.badge}`}>{badge}</span>
+        </div>
+        <div>
+          <h3 className="text-base font-bold text-[#0d1a0f] mb-0.5">{title}</h3>
+          <p className="text-sm text-[#4a5e4e]"><InlineMarkdown content={desc} /></p>
+        </div>
       </div>
-      <div>
-        <h3 className="text-base font-bold text-[#0d1a0f] mb-0.5">{title}</h3>
-        <p className="text-base text-[#4a5e4e]"><InlineMarkdown content={desc} /></p>
+
+      {/* Desktop: Grid layout */}
+      <div className="hidden sm:grid grid-cols-[auto_1fr_auto] gap-4 items-center">
+        <div className={`w-[60px] h-[60px] rounded-xl flex flex-col items-center justify-center flex-shrink-0 ${s.block}`}>
+          <span className={`text-2xl font-extrabold leading-none ${s.text}`}>{day}</span>
+          <span className={`text-[12px] font-extrabold tracking-wide uppercase ${s.text}`}>{month}</span>
+        </div>
+        <div>
+          <h3 className="text-base font-bold text-[#0d1a0f] mb-0.5">{title}</h3>
+          <p className="text-base text-[#4a5e4e]"><InlineMarkdown content={desc} /></p>
+        </div>
+        <span className={`text-[13px] font-extrabold tracking-wide px-3 py-1.5 rounded-full flex-shrink-0 ${s.badge}`}>{badge}</span>
       </div>
-      <span className={`text-[13px] font-extrabold tracking-wide px-3 py-1.5 rounded-full flex-shrink-0 ${s.badge}`}>{badge}</span>
     </div>
   );
 }

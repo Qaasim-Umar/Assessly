@@ -1,20 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Newspaper, BookOpen } from "lucide-react";
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
-export function LogoIcon({ size = 32 }: { size?: number }) {
-    return (
-        <svg width={size} height={size} viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" fill="#16a34a" />
-            <path d="M16 6.5L7 10.5V16C7 20.694 10.896 25.122 16 26.5C21.104 25.122 25 20.694 25 16V10.5L16 6.5Z"
-                fill="white" fillOpacity="0.15" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
-            <path d="M11 16L14.5 19.5L21 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-    );
+export function LogoIcon({ size = 30, variant = "color" }: { size?: number; variant?: "color" | "white" }) {
+    if (variant === "white") {
+        return <Image src="/assessly-icon-white.svg" alt="Assessly" width={size} height={size} style={{ display: 'block' }} />;
+    }
+    // default to color variant
+    return <Image src="/assessly-icon.svg" alt="Assessly" width={size} height={size} style={{ display: 'block' }} />;
 }
 
 const ADMISSIONS_ITEMS: { href: string; label: string; icon: React.ReactNode; comingSoon: boolean }[] = [

@@ -1,0 +1,5 @@
+<svg width="210" height="46" viewBox="0 0 210 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 22 L22 8 L36 22" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M8 36 L22 22 L36 36" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="50" y="33" font-family="Manrope, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="25" letter-spacing="-0.8" fill="#ffffff">Assess<tspan fill="#16a34a">ly</tspan></text>
+</svg>
