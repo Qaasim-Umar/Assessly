@@ -9,6 +9,7 @@ import InlineMarkdown from "@/components/InlineMarkdown";
 import LiveTicker from "./_components/LiveTicker";
 import SearchBar from "./_components/SearchBar";
 import { supabase } from "@/lib/supabase";
+import { useDeadlineCountdown } from "@/lib/admissionsDeadline";
 import { Newspaper, Trophy, Calendar, Eye, Building2, Flame } from "lucide-react";
 import "../landing/landing.css";
 
@@ -48,6 +49,7 @@ interface DbDeadline {
   id: string;
   title: string;
   desc: string;
+  deadline_date: string;
   day_label: string;
   month_label: string;
   urgency: "urgent" | "soon" | "open";
@@ -122,10 +124,10 @@ const URGENCY_STYLES = {
   open:   { block: "bg-green-100 border border-green-200", text: "text-green-600", badge: "bg-green-100 text-green-700" },
 };
 
-function DeadlineCard({ day, month, urgency, title, desc, badge }: {
-  day: string; month: string; urgency: "urgent" | "soon" | "open";
-  title: string; desc: string; badge: string;
+function DeadlineCard({ deadlineDate, title, desc }: {
+  deadlineDate: string; title: string; desc: string;
 }) {
+  const { day_label: day, month_label: month, urgency, badge } = useDeadlineCountdown(deadlineDate);
   const s = URGENCY_STYLES[urgency] ?? URGENCY_STYLES.open;
   return (
     <div className="bg-white border border-gray-300 rounded-[18px] p-4 sm:px-5 sm:py-4 hover:border-green-200 transition-colors cursor-pointer">
@@ -176,6 +178,21 @@ function SidebarCard({ icon, title, action, children }: {
   );
 }
 
+function ComingUpItem({ title, deadlineDate }: { title: string; deadlineDate: string }) {
+  const { urgency, badge } = useDeadlineCountdown(deadlineDate);
+  const dotColor: Record<string, string> = { urgent: "bg-rose-500", soon: "bg-amber-500", open: "bg-green-500" };
+
+  return (
+    <div className="flex items-start gap-3 py-3">
+      <span className={`w-2 h-2 rounded-full flex-shrink-0 mt-1.5 ${dotColor[urgency] ?? "bg-gray-400"}`} />
+      <div>
+        <strong className="text-base font-bold text-[#0d1a0f] block">{title}</strong>
+        <span className="text-sm text-[#9db5a3]">{badge}</span>
+      </div>
+    </div>
+  );
+}
+
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 export default function AdmissionsHubPage() {
@@ -200,7 +217,7 @@ export default function AdmissionsHubPage() {
           .order("created_at", { ascending: false }),
         supabase
           .from("admissions_deadlines")
-          .select("id,title,desc,day_label,month_label,urgency,badge")
+          .select("id,title,desc,deadline_date,day_label,month_label,urgency,badge")
           .eq("published", true)
           .order("deadline_date", { ascending: true }),
       ]);
@@ -218,8 +235,6 @@ export default function AdmissionsHubPage() {
   const regularGists = gists.filter(g => g.id !== featuredGist?.id);
   const newThisWeek = gists.find(g => g.is_new_this_week) ?? null;
   const trendingGists = [...gists].slice(0, 5);
-
-  const dotColor: Record<string, string> = { urgent: "bg-rose-500", soon: "bg-amber-500", open: "bg-green-500" };
 
   // Filter content based on active tab
   const showGists = activeTab === "all" || activeTab === "gists";
@@ -477,12 +492,9 @@ export default function AdmissionsHubPage() {
                 {deadlines.map(d => (
                   <DeadlineCard
                     key={d.id}
-                    day={d.day_label}
-                    month={d.month_label}
-                    urgency={d.urgency}
+                    deadlineDate={d.deadline_date}
                     title={d.title}
                     desc={d.desc}
-                    badge={d.badge}
                   />
                 ))}
               </div>
@@ -541,12 +553,8 @@ export default function AdmissionsHubPage() {
           {deadlines.length > 0 && (
             <SidebarCard icon={<Calendar size={16} />} title="Coming Up" action={{ label: "All deadlines", href: "#" }}>
               {deadlines.slice(0, 4).map((d, i, arr) => (
-                <div key={d.id} className={`flex items-start gap-3 py-3 ${i < arr.length - 1 ? "border-b border-gray-200" : ""}`}>
-                  <span className={`w-2 h-2 rounded-full flex-shrink-0 mt-1.5 ${dotColor[d.urgency] ?? "bg-gray-400"}`} />
-                  <div>
-                    <strong className="text-base font-bold text-[#0d1a0f] block">{d.title}</strong>
-                    <span className="text-sm text-[#9db5a3]">{d.badge}</span>
-                  </div>
+                <div key={d.id} className={i < arr.length - 1 ? "border-b border-gray-200" : ""}>
+                  <ComingUpItem title={d.title} deadlineDate={d.deadline_date} />
                 </div>
               ))}
             </SidebarCard>

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
+import { computeDeadlineFromDate } from "@/lib/admissionsDeadline";
 
 export interface DeadlineData {
     id?: string;
@@ -15,16 +16,6 @@ export interface DeadlineData {
     urgency: "urgent" | "soon" | "open";
     badge: string;            // "10 days left"
     published: boolean;
-}
-
-function computeFromDate(iso: string): Pick<DeadlineData, "day_label" | "month_label" | "urgency" | "badge"> {
-    const date = new Date(iso);
-    const diff = Math.ceil((date.getTime() - Date.now()) / 86400000);
-    const day_label = date.getDate().toString();
-    const month_label = date.toLocaleDateString("en-GB", { month: "short" });
-    const urgency: DeadlineData["urgency"] = diff < 0 ? "urgent" : diff < 14 ? "urgent" : diff < 30 ? "soon" : "open";
-    const badge = diff < 0 ? "Passed" : diff === 0 ? "Today!" : `${diff} days left`;
-    return { day_label, month_label, urgency, badge };
 }
 
 export default function DeadlineForm({ initial, mode }: { initial?: DeadlineData; mode: "new" | "edit" }) {
@@ -39,7 +30,7 @@ export default function DeadlineForm({ initial, mode }: { initial?: DeadlineData
 
     useEffect(() => {
         if (!form.deadline_date || urgencyOverride) return;
-        const computed = computeFromDate(form.deadline_date);
+        const computed = computeDeadlineFromDate(form.deadline_date);
         setForm(p => ({ ...p, ...computed }));
     }, [form.deadline_date, urgencyOverride]);
 
