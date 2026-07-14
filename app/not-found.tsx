@@ -1,12 +1,17 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  description: "The page you're looking for doesn't exist or has been moved.",
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4">
       <div className="text-center max-w-md">
-        <p className="text-8xl font-bold text-[#16a34a] leading-none">
-          404
-        </p>
+        <p className="text-8xl font-bold text-[#16a34a] leading-none">404</p>
         <h1 className="mt-4 text-2xl font-semibold text-gray-900">
           Page not found
         </h1>
