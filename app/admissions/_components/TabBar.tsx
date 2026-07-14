@@ -1,15 +1,11 @@
 "use client";
 
 import { usePostHog } from "posthog-js/react";
+import { ADMISSIONS_CATEGORIES, type CategorySlug } from "@/lib/admissionsCategories";
 
-export type TabId = "all" | "gists" | "scholarships" | "deadlines";
+export type TabId = "all" | CategorySlug;
 
-interface Counts {
-  all: number;
-  gists: number;
-  scholarships: number;
-  deadlines: number;
-}
+type Counts = { all: number } & Record<CategorySlug, number>;
 
 interface TabBarProps {
   counts: Counts;
@@ -21,10 +17,12 @@ export default function TabBar({ counts, activeTab, onTabChange }: TabBarProps) 
   const posthog = usePostHog();
 
   const TABS: { id: TabId; label: string; count: number }[] = [
-    { id: "all",           label: "All",           count: counts.all },
-    { id: "gists",         label: "School Gists",  count: counts.gists },
-    { id: "scholarships",  label: "Scholarships",  count: counts.scholarships },
-    { id: "deadlines",     label: "Deadlines",     count: counts.deadlines },
+    { id: "all", label: "All", count: counts.all },
+    ...ADMISSIONS_CATEGORIES.map((c) => ({
+      id: c.slug,
+      label: c.label,
+      count: counts[c.slug],
+    })),
   ];
 
   return (

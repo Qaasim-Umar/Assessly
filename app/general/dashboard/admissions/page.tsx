@@ -6,7 +6,25 @@ import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import { getGeneralAdminSession } from "@/lib/generalAdminAuth";
 
-type Tab = "gists" | "scholarships" | "deadlines";
+type Tab = "gists" | "scholarships" | "deadlines" | "cutoffs" | "nysc";
+
+interface Cutoff {
+    id: string;
+    slug: string;
+    school: string;
+    content: string;
+    published: boolean;
+    created_at: string;
+}
+interface Nysc {
+    id: string;
+    slug: string;
+    title: string;
+    batch_label: string | null;
+    content: string;
+    published: boolean;
+    created_at: string;
+}
 
 interface Gist {
     id: string;
@@ -54,6 +72,8 @@ export default function AdmissionsAdminPage() {
     const [gists, setGists] = useState<Gist[]>([]);
     const [scholarships, setScholarships] = useState<Scholarship[]>([]);
     const [deadlines, setDeadlines] = useState<Deadline[]>([]);
+    const [cutoffs, setCutoffs] = useState<Cutoff[]>([]);
+    const [nysc, setNysc] = useState<Nysc[]>([]);
     const [loading, setLoading] = useState(true);
     const [deletingId, setDeletingId] = useState<string | null>(null);
     const [error, setError] = useState("");
@@ -73,14 +93,18 @@ export default function AdmissionsAdminPage() {
         setLoading(true);
         setError("");
         try {
-            const [g, s, d] = await Promise.all([
+            const [g, s, d, c, n] = await Promise.all([
                 supabase.from("admissions_gists").select("id,slug,tag,title,published,is_trending,is_featured,is_new_this_week,created_at").order("created_at", { ascending: false }),
                 supabase.from("admissions_scholarships").select("id,slug,title,category,is_open,published,created_at").order("created_at", { ascending: false }),
                 supabase.from("admissions_deadlines").select("id,title,deadline_date,urgency,published,created_at").order("deadline_date", { ascending: true }),
+                supabase.from("admissions_cutoffs").select("id,slug,school,content,published,created_at").order("created_at", { ascending: false }),
+                supabase.from("admissions_nysc").select("id,slug,title,batch_label,content,published,created_at").order("created_at", { ascending: false }),
             ]);
             setGists(g.data ?? []);
             setScholarships(s.data ?? []);
             setDeadlines(d.data ?? []);
+            setCutoffs(c.data ?? []);
+            setNysc(n.data ?? []);
         } catch {
             setError("Failed to load content.");
         } finally {
@@ -88,30 +112,42 @@ export default function AdmissionsAdminPage() {
         }
     }
 
-    async function togglePublished(table: string, id: string, current: boolean, list: "gists" | "scholarships" | "deadlines") {
+    async function togglePublished(table: string, id: string, current: boolean, list: "gists" | "scholarships" | "deadlines" | "cutoffs" | "nysc") {
         await supabase.from(table).update({ published: !current }).eq("id", id);
         if (list === "gists") setGists(p => p.map(x => x.id === id ? { ...x, published: !current } : x));
         if (list === "scholarships") setScholarships(p => p.map(x => x.id === id ? { ...x, published: !current } : x));
         if (list === "deadlines") setDeadlines(p => p.map(x => x.id === id ? { ...x, published: !current } : x));
+        if (list === "cutoffs") setCutoffs(p => p.map(x => x.id === id ? { ...x, published: !current } : x));
+        if (list === "nysc") setNysc(p => p.map(x => x.id === id ? { ...x, published: !current } : x));
     }
 
-    async function handleDelete(table: string, id: string, list: "gists" | "scholarships" | "deadlines") {
+    async function handleDelete(table: string, id: string, list: "gists" | "scholarships" | "deadlines" | "cutoffs" | "nysc") {
         if (!confirm("Delete this item? This cannot be undone.")) return;
         setDeletingId(id);
         await supabase.from(table).delete().eq("id", id);
         if (list === "gists") setGists(p => p.filter(x => x.id !== id));
         if (list === "scholarships") setScholarships(p => p.filter(x => x.id !== id));
         if (list === "deadlines") setDeadlines(p => p.filter(x => x.id !== id));
+        if (list === "cutoffs") setCutoffs(p => p.filter(x => x.id !== id));
+        if (list === "nysc") setNysc(p => p.filter(x => x.id !== id));
         setDeletingId(null);
     }
 
-    const newHref = tab === "gists"
-        ? "/general/dashboard/admissions/gists/new"
-        : tab === "scholarships"
-            ? "/general/dashboard/admissions/scholarships/new"
-            : "/general/dashboard/admissions/deadlines/new";
+    const newHref = {
+        gists: "/general/dashboard/admissions/gists/new",
+        scholarships: "/general/dashboard/admissions/scholarships/new",
+        deadlines: "/general/dashboard/admissions/deadlines/new",
+        cutoffs: "/general/dashboard/admissions/cutoffs/new",
+        nysc: "/general/dashboard/admissions/nysc/new",
+    }[tab];
 
-    const newLabel = tab === "gists" ? "New Gist" : tab === "scholarships" ? "New Scholarship" : "New Deadline";
+    const newLabel = {
+        gists: "New Gist",
+        scholarships: "New Scholarship",
+        deadlines: "New Deadline",
+        cutoffs: "New Cutoff Mark",
+        nysc: "New NYSC Post",
+    }[tab];
 
     return (
         <div className="min-h-screen bg-[#f0f2f5]">
@@ -162,11 +198,13 @@ export default function AdmissionsAdminPage() {
                 </div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
                     {[
                         { label: "Gists", icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>, value: gists.length, color: "bg-green-50 text-green-600" },
                         { label: "Scholarships", icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>, value: scholarships.length, color: "bg-amber-50 text-amber-600" },
                         { label: "Deadlines", icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>, value: deadlines.length, color: "bg-rose-50 text-rose-600" },
+                        { label: "Cutoff Marks", icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>, value: cutoffs.length, color: "bg-blue-50 text-blue-600" },
+                        { label: "NYSC", icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>, value: nysc.length, color: "bg-violet-50 text-violet-600" },
                     ].map(({ label, value, icon, color }) => (
                         <div key={label} className="bg-white border border-gray-200 rounded-xl p-5 flex items-center gap-4">
                             <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${color}`}>{icon}</div>
@@ -185,14 +223,14 @@ export default function AdmissionsAdminPage() {
                 )}
 
                 {/* Tabs */}
-                <div className="flex gap-1 mb-4 bg-white border border-gray-200 rounded-xl p-1 w-fit">
-                    {(["gists", "scholarships", "deadlines"] as Tab[]).map((t) => (
+                <div className="flex gap-1 mb-4 bg-white border border-gray-200 rounded-xl p-1 w-fit flex-wrap">
+                    {(["gists", "scholarships", "deadlines", "cutoffs", "nysc"] as Tab[]).map((t) => (
                         <button
                             key={t}
                             onClick={() => setTab(t)}
                             className={`px-4 py-1.5 text-xs font-bold rounded-lg capitalize transition-colors ${tab === t ? "bg-green-700 text-white" : "text-gray-500 hover:text-gray-700"}`}
                         >
-                            {t === "gists" ? "Gists" : t === "scholarships" ? "Scholarships" : "Deadlines"}
+                            {t === "gists" ? "Gists" : t === "scholarships" ? "Scholarships" : t === "deadlines" ? "Deadlines" : t === "cutoffs" ? "Cutoff Marks" : "NYSC"}
                         </button>
                     ))}
                 </div>
@@ -351,9 +389,96 @@ export default function AdmissionsAdminPage() {
                             </div>
                         </>
                     )}
+
+                    {tab === "cutoffs" && (
+                        <>
+                            <div className="px-5 py-3.5 border-b border-gray-100 flex items-center justify-between">
+                                <h2 className="text-sm font-bold text-gray-700">Cutoff Marks</h2>
+                                <span className="text-xs text-gray-400">{cutoffs.length} items</span>
+                            </div>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-sm">
+                                    <thead>
+                                        <tr className="border-b border-gray-100 bg-gray-50">
+                                            {["School", "Excerpt", "Status", "Created", "Actions"].map(h => (
+                                                <th key={h} className="px-4 py-3 text-left text-[11px] font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">{h}</th>
+                                            ))}
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-50">
+                                        {loading ? skeletonRows(5) : cutoffs.map(c => (
+                                            <tr key={c.id} className="hover:bg-gray-50 transition-colors">
+                                                <td className="px-4 py-3.5">
+                                                    <p className="font-semibold text-gray-900 text-xs max-w-[240px] truncate">{c.school}</p>
+                                                    <p className="text-[10px] text-gray-400 font-mono mt-0.5">/admissions/cutoffs/{c.slug}</p>
+                                                </td>
+                                                <td className="px-4 py-3.5 text-xs text-gray-500 max-w-[280px] truncate">{c.content}</td>
+                                                <td className="px-4 py-3.5">
+                                                    <PublishToggle published={c.published} onToggle={() => togglePublished("admissions_cutoffs", c.id, c.published, "cutoffs")} />
+                                                </td>
+                                                <td className="px-4 py-3.5 text-xs text-gray-400 whitespace-nowrap">{fmt(c.created_at)}</td>
+                                                <td className="px-4 py-3.5 whitespace-nowrap">
+                                                    <RowActions
+                                                        editHref={`/general/dashboard/admissions/cutoffs/${c.id}/edit`}
+                                                        onDelete={() => handleDelete("admissions_cutoffs", c.id, "cutoffs")}
+                                                        deleting={deletingId === c.id}
+                                                    />
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                                {!loading && cutoffs.length === 0 && <EmptyState label="cutoff marks" href="/general/dashboard/admissions/cutoffs/new" cta="Add first cutoff mark" />}
+                            </div>
+                        </>
+                    )}
+
+                    {tab === "nysc" && (
+                        <>
+                            <div className="px-5 py-3.5 border-b border-gray-100 flex items-center justify-between">
+                                <h2 className="text-sm font-bold text-gray-700">NYSC</h2>
+                                <span className="text-xs text-gray-400">{nysc.length} items</span>
+                            </div>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-sm">
+                                    <thead>
+                                        <tr className="border-b border-gray-100 bg-gray-50">
+                                            {["Title", "Batch", "Status", "Created", "Actions"].map(h => (
+                                                <th key={h} className="px-4 py-3 text-left text-[11px] font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">{h}</th>
+                                            ))}
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-50">
+                                        {loading ? skeletonRows(4) : nysc.map(n => (
+                                            <tr key={n.id} className="hover:bg-gray-50 transition-colors">
+                                                <td className="px-4 py-3.5">
+                                                    <p className="font-semibold text-gray-900 text-xs max-w-[260px] truncate">{n.title}</p>
+                                                    <p className="text-[10px] text-gray-400 font-mono mt-0.5">/admissions/nysc/{n.slug}</p>
+                                                </td>
+                                                <td className="px-4 py-3.5 text-xs text-gray-600 whitespace-nowrap">{n.batch_label || "—"}</td>
+                                                <td className="px-4 py-3.5">
+                                                    <PublishToggle published={n.published} onToggle={() => togglePublished("admissions_nysc", n.id, n.published, "nysc")} />
+                                                </td>
+                                                <td className="px-4 py-3.5 text-xs text-gray-400 whitespace-nowrap">{fmt(n.created_at)}</td>
+                                                <td className="px-4 py-3.5 whitespace-nowrap">
+                                                    <RowActions
+                                                        editHref={`/general/dashboard/admissions/nysc/${n.id}/edit`}
+                                                        onDelete={() => handleDelete("admissions_nysc", n.id, "nysc")}
+                                                        deleting={deletingId === n.id}
+                                                    />
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                                {!loading && nysc.length === 0 && <EmptyState label="NYSC posts" href="/general/dashboard/admissions/nysc/new" cta="Add first NYSC post" />}
+                            </div>
+                        </>
+                    )}
                 </div>
 
                 <div className="mt-8 text-center text-xs text-gray-400">Assessly Admissions Console · {new Date().getFullYear()}</div>
+
             </main>
         </div>
     );

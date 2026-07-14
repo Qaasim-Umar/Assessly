@@ -17,7 +17,7 @@ export function LogoIcon({ size = 30, variant = "color" }: { size?: number; vari
 
 const ADMISSIONS_ITEMS: { href: string; label: string; icon: React.ReactNode; comingSoon: boolean }[] = [
     { href: "/admissions", label: "News", icon: <Newspaper size={16} />, comingSoon: false },
-    { href: "#", label: "Question Bank", icon: <BookOpen size={16} />, comingSoon: true },
+    { href: "/admissions/question-bank", label: "Question Bank", icon: <BookOpen size={16} />, comingSoon: false },
 ];
 
 interface NavbarProps {
