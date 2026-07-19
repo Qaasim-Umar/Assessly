@@ -282,7 +282,7 @@ export default function DashboardPage() {
                         <table className="w-full text-sm">
                             <thead>
                                 <tr className="border-b border-gray-100 bg-gray-50">
-                                    {["Exam Title", "Subject", "Class", "Type", "Difficulty", "Questions", "Duration", "Results Visible", "Status", "Created", "Actions"].map((h) => (
+                                    {["Exam Title", "Subject", "Class", "Type", "Difficulty", "Questions", "Duration", "Results Visible", "Status", "Submissions", "Created", "Actions"].map((h) => (
                                         <th key={h} className="px-4 py-3 text-left text-[11px] font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">{h}</th>
                                     ))}
                                 </tr>
@@ -291,7 +291,7 @@ export default function DashboardPage() {
                                 {loading
                                     ? Array.from({ length: 3 }).map((_, i) => (
                                         <tr key={i} className="animate-pulse">
-                                            {Array.from({ length: 10 }).map((_, j) => (
+                                            {Array.from({ length: 12 }).map((_, j) => (
                                                 <td key={j} className="px-4 py-4">
                                                     <div className="h-3 bg-gray-100 rounded w-3/4" />
                                                 </td>
@@ -348,15 +348,22 @@ export default function DashboardPage() {
                                                     {togglingId === exam.id ? "…" : exam.status}
                                                 </button>
                                             </td>
+                                            {/* Submissions / results — dedicated column */}
+                                            <td className="px-4 py-3.5 whitespace-nowrap">
+                                                <button
+                                                    onClick={() => router.push(`/dashboard/results/${exam.id}`)}
+                                                    title="View student submissions & results"
+                                                    className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-purple-600 hover:text-purple-800 px-2 py-1 rounded border border-purple-100 hover:border-purple-200 hover:bg-purple-50 transition-colors"
+                                                >
+                                                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                                                    </svg>
+                                                    {exam.takes ?? 0} {(exam.takes ?? 0) === 1 ? "result" : "results"}
+                                                </button>
+                                            </td>
                                             <td className="px-4 py-3.5 text-xs text-gray-400 whitespace-nowrap">{formatDate(exam.created_at)}</td>
                                             <td className="px-4 py-3.5 whitespace-nowrap">
                                                 <div className="flex items-center gap-1.5">
-                                                    <button
-                                                        onClick={() => router.push(`/dashboard/results/${exam.id}`)}
-                                                        className="text-[11px] font-semibold text-purple-600 hover:text-purple-800 px-2 py-1 rounded hover:bg-purple-50 transition-colors"
-                                                    >
-                                                        Results
-                                                    </button>
                                                     <button
                                                         onClick={() => router.push(`/dashboard/edit/${exam.id}`)}
                                                         className="text-[11px] font-semibold text-green-600 hover:text-green-800 px-2 py-1 rounded hover:bg-green-50 transition-colors"

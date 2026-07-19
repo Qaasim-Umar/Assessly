@@ -3,10 +3,10 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import GistMarkdown from "@/components/GistMarkdown";
-import InlineMarkdown from "@/components/InlineMarkdown";
+import Sidebar from "../../_components/Sidebar";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
-import { Check, FileText, Star } from "lucide-react";
+import { Check } from "lucide-react";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
@@ -32,7 +32,7 @@ export async function generateMetadata({
     .eq("published", true)
     .single();
   if (!data) return { title: "Not Found" };
-  const desc = stripMarkdown(data.description ?? "");
+  const desc = stripMarkdown(data.description ?? "").slice(0, 160);
   const url = `https://www.assessly.ng/admissions/scholarships/${slug}`;
   return {
     title: `${data.title} | Assessly Admissions Hub`,
@@ -65,9 +65,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
     urgency: data.urgency as Urgency,
     isOpen: data.is_open as boolean,
     applyUrl: data.apply_url as string,
-    requiredDocuments: data.required_documents as string[],
-    eligibility: data.eligibility as string[],
-    covers: data.covers as string[],
+    body: data.body as string,
   };
 
   const urgencyKey: Urgency = (["urgent", "soon", "open"].includes(s.urgency) ? s.urgency : "open") as Urgency;
@@ -131,134 +129,45 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
           <div className="flex flex-col gap-6">
 
             {/* Deadline banner */}
-            <div className={`rounded-2xl px-6 py-4 flex items-center justify-between gap-4 ${u.banner}`}>
-              <div>
-                <p className={`text-base font-extrabold ${u.text}`}>{s.deadlineLabel}</p>
-                <p className={`text-sm ${u.text} opacity-70`}>{s.daysLeft}</p>
+            {s.deadlineLabel && (
+              <div className={`rounded-2xl px-6 py-4 flex items-center justify-between gap-4 ${u.banner}`}>
+                <div>
+                  <p className={`text-base font-extrabold ${u.text}`}>{s.deadlineLabel}</p>
+                  <p className={`text-sm ${u.text} opacity-70`}>{s.daysLeft}</p>
+                </div>
+                {s.isOpen && s.daysLeft && (
+                  <span className={`text-[13px] font-extrabold px-3 py-1.5 rounded-full flex-shrink-0 ${u.badge}`}>
+                    {s.daysLeft}
+                  </span>
+                )}
               </div>
-              {s.isOpen && (
-                <span className={`text-[13px] font-extrabold px-3 py-1.5 rounded-full flex-shrink-0 ${u.badge}`}>
-                  {s.daysLeft}
-                </span>
-              )}
-            </div>
+            )}
 
-            {/* Description */}
+            {/* Body */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
-              <GistMarkdown content={s.description} />
+              <GistMarkdown content={s.body} />
             </div>
 
-            {/* Eligibility */}
-            {s.eligibility.length > 0 && (
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
-                <h2 className="text-[22px] text-[#0d1a0f] tracking-[-0.5px] mb-5" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-                  Who Can Apply
-                </h2>
-                <ul className="flex flex-col gap-3">
-                  {s.eligibility.map((item: string, i: number) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center flex-shrink-0 mt-0.5"><Check size={11} strokeWidth={3} /></span>
-                      <span className="text-base text-[#1a2e1d] leading-relaxed"><InlineMarkdown content={item} /></span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Apply CTA */}
+            {s.applyUrl && (
+              <a
+                href={s.applyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 text-base font-bold text-white bg-amber-500 rounded-xl px-6 py-3.5 hover:bg-amber-600 transition-colors self-start"
+              >
+                Apply Now →
+              </a>
             )}
 
-            {/* Required Documents */}
-            {s.requiredDocuments.length > 0 && (
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
-                <h2 className="text-[22px] text-[#0d1a0f] tracking-[-0.5px] mb-5" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-                  What to Prepare
-                </h2>
-                <ul className="flex flex-col gap-3">
-                  {s.requiredDocuments.map((doc: string, i: number) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-[#9db5a3] flex-shrink-0 mt-1"><FileText size={15} /></span>
-                      <span className="text-base text-[#1a2e1d] leading-relaxed"><InlineMarkdown content={doc} /></span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {/* What it covers */}
-            {s.covers.length > 0 && (
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
-                <h2 className="text-[22px] text-[#0d1a0f] tracking-[-0.5px] mb-5" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-                  What&apos;s Covered
-                </h2>
-                <ul className="flex flex-col gap-3">
-                  {s.covers.map((item: string, i: number) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-amber-500 flex-shrink-0 mt-1"><Star size={15} fill="currentColor" /></span>
-                      <span className="text-base text-[#1a2e1d] leading-relaxed"><InlineMarkdown content={item} /></span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            <Link href="/admissions" className="mt-2 inline-flex items-center gap-2 text-base font-bold text-green-600 hover:underline">
+              ← Back to Admissions Hub
+            </Link>
           </div>
 
           {/* Sidebar */}
           <aside className="flex flex-col gap-6">
-            <Link href="/admissions" className="flex items-center gap-2 text-base font-bold text-green-600 hover:underline">
-              ← Back to Admissions Hub
-            </Link>
-
-            {/* Apply CTA */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6">
-              <h3 className="text-[20px] text-[#0d1a0f] tracking-[-0.5px] mb-1.5" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-                {s.isOpen ? "Ready to apply?" : "Applications closed"}
-              </h3>
-              <p className="text-sm text-[#9db5a3] mb-5">
-                {s.isOpen
-                  ? `Deadline: ${s.deadlineLabel}. Don't wait.`
-                  : "Check back next cycle or browse other open scholarships."}
-              </p>
-              {s.isOpen ? (
-                <a
-                  href={s.applyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center text-base font-bold text-white bg-amber-500 rounded-xl py-3.5 hover:bg-amber-600 transition-colors"
-                >
-                  Apply Now →
-                </a>
-              ) : (
-                <button disabled className="block w-full text-center text-base font-bold text-[#9db5a3] bg-[#f7faf8] rounded-xl py-3.5 cursor-not-allowed border border-gray-200">
-                  Applications Closed
-                </button>
-              )}
-            </div>
-
-            {/* Quick facts */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6">
-              <h3 className="text-base font-extrabold text-[#0d1a0f] mb-4">Quick Facts</h3>
-              <div className="flex flex-col gap-3">
-                {[
-                  { label: "Amount", value: s.amountLabel || "Full funding" },
-                  { label: "Frequency", value: s.frequency === "yearly" ? "Every academic year" : "One-time award" },
-                  { label: "Category", value: s.category },
-                  { label: "Deadline", value: s.deadlineLabel },
-                  { label: "Status", value: s.isOpen ? "Open" : "Closed" },
-                ].map((fact) => (
-                  <div key={fact.label} className="flex justify-between items-start gap-4 text-sm border-b border-gray-100 last:border-0 pb-3 last:pb-0">
-                    <span className="text-[#9db5a3] font-semibold flex-shrink-0">{fact.label}</span>
-                    <span className="text-[#0d1a0f] font-bold text-right">{fact.value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Browse more */}
-            <div className="bg-[#0d1a0f] rounded-2xl p-6">
-              <p className="text-[13px] font-extrabold tracking-widest uppercase text-[#bbf7d0] mb-2">More scholarships</p>
-              <p className="text-base text-white/50 mb-4 leading-relaxed">Browse all open scholarships on the hub — updated weekly.</p>
-              <Link href="/admissions" className="block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity">
-                Browse All →
-              </Link>
-            </div>
+            <Sidebar />
           </aside>
         </div>
       </div>

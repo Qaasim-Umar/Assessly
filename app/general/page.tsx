@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import StudentNav from "@/components/StudentNav";
 
@@ -123,22 +122,25 @@ const CARDS: ModeCard[] = [
 function SmallCard({
   card,
   navigating,
-  onNavigate,
 }: {
   card: ModeCard;
   navigating: ModeId | null;
-  onNavigate: (id: ModeId) => void;
 }) {
   const isLoading = navigating === card.id;
   const isDisabled = navigating !== null;
+  const href = ROUTES[card.id];
 
   return (
-    <div
-      role="button"
-      tabIndex={0}
+    <Link
+      href={href}
       aria-label={`Start ${card.name}`}
-      onClick={() => !isDisabled && onNavigate(card.id)}
-      onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && !isDisabled && onNavigate(card.id)}
+      aria-disabled={isDisabled}
+      onClick={(e) => {
+        if (isDisabled) {
+          e.preventDefault();
+          return;
+        }
+      }}
       className={[
         "group relative bg-white rounded-2xl border border-gray-200 overflow-hidden select-none",
         "transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500",
@@ -186,25 +188,75 @@ function SmallCard({
           Start
         </span>
       )}
-    </div>
+    </Link>
   );
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 export default function GeneralModePage() {
-  const router = useRouter();
   const [navigating, setNavigating] = useState<ModeId | null>(null);
 
-  function navigate(id: ModeId) {
+  function markNavigating(id: ModeId) {
     if (navigating) return;
     setNavigating(id);
-    router.push(ROUTES[id]);
   }
 
   const jambLoading = navigating === "mock";
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "EducationalWebPage",
+    name: "Assessly General Mode",
+    url: "https://www.assessly.ng/general",
+    description:
+      "Free JAMB, WAEC, NECO, and BECE practice with five study modes: JAMB Simulator, Practice Mode, Survival Mode, Past Questions, and Study Mode.",
+    about: [
+      "JAMB practice",
+      "WAEC practice",
+      "NECO practice",
+      "BECE practice",
+      "past questions",
+      "mock exams",
+    ],
+    hasPart: [
+      {
+        "@type": "LearningResource",
+        name: "JAMB Simulator",
+        description:
+          "Timed JAMB mock exam with English and three chosen subjects.",
+      },
+      {
+        "@type": "LearningResource",
+        name: "Practice Mode",
+        description:
+          "Topic-based practice with hints and explanations after each answer.",
+      },
+      {
+        "@type": "LearningResource",
+        name: "Survival Mode",
+        description:
+          "Fast-paced practice with lives and pressure-based revision.",
+      },
+      {
+        "@type": "LearningResource",
+        name: "Past Questions",
+        description:
+          "Free past questions for JAMB, WAEC, NECO, and BECE organised by year.",
+      },
+      {
+        "@type": "LearningResource",
+        name: "Study Mode",
+        description:
+          "Untimed revision with answers and explanations visible while learning.",
+      },
+    ],
+  };
 
   return (
     <div className="min-h-screen bg-[#f0f2f5]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <StudentNav badge="Free Practice" />
 
@@ -216,8 +268,11 @@ export default function GeneralModePage() {
           <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
             How do you want to practise?
           </h1>
-          <p className="mt-2 text-sm text-gray-500 max-w-lg">
-            Five ways to prepare. Pick a quick drill, simulate the real UTME, or push your limits until you run out of lives.
+          <p className="mt-2 text-sm text-gray-500 max-w-2xl">
+            Free JAMB, WAEC, NECO, and BECE practice in five modes: JAMB
+            Simulator, Practice Mode, Survival Mode, Past Questions, and Study
+            Mode. Pick a quick drill, simulate the real UTME, or revise with
+            explanations before your exam.
           </p>
         </div>
 
@@ -225,12 +280,17 @@ export default function GeneralModePage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
           {/* ── JAMB Simulator hero (col-span-2) ── */}
-          <div
-            role="button"
-            tabIndex={0}
+          <Link
+            href={ROUTES.mock}
             aria-label="Start JAMB Simulator"
-            onClick={() => !navigating && navigate("mock")}
-            onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && !navigating && navigate("mock")}
+            aria-disabled={navigating !== null}
+            onClick={(e) => {
+              if (navigating) {
+                e.preventDefault();
+                return;
+              }
+              markNavigating("mock");
+            }}
             className={[
               "group relative bg-white rounded-2xl border overflow-hidden select-none sm:col-span-2",
               "transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500",
@@ -291,16 +351,53 @@ export default function GeneralModePage() {
                 )}
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* ── Practice (top-right) ── */}
-          <SmallCard card={CARDS[0]} navigating={navigating} onNavigate={navigate} />
+          <SmallCard card={CARDS[0]} navigating={navigating} />
 
           {/* ── Bottom row: Survival · Past Questions · Study ── */}
           {CARDS.slice(1).map((card) => (
-            <SmallCard key={card.id} card={card} navigating={navigating} onNavigate={navigate} />
+            <SmallCard key={card.id} card={card} navigating={navigating} />
           ))}
         </div>
+
+        <section className="mt-8 rounded-2xl border border-gray-200 bg-white px-6 py-5 shadow-sm">
+          <h2 className="text-lg font-bold text-gray-900">
+            Practice JAMB, WAEC, NECO and BECE for free
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-gray-600">
+            Assessly General Mode is the public practice area for students. You
+            can take timed JAMB mock exams, practise by topic, study with
+            explanations, browse past questions, or use Survival Mode for quick
+            revision sessions without needing a school code.
+          </p>
+          <div className="mt-4">
+            <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">
+              Practice by exam
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <Link
+                href="/jamb-practice"
+                className="inline-flex items-center text-sm font-semibold text-green-700 bg-green-50 border border-green-200 px-3 py-1.5 rounded-full hover:bg-green-100 transition-colors"
+              >
+                JAMB practice
+              </Link>
+              <Link
+                href="/waec-practice"
+                className="inline-flex items-center text-sm font-semibold text-green-700 bg-green-50 border border-green-200 px-3 py-1.5 rounded-full hover:bg-green-100 transition-colors"
+              >
+                WAEC practice
+              </Link>
+              <Link
+                href="/post-utme-practice"
+                className="inline-flex items-center text-sm font-semibold text-green-700 bg-green-50 border border-green-200 px-3 py-1.5 rounded-full hover:bg-green-100 transition-colors"
+              >
+                Post-UTME practice
+              </Link>
+            </div>
+          </div>
+        </section>
 
         {/* Admissions Hub banner */}
         <Link

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import GistMarkdown from "@/components/GistMarkdown";
 import ReactionBar from "../../_components/ReactionBar";
+import Sidebar from "../../_components/Sidebar";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
 import { Calendar, Eye, Building2 } from "lucide-react";
@@ -40,7 +41,7 @@ export async function generateMetadata({
     .eq("published", true)
     .single();
   if (!data) return { title: "Not Found" };
-  const first = stripMarkdown((data.paragraphs as string[])[0] ?? "");
+  const first = stripMarkdown((data.paragraphs as string[])[0] ?? "").slice(0, 160);
   const url = `https://www.assessly.ng/admissions/gists/${slug}`;
   return {
     title: `${data.title} | Assessly Admissions Hub`,
@@ -54,30 +55,16 @@ export async function generateMetadata({
 export default async function GistPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  const [{ data: gist }, { data: upcomingDeadlines }] = await Promise.all([
-    supabase
-      .from("admissions_gists")
-      .select("*")
-      .eq("slug", slug)
-      .eq("published", true)
-      .single(),
-    supabase
-      .from("admissions_deadlines")
-      .select("title, deadline_date, badge, urgency")
-      .eq("published", true)
-      .order("deadline_date", { ascending: true })
-      .limit(4),
-  ]);
+  const { data: gist } = await supabase
+    .from("admissions_gists")
+    .select("*")
+    .eq("slug", slug)
+    .eq("published", true)
+    .single();
 
   if (!gist) notFound();
 
   const g = gist as DbGist;
-
-  const dotColor: Record<string, string> = {
-    urgent: "bg-rose-500",
-    soon: "bg-amber-500",
-    open: "bg-green-500",
-  };
 
   return (
     <>
@@ -157,53 +144,14 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
                 </div>
               </div>
             )}
+            <Link href="/admissions" className="mt-8 inline-flex items-center gap-2 text-base font-bold text-green-600 hover:underline">
+              ← Back to Admissions Hub
+            </Link>
           </article>
 
           {/* Sidebar */}
           <aside className="flex flex-col gap-6">
-            <Link href="/admissions" className="flex items-center gap-2 text-base font-bold text-green-600 hover:underline">
-              ← Back to Admissions Hub
-            </Link>
-
-            {/* Coming Up */}
-            {upcomingDeadlines && upcomingDeadlines.length > 0 && (
-              <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">
-                <div className="px-5 py-4 border-b border-gray-200">
-                  <h3 className="text-base font-extrabold text-[#0d1a0f] flex items-center gap-2"><Calendar size={15} /> Coming Up</h3>
-                </div>
-                <div className="px-5 py-4">
-                  {upcomingDeadlines.map((d, i, arr) => (
-                    <div key={i} className={`flex items-start gap-3 py-3 ${i < arr.length - 1 ? "border-b border-gray-200" : ""}`}>
-                      <span className={`w-2 h-2 rounded-full flex-shrink-0 mt-1.5 ${dotColor[d.urgency] ?? "bg-gray-400"}`} />
-                      <div>
-                        <strong className="text-base font-bold text-[#0d1a0f] block">{d.title}</strong>
-                        <span className="text-sm text-[#9db5a3]">{d.badge}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Scholarships CTA */}
-            <div className="bg-[#0d1a0f] rounded-2xl p-6">
-              <div className="flex items-center gap-1.5 text-[13px] font-extrabold tracking-widest uppercase text-[#bbf7d0] mb-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500 flex-shrink-0" />
-                Don&apos;t miss out
-              </div>
-              <h3 className="text-[20px] text-white leading-tight tracking-[-0.5px] mb-2" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-                Scholarships open right now
-              </h3>
-              <p className="text-sm text-white/45 leading-relaxed mb-4">
-                Shell, MTN, Federal Scholarship Board and more — all updated weekly.
-              </p>
-              <Link
-                href="/admissions"
-                className="block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity"
-              >
-                Browse Scholarships →
-              </Link>
-            </div>
+            <Sidebar />
           </aside>
         </div>
       </div>

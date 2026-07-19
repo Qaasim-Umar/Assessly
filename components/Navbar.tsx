@@ -190,6 +190,8 @@ export default function Navbar({
             )}
           </div>
 
+          <Link href="/general">Practice</Link>
+
           <Link href="/#pricing">Pricing</Link>
         </div>
 
@@ -221,6 +223,10 @@ export default function Navbar({
             {label}
           </Link>
         ))}
+
+        <Link href="/general" onClick={() => setMenuOpen(false)}>
+          Practice
+        </Link>
 
         {/* Mobile Admissions accordion */}
         <div className="w-full">

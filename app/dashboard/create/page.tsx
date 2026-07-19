@@ -31,13 +31,13 @@ function StepIndicator({ current, steps }: { current: number; steps: string[] })
                 return (
                     <div key={i} className="flex items-center flex-shrink-0">
                         <div className="flex flex-col items-center">
-                            <div className={`w - 7 h - 7 rounded - full flex items - center justify - center text - xs font - bold border - 2 transition - all ${done ? "bg-green-600 border-green-600 text-white" : active ? "bg-white border-green-600 text-green-600" : "bg-white border-gray-300 text-gray-400"} `}>
+                            <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-all ${done ? "bg-green-600 border-green-600 text-white" : active ? "bg-white border-green-600 text-green-600" : "bg-white border-gray-300 text-gray-400"}`}>
                                 {done ? <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg> : i + 1}
                             </div>
-                            <span className={`text - [10px] mt - 1 font - semibold whitespace - nowrap ${active ? "text-green-700" : done ? "text-green-500" : "text-gray-400"} `}>{label}</span>
+                            <span className={`text-[10px] mt-1 font-semibold whitespace-nowrap ${active ? "text-green-700" : done ? "text-green-500" : "text-gray-400"}`}>{label}</span>
                         </div>
                         {i < steps.length - 1 && (
-                            <div className={`h - 0.5 w - 8 sm: w - 14 mb - 4 mx - 1 flex - shrink - 0 ${i < current ? "bg-green-500" : "bg-gray-200"} `} />
+                            <div className={`h-0.5 w-8 sm:w-14 mb-4 mx-1 flex-shrink-0 ${i < current ? "bg-green-500" : "bg-gray-200"}`} />
                         )}
                     </div>
                 );
@@ -210,9 +210,9 @@ export default function CreateExamPage() {
                                     ].map(({ val, label, desc }) => (
                                         <button key={val} type="button"
                                             onClick={() => { setMode(val); set("source", val); }}
-                                            className={`flex items - start gap - 3 p - 4 rounded - xl border - 2 text - left transition - all ${mode === val ? "border-green-500 bg-green-50" : "border-gray-200 hover:border-gray-300"} `}>
+                                            className={`flex items-start gap-3 p-4 rounded-xl border-2 text-left transition-all ${mode === val ? "border-green-500 bg-green-50" : "border-gray-200 hover:border-gray-300"}`}>
                                             <div>
-                                                <p className={`text - sm font - bold ${mode === val ? "text-green-700" : "text-gray-700"} `}>{label}</p>
+                                                <p className={`text-sm font-bold ${mode === val ? "text-green-700" : "text-gray-700"}`}>{label}</p>
                                                 <p className="text-xs text-gray-500 mt-0.5">{desc}</p>
                                             </div>
                                         </button>
@@ -279,7 +279,7 @@ export default function CreateExamPage() {
                                 onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
                                 onDragLeave={() => setDragOver(false)}
                                 onDrop={handleDrop}
-                                className={`border - 2 border - dashed rounded - xl p - 8 text - center cursor - pointer transition - all ${dragOver ? "border-green-500 bg-green-50" : pdfFile ? "border-green-400 bg-green-50" : "border-gray-300 hover:border-green-400 hover:bg-gray-50"} `}>
+                                className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all ${dragOver ? "border-green-500 bg-green-50" : pdfFile ? "border-green-400 bg-green-50" : "border-gray-300 hover:border-green-400 hover:bg-gray-50"}`}>
                                 <input ref={fileRef} type="file" accept=".pdf" className="hidden"
                                     onChange={(e) => { const f = e.target.files?.[0]; if (f) setPdfFile(f); }} />
                                 {pdfFile ? (
@@ -332,14 +332,14 @@ export default function CreateExamPage() {
                                 <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 space-y-3">
                                     <p className="text-xs font-bold text-gray-600 uppercase tracking-wider">Difficulty Ratio</p>
                                     {(["Simple", "Medium", "Hard"] as const).map((d) => {
-                                        const key = `ratio${d} ` as keyof ExamForm;
+                                        const key = `ratio${d}` as keyof ExamForm;
                                         const colors = { Simple: "accent-emerald-500", Medium: "accent-amber-500", Hard: "accent-red-500" };
                                         return (
                                             <div key={d} className="flex items-center gap-3">
                                                 <span className="text-xs text-gray-600 w-14 font-medium">{d}</span>
                                                 <input type="range" min={0} max={100} value={form[key] as number}
                                                     onChange={(e) => set(key, Number(e.target.value))}
-                                                    className={`flex - 1 h - 2 ${colors[d]} `} />
+                                                    className={`flex-1 h-2 ${colors[d]}`} />
                                                 <span className="text-xs font-bold text-gray-700 w-10 text-right">{form[key]}%</span>
                                             </div>
                                         );

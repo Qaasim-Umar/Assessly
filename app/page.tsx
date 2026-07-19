@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Lightbulb, Timer, Flame, BarChart3, Sparkles, KeyRound, Zap, ShieldCheck, Globe, BookOpen, PenLine, Trophy, Medal, Star, type LucideIcon } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 
@@ -185,8 +186,10 @@ export default function LandingPage() {
                         {STEPS.map(({ n, t, d }) => (
                             <div key={n} className="lp-step">
                                 <div className="lp-step-num">{n}</div>
-                                <h3>{t}</h3>
-                                <p>{d}</p>
+                                <div className="lp-step-body">
+                                    <h3>{t}</h3>
+                                    <p>{d}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -289,46 +292,7 @@ export default function LandingPage() {
             </section>
 
             {/* ── FOOTER ── */}
-            <footer className="lp-footer">
-                <div className="lp-footer-inner">
-                    <div className="lp-footer-top">
-                        <div>
-                            <Link href="/" className="lp-footer-logo">Assessly</Link>
-                            <p className="lp-footer-desc">AI-powered Computer-Based Testing for Nigerian students and schools. Built for the way Nigerians learn.</p>
-                        </div>
-                        <div>
-                            <div className="lp-footer-col-title">Product</div>
-                            <ul className="lp-footer-links">
-                                <li><Link href="#students">For Students</Link></li>
-                                <li><Link href="#schools">For Schools</Link></li>
-                                <li><Link href="#how">How it Works</Link></li>
-                                <li><Link href="#pricing">Pricing</Link></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div className="lp-footer-col-title">Access</div>
-                            <ul className="lp-footer-links">
-                                <li><Link href="/general">Student Practice</Link></li>
-                                <li><Link href="/admissions">Admissions Hub</Link></li>
-                                <li><Link href="/login">Student Login</Link></li>
-                                <li><Link href="/dashboard/login">Admin Login</Link></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div className="lp-footer-col-title">Company</div>
-                            <ul className="lp-footer-links">
-                                <li><a href="mailto:hello@assessly.ng">Contact</a></li>
-                                <li><Link href="#">Privacy Policy</Link></li>
-                                <li><Link href="#">Terms of Service</Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="lp-footer-bottom">
-                        <p>© {new Date().getFullYear()} Assessly. All rights reserved.</p>
-                        <p>Built for Nigerian students and educators</p>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }

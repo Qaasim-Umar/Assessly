@@ -4,11 +4,11 @@ import { Suspense, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import FilterBar from "./_components/FilterBar";
 import ReactionBar from "./_components/ReactionBar";
-import InlineMarkdown from "@/components/InlineMarkdown";
 import LiveTicker from "./_components/LiveTicker";
 import SearchBar from "./_components/SearchBar";
 import { supabase } from "@/lib/supabase";
-import { useDeadlineCountdown } from "@/lib/admissionsDeadline";import {
+import { useDeadlineCountdown } from "@/lib/admissionsDeadline";
+import {
   Newspaper,
   Trophy,
   Calendar,
@@ -26,7 +26,6 @@ interface DbGist {
   tag: string;
   tag_color: string;
   title: string;
-  desc: string;
   date_label: string;
   school: string;
   views: string;
@@ -42,10 +41,8 @@ interface DbScholarship {
   icon: string;
   icon_bg: string;
   title: string;
-  description: string;
   amount_label: string;
   deadline_label: string;
-  days_left: string;
   category: string;
   is_open: boolean;
 }
@@ -53,19 +50,13 @@ interface DbScholarship {
 interface DbDeadline {
   id: string;
   title: string;
-  desc: string;
   deadline_date: string;
-  day_label: string;
-  month_label: string;
-  urgency: "urgent" | "soon" | "open";
-  badge: string;
 }
 
 interface DbCutoff {
   id: string;
   slug: string;
   school: string;
-  content: string;
 }
 
 interface DbNysc {
@@ -73,7 +64,6 @@ interface DbNysc {
   slug: string;
   title: string;
   batch_label: string | null;
-  content: string;
 }
 
 // ── Sub-components ────────────────────────────────────────────────────────────
@@ -83,7 +73,6 @@ function GistCard({
   tag,
   tagColor,
   title,
-  desc,
   date,
   reactions,
   gistId,
@@ -92,7 +81,6 @@ function GistCard({
   tag: string;
   tagColor: string;
   title: string;
-  desc: string;
   date: string;
   reactions: { fire: number; shock: number; check: number; think: number };
   gistId: string;
@@ -113,9 +101,6 @@ function GistCard({
       <h3 className="text-[19px] font-bold text-[#0d1a0f] leading-snug mb-2">
         {title}
       </h3>
-      <p className="text-base text-[#4a5e4e] leading-relaxed mb-3.5">
-        <InlineMarkdown content={desc} />
-      </p>
       <span className="text-sm text-[#9db5a3]">{date}</span>
       <ReactionBar initial={reactions} gistId={gistId} />
     </a>
@@ -127,7 +112,6 @@ function ScholarshipCard({
   icon,
   iconBg,
   title,
-  desc,
   tags,
   open,
   dimmed = false,
@@ -136,7 +120,6 @@ function ScholarshipCard({
   icon: string;
   iconBg: string;
   title: string;
-  desc: string;
   tags: { label: string; style: string }[];
   open: boolean;
   dimmed?: boolean;
@@ -155,10 +138,7 @@ function ScholarshipCard({
         {icon}
       </div>
       <div>
-        <h3 className="text-[19px] font-bold text-[#0d1a0f] mb-1.5">{title}</h3>
-        <p className="text-base text-[#4a5e4e] leading-relaxed mb-2.5">
-          <InlineMarkdown content={desc} />
-        </p>
+        <h3 className="text-[19px] font-bold text-[#0d1a0f] mb-2.5">{title}</h3>
         <div className="flex flex-wrap gap-1.5">
           {tags.map((t, i) => (
             <span
@@ -206,11 +186,9 @@ const URGENCY_STYLES = {
 function DeadlineCard({
   deadlineDate,
   title,
-  desc,
 }: {
   deadlineDate: string;
   title: string;
-  desc: string;
 }) {
   const {
     day_label: day,
@@ -243,10 +221,7 @@ function DeadlineCard({
           </span>
         </div>
         <div>
-          <h3 className="text-base font-bold text-[#0d1a0f] mb-0.5">{title}</h3>
-          <p className="text-sm text-[#4a5e4e]">
-            <InlineMarkdown content={desc} />
-          </p>
+          <h3 className="text-base font-bold text-[#0d1a0f]">{title}</h3>
         </div>
       </div>
 
@@ -265,10 +240,7 @@ function DeadlineCard({
           </span>
         </div>
         <div>
-          <h3 className="text-base font-bold text-[#0d1a0f] mb-0.5">{title}</h3>
-          <p className="text-base text-[#4a5e4e]">
-            <InlineMarkdown content={desc} />
-          </p>
+          <h3 className="text-base font-bold text-[#0d1a0f]">{title}</h3>
         </div>
         <span
           className={`text-[13px] font-extrabold tracking-wide px-3 py-1.5 rounded-full flex-shrink-0 ${s.badge}`}
@@ -340,7 +312,13 @@ function ComingUpItem({
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 
-type TabId = "all" | "gists" | "scholarships" | "deadlines" | "cutoffs" | "nysc";
+type TabId =
+  | "all"
+  | "gists"
+  | "scholarships"
+  | "deadlines"
+  | "cutoffs"
+  | "nysc";
 
 export default function AdmissionsHubPage() {
   const [activeTab, setActiveTab] = useState<TabId>("all");
@@ -363,32 +341,30 @@ export default function AdmissionsHubPage() {
         supabase
           .from("admissions_gists")
           .select(
-            "id,slug,tag,tag_color,title,desc,date_label,school,views,reactions,is_trending,is_featured,is_new_this_week",
+            "id,slug,tag,tag_color,title,date_label,school,views,reactions,is_trending,is_featured,is_new_this_week",
           )
           .eq("published", true)
           .order("created_at", { ascending: false }),
         supabase
           .from("admissions_scholarships")
           .select(
-            "id,slug,icon,icon_bg,title,description,amount_label,deadline_label,days_left,category,is_open",
+            "id,slug,icon,icon_bg,title,amount_label,deadline_label,category,is_open",
           )
           .eq("published", true)
           .order("created_at", { ascending: false }),
         supabase
           .from("admissions_deadlines")
-          .select(
-            "id,title,desc,deadline_date,day_label,month_label,urgency,badge",
-          )
+          .select("id,title,deadline_date")
           .eq("published", true)
           .order("deadline_date", { ascending: true }),
         supabase
           .from("admissions_cutoffs")
-          .select("id,slug,school,content")
+          .select("id,slug,school")
           .eq("published", true)
           .order("created_at", { ascending: false }),
         supabase
           .from("admissions_nysc")
-          .select("id,slug,title,batch_label,content")
+          .select("id,slug,title,batch_label")
           .eq("published", true)
           .order("created_at", { ascending: false }),
       ]);
@@ -445,7 +421,7 @@ export default function AdmissionsHubPage() {
       item: {
         "@type": "Event",
         name: d.title,
-        description: d.desc,
+        description: `Admission deadline for ${d.title}.`,
         url: "https://www.assessly.ng/admissions",
         eventStatus: "https://schema.org/EventScheduled",
         organizer: {
@@ -544,7 +520,7 @@ export default function AdmissionsHubPage() {
         </div>
 
         {/* Ticker */}
-        <div className="max-w-[1100px] mx-auto mt-8 flex items-center gap-3 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 overflow-hidden">
+        <div className="max-w-[1100px] mx-auto mt-8 mb-8 flex items-center gap-3 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 overflow-hidden">
           <span className="text-[12px] font-extrabold tracking-widest uppercase text-rose-600 bg-rose-100 px-2 py-1 rounded flex-shrink-0">
             LIVE
           </span>
@@ -631,9 +607,6 @@ export default function AdmissionsHubPage() {
                       >
                         {featuredGist.title}
                       </h3>
-                      <p className="text-base text-white/50 leading-relaxed mb-5">
-                        {featuredGist.desc}
-                      </p>
                     </div>
                     <div>
                       <div className="flex items-center gap-3 text-sm text-white/35 flex-wrap">
@@ -673,7 +646,6 @@ export default function AdmissionsHubPage() {
                       tag={g.tag}
                       tagColor={g.tag_color}
                       title={g.title}
-                      desc={g.desc}
                       date={g.date_label}
                       reactions={g.reactions}
                       gistId={g.id}
@@ -724,7 +696,6 @@ export default function AdmissionsHubPage() {
                       icon={s.icon}
                       iconBg={s.icon_bg}
                       title={s.title}
-                      desc={s.description}
                       tags={scholarshipTags(s)}
                       open={s.is_open}
                       dimmed={!s.is_open}
@@ -775,7 +746,6 @@ export default function AdmissionsHubPage() {
                       key={d.id}
                       deadlineDate={d.deadline_date}
                       title={d.title}
-                      desc={d.desc}
                     />
                   ))}
                 </div>
@@ -812,14 +782,18 @@ export default function AdmissionsHubPage() {
                       href={`/admissions/cutoffs/${c.slug}`}
                       className="bg-white border border-gray-300 rounded-[18px] p-5 flex items-center justify-between hover:border-blue-200 hover:shadow-[0_4px_20px_rgba(37,99,235,0.08)] hover:-translate-y-0.5 transition-all"
                     >
-                      <h3 className="text-[19px] font-bold text-[#0d1a0f] leading-snug">{c.school}</h3>
+                      <h3 className="text-[19px] font-bold text-[#0d1a0f] leading-snug">
+                        {c.school}
+                      </h3>
                       <span className="text-[#9db5a3] shrink-0 ml-4">→</span>
                     </a>
                   ))}
                 </div>
               ) : (
                 <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center">
-                  <p className="text-[#9db5a3]">No cutoff marks published yet.</p>
+                  <p className="text-[#9db5a3]">
+                    No cutoff marks published yet.
+                  </p>
                 </div>
               )}
             </section>
@@ -851,9 +825,13 @@ export default function AdmissionsHubPage() {
                       className="bg-white border border-gray-300 rounded-[18px] p-5 block hover:border-violet-200 hover:shadow-[0_4px_20px_rgba(139,92,246,0.08)] hover:-translate-y-0.5 transition-all"
                     >
                       {n.batch_label && (
-                        <span className="text-[13px] font-extrabold tracking-wide uppercase mb-2.5 block text-violet-600">{n.batch_label}</span>
+                        <span className="text-[13px] font-extrabold tracking-wide uppercase mb-2.5 block text-violet-600">
+                          {n.batch_label}
+                        </span>
                       )}
-                      <h3 className="text-[19px] font-bold text-[#0d1a0f] leading-snug">{n.title}</h3>
+                      <h3 className="text-[19px] font-bold text-[#0d1a0f] leading-snug">
+                        {n.title}
+                      </h3>
                     </a>
                   ))}
                 </div>
@@ -881,12 +859,9 @@ export default function AdmissionsHubPage() {
               >
                 {newThisWeek.title}
               </h3>
-              <p className="text-base text-white/45 leading-relaxed mb-5">
-                {newThisWeek.desc}
-              </p>
               <a
                 href={`/admissions/gists/${newThisWeek.slug}`}
-                className="block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity"
+                className="mt-5 block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity"
               >
                 Read more →
               </a>

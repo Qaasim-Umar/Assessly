@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import GistMarkdown from "@/components/GistMarkdown";
 import ShareBar from "@/components/ShareBar";
+import Sidebar from "../../_components/Sidebar";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
 import { GraduationCap } from "lucide-react";
@@ -93,16 +94,26 @@ export default async function NyscPage({ params }: { params: Promise<{ slug: str
 
       {/* ── BODY ─────────────────────────────────────────────────────── */}
       <div className="bg-[#f7faf8] min-h-screen px-6 py-10">
-        <div className="max-w-[820px] mx-auto">
-          <article>
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 sm:p-10">
-              <GistMarkdown content={n.content} />
-            </div>
-          </article>
+        <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-10 items-start">
 
-          <Link href="/admissions" className="mt-8 inline-flex items-center gap-2 text-base font-bold text-green-600 hover:underline">
-            ← Back to Admissions Hub
-          </Link>
+          {/* Main Content */}
+          <div>
+            <article>
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 sm:p-10">
+                <GistMarkdown content={n.content} />
+              </div>
+            </article>
+
+            <Link href="/admissions" className="mt-8 inline-flex items-center gap-2 text-base font-bold text-green-600 hover:underline">
+              ← Back to Admissions Hub
+            </Link>
+          </div>
+
+          {/* Sidebar */}
+          <aside className="flex flex-col gap-6">
+            <Sidebar />
+          </aside>
+
         </div>
       </div>
     </>

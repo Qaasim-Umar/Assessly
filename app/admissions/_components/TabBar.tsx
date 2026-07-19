@@ -1,7 +1,10 @@
 "use client";
 
 import { usePostHog } from "posthog-js/react";
-import { ADMISSIONS_CATEGORIES, type CategorySlug } from "@/lib/admissionsCategories";
+import {
+  ADMISSIONS_CATEGORIES,
+  type CategorySlug,
+} from "@/lib/admissionsCategories";
 
 export type TabId = "all" | CategorySlug;
 
@@ -13,7 +16,11 @@ interface TabBarProps {
   onTabChange: (tab: TabId) => void;
 }
 
-export default function TabBar({ counts, activeTab, onTabChange }: TabBarProps) {
+export default function TabBar({
+  counts,
+  activeTab,
+  onTabChange,
+}: TabBarProps) {
   const posthog = usePostHog();
 
   const TABS: { id: TabId; label: string; count: number }[] = [
@@ -38,9 +45,13 @@ export default function TabBar({ counts, activeTab, onTabChange }: TabBarProps) 
             ${activeTab === t.id ? "text-white border-green-500" : "text-white/40 border-transparent hover:text-white/70"}`}
         >
           {t.label}
-          <span className={`text-[13px] font-bold px-1.5 py-0.5 rounded-full ${
-            activeTab === t.id ? "bg-green-500 text-white" : "bg-white/10 text-white/50"
-          }`}>
+          <span
+            className={`text-[13px] font-bold px-1.5 py-0.5 rounded-full ${
+              activeTab === t.id
+                ? "bg-green-500 text-white"
+                : "bg-white/10 text-white/50"
+            }`}
+          >
             {t.count}
           </span>
         </button>
