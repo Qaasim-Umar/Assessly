@@ -17,8 +17,8 @@
   --lp-amber-light: #fef3c7;
   --lp-border:      #e2ede6;
 
-  --lp-sans:   'Plus Jakarta Sans', system-ui, sans-serif;
-  --lp-serif:  'Lora', Georgia, serif;
+  --lp-sans:   var(--font-plus-jakarta-sans), system-ui, sans-serif;
+  --lp-serif:  var(--font-lora), Georgia, serif;
 
   --lp-r-sm: 8px;
   --lp-r-md: 14px;

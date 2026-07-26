@@ -44,7 +44,7 @@ export async function generateMetadata({
   const first = stripMarkdown((data.paragraphs as string[])[0] ?? "").slice(0, 160);
   const url = `https://www.assessly.ng/admissions/gists/${slug}`;
   return {
-    title: `${data.title} | Assessly Admissions Hub`,
+    title: data.title,
     description: first,
     alternates: { canonical: url },
     openGraph: { title: data.title, description: first, type: "article", url, siteName: "Assessly" },
@@ -89,7 +89,7 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
 
           <h1
             className="text-[clamp(28px,4vw,52px)] text-white leading-[1.1] tracking-[-1px] mb-5 max-w-[780px]"
-            style={{ fontFamily: "'Lora', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
           >
             {g.title}
           </h1>
@@ -121,7 +121,7 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
               <div className="mt-8">
                 <h2
                   className="text-[22px] text-[#0d1a0f] tracking-[-0.5px] mb-4"
-                  style={{ fontFamily: "'Lora', Georgia, serif" }}
+                  style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
                 >
                   Related Gists
                 </h2>

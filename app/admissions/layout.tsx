@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Admissions Hub | Assessly — Nigerian University Scholarships & Deadlines",
+  title: "Nigerian University Scholarships & Admission Deadlines",
   description: "Find Nigerian university scholarships, admission deadlines, cut-off marks, and school gists. Shell, FGN, MTN scholarships and JAMB CAPS deadlines — all updated weekly.",
   keywords: [
     "Nigerian university scholarships",
@@ -31,5 +32,10 @@ export default function AdmissionsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      <Footer />
+    </>
+  );
 }

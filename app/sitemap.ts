@@ -41,6 +41,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/jamb-practice`,          lastModified: new Date(), changeFrequency: "daily",  priority: 0.85 },
     { url: `${BASE_URL}/waec-practice`,          lastModified: new Date(), changeFrequency: "daily",  priority: 0.85 },
     { url: `${BASE_URL}/post-utme-practice`,     lastModified: new Date(), changeFrequency: "daily",  priority: 0.85 },
+    { url: `${BASE_URL}/privacy`,                lastModified: new Date("2026-07-26"), changeFrequency: "yearly", priority: 0.4 },
+    { url: `${BASE_URL}/terms`,                  lastModified: new Date("2026-07-26"), changeFrequency: "yearly", priority: 0.4 },
+    { url: `${BASE_URL}/about`,                  lastModified: new Date("2026-07-26"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE_URL}/contact`,                lastModified: new Date("2026-07-26"), changeFrequency: "yearly", priority: 0.5 },
     { url: `${BASE_URL}/admissions`,              lastModified: new Date(), changeFrequency: "daily",  priority: 0.85 },
     { url: `${BASE_URL}/admissions/question-bank`,lastModified: new Date(), changeFrequency: "daily",  priority: 0.85 },
   ];

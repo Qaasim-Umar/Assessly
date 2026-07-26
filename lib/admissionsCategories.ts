@@ -35,7 +35,7 @@ export const ADMISSIONS_CATEGORIES: CategoryDef[] = [
     table: "admissions_gists",
     hasDetailPage: true,
     detailPathPrefix: "/admissions/gists",
-    archiveTitle: "School Gists Archive | Assessly Admissions Hub",
+    archiveTitle: "Nigerian School Gists and Admission Updates",
     archiveDescription:
       "Latest school gists, admission updates, and campus news for Nigerian universities and polytechnics.",
   },
@@ -45,7 +45,7 @@ export const ADMISSIONS_CATEGORIES: CategoryDef[] = [
     table: "admissions_scholarships",
     hasDetailPage: true,
     detailPathPrefix: "/admissions/scholarships",
-    archiveTitle: "Scholarships Archive | Assessly Admissions Hub",
+    archiveTitle: "Scholarships for Nigerian Students",
     archiveDescription:
       "Open and upcoming scholarships for Nigerian students — amounts, deadlines, and how to apply.",
   },
@@ -54,7 +54,7 @@ export const ADMISSIONS_CATEGORIES: CategoryDef[] = [
     label: "Deadlines",
     table: "admissions_deadlines",
     hasDetailPage: false,
-    archiveTitle: "Admission Deadlines Archive | Assessly Admissions Hub",
+    archiveTitle: "Nigerian University Admission Deadlines",
     archiveDescription:
       "All upcoming admission deadlines for Nigerian universities and polytechnics, updated weekly.",
   },
@@ -64,7 +64,7 @@ export const ADMISSIONS_CATEGORIES: CategoryDef[] = [
     table: "admissions_cutoffs",
     hasDetailPage: true,
     detailPathPrefix: "/admissions/cutoffs",
-    archiveTitle: "Cutoff Marks Archive | Assessly Admissions Hub",
+    archiveTitle: "Nigerian University Cutoff Marks",
     archiveDescription:
       "JAMB and Post-UTME cutoff marks for Nigerian universities and polytechnics.",
   },
@@ -74,7 +74,7 @@ export const ADMISSIONS_CATEGORIES: CategoryDef[] = [
     table: "admissions_nysc",
     hasDetailPage: true,
     detailPathPrefix: "/admissions/nysc",
-    archiveTitle: "NYSC Updates Archive | Assessly Admissions Hub",
+    archiveTitle: "NYSC Mobilization and Camp Updates",
     archiveDescription:
       "Latest NYSC mobilization, batch, and orientation camp updates.",
   },

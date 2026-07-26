@@ -4,6 +4,11 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
+import {
+    getSelectableJambSubjects,
+    JAMB_ENGLISH_SUBJECT,
+    normalizeSubjectName,
+} from "@/lib/jambSubjects";
 
 type Step = "select" | "instructions";
 
@@ -24,15 +29,11 @@ export default function JambSetupPage() {
                     .eq("exam_type", "jamb")
                     .eq("is_active", true);
                 if (err) throw err;
-                const unique = Array.from(
-                    new Set(
-                        (data ?? [])
-                            .map((r: Record<string, unknown>) => r.subject as string)
-                            .filter(Boolean)
-                            .filter((s) => s !== "English Language")
-                    )
-                ).sort() as string[];
-                setSubjects(unique);
+                const availableSubjects = (data ?? [])
+                    .map((row: Record<string, unknown>) =>
+                        typeof row.subject === "string" ? row.subject : ""
+                    );
+                setSubjects(getSelectableJambSubjects(availableSubjects));
             } catch {
                 setError("Failed to load subjects. Please refresh and try again.");
             } finally {
@@ -44,7 +45,7 @@ export default function JambSetupPage() {
 
     function setPick(idx: number, val: string) {
         const next = [...picks] as [string, string, string];
-        next[idx] = val;
+        next[idx] = normalizeSubjectName(val);
         setPicks(next);
     }
 
@@ -63,7 +64,8 @@ export default function JambSetupPage() {
                 picks={picks}
                 onBack={() => setStep("select")}
                 onEnter={() => {
-                    const params = new URLSearchParams({ subjects: picks.join(",") });
+                    const params = new URLSearchParams();
+                    picks.forEach((subject) => params.append("subject", subject));
                     router.push(`/general/dashboard/mock/jamb/session?${params.toString()}`);
                 }}
             />
@@ -118,7 +120,7 @@ export default function JambSetupPage() {
                                     <span className="text-sm font-bold text-green-700">1</span>
                                 </div>
                                 <div>
-                                    <p className="text-sm font-bold text-gray-900">English Language</p>
+                                    <p className="text-sm font-bold text-gray-900">{JAMB_ENGLISH_SUBJECT}</p>
                                     <p className="text-xs text-gray-400 mt-0.5">60 questions · Compulsory</p>
                                 </div>
                             </div>
@@ -227,7 +229,7 @@ function InstructionsScreen({
     onEnter: () => void;
 }) {
     const subjects = [
-        { name: "English Language", count: 60, compulsory: true },
+        { name: JAMB_ENGLISH_SUBJECT, count: 60, compulsory: true },
         { name: picks[0], count: 40, compulsory: false },
         { name: picks[1], count: 40, compulsory: false },
         { name: picks[2], count: 40, compulsory: false },

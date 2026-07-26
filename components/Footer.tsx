@@ -12,10 +12,10 @@ export default function Footer() {
                     <div>
                         <div className="mb-4 text-[11px] font-extrabold uppercase tracking-[0.1em] text-white/30">Product</div>
                         <ul className="flex flex-col gap-2.5">
-                            <li><Link href="#students" className="text-sm text-white/55 transition-colors hover:text-white">For Students</Link></li>
-                            <li><Link href="#schools" className="text-sm text-white/55 transition-colors hover:text-white">For Schools</Link></li>
-                            <li><Link href="#how" className="text-sm text-white/55 transition-colors hover:text-white">How it Works</Link></li>
-                            <li><Link href="#pricing" className="text-sm text-white/55 transition-colors hover:text-white">Pricing</Link></li>
+                            <li><Link href="/#students" className="text-sm text-white/55 transition-colors hover:text-white">For Students</Link></li>
+                            <li><Link href="/#schools" className="text-sm text-white/55 transition-colors hover:text-white">For Schools</Link></li>
+                            <li><Link href="/#how" className="text-sm text-white/55 transition-colors hover:text-white">How it Works</Link></li>
+                            <li><Link href="/#pricing" className="text-sm text-white/55 transition-colors hover:text-white">Pricing</Link></li>
                         </ul>
                     </div>
                     <div>
@@ -38,9 +38,10 @@ export default function Footer() {
                     <div>
                         <div className="mb-4 text-[11px] font-extrabold uppercase tracking-[0.1em] text-white/30">Company</div>
                         <ul className="flex flex-col gap-2.5">
-                            <li><a href="mailto:hello@assessly.ng" className="text-sm text-white/55 transition-colors hover:text-white">Contact</a></li>
-                            <li><Link href="#" className="text-sm text-white/55 transition-colors hover:text-white">Privacy Policy</Link></li>
-                            <li><Link href="#" className="text-sm text-white/55 transition-colors hover:text-white">Terms of Service</Link></li>
+                            <li><Link href="/about" className="text-sm text-white/55 transition-colors hover:text-white">About Us</Link></li>
+                            <li><Link href="/contact" className="text-sm text-white/55 transition-colors hover:text-white">Contact</Link></li>
+                            <li><Link href="/privacy" className="text-sm text-white/55 transition-colors hover:text-white">Privacy Policy</Link></li>
+                            <li><Link href="/terms" className="text-sm text-white/55 transition-colors hover:text-white">Terms of Service</Link></li>
                         </ul>
                     </div>
                 </div>

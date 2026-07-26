@@ -36,7 +36,7 @@ export async function generateMetadata({
   const description = stripMarkdown(data.content).slice(0, 160);
   const url = `https://www.assessly.ng/admissions/nysc/${slug}`;
   return {
-    title: `${data.title} | Assessly Admissions Hub`,
+    title: data.title,
     description,
     alternates: { canonical: url },
     openGraph: { title: data.title, description, type: "article", url, siteName: "Assessly" },
@@ -81,7 +81,7 @@ export default async function NyscPage({ params }: { params: Promise<{ slug: str
 
           <h1
             className="text-[clamp(28px,4vw,52px)] text-white leading-[1.1] tracking-[-1px] mb-5 max-w-[780px]"
-            style={{ fontFamily: "'Lora', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
           >
             {n.title}
           </h1>

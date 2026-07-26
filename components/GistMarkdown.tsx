@@ -10,10 +10,10 @@ const components: Components = {
     <p className="text-[17px] text-[#1a2e1d] leading-[1.8] mb-5 last:mb-0">{children}</p>
   ),
   h1: ({ children }) => (
-    <h2 className="text-[26px] text-[#0d1a0f] tracking-[-0.5px] leading-tight mt-8 mb-4 first:mt-0" style={{ fontFamily: "'Lora', Georgia, serif" }}>{children}</h2>
+    <h2 className="text-[26px] text-[#0d1a0f] tracking-[-0.5px] leading-tight mt-8 mb-4 first:mt-0" style={{ fontFamily: "var(--font-lora), Georgia, serif" }}>{children}</h2>
   ),
   h2: ({ children }) => (
-    <h2 className="text-[24px] text-[#0d1a0f] tracking-[-0.5px] leading-tight mt-8 mb-4 first:mt-0" style={{ fontFamily: "'Lora', Georgia, serif" }}>{children}</h2>
+    <h2 className="text-[24px] text-[#0d1a0f] tracking-[-0.5px] leading-tight mt-8 mb-4 first:mt-0" style={{ fontFamily: "var(--font-lora), Georgia, serif" }}>{children}</h2>
   ),
   h3: ({ children }) => (
     <h3 className="text-[20px] font-bold text-[#0d1a0f] leading-tight mt-6 mb-3 first:mt-0">{children}</h3>

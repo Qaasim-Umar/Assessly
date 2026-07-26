@@ -4,6 +4,11 @@ import { Suspense, useEffect, useState, useCallback, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
+import {
+    isEnglishSubject,
+    JAMB_ENGLISH_SUBJECT,
+    normalizeSubjectName,
+} from "@/lib/jambSubjects";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -104,9 +109,13 @@ export default function JambSessionWrapper() {
 
 function JambSessionPage() {
     const searchParams = useSearchParams();
-    const subjectsParam = searchParams.get("subjects") ?? "";
-    const chosenSubjects = subjectsParam.split(",").filter(Boolean).slice(0, 3);
-    const allSubjects = ["English Language", ...chosenSubjects];
+    const repeatedSubjects = searchParams.getAll("subject");
+    const legacySubjects = (searchParams.get("subjects") ?? "").split(",");
+    const chosenSubjects = (repeatedSubjects.length > 0 ? repeatedSubjects : legacySubjects)
+        .map(normalizeSubjectName)
+        .filter(Boolean)
+        .slice(0, 3);
+    const allSubjects = [JAMB_ENGLISH_SUBJECT, ...chosenSubjects];
 
     // ── Page state ────────────────────────────────────────────────────────────
     const [pageState, setPageState] = useState<PageState>("loading");
@@ -118,7 +127,7 @@ function JambSessionPage() {
     const [answers, setAnswers] = useState<Record<string, number>>({});
     const [flags, setFlags] = useState<Record<string, boolean>>({});
     const [currentIdx, setCurrentIdx] = useState(0);
-    const [activeTab, setActiveTab] = useState("English Language");
+    const [activeTab, setActiveTab] = useState(JAMB_ENGLISH_SUBJECT);
 
     // ── Timer ─────────────────────────────────────────────────────────────────
     const [timeLeft, setTimeLeft] = useState(7200);
@@ -270,17 +279,33 @@ function JambSessionPage() {
     // ── Load questions & create session ───────────────────────────────────────
     useEffect(() => {
         async function init() {
-            if (chosenSubjects.length !== 3) {
-                setLoadError("Invalid subject selection. Please go back and choose 3 subjects.");
+            const uniqueSubjects = new Set(
+                chosenSubjects.map((subject) => subject.toLocaleLowerCase())
+            );
+            const hasInvalidSelection =
+                chosenSubjects.length !== 3 ||
+                uniqueSubjects.size !== 3 ||
+                chosenSubjects.some(isEnglishSubject);
+
+            if (hasInvalidSelection) {
+                setLoadError("Invalid subject selection. Please go back and choose 3 different subjects; English is already included.");
                 return;
             }
 
             // Restore from localStorage backup if subjects match
             const backup = loadBackup();
+            const backupHasCompleteSubjectBlocks =
+                backup?.questions.length === 180 &&
+                allSubjects.every((subject, index) => {
+                    const expectedCount = index === 0 ? 60 : 40;
+                    return backup.questions.filter(
+                        (question) => question.subject === subject
+                    ).length === expectedCount;
+                });
             if (
                 backup &&
                 backup.subjects.join(",") === chosenSubjects.join(",") &&
-                backup.questions.length > 0
+                backupHasCompleteSubjectBlocks
             ) {
                 setQuestions(backup.questions);
                 setSessionId(backup.sessionId);
@@ -288,18 +313,19 @@ function JambSessionPage() {
                 setFlags(backup.flags);
                 timeLeftRef.current = backup.timeLeft;
                 setTimeLeft(backup.timeLeft);
-                setActiveTab("English Language");
+                setActiveTab(JAMB_ENGLISH_SUBJECT);
                 setPageState("exam");
                 return;
             }
+            if (backup) clearBackup();
 
             try {
-                // Fetch English Language questions (fetch generous pool, shuffle + take 60)
+                // Fetch compulsory English questions (fetch generous pool, shuffle + take 60)
                 const { data: engData, error: engErr } = await supabase
                     .from("questions")
                     .select("id, text, topic, explanation, image_url, instruction, passage, options, correct_answer")
                     .eq("exam_type", "jamb")
-                    .eq("subject", "English Language")
+                    .eq("subject", JAMB_ENGLISH_SUBJECT)
                     .eq("is_active", true);
                 if (engErr) throw engErr;
 
@@ -318,11 +344,19 @@ function JambSessionPage() {
                 for (const { error: err } of subjectFetches) {
                     if (err) throw err;
                 }
+                if ((engData ?? []).length < 60) {
+                    throw new Error(`Not enough active ${JAMB_ENGLISH_SUBJECT} questions`);
+                }
+                subjectFetches.forEach(({ data }, index) => {
+                    if ((data ?? []).length < 40) {
+                        throw new Error(`Not enough active ${chosenSubjects[index]} questions`);
+                    }
+                });
 
                 const engQuestions: JambQuestion[] = shuffle(
                     (engData ?? []).map((r) => ({
                         id: r.id as string,
-                        subject: "English Language",
+                        subject: JAMB_ENGLISH_SUBJECT,
                         text: r.text as string,
                         topic: r.topic as string | null,
                         explanation: r.explanation as string | null,
@@ -381,7 +415,7 @@ function JambSessionPage() {
                 setFlags({});
                 timeLeftRef.current = 7200;
                 setTimeLeft(7200);
-                setActiveTab("English Language");
+                setActiveTab(JAMB_ENGLISH_SUBJECT);
 
                 saveBackup({
                     sessionId: sid,
@@ -412,13 +446,8 @@ function JambSessionPage() {
     // ── Derived values ────────────────────────────────────────────────────────
 
     function subjectStartIndex(subj: string): number {
-        if (subj === "English Language") return 0;
-        let idx = 60;
-        for (let i = 0; i < chosenSubjects.length; i++) {
-            if (chosenSubjects[i] === subj) return idx;
-            idx += 40;
-        }
-        return 0;
+        const index = questions.findIndex((question) => question.subject === subj);
+        return index >= 0 ? index : 0;
     }
 
     function questionsForSubject(subj: string): JambQuestion[] {
@@ -893,11 +922,11 @@ function JambSessionPage() {
             </header>
 
             {/* ── Subject tabs ── */}
-            <nav className="bg-gray-900 border-b border-gray-800 sticky top-14 z-20 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                <div className="max-w-screen-xl mx-auto px-3 sm:px-5 flex gap-0">
+            <nav className="bg-gray-900 border-b border-gray-800 sticky top-14 z-20">
+                <div className="max-w-screen-xl mx-auto grid grid-cols-2 sm:grid-cols-4">
                     {allSubjects.map((subj) => {
                         const answered = answeredCountForSubject(subj);
-                        const total = subj === "English Language" ? 60 : 40;
+                        const total = subj === JAMB_ENGLISH_SUBJECT ? 60 : 40;
                         const isActive = activeTab === subj;
                         return (
                             <button
@@ -906,7 +935,7 @@ function JambSessionPage() {
                                     setActiveTab(subj);
                                     navigateTo(subjectStartIndex(subj));
                                 }}
-                                className={`flex-shrink-0 px-3 sm:px-4 py-3 text-xs font-semibold border-b-2 transition-colors whitespace-nowrap ${
+                                className={`min-h-[44px] px-2 sm:px-4 py-2.5 text-xs font-semibold border-b-2 transition-colors ${
                                     isActive
                                         ? "border-blue-500 text-blue-400"
                                         : answered === total

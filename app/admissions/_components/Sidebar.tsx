@@ -96,7 +96,7 @@ export default async function AdmissionsSidebar() {
           </div>
           <h3
             className="text-[24px] text-white leading-tight tracking-[-0.5px] mb-2"
-            style={{ fontFamily: "'Lora', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
           >
             {newThisWeek.title}
           </h3>
@@ -118,7 +118,7 @@ export default async function AdmissionsSidebar() {
           </div>
           <h3
             className="text-[24px] text-white leading-tight tracking-[-0.5px] mb-2"
-            style={{ fontFamily: "'Lora', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
           >
             {openScholarship.title}
           </h3>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import StudentNav from "@/components/StudentNav";
+import Footer from "@/components/Footer";
 
 const URL = "https://www.assessly.ng/jamb-practice";
 
@@ -230,6 +231,8 @@ export default function JambPracticePage() {
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

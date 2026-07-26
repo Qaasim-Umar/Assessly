@@ -185,7 +185,7 @@ export default async function CategoryArchivePage({
 
           <h1
             className="text-[clamp(28px,4vw,52px)] text-white leading-[1.1] tracking-[-1px] mb-3 max-w-[780px]"
-            style={{ fontFamily: "'Lora', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
           >
             {category.label}
           </h1>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import StudentNav from "@/components/StudentNav";
+import Footer from "@/components/Footer";
 
 const URL = "https://www.assessly.ng/post-utme-practice";
 
@@ -236,6 +237,8 @@ export default function PostUtmePracticePage() {
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

@@ -1,9 +1,25 @@
 import type { Metadata } from "next";
+import { Lora, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { PostHogProvider } from "@/components/PostHogProvider";
 import "./globals.css";
 
 const BASE_URL = "https://www.assessly.ng";
+
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-lora",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-plus-jakarta-sans",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -89,14 +105,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body className="min-h-screen bg-white">
+      <body className={`${lora.variable} ${plusJakartaSans.variable} min-h-screen bg-white`}>
         <PostHogProvider>
           {children}
         </PostHogProvider>

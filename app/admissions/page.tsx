@@ -488,7 +488,7 @@ export default function AdmissionsHubPage() {
             </div>
             <h1
               className="text-[clamp(40px,5vw,68px)] text-white leading-[1.08] tracking-[-1.5px] mb-3.5"
-              style={{ fontFamily: "'Lora', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
             >
               Your path to{" "}
               <em className="not-italic text-green-500">university</em>, sorted.
@@ -572,7 +572,7 @@ export default function AdmissionsHubPage() {
                   </div>
                   <h2
                     className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]"
-                    style={{ fontFamily: "'Lora', Georgia, serif" }}
+                    style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
                   >
                     School Gists
                   </h2>
@@ -603,7 +603,7 @@ export default function AdmissionsHubPage() {
                       )}
                       <h3
                         className="text-[26px] text-white leading-tight tracking-[-0.5px] mb-2.5"
-                        style={{ fontFamily: "'Lora', Georgia, serif" }}
+                        style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
                       >
                         {featuredGist.title}
                       </h3>
@@ -674,7 +674,7 @@ export default function AdmissionsHubPage() {
                   </div>
                   <h2
                     className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]"
-                    style={{ fontFamily: "'Lora', Georgia, serif" }}
+                    style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
                   >
                     Scholarships
                   </h2>
@@ -726,7 +726,7 @@ export default function AdmissionsHubPage() {
                   </div>
                   <h2
                     className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]"
-                    style={{ fontFamily: "'Lora', Georgia, serif" }}
+                    style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
                   >
                     Admission Deadlines
                   </h2>
@@ -767,7 +767,7 @@ export default function AdmissionsHubPage() {
                   </div>
                   <h2
                     className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]"
-                    style={{ fontFamily: "'Lora', Georgia, serif" }}
+                    style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
                   >
                     Cutoff Marks
                   </h2>
@@ -809,7 +809,7 @@ export default function AdmissionsHubPage() {
                   </div>
                   <h2
                     className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]"
-                    style={{ fontFamily: "'Lora', Georgia, serif" }}
+                    style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
                   >
                     NYSC
                   </h2>
@@ -855,7 +855,7 @@ export default function AdmissionsHubPage() {
               </div>
               <h3
                 className="text-[24px] text-white leading-tight tracking-[-0.5px] mb-2"
-                style={{ fontFamily: "'Lora', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
               >
                 {newThisWeek.title}
               </h3>
@@ -878,7 +878,7 @@ export default function AdmissionsHubPage() {
                   </div>
                   <h3
                     className="text-[24px] text-white leading-tight tracking-[-0.5px] mb-2"
-                    style={{ fontFamily: "'Lora', Georgia, serif" }}
+                    style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
                   >
                     {s.title}
                   </h3>
