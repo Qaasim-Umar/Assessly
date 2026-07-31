@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Assessly is Nigeria's leading CBT platform for schools and students. Create exams with AI, run timed practice tests, and get instant results - free for every student.",
+    "Assessly is a CBT platform for schools and students in Nigeria. Create exams with AI, run timed practice tests, and get instant results - free for every student.",
   alternates: {
     canonical: "https://www.assessly.ng/",
   },

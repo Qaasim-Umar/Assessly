@@ -7,6 +7,7 @@ import Sidebar from "../../_components/Sidebar";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
 import { Check } from "lucide-react";
+import ArticleByline from "@/components/ArticleByline";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
@@ -27,7 +28,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const { data } = await supabase
     .from("admissions_scholarships")
-    .select("title, description")
+    .select("title, description, created_at")
     .eq("slug", slug)
     .eq("published", true)
     .single();
@@ -36,9 +37,10 @@ export async function generateMetadata({
   const url = `https://www.assessly.ng/admissions/scholarships/${slug}`;
   return {
     title: data.title,
+    authors: [{ name: "UQB" }],
     description: desc,
     alternates: { canonical: url },
-    openGraph: { title: data.title, description: desc, type: "website", url, siteName: "Assessly" },
+    openGraph: { title: data.title, description: desc, type: "article", url, siteName: "Assessly", publishedTime: data.created_at, authors: ["UQB"] },
     twitter: { card: "summary_large_image", title: data.title, description: desc },
   };
 }
@@ -118,6 +120,9 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
                 Closed
               </span>
             )}
+          </div>
+          <div className="mt-4">
+            <ArticleByline publishedAt={data.created_at as string} dark />
           </div>
         </div>
       </div>

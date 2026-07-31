@@ -9,6 +9,7 @@ import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
 import { Calendar, Eye, Building2 } from "lucide-react";
 import ShareBar from "@/components/ShareBar";
+import ArticleByline from "@/components/ArticleByline";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
@@ -26,6 +27,7 @@ interface DbGist {
   paragraphs: string[];
   reactions: { fire: number; shock: number; check: number; think: number };
   related: { slug: string; title: string; tag: string }[];
+  created_at: string;
 }
 
 export async function generateMetadata({
@@ -36,7 +38,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const { data } = await supabase
     .from("admissions_gists")
-    .select("title, paragraphs")
+    .select("title, paragraphs, created_at")
     .eq("slug", slug)
     .eq("published", true)
     .single();
@@ -45,9 +47,10 @@ export async function generateMetadata({
   const url = `https://www.assessly.ng/admissions/gists/${slug}`;
   return {
     title: data.title,
+    authors: [{ name: "UQB" }],
     description: first,
     alternates: { canonical: url },
-    openGraph: { title: data.title, description: first, type: "article", url, siteName: "Assessly" },
+    openGraph: { title: data.title, description: first, type: "article", url, siteName: "Assessly", publishedTime: data.created_at, authors: ["UQB"] },
     twitter: { card: "summary_large_image", title: data.title, description: first },
   };
 }
@@ -94,7 +97,9 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
             {g.title}
           </h1>
 
-          <div className="flex items-center gap-4 text-sm text-white/35 flex-wrap mb-5">
+          <ArticleByline publishedAt={g.created_at} dark />
+
+          <div className="flex items-center gap-4 text-sm text-white/35 flex-wrap mt-3 mb-5">
             <span className="flex items-center gap-1"><Calendar size={13} /> {g.date_label}</span>
             <span className="flex items-center gap-1"><Eye size={13} /> {g.views} views</span>
             <span className="flex items-center gap-1"><Building2 size={13} /> {g.school}</span>

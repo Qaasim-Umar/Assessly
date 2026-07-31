@@ -185,35 +185,35 @@ export default async function CategoryArchivePage({
 
           <h1
             className="text-[clamp(28px,4vw,52px)] text-white leading-[1.1] tracking-[-1px] mb-3 max-w-[780px]"
-            style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
+            style={{ fontFamily: "'Lora', Georgia, serif" }}
           >
             {category.label}
           </h1>
           <p className="text-lg text-white/45 max-w-[600px] leading-relaxed">
             {category.archiveDescription}
           </p>
+
+          <div className="flex flex-wrap gap-2 mt-6">
+            {ADMISSIONS_CATEGORIES.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/admissions/category/${c.slug}`}
+                className={`text-base font-semibold px-3.5 py-1.5 rounded-full border transition-all ${
+                  c.slug === category.slug
+                    ? "bg-green-600 border-green-600 text-white"
+                    : "bg-white/5 border-white/10 text-white/60 hover:border-white/30"
+                }`}
+              >
+                {c.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* ── LIST ─────────────────────────────────────────────────────── */}
       <div className="bg-[#f7faf8] min-h-screen px-6 py-10">
-        <div className="max-w-[1100px] mx-auto">
-        <div className="flex flex-wrap gap-2 mb-8">
-          {ADMISSIONS_CATEGORIES.map((c) => (
-            <Link
-              key={c.slug}
-              href={`/admissions/category/${c.slug}`}
-              className={`text-base font-semibold px-3.5 py-1.5 rounded-full border transition-all ${
-                c.slug === category.slug
-                  ? "bg-green-600 border-green-600 text-white"
-                  : "bg-white border-[#e2ede6] text-[#4a5e4e] hover:border-green-400 hover:text-green-600"
-              }`}
-            >
-              {c.label}
-            </Link>
-          ))}
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 items-start">
+        <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 items-start">
         <div>
           {rows.length === 0 && (
             <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center">
@@ -359,7 +359,6 @@ export default async function CategoryArchivePage({
         </div>
 
         <AdmissionsSidebar />
-        </div>
         </div>
       </div>
     </>

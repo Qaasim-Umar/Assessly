@@ -1,8 +1,43 @@
 import type { MetadataRoute } from "next";
 import { supabase } from "@/lib/supabase";
-import { CATEGORY_SLUGS } from "@/lib/admissionsCategories";
+import {
+  CATEGORY_SLUGS,
+  type CategorySlug,
+} from "@/lib/admissionsCategories";
 
 const BASE_URL = "https://www.assessly.ng";
+
+const STATIC_LAST_MODIFIED = {
+  home: "2026-07-29",
+  general: "2026-07-18",
+  jambPractice: "2026-07-26",
+  waecPractice: "2026-07-26",
+  postUtmePractice: "2026-07-26",
+  privacy: "2026-07-29",
+  terms: "2026-07-26",
+  about: "2026-07-26",
+  contact: "2026-07-26",
+  admissions: "2026-07-29",
+  questionBank: "2026-07-18",
+} as const;
+
+interface TimestampedRow {
+  created_at: string;
+}
+
+function latestModified(
+  rows: TimestampedRow[] | null | undefined,
+  fallback: string,
+): Date {
+  let latest = Date.parse(fallback);
+
+  for (const row of rows ?? []) {
+    const timestamp = Date.parse(row.created_at);
+    if (!Number.isNaN(timestamp) && timestamp > latest) latest = timestamp;
+  }
+
+  return new Date(latest);
+}
 
 export const revalidate = 3600; // regenerate every hour
 
@@ -10,8 +45,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [
     { data: gists },
     { data: scholarships },
+    { data: deadlines },
     { data: cutoffs },
     { data: nysc },
+    { data: questionPacks },
   ] = await Promise.all([
     supabase
       .from("admissions_gists")
@@ -24,6 +61,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .eq("published", true)
       .order("created_at", { ascending: false }),
     supabase
+      .from("admissions_deadlines")
+      .select("created_at")
+      .eq("published", true)
+      .order("created_at", { ascending: false }),
+    supabase
       .from("admissions_cutoffs")
       .select("slug, created_at")
       .eq("published", true)
@@ -33,25 +75,52 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .select("slug, created_at")
       .eq("published", true)
       .order("created_at", { ascending: false }),
+    supabase
+      .from("question_bank_packs")
+      .select("created_at")
+      .eq("published", true)
+      .order("created_at", { ascending: false }),
   ]);
 
+  const admissionsLastModified = latestModified(
+    [
+      ...(gists ?? []),
+      ...(scholarships ?? []),
+      ...(deadlines ?? []),
+      ...(cutoffs ?? []),
+      ...(nysc ?? []),
+    ],
+    STATIC_LAST_MODIFIED.admissions,
+  );
+
+  const categoryLastModified: Record<CategorySlug, Date> = {
+    gists: latestModified(gists, STATIC_LAST_MODIFIED.admissions),
+    scholarships: latestModified(
+      scholarships,
+      STATIC_LAST_MODIFIED.admissions,
+    ),
+    deadlines: latestModified(deadlines, STATIC_LAST_MODIFIED.admissions),
+    cutoffs: latestModified(cutoffs, STATIC_LAST_MODIFIED.admissions),
+    nysc: latestModified(nysc, STATIC_LAST_MODIFIED.admissions),
+  };
+
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/`,                       lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
-    { url: `${BASE_URL}/general`,                lastModified: new Date(), changeFrequency: "daily",  priority: 0.9 },
-    { url: `${BASE_URL}/jamb-practice`,          lastModified: new Date(), changeFrequency: "daily",  priority: 0.85 },
-    { url: `${BASE_URL}/waec-practice`,          lastModified: new Date(), changeFrequency: "daily",  priority: 0.85 },
-    { url: `${BASE_URL}/post-utme-practice`,     lastModified: new Date(), changeFrequency: "daily",  priority: 0.85 },
-    { url: `${BASE_URL}/privacy`,                lastModified: new Date("2026-07-26"), changeFrequency: "yearly", priority: 0.4 },
-    { url: `${BASE_URL}/terms`,                  lastModified: new Date("2026-07-26"), changeFrequency: "yearly", priority: 0.4 },
-    { url: `${BASE_URL}/about`,                  lastModified: new Date("2026-07-26"), changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/contact`,                lastModified: new Date("2026-07-26"), changeFrequency: "yearly", priority: 0.5 },
-    { url: `${BASE_URL}/admissions`,              lastModified: new Date(), changeFrequency: "daily",  priority: 0.85 },
-    { url: `${BASE_URL}/admissions/question-bank`,lastModified: new Date(), changeFrequency: "daily",  priority: 0.85 },
+    { url: `${BASE_URL}/`,                       lastModified: new Date(STATIC_LAST_MODIFIED.home), changeFrequency: "weekly", priority: 1.0 },
+    { url: `${BASE_URL}/general`,                lastModified: new Date(STATIC_LAST_MODIFIED.general), changeFrequency: "daily",  priority: 0.9 },
+    { url: `${BASE_URL}/jamb-practice`,          lastModified: new Date(STATIC_LAST_MODIFIED.jambPractice), changeFrequency: "daily",  priority: 0.85 },
+    { url: `${BASE_URL}/waec-practice`,          lastModified: new Date(STATIC_LAST_MODIFIED.waecPractice), changeFrequency: "daily",  priority: 0.85 },
+    { url: `${BASE_URL}/post-utme-practice`,     lastModified: new Date(STATIC_LAST_MODIFIED.postUtmePractice), changeFrequency: "daily",  priority: 0.85 },
+    { url: `${BASE_URL}/privacy`,                lastModified: new Date(STATIC_LAST_MODIFIED.privacy), changeFrequency: "yearly", priority: 0.4 },
+    { url: `${BASE_URL}/terms`,                  lastModified: new Date(STATIC_LAST_MODIFIED.terms), changeFrequency: "yearly", priority: 0.4 },
+    { url: `${BASE_URL}/about`,                  lastModified: new Date(STATIC_LAST_MODIFIED.about), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE_URL}/contact`,                lastModified: new Date(STATIC_LAST_MODIFIED.contact), changeFrequency: "yearly", priority: 0.5 },
+    { url: `${BASE_URL}/admissions`,             lastModified: admissionsLastModified, changeFrequency: "daily",  priority: 0.85 },
+    { url: `${BASE_URL}/admissions/question-bank`, lastModified: latestModified(questionPacks, STATIC_LAST_MODIFIED.questionBank), changeFrequency: "daily", priority: 0.85 },
   ];
 
   const admissionsCategoryRoutes: MetadataRoute.Sitemap = CATEGORY_SLUGS.map((slug) => ({
     url: `${BASE_URL}/admissions/category/${slug}`,
-    lastModified: new Date(),
+    lastModified: categoryLastModified[slug],
     changeFrequency: "daily",
     priority: 0.8,
   }));

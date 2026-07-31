@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Assessly",
   },
   description:
-    "Assessly is Nigeria's leading Computer-Based Testing (CBT) platform for secondary schools. Create exams with AI, run timed WAEC, JAMB & NECO practice tests - free for students, powerful for teachers.",
+    "Assessly is a Computer-Based Testing (CBT) platform for secondary schools in Nigeria. Create exams with AI, run timed WAEC, JAMB & NECO practice tests - free for students, powerful for teachers.",
   keywords: [
     "CBT exam platform Nigeria",
     "WAEC past questions",

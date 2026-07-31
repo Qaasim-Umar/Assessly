@@ -63,7 +63,7 @@ export default function LandingPage() {
     const jsonLd = {
         "@context": "https://schema.org",
         "@graph": [
-            { "@type": "Organization", "@id": "https://www.assessly.ng/#organization", name: "Assessly", url: "https://www.assessly.ng", description: "Nigeria's leading Computer-Based Testing (CBT) platform for secondary schools." },
+            { "@type": "Organization", "@id": "https://www.assessly.ng/#organization", name: "Assessly", url: "https://www.assessly.ng", description: "A Computer-Based Testing (CBT) platform for secondary schools in Nigeria." },
             { "@type": "WebSite", "@id": "https://www.assessly.ng/#website", url: "https://www.assessly.ng", name: "Assessly", publisher: { "@id": "https://www.assessly.ng/#organization" } },
             { "@type": "WebPage", "@id": "https://www.assessly.ng/", url: "https://www.assessly.ng/", name: "Assessly - Smart CBT Exams for Nigerian Schools", isPartOf: { "@id": "https://www.assessly.ng/#website" } },
         ],

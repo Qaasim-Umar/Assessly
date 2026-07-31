@@ -10,6 +10,7 @@ const sections = [
   { id: "legal-bases", label: "Why we may process data" },
   { id: "sharing", label: "When we share data" },
   { id: "children", label: "Children’s privacy" },
+  { id: "advertising", label: "Advertising and cookies" },
   { id: "storage", label: "Storage and security" },
   { id: "retention", label: "How long we keep data" },
   { id: "rights", label: "Your privacy rights" },
@@ -36,7 +37,7 @@ export default function PrivacyPolicyPage() {
               use it, who we share it with, and the choices available to you.
             </p>
             <p className="privacy-date">
-              Effective and last updated: <time dateTime="2026-07-26">26 July 2026</time>
+              Effective and last updated: <time dateTime="2026-07-29">29 July 2026</time>
             </p>
           </div>
         </header>
@@ -245,8 +246,42 @@ export default function PrivacyPolicyPage() {
               </p>
             </section>
 
-            <section id="storage">
+            <section id="advertising">
               <p className="privacy-section-number">07</p>
+              <h2>Advertising and cookies</h2>
+              <p>
+                Assessly may use Google AdSense and other advertising partners to
+                display, deliver, limit, and measure ads. If advertising is shown,
+                Google and its partners may use cookies, device identifiers, or
+                similar technologies to serve ads based on your visits to Assessly
+                and other websites, subject to applicable consent and age rules.
+              </p>
+              <p>
+                Where required, we will ask for consent before using non-essential
+                advertising technologies. Depending on your location, choices, and
+                the context in which Assessly is used, ads may be personalised or
+                non-personalised. We do not use children’s personal data to
+                personalise advertising, and school assessment areas or experiences
+                directed to children will not use personalised ads.
+              </p>
+              <p>
+                You can review or change Google ad personalisation choices in{" "}
+                <a
+                  href="https://adssettings.google.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Google Ads Settings
+                </a>
+                . You can also restrict cookies through your browser or use any
+                consent controls displayed on Assessly. Rejecting non-essential
+                cookies will not disable cookies that are necessary for security,
+                account access, or core assessment features.
+              </p>
+            </section>
+
+            <section id="storage">
+              <p className="privacy-section-number">08</p>
               <h2>Storage and security</h2>
               <p>
                 We use administrative, technical, and organisational safeguards
@@ -264,7 +299,7 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section id="retention">
-              <p className="privacy-section-number">08</p>
+              <p className="privacy-section-number">09</p>
               <h2>How long we keep data</h2>
               <p>
                 We keep personal data only for as long as reasonably necessary to
@@ -283,7 +318,7 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section id="rights">
-              <p className="privacy-section-number">09</p>
+              <p className="privacy-section-number">10</p>
               <h2>Your privacy rights</h2>
               <p>
                 Depending on the law that applies, you may have the right to be
@@ -309,7 +344,7 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section id="choices">
-              <p className="privacy-section-number">10</p>
+              <p className="privacy-section-number">11</p>
               <h2>Your choices</h2>
               <ul>
                 <li>
@@ -332,7 +367,7 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section id="changes">
-              <p className="privacy-section-number">11</p>
+              <p className="privacy-section-number">12</p>
               <h2>Changes to this policy</h2>
               <p>
                 We may update this policy as Assessly changes or when legal
@@ -343,7 +378,7 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section id="contact">
-              <p className="privacy-section-number">12</p>
+              <p className="privacy-section-number">13</p>
               <h2>Contact us</h2>
               <p>
                 Questions, requests, or concerns about this policy or your personal
