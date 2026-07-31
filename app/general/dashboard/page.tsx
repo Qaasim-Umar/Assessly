@@ -9,7 +9,7 @@ import { getGeneralAdminSession, signOutGeneralAdmin } from "@/lib/generalAdminA
 interface Stats {
     total: number;
     byExamType: { exam_type: string; count: number }[];
-    bySubject: { subject: string; count: number }[];
+    bySubject: { subject: string; count: number; years: number[] }[];
 }
 
 export default function GeneralDashboardPage() {
@@ -33,7 +33,7 @@ export default function GeneralDashboardPage() {
         try {
             const { data } = await supabase
                 .from("questions")
-                .select("exam_type, subject")
+                .select("exam_type, subject, year")
                 .is("exam_id", null)
                 .eq("is_active", true);
 
@@ -42,6 +42,7 @@ export default function GeneralDashboardPage() {
             // Count by exam_type
             const examTypeMap: Record<string, number> = {};
             const subjectMap: Record<string, number> = {};
+            const subjectYearMap: Record<string, Set<number>> = {};
 
             for (const row of rows) {
                 const et = row.exam_type ?? "Unknown";
@@ -49,6 +50,9 @@ export default function GeneralDashboardPage() {
 
                 const sub = row.subject ?? "Unknown";
                 subjectMap[sub] = (subjectMap[sub] ?? 0) + 1;
+
+                if (!subjectYearMap[sub]) subjectYearMap[sub] = new Set<number>();
+                if (typeof row.year === "number") subjectYearMap[sub].add(row.year);
             }
 
             setStats({
@@ -57,7 +61,11 @@ export default function GeneralDashboardPage() {
                     .map(([exam_type, count]) => ({ exam_type, count }))
                     .sort((a, b) => b.count - a.count),
                 bySubject: Object.entries(subjectMap)
-                    .map(([subject, count]) => ({ subject, count }))
+                    .map(([subject, count]) => ({
+                        subject,
+                        count,
+                        years: Array.from(subjectYearMap[subject] ?? []).sort((a, b) => b - a),
+                    }))
                     .sort((a, b) => b.count - a.count),
             });
         } catch {
@@ -213,7 +221,7 @@ export default function GeneralDashboardPage() {
                         <div className="px-5 py-4 border-b border-gray-100">
                             <h2 className="text-sm font-bold text-gray-700">By Subject</h2>
                         </div>
-                        <div className="p-5 space-y-3 max-h-80 overflow-y-auto">
+                        <div className="p-5 space-y-4">
                             {loading ? (
                                 Array.from({ length: 6 }).map((_, i) => (
                                     <div key={i} className="animate-pulse flex items-center gap-3">
@@ -225,20 +233,43 @@ export default function GeneralDashboardPage() {
                             ) : stats?.bySubject.length === 0 ? (
                                 <p className="text-sm text-gray-400 text-center py-4">No questions yet</p>
                             ) : (
-                                stats?.bySubject.map(({ subject, count }) => {
+                                stats?.bySubject.map(({ subject, count, years }) => {
                                     const pct = stats.total > 0 ? Math.round((count / stats.total) * 100) : 0;
                                     return (
-                                        <div key={subject} className="flex items-center gap-3">
-                                            <span className="text-xs text-gray-600 w-32 truncate flex-shrink-0">{subject}</span>
-                                            <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+                                        <div key={subject} className="border-b border-gray-100 pb-4 last:border-b-0 last:pb-0">
+                                            <div className="flex items-start justify-between gap-4">
+                                                <span className="min-w-0 break-words text-sm font-semibold text-gray-700">
+                                                    {subject}
+                                                </span>
+                                                <span className="shrink-0 text-xs font-bold text-gray-700">
+                                                    {count.toLocaleString()} <span className="font-normal text-gray-400">questions ({pct}%)</span>
+                                                </span>
+                                            </div>
+
+                                            <div
+                                                className="mt-2 flex flex-wrap gap-1.5"
+                                                aria-label={`Years stored for ${subject}`}
+                                            >
+                                                {years.length > 0 ? (
+                                                    years.map((year) => (
+                                                        <span
+                                                            key={year}
+                                                            className="rounded-md border border-blue-100 bg-blue-50 px-2 py-0.5 text-[11px] font-semibold tabular-nums text-blue-700"
+                                                        >
+                                                            {year}
+                                                        </span>
+                                                    ))
+                                                ) : (
+                                                    <span className="text-[11px] text-gray-400">No year stored</span>
+                                                )}
+                                            </div>
+
+                                            <div className="mt-3 h-2 overflow-hidden rounded-full bg-gray-100">
                                                 <div
                                                     className="h-full bg-blue-400 rounded-full transition-all"
                                                     style={{ width: `${pct}%` }}
                                                 />
                                             </div>
-                                            <span className="text-xs font-bold text-gray-700 w-16 text-right flex-shrink-0">
-                                                {count.toLocaleString()} <span className="text-gray-400 font-normal">({pct}%)</span>
-                                            </span>
                                         </div>
                                     );
                                 })

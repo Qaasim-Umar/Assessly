@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import StudentNav from "@/components/StudentNav";
 import Footer from "@/components/Footer";
+import ExamLandingGuide from "@/components/ExamLandingGuide";
+import { JAMB_GUIDE } from "@/lib/examLandingGuides";
 
 const URL = "https://www.assessly.ng/jamb-practice";
 
@@ -48,12 +50,6 @@ const FEATURES = [
     title: "Past Questions and Revision",
     body: "Use past questions, Study Mode, and Survival Mode to build speed, confidence, and recall.",
   },
-];
-
-const STEPS = [
-  "Open the JAMB Simulator or enter General Mode.",
-  "Choose the mode that fits your study goal.",
-  "Practice for free and review explanations after each session.",
 ];
 
 const FAQS = [
@@ -158,39 +154,7 @@ export default function JambPracticePage() {
           ))}
         </section>
 
-        <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900">
-            What you can do on Assessly
-          </h2>
-          <p className="mt-3 text-sm leading-7 text-gray-600">
-            Your JAMB practice happens inside{" "}
-            <Link href="/general" className="font-semibold text-green-700 hover:underline">
-              General Mode
-            </Link>
-            , where you can choose the best format for your revision. If you
-            want a full UTME-style session, open the{" "}
-            <Link
-              href="/general/dashboard/mock/jamb"
-              className="font-semibold text-green-700 hover:underline"
-            >
-              JAMB Simulator
-            </Link>
-            . If you want lighter revision, use practice, study, survival, or
-            past questions from the main hub.
-          </p>
-          <div className="mt-5 grid gap-3 sm:grid-cols-3">
-            {STEPS.map((step) => (
-              <div
-                key={step}
-                className="rounded-xl border border-gray-200 bg-[#f8faf9] p-4"
-              >
-                <p className="text-sm font-medium leading-6 text-gray-700">
-                  {step}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <ExamLandingGuide content={JAMB_GUIDE} />
 
         <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="text-xl font-bold text-gray-900">

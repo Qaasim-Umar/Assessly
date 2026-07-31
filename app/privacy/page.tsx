@@ -203,9 +203,9 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li>
                   <strong>Service providers:</strong> suppliers that help us host,
-                  secure, analyse, and operate Assessly, including Supabase,
-                  Vercel, and PostHog. They process data for the services they
-                  provide to us and under their own contractual and privacy terms.
+                  secure, analyse, and operate Assessly, including Supabase and
+                  Vercel. They process data for the services they provide to
+                  us and under their own contractual and privacy terms.
                 </li>
                 <li>
                   <strong>Authorities or other parties:</strong> where disclosure

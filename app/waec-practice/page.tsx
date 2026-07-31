@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import StudentNav from "@/components/StudentNav";
 import Footer from "@/components/Footer";
+import ExamLandingGuide from "@/components/ExamLandingGuide";
+import { WAEC_GUIDE } from "@/lib/examLandingGuides";
 
 const URL = "https://www.assessly.ng/waec-practice";
 
@@ -48,12 +50,6 @@ const FEATURES = [
     title: "Study and Survival Modes",
     body: "Use Study Mode for relaxed learning and Survival Mode to build speed and confidence under pressure.",
   },
-];
-
-const STEPS = [
-  "Open Practice Mode or Past Questions in General Mode.",
-  "Select WAEC and choose your subject and topic.",
-  "Practice for free and review explanations after each question.",
 ];
 
 const FAQS = [
@@ -158,45 +154,7 @@ export default function WaecPracticePage() {
           ))}
         </section>
 
-        <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900">
-            What you can do on Assessly
-          </h2>
-          <p className="mt-3 text-sm leading-7 text-gray-600">
-            Your WAEC practice happens inside{" "}
-            <Link href="/general" className="font-semibold text-green-700 hover:underline">
-              General Mode
-            </Link>
-            , where you can choose the best format for your revision. For
-            question-by-question training, open{" "}
-            <Link
-              href="/general/dashboard/practice"
-              className="font-semibold text-green-700 hover:underline"
-            >
-              Practice Mode
-            </Link>
-            . To revise with real papers, use{" "}
-            <Link
-              href="/general/dashboard/past-questions"
-              className="font-semibold text-green-700 hover:underline"
-            >
-              Past Questions
-            </Link>
-            , or try study and survival from the main hub.
-          </p>
-          <div className="mt-5 grid gap-3 sm:grid-cols-3">
-            {STEPS.map((step) => (
-              <div
-                key={step}
-                className="rounded-xl border border-gray-200 bg-[#f8faf9] p-4"
-              >
-                <p className="text-sm font-medium leading-6 text-gray-700">
-                  {step}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <ExamLandingGuide content={WAEC_GUIDE} />
 
         <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="text-xl font-bold text-gray-900">

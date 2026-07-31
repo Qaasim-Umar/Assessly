@@ -1,6 +1,5 @@
 "use client";
 
-import { usePostHog } from "posthog-js/react";
 import {
   ADMISSIONS_CATEGORIES,
   type CategorySlug,
@@ -21,8 +20,6 @@ export default function TabBar({
   activeTab,
   onTabChange,
 }: TabBarProps) {
-  const posthog = usePostHog();
-
   const TABS: { id: TabId; label: string; count: number }[] = [
     { id: "all", label: "All", count: counts.all },
     ...ADMISSIONS_CATEGORIES.map((c) => ({
@@ -37,10 +34,7 @@ export default function TabBar({
       {TABS.map((t) => (
         <button
           key={t.id}
-          onClick={() => {
-            onTabChange(t.id);
-            posthog.capture("admissions_tab_clicked", { tab: t.label });
-          }}
+          onClick={() => onTabChange(t.id)}
           className={`text-base font-semibold px-6 py-3.5 border-b-2 transition-colors flex items-center gap-2 whitespace-nowrap
             ${activeTab === t.id ? "text-white border-green-500" : "text-white/40 border-transparent hover:text-white/70"}`}
         >

@@ -17,7 +17,7 @@ const STUDENT_FEATURES: { Icon: LucideIcon; title: string; desc: string }[] = [
 ];
 
 const SCHOOL_FEATURES: { Icon: LucideIcon; title: string; desc: string }[] = [
-    { Icon: Sparkles, title: "AI Question Parser", desc: "Upload any PDF question paper and our AI automatically extracts, classifies, and structures questions by difficulty — saving hours of manual entry." },
+    { Icon: PenLine, title: "Question Builder", desc: "Enter and organise questions, answer options, explanations, and difficulty levels in a structured exam builder." },
     { Icon: Timer, title: "Timed CBT Exams", desc: "Set custom durations with automatic submission when time runs out. Students get real-time warnings and a clean question-by-question interface." },
     { Icon: KeyRound, title: "School Code Isolation", desc: "Each school gets a unique code. Students log in with that code — your exams and data are completely invisible to other schools." },
     { Icon: Zap, title: "Instant Results", desc: "Scores are computed and displayed the moment a student submits. No manual grading. Track performance per student and per question." },
@@ -27,7 +27,7 @@ const SCHOOL_FEATURES: { Icon: LucideIcon; title: string; desc: string }[] = [
 
 const STEPS = [
     { n: 1, t: "Create your admin account", d: "Sign up in seconds. A unique school code is automatically generated for your institution." },
-    { n: 2, t: "Upload your question paper", d: "Drop in a PDF or enter questions manually. AI parses and categorises every question by difficulty." },
+    { n: 2, t: "Add your questions", d: "Enter questions, answer options, explanations, and difficulty levels using the exam builder." },
     { n: 3, t: "Configure & publish", d: "Set subject, class level, duration, and question count. Save as draft or publish live instantly." },
     { n: 4, t: "Students sit the exam", d: "Students log in with the school code. They get a timed, question-by-question exam interface." },
     { n: 5, t: "View instant results", d: "Scores are computed automatically. Review per-student and per-question analytics in your dashboard." },
@@ -41,17 +41,16 @@ const STUDENT_TESTIMONIALS: { badge: { Icon: LucideIcon; text: string } | null; 
 ];
 
 const TEACHER_TESTIMONIALS = [
-    { badge: null, quote: "Setting up our first CBT exam took less than 10 minutes. The AI parsed our question bank PDF perfectly — questions were categorised by difficulty automatically.", initials: "MA", name: "Mrs. Adeyemi", role: "Senior Teacher, Govt. Sec. School Lagos" },
     { badge: null, quote: "My students felt more confident seeing their scores immediately. The timed interface is clean — it mirrors what they'll see in the actual WAEC hall.", initials: "BO", name: "Mr. Okonkwo", role: "HOD Mathematics, Bright Future Academy" },
     { badge: null, quote: "The school code system is genius. Each of our campuses has its own code — students only ever see their own exams. We've been using Assessly across 3 branches.", initials: "FH", name: "Dr. Fatima Hassan", role: "Principal, Hillside Group of Schools" },
 ];
 
 const TRUST_STATS = [
-    { num: "15,000+", label: "Past Questions" },
-    { num: "500+", label: "Schools" },
-    { num: "85,000+", label: "Students" },
-    { num: "4", label: "Exam Boards" },
-    { num: "Free", label: "For every student" },
+    { num: "JAMB", label: "Practice" },
+    { num: "WAEC", label: "Practice" },
+    { num: "NECO", label: "Practice" },
+    { num: "BECE", label: "Practice" },
+    { num: "Free", label: "Student access" },
 ];
 
 // ── Page ──────────────────────────────────────────────────────────────────────
@@ -82,8 +81,8 @@ export default function LandingPage() {
                         <em>Run better tests.</em>
                     </h1>
                     <p className="lp-hero-sub">
-                        15,000+ past questions for students. A full CBT platform for schools.
-                        No friction — just results.
+                        Exam practice for students and a complete CBT platform for schools.
+                        Start practising or create and manage your own assessments.
                     </p>
 
                     <div className="lp-split">
@@ -97,7 +96,7 @@ export default function LandingPage() {
                         <Link href="/dashboard/login" className="lp-split-card lp-split-school">
                             <div className="lp-split-tag">I run a school</div>
                             <div className="lp-split-title">Create CBT exams<br />in minutes.</div>
-                            <p className="lp-split-desc">Upload a PDF, set a duration, publish. Students log in with your school code and sit the exam.</p>
+                            <p className="lp-split-desc">Add your questions, set a duration, and publish. Students log in with your school code and sit the exam.</p>
                             <span className="lp-split-cta">Set up your school →</span>
                             <span className="lp-split-bg" aria-hidden="true"><svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M3 22h18M6 18V9M10 18V9M14 18V9M18 18V9M12 2L2 7h20z"/></svg></span>
                         </Link>
@@ -109,7 +108,7 @@ export default function LandingPage() {
             <div className="lp-trust-bar">
                 <div className="lp-trust-inner">
                     {TRUST_STATS.map(({ num, label }) => (
-                        <div key={label} className="lp-trust-stat">
+                        <div key={num} className="lp-trust-stat">
                             <span className="lp-trust-num">{num}</span>
                             <span className="lp-trust-label">{label}</span>
                         </div>
@@ -122,7 +121,7 @@ export default function LandingPage() {
                 <div className="lp-section-inner">
                     <div className="lp-section-eyebrow">For Students</div>
                     <h2 className="lp-section-title">Everything you need<br />to ace your exams</h2>
-                    <p className="lp-section-sub">Practice with real past questions from JAMB, WAEC, NECO, and BECE — with instant feedback on every answer.</p>
+                    <p className="lp-section-sub">Practice questions organised for JAMB, WAEC, NECO, and BECE — with feedback on every answer.</p>
 
                     <div className="lp-features-grid">
                         <div className="lp-no-login">
@@ -136,8 +135,8 @@ export default function LandingPage() {
                         <div className="lp-feature-card lp-feature-highlight">
                             <div className="lp-highlight-content">
                                 <div className="lp-feature-icon"><BookOpen size={24} strokeWidth={1.8} /></div>
-                                <h3>15,000+ authentic past questions</h3>
-                                <p>Real questions from official exam papers, organised by year and subject. Practice the exact papers students have sat for years.</p>
+                                <h3>Past questions by year and subject</h3>
+                                <p>Browse the questions currently available for each exam, then review answers, hints, and explanations as you practise.</p>
                                 <div className="lp-badges">
                                     {["JAMB", "WAEC", "NECO", "BECE"].map(b => <span key={b} className="lp-badge">{b}</span>)}
                                 </div>
@@ -180,7 +179,7 @@ export default function LandingPage() {
                 <div className="lp-section-inner">
                     <div className="lp-section-eyebrow">How it Works</div>
                     <h2 className="lp-section-title">Up and running in minutes</h2>
-                    <p className="lp-section-sub">No technical knowledge required. If you can upload a PDF and fill a form, you can run a CBT exam.</p>
+                    <p className="lp-section-sub">No technical knowledge required. The guided exam builder takes you from question entry to publishing.</p>
 
                     <div className="lp-steps-grid">
                         {STEPS.map(({ n, t, d }) => (
@@ -250,7 +249,7 @@ export default function LandingPage() {
                             <div className="lp-price">Free</div>
                             <div className="lp-cadence">Forever</div>
                             <ul className="lp-plan-features">
-                                {["Up to 3 active exams", "50 student accounts", "AI question parsing", "Instant results"].map(f => <li key={f}>{f}</li>)}
+                                {["Up to 3 active exams", "50 student accounts", "Manual question entry", "Instant results"].map(f => <li key={f}>{f}</li>)}
                             </ul>
                             <Link href="/dashboard/login" className="lp-plan-cta lp-cta-outline">Get started free</Link>
                         </div>
@@ -261,7 +260,7 @@ export default function LandingPage() {
                             <div className="lp-price"><span className="lp-price-symbol">₦</span>5,000</div>
                             <div className="lp-cadence">per month</div>
                             <ul className="lp-plan-features">
-                                {["Unlimited active exams", "Unlimited students", "Advanced AI classification", "General Mode (public exams)", "Detailed analytics", "Priority support"].map(f => <li key={f}>{f}</li>)}
+                                {["Unlimited active exams", "Unlimited students", "Question difficulty settings", "General Mode (public exams)", "Detailed analytics", "Priority support"].map(f => <li key={f}>{f}</li>)}
                             </ul>
                             <Link href="/dashboard/login" className="lp-plan-cta lp-cta-primary">Start free trial</Link>
                         </div>

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
-import { usePostHog } from "posthog-js/react";
 import { Flame, Lightbulb } from "lucide-react";
 
 type ReactionType = "fire" | "think";
@@ -45,7 +44,6 @@ export default function ReactionBar({
 }) {
   const [counts, setCounts] = useState({ ...initial });
   const [active, setActive] = useState<ReactionType | null>(null);
-  const posthog = usePostHog();
 
   useEffect(() => {
     if (!gistId) return;
@@ -87,7 +85,6 @@ export default function ReactionBar({
       setActive(null);
       localStorage.removeItem(`reaction_${gistId}`);
       callReaction(gistId, type, "decrement");
-      posthog.capture("admissions_reaction_removed", { gist_id: gistId, reaction: type });
     } else {
       // Switch from previous reaction if any
       if (active) {
@@ -98,7 +95,6 @@ export default function ReactionBar({
       setActive(type);
       localStorage.setItem(`reaction_${gistId}`, type);
       callReaction(gistId, type, "increment");
-      posthog.capture("admissions_reaction_added", { gist_id: gistId, reaction: type });
     }
   }
 

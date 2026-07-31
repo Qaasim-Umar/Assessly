@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="mb-14 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12 lg:grid-cols-[2fr_1fr_1fr_1fr_1fr]">
                     <div>
                         <Link href="/" className="mb-3.5 block text-[22px] font-extrabold text-green-600">Assessly</Link>
-                        <p className="max-w-[260px] text-sm leading-[1.65] text-white/40">AI-powered Computer-Based Testing for Nigerian students and schools. Built for the way Nigerians learn.</p>
+                        <p className="max-w-[260px] text-sm leading-[1.65] text-white/40">Computer-Based Testing for Nigerian students and schools. Built for the way Nigerians learn.</p>
                     </div>
                     <div>
                         <div className="mb-4 text-[11px] font-extrabold uppercase tracking-[0.1em] text-white/30">Product</div>

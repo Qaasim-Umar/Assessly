@@ -2,7 +2,6 @@
 
 import { useRef, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { usePostHog } from "posthog-js/react";
 
 type SearchResult = {
   id: string;
@@ -30,7 +29,6 @@ function labelFor(r: SearchResult) {
 export default function SearchBar() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const posthog = usePostHog();
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const abortRef = useRef<AbortController | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -98,7 +96,6 @@ export default function SearchBar() {
       const params = new URLSearchParams(searchParams.toString());
       if (q.trim()) {
         params.set("q", q.trim());
-        posthog.capture("admissions_search", { query: q.trim() });
       } else {
         params.delete("q");
       }
