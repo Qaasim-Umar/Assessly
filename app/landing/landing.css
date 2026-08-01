@@ -701,116 +701,42 @@ body:has(.lp-root) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   TESTIMONIALS
+   PLATFORM BENEFITS
    ═══════════════════════════════════════════════════════════════════════════ */
-.lp-tabs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 40px;
-}
-.lp-tab {
-  font-size: 14px;
-  font-weight: 600;
-  font-family: var(--lp-sans);
-  padding: 8px 20px;
-  border-radius: 999px;
-  border: 1.5px solid var(--lp-border);
-  background: var(--lp-white);
-  color: var(--lp-ink-60);
-  cursor: pointer;
-  transition: all 0.15s;
-}
-.lp-tab:hover {
-  border-color: var(--lp-green);
-  color: var(--lp-green);
-}
-.lp-tab-active {
-  background: var(--lp-green);
-  border-color: var(--lp-green);
-  color: var(--lp-white);
-}
-.lp-tab-active:hover {
-  color: var(--lp-white);
-}
-.lp-testimonials-grid {
+.lp-benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-.lp-testimonial {
+.lp-benefit-card {
   background: var(--lp-surface);
   border: 1px solid var(--lp-border);
   border-radius: var(--lp-r-lg);
   padding: 28px 24px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.lp-testimonial:hover {
+.lp-benefit-card:hover {
   border-color: var(--lp-green-mid);
   box-shadow: 0 4px 20px rgba(22, 163, 74, 0.08);
 }
-.lp-score-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--lp-green-light);
-  color: var(--lp-green-dark);
-  font-size: 12px;
+.lp-benefit-card h3 {
+  margin: 18px 0 8px;
+  color: var(--lp-ink);
+  font-size: 18px;
   font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 999px;
-  margin-bottom: 10px;
 }
-.lp-stars {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  color: #f59e0b;
-  margin-bottom: 14px;
-}
-.lp-t-quote {
+.lp-benefit-card p {
+  margin: 0;
+  color: var(--lp-ink-60);
   font-size: 15px;
   line-height: 1.65;
-  color: var(--lp-ink);
-  margin: 0 0 20px;
-  font-style: italic;
-}
-.lp-t-author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.lp-t-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--lp-amber);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--lp-white);
-  flex-shrink: 0;
-}
-.lp-t-avatar-green {
-  background: var(--lp-green);
-}
-.lp-t-name {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--lp-ink);
-}
-.lp-t-role {
-  font-size: 12px;
-  color: var(--lp-ink-60);
-  margin-top: 2px;
 }
 
 @media (max-width: 900px) {
-  .lp-testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .lp-benefits-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 580px) {
-  .lp-testimonials-grid { grid-template-columns: 1fr; }
+  .lp-benefits-grid { grid-template-columns: 1fr; }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════

@@ -36,47 +36,23 @@ export default function DeadlineListCard({
   const { day_label: day, month_label: month, urgency, badge } = useDeadlineCountdown(deadlineDate);
   const s = URGENCY_STYLES[urgency] ?? URGENCY_STYLES.open;
   return (
-    <div className="bg-white border border-gray-300 rounded-[18px] p-4 sm:px-5 sm:py-4 hover:border-green-200 transition-colors">
-      {/* Mobile: stack vertically */}
-      <div className="flex sm:hidden flex-col gap-3">
-        <div className="flex items-center justify-between gap-3">
-          <div className={`w-[60px] h-[60px] rounded-xl flex flex-col items-center justify-center flex-shrink-0 ${s.block}`}>
-            <span className={`text-2xl font-extrabold leading-none ${s.text}`}>
-              {day}
-            </span>
-            <span className={`text-[12px] font-extrabold tracking-wide uppercase ${s.text}`}>
-              {month}
-            </span>
-          </div>
-          <span className={`text-[13px] font-extrabold tracking-wide px-3 py-1.5 rounded-full ${s.badge}`}>
-            {badge}
-          </span>
-        </div>
-        <div>
-          <h3 className="text-base font-bold text-[#0d1a0f] mb-0.5">{title}</h3>
-          <p className="text-sm text-[#4a5e4e]">
-            <InlineMarkdown content={desc} />
-          </p>
-        </div>
-      </div>
-
-      {/* Desktop: grid layout */}
-      <div className="hidden sm:grid grid-cols-[auto_1fr_auto] gap-4 items-center">
-        <div className={`w-[60px] h-[60px] rounded-xl flex flex-col items-center justify-center flex-shrink-0 ${s.block}`}>
-          <span className={`text-2xl font-extrabold leading-none ${s.text}`}>
+    <div className="bg-white border border-gray-300 rounded-xl px-3 py-2.5 sm:px-4 hover:border-green-200 transition-colors">
+      <div className="grid grid-cols-[48px_minmax(0,1fr)_auto] gap-3 items-center">
+        <div className={`w-12 h-12 rounded-lg flex flex-col items-center justify-center flex-shrink-0 ${s.block}`}>
+          <span className={`text-lg font-extrabold leading-none ${s.text}`}>
             {day}
           </span>
-          <span className={`text-[12px] font-extrabold tracking-wide uppercase ${s.text}`}>
+          <span className={`text-[10px] font-extrabold tracking-wide uppercase ${s.text}`}>
             {month}
           </span>
         </div>
-        <div>
-          <h3 className="text-base font-bold text-[#0d1a0f] mb-0.5">{title}</h3>
-          <p className="text-base text-[#4a5e4e]">
+        <div className="min-w-0">
+          <h3 className="text-sm sm:text-base font-bold leading-snug text-[#0d1a0f]">{title}</h3>
+          <p className="line-clamp-1 text-xs sm:text-sm text-[#4a5e4e]">
             <InlineMarkdown content={desc} />
           </p>
         </div>
-        <span className={`text-[13px] font-extrabold tracking-wide px-3 py-1.5 rounded-full flex-shrink-0 ${s.badge}`}>
+        <span className={`text-[11px] sm:text-xs font-extrabold tracking-wide px-2 py-1 rounded-full flex-shrink-0 ${s.badge}`}>
           {badge}
         </span>
       </div>

@@ -161,7 +161,6 @@ export default function TermsOfServicePage() {
               </p>
               <ul>
                 <li>checking that questions, answer keys, marking rules, and time limits are accurate;</li>
-                <li>reviewing AI-assisted extraction or classification before publishing an exam;</li>
                 <li>using school codes and student data only for authorised educational purposes;</li>
                 <li>obtaining permissions required for student and children’s data;</li>
                 <li>protecting administrator credentials and limiting dashboard access; and</li>

@@ -81,11 +81,11 @@ export default function AdminLoginPage() {
                     <span className="text-white/60 text-xs font-semibold uppercase tracking-widest mb-3">Assessly</span>
                     <h2 className="text-3xl font-bold text-white leading-tight mb-3">Welcome Back!</h2>
                     <p className="text-green-200/70 text-sm leading-relaxed max-w-[260px]">
-                        Create AI-powered exams, manage students and track results all in one place.
+                        Create exams, manage students and track results all in one place.
                     </p>
 
                     <div className="mt-10 flex flex-col gap-3 w-full max-w-[260px]">
-                        {["AI-powered exam creation", "Manage students & results", "Publish live instantly"].map((text) => (
+                        {["Guided exam creation", "Manage students & results", "Publish live instantly"].map((text) => (
                             <div key={text} className="flex items-center gap-2.5">
                                 <div className="w-4 h-4 rounded-full bg-green-400/25 border border-green-300/30 flex items-center justify-center flex-shrink-0">
                                     <svg className="w-2 h-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3.5" d="M5 13l4 4L19 7" /></svg>

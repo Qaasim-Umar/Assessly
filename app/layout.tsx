@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Assessly",
   },
   description:
-    "Assessly is a Computer-Based Testing (CBT) platform for secondary schools in Nigeria. Create exams with AI, run timed WAEC, JAMB & NECO practice tests - free for students, powerful for teachers.",
+    "Assessly is a Computer-Based Testing (CBT) platform for secondary schools in Nigeria. Create and manage exams, run timed WAEC, JAMB and NECO practice tests, and review results.",
   keywords: [
     "CBT exam platform Nigeria",
     "WAEC past questions",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     siteName: "Assessly",
     title: "Assessly - Smart CBT Exams for Nigerian Schools",
     description:
-      "Create, manage and deliver Computer-Based Tests in minutes. Free practice exams for WAEC, JAMB & NECO. No account needed.",
+      "Create, manage and deliver Computer-Based Tests. Free practice exams for WAEC, JAMB and NECO. No account needed.",
     images: [
       {
         url: `${BASE_URL}/opengraph-image.png`,
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Assessly - Smart CBT Exams for Nigerian Schools",
     description:
-      "Create, manage and deliver Computer-Based Tests in minutes. Free WAEC, JAMB & NECO practice exams.",
+      "Create, manage and deliver Computer-Based Tests. Free WAEC, JAMB and NECO practice exams.",
     images: [`${BASE_URL}/opengraph-image.png`],
     creator: "@assessly",
   },

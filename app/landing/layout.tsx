@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: "https://www.assessly.ng/",
     title: "Assessly - Smart CBT Exams for Nigerian Schools",
     description:
-      "Create, manage and deliver Computer-Based Tests in minutes. Free practice exams for WAEC, JAMB & NECO students. No account needed.",
+      "Create, manage and deliver Computer-Based Tests. Free practice exams for WAEC, JAMB and NECO students. No account needed.",
   },
 };
 
