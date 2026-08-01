@@ -19,6 +19,19 @@ function slugify(t: string) {
     return t.toLowerCase().replace(/[^a-z0-9\s-]/g, "").trim().replace(/\s+/g, "-").replace(/-+/g, "-");
 }
 
+function getErrorMessage(error: unknown) {
+    if (error instanceof Error) return error.message;
+    if (
+        typeof error === "object" &&
+        error !== null &&
+        "message" in error &&
+        typeof error.message === "string"
+    ) {
+        return error.message;
+    }
+    return String(error);
+}
+
 export default function ScholarshipForm({ initial, mode }: { initial?: ScholarshipData; mode: "new" | "edit" }) {
     const router = useRouter();
     const [form, setForm] = useState<ScholarshipData>(initial ?? {
@@ -64,8 +77,12 @@ export default function ScholarshipForm({ initial, mode }: { initial?: Scholarsh
             }
             router.push("/general/dashboard/admissions");
         } catch (e: unknown) {
-            const msg = e instanceof Error ? e.message : String(e);
-            setError(msg.includes("duplicate") ? "A scholarship with this slug already exists." : "Failed to save.");
+            const msg = getErrorMessage(e);
+            setError(
+                msg.includes("duplicate")
+                    ? "A scholarship with this slug already exists."
+                    : `Failed to save: ${msg}`,
+            );
         } finally {
             setSaving(false);
         }
