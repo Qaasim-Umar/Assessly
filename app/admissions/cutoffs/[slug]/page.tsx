@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import GistMarkdown from "@/components/GistMarkdown";
 import ShareBar from "@/components/ShareBar";
+import ArticleByline from "@/components/ArticleByline";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
 import { Building2 } from "lucide-react";
@@ -17,6 +18,7 @@ interface DbCutoff {
   slug: string;
   school: string;
   content: string;
+  created_at: string;
 }
 
 export async function generateMetadata({
@@ -27,7 +29,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const { data } = await supabase
     .from("admissions_cutoffs")
-    .select("school, content")
+    .select("school, content, created_at")
     .eq("slug", slug)
     .eq("published", true)
     .single();
@@ -36,9 +38,18 @@ export async function generateMetadata({
   const url = `https://www.assessly.ng/admissions/cutoffs/${slug}`;
   return {
     title: `${data.school} Cutoff Marks | Assessly Admissions Hub`,
+    authors: [{ name: "UQB" }],
     description,
     alternates: { canonical: url },
-    openGraph: { title: `${data.school} Cutoff Marks`, description, type: "article", url, siteName: "Assessly" },
+    openGraph: {
+      title: `${data.school} Cutoff Marks`,
+      description,
+      type: "article",
+      url,
+      siteName: "Assessly",
+      publishedTime: data.created_at,
+      authors: ["UQB"],
+    },
     twitter: { card: "summary_large_image", title: `${data.school} Cutoff Marks`, description },
   };
 }
@@ -84,6 +95,8 @@ export default async function CutoffPage({ params }: { params: Promise<{ slug: s
           >
             {c.school}
           </h1>
+
+          <ArticleByline publishedAt={c.created_at} dark />
 
           <div className="mt-4">
             <ShareBar title={`${c.school} Cutoff Marks`} url={`https://www.assessly.ng/admissions/cutoffs/${c.slug}`} />

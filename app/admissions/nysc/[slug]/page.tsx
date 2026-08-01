@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import GistMarkdown from "@/components/GistMarkdown";
 import ShareBar from "@/components/ShareBar";
+import ArticleByline from "@/components/ArticleByline";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
 import { GraduationCap } from "lucide-react";
@@ -17,6 +18,7 @@ interface DbNysc {
   title: string;
   batch_label: string | null;
   content: string;
+  created_at: string;
 }
 
 export async function generateMetadata({
@@ -27,7 +29,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const { data } = await supabase
     .from("admissions_nysc")
-    .select("title, content")
+    .select("title, content, created_at")
     .eq("slug", slug)
     .eq("published", true)
     .single();
@@ -36,9 +38,18 @@ export async function generateMetadata({
   const url = `https://www.assessly.ng/admissions/nysc/${slug}`;
   return {
     title: `${data.title} | Assessly Admissions Hub`,
+    authors: [{ name: "UQB" }],
     description,
     alternates: { canonical: url },
-    openGraph: { title: data.title, description, type: "article", url, siteName: "Assessly" },
+    openGraph: {
+      title: data.title,
+      description,
+      type: "article",
+      url,
+      siteName: "Assessly",
+      publishedTime: data.created_at,
+      authors: ["UQB"],
+    },
     twitter: { card: "summary_large_image", title: data.title, description },
   };
 }
@@ -84,6 +95,8 @@ export default async function NyscPage({ params }: { params: Promise<{ slug: str
           >
             {n.title}
           </h1>
+
+          <ArticleByline publishedAt={n.created_at} dark />
 
           <div className="mt-4">
             <ShareBar title={n.title} url={`https://www.assessly.ng/admissions/nysc/${n.slug}`} />
