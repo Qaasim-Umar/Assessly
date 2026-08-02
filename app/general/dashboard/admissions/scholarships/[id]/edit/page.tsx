@@ -17,10 +17,23 @@ export default function EditScholarshipPage() {
                 router.replace("/general/dashboard/login");
                 return;
             }
-            supabase.from("admissions_scholarships").select("*").eq("id", id).single().then(({ data: d, error }) => {
-                if (error || !d) { router.replace("/general/dashboard/admissions"); return; }
-                setData(d as ScholarshipData);
-            });
+            supabase
+                .from("admissions_scholarships")
+                .select("id,slug,title,description,body,apply_url,published")
+                .eq("id", id)
+                .single()
+                .then(({ data: d, error }) => {
+                    if (error || !d) { router.replace("/general/dashboard/admissions"); return; }
+                    setData({
+                        id: d.id,
+                        slug: d.slug ?? "",
+                        title: d.title ?? "",
+                        description: d.description ?? "",
+                        body: d.body ?? "",
+                        apply_url: d.apply_url ?? "",
+                        published: d.published ?? false,
+                    });
+                });
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);

@@ -16,9 +16,7 @@ interface ScholarshipRow {
   id: string;
   slug: string;
   title: string;
-  amount_label: string;
-  deadline_label: string;
-  is_open: boolean;
+  description: string;
 }
 
 interface DeadlineRow {
@@ -66,7 +64,7 @@ export default async function AdmissionsSidebar() {
         .limit(5),
       supabase
         .from("admissions_scholarships")
-        .select("id,slug,title,amount_label,deadline_label,is_open")
+        .select("id,slug,title,description")
         .eq("published", true)
         .order("created_at", { ascending: false })
         .limit(5),
@@ -83,7 +81,7 @@ export default async function AdmissionsSidebar() {
   const deadlines = (deadlinesRaw ?? []) as DeadlineRow[];
 
   const newThisWeek = gists.find((g) => g.is_new_this_week) ?? null;
-  const openScholarship = scholarships.find((s) => s.is_open) ?? null;
+  const latestScholarship = scholarships[0] ?? null;
   const trendingGists = gists.slice(0, 5);
 
   return (
@@ -110,7 +108,7 @@ export default async function AdmissionsSidebar() {
             Read more →
           </Link>
         </div>
-      ) : openScholarship ? (
+      ) : latestScholarship ? (
         <div className="bg-[#0d1a0f] rounded-2xl p-6">
           <div className="flex items-center gap-1.5 text-[13px] font-extrabold tracking-widest uppercase text-[#bbf7d0] mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 flex-shrink-0" />
@@ -120,14 +118,13 @@ export default async function AdmissionsSidebar() {
             className="text-[24px] text-white leading-tight tracking-[-0.5px] mb-2"
             style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
           >
-            {openScholarship.title}
+            {latestScholarship.title}
           </h3>
           <p className="text-base text-white/45 leading-relaxed mb-5">
-            {openScholarship.amount_label && `${openScholarship.amount_label} · `}
-            {openScholarship.deadline_label}
+            {latestScholarship.description}
           </p>
           <Link
-            href={`/admissions/scholarships/${openScholarship.slug}`}
+            href={`/admissions/scholarships/${latestScholarship.slug}`}
             className="block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity"
           >
             View scholarship →

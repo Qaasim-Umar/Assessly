@@ -34,9 +34,15 @@ function getErrorMessage(error: unknown) {
 
 export default function ScholarshipForm({ initial, mode }: { initial?: ScholarshipData; mode: "new" | "edit" }) {
     const router = useRouter();
-    const [form, setForm] = useState<ScholarshipData>(initial ?? {
-        slug: "", title: "", description: "", body: "", apply_url: "", published: false,
-    });
+    const [form, setForm] = useState<ScholarshipData>(() => ({
+        id: initial?.id,
+        slug: initial?.slug ?? "",
+        title: initial?.title ?? "",
+        description: initial?.description ?? "",
+        body: initial?.body ?? "",
+        apply_url: initial?.apply_url ?? "",
+        published: initial?.published ?? false,
+    }));
     const [slugLocked, setSlugLocked] = useState(!!initial?.slug);
     const [saving, setSaving] = useState(false);
     const [error, setError] = useState("");
@@ -51,19 +57,25 @@ export default function ScholarshipForm({ initial, mode }: { initial?: Scholarsh
     }
 
     async function save(published: boolean) {
-        if (!form.title.trim()) { setError("Title is required."); return; }
-        if (!form.slug.trim()) { setError("Slug is required."); return; }
-        if (!form.description.trim()) { setError("SEO summary is required."); return; }
-        if (!form.body.trim()) { setError("Body is required."); return; }
+        const title = typeof form.title === "string" ? form.title.trim() : "";
+        const slug = typeof form.slug === "string" ? form.slug.trim() : "";
+        const description = typeof form.description === "string" ? form.description.trim() : "";
+        const body = typeof form.body === "string" ? form.body.trim() : "";
+        const applyUrl = typeof form.apply_url === "string" ? form.apply_url.trim() : "";
+
+        if (!title) { setError("Title is required."); return; }
+        if (!slug) { setError("Slug is required."); return; }
+        if (!description) { setError("SEO summary is required."); return; }
+        if (!body) { setError("Body is required."); return; }
 
         setSaving(true);
         setError("");
         const payload = {
-            slug: form.slug.trim(),
-            title: form.title.trim(),
-            description: form.description.trim(),
-            body: form.body.trim(),
-            apply_url: form.apply_url.trim(),
+            slug,
+            title,
+            description,
+            body,
+            apply_url: applyUrl,
             published,
         };
 

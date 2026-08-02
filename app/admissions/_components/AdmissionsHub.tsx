@@ -35,10 +35,7 @@ export interface DbScholarship {
   id: string;
   slug: string;
   title: string;
-  amount_label: string;
-  deadline_label: string;
-  category: string;
-  is_open: boolean;
+  description: string;
 }
 
 export interface DbDeadline {
@@ -128,13 +125,11 @@ function SectionLink({ href, label = "See all" }: { href: string; label?: string
 function ScholarshipCard({
   slug,
   title,
-  tags,
-  open,
+  description,
 }: {
   slug: string;
   title: string;
-  tags: { label: string; style: string }[];
-  open: boolean;
+  description: string;
 }) {
   return (
     <a
@@ -142,34 +137,18 @@ function ScholarshipCard({
       className="bg-white border border-[#e2ede6] rounded-2xl p-5 sm:p-6 grid grid-cols-[auto_1fr_auto] gap-4 items-start transition-[border-color,box-shadow] hover:border-amber-200 hover:shadow-[0_4px_20px_rgba(217,119,6,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2"
       data-ph-capture-attribute-item-type="scholarship"
       data-ph-capture-attribute-item-title={title}
-      data-ph-capture-attribute-item-open={open ? "yes" : "no"}
     >
       <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-amber-100 text-amber-600">
         <Trophy size={22} aria-hidden="true" />
       </div>
       <div>
-        <h3 className="text-[19px] font-bold text-[#0d1a0f] mb-2.5">{title}</h3>
-        <div className="flex flex-wrap gap-1.5">
-          {tags.map((t, i) => (
-            <span
-              key={i}
-              className={`text-[13px] font-bold px-2.5 py-1 rounded-full ${t.style}`}
-            >
-              {t.label}
-            </span>
-          ))}
-        </div>
+        <h3 className="text-[19px] font-bold text-[#0d1a0f] mb-1.5">{title}</h3>
+        <p className="text-base leading-relaxed text-[#4a5e4e]">{description}</p>
       </div>
       <div className="hidden sm:flex items-end flex-shrink-0">
-        {open ? (
-          <span className="text-base font-bold text-white bg-amber-500 rounded-lg px-4 py-2">
-            Apply Now
-          </span>
-        ) : (
-          <span className="text-base font-bold text-[#9db5a3] bg-[#f7faf8] rounded-lg px-4 py-2">
-            Closed
-          </span>
-        )}
+        <span className="inline-flex min-h-11 items-center gap-1 text-base font-bold text-amber-700 bg-amber-50 rounded-lg px-4 py-2">
+          View details <ArrowRight size={16} aria-hidden="true" />
+        </span>
       </div>
     </a>
   );
@@ -354,30 +333,6 @@ export default function AdmissionsHub({
       },
     })),
   };
-
-  function scholarshipTags(
-    s: DbScholarship,
-  ): { label: string; style: string }[] {
-    const tags: { label: string; style: string }[] = [];
-    if (s.amount_label)
-      tags.push({
-        label: s.amount_label,
-        style: "bg-amber-100 text-amber-600",
-      });
-    if (s.deadline_label)
-      tags.push({
-        label: s.deadline_label,
-        style: "bg-rose-100 text-rose-600",
-      });
-    tags.push(
-      s.is_open
-        ? { label: "Open Now", style: "bg-green-100 text-green-700" }
-        : { label: "Closed", style: "bg-gray-100 text-gray-400" },
-    );
-    if (s.category)
-      tags.push({ label: s.category, style: "bg-blue-100 text-blue-600" });
-    return tags;
-  }
 
   return (
     <>
@@ -603,8 +558,7 @@ export default function AdmissionsHub({
                       key={s.id}
                       slug={s.slug}
                       title={s.title}
-                      tags={scholarshipTags(s)}
-                      open={s.is_open}
+                      description={s.description}
                     />
                   ))}
                 </div>
@@ -770,10 +724,10 @@ export default function AdmissionsHub({
                 Read more →
               </a>
             </div>
-          ) : scholarships.find((s) => s.is_open) ? (
-            // Fallback: show latest open scholarship
+          ) : scholarships[0] ? (
+            // Fallback: show the latest scholarship
             (() => {
-              const s = scholarships.find((sc) => sc.is_open)!;
+              const s = scholarships[0];
               return (
                 <div className="bg-[#0d1a0f] rounded-2xl p-6">
                   <div className="flex items-center gap-1.5 text-[13px] font-extrabold tracking-widest uppercase text-[#bbf7d0] mb-3">
@@ -787,8 +741,7 @@ export default function AdmissionsHub({
                     {s.title}
                   </h3>
                   <p className="text-base text-white/45 leading-relaxed mb-5">
-                    {s.amount_label && `${s.amount_label} · `}
-                    {s.deadline_label}
+                    {s.description}
                   </p>
                   <a
                     href={`/admissions/scholarships/${s.slug}`}

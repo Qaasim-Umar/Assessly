@@ -6,19 +6,11 @@ import GistMarkdown from "@/components/GistMarkdown";
 import Sidebar from "../../_components/Sidebar";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
-import { Check } from "lucide-react";
+import { Trophy } from "lucide-react";
 import ArticleByline from "@/components/ArticleByline";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
-
-type Urgency = "urgent" | "soon" | "open";
-
-const URGENCY_STYLES: Record<Urgency, { banner: string; text: string; badge: string }> = {
-  urgent: { banner: "bg-rose-50 border border-rose-200", text: "text-rose-700", badge: "bg-rose-100 text-rose-700" },
-  soon: { banner: "bg-amber-50 border border-amber-200", text: "text-amber-700", badge: "bg-amber-100 text-amber-700" },
-  open: { banner: "bg-green-50 border border-green-200", text: "text-green-700", badge: "bg-green-100 text-green-700" },
-};
 
 export async function generateMetadata({
   params,
@@ -50,28 +42,12 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
 
   const { data } = await supabase
     .from("admissions_scholarships")
-    .select("*")
+    .select("id,slug,title,description,body,apply_url,created_at")
     .eq("slug", slug)
     .eq("published", true)
     .single();
 
   if (!data) notFound();
-
-  // Map snake_case DB fields to what the JSX expects
-  const s = {
-    ...data,
-    iconBg: data.icon_bg as string,
-    amountLabel: data.amount_label as string,
-    deadlineLabel: data.deadline_label as string,
-    daysLeft: data.days_left as string,
-    urgency: data.urgency as Urgency,
-    isOpen: data.is_open as boolean,
-    applyUrl: data.apply_url as string,
-    body: data.body as string,
-  };
-
-  const urgencyKey: Urgency = (["urgent", "soon", "open"].includes(s.urgency) ? s.urgency : "open") as Urgency;
-  const u = URGENCY_STYLES[urgencyKey];
 
   return (
     <>
@@ -91,36 +67,20 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
           </nav>
 
           <div className="flex items-start gap-5 mb-5">
-            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 ${s.iconBg}`}>
-              {s.icon}
+            <div className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 bg-amber-500/15 text-amber-300">
+              <Trophy size={30} aria-hidden="true" />
             </div>
             <h1
               className="text-[clamp(24px,3.5vw,46px)] text-white leading-[1.1] tracking-[-1px]"
               style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
             >
-              {s.title}
+              {data.title}
             </h1>
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            {s.amountLabel && (
-              <span className="text-[13px] font-bold px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-300">
-                {s.amountLabel} {s.frequency === "yearly" ? "· per year" : "· one-time"}
-              </span>
-            )}
-            <span className="text-[13px] font-bold px-3 py-1.5 rounded-full bg-white/10 text-white/70">
-              {s.category}
-            </span>
-            {s.isOpen ? (
-              <span className="inline-flex items-center gap-1 text-[13px] font-bold px-3 py-1.5 rounded-full bg-green-500/20 text-green-400">
-                <Check size={12} /> Open Now
-              </span>
-            ) : (
-              <span className="text-[13px] font-bold px-3 py-1.5 rounded-full bg-white/10 text-white/40">
-                Closed
-              </span>
-            )}
-          </div>
+          <p className="max-w-[720px] text-base leading-relaxed text-white/65">
+            {data.description}
+          </p>
           <div className="mt-4">
             <ArticleByline publishedAt={data.created_at as string} dark />
           </div>
@@ -133,30 +93,15 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
 
           <div className="flex flex-col gap-6">
 
-            {/* Deadline banner */}
-            {s.deadlineLabel && (
-              <div className={`rounded-2xl px-6 py-4 flex items-center justify-between gap-4 ${u.banner}`}>
-                <div>
-                  <p className={`text-base font-extrabold ${u.text}`}>{s.deadlineLabel}</p>
-                  <p className={`text-sm ${u.text} opacity-70`}>{s.daysLeft}</p>
-                </div>
-                {s.isOpen && s.daysLeft && (
-                  <span className={`text-[13px] font-extrabold px-3 py-1.5 rounded-full flex-shrink-0 ${u.badge}`}>
-                    {s.daysLeft}
-                  </span>
-                )}
-              </div>
-            )}
-
             {/* Body */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
-              <GistMarkdown content={s.body} />
+              <GistMarkdown content={data.body} />
             </div>
 
             {/* Apply CTA */}
-            {s.applyUrl && (
+            {data.apply_url && (
               <a
-                href={s.applyUrl}
+                href={data.apply_url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 text-base font-bold text-white bg-amber-500 rounded-xl px-6 py-3.5 hover:bg-amber-600 transition-colors self-start"

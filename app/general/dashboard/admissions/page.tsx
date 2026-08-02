@@ -41,8 +41,7 @@ interface Scholarship {
     id: string;
     slug: string;
     title: string;
-    category: string;
-    is_open: boolean;
+    description: string;
     published: boolean;
     created_at: string;
 }
@@ -107,7 +106,7 @@ export default function AdmissionsAdminPage() {
         try {
             const [g, s, d, c, n, p] = await Promise.all([
                 supabase.from("admissions_gists").select("id,slug,tag,title,published,is_trending,is_featured,is_new_this_week,created_at").order("created_at", { ascending: false }),
-                supabase.from("admissions_scholarships").select("id,slug,title,category,is_open,published,created_at").order("created_at", { ascending: false }),
+                supabase.from("admissions_scholarships").select("id,slug,title,description,published,created_at").order("created_at", { ascending: false }),
                 supabase.from("admissions_deadlines").select("id,title,deadline_date,urgency,published,created_at").order("deadline_date", { ascending: true }),
                 supabase.from("admissions_cutoffs").select("id,slug,school,content,published,created_at").order("created_at", { ascending: false }),
                 supabase.from("admissions_nysc").select("id,slug,title,batch_label,content,published,created_at").order("created_at", { ascending: false }),
@@ -319,26 +318,19 @@ export default function AdmissionsAdminPage() {
                                 <table className="w-full text-sm">
                                     <thead>
                                         <tr className="border-b border-gray-100 bg-gray-50">
-                                            {["Title", "Category", "Open?", "Status", "Created", "Actions"].map(h => (
+                                            {["Title", "Summary", "Status", "Created", "Actions"].map(h => (
                                                 <th key={h} className="px-4 py-3 text-left text-[11px] font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">{h}</th>
                                             ))}
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-50">
-                                        {loading ? skeletonRows(6) : scholarships.map(s => (
+                                        {loading ? skeletonRows(5) : scholarships.map(s => (
                                             <tr key={s.id} className="hover:bg-gray-50 transition-colors">
                                                 <td className="px-4 py-3.5">
                                                     <p className="font-semibold text-gray-900 text-xs max-w-[260px] truncate">{s.title}</p>
                                                     <p className="text-[10px] text-gray-400 font-mono mt-0.5">/admissions/scholarships/{s.slug}</p>
                                                 </td>
-                                                <td className="px-4 py-3.5">
-                                                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">{s.category || "—"}</span>
-                                                </td>
-                                                <td className="px-4 py-3.5">
-                                                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${s.is_open ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-500"}`}>
-                                                        {s.is_open ? "Open" : "Closed"}
-                                                    </span>
-                                                </td>
+                                                <td className="px-4 py-3.5 text-xs text-gray-500 max-w-[300px] truncate">{s.description}</td>
                                                 <td className="px-4 py-3.5">
                                                     <PublishToggle published={s.published} onToggle={() => togglePublished("admissions_scholarships", s.id, s.published, "scholarships")} />
                                                 </td>
