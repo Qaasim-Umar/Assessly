@@ -52,7 +52,7 @@ export default async function AdmissionsHubPage({
         .order("created_at", { ascending: false }),
       supabase
         .from("admissions_scholarships")
-        .select("id,slug,title,description")
+        .select("id,slug,title")
         .eq("published", true)
         .order("created_at", { ascending: false }),
       supabase

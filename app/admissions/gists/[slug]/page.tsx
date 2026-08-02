@@ -105,7 +105,6 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
             <span className="flex items-center gap-1"><Building2 size={13} /> {g.school}</span>
           </div>
 
-          <ReactionBar initial={g.reactions} dark gistId={g.id} />
           <div className="mt-4">
             <ShareBar title={g.title} url={`https://www.assessly.ng/admissions/gists/${g.slug}`} />
           </div>
@@ -120,6 +119,9 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
           <article>
             <div className="bg-white border border-gray-200 rounded-2xl p-8 sm:p-10">
               <GistMarkdown content={g.paragraphs.join("\n\n")} />
+              <div className="mt-8 border-t border-gray-200 pt-6">
+                <ReactionBar initial={g.reactions} gistId={g.id} />
+              </div>
             </div>
 
             {g.related && g.related.length > 0 && (

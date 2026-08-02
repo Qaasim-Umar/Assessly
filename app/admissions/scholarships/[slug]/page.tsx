@@ -6,7 +6,7 @@ import GistMarkdown from "@/components/GistMarkdown";
 import Sidebar from "../../_components/Sidebar";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
-import { Trophy } from "lucide-react";
+import ShareBar from "@/components/ShareBar";
 import ArticleByline from "@/components/ArticleByline";
 import "../../../landing/landing.css";
 
@@ -42,7 +42,7 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
 
   const { data } = await supabase
     .from("admissions_scholarships")
-    .select("id,slug,title,description,body,apply_url,created_at")
+    .select("slug,title,body,apply_url,created_at")
     .eq("slug", slug)
     .eq("published", true)
     .single();
@@ -66,23 +66,20 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
             <span>Scholarships</span>
           </nav>
 
-          <div className="flex items-start gap-5 mb-5">
-            <div className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 bg-amber-500/15 text-amber-300">
-              <Trophy size={30} aria-hidden="true" />
-            </div>
-            <h1
-              className="text-[clamp(24px,3.5vw,46px)] text-white leading-[1.1] tracking-[-1px]"
-              style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
-            >
-              {data.title}
-            </h1>
-          </div>
+          <h1
+            className="text-[clamp(28px,4vw,52px)] text-white leading-[1.1] tracking-[-1px] mb-5 max-w-[780px]"
+            style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
+          >
+            {data.title}
+          </h1>
 
-          <p className="max-w-[720px] text-base leading-relaxed text-white/65">
-            {data.description}
-          </p>
+          <ArticleByline publishedAt={data.created_at} dark />
+
           <div className="mt-4">
-            <ArticleByline publishedAt={data.created_at as string} dark />
+            <ShareBar
+              title={data.title}
+              url={`https://www.assessly.ng/admissions/scholarships/${data.slug}`}
+            />
           </div>
         </div>
       </div>
@@ -91,10 +88,10 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
       <div className="bg-[#f7faf8] min-h-screen px-6 py-10">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-10 items-start">
 
-          <div className="flex flex-col gap-6">
+          <article>
 
             {/* Body */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 sm:p-10">
               <GistMarkdown content={data.body} />
             </div>
 
@@ -104,16 +101,16 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
                 href={data.apply_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 text-base font-bold text-white bg-amber-500 rounded-xl px-6 py-3.5 hover:bg-amber-600 transition-colors self-start"
+                className="mt-6 inline-flex min-h-11 items-center justify-center text-base font-bold text-white bg-green-600 rounded-xl px-6 py-3.5 hover:bg-green-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 transition-colors"
               >
                 Apply Now →
               </a>
             )}
 
-            <Link href="/admissions" className="mt-2 inline-flex items-center gap-2 text-base font-bold text-green-600 hover:underline">
+            <Link href="/admissions" className="mt-8 inline-flex items-center gap-2 text-base font-bold text-green-600 hover:underline">
               ← Back to Admissions Hub
             </Link>
-          </div>
+          </article>
 
           {/* Sidebar */}
           <aside className="flex flex-col gap-6">

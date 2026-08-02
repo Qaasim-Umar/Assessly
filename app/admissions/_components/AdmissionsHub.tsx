@@ -35,7 +35,6 @@ export interface DbScholarship {
   id: string;
   slug: string;
   title: string;
-  description: string;
 }
 
 export interface DbDeadline {
@@ -125,26 +124,21 @@ function SectionLink({ href, label = "See all" }: { href: string; label?: string
 function ScholarshipCard({
   slug,
   title,
-  description,
 }: {
   slug: string;
   title: string;
-  description: string;
 }) {
   return (
     <a
       href={`/admissions/scholarships/${slug}`}
-      className="bg-white border border-[#e2ede6] rounded-2xl p-5 sm:p-6 grid grid-cols-[auto_1fr_auto] gap-4 items-start transition-[border-color,box-shadow] hover:border-amber-200 hover:shadow-[0_4px_20px_rgba(217,119,6,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2"
+      className="bg-white border border-[#e2ede6] rounded-2xl p-5 sm:p-6 grid grid-cols-[auto_1fr_auto] gap-4 items-center transition-[border-color,box-shadow] hover:border-amber-200 hover:shadow-[0_4px_20px_rgba(217,119,6,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2"
       data-ph-capture-attribute-item-type="scholarship"
       data-ph-capture-attribute-item-title={title}
     >
       <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-amber-100 text-amber-600">
         <Trophy size={22} aria-hidden="true" />
       </div>
-      <div>
-        <h3 className="text-[19px] font-bold text-[#0d1a0f] mb-1.5">{title}</h3>
-        <p className="text-base leading-relaxed text-[#4a5e4e]">{description}</p>
-      </div>
+      <h3 className="text-[19px] font-bold text-[#0d1a0f] leading-snug">{title}</h3>
       <div className="hidden sm:flex items-end flex-shrink-0">
         <span className="inline-flex min-h-11 items-center gap-1 text-base font-bold text-amber-700 bg-amber-50 rounded-lg px-4 py-2">
           View details <ArrowRight size={16} aria-hidden="true" />
@@ -558,7 +552,6 @@ export default function AdmissionsHub({
                       key={s.id}
                       slug={s.slug}
                       title={s.title}
-                      description={s.description}
                     />
                   ))}
                 </div>
@@ -740,12 +733,9 @@ export default function AdmissionsHub({
                   >
                     {s.title}
                   </h3>
-                  <p className="text-base text-white/45 leading-relaxed mb-5">
-                    {s.description}
-                  </p>
                   <a
                     href={`/admissions/scholarships/${s.slug}`}
-                    className="block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity"
+                    className="mt-5 block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity"
                   >
                     View scholarship →
                   </a>

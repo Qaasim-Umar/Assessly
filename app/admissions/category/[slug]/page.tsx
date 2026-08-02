@@ -81,7 +81,6 @@ interface ScholarshipRow {
   id: string;
   slug: string;
   title: string;
-  description: string;
 }
 
 interface DeadlineRow {
@@ -106,7 +105,7 @@ interface NyscRow {
 
 const SELECTS: Record<CategorySlug, string> = {
   gists: "id,slug,tag,tag_color,title,desc,date_label,reactions",
-  scholarships: "id,slug,title,description",
+  scholarships: "id,slug,title",
   deadlines: "id,title,desc,deadline_date",
   cutoffs: "id,slug,school",
   nysc: "id,slug,title,batch_label",
@@ -242,17 +241,12 @@ export default async function CategoryArchivePage({
                 <Link
                   key={s.id}
                   href={`/admissions/scholarships/${s.slug}`}
-                  className="bg-white border border-gray-300 rounded-[18px] p-5 sm:p-6 grid grid-cols-[auto_1fr_auto] gap-4 items-start transition-all hover:border-amber-200 hover:shadow-[0_4px_20px_rgba(217,119,6,0.08)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2"
+                  className="bg-white border border-gray-300 rounded-[18px] p-5 sm:p-6 grid grid-cols-[auto_1fr_auto] gap-4 items-center transition-all hover:border-amber-200 hover:shadow-[0_4px_20px_rgba(217,119,6,0.08)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2"
                 >
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-amber-100 text-amber-600">
                     <Trophy size={22} aria-hidden="true" />
                   </div>
-                  <div>
-                    <h3 className="text-[19px] font-bold text-[#0d1a0f] mb-1.5">{s.title}</h3>
-                    <p className="text-base text-[#4a5e4e] leading-relaxed">
-                      <InlineMarkdown content={s.description} />
-                    </p>
-                  </div>
+                  <h3 className="text-[19px] font-bold text-[#0d1a0f] leading-snug">{s.title}</h3>
                   <div className="hidden sm:flex items-end flex-shrink-0">
                     <span className="inline-flex min-h-11 items-center text-base font-bold text-amber-700 bg-amber-50 rounded-lg px-4 py-2">
                       View details →

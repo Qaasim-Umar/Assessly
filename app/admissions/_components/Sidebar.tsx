@@ -7,7 +7,6 @@ interface GistRow {
   id: string;
   slug: string;
   title: string;
-  desc: string;
   views: string;
   is_new_this_week: boolean;
 }
@@ -16,7 +15,6 @@ interface ScholarshipRow {
   id: string;
   slug: string;
   title: string;
-  description: string;
 }
 
 interface DeadlineRow {
@@ -58,13 +56,13 @@ export default async function AdmissionsSidebar() {
     await Promise.all([
       supabase
         .from("admissions_gists")
-        .select("id,slug,title,desc,views,is_new_this_week")
+        .select("id,slug,title,views,is_new_this_week")
         .eq("published", true)
         .order("created_at", { ascending: false })
         .limit(5),
       supabase
         .from("admissions_scholarships")
-        .select("id,slug,title,description")
+        .select("id,slug,title")
         .eq("published", true)
         .order("created_at", { ascending: false })
         .limit(5),
@@ -98,12 +96,9 @@ export default async function AdmissionsSidebar() {
           >
             {newThisWeek.title}
           </h3>
-          <p className="text-base text-white/45 leading-relaxed mb-5">
-            {newThisWeek.desc}
-          </p>
           <Link
             href={`/admissions/gists/${newThisWeek.slug}`}
-            className="block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity"
+            className="mt-5 block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity"
           >
             Read more →
           </Link>
@@ -120,12 +115,9 @@ export default async function AdmissionsSidebar() {
           >
             {latestScholarship.title}
           </h3>
-          <p className="text-base text-white/45 leading-relaxed mb-5">
-            {latestScholarship.description}
-          </p>
           <Link
             href={`/admissions/scholarships/${latestScholarship.slug}`}
-            className="block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity"
+            className="mt-5 block text-center text-base font-bold text-[#0d1a0f] bg-white rounded-lg py-3 hover:opacity-90 transition-opacity"
           >
             View scholarship →
           </Link>
