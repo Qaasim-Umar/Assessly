@@ -359,7 +359,7 @@ export default function AdmissionsHub({
               Your path to{" "}
               <em className="not-italic text-green-500">university</em>, sorted.
             </h1>
-            <p className="text-lg text-white/45 max-w-[520px] leading-relaxed">
+            <p className="text-lg text-white/45 max-w-[520px] leading-relaxed pb-10">
               Scholarships, admission deadlines, school gists, and everything
               else you need, in one place. Updated weekly.
             </p>
