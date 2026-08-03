@@ -232,7 +232,7 @@ export default async function CategoryArchivePage({
                     <InlineMarkdown content={g.desc} />
                   </p>
                   <span className="text-sm text-[#9db5a3]">{g.date_label}</span>
-                  <ReactionBar initial={g.reactions} gistId={g.id} />
+                  <ReactionBar initial={g.reactions} targetId={g.id} />
                 </Link>
               ))}
 

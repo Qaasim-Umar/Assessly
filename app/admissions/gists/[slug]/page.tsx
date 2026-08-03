@@ -120,7 +120,7 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
             <div className="bg-white border border-gray-200 rounded-2xl p-8 sm:p-10">
               <GistMarkdown content={g.paragraphs.join("\n\n")} />
               <div className="mt-8 border-t border-gray-200 pt-6">
-                <ReactionBar initial={g.reactions} gistId={g.id} />
+                <ReactionBar initial={g.reactions} targetId={g.id} />
               </div>
             </div>
 

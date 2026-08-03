@@ -103,7 +103,7 @@ function GistCard({
             {date}
           </span>
         </a>
-        <ReactionBar initial={reactions} compact gistId={gistId} />
+        <ReactionBar initial={reactions} compact targetId={gistId} />
       </div>
     </article>
   );
@@ -488,7 +488,7 @@ export default function AdmissionsHub({
                         initial={featuredGist.reactions}
                         dark
                         compact
-                        gistId={featuredGist.id}
+                        targetId={featuredGist.id}
                       />
                     </div>
                   </div>
