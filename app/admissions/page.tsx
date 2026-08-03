@@ -12,6 +12,8 @@ import "../landing/landing.css";
 
 export const revalidate = 300;
 
+const HOMEPAGE_CATEGORY_LIMIT = 5;
+
 export const metadata: Metadata = {
   title: "Admissions Hub",
   description:
@@ -54,22 +56,26 @@ export default async function AdmissionsHubPage({
         .from("admissions_scholarships")
         .select("id,slug,title")
         .eq("published", true)
-        .order("created_at", { ascending: false }),
+        .order("created_at", { ascending: false })
+        .limit(HOMEPAGE_CATEGORY_LIMIT),
       supabase
         .from("admissions_deadlines")
         .select("id,title,deadline_date")
         .eq("published", true)
-        .order("deadline_date", { ascending: true }),
+        .order("created_at", { ascending: false })
+        .limit(HOMEPAGE_CATEGORY_LIMIT),
       supabase
         .from("admissions_cutoffs")
         .select("id,slug,school")
         .eq("published", true)
-        .order("created_at", { ascending: false }),
+        .order("created_at", { ascending: false })
+        .limit(HOMEPAGE_CATEGORY_LIMIT),
       supabase
         .from("admissions_nysc")
         .select("id,slug,title,batch_label")
         .eq("published", true)
-        .order("created_at", { ascending: false }),
+        .order("created_at", { ascending: false })
+        .limit(HOMEPAGE_CATEGORY_LIMIT),
     ]);
 
   const firstError = [

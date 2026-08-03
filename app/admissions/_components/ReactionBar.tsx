@@ -5,6 +5,7 @@ import { supabase } from "@/lib/supabase";
 import { Flame, Lightbulb } from "lucide-react";
 
 type ReactionType = "fire" | "think";
+type ReactionTargetType = "gist" | "scholarship";
 
 const REACTION_LABELS: Record<ReactionType, string> = {
   fire: "fire",
@@ -23,11 +24,21 @@ const ACTIVE_DARK: Record<ReactionType, string> = {
 
 const VALID: ReactionType[] = ["fire", "think"];
 
-async function callReaction(gistId: string, type: ReactionType, action: "increment" | "decrement") {
+const REACTION_TABLES: Record<ReactionTargetType, "admissions_gists" | "admissions_scholarships"> = {
+  gist: "admissions_gists",
+  scholarship: "admissions_scholarships",
+};
+
+async function callReaction(
+  targetId: string,
+  targetType: ReactionTargetType,
+  type: ReactionType,
+  action: "increment" | "decrement",
+) {
   await fetch("/api/reactions", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ gistId, type, action }),
+    body: JSON.stringify({ targetId, targetType, type, action }),
   });
 }
 
@@ -35,22 +46,25 @@ export default function ReactionBar({
   initial,
   dark = false,
   compact = false,
-  gistId,
+  targetId,
+  targetType = "gist",
 }: {
   initial: Record<ReactionType, number>;
   dark?: boolean;
   compact?: boolean;
-  gistId?: string;
+  targetId?: string;
+  targetType?: ReactionTargetType;
 }) {
   const [counts, setCounts] = useState({ ...initial });
   const [active, setActive] = useState<ReactionType | null>(null);
 
   useEffect(() => {
-    if (!gistId) return;
+    if (!targetId) return;
     let cancelled = false;
+    const storageKey = `reaction_${targetType}_${targetId}`;
 
     // Restore which reaction this user picked
-    const saved = localStorage.getItem(`reaction_${gistId}`);
+    const saved = localStorage.getItem(storageKey);
     if (saved && VALID.includes(saved as ReactionType)) {
       queueMicrotask(() => {
         if (!cancelled) setActive(saved as ReactionType);
@@ -59,9 +73,9 @@ export default function ReactionBar({
 
     // Fetch real counts from DB
     supabase
-      .from("admissions_gists")
+      .from(REACTION_TABLES[targetType])
       .select("reactions")
-      .eq("id", gistId)
+      .eq("id", targetId)
       .single()
       .then(({ data }) => {
         if (!cancelled && data?.reactions) {
@@ -72,29 +86,30 @@ export default function ReactionBar({
     return () => {
       cancelled = true;
     };
-  }, [gistId]);
+  }, [targetId, targetType]);
 
   async function react(type: ReactionType, e: React.MouseEvent) {
     e.preventDefault();
     e.stopPropagation();
-    if (!gistId) return;
+    if (!targetId) return;
+    const storageKey = `reaction_${targetType}_${targetId}`;
 
     if (active === type) {
       // Toggle off
       setCounts(p => ({ ...p, [type]: Math.max(0, p[type] - 1) }));
       setActive(null);
-      localStorage.removeItem(`reaction_${gistId}`);
-      callReaction(gistId, type, "decrement");
+      localStorage.removeItem(storageKey);
+      callReaction(targetId, targetType, type, "decrement");
     } else {
       // Switch from previous reaction if any
       if (active) {
         setCounts(p => ({ ...p, [active]: Math.max(0, p[active] - 1) }));
-        callReaction(gistId, active, "decrement");
+        callReaction(targetId, targetType, active, "decrement");
       }
       setCounts(p => ({ ...p, [type]: p[type] + 1 }));
       setActive(type);
-      localStorage.setItem(`reaction_${gistId}`, type);
-      callReaction(gistId, type, "increment");
+      localStorage.setItem(storageKey, type);
+      callReaction(targetId, targetType, type, "increment");
     }
   }
 
