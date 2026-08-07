@@ -60,7 +60,7 @@ interface Pack {
     section: string;
     title: string;
     pack_type: string;
-    pack_files: { name: string; url: string }[];
+    pack_files: { name: string; object_key: string }[];
     published: boolean;
     created_at: string;
 }
@@ -110,7 +110,7 @@ export default function AdmissionsAdminPage() {
                 supabase.from("admissions_deadlines").select("id,title,deadline_date,urgency,published,created_at").order("deadline_date", { ascending: true }),
                 supabase.from("admissions_cutoffs").select("id,slug,school,content,published,created_at").order("created_at", { ascending: false }),
                 supabase.from("admissions_nysc").select("id,slug,title,batch_label,content,published,created_at").order("created_at", { ascending: false }),
-                supabase.from("question_bank_packs").select("id,exam,exam_label,section,title,file_url,pack_type,pack_files,published,created_at").order("created_at", { ascending: false }),
+                supabase.from("question_bank_packs").select("id,exam,exam_label,section,title,pack_type,pack_files,published,created_at").order("created_at", { ascending: false }),
             ]);
             setGists(g.data ?? []);
             setScholarships(s.data ?? []);

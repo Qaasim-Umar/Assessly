@@ -10,23 +10,30 @@ const EXAMS = [
     { value: "waec", label: "WAEC" },
     { value: "neco", label: "NECO" },
     { value: "post", label: "Post-UTME" },
-    { value: "bece", label: "BECE" },
+    { value: "neco-bece", label: "NECO BECE" },
+    { value: "waec-bece", label: "WAEC BECE" },
     { value: "nabteb", label: "NABTEB" },
 ] as const;
 
+type QuestionBankExamValue = (typeof EXAMS)[number]["value"] | "bece";
+
 export interface PackFile {
     name: string;
-    url: string;
+    object_key: string;
 }
 
 export interface QuestionBankPackData {
     id?: string;
-    exam: (typeof EXAMS)[number]["value"];
+    exam: QuestionBankExamValue;
     exam_label: string;
     section: string;
     title: string;
+    slug: string;
+    subject: string;
+    years: string;
+    short_description: string;
     pack_type: "single" | "pack";
-    file_url: string;
+    object_key: string;
     pack_files: PackFile[];
     published: boolean;
 }
@@ -36,8 +43,12 @@ const defaultForm: QuestionBankPackData = {
     exam_label: "",
     section: "",
     title: "",
+    slug: "",
+    subject: "",
+    years: "",
+    short_description: "",
     pack_type: "single",
-    file_url: "",
+    object_key: "",
     pack_files: [],
     published: false,
 };
@@ -61,7 +72,7 @@ export default function QuestionBankForm({
     // ── Pack files helpers ────────────────────────────────────────────────────
 
     function addPackFile() {
-        set("pack_files", [...form.pack_files, { name: "", url: "" }]);
+        set("pack_files", [...form.pack_files, { name: "", object_key: "" }]);
     }
 
     function updatePackFile(i: number, field: keyof PackFile, value: string) {
@@ -84,16 +95,21 @@ export default function QuestionBankForm({
     // ── Save ─────────────────────────────────────────────────────────────────
 
     async function save(published: boolean) {
+        if (form.exam === "bece") { setError("Choose either NECO BECE or WAEC BECE as the exam type."); return; }
         if (!form.title.trim()) { setError("Title is required."); return; }
+        if (!form.slug.trim()) { setError("Slug is required."); return; }
         if (!form.exam_label.trim()) { setError("Exam label is required."); return; }
         if (!form.section.trim()) { setError("Section is required."); return; }
+        if (!form.subject.trim()) { setError("Subject is required."); return; }
+        if (!form.years.trim()) { setError("Year range is required."); return; }
+        if (!form.short_description.trim()) { setError("Short description is required."); return; }
 
         if (form.pack_type === "single") {
-            if (!form.file_url.trim()) { setError("The Cloudflare R2 file link is required."); return; }
+            if (!form.object_key.trim()) { setError("The R2 object key is required."); return; }
         } else {
             if (form.pack_files.length === 0) { setError("Add at least one file to the pack."); return; }
-            const bad = form.pack_files.find((f) => !f.name.trim() || !f.url.trim());
-            if (bad) { setError("Every file entry needs both a label and a URL."); return; }
+            const bad = form.pack_files.find((f) => !f.name.trim() || !f.object_key.trim());
+            if (bad) { setError("Every file entry needs both a label and an R2 object key."); return; }
         }
 
         setSaving(true);
@@ -104,8 +120,12 @@ export default function QuestionBankForm({
             exam_label: form.exam_label.trim(),
             section: form.section.trim(),
             title: form.title.trim(),
+            slug: form.slug.trim().toLowerCase(),
+            subject: form.subject.trim(),
+            years: form.years.trim(),
+            short_description: form.short_description.trim(),
             pack_type: form.pack_type,
-            file_url: form.pack_type === "single" ? form.file_url.trim() : "",
+            object_key: form.pack_type === "single" ? form.object_key.trim() : "",
             pack_files: form.pack_type === "pack" ? form.pack_files : [],
             published,
         };
@@ -167,6 +187,33 @@ export default function QuestionBankForm({
                             <input type="text" value={form.title} onChange={(e) => set("title", e.target.value)} placeholder="JAMB Past Questions 2020 – 2024" className="w-full text-xl font-bold text-gray-900 placeholder:text-gray-300 border-0 outline-none mt-1" />
                         </div>
 
+                        <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm space-y-4">
+                            <div>
+                                <Label>SEO Page Slug</Label>
+                                <p className="text-[11px] text-gray-400 mt-0.5 mb-1.5 leading-relaxed">Use a unique URL path with lowercase words and hyphens.</p>
+                                <input type="text" value={form.slug} onChange={(e) => set("slug", e.target.value.toLowerCase().replace(/[^a-z0-9-]+/g, "-").replace(/-+/g, "-"))} placeholder="jamb-mathematics-past-questions-2015-2024" className="w-full min-h-11 text-xs font-mono text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
+                            </div>
+                            <div>
+                                <Label>Short Description</Label>
+                                <p className="text-[11px] text-gray-400 mt-0.5 mb-1.5 leading-relaxed">This appears on the page and becomes the SEO description.</p>
+                                <textarea value={form.short_description} onChange={(e) => set("short_description", e.target.value)} rows={3} maxLength={220} placeholder="Practise ten years of JAMB Mathematics past questions with answers in one focused revision pack." className="w-full text-sm leading-6 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none resize-y focus:ring-2 focus:ring-green-500" />
+                                <p className="mt-1 text-right text-[10px] text-gray-400">{form.short_description.length}/220</p>
+                            </div>
+                        </div>
+
+                        <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                            <div className="grid gap-4 sm:grid-cols-2">
+                                <div>
+                                    <Label>Subject</Label>
+                                    <input type="text" value={form.subject} onChange={(e) => set("subject", e.target.value)} placeholder="Mathematics" className="w-full min-h-11 mt-2 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
+                                </div>
+                                <div>
+                                    <Label>Year Range</Label>
+                                    <input type="text" value={form.years} onChange={(e) => set("years", e.target.value)} placeholder="2015–2024" className="w-full min-h-11 mt-2 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
+                                </div>
+                            </div>
+                        </div>
+
                         {/* Pack type switcher */}
                         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                             <Label>Download Type</Label>
@@ -188,19 +235,19 @@ export default function QuestionBankForm({
                             </div>
                             <p className="text-[11px] text-gray-400 mt-2 leading-relaxed">
                                 {form.pack_type === "single"
-                                    ? "Students see a single Download button that goes straight to the file."
-                                    : "Students see a list of files inside the pack and download each one individually."}
+                                    ? "Students open the SEO page first, then use its secure Download button."
+                                    : "Students open the SEO page first, then choose a file to download securely."}
                             </p>
                         </div>
 
-                        {/* Single file URL */}
+                        {/* Single private file key */}
                         {form.pack_type === "single" && (
                             <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                                <Label>Cloudflare R2 File Link</Label>
+                                <Label>Cloudflare R2 Object Key</Label>
                                 <p className="text-[11px] text-gray-400 mt-0.5 mb-1.5 leading-relaxed">
-                                    Paste the public URL from your R2 bucket / custom domain for this PDF.
+                                    Use question-banks/exam/year/file.pdf. For BECE, use neco-bece or waec-bece as the exam folder.
                                 </p>
-                                <input type="url" value={form.file_url} onChange={(e) => set("file_url", e.target.value)} placeholder="https://pub-xxxxxxxx.r2.dev/jamb-2020-2024.pdf" className="w-full text-xs font-mono text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
+                                <input type="text" value={form.object_key} onChange={(e) => set("object_key", e.target.value)} placeholder="question-banks/neco-bece/2025/agriculture-neco-bece-2025.pdf" className="w-full min-h-11 text-xs font-mono text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
                             </div>
                         )}
 
@@ -257,10 +304,10 @@ export default function QuestionBankForm({
                                                     className="w-full sm:w-2/5 text-xs text-gray-700 bg-white border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500"
                                                 />
                                                 <input
-                                                    type="url"
-                                                    value={f.url}
-                                                    onChange={(e) => updatePackFile(i, "url", e.target.value)}
-                                                    placeholder="https://pub-xxx.r2.dev/file.pdf"
+                                                    type="text"
+                                                    value={f.object_key}
+                                                    onChange={(e) => updatePackFile(i, "object_key", e.target.value)}
+                                                    placeholder="question-banks/waec/2024/waec-physics-2024.pdf"
                                                     className="w-full sm:w-3/5 text-xs font-mono text-gray-700 bg-white border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500"
                                                 />
                                             </div>
@@ -314,8 +361,12 @@ export default function QuestionBankForm({
                         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                             <Label>Exam Type</Label>
                             <select value={form.exam} onChange={(e) => set("exam", e.target.value as QuestionBankPackData["exam"])} className="w-full mt-2 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500">
+                                {form.exam === "bece" && <option value="bece" disabled>BECE — choose the exam board</option>}
                                 {EXAMS.map((ex) => <option key={ex.value} value={ex.value}>{ex.label}</option>)}
                             </select>
+                            <p className="mt-2 text-[11px] leading-relaxed text-gray-400">
+                                Select the board that issued the BECE paper so its records and R2 files stay distinct.
+                            </p>
                         </div>
 
                         <div className="flex flex-col gap-2">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { supabase } from "@/lib/supabase";
 import "../../landing/landing.css";
@@ -14,10 +15,6 @@ import {
   Wrench,
   Package,
   Search,
-  Download,
-  X,
-  Calendar,
-  Folder,
   Check,
   FileText,
   PartyPopper,
@@ -26,6 +23,7 @@ import {
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 type ExamKey = "all" | "jamb" | "waec" | "neco" | "post" | "bece" | "nabteb";
+type PackExam = Exclude<ExamKey, "all"> | "neco-bece" | "waec-bece";
 
 const EXAM_TABS: { key: ExamKey; label: string; icon: React.ReactNode }[] = [
   { key: "all", label: "All", icon: <List size={16} /> },
@@ -37,52 +35,55 @@ const EXAM_TABS: { key: ExamKey; label: string; icon: React.ReactNode }[] = [
   { key: "nabteb", label: "NABTEB", icon: <Wrench size={16} /> },
 ];
 
-const ACCENT: Record<Exclude<ExamKey, "all">, string> = {
+const ACCENT: Record<PackExam, string> = {
   jamb: "bg-green-600",
   waec: "bg-indigo-500",
   neco: "bg-rose-600",
   post: "bg-blue-600",
   bece: "bg-amber-600",
+  "neco-bece": "bg-rose-600",
+  "waec-bece": "bg-indigo-500",
   nabteb: "bg-violet-600",
 };
 
 interface PackFile {
   name: string;
-  url: string;
 }
 
 interface Pack {
   id: string;
-  exam: Exclude<ExamKey, "all">;
+  slug: string;
+  exam: PackExam;
   examLabel: string;
   title: string;
   section: string;
   packType: "single" | "pack";
-  fileUrl: string;
   packFiles: PackFile[];
 }
 
-interface DbPack {
+interface DatabasePack {
   id: string;
+  slug: string;
   exam: string;
   exam_label: string;
-  section: string;
   title: string;
-  pack_type: string;
-  file_url: string;
-  pack_files: PackFile[];
+  section: string;
+  pack_type: "single" | "pack";
+  pack_files: Array<{ name?: string }> | null;
 }
 
-function mapDbPack(row: DbPack): Pack {
+function mapDatabasePack(pack: DatabasePack): Pack {
   return {
-    id: row.id,
-    exam: row.exam as Exclude<ExamKey, "all">,
-    examLabel: row.exam_label,
-    title: row.title,
-    section: row.section,
-    packType: (row.pack_type ?? "single") as "single" | "pack",
-    fileUrl: row.file_url ?? "",
-    packFiles: (row.pack_files ?? []) as PackFile[],
+    id: pack.id,
+    slug: pack.slug,
+    exam: pack.exam as PackExam,
+    examLabel: pack.exam_label,
+    title: pack.title,
+    section: pack.section,
+    packType: pack.pack_type,
+    packFiles: (pack.pack_files ?? []).map((file, index) => ({
+      name: file.name?.trim() || `File ${index + 1}`,
+    })),
   };
 }
 
@@ -91,26 +92,26 @@ function mapDbPack(row: DbPack): Pack {
 const MOCK_PACKS: Pack[] = [
   {
     id: "mock-1",
+    slug: "jamb-mathematics-past-questions-2015-2024",
     exam: "jamb",
     examLabel: "JAMB · Mathematics",
     title: "JAMB Mathematics Complete 2015-2024",
     section: "JAMB / UTME",
     packType: "single",
-    fileUrl: "https://example.com/math.pdf",
     packFiles: [],
   },
   {
     id: "mock-2",
+    slug: "waec-science-past-questions-2024",
     exam: "waec",
     examLabel: "WAEC · Science Bundle",
     title: "WAEC Physics, Chemistry & Bio 2024",
     section: "WAEC / SSCE",
     packType: "pack",
-    fileUrl: "",
     packFiles: [
-      { name: "WAEC Physics 2024", url: "https://example.com/phys.pdf" },
-      { name: "WAEC Chemistry 2024", url: "https://example.com/chem.pdf" },
-      { name: "WAEC Biology 2024", url: "https://example.com/bio.pdf" },
+      { name: "WAEC Physics 2024" },
+      { name: "WAEC Chemistry 2024" },
+      { name: "WAEC Biology 2024" },
     ],
   },
 ];
@@ -119,28 +120,37 @@ const MOCK_PACKS: Pack[] = [
 
 export default function QuestionBankPage() {
   const [packs, setPacks] = useState<Pack[]>(MOCK_PACKS);
-  const [loadingPacks, setLoadingPacks] = useState(false);
+  const [loadingPacks, setLoadingPacks] = useState(true);
   const [activeExam, setActiveExam] = useState<ExamKey>("all");
   const [query, setQuery] = useState("");
-  // modalPack holds the pack currently open in a file-list modal (pack type only)
-  const [modalPack, setModalPack] = useState<Pack | null>(null);
 
-  // Fetch live data from Supabase (disabled temporarily to show hardcoded mock)
   useEffect(() => {
-    // supabase
-    //   .from("question_bank_packs")
-    //   .select("id,exam,exam_label,section,title,pack_type,file_url,pack_files")
-    //   .eq("published", true)
-    //   .order("created_at", { ascending: false })
-    //   .then(({ data }) => {
-    //     setPacks((data ?? []).map(mapDbPack));
-    //     setLoadingPacks(false);
-    //   });
+    let cancelled = false;
+
+    supabase
+      .from("question_bank_packs")
+      .select("id,slug,exam,exam_label,title,section,pack_type,pack_files")
+      .eq("published", true)
+      .order("created_at", { ascending: false })
+      .then(({ data }) => {
+        if (cancelled) return;
+        if (data?.length) {
+          setPacks((data as DatabasePack[]).map(mapDatabasePack));
+        }
+        setLoadingPacks(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const filtered = useMemo(() => {
     return packs.filter((p) => {
-      const matchesExam = activeExam === "all" || p.exam === activeExam;
+      const matchesExam =
+        activeExam === "all" ||
+        p.exam === activeExam ||
+        (activeExam === "bece" && (p.exam === "neco-bece" || p.exam === "waec-bece"));
       const matchesQuery =
         !query.trim() ||
         p.title.toLowerCase().includes(query.toLowerCase()) ||
@@ -298,9 +308,12 @@ export default function QuestionBankPage() {
                       {p.examLabel}
                     </div>
                   </div>
-                  <div className="mb-2.5 flex-1 text-sm font-bold leading-snug text-[#0d1a0f]">
+                  <Link
+                    href={`/admissions/question-bank/${p.slug}`}
+                    className="mb-2.5 flex-1 rounded-sm text-sm font-bold leading-snug text-[#0d1a0f] outline-none transition-colors hover:text-green-700 focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
+                  >
                     {p.title}
-                  </div>
+                  </Link>
                   <div className="mb-2.5 flex flex-wrap gap-1">
                     {p.packType === "pack" && (
                       <span className="rounded px-1.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wide bg-indigo-100 text-indigo-600">
@@ -313,26 +326,12 @@ export default function QuestionBankPage() {
                       <Check size={14} /> Free
                     </span>
 
-                    {/* Single → direct download link */}
-                    {p.packType === "single" ? (
-                      <a
-                        href={p.fileUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        download
-                        className="inline-flex items-center gap-1 rounded-lg border-[1.5px] border-green-200 bg-green-50 px-3.5 py-2 text-[13px] font-bold text-green-700 transition-colors hover:bg-green-100"
-                      >
-                        <Download size={14} /> Download
-                      </a>
-                    ) : (
-                      /* Pack → open file list modal */
-                      <button
-                        onClick={() => setModalPack(p)}
-                        className="inline-flex items-center gap-1 rounded-lg border-[1.5px] border-indigo-200 bg-indigo-50 px-3.5 py-2 text-[13px] font-bold text-indigo-700 transition-colors hover:bg-indigo-100"
-                      >
-                        <FileText size={14} /> View Files
-                      </button>
-                    )}
+                    <Link
+                      href={`/admissions/question-bank/${p.slug}`}
+                      className="inline-flex min-h-11 items-center gap-1.5 rounded-lg border-[1.5px] border-green-200 bg-green-50 px-3.5 py-2 text-[13px] font-bold text-green-700 outline-none transition-colors hover:bg-green-100 focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
+                    >
+                      <FileText aria-hidden="true" size={14} /> View pack
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -341,67 +340,6 @@ export default function QuestionBankPage() {
         ))}
       </div>
 
-      {/* Pack file-list modal (multi-file packs only) */}
-      {modalPack && (
-        <div
-          className="fixed inset-0 z-[200] flex items-center justify-center bg-[#0d1a0f]/60 p-5 backdrop-blur-sm"
-          onClick={(e) => { if (e.target === e.currentTarget) setModalPack(null); }}
-        >
-          <div className="w-full max-w-[500px] overflow-hidden rounded-[28px] bg-white shadow-2xl">
-            {/* Modal header */}
-            <div className="flex items-start justify-between gap-4 bg-[#0d1a0f] px-7 py-6">
-              <div>
-                <div className="mb-1.5 flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-wide text-green-300">
-                  <FileText size={12} /> {modalPack.packFiles.length} files in this pack
-                </div>
-                <div className="font-[var(--lp-serif)] text-[20px] leading-tight tracking-tight text-white">
-                  {modalPack.title}
-                </div>
-                <div className="mt-1 text-[12px] text-white/40">{modalPack.examLabel}</div>
-              </div>
-              <button
-                onClick={() => setModalPack(null)}
-                className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white/10 text-white/60 transition-colors hover:bg-white/20 hover:text-white"
-              >
-                <X size={16} />
-              </button>
-            </div>
-
-            {/* File list */}
-            <div className="px-6 py-5 max-h-[60vh] overflow-y-auto">
-              <p className="mb-3 text-[11px] font-bold uppercase tracking-wide text-[#9db5a3]">
-                Select a file to download
-              </p>
-              <div className="flex flex-col gap-2">
-                {modalPack.packFiles.map((f, i) => (
-                  <a
-                    key={i}
-                    href={f.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    download
-                    className="group flex items-center justify-between gap-3 rounded-[14px] border border-[#e2ede6] bg-[#f7faf8] px-4 py-3.5 transition-all hover:border-green-300 hover:bg-green-50 hover:shadow-sm"
-                  >
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white border border-[#e2ede6] text-rose-500 group-hover:border-green-200">
-                        <FileText size={17} />
-                      </div>
-                      <span className="text-sm font-semibold text-[#0d1a0f] truncate">{f.name}</span>
-                    </div>
-                    <div className="flex shrink-0 items-center gap-1.5 rounded-lg border border-green-200 bg-green-50 px-3 py-1.5 text-[12px] font-bold text-green-700 group-hover:bg-green-100">
-                      <Download size={13} /> Download
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div className="border-t border-[#e2ede6] px-6 py-4 text-center text-[11px] text-[#9db5a3]">
-              All files are free · No account required
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

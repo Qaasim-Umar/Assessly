@@ -77,7 +77,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .order("created_at", { ascending: false }),
     supabase
       .from("question_bank_packs")
-      .select("created_at")
+      .select("slug, created_at")
       .eq("published", true)
       .order("created_at", { ascending: false }),
   ]);
@@ -153,6 +153,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  const questionPackRoutes: MetadataRoute.Sitemap = (questionPacks ?? []).map((pack) => ({
+    url: `${BASE_URL}/admissions/question-bank/${pack.slug}`,
+    lastModified: new Date(pack.created_at),
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
   return [
     ...staticRoutes,
     ...admissionsCategoryRoutes,
@@ -160,5 +167,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...scholarshipRoutes,
     ...cutoffRoutes,
     ...nyscRoutes,
+    ...questionPackRoutes,
   ];
 }
