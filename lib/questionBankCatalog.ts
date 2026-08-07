@@ -53,7 +53,7 @@ export const QUESTION_BANK_PACKS: QuestionBankPack[] = [
     examLabel: "WAEC · Science Bundle",
     section: "WAEC / SSCE",
     title: "WAEC Physics, Chemistry & Biology 2024",
-    subject: "Physics, Chemistry & Biology",
+    subject: "Physics, Chemistry, Biology",
     years: "2024",
     shortDescription:
       "Download and practise the 2024 WAEC Physics, Chemistry, and Biology papers as three separate revision files.",

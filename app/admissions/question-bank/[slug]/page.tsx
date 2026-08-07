@@ -19,14 +19,13 @@ import "../../../landing/landing.css";
 
 const BASE_URL = "https://www.assessly.ng";
 
+// Pack contents are edited from the admin dashboard and must be fresh on the
+// next visit so newly added subjects and files appear immediately.
+export const dynamic = "force-dynamic";
+
 type PackPageProps = {
   params: Promise<{ slug: string }>;
 };
-
-export async function generateStaticParams() {
-  const packs = await listPublishedQuestionBankPacks();
-  return packs.map((pack) => ({ slug: pack.slug }));
-}
 
 export async function generateMetadata({
   params,
@@ -85,7 +84,7 @@ export default async function QuestionBankPackPage({ params }: PackPageProps) {
   const subjects = Array.from(
     new Set(
       pack.subject
-        .split(/\s*(?:,|&)\s*/)
+        .split(/\s*[,;]\s*/)
         .map((subject) => subject.trim())
         .filter(Boolean),
     ),

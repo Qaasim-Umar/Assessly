@@ -230,7 +230,10 @@ export default function QuestionBankForm({
                             <div className="grid gap-4 sm:grid-cols-2">
                                 <div>
                                     <Label>Subject</Label>
-                                    <input type="text" value={form.subject} onChange={(e) => set("subject", e.target.value)} placeholder="Mathematics" className="w-full min-h-11 mt-2 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
+                                    <p className="mt-0.5 text-[11px] leading-relaxed text-gray-400">
+                                        Separate multiple subjects with commas. Keep “and” or “&” inside a subject name.
+                                    </p>
+                                    <input type="text" value={form.subject} onChange={(e) => set("subject", e.target.value)} placeholder="Agriculture, Art & Craft" className="w-full min-h-11 mt-2 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
                                 </div>
                                 <div>
                                     <Label>Year Range</Label>
