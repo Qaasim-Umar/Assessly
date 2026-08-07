@@ -53,6 +53,15 @@ const defaultForm: QuestionBankPackData = {
     published: false,
 };
 
+function createSlug(value: string) {
+    return value
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+}
+
 export default function QuestionBankForm({
     initial,
     mode,
@@ -62,11 +71,25 @@ export default function QuestionBankForm({
 }) {
     const router = useRouter();
     const [form, setForm] = useState<QuestionBankPackData>(initial ?? defaultForm);
+    const [slugEdited, setSlugEdited] = useState(Boolean(initial?.slug));
     const [saving, setSaving] = useState(false);
     const [error, setError] = useState("");
 
     function set<K extends keyof QuestionBankPackData>(k: K, v: QuestionBankPackData[K]) {
         setForm((p) => ({ ...p, [k]: v }));
+    }
+
+    function updateTitle(title: string) {
+        setForm((previous) => ({
+            ...previous,
+            title,
+            slug: slugEdited ? previous.slug : createSlug(title),
+        }));
+    }
+
+    function updateSlug(slug: string) {
+        setSlugEdited(true);
+        set("slug", createSlug(slug));
     }
 
     // ── Pack files helpers ────────────────────────────────────────────────────
@@ -184,14 +207,16 @@ export default function QuestionBankForm({
                         {/* Title */}
                         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                             <Label>Pack Title</Label>
-                            <input type="text" value={form.title} onChange={(e) => set("title", e.target.value)} placeholder="JAMB Past Questions 2020 – 2024" className="w-full text-xl font-bold text-gray-900 placeholder:text-gray-300 border-0 outline-none mt-1" />
+                            <input type="text" value={form.title} onChange={(e) => updateTitle(e.target.value)} placeholder="JAMB Past Questions 2020 – 2024" className="w-full text-xl font-bold text-gray-900 placeholder:text-gray-300 border-0 outline-none mt-1" />
                         </div>
 
                         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm space-y-4">
                             <div>
                                 <Label>SEO Page Slug</Label>
-                                <p className="text-[11px] text-gray-400 mt-0.5 mb-1.5 leading-relaxed">Use a unique URL path with lowercase words and hyphens.</p>
-                                <input type="text" value={form.slug} onChange={(e) => set("slug", e.target.value.toLowerCase().replace(/[^a-z0-9-]+/g, "-").replace(/-+/g, "-"))} placeholder="jamb-mathematics-past-questions-2015-2024" className="w-full min-h-11 text-xs font-mono text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
+                                <p className="text-[11px] text-gray-400 mt-0.5 mb-1.5 leading-relaxed">
+                                    Generated automatically from the pack title. You can edit it when needed.
+                                </p>
+                                <input type="text" value={form.slug} onChange={(e) => updateSlug(e.target.value)} placeholder="jamb-mathematics-past-questions-2015-2024" className="w-full min-h-11 text-xs font-mono text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
                             </div>
                             <div>
                                 <Label>Short Description</Label>
