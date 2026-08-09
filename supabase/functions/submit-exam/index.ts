@@ -5,6 +5,10 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+type AnswerKeyQuestion = {
+  correct_answer: number | null;
+};
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
@@ -55,7 +59,7 @@ Deno.serve(async (req) => {
     let mcqScore = 0;
     let hasTheory = false;
 
-    questions.forEach((q: any, idx: number) => {
+    questions.forEach((q: AnswerKeyQuestion, idx: number) => {
       const isTheory = q.correct_answer === null || q.correct_answer === undefined;
       if (isTheory) {
         hasTheory = true;

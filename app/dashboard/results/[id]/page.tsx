@@ -93,7 +93,7 @@ function TheoryGradingPanel({
                             <p className="text-sm font-semibold text-gray-800 leading-snug">{q.text}</p>
                         </div>
                         <div className="bg-gray-50 rounded-lg p-3 border border-gray-200">
-                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Student's Answer</p>
+                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Student&apos;s Answer</p>
                             {studentAnswer ? (
                                 <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap">{studentAnswer}</p>
                             ) : (

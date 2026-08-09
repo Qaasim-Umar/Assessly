@@ -182,7 +182,7 @@ function SurvivalSessionPage() {
                 if (err) throw err;
 
                 const pool: Question[] = shuffle(
-                    (data ?? []).map((row: any) => ({
+                    (data ?? []).map((row: Question) => ({
                         id:             row.id,
                         text:           row.text,
                         topic:          row.topic,

@@ -1,18 +1,17 @@
-const fs = require("fs");
-const envFile = fs.readFileSync(".env.local", "utf8");
-const env = envFile.split("\n").reduce((acc, line) => {
-  const [key, ...values] = line.split("=");
-  if (key && values.length) acc[key.trim()] = values.join("=").trim();
-  return acc;
-}, {});
-
-const { createClient } = require("@supabase/supabase-js");
-const supabase = createClient(
-  env["NEXT_PUBLIC_SUPABASE_URL"],
-  env["NEXT_PUBLIC_SUPABASE_ANON_KEY"],
-);
-
 async function test() {
+  const { readFileSync } = await import("node:fs");
+  const { createClient } = await import("@supabase/supabase-js");
+  const envFile = readFileSync(".env.local", "utf8");
+  const env = envFile.split("\n").reduce((acc, line) => {
+    const [key, ...values] = line.split("=");
+    if (key && values.length) acc[key.trim()] = values.join("=").trim();
+    return acc;
+  }, {});
+  const supabase = createClient(
+    env["NEXT_PUBLIC_SUPABASE_URL"],
+    env["NEXT_PUBLIC_SUPABASE_ANON_KEY"],
+  );
+
   console.log("URL", env["NEXT_PUBLIC_SUPABASE_URL"]);
   const { data, error } = await supabase.from("admin_profiles").select("*");
   console.log("=== admin_profiles ===");

@@ -307,7 +307,7 @@ D. Mutation`}
 }
 
 // ─── Main Component ───────────────────────────────────────────────────────────
-export default function ManualEntryStep({ questions, onChange, onNext, onBack }: Props) {
+export default function ManualEntryStep({ questions, onChange, onNext, onBack, enableImages, uploadImage }: Props) {
     const [tab, setTab] = useState<"single" | "batch">("single");
     const [form, setForm] = useState({ ...blank });
     const [editingId, setEditingId] = useState<number | null>(null);
@@ -449,7 +449,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                     {/* Instruction */}
                     <div className="space-y-1.5">
                         <label className="text-xs font-bold text-gray-500 uppercase tracking-wide block">
-                            Instruction <span className="font-normal text-gray-400 normal-case">(optional — e.g. "From the passage, choose the best answer")</span>
+                            Instruction <span className="font-normal text-gray-400 normal-case">(optional — e.g. &quot;From the passage, choose the best answer&quot;)</span>
                         </label>
                         <input
                             className={inputCls}
@@ -460,7 +460,7 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                     </div>
 
                     {/* Optional diagram/image (General Mode only) */}
-                    {(arguments[0] as Props).enableImages && (
+                    {enableImages && (
                         <div className="space-y-2">
                             <label className="text-xs font-bold text-gray-500 uppercase tracking-wide block">Question Image (optional)</label>
                             {form.imageUrl ? (
@@ -494,7 +494,6 @@ export default function ManualEntryStep({ questions, onChange, onNext, onBack }:
                                         onChange={async (e) => {
                                             const file = e.target.files?.[0];
                                             e.target.value = "";
-                                            const uploadImage = (arguments[0] as Props).uploadImage;
                                             if (!file) return;
                                             if (!uploadImage) { setError("Image upload is not configured."); return; }
                                             setError("");

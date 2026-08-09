@@ -112,8 +112,8 @@ export default function PastQuestionsSetupPage() {
                 if (examType === "post_utme" && selectedSchool) q = q.eq("university", selectedSchool);
 
                 const { data } = await q;
-                const years = Array.from(new Set((data ?? []).map((r: any) => r.year as number)))
-                    .filter(Boolean)
+                const years = Array.from(new Set((data ?? []).map((r: { year: number | null }) => r.year)))
+                    .filter((year): year is number => year !== null)
                     .sort((a, b) => b - a);
                 setAvailableYears(years);
             } catch {

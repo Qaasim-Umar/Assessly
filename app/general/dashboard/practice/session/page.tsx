@@ -175,7 +175,7 @@ function PracticeSessionPage() {
                 const { data, error: err } = await query;
                 if (err) throw err;
 
-                let pool: PracticeQuestion[] = (data ?? []).map((row: any) => ({
+                let pool: PracticeQuestion[] = (data ?? []).map((row: PracticeQuestion) => ({
                     id: row.id,
                     text: row.text,
                     topic: row.topic,

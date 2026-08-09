@@ -506,7 +506,7 @@ export default function ExamAttemptPage() {
     const currentAnswer = answers[currentIndex];
     const currentStatus = statuses[currentIndex];
     const options: { label: string; text: string }[] = currentQuestion.options ?? [];
-    const questionImageUrl = (currentQuestion as any).image_url as string | null | undefined;
+    const questionImageUrl = currentQuestion.image_url;
 
     return (
         <div className="min-h-screen bg-[#f0f2f5] flex flex-col">

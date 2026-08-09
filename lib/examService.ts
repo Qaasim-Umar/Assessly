@@ -55,6 +55,10 @@ export interface DbSubmission {
   final_percentage: number;
 }
 
+type DbExamWithSubmissionCount = DbExam & {
+  submissions?: { count: number }[];
+};
+
 // ── READ: fetch all exams (teacher dashboard - scoped to their school) ────────────
 export async function getExams(schoolCode?: string): Promise<DbExam[]> {
   let query = supabase
@@ -67,7 +71,7 @@ export async function getExams(schoolCode?: string): Promise<DbExam[]> {
   const { data, error } = await query;
   if (error) throw error;
 
-  return (data ?? []).map((exam: any) => ({
+  return (data ?? []).map((exam: DbExamWithSubmissionCount) => ({
     ...exam,
     takes: exam.submissions?.[0]?.count ?? 0,
   }));

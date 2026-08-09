@@ -73,7 +73,6 @@ export default function ExamInfoPage() {
 
     useEffect(() => {
         let cancelled = false;
-        setLoading(true);
         getExamById(examId)
             .then((data) => {
                 if (cancelled) return;

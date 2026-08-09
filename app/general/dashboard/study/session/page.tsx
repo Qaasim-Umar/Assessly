@@ -96,7 +96,7 @@ function StudySessionPage() {
                 const { data, error: err } = await q;
                 if (err) throw err;
 
-                const pool: StudyQuestion[] = (data ?? []).map((row: any) => ({
+                const pool: StudyQuestion[] = (data ?? []).map((row: StudyQuestion) => ({
                     id: row.id,
                     text: row.text,
                     topic: row.topic,

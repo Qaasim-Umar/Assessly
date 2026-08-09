@@ -287,7 +287,7 @@ function ManualQuestionCard({
             </div>
 
             <div className="space-y-1.5">
-                <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">Instruction <span className="normal-case font-normal text-gray-400">(optional — e.g. "From the passage above, answer the following")</span></label>
+                <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">Instruction <span className="normal-case font-normal text-gray-400">(optional — e.g. &quot;From the passage above, answer the following&quot;)</span></label>
                 <input
                     type="text"
                     value={q.instruction}

@@ -3,6 +3,7 @@
 export const dynamic = "force-dynamic";
 
 import { useState, useEffect, Suspense } from "react";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { signInStudent, getStudentProfile } from "@/lib/authService";
 import { supabase } from "@/lib/supabase";
@@ -58,10 +59,10 @@ function LoginForm() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-green-50 via-white to-green-100 px-4 py-10">
             <div className="w-full max-w-4xl mb-3 flex">
-                <a href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-gray-800 transition-colors group">
+                <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-gray-800 transition-colors group">
                     <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
                     Back to home
-                </a>
+                </Link>
             </div>
             <div className="w-full max-w-4xl flex rounded-3xl shadow-2xl shadow-green-900/15 overflow-hidden ring-1 ring-black/5">
 

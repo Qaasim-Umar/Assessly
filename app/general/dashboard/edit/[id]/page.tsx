@@ -54,7 +54,7 @@ function mapDbToQuestions(exam: DbExamWithQuestions): Question[] {
     return exam.questions.map((q, i) => ({
         id: i + 1,
         text: q.text,
-        imageUrl: (q as any).image_url ?? undefined,
+        imageUrl: q.image_url ?? undefined,
         type: q.type as "MCQ" | "Theory",
         topic: q.topic ?? "General",
         commandWord: q.command_word ?? "Answer",

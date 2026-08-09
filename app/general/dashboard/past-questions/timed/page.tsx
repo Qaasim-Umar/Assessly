@@ -131,7 +131,7 @@ function TimedExamPage() {
                 const { data, error: err } = await q;
                 if (err) throw err;
 
-                const pool: PastQuestion[] = (data ?? []).map((row: any) => ({
+                const pool: PastQuestion[] = (data ?? []).map((row: PastQuestion) => ({
                     id: row.id,
                     text: row.text,
                     topic: row.topic,
