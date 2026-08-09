@@ -90,7 +90,7 @@ export default function AdmissionsNavbar() {
             Practise free
           </Link>
           <Link
-            href="/#schools"
+            href="/"
             className="flex min-h-11 flex-1 items-center justify-center gap-2 border-x border-white/10 px-3 text-xs font-bold text-white/85 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-green-400 sm:flex-none sm:text-sm"
           >
             <PenLine size={16} aria-hidden="true" />

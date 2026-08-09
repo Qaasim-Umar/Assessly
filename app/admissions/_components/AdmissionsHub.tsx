@@ -862,7 +862,7 @@ export default function AdmissionsHub({
             </Link>
 
             <Link
-              href="/#schools"
+              href="/"
               className="group grid min-h-32 grid-cols-[auto_1fr_auto] items-center gap-4 rounded-2xl border border-[#d8e2da] bg-[#f7faf8] p-5 transition-[border-color,box-shadow,background-color] hover:border-[#b9c9bd] hover:bg-white hover:shadow-[0_8px_24px_rgba(13,26,15,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
             >
               <span className="flex size-12 items-center justify-center rounded-xl bg-[#0d1a0f] text-white">
