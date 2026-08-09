@@ -10,7 +10,6 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
-import Navbar from "@/components/Navbar";
 import {
   getPublishedQuestionBankPack,
   listPublishedQuestionBankPacks,
@@ -154,7 +153,6 @@ export default async function QuestionBankPackPage({ params }: PackPageProps) {
         }}
       />
 
-      <Navbar />
 
       <main id="main-content">
         <section className="relative overflow-hidden bg-[#0d1a0f] text-white">

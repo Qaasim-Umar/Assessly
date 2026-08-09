@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
+import AdmissionsNavbar from "./_components/AdmissionsNavbar";
 
 export const metadata: Metadata = {
   title: "Nigerian University Scholarships & Admission Deadlines",
@@ -34,6 +35,7 @@ export default function AdmissionsLayout({
 }) {
   return (
     <>
+      <AdmissionsNavbar />
       {children}
       <Footer />
     </>

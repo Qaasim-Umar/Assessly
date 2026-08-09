@@ -104,6 +104,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6113651065351042"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={`${lora.variable} ${plusJakartaSans.variable} min-h-screen bg-white`}>
         {children}

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
 import GistMarkdown from "@/components/GistMarkdown";
 import ReactionBar from "../../_components/ReactionBar";
 import Sidebar from "../../_components/Sidebar";
@@ -71,7 +70,6 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
 
   return (
     <>
-      <Navbar />
 
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <div className="bg-[#0d1a0f] pt-14 px-6 pb-12 relative overflow-hidden">

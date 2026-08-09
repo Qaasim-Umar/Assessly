@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import Navbar from "@/components/Navbar";
+import Link from "next/link";
 import FilterBar from "./FilterBar";
 import ReactionBar from "./ReactionBar";
 import SearchBar from "./SearchBar";
@@ -12,6 +12,8 @@ import {
   Eye,
   Building2,
   Flame,
+  BookOpenCheck,
+  FilePenLine,
 } from "lucide-react";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -334,7 +336,6 @@ export default function AdmissionsHub({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navbar />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <div className="bg-[#0d1a0f] relative overflow-hidden pt-14 px-6">
@@ -827,6 +828,57 @@ export default function AdmissionsHub({
           )}
         </div>
       </div>
+
+      <section className="border-t border-[#e2ede6] bg-white" aria-labelledby="assessly-tools-heading">
+        <div className="mx-auto max-w-[1100px] px-6 py-8 sm:py-10">
+          <div className="mb-5">
+            <p className="mb-1 text-[13px] font-extrabold uppercase tracking-widest text-green-700">
+              More ways to use Assessly
+            </p>
+            <h2
+              id="assessly-tools-heading"
+              className="text-[24px] leading-tight tracking-[-0.4px] text-[#0d1a0f] sm:text-[28px]"
+              style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
+            >
+              Practise questions or run your own exams
+            </h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            <Link
+              href="/general"
+              className="group grid min-h-32 grid-cols-[auto_1fr_auto] items-center gap-4 rounded-2xl border border-green-200 bg-green-50/60 p-5 transition-[border-color,box-shadow,background-color] hover:border-green-300 hover:bg-green-50 hover:shadow-[0_8px_24px_rgba(22,163,74,0.10)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
+            >
+              <span className="flex size-12 items-center justify-center rounded-xl bg-green-600 text-white">
+                <BookOpenCheck size={23} aria-hidden="true" />
+              </span>
+              <span>
+                <strong className="block text-lg font-extrabold text-[#0d1a0f]">Practise free questions</strong>
+                <span className="mt-1 block text-sm leading-relaxed text-[#4a5e4e]">
+                  JAMB, WAEC, NECO and BECE practice. No account needed.
+                </span>
+              </span>
+              <ArrowRight size={20} aria-hidden="true" className="text-green-700 transition-transform group-hover:translate-x-1" />
+            </Link>
+
+            <Link
+              href="/#schools"
+              className="group grid min-h-32 grid-cols-[auto_1fr_auto] items-center gap-4 rounded-2xl border border-[#d8e2da] bg-[#f7faf8] p-5 transition-[border-color,box-shadow,background-color] hover:border-[#b9c9bd] hover:bg-white hover:shadow-[0_8px_24px_rgba(13,26,15,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
+            >
+              <span className="flex size-12 items-center justify-center rounded-xl bg-[#0d1a0f] text-white">
+                <FilePenLine size={23} aria-hidden="true" />
+              </span>
+              <span>
+                <strong className="block text-lg font-extrabold text-[#0d1a0f]">Create and manage exams</strong>
+                <span className="mt-1 block text-sm leading-relaxed text-[#4a5e4e]">
+                  Set questions, let students take the exam and view their results.
+                </span>
+              </span>
+              <ArrowRight size={20} aria-hidden="true" className="text-[#0d1a0f] transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
