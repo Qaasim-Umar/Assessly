@@ -140,7 +140,7 @@ function ScholarshipCard({
       <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-amber-100 text-amber-600">
         <Trophy size={22} aria-hidden="true" />
       </div>
-      <h3 className="text-[19px] font-bold text-[#0d1a0f] leading-snug">{title}</h3>
+      <h3 className="text-[18px] sm:text-[19px] font-bold text-[#0d1a0f] leading-snug">{title}</h3>
       <div className="hidden sm:flex items-end flex-shrink-0">
         <span className="inline-flex min-h-11 items-center gap-1 text-base font-bold text-amber-700 bg-amber-50 rounded-lg px-4 py-2">
           View details <ArrowRight size={16} aria-hidden="true" />
@@ -183,7 +183,7 @@ function DeadlineCard({
   } = computeDeadlineFromDate(deadlineDate);
   const s = URGENCY_STYLES[urgency] ?? URGENCY_STYLES.open;
   return (
-    <div className="bg-white border border-[#e2ede6] rounded-xl px-3 py-2.5 sm:px-4 hover:border-green-200 transition-colors">
+    <div className="px-3 py-2.5 transition-colors hover:bg-green-50/40 sm:px-4">
       <div className="grid grid-cols-[48px_minmax(0,1fr)_auto] gap-3 items-center">
         <div
           className={`w-12 h-12 rounded-lg flex flex-col items-center justify-center flex-shrink-0 ${s.block}`}
@@ -589,7 +589,7 @@ export default function AdmissionsHub({
               </div>
 
               {deadlines.length > 0 ? (
-                <div className="flex flex-col gap-2">
+                <div className="overflow-hidden rounded-2xl border border-gray-300 bg-white divide-y divide-gray-200">
                   {deadlines.map((d) => (
                     <DeadlineCard
                       key={d.id}
@@ -631,7 +631,7 @@ export default function AdmissionsHub({
                       href={`/admissions/cutoffs/${c.slug}`}
                       className="flex min-h-14 items-center justify-between px-4 py-3.5 sm:px-5 hover:bg-blue-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 transition-colors"
                     >
-                      <h3 className="text-[17px] sm:text-[18px] font-bold text-[#0d1a0f] leading-snug">
+                      <h3 className="text-[18px] sm:text-[19px] font-bold text-[#0d1a0f] leading-snug">
                         {c.school}
                       </h3>
                       <ArrowRight size={18} className="text-[#6f8374] shrink-0 ml-4" aria-hidden="true" />
@@ -679,7 +679,7 @@ export default function AdmissionsHub({
                             {n.batch_label}
                           </span>
                         )}
-                        <h3 className="text-[17px] sm:text-[18px] font-bold text-[#0d1a0f] leading-snug">
+                        <h3 className="text-[18px] sm:text-[19px] font-bold text-[#0d1a0f] leading-snug">
                           {n.title}
                         </h3>
                       </div>

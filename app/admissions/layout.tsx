@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
+import { Bricolage_Grotesque } from "next/font/google";
 import Footer from "@/components/Footer";
 import AdmissionsNavbar from "./_components/AdmissionsNavbar";
+import "./admissions.css";
+
+const bricolageGrotesque = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  display: "swap",
+  variable: "--font-bricolage-grotesque",
+});
 
 export const metadata: Metadata = {
   title: "Nigerian University Scholarships & Admission Deadlines",
@@ -34,10 +43,10 @@ export default function AdmissionsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div className={`${bricolageGrotesque.variable} admissions-font-scope`}>
       <AdmissionsNavbar />
       {children}
       <Footer />
-    </>
+    </div>
   );
 }

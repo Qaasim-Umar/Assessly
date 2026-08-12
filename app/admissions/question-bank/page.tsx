@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import { supabase } from "@/lib/supabase";
 import "../../landing/landing.css";
 import {
@@ -22,7 +23,6 @@ import {
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 type ExamKey = "all" | "jamb" | "waec" | "neco" | "post" | "bece" | "nabteb";
-type PackExam = Exclude<ExamKey, "all"> | "neco-bece" | "waec-bece";
 
 const EXAM_TABS: { key: ExamKey; label: string; icon: React.ReactNode }[] = [
   { key: "all", label: "All", icon: <List size={16} /> },
@@ -34,14 +34,12 @@ const EXAM_TABS: { key: ExamKey; label: string; icon: React.ReactNode }[] = [
   { key: "nabteb", label: "NABTEB", icon: <Wrench size={16} /> },
 ];
 
-const ACCENT: Record<PackExam, string> = {
+const ACCENT: Record<Exclude<ExamKey, "all">, string> = {
   jamb: "bg-green-600",
   waec: "bg-indigo-500",
   neco: "bg-rose-600",
   post: "bg-blue-600",
   bece: "bg-amber-600",
-  "neco-bece": "bg-rose-600",
-  "waec-bece": "bg-indigo-500",
   nabteb: "bg-violet-600",
 };
 
@@ -52,7 +50,7 @@ interface PackFile {
 interface Pack {
   id: string;
   slug: string;
-  exam: PackExam;
+  exam: Exclude<ExamKey, "all">;
   examLabel: string;
   title: string;
   section: string;
@@ -75,7 +73,7 @@ function mapDatabasePack(pack: DatabasePack): Pack {
   return {
     id: pack.id,
     slug: pack.slug,
-    exam: pack.exam as PackExam,
+    exam: pack.exam as Exclude<ExamKey, "all">,
     examLabel: pack.exam_label,
     title: pack.title,
     section: pack.section,
@@ -146,10 +144,7 @@ export default function QuestionBankPage() {
 
   const filtered = useMemo(() => {
     return packs.filter((p) => {
-      const matchesExam =
-        activeExam === "all" ||
-        p.exam === activeExam ||
-        (activeExam === "bece" && (p.exam === "neco-bece" || p.exam === "waec-bece"));
+      const matchesExam = activeExam === "all" || p.exam === activeExam;
       const matchesQuery =
         !query.trim() ||
         p.title.toLowerCase().includes(query.toLowerCase()) ||
@@ -167,17 +162,11 @@ export default function QuestionBankPage() {
     return Array.from(map.entries());
   }, [filtered]);
 
-  const totalFiles = useMemo(
-    () =>
-      packs.reduce(
-        (total, pack) => total + (pack.packType === "single" ? 1 : pack.packFiles.length),
-        0,
-      ),
-    [packs],
-  );
+  const totalDownloads = "12k+";
 
   return (
     <div className="lp-root min-h-screen bg-[#f7faf8]">
+      <Navbar />
 
       {/* Early access banner */}
       <div className="flex items-center justify-center gap-2 bg-green-600 text-white text-center text-[13px] font-semibold px-5 py-2.5">
@@ -229,10 +218,10 @@ export default function QuestionBankPage() {
             </div>
             <div>
               <span className="block text-[28px] font-extrabold leading-none tracking-tight text-white">
-                {loadingPacks ? "—" : totalFiles.toLocaleString()}
+                {loadingPacks ? "—" : totalDownloads}
               </span>
               <span className="text-[11px] font-semibold uppercase tracking-wide text-white/30">
-                PDF Files
+                Downloads
               </span>
             </div>
             <div>

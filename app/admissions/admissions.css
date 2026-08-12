@@ -1,0 +1,7 @@
+.admissions-font-scope {
+  --lp-serif: var(--font-bricolage-grotesque), Arial, sans-serif;
+}
+
+.admissions-font-scope :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-bricolage-grotesque), Arial, sans-serif !important;
+}

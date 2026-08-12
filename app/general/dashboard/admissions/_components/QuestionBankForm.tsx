@@ -10,12 +10,9 @@ const EXAMS = [
     { value: "waec", label: "WAEC" },
     { value: "neco", label: "NECO" },
     { value: "post", label: "Post-UTME" },
-    { value: "neco-bece", label: "NECO BECE" },
-    { value: "waec-bece", label: "WAEC BECE" },
+    { value: "bece", label: "BECE" },
     { value: "nabteb", label: "NABTEB" },
 ] as const;
-
-type QuestionBankExamValue = (typeof EXAMS)[number]["value"] | "bece";
 
 export interface PackFile {
     name: string;
@@ -24,7 +21,7 @@ export interface PackFile {
 
 export interface QuestionBankPackData {
     id?: string;
-    exam: QuestionBankExamValue;
+    exam: (typeof EXAMS)[number]["value"];
     exam_label: string;
     section: string;
     title: string;
@@ -53,15 +50,6 @@ const defaultForm: QuestionBankPackData = {
     published: false,
 };
 
-function createSlug(value: string) {
-    return value
-        .normalize("NFKD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, "");
-}
-
 export default function QuestionBankForm({
     initial,
     mode,
@@ -71,25 +59,11 @@ export default function QuestionBankForm({
 }) {
     const router = useRouter();
     const [form, setForm] = useState<QuestionBankPackData>(initial ?? defaultForm);
-    const [slugEdited, setSlugEdited] = useState(Boolean(initial?.slug));
     const [saving, setSaving] = useState(false);
     const [error, setError] = useState("");
 
     function set<K extends keyof QuestionBankPackData>(k: K, v: QuestionBankPackData[K]) {
         setForm((p) => ({ ...p, [k]: v }));
-    }
-
-    function updateTitle(title: string) {
-        setForm((previous) => ({
-            ...previous,
-            title,
-            slug: slugEdited ? previous.slug : createSlug(title),
-        }));
-    }
-
-    function updateSlug(slug: string) {
-        setSlugEdited(true);
-        set("slug", createSlug(slug));
     }
 
     // ── Pack files helpers ────────────────────────────────────────────────────
@@ -118,7 +92,6 @@ export default function QuestionBankForm({
     // ── Save ─────────────────────────────────────────────────────────────────
 
     async function save(published: boolean) {
-        if (form.exam === "bece") { setError("Choose either NECO BECE or WAEC BECE as the exam type."); return; }
         if (!form.title.trim()) { setError("Title is required."); return; }
         if (!form.slug.trim()) { setError("Slug is required."); return; }
         if (!form.exam_label.trim()) { setError("Exam label is required."); return; }
@@ -207,16 +180,14 @@ export default function QuestionBankForm({
                         {/* Title */}
                         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                             <Label>Pack Title</Label>
-                            <input type="text" value={form.title} onChange={(e) => updateTitle(e.target.value)} placeholder="JAMB Past Questions 2020 – 2024" className="w-full text-xl font-bold text-gray-900 placeholder:text-gray-300 border-0 outline-none mt-1" />
+                            <input type="text" value={form.title} onChange={(e) => set("title", e.target.value)} placeholder="JAMB Past Questions 2020 – 2024" className="w-full text-xl font-bold text-gray-900 placeholder:text-gray-300 border-0 outline-none mt-1" />
                         </div>
 
                         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm space-y-4">
                             <div>
                                 <Label>SEO Page Slug</Label>
-                                <p className="text-[11px] text-gray-400 mt-0.5 mb-1.5 leading-relaxed">
-                                    Generated automatically from the pack title. You can edit it when needed.
-                                </p>
-                                <input type="text" value={form.slug} onChange={(e) => updateSlug(e.target.value)} placeholder="jamb-mathematics-past-questions-2015-2024" className="w-full min-h-11 text-xs font-mono text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
+                                <p className="text-[11px] text-gray-400 mt-0.5 mb-1.5 leading-relaxed">Use a unique URL path with lowercase words and hyphens.</p>
+                                <input type="text" value={form.slug} onChange={(e) => set("slug", e.target.value.toLowerCase().replace(/[^a-z0-9-]+/g, "-").replace(/-+/g, "-"))} placeholder="jamb-mathematics-past-questions-2015-2024" className="w-full min-h-11 text-xs font-mono text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
                             </div>
                             <div>
                                 <Label>Short Description</Label>
@@ -230,10 +201,7 @@ export default function QuestionBankForm({
                             <div className="grid gap-4 sm:grid-cols-2">
                                 <div>
                                     <Label>Subject</Label>
-                                    <p className="mt-0.5 text-[11px] leading-relaxed text-gray-400">
-                                        Separate multiple subjects with commas. Keep “and” or “&” inside a subject name.
-                                    </p>
-                                    <input type="text" value={form.subject} onChange={(e) => set("subject", e.target.value)} placeholder="Agriculture, Art & Craft" className="w-full min-h-11 mt-2 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
+                                    <input type="text" value={form.subject} onChange={(e) => set("subject", e.target.value)} placeholder="Mathematics" className="w-full min-h-11 mt-2 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
                                 </div>
                                 <div>
                                     <Label>Year Range</Label>
@@ -273,9 +241,9 @@ export default function QuestionBankForm({
                             <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                                 <Label>Cloudflare R2 Object Key</Label>
                                 <p className="text-[11px] text-gray-400 mt-0.5 mb-1.5 leading-relaxed">
-                                    Use question-banks/exam/year/file.pdf. For BECE, use neco-bece or waec-bece as the exam folder.
+                                    Enter the file path inside your private R2 bucket, not a public URL.
                                 </p>
-                                <input type="text" value={form.object_key} onChange={(e) => set("object_key", e.target.value)} placeholder="question-banks/neco-bece/2025/agriculture-neco-bece-2025.pdf" className="w-full min-h-11 text-xs font-mono text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
+                                <input type="text" value={form.object_key} onChange={(e) => set("object_key", e.target.value)} placeholder="jamb/mathematics/jamb-2020-2024.pdf" className="w-full min-h-11 text-xs font-mono text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
                             </div>
                         )}
 
@@ -335,7 +303,7 @@ export default function QuestionBankForm({
                                                     type="text"
                                                     value={f.object_key}
                                                     onChange={(e) => updatePackFile(i, "object_key", e.target.value)}
-                                                    placeholder="question-banks/waec/2024/waec-physics-2024.pdf"
+                                                    placeholder="waec/2024/physics.pdf"
                                                     className="w-full sm:w-3/5 text-xs font-mono text-gray-700 bg-white border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500"
                                                 />
                                             </div>
@@ -389,12 +357,8 @@ export default function QuestionBankForm({
                         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                             <Label>Exam Type</Label>
                             <select value={form.exam} onChange={(e) => set("exam", e.target.value as QuestionBankPackData["exam"])} className="w-full mt-2 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500">
-                                {form.exam === "bece" && <option value="bece" disabled>BECE — choose the exam board</option>}
                                 {EXAMS.map((ex) => <option key={ex.value} value={ex.value}>{ex.label}</option>)}
                             </select>
-                            <p className="mt-2 text-[11px] leading-relaxed text-gray-400">
-                                Select the board that issued the BECE paper so its records and R2 files stay distinct.
-                            </p>
                         </div>
 
                         <div className="flex flex-col gap-2">

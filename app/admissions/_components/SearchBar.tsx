@@ -29,21 +29,18 @@ function labelFor(r: SearchResult) {
 export default function SearchBar() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const queryValue = searchParams.get("q") ?? "";
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const abortRef = useRef<AbortController | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const [value, setValue] = useState(queryValue);
-  const [previousQueryValue, setPreviousQueryValue] = useState(queryValue);
+  const [value, setValue] = useState(searchParams.get("q") ?? "");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  if (queryValue !== previousQueryValue) {
-    setPreviousQueryValue(queryValue);
-    setValue(queryValue);
-  }
+  useEffect(() => {
+    setValue(searchParams.get("q") ?? "");
+  }, [searchParams]);
 
   // Close dropdown on outside click
   useEffect(() => {
