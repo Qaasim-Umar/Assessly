@@ -6,6 +6,7 @@ import ReactionBar from "../../_components/ReactionBar";
 import InlineMarkdown from "@/components/InlineMarkdown";
 import DeadlineListCard from "../../_components/DeadlineListCard";
 import AdmissionsSidebar from "../../_components/Sidebar";
+import NyscWhatsAppCard from "../../_components/NyscWhatsAppCard";
 import { supabase } from "@/lib/supabase";
 import {
   ADMISSIONS_CATEGORIES,
@@ -295,6 +296,8 @@ export default async function CategoryArchivePage({
           </div>
 
           {/* ── PAGINATION ── */}
+          {category.slug === "nysc" && <NyscWhatsAppCard />}
+
           {totalPages > 1 && (
             <div className="flex items-center justify-between mt-8">
               {hasPrev ? (

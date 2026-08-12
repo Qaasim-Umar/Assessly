@@ -3,13 +3,13 @@ import Link from "next/link";
 import FilterBar from "./FilterBar";
 import ReactionBar from "./ReactionBar";
 import SearchBar from "./SearchBar";
+import NyscWhatsAppCard from "./NyscWhatsAppCard";
 import { computeDeadlineFromDate } from "@/lib/deadline";
 import {
   ArrowRight,
   Newspaper,
   Trophy,
   Calendar,
-  Eye,
   Building2,
   Flame,
   BookOpenCheck,
@@ -26,7 +26,6 @@ export interface DbGist {
   title: string;
   date_label: string;
   school: string;
-  views: string;
   reactions: { fire: number; shock: number; check: number; think: number };
   is_trending: boolean;
   is_featured: boolean;
@@ -347,7 +346,7 @@ export default function AdmissionsHub({
           }}
         />
 
-        <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_auto] items-end gap-10">
+        <div className="max-w-[1100px] mx-auto">
           <div>
             <div className="inline-flex items-center gap-2 text-[13px] font-extrabold tracking-widest uppercase text-[#bbf7d0] mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 flex-shrink-0" />
@@ -366,34 +365,6 @@ export default function AdmissionsHub({
             </p>
           </div>
 
-          <div className="flex flex-row gap-6 pb-10 self-center">
-            {[
-              {
-                num: (
-                  gists.length +
-                  scholarships.length +
-                  cutoffs.length +
-                  nysc.length
-                ).toString(),
-                label: "Published updates",
-              },
-              { num: deadlines.length.toString(), label: "Deadlines" },
-            ]
-              .filter((stat) => Number(stat.num) > 0)
-              .map((s, i, arr) => (
-              <div
-                key={s.label}
-                className={`text-right ${i < arr.length - 1 ? "pr-6 border-r border-white/10" : ""}`}
-              >
-                <span className="block text-3xl font-extrabold text-white tracking-tight leading-none">
-                  {s.num}
-                </span>
-                <span className="text-[13px] font-semibold text-white/30 uppercase tracking-wide">
-                  {s.label}
-                </span>
-              </div>
-            ))}
-          </div>
         </div>
 
       </div>
@@ -476,10 +447,6 @@ export default function AdmissionsHub({
                         )}
                         <span className="flex items-center gap-1">
                           <Calendar size={13} aria-hidden="true" /> {featuredGist.date_label}
-                        </span>
-                        <span className="hidden sm:flex items-center gap-1">
-                          <Eye size={13} aria-hidden="true" /> {featuredGist.views}
-                          <span>views</span>
                         </span>
                         <span className="hidden sm:flex items-center gap-1">
                           <Building2 size={13} aria-hidden="true" /> {featuredGist.school}
@@ -692,6 +659,7 @@ export default function AdmissionsHub({
                   <p className="text-[#9db5a3]">No NYSC posts published yet.</p>
                 </div>
               )}
+              <NyscWhatsAppCard />
             </section>
           )}
         </div>
@@ -814,9 +782,6 @@ export default function AdmissionsHub({
                       <strong className="text-base font-bold text-[#0d1a0f] block leading-tight">
                         {g.title}
                       </strong>
-                      <span className="text-sm text-[#9db5a3]">
-                        {g.views} views
-                      </span>
                     </div>
                     <span className="text-[#9db5a3] flex-shrink-0 text-base">
                       →

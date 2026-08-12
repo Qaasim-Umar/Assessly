@@ -7,7 +7,6 @@ interface GistRow {
   id: string;
   slug: string;
   title: string;
-  views: string;
   is_new_this_week: boolean;
 }
 
@@ -56,7 +55,7 @@ export default async function AdmissionsSidebar() {
     await Promise.all([
       supabase
         .from("admissions_gists")
-        .select("id,slug,title,views,is_new_this_week")
+        .select("id,slug,title,is_new_this_week")
         .eq("published", true)
         .order("created_at", { ascending: false })
         .limit(5),
@@ -178,9 +177,6 @@ export default async function AdmissionsSidebar() {
                   <strong className="text-base font-bold text-[#0d1a0f] block leading-tight">
                     {g.title}
                   </strong>
-                  <span className="text-sm text-[#9db5a3]">
-                    {g.views} views
-                  </span>
                 </div>
                 <span className="text-[#9db5a3] flex-shrink-0 text-base">
                   →

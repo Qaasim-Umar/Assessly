@@ -6,7 +6,7 @@ import ReactionBar from "../../_components/ReactionBar";
 import Sidebar from "../../_components/Sidebar";
 import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
-import { Calendar, Eye, Building2 } from "lucide-react";
+import { Calendar, Building2 } from "lucide-react";
 import ShareBar from "@/components/ShareBar";
 import ArticleByline from "@/components/ArticleByline";
 import "../../../landing/landing.css";
@@ -22,7 +22,6 @@ interface DbGist {
   desc: string;
   date_label: string;
   school: string;
-  views: string;
   paragraphs: string[];
   reactions: { fire: number; shock: number; check: number; think: number };
   related: { slug: string; title: string; tag: string }[];
@@ -59,7 +58,7 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
 
   const { data: gist } = await supabase
     .from("admissions_gists")
-    .select("*")
+    .select("id,slug,tag,tag_color,title,desc,date_label,school,paragraphs,reactions,related,created_at")
     .eq("slug", slug)
     .eq("published", true)
     .single();
@@ -99,7 +98,6 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
 
           <div className="flex items-center gap-4 text-sm text-white/35 flex-wrap mt-3 mb-5">
             <span className="flex items-center gap-1"><Calendar size={13} /> {g.date_label}</span>
-            <span className="flex items-center gap-1"><Eye size={13} /> {g.views} views</span>
             <span className="flex items-center gap-1"><Building2 size={13} /> {g.school}</span>
           </div>
 

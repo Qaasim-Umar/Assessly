@@ -48,7 +48,7 @@ export default async function AdmissionsHubPage({
       supabase
         .from("admissions_gists")
         .select(
-          "id,slug,tag,tag_color,title,date_label,school,views,reactions,is_trending,is_featured,is_new_this_week",
+          "id,slug,tag,tag_color,title,date_label,school,reactions,is_trending,is_featured,is_new_this_week",
         )
         .eq("published", true)
         .order("created_at", { ascending: false }),

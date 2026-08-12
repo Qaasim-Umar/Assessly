@@ -23,7 +23,6 @@ export interface GistData {
     desc: string;
     date_label: string;
     school: string;
-    views: string;
     paragraphs: string[];
     reactions: { fire: number; think: number };
     is_trending: boolean;
@@ -44,7 +43,7 @@ export default function GistForm({ initial, mode }: { initial?: GistData; mode: 
     const router = useRouter();
     const [form, setForm] = useState<GistData>(initial ?? {
         slug: "", tag: "", tag_color: "text-green-600", title: "", desc: "",
-        date_label: todayLabel(), school: "", views: "0",
+        date_label: todayLabel(), school: "",
         paragraphs: [""],
         reactions: { fire: 0, think: 0 },
         is_trending: false, is_featured: false, is_new_this_week: false, published: false,
@@ -90,7 +89,6 @@ export default function GistForm({ initial, mode }: { initial?: GistData; mode: 
             desc: form.desc.trim(),
             date_label: form.date_label.trim(),
             school: form.school.trim() || form.tag.trim().toUpperCase(),
-            views: form.views.trim() || "0",
             paragraphs: body,
             reactions: form.reactions,
             is_trending: form.is_trending,
@@ -257,10 +255,6 @@ export default function GistForm({ initial, mode }: { initial?: GistData; mode: 
                                 <div>
                                     <label className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Display Date</label>
                                     <input type="text" value={form.date_label} onChange={e => set("date_label", e.target.value)} placeholder="June 18, 2026" className="w-full mt-1 text-xs text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
-                                </div>
-                                <div>
-                                    <label className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Views (display)</label>
-                                    <input type="text" value={form.views} onChange={e => set("views", e.target.value)} placeholder="14.2k" className="w-full mt-1 text-xs text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-green-500" />
                                 </div>
                             </div>
                         </div>
