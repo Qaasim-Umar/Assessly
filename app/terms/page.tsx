@@ -40,7 +40,7 @@ export default function TermsOfServicePage() {
               apply when students, educators, schools, and visitors use Assessly.
             </p>
             <p className="privacy-date">
-              Effective and last updated: <time dateTime="2026-07-26">26 July 2026</time>
+              Effective and last updated: <time dateTime="2026-08-13">13 August 2026</time>
             </p>
           </div>
         </header>
@@ -178,12 +178,35 @@ export default function TermsOfServicePage() {
               <h3>Your content</h3>
               <p>
                 You keep ownership of original questions, documents, answers, and
-                other material you submit (“User Content”). You give Assessly a
-                non-exclusive, worldwide licence to host, store, reproduce, format,
-                process, and display that content only as needed to operate, secure,
-                and improve the Service and fulfil your instructions. This licence
-                ends when the content is deleted from active systems, subject to
-                reasonable backup periods and legal retention duties.
+                other material you submit (“User Content”). For User Content other
+                than Submitted Questions, you give Assessly a non-exclusive,
+                worldwide licence to host, store, reproduce, format, process, and
+                display that content only as needed to operate, secure, and improve
+                the Service and fulfil your instructions. This licence ends when the
+                content is deleted from active systems, subject to reasonable backup
+                periods and legal retention duties.
+              </p>
+
+              <h3>Questions submitted to Assessly</h3>
+              <p>
+                When you create or upload a question—including its wording, answer
+                choices, answer key, explanation, tags, and supporting materials
+                (“Submitted Questions”)—you grant Assessly a non-exclusive,
+                worldwide, perpetual, irrevocable, royalty-free, transferable, and
+                sublicensable licence to host, store, reproduce, modify, adapt,
+                translate, publish, display, distribute, and create derivative works
+                from those Submitted Questions for any lawful purpose connected with
+                Assessly’s business. This includes using, reusing, combining,
+                improving, and incorporating Submitted Questions into question banks,
+                assessments, study materials, product features, and promotional or
+                commercial offerings, with or without attribution to you.
+              </p>
+              <p>
+                This licence continues even if you delete a Submitted Question or
+                close your account, although Assessly does not claim ownership of
+                your Submitted Questions. Do not submit confidential information,
+                personal data, or third-party material unless you are authorised to
+                provide it and grant this licence.
               </p>
               <p>
                 You confirm that you have all rights and permissions needed for User

@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
 import { supabase } from "@/lib/supabase";
 import "../../landing/landing.css";
 import {
@@ -166,8 +165,6 @@ export default function QuestionBankPage() {
 
   return (
     <div className="lp-root min-h-screen bg-[#f7faf8]">
-      <Navbar />
-
       {/* Early access banner */}
       <div className="flex items-center justify-center gap-2 bg-green-600 text-white text-center text-[13px] font-semibold px-5 py-2.5">
         <PartyPopper size={15} className="flex-shrink-0" />
