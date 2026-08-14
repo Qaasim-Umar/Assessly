@@ -161,7 +161,14 @@ export default function QuestionBankPage() {
     return Array.from(map.entries());
   }, [filtered]);
 
-  const totalDownloads = "12k+";
+  const totalFiles = useMemo(
+    () =>
+      packs.reduce(
+        (total, pack) => total + (pack.packType === "single" ? 1 : pack.packFiles.length),
+        0,
+      ),
+    [packs],
+  );
 
   return (
     <div className="lp-root min-h-screen bg-[#f7faf8]">
@@ -215,10 +222,10 @@ export default function QuestionBankPage() {
             </div>
             <div>
               <span className="block text-[28px] font-extrabold leading-none tracking-tight text-white">
-                {loadingPacks ? "—" : totalDownloads}
+                {loadingPacks ? "—" : totalFiles.toLocaleString()}
               </span>
               <span className="text-[11px] font-semibold uppercase tracking-wide text-white/30">
-                Downloads
+                PDF Files
               </span>
             </div>
             <div>

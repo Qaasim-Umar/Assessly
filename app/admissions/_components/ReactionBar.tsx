@@ -6,6 +6,7 @@ import { Flame, Lightbulb } from "lucide-react";
 
 type ReactionType = "fire" | "think";
 type ReactionTargetType = "gist" | "scholarship";
+type ReactionCounts = Record<ReactionType, number>;
 
 const REACTION_LABELS: Record<ReactionType, string> = {
   fire: "fire",
@@ -34,12 +35,23 @@ async function callReaction(
   targetType: ReactionTargetType,
   type: ReactionType,
   action: "increment" | "decrement",
-) {
-  await fetch("/api/reactions", {
+): Promise<ReactionCounts> {
+  const response = await fetch("/api/reactions", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ targetId, targetType, type, action }),
   });
+
+  const result = await response.json() as {
+    reactions?: ReactionCounts;
+    error?: string;
+  };
+
+  if (!response.ok || !result.reactions) {
+    throw new Error(result.error || "Unable to save reaction");
+  }
+
+  return result.reactions;
 }
 
 export default function ReactionBar({
@@ -57,6 +69,7 @@ export default function ReactionBar({
 }) {
   const [counts, setCounts] = useState({ ...initial });
   const [active, setActive] = useState<ReactionType | null>(null);
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     if (!targetId) return;
@@ -91,25 +104,56 @@ export default function ReactionBar({
   async function react(type: ReactionType, e: React.MouseEvent) {
     e.preventDefault();
     e.stopPropagation();
-    if (!targetId) return;
+    if (!targetId || saving) return;
     const storageKey = `reaction_${targetType}_${targetId}`;
+    const previousActive = active;
+    const previousCounts = { ...counts };
 
-    if (active === type) {
+    setSaving(true);
+
+    if (previousActive === type) {
       // Toggle off
       setCounts(p => ({ ...p, [type]: Math.max(0, p[type] - 1) }));
       setActive(null);
       localStorage.removeItem(storageKey);
-      callReaction(targetId, targetType, type, "decrement");
     } else {
       // Switch from previous reaction if any
-      if (active) {
-        setCounts(p => ({ ...p, [active]: Math.max(0, p[active] - 1) }));
-        callReaction(targetId, targetType, active, "decrement");
-      }
-      setCounts(p => ({ ...p, [type]: p[type] + 1 }));
+      setCounts(p => {
+        const next = { ...p };
+        if (previousActive) {
+          next[previousActive] = Math.max(0, next[previousActive] - 1);
+        }
+        next[type] += 1;
+        return next;
+      });
       setActive(type);
       localStorage.setItem(storageKey, type);
-      callReaction(targetId, targetType, type, "increment");
+    }
+
+    try {
+      let savedCounts: ReactionCounts;
+
+      if (previousActive === type) {
+        savedCounts = await callReaction(targetId, targetType, type, "decrement");
+      } else {
+        if (previousActive) {
+          await callReaction(targetId, targetType, previousActive, "decrement");
+        }
+        savedCounts = await callReaction(targetId, targetType, type, "increment");
+      }
+
+      setCounts(savedCounts);
+    } catch (error) {
+      console.error("Unable to save reaction", error);
+      setCounts(previousCounts);
+      setActive(previousActive);
+      if (previousActive) {
+        localStorage.setItem(storageKey, previousActive);
+      } else {
+        localStorage.removeItem(storageKey);
+      }
+    } finally {
+      setSaving(false);
     }
   }
 
@@ -135,10 +179,11 @@ export default function ReactionBar({
         <button
           key={type}
           type="button"
+          disabled={saving}
           onClick={(e) => react(type, e)}
           aria-pressed={active === type}
           aria-label={`${active === type ? "Remove" : "Add"} ${REACTION_LABELS[type]} reaction`}
-          className={`inline-flex min-h-11 min-w-11 items-center justify-center gap-1 text-sm font-bold rounded-full transition-[color,background-color,border-color] select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2
+          className={`inline-flex min-h-11 min-w-11 items-center justify-center gap-1 text-sm font-bold rounded-full transition-[color,background-color,border-color] select-none cursor-pointer disabled:cursor-wait disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2
             ${buttonTone}
             ${active === type ? ACTIVE[type] : ""}
           `}
