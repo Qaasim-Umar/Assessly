@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
 import ReactionBar from "../../_components/ReactionBar";
 import InlineMarkdown from "@/components/InlineMarkdown";
 import DeadlineListCard from "../../_components/DeadlineListCard";
@@ -153,8 +152,6 @@ export default async function CategoryArchivePage({
 
   return (
     <>
-      <Navbar />
-
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <div className="bg-[#0d1a0f] pt-14 px-6 pb-10 relative overflow-hidden">
         <div
