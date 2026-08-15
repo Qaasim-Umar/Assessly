@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { getExams, deleteExam, updateExamStatus, updateShowResults } from "@/lib/examService";
 import type { DbExam } from "@/lib/examService";
-import { getAdminProfile, signOut } from "@/lib/authService";
+import { getAdminProfile, needsAdminEmailMigration, signOut } from "@/lib/authService";
+import AdminEmailMigrationModal from "@/components/AdminEmailMigrationModal";
 
 const statusStyle: Record<string, string> = {
     Live: "bg-green-100 text-green-700 border border-green-300",
@@ -73,14 +74,18 @@ export default function DashboardPage() {
     const [deletingId, setDeletingId] = useState<string | null>(null);
     const [togglingId, setTogglingId] = useState<string | null>(null);
     const [togglingResultsId, setTogglingResultsId] = useState<string | null>(null);
+    const [showEmailMigration, setShowEmailMigration] = useState(false);
 
     useEffect(() => {
-        getAdminProfile().then((profile) => {
-            if (!profile) { router.replace("/dashboard/login"); return; }
-            setAdminName(profile.username);
-            setSchoolCode(profile.school_code);
-            fetchExams(profile.school_code);
-        });
+        getAdminProfile()
+            .then(async (profile) => {
+                if (!profile) { router.replace("/dashboard/login"); return; }
+                setAdminName(profile.username);
+                setSchoolCode(profile.school_code);
+                fetchExams(profile.school_code);
+                setShowEmailMigration(await needsAdminEmailMigration());
+            })
+            .catch(() => router.replace("/dashboard/login"));
     }, [router]);
 
     async function fetchExams(code?: string) {
@@ -164,6 +169,9 @@ export default function DashboardPage() {
 
     return (
         <div className="min-h-screen bg-[#f0f2f5]">
+            {showEmailMigration && (
+                <AdminEmailMigrationModal onClose={() => setShowEmailMigration(false)} />
+            )}
             {/* Header */}
             <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">

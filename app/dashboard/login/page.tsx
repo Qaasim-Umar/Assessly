@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { signUpAdmin, signInAdmin, getAdminProfile } from "@/lib/authService";
+import AdminForgotPasswordModal from "@/components/AdminForgotPasswordModal";
 
 type Tab = "login" | "signup";
 
@@ -11,23 +12,26 @@ export default function AdminLoginPage() {
     const router = useRouter();
     const [tab, setTab] = useState<Tab>("login");
     const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
     const [showPassword, setShowPassword] = useState(false);
+    const [showForgotPassword, setShowForgotPassword] = useState(false);
 
     useEffect(() => {
         getAdminProfile().then((p) => { if (p) router.replace("/dashboard"); });
     }, [router]);
 
-    const reset = () => { setUsername(""); setPassword(""); setConfirmPassword(""); setError(""); setSuccess(""); };
+    const reset = () => { setUsername(""); setEmail(""); setPassword(""); setConfirmPassword(""); setError(""); setSuccess(""); };
     const switchTab = (t: Tab) => { setTab(t); reset(); };
 
     const validate = () => {
         if (!username.trim() || username.trim().length < 3) return "Username must be at least 3 characters.";
         if (/\s/.test(username)) return "Username cannot contain spaces.";
+        if (tab === "signup" && !email.trim()) return "Enter your email address.";
         if (password.length < 6) return "Password must be at least 6 characters.";
         if (tab === "signup" && password !== confirmPassword) return "Passwords do not match.";
         return "";
@@ -40,9 +44,15 @@ export default function AdminLoginPage() {
         setError(""); setSuccess(""); setLoading(true);
         try {
             if (tab === "signup") {
-                await signUpAdmin(username.trim(), password);
-                setSuccess("Account created! Your school code will appear on the dashboard.");
-                router.push("/dashboard");
+                const result = await signUpAdmin(username.trim(), email.trim(), password);
+                if (result.requiresEmailConfirmation) {
+                    setSuccess("Check your email and confirm your address. You can then sign in with your email and password.");
+                    setPassword("");
+                    setConfirmPassword("");
+                } else {
+                    setSuccess("Account created! Your school code will appear on the dashboard.");
+                    router.push("/dashboard");
+                }
             } else {
                 await signInAdmin(username.trim(), password);
                 router.push("/dashboard");
@@ -58,6 +68,9 @@ export default function AdminLoginPage() {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-green-50 via-white to-green-100 px-4 py-10">
+            {showForgotPassword && (
+                <AdminForgotPasswordModal onClose={() => setShowForgotPassword(false)} />
+            )}
             <div className="w-full max-w-4xl mb-3 flex">
                 <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-gray-800 transition-colors group">
                     <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
@@ -150,22 +163,45 @@ export default function AdminLoginPage() {
 
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div className="space-y-1.5">
-                            <label className="block text-xs font-semibold text-gray-500">Username</label>
+                            <label className="block text-xs font-semibold text-gray-500">{tab === "login" ? "Email or username" : "Username"}</label>
                             <div className="relative">
                                 <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300">
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
                                 </span>
-                                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required placeholder="Admin username" className={inputCls} />
+                                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required placeholder={tab === "login" ? "Email or legacy username" : "Choose a username"} autoComplete="username" className={inputCls} />
                             </div>
                         </div>
 
+                        {tab === "signup" && (
+                            <div className="space-y-1.5">
+                                <label className="block text-xs font-semibold text-gray-500">Email address</label>
+                                <div className="relative">
+                                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300">
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M21.75 6.75v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                                    </span>
+                                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="you@example.com" autoComplete="email" className={inputCls} />
+                                </div>
+                            </div>
+                        )}
+
                         <div className="space-y-1.5">
-                            <label className="block text-xs font-semibold text-gray-500">Password</label>
+                            <div className="flex items-center justify-between">
+                                <label className="block text-xs font-semibold text-gray-500">Password</label>
+                                {tab === "login" && (
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowForgotPassword(true)}
+                                        className="text-[11px] font-semibold text-green-700 transition-colors hover:text-green-900 hover:underline"
+                                    >
+                                        Forgot password?
+                                    </button>
+                                )}
+                            </div>
                             <div className="relative">
                                 <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300">
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
                                 </span>
-                                <input type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} required placeholder={tab === "login" ? "Enter password" : "Create password (min 6 chars)"} className={`${inputCls} ${tab === "login" ? "pr-11" : ""}`} minLength={6} />
+                                <input type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} required placeholder={tab === "login" ? "Enter password" : "Create password (min 6 chars)"} autoComplete={tab === "login" ? "current-password" : "new-password"} className={`${inputCls} ${tab === "login" ? "pr-11" : ""}`} minLength={6} />
                                 {tab === "login" && (
                                     <button type="button" onClick={() => setShowPassword(v => !v)} tabIndex={-1} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-300 hover:text-gray-500 transition-colors">
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -186,7 +222,7 @@ export default function AdminLoginPage() {
                                     <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300">
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
                                     </span>
-                                    <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Re-enter password" required className={inputCls} />
+                                    <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Re-enter password" autoComplete="new-password" required className={inputCls} />
                                 </div>
                             </div>
                         )}
