@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import "./dashboard.css";
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard",
+  title: "Dashboard",
   description:
-    "Assessly admin dashboard — manage exams, questions, and results.",
+    "Create and manage Assessly exams as an individual creator or school.",
   robots: { index: false, follow: false },
 };
 

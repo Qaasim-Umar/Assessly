@@ -1,11 +1,21 @@
 import { supabase } from "./supabase";
 
 const LEGACY_ADMIN_EMAIL_SUFFIX = "@assessly.admin";
+const LEGACY_STUDENT_EMAIL_SUFFIX = "@assessly.student";
 
 export type AdminProfile = {
   id: string;
   username: string;
   school_code: string;
+};
+
+export type StudentProfile = {
+  id: string;
+  username: string;
+  display_name: string;
+  account_type: "individual_student" | "school_pupil";
+  school_id: string | null;
+  membership_id: string | null;
 };
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
@@ -22,6 +32,9 @@ function isEmail(value: string) {
 
 function isLegacyAdminEmail(email?: string | null) {
   return email?.toLowerCase().endsWith(LEGACY_ADMIN_EMAIL_SUFFIX) ?? false;
+}
+function isLegacyStudentEmail(email?: string | null) {
+  return email?.toLowerCase().endsWith(LEGACY_STUDENT_EMAIL_SUFFIX) ?? false;
 }
 function generateSchoolCode(): string {
   // 6 alphanumeric characters, uppercase (avoids O/0 confusion)
@@ -240,47 +253,61 @@ export async function updateAdminPassword(password: string): Promise<void> {
 
 export async function signUpStudent(
   displayName: string,
-  username: string,
+  email: string,
   password: string,
-): Promise<void> {
-  const uname = username.trim().toLowerCase();
-
-  const { data: existing } = await supabase
-    .from("student_profiles")
-    .select("id")
-    .eq("username", uname)
-    .maybeSingle();
-  if (existing) throw new Error("This phone number or username is already taken.");
+): Promise<{ requiresEmailConfirmation: boolean }> {
+  const cleanEmail = email.trim().toLowerCase();
+  const cleanDisplayName = displayName.trim();
+  if (!cleanEmail || !isEmail(cleanEmail)) {
+    throw new Error("Enter a valid email address.");
+  }
+  if (isLegacyStudentEmail(cleanEmail)) {
+    throw new Error("Enter a real email address that you can access.");
+  }
 
   const { data, error } = await supabase.auth.signUp({
-    email: toStudentEmail(uname),
+    email: cleanEmail,
     password,
+    options: {
+      data: {
+        account_type: "individual_student",
+        display_name: cleanDisplayName,
+        username: cleanEmail,
+      },
+    },
   });
-  if (error) throw new Error(error.message);
+  if (error) {
+    if (error.message.toLowerCase().includes("already")) {
+      throw new Error("That email is already connected to an account.");
+    }
+    throw new Error(error.message);
+  }
   const userId = data.user?.id;
   if (!userId) throw new Error("Account created but no user ID returned.");
 
-  const { error: profileErr } = await supabase
-    .from("student_profiles")
-    .insert({ id: userId, username: uname, display_name: displayName.trim() });
-  if (profileErr) throw new Error(profileErr.message);
+  // When email confirmation is disabled, the user already has a session and
+  // the RLS-protected profile can be created immediately. Otherwise it is
+  // completed after confirmation on the first successful sign-in.
+  if (data.session && data.user) await ensureIndividualStudentProfile(data.user);
+
+  return { requiresEmailConfirmation: !data.session };
 }
 
 export async function signInStudent(
-  username: string,
+  identifier: string,
   password: string,
 ): Promise<void> {
+  const cleanIdentifier = identifier.trim().toLowerCase();
+  const email = isEmail(cleanIdentifier)
+    ? cleanIdentifier
+    : toStudentEmail(cleanIdentifier);
   const { data, error } = await supabase.auth.signInWithPassword({
-    email: toStudentEmail(username.trim()),
+    email,
     password,
   });
-  if (error) throw new Error("Invalid phone number/username or password.");
+  if (error) throw new Error("Invalid email, phone number/username, or password.");
 
-  const { data: profile } = await supabase
-    .from("student_profiles")
-    .select("id")
-    .eq("id", data.user.id)
-    .single();
+  const profile = await ensureIndividualStudentProfile(data.user);
 
   if (!profile) {
     await supabase.auth.signOut();
@@ -288,19 +315,210 @@ export async function signInStudent(
   }
 }
 
-export async function getStudentProfile(): Promise<{
+type IndividualStudentProfileRow = {
   id: string;
   username: string;
   display_name: string;
-} | null> {
+};
+
+async function ensureIndividualStudentProfile(user: {
+  id: string;
+  email?: string | null;
+  app_metadata?: Record<string, unknown>;
+  user_metadata?: Record<string, unknown>;
+}): Promise<IndividualStudentProfileRow | null> {
+  const { data: existing, error: readError } = await supabase
+    .from("student_profiles")
+    .select("id, username, display_name")
+    .eq("id", user.id)
+    .maybeSingle();
+  if (readError) throw new Error(readError.message);
+  if (existing) return existing;
+
+  if (user.app_metadata?.account_type === "school_pupil") return null;
+
+  const metadata = user.user_metadata ?? {};
+  if (metadata.account_type !== "individual_student") return null;
+
+  const displayName =
+    typeof metadata.display_name === "string"
+      ? metadata.display_name.trim()
+      : "";
+  const username =
+    typeof metadata.username === "string"
+      ? metadata.username.trim().toLowerCase()
+      : user.email?.trim().toLowerCase() ?? "";
+  if (!displayName || !username) return null;
+
+  const { data: created, error: insertError } = await supabase
+    .from("student_profiles")
+    .insert({ id: user.id, username, display_name: displayName })
+    .select("id, username, display_name")
+    .single();
+  if (insertError) throw new Error(insertError.message);
+  return created;
+}
+
+export async function needsStudentEmailMigration(): Promise<boolean> {
+  const profile = await getStudentProfile();
+  if (!profile || profile.account_type !== "individual_student") return false;
+
+  const {
+    data: { user },
+    error,
+  } = await supabase.auth.getUser();
+  if (error || !user) return false;
+  return isLegacyStudentEmail(user.email);
+}
+
+export async function requestStudentEmailChange(email: string): Promise<void> {
+  const cleanEmail = email.trim().toLowerCase();
+  if (!cleanEmail || !isEmail(cleanEmail)) {
+    throw new Error("Enter a valid email address.");
+  }
+  if (isLegacyStudentEmail(cleanEmail)) {
+    throw new Error("Enter a real email address that you can access.");
+  }
+
+  const profile = await getStudentProfile();
+  if (!profile || profile.account_type !== "individual_student") {
+    throw new Error("No Individual student account found.");
+  }
+
+  const {
+    data: { user },
+    error: userError,
+  } = await supabase.auth.getUser();
+  if (userError || !user) throw new Error("Your session has expired. Sign in again.");
+  if (!isLegacyStudentEmail(user.email)) {
+    throw new Error("This account already has a real email address.");
+  }
+
+  const redirectTo =
+    typeof window === "undefined"
+      ? undefined
+      : `${window.location.origin}/student`;
+  const { error } = await supabase.auth.updateUser(
+    { email: cleanEmail },
+    redirectTo ? { emailRedirectTo: redirectTo } : undefined,
+  );
+  if (error) {
+    if (error.message.toLowerCase().includes("already")) {
+      throw new Error("That email is already connected to another account.");
+    }
+    throw new Error(error.message);
+  }
+}
+
+type SchoolPupilLoginResult = {
+  session?: {
+    accessToken?: string;
+    refreshToken?: string;
+  };
+  error?: string;
+};
+
+async function pupilLoginErrorMessage(error: unknown): Promise<string> {
+  const candidate = error as { message?: string; context?: unknown } | null;
+  if (candidate?.context instanceof Response) {
+    try {
+      const body = await candidate.context.clone().json() as { error?: unknown };
+      if (typeof body.error === "string" && body.error.trim()) return body.error;
+    } catch {
+      // Use the SDK error when the function did not return JSON.
+    }
+  }
+  return candidate?.message?.trim() || "Could not reach the pupil login service.";
+}
+
+export async function signInSchoolPupil(
+  schoolCode: string,
+  admissionNumber: string,
+  pin: string,
+): Promise<StudentProfile> {
+  const { data, error } = await supabase.functions.invoke<SchoolPupilLoginResult>(
+    "login-school-pupil",
+    {
+      body: {
+        schoolCode: schoolCode.trim().toUpperCase(),
+        admissionNumber: admissionNumber.trim().toUpperCase(),
+        pin,
+      },
+    },
+  );
+
+  if (error) throw new Error(await pupilLoginErrorMessage(error));
+  if (data?.error) throw new Error(data.error);
+
+  const accessToken = data?.session?.accessToken;
+  const refreshToken = data?.session?.refreshToken;
+  if (!accessToken || !refreshToken) {
+    throw new Error("The pupil login did not return a valid session. Try again.");
+  }
+
+  const { error: sessionError } = await supabase.auth.setSession({
+    access_token: accessToken,
+    refresh_token: refreshToken,
+  });
+  if (sessionError) throw new Error("The pupil session could not be started. Try again.");
+
+  const profile = await getStudentProfile();
+  if (!profile || profile.account_type !== "school_pupil") {
+    await supabase.auth.signOut();
+    throw new Error("No active School pupil account was found.");
+  }
+
+  return profile;
+}
+
+export async function getStudentProfile(): Promise<StudentProfile | null> {
   const session = await getSession();
   if (!session) return null;
-  const { data } = await supabase
+
+  const { data: storedIndividualProfile } = await supabase
     .from("student_profiles")
     .select("id, username, display_name")
     .eq("id", session.user.id)
-    .single();
-  return data ?? null;
+    .maybeSingle();
+
+  const individualProfile =
+    storedIndividualProfile
+    ?? await ensureIndividualStudentProfile(session.user);
+
+  if (individualProfile) {
+    return {
+      ...individualProfile,
+      account_type: "individual_student",
+      school_id: null,
+      membership_id: null,
+    };
+  }
+
+  if (session.user.app_metadata?.account_type !== "school_pupil") return null;
+
+  const { data: pupilMembership } = await supabase
+    .from("school_memberships")
+    .select("id, school_id, user_id, display_name, admission_number")
+    .eq("user_id", session.user.id)
+    .eq("role", "student")
+    .eq("status", "active")
+    .order("created_at", { ascending: true })
+    .limit(1)
+    .maybeSingle();
+
+  if (!pupilMembership) return null;
+
+  return {
+    id: pupilMembership.user_id,
+    username: pupilMembership.admission_number?.trim() || "pupil",
+    display_name:
+      pupilMembership.display_name?.trim()
+      || pupilMembership.admission_number?.trim()
+      || "School pupil",
+    account_type: "school_pupil",
+    school_id: pupilMembership.school_id,
+    membership_id: pupilMembership.id,
+  };
 }
 
 export async function studentSignOut(): Promise<void> {

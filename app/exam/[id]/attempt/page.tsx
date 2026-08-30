@@ -4,6 +4,10 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { useRouter, useParams, useSearchParams } from "next/navigation";
 import { getExamById, submitExamResult, type DbExamWithQuestions, type DbQuestion } from "@/lib/examService";
 import { getStudentProfile } from "@/lib/authService";
+import {
+    getSchoolAssessmentById,
+    submitSchoolAssessmentResult,
+} from "@/lib/schoolStudentAssessmentService";
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
 type QuestionStatus = "not-viewed" | "not-answered" | "answered" | "review";
@@ -293,9 +297,10 @@ export default function ExamAttemptPage() {
     const searchParams = useSearchParams();
     const examId = params.id as string;
     const isGeneral = searchParams.get("mode") === "general";
+    const isSchool = searchParams.get("mode") === "school";
 
     // ── sessionStorage key for this exam session ──
-    const storageKey = `exam_session_${examId}`;
+    const storageKey = `${isSchool ? "school_assessment" : "exam"}_session_${examId}`;
 
     const [examData, setExamData] = useState<DbExamWithQuestions | null>(null);
     const [loading, setLoading] = useState(true);
@@ -315,6 +320,7 @@ export default function ExamAttemptPage() {
     const [hasVisitedLast, setHasVisitedLast] = useState(false);
     const [studentName, setStudentName] = useState("Student");
     const [showNameModal, setShowNameModal] = useState(false);
+    const [submitError, setSubmitError] = useState("");
 
     // ── Persist state to sessionStorage whenever key values change ──
     const persistedRef = useRef(false); // only persist after initial load
@@ -340,10 +346,34 @@ export default function ExamAttemptPage() {
 
     useEffect(() => {
         let cancelled = false;
-        getExamById(examId)
+        let redirecting = false;
+        const request = isSchool
+            ? getStudentProfile().then((profile) => {
+                if (cancelled) return null;
+                if (!profile || profile.account_type !== "school_pupil") {
+                    redirecting = true;
+                    sessionStorage.removeItem(storageKey);
+                    const returnPath = `/exam/${examId}?mode=school`;
+                    router.replace(`/login?next=${encodeURIComponent(returnPath)}`);
+                    return null;
+                }
+                return getSchoolAssessmentById(examId);
+            })
+            : getExamById(examId);
+        request
             .then((data) => {
                 if (cancelled) return;
+                if (redirecting) {
+                    // The signed-out School path redirects above. Do not show a
+                    // misleading "Exam not found" message during navigation.
+                    return;
+                }
                 if (!data) { setNotFound(true); setLoading(false); return; }
+                if (isSchool && "submitted_at" in data && data.submitted_at) {
+                    sessionStorage.removeItem(storageKey);
+                    router.replace(`/exam/${examId}?mode=school`);
+                    return;
+                }
                 setExamData(data);
 
                 // ── Try to restore a saved session (skipped for general mode — always fresh) ──
@@ -351,7 +381,7 @@ export default function ExamAttemptPage() {
                 if (savedRaw) {
                     try {
                         const saved = JSON.parse(savedRaw);
-                        setTimeLeft(saved.timeLeft ?? (data.duration ?? 60) * 60);
+                        setTimeLeft(saved.timeLeft ?? (data.duration ? data.duration * 60 : -1));
                         setAnswers(saved.answers ?? {});
                         setTheoryAnswers(saved.theoryAnswers ?? {});
                         setStatuses(saved.statuses ?? (() => {
@@ -368,7 +398,7 @@ export default function ExamAttemptPage() {
                     } catch {
                         // Corrupted session, start fresh
                         sessionStorage.removeItem(storageKey);
-                        setTimeLeft((data.duration ?? 60) * 60);
+                        setTimeLeft(data.duration ? data.duration * 60 : -1);
                         const init: Record<number, QuestionStatus> = {};
                         data.questions.forEach((_, i) => { init[i] = "not-viewed"; });
                         if (data.questions.length > 0) init[0] = "not-answered";
@@ -377,7 +407,7 @@ export default function ExamAttemptPage() {
                 } else {
                     // No saved session (or general mode) — fresh start
                     if (isGeneral) sessionStorage.removeItem(storageKey);
-                    setTimeLeft((data.duration ?? 60) * 60);
+                    setTimeLeft(data.duration ? data.duration * 60 : -1);
                     const init: Record<number, QuestionStatus> = {};
                     data.questions.forEach((_, i) => { init[i] = "not-viewed"; });
                     if (data.questions.length > 0) init[0] = "not-answered";
@@ -391,23 +421,41 @@ export default function ExamAttemptPage() {
             })
             .catch(() => { if (!cancelled) { setNotFound(true); setLoading(false); } });
         return () => { cancelled = true; };
-    }, [examId, isGeneral, storageKey]);
+    }, [examId, isGeneral, isSchool, router, storageKey]);
 
     // Auto-submit on timer expiry
     const handleSubmit = useCallback(async () => {
         if (!examData || submittingRef.current) return;
         submittingRef.current = true;
         setShowSubmitModal(false);
-        // Clear the saved session on submit so it doesn't restore after exam is done
-        sessionStorage.removeItem(storageKey);
-        const res = await submitExamResult(examId, answers, examData.questions, theoryAnswers, studentName);
-        setResult(res);
-        setSubmitted(true);
-    }, [examId, answers, theoryAnswers, examData, studentName, storageKey]);
+        setSubmitError("");
+        try {
+            const res = isSchool
+                ? await submitSchoolAssessmentResult(examId, answers, theoryAnswers)
+                : await submitExamResult(examId, answers, examData.questions, theoryAnswers, studentName);
+            // Clear the saved session only after the server confirms submission.
+            sessionStorage.removeItem(storageKey);
+            if (res.correctAnswers) {
+                setExamData((current) => current ? {
+                    ...current,
+                    questions: current.questions.map((question, index) =>
+                        Object.prototype.hasOwnProperty.call(res.correctAnswers, String(index))
+                            ? { ...question, correct_answer: res.correctAnswers?.[String(index)] ?? null }
+                            : question
+                    ),
+                } : current);
+            }
+            setResult(res);
+            setSubmitted(true);
+        } catch (error: unknown) {
+            setSubmitError(error instanceof Error ? error.message : "Could not submit the assessment. Check your connection and try again.");
+            submittingRef.current = false;
+        }
+    }, [examId, answers, theoryAnswers, examData, isSchool, studentName, storageKey]);
 
     // Auto-submit on timer expiry, fire 30s warning once
     useEffect(() => {
-        if (loading || submitted || !examData) return;
+        if (loading || submitted || !examData || !examData.duration) return;
         const interval = setInterval(() => {
             setTimeLeft((t) => {
                 const next = t - 1;
@@ -424,7 +472,7 @@ export default function ExamAttemptPage() {
 
     const questions = examData?.questions ?? [];
     const totalQuestions = questions.length;
-    const timerIsUrgent = timeLeft <= 300;
+    const timerIsUrgent = timeLeft >= 0 && timeLeft <= 300;
 
     const goToQuestion = useCallback((index: number) => {
         setStatuses((prev) => {
@@ -528,10 +576,17 @@ export default function ExamAttemptPage() {
                         <svg className={`w-4 h-4 flex-shrink-0 ${timerIsUrgent ? "text-red-500" : "text-gray-500"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="9" strokeWidth="1.8" /><path strokeLinecap="round" strokeWidth="1.8" d="M12 7v5l3 3" />
                         </svg>
-                        {formatTime(timeLeft)}
+                        {examData.duration ? formatTime(timeLeft) : "No timer"}
                     </div>
                 </div>
             </header>
+
+            {submitError && (
+                <div className="mx-auto mt-4 flex w-[calc(100%-2rem)] max-w-4xl items-start justify-between gap-3 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 shadow-sm" role="alert">
+                    <p><strong>Submission failed.</strong> {submitError} Your answers are still saved on this device.</p>
+                    <button type="button" onClick={() => setSubmitError("")} className="min-h-11 shrink-0 rounded-lg px-3 text-xs font-bold text-red-700 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-500">Dismiss</button>
+                </div>
+            )}
 
             {/* ── Body ── */}
             <div className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-5 flex gap-5 items-start">

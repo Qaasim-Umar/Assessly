@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { signUpAdmin, signInAdmin, getAdminProfile } from "@/lib/authService";
 import AdminForgotPasswordModal from "@/components/AdminForgotPasswordModal";
+import LoginMaintenanceGate from "@/components/LoginMaintenanceGate";
 
 type Tab = "login" | "signup";
 
@@ -67,6 +68,7 @@ export default function AdminLoginPage() {
     const inputCls = "w-full pl-10 pr-4 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 bg-white placeholder:text-gray-400 text-gray-900 transition-all";
 
     return (
+        <LoginMaintenanceGate portalLabel="School admin sign-in">
         <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-green-50 via-white to-green-100 px-4 py-10">
             {showForgotPassword && (
                 <AdminForgotPasswordModal onClose={() => setShowForgotPassword(false)} />
@@ -244,5 +246,6 @@ export default function AdminLoginPage() {
             </div>
             </div>
         </div>
+        </LoginMaintenanceGate>
     );
 }

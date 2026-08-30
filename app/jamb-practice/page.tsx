@@ -124,7 +124,7 @@ export default function JambPracticePage() {
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <Link
-              href="/general/dashboard/mock/jamb"
+              href="/practice/mock/jamb"
               className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-bold text-[#0d1a0f] hover:opacity-90 transition-opacity"
             >
               Start JAMB Simulator

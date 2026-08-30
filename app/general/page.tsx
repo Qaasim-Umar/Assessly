@@ -7,11 +7,11 @@ import StudentNav from "@/components/StudentNav";
 type ModeId = "practice" | "mock" | "survival" | "past-questions" | "study";
 
 const ROUTES: Record<ModeId, string> = {
-  practice: "/general/dashboard/practice",
-  mock: "/general/dashboard/mock/jamb",
-  survival: "/general/dashboard/survival",
-  study: "/general/dashboard/study",
-  "past-questions": "/general/dashboard/past-questions",
+  practice: "/practice",
+  mock: "/practice/mock/jamb",
+  survival: "/practice/survival",
+  study: "/practice/study",
+  "past-questions": "/practice/past-questions",
 };
 
 interface ModeCard {

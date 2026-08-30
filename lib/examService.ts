@@ -24,6 +24,8 @@ export interface DbQuestion {
   exam_id: string;
   text: string;
   image_url?: string | null;
+  instruction?: string | null;
+  passage?: string | null;
   type: string;
   topic: string | null;
   command_word: string | null;
@@ -275,6 +277,7 @@ export async function submitExamResult(
   total: number;
   percentage: number;
   hasTheory: boolean;
+  correctAnswers?: Record<string, number | null>;
 }> {
   const { data: sessionData } = await supabase.auth.getSession();
   const accessToken = sessionData?.session?.access_token;

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import GistMarkdown from "@/components/GistMarkdown";
 import ShareBar from "@/components/ShareBar";
 import ArticleByline from "@/components/ArticleByline";
@@ -69,6 +70,8 @@ export default async function CutoffPage({ params }: { params: Promise<{ slug: s
 
   return (
     <>
+      <Navbar />
+
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <div className="bg-[#0d1a0f] pt-14 px-6 pb-12 relative overflow-hidden">
         <div

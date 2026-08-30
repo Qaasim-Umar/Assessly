@@ -2,196 +2,271 @@
 
 export const dynamic = "force-dynamic";
 
-import { useState, useEffect, Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { signInStudent, getStudentProfile } from "@/lib/authService";
+import {
+    ArrowLeft,
+    Check,
+    Eye,
+    EyeOff,
+    GraduationCap,
+    LoaderCircle,
+    LockKeyhole,
+    School,
+    UserRound,
+} from "lucide-react";
+import {
+    getStudentProfile,
+    signInSchoolPupil,
+    signInStudent,
+    studentSignOut,
+} from "@/lib/authService";
 import { supabase } from "@/lib/supabase";
+import LoginMaintenanceGate from "@/components/LoginMaintenanceGate";
+
+const inputClass = "min-h-12 w-full rounded-xl border border-gray-200 bg-white py-2.5 pl-11 pr-4 text-base text-gray-900 outline-none transition-colors placeholder:text-gray-400 focus:border-green-600 focus:ring-2 focus:ring-green-500/20 sm:text-sm";
 
 function LoginForm() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const justCreated = searchParams.get("created") === "1";
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const requestedNext = searchParams.get("next");
+    const nextPath = requestedNext?.startsWith("/") && !requestedNext.startsWith("//")
+        ? requestedNext
+        : "/student";
     const [schoolCode, setSchoolCode] = useState("");
+    const [identifier, setIdentifier] = useState("");
+    const [secret, setSecret] = useState("");
+    const [showSecret, setShowSecret] = useState(false);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        getStudentProfile().then(p => { if (p) router.replace("/student"); });
+        getStudentProfile()
+            .then((profile) => {
+                if (profile) router.replace("/student");
+            })
+            .catch(() => {
+                // Keep the form available when an old session cannot be resolved.
+            });
     }, [router]);
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!username.trim()) { setError("Enter your phone number or username."); return; }
-        if (!password) { setError("Enter your password."); return; }
-        if (!schoolCode.trim()) { setError("Enter your school code."); return; }
+    const handleSubmit = async (event: React.FormEvent) => {
+        event.preventDefault();
+        const code = schoolCode.trim().toUpperCase();
+        const cleanIdentifier = identifier.trim();
+
+        if (!code) {
+            setError("Enter the School Code given to you by your teacher.");
+            return;
+        }
+        if (!/^[A-Z0-9]{6,12}$/.test(code)) {
+            setError("Enter a valid School Code using 6 to 12 letters or numbers.");
+            return;
+        }
+        if (!cleanIdentifier) {
+            setError("Enter your Pupil ID, email, phone number, or username.");
+            return;
+        }
+        if (!secret) {
+            setError("Enter your PIN or password.");
+            return;
+        }
+
         setError("");
         setLoading(true);
-        try {
-            await signInStudent(username.trim(), password);
 
-            const code = schoolCode.trim().toUpperCase();
-            const { data: adminRow } = await supabase
-                .from("admin_profiles")
-                .select("school_code")
-                .eq("school_code", code)
-                .single();
-            if (!adminRow) {
-                await import("@/lib/authService").then(m => m.studentSignOut());
-                setError("Invalid school code. Ask your teacher.");
-                setLoading(false);
-                return;
+        try {
+            // Existing Individual school codes contain 6 characters; new School
+            // pupil codes contain 8. The School Code therefore selects the right
+            // sign-in route without asking the student to choose an account type.
+            const isIndividualCode = code.length === 6;
+
+            if (isIndividualCode) {
+                await signInStudent(cleanIdentifier, secret);
+
+                const { data: adminRow } = await supabase
+                    .from("admin_profiles")
+                    .select("school_code")
+                    .eq("school_code", code)
+                    .maybeSingle();
+
+                if (!adminRow) {
+                    await studentSignOut();
+                    throw new Error("Invalid school code. Ask your teacher.");
+                }
+            } else {
+                await signInSchoolPupil(code, cleanIdentifier, secret);
             }
 
             localStorage.setItem("last_school_code", code);
-            router.push("/student");
-        } catch (e: unknown) {
-            setError(e instanceof Error ? e.message : "Something went wrong.");
+            router.push(nextPath);
+        } catch (caughtError: unknown) {
+            setError(caughtError instanceof Error ? caughtError.message : "Could not sign in. Try again.");
         } finally {
             setLoading(false);
         }
     };
 
-    const inputCls = "w-full pl-10 pr-4 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 bg-white placeholder:text-gray-400 text-gray-900 transition-all";
-
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-green-50 via-white to-green-100 px-4 py-10">
-            <div className="w-full max-w-4xl mb-3 flex">
-                <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-gray-800 transition-colors group">
-                    <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
+        <div className="flex min-h-dvh flex-col items-center justify-center bg-gradient-to-br from-green-50 via-white to-green-100 px-4 py-8 sm:py-10">
+            <div className="mb-3 flex w-full max-w-4xl">
+                <Link href="/" className="group inline-flex min-h-11 items-center gap-1.5 rounded-lg px-1 text-xs font-semibold text-gray-600 transition-colors hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-600">
+                    <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-0.5" aria-hidden="true" />
                     Back to home
                 </Link>
             </div>
-            <div className="w-full max-w-4xl flex rounded-3xl shadow-2xl shadow-green-900/15 overflow-hidden ring-1 ring-black/5">
 
-                {/* ── Left branding panel ── */}
-                <div className="hidden lg:flex lg:w-[45%] bg-green-800 relative overflow-hidden flex-col items-center justify-center min-h-[580px]">
-                    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 500 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <div className="flex w-full max-w-4xl overflow-hidden rounded-3xl shadow-2xl shadow-green-900/15 ring-1 ring-black/5">
+                <div className="relative hidden min-h-[610px] overflow-hidden bg-green-800 lg:flex lg:w-[45%] lg:flex-col lg:items-center lg:justify-center">
+                    <svg className="absolute inset-0 h-full w-full" viewBox="0 0 500 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
                         <path d="M-60,180 C20,80 160,20 280,60 C400,100 480,220 460,360 C440,500 320,580 200,560 C80,540 -140,440 -60,180Z" fill="rgba(255,255,255,0.07)" />
                         <path d="M200,500 C320,460 480,520 520,640 C560,760 440,820 300,800 C160,780 60,700 80,600 C100,500 80,540 200,500Z" fill="rgba(255,255,255,0.05)" />
                         <path d="M340,20 C440,-20 560,60 580,180 C600,300 520,380 420,360 C320,340 260,240 300,140 C320,80 240,60 340,20Z" fill="rgba(255,255,255,0.06)" />
                     </svg>
-                    <div className="relative z-10 flex flex-col items-center text-center px-12">
-                        <div className="w-16 h-16 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mb-5 shadow-xl">
-                            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
-                            </svg>
+
+                    <div className="relative z-10 flex flex-col items-center px-12 text-center">
+                        <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/20 bg-white/15 shadow-xl">
+                            <GraduationCap size={32} className="text-white" aria-hidden="true" />
                         </div>
-                        <span className="text-white/60 text-xs font-semibold uppercase tracking-widest mb-3">Assessly</span>
-                        <h2 className="text-3xl font-bold text-white leading-tight mb-3">Welcome Back!</h2>
-                        <p className="text-green-200/70 text-sm leading-relaxed max-w-[260px]">
-                            Sign in to access timed CBT exams and see your results instantly.
+                        <span className="mb-3 text-xs font-semibold uppercase tracking-widest text-white/70">Assessly</span>
+                        <h2 className="mb-3 text-3xl font-bold leading-tight text-white">One form for every student</h2>
+                        <p className="max-w-[270px] text-sm leading-relaxed text-green-100/80">
+                            Enter the details your school gave you. Assessly will securely recognize the correct student account.
                         </p>
-                        <div className="mt-10 flex flex-col gap-3 w-full max-w-[260px]">
-                            {["Timed CBT exam conditions", "Instant results after submission", "WAEC, JAMB & NECO practice"].map((text) => (
-                                <div key={text} className="flex items-center gap-2.5">
-                                    <div className="w-4 h-4 rounded-full bg-green-400/25 border border-green-300/30 flex items-center justify-center flex-shrink-0">
-                                        <svg className="w-2 h-2 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3.5" d="M5 13l4 4L19 7" /></svg>
-                                    </div>
-                                    <span className="text-sm text-green-100/80 text-left">{text}</span>
+                        <div className="mt-10 flex w-full max-w-[270px] flex-col gap-3">
+                            {["School pupils and Individual students", "No account-type switch required", "Secure School Code access"].map((text) => (
+                                <div key={text} className="flex items-center gap-2.5 text-left">
+                                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-green-300/40 bg-green-400/25">
+                                        <Check size={11} className="text-green-200" strokeWidth={3} aria-hidden="true" />
+                                    </span>
+                                    <span className="text-sm text-green-50/85">{text}</span>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 bg-black/20 px-8 py-4 flex justify-around">
-                        {[{ val: "85k+", label: "Students" }, { val: "500+", label: "Schools" }, { val: "12k+", label: "Exams" }].map(({ val, label }) => (
-                            <div key={label} className="text-center">
-                                <div className="text-base font-bold text-white">{val}</div>
-                                <div className="text-[10px] text-green-300/70 uppercase tracking-wide">{label}</div>
-                            </div>
-                        ))}
+
+                    <div className="absolute inset-x-0 bottom-0 bg-black/20 px-8 py-4 text-center text-xs font-semibold tracking-wide text-green-100/80">
+                        School Code · Student details · PIN or password
                     </div>
                 </div>
 
-                {/* ── Right form panel ── */}
-                <div className="flex-1 flex items-center justify-center bg-white px-8 py-10">
-                    <div className="w-full max-w-[360px]">
-                        <div className="flex items-center gap-2 mb-8 lg:hidden">
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
-                                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" /></svg>
-                            </div>
+                <div className="flex flex-1 items-center justify-center bg-white px-5 py-8 sm:px-8 sm:py-10">
+                    <div className="w-full max-w-[380px]">
+                        <div className="mb-7 flex items-center gap-2 lg:hidden">
+                            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-green-700">
+                                <GraduationCap size={19} className="text-white" aria-hidden="true" />
+                            </span>
                             <span className="text-sm font-bold text-gray-900">Assessly</span>
                         </div>
 
-                        <div className="mb-8">
-                            <h1 className="text-2xl font-bold text-gray-900">Student Sign In</h1>
-                            <p className="text-sm text-gray-400 mt-1.5">Enter your details to access your school&apos;s exams</p>
+                        <div className="mb-6">
+                            <h1 className="text-2xl font-bold text-gray-950">Take your CBT</h1>
+                            <p className="mt-1.5 text-sm leading-5 text-gray-500">
+                                Enter your school details below. We’ll recognize your account automatically.
+                            </p>
                         </div>
 
                         {justCreated && (
-                            <div className="flex items-start gap-2.5 bg-green-50 border border-green-200 text-green-700 text-xs px-4 py-3 rounded-xl mb-5">
-                                <svg className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                            <div className="mb-5 flex items-start gap-2.5 rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-xs text-green-800" role="status">
+                                <Check size={15} className="mt-0.5 shrink-0" aria-hidden="true" />
                                 <span>Account created — sign in to get started.</span>
                             </div>
                         )}
 
                         {error && (
-                            <div className="flex items-start gap-2.5 bg-red-50 border border-red-100 text-red-700 text-xs px-4 py-3 rounded-xl mb-5">
-                                <svg className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                                </svg>
-                                <span>{error}</span>
+                            <div className="mb-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-5 text-red-800" role="alert">
+                                {error}
                             </div>
                         )}
 
-                        <form onSubmit={handleSubmit} className="space-y-4">
-                            {/* Username */}
+                        <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                             <div className="space-y-1.5">
-                                <label className="block text-xs font-semibold text-gray-500">Phone number or username</label>
+                                <label htmlFor="school-code" className="block text-xs font-bold text-gray-700">School Code</label>
                                 <div className="relative">
-                                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
-                                    </span>
-                                    <input type="text" value={username} onChange={e => setUsername(e.target.value)}
-                                        placeholder="e.g. 08012345678" required className={inputCls} autoComplete="username" />
+                                    <School size={17} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
+                                    <input
+                                        id="school-code"
+                                        type="text"
+                                        value={schoolCode}
+                                        onChange={(event) => setSchoolCode(event.target.value.replace(/[^a-z0-9]/gi, "").toUpperCase().slice(0, 12))}
+                                        placeholder="e.g. KF9X2P"
+                                        required
+                                        minLength={6}
+                                        maxLength={12}
+                                        autoCapitalize="characters"
+                                        autoComplete="organization"
+                                        spellCheck={false}
+                                        className={`${inputClass} font-mono tracking-[0.15em] uppercase`}
+                                    />
+                                </div>
+                                <p className="text-[11px] leading-4 text-gray-500">Ask your teacher if you do not have this code.</p>
+                            </div>
+
+                            <div className="space-y-1.5">
+                                <label htmlFor="student-identifier" className="block text-xs font-bold text-gray-700">Pupil ID, email, phone number, or username</label>
+                                <div className="relative">
+                                    <UserRound size={17} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
+                                    <input
+                                        id="student-identifier"
+                                        type="text"
+                                        value={identifier}
+                                        onChange={(event) => setIdentifier(event.target.value.slice(0, 80))}
+                                        placeholder="Pupil ID, email, or legacy username"
+                                        required
+                                        maxLength={80}
+                                        autoCapitalize="none"
+                                        autoComplete="username"
+                                        spellCheck={false}
+                                        className={inputClass}
+                                    />
                                 </div>
                             </div>
 
-                            {/* Password */}
                             <div className="space-y-1.5">
-                                <label className="block text-xs font-semibold text-gray-500">Password</label>
+                                <label htmlFor="student-secret" className="block text-xs font-bold text-gray-700">PIN or password</label>
                                 <div className="relative">
-                                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
-                                    </span>
-                                    <input type="password" value={password} onChange={e => setPassword(e.target.value)}
-                                        placeholder="Your password" required className={inputCls} autoComplete="current-password" />
+                                    <LockKeyhole size={17} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
+                                    <input
+                                        id="student-secret"
+                                        type={showSecret ? "text" : "password"}
+                                        value={secret}
+                                        onChange={(event) => setSecret(event.target.value)}
+                                        placeholder="Enter your PIN or password"
+                                        required
+                                        autoComplete="current-password"
+                                        className={`${inputClass} pr-12`}
+                                    />
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowSecret((current) => !current)}
+                                        className="absolute right-1.5 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-lg text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-600"
+                                        aria-label={showSecret ? "Hide PIN or password" : "Show PIN or password"}
+                                    >
+                                        {showSecret ? <EyeOff size={17} aria-hidden="true" /> : <Eye size={17} aria-hidden="true" />}
+                                    </button>
                                 </div>
+                                <p className="text-[11px] leading-4 text-gray-500">School pupils use the six-digit PIN given by their teacher.</p>
                             </div>
 
-                            {/* School Code */}
-                            <div className="space-y-1.5">
-                                <label className="block text-xs font-semibold text-gray-500">School Code</label>
-                                <div className="relative">
-                                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-                                    </span>
-                                    <input type="text" value={schoolCode}
-                                        onChange={e => setSchoolCode(e.target.value.toUpperCase())}
-                                        placeholder="e.g. KF9X2P" required maxLength={8}
-                                        className={`${inputCls} font-mono tracking-widest uppercase`} />
-                                </div>
-                                <p className="text-[11px] text-gray-400">Ask your teacher for the school code.</p>
-                            </div>
-
-                            <button type="submit" disabled={loading}
-                                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm py-3 rounded-xl shadow-md shadow-green-600/20 transition-all mt-2">
-                                {loading
-                                    ? <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg> Signing in…</>
-                                    : "Sign In"
-                                }
+                            <button
+                                type="submit"
+                                disabled={loading}
+                                className="mt-2 flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-green-600 to-green-700 px-5 text-sm font-bold text-white shadow-md shadow-green-600/20 transition-colors hover:from-green-700 hover:to-green-800 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60"
+                            >
+                                {loading && <LoaderCircle size={17} className="animate-spin" aria-hidden="true" />}
+                                {loading ? "Signing in…" : "Sign in to take CBT"}
                             </button>
                         </form>
 
-                        <p className="text-center text-xs text-gray-400 mt-5">
-                            New student?{" "}
-                            <a href="/student/signup" className="text-green-700 hover:underline font-semibold">Create an account →</a>
+                        <p className="mt-5 text-center text-xs leading-5 text-gray-500">
+                            Missing your school details? Ask your teacher. New Individual student?{" "}
+                            <Link href="/student/signup" className="font-semibold text-green-700 hover:underline">Create an account</Link>
                         </p>
-                        <p className="text-center text-xs text-gray-400 mt-2">
-                            Teacher?{" "}
-                            <a href="/dashboard/login" className="text-green-700 hover:underline font-semibold">Admin Dashboard →</a>
+                        <p className="mt-2 text-center text-xs text-gray-500">
+                            Teacher or administrator?{" "}
+                            <Link href="/dashboard/login" className="font-semibold text-green-700 hover:underline">Open Admin Dashboard</Link>
                         </p>
                     </div>
                 </div>
@@ -203,7 +278,9 @@ function LoginForm() {
 export default function StudentLoginPage() {
     return (
         <Suspense>
-            <LoginForm />
+            <LoginMaintenanceGate portalLabel="Student sign-in">
+                <LoginForm />
+            </LoginMaintenanceGate>
         </Suspense>
     );
 }

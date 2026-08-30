@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import { getGeneralAdminSession } from "@/lib/generalAdminAuth";
+import GeneralAdminSectionNav from "@/components/GeneralAdminSectionNav";
 
 type Tab = "gists" | "scholarships" | "deadlines" | "cutoffs" | "nysc" | "packs";
 
@@ -201,6 +202,9 @@ export default function AdmissionsAdminPage() {
             </header>
 
             <main className="max-w-7xl mx-auto px-4 sm:px-6 py-7">
+                <div className="mb-6">
+                    <GeneralAdminSectionNav active="admissions" />
+                </div>
                 <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
                     <div>
                         <h1 className="text-xl font-bold text-gray-900">Admissions Hub Content</h1>

@@ -124,7 +124,7 @@ export default function PostUtmePracticePage() {
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <Link
-              href="/general/dashboard/practice"
+              href="/practice"
               className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-bold text-[#0d1a0f] hover:opacity-90 transition-opacity"
             >
               Start Post-UTME Practice
