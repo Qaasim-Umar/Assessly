@@ -199,7 +199,7 @@ export async function requestAdminEmailChange(email: string): Promise<void> {
   const redirectTo =
     typeof window === "undefined"
       ? undefined
-      : `${window.location.origin}/dashboard`;
+      : `${window.location.origin}/auth/email-verified?account=admin`;
   const { error } = await supabase.auth.updateUser(
     { email: cleanEmail },
     redirectTo ? { emailRedirectTo: redirectTo } : undefined,
@@ -397,7 +397,7 @@ export async function requestStudentEmailChange(email: string): Promise<void> {
   const redirectTo =
     typeof window === "undefined"
       ? undefined
-      : `${window.location.origin}/student`;
+      : `${window.location.origin}/auth/email-verified?account=student`;
   const { error } = await supabase.auth.updateUser(
     { email: cleanEmail },
     redirectTo ? { emailRedirectTo: redirectTo } : undefined,
