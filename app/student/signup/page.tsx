@@ -1,29 +1,29 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { signUpStudent } from "@/lib/authService";
 
 export default function StudentSignupPage() {
-    const router = useRouter();
     const [displayName, setDisplayName] = useState("");
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirm, setConfirm] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [requiresEmailConfirmation, setRequiresEmailConfirmation] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!displayName.trim() || displayName.trim().length < 2) { setError("Enter your full name."); return; }
-        if (!username.trim() || username.trim().length < 3) { setError("Phone number or username must be at least 3 characters."); return; }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) { setError("Enter a valid email address."); return; }
         if (password.length < 6) { setError("Password must be at least 6 characters."); return; }
         if (password !== confirm) { setError("Passwords do not match."); return; }
         setError("");
         setLoading(true);
         try {
-            await signUpStudent(displayName.trim(), username.trim(), password);
+            const result = await signUpStudent(displayName.trim(), email.trim(), password);
+            setRequiresEmailConfirmation(result.requiresEmailConfirmation);
             setSuccess(true);
         } catch (e: unknown) {
             setError(e instanceof Error ? e.message : "Something went wrong.");
@@ -45,10 +45,14 @@ export default function StudentSignupPage() {
                     </div>
                     <h1 className="text-2xl font-bold text-gray-900 mb-2">Account Created!</h1>
                     <p className="text-gray-500 text-sm leading-relaxed mb-2">
-                        Your account has been set up successfully.
+                        {requiresEmailConfirmation
+                            ? "Check your inbox and confirm your email address."
+                            : "Your account has been set up successfully."}
                     </p>
                     <p className="text-gray-500 text-sm leading-relaxed mb-8">
-                        Go to the login page, enter your username, password, and your <strong className="text-gray-700">school code</strong> (ask your teacher if you don&apos;t have it).
+                        {requiresEmailConfirmation
+                            ? "After confirming, sign in with your email, password, and School Code."
+                            : <>Go to the login page and enter your email, password, and <strong className="text-gray-700">School Code</strong>.</>}
                     </p>
                     <a
                         href="/login"
@@ -87,7 +91,7 @@ export default function StudentSignupPage() {
                         <span className="text-white/60 text-xs font-semibold uppercase tracking-widest mb-3">Assessly</span>
                         <h2 className="text-3xl font-bold text-white leading-tight mb-3">Create Your Account</h2>
                         <p className="text-green-200/70 text-sm leading-relaxed max-w-[260px]">
-                            One account for all your school exams. Use your phone number as your username — you&apos;ll never forget it.
+                            One Individual student account for your school exams, protected by an email address you can access.
                         </p>
                         <div className="mt-10 flex flex-col gap-3 w-full max-w-[260px]">
                             {["Works with any school's code", "Your name shows on results", "Access exams anytime"].map((text) => (
@@ -148,17 +152,17 @@ export default function StudentSignupPage() {
                                 <p className="text-[11px] text-gray-400">This is what shows on your exam results.</p>
                             </div>
 
-                            {/* Username */}
+                            {/* Email */}
                             <div className="space-y-1.5">
-                                <label className="block text-xs font-semibold text-gray-500">Phone number or username</label>
+                                <label htmlFor="student-signup-email" className="block text-xs font-semibold text-gray-500">Email address</label>
                                 <div className="relative">
                                     <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300">
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 8.25h3" /></svg>
                                     </span>
-                                    <input type="text" value={username} onChange={e => setUsername(e.target.value)}
-                                        placeholder="e.g. 08012345678" required className={inputCls} autoComplete="username" />
+                                    <input id="student-signup-email" type="email" value={email} onChange={e => setEmail(e.target.value)}
+                                        placeholder="you@example.com" required className={inputCls} autoComplete="email" />
                                 </div>
-                                <p className="text-[11px] text-gray-400">You&apos;ll use this to log in. Must be unique.</p>
+                                <p className="text-[11px] text-gray-400">You&apos;ll use this email to sign in and recover your account.</p>
                             </div>
 
                             {/* Password */}

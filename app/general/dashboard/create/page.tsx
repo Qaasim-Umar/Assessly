@@ -7,6 +7,7 @@ import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import { uploadGeneralQuestionImage } from "@/lib/questionAssets";
 import { getGeneralAdminSession } from "@/lib/generalAdminAuth";
+import GeneralAdminSectionNav from "@/components/GeneralAdminSectionNav";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type ImportMode = "json" | "manual";
@@ -510,8 +511,11 @@ export default function QuestionBankPage() {
 
     if (savedCount !== null) {
         return (
-            <div className="min-h-screen bg-[#f0f2f5] flex items-center justify-center p-6">
-                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-10 max-w-md w-full text-center space-y-4">
+            <div className="min-h-screen bg-[#f0f2f5] p-4 sm:p-6">
+                <div className="mx-auto max-w-5xl">
+                    <GeneralAdminSectionNav active="questions" />
+                </div>
+                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-10 max-w-md mx-auto mt-8 text-center space-y-4">
                     <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto">
                         <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
@@ -556,6 +560,9 @@ export default function QuestionBankPage() {
             </header>
 
             <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+                <div className="mb-8">
+                    <GeneralAdminSectionNav active="questions" />
+                </div>
 
                 {step === 1 && (
                     <div className="flex items-center gap-1 mb-8 bg-gray-100 rounded-xl p-1 w-fit">

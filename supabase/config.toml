@@ -221,7 +221,7 @@ web3 = 30
 enable_signup = true
 # If enabled, a user will be required to confirm any email change on both the old, and new email
 # addresses. If disabled, only the new email is required to confirm.
-double_confirm_changes = true
+double_confirm_changes = false
 # If enabled, users need to confirm their email address before signing in.
 enable_confirmations = false
 # If enabled, users will need to reauthenticate or have logged in recently to change their password.
@@ -423,3 +423,21 @@ entrypoint = "./functions/submit-exam/index.ts"
 # Specifies static files to be bundled with the function. Supports glob patterns.
 # For example, if you want to serve static HTML pages in your function:
 # static_files = [ "./functions/submit-exam/*.html" ]
+
+[functions.manage-school-pupil]
+enabled = true
+verify_jwt = true
+import_map = "./functions/manage-school-pupil/deno.json"
+entrypoint = "./functions/manage-school-pupil/index.ts"
+
+[functions.login-school-pupil]
+enabled = true
+verify_jwt = false
+import_map = "./functions/login-school-pupil/deno.json"
+entrypoint = "./functions/login-school-pupil/index.ts"
+
+[functions.general-admin-cbt-analytics]
+enabled = true
+verify_jwt = true
+import_map = "./functions/general-admin-cbt-analytics/deno.json"
+entrypoint = "./functions/general-admin-cbt-analytics/index.ts"

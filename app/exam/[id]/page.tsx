@@ -3,20 +3,23 @@
 import { useState, useEffect } from "react";
 import { useRouter, useParams, useSearchParams } from "next/navigation";
 import { getExamById, type DbExamWithQuestions } from "@/lib/examService";
+import { getStudentProfile } from "@/lib/authService";
+import {
+    getSchoolAssessmentById,
+    type SchoolPupilAssessmentWithQuestions,
+} from "@/lib/schoolStudentAssessmentService";
 
-const BASE_EXAM_RULES = [
-    "The countdown timer begins immediately after you click Start Exam.",
-    "The exam will be auto-submitted when the timer reaches zero.",
+const COMMON_EXAM_RULES = [
     "Do not refresh or close the browser tab during the exam.",
-    "All questions must be attempted before submission.",
+    "Review every question before you submit.",
     "Switching browser tabs may flag your session.",
-    "Each question has only one correct answer.",
+    "Choose one answer for each multiple-choice question.",
 ];
 
 const SINGLE_ATTEMPT_RULE = "You are not allowed to retake this exam once submitted.";
 
 function formatDuration(minutes: number | null): string {
-    if (!minutes) return "N/A";
+    if (!minutes) return "No timer";
     const h = Math.floor(minutes / 60);
     const m = minutes % 60;
     if (h > 0 && m > 0) return `${h}h ${m}m`;
@@ -64,27 +67,51 @@ export default function ExamInfoPage() {
     const searchParams = useSearchParams();
     const examId = params.id as string;
     const isGeneral = searchParams.get("mode") === "general";
+    const isSchool = searchParams.get("mode") === "school";
     const backHref = isGeneral ? "/general" : "/student";
-    const examRules = isGeneral ? BASE_EXAM_RULES : [BASE_EXAM_RULES[0], BASE_EXAM_RULES[1], SINGLE_ATTEMPT_RULE, ...BASE_EXAM_RULES.slice(2)];
 
-    const [exam, setExam] = useState<DbExamWithQuestions | null>(null);
+    const [exam, setExam] = useState<DbExamWithQuestions | SchoolPupilAssessmentWithQuestions | null>(null);
+    const [submittedAt, setSubmittedAt] = useState<string | null>(null);
     const [loading, setLoading] = useState(true);
     const [notFound, setNotFound] = useState(false);
 
     useEffect(() => {
         let cancelled = false;
-        getExamById(examId)
+        let redirecting = false;
+        const request = isSchool
+            ? getStudentProfile().then((profile) => {
+                if (cancelled) return null;
+                if (!profile || profile.account_type !== "school_pupil") {
+                    redirecting = true;
+                    const returnPath = `/exam/${examId}?mode=school`;
+                    router.replace(`/login?next=${encodeURIComponent(returnPath)}`);
+                    return null;
+                }
+                return getSchoolAssessmentById(examId);
+            })
+            : getExamById(examId);
+        request
             .then((data) => {
                 if (cancelled) return;
+                if (redirecting) {
+                    // An unauthenticated School request redirects above. Avoid
+                    // flashing an incorrect "not found" state while it moves.
+                    return;
+                }
                 if (!data) setNotFound(true);
-                else setExam(data);
+                else {
+                    setExam(data);
+                    if (isSchool && "submitted_at" in data) {
+                        setSubmittedAt(typeof data.submitted_at === "string" ? data.submitted_at : null);
+                    }
+                }
                 setLoading(false);
             })
             .catch(() => {
                 if (!cancelled) { setNotFound(true); setLoading(false); }
             });
         return () => { cancelled = true; };
-    }, [examId]);
+    }, [examId, isSchool, router]);
 
     if (loading) return <Skeleton />;
 
@@ -100,6 +127,17 @@ export default function ExamInfoPage() {
             </div>
         );
     }
+
+    const examRules = [
+        ...(exam.duration ? [
+            "The countdown timer begins immediately after you click Start Exam.",
+            "The exam will be auto-submitted when the timer reaches zero.",
+        ] : ["This assessment has no countdown timer."]),
+        ...(!isGeneral ? [SINGLE_ATTEMPT_RULE] : []),
+        ...COMMON_EXAM_RULES,
+    ];
+    const modeQuery = isGeneral ? "?mode=general" : isSchool ? "?mode=school" : "";
+    const schoolAssessment = isSchool && "result_available" in exam ? exam : null;
 
     return (
         <div className="min-h-screen bg-[#f0f2f5]">
@@ -136,13 +174,38 @@ export default function ExamInfoPage() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75" />
                             <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500" />
                         </span>
-                        LIVE NOW
+                        {isSchool ? "SCHOOL ASSESSMENT" : "LIVE NOW"}
                     </span>
                     <h1 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug">{exam.title}</h1>
                     <p className="text-sm text-gray-500 mt-1">
                         {exam.subject} &middot; {exam.class_level}
                     </p>
                 </div>
+
+                {submittedAt && (
+                    <div className="mb-5 flex items-start gap-3 rounded-xl border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-900" role="status">
+                        <svg className="mt-0.5 h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                        <p><strong>Assessment submitted.</strong> You completed it on {new Intl.DateTimeFormat(undefined, { dateStyle: "medium", timeStyle: "short" }).format(new Date(submittedAt))}. School assessments can only be submitted once.</p>
+                    </div>
+                )}
+
+                {submittedAt && schoolAssessment?.result_available && schoolAssessment.result_score !== null && schoolAssessment.result_percentage !== null && (
+                    <section className="mb-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 shadow-sm" aria-labelledby="released-result-heading">
+                        <p className="text-xs font-bold uppercase tracking-[0.12em] text-emerald-700">Released result</p>
+                        <div className="mt-3 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                            <div><h2 id="released-result-heading" className="text-3xl font-extrabold tabular-nums text-emerald-950">{Math.round(schoolAssessment.result_percentage)}%</h2><p className="mt-1 text-sm font-semibold text-emerald-900">{Number.isInteger(schoolAssessment.result_score) ? schoolAssessment.result_score : schoolAssessment.result_score.toFixed(1)} of {schoolAssessment.result_total ?? exam.question_count} marks</p></div>
+                            <span className="inline-flex min-h-10 items-center rounded-full border border-emerald-300 bg-white px-4 text-xs font-extrabold text-emerald-800">Final result</span>
+                        </div>
+                    </section>
+                )}
+
+                {submittedAt && schoolAssessment?.show_results && schoolAssessment.theory_status === "pending" && (
+                    <div className="mb-5 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950" role="status"><strong>Awaiting theory grading.</strong> Your teacher will release the final score after reviewing your written answers.</div>
+                )}
+
+                {submittedAt && schoolAssessment && !schoolAssessment.show_results && (
+                    <div className="mb-5 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700" role="status"><strong>Result not released.</strong> Your submission is saved, but your school has not enabled pupil result viewing for this assessment.</div>
+                )}
 
                 <div className="grid gap-5 sm:grid-cols-2">
                     {/* Left Column */}
@@ -238,20 +301,20 @@ export default function ExamInfoPage() {
                 <div className="mt-6 bg-white border border-gray-200 rounded-xl p-5">
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                         <div>
-                            <p className="text-sm font-semibold text-gray-800">Ready to begin?</p>
+                            <p className="text-sm font-semibold text-gray-800">{submittedAt ? "This assessment is complete" : "Ready to begin?"}</p>
                             <p className="text-xs text-gray-500 mt-0.5">
-                                The timer starts immediately. Make sure you are fully prepared.
+                                {submittedAt ? "Return to your dashboard to choose another assessment." : exam.duration ? "The timer starts immediately. Make sure you are fully prepared." : "There is no countdown timer, but you can only submit once."}
                             </p>
                         </div>
                         <button
-                            onClick={() => router.push(`/exam/${exam.id}/attempt${isGeneral ? "?mode=general" : ""}`)}
-                            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 active:bg-green-900 text-white font-bold text-sm px-8 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                            onClick={() => submittedAt ? router.push("/student") : router.push(`/exam/${exam.id}/attempt${modeQuery}`)}
+                            className="w-full sm:w-auto flex min-h-12 items-center justify-center gap-2 bg-green-700 hover:bg-green-800 active:bg-green-900 text-white font-bold text-sm px-8 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                         >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"
                                     d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 010 1.972l-11.54 6.347a1.125 1.125 0 01-1.667-.986V5.653z" />
                             </svg>
-                            Start Exam
+                            {submittedAt ? "Return to Dashboard" : "Start Exam"}
                         </button>
                     </div>
                 </div>

@@ -19,6 +19,7 @@ const STATIC_LAST_MODIFIED = {
   contact: "2026-07-26",
   admissions: "2026-07-29",
   questionBank: "2026-07-18",
+  practice: "2026-08-25",
 } as const;
 
 interface TimestampedRow {
@@ -110,6 +111,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/jamb-practice`,          lastModified: new Date(STATIC_LAST_MODIFIED.jambPractice), changeFrequency: "daily",  priority: 0.85 },
     { url: `${BASE_URL}/waec-practice`,          lastModified: new Date(STATIC_LAST_MODIFIED.waecPractice), changeFrequency: "daily",  priority: 0.85 },
     { url: `${BASE_URL}/post-utme-practice`,     lastModified: new Date(STATIC_LAST_MODIFIED.postUtmePractice), changeFrequency: "daily",  priority: 0.85 },
+    { url: `${BASE_URL}/practice`,               lastModified: new Date(STATIC_LAST_MODIFIED.practice), changeFrequency: "daily", priority: 0.85 },
+    { url: `${BASE_URL}/practice/study`,         lastModified: new Date(STATIC_LAST_MODIFIED.practice), changeFrequency: "daily", priority: 0.75 },
+    { url: `${BASE_URL}/practice/survival`,      lastModified: new Date(STATIC_LAST_MODIFIED.practice), changeFrequency: "daily", priority: 0.75 },
+    { url: `${BASE_URL}/practice/mock/jamb`,     lastModified: new Date(STATIC_LAST_MODIFIED.practice), changeFrequency: "daily", priority: 0.8 },
+    { url: `${BASE_URL}/practice/past-questions`, lastModified: new Date(STATIC_LAST_MODIFIED.practice), changeFrequency: "daily", priority: 0.8 },
     { url: `${BASE_URL}/privacy`,                lastModified: new Date(STATIC_LAST_MODIFIED.privacy), changeFrequency: "yearly", priority: 0.4 },
     { url: `${BASE_URL}/terms`,                  lastModified: new Date(STATIC_LAST_MODIFIED.terms), changeFrequency: "yearly", priority: 0.4 },
     { url: `${BASE_URL}/about`,                  lastModified: new Date(STATIC_LAST_MODIFIED.about), changeFrequency: "monthly", priority: 0.6 },

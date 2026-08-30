@@ -1,0 +1,89 @@
+.cbt-shell {
+  --cbt-background: #f3f6f4;
+  --cbt-surface: #ffffff;
+  --cbt-surface-muted: #f7f9f8;
+  --cbt-border: #dce4df;
+  --cbt-ink: #14231b;
+  --cbt-muted: #5f6f66;
+  --cbt-primary: #177245;
+  --cbt-primary-strong: #105535;
+  --cbt-primary-soft: #e7f5ed;
+  --cbt-sidebar: #123728;
+  --cbt-warning: #9a6200;
+  --cbt-warning-soft: #fff5dc;
+  background: var(--cbt-background);
+  color: var(--cbt-ink);
+}
+
+.cbt-balance {
+  text-wrap: balance;
+}
+
+.cbt-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #9fb1a7 transparent;
+}
+
+.school-report-print-only {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body.school-report-printing,
+  body.school-report-printing .cbt-shell {
+    background: #ffffff !important;
+  }
+
+  body.school-report-printing * {
+    visibility: hidden !important;
+  }
+
+  body.school-report-printing [data-school-report-print-root],
+  body.school-report-printing [data-school-report-print-root] * {
+    visibility: visible !important;
+  }
+
+  body.school-report-printing [data-school-report-print-root] {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    color: #111827;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  body.school-report-printing [data-print-hidden],
+  body.school-report-printing [data-print-hidden] * {
+    display: none !important;
+  }
+
+  body.school-report-printing .school-report-print-only {
+    display: block !important;
+  }
+
+  body.school-report-printing [data-school-report-print-root] section,
+  body.school-report-printing [data-school-report-print-root] article {
+    box-shadow: none !important;
+  }
+
+  body.school-report-printing .school-report-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cbt-shell *,
+  .cbt-shell *::before,
+  .cbt-shell *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

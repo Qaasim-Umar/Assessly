@@ -1,287 +1,846 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
+import {
+  Activity,
+  BarChart3,
+  BookOpen,
+  Building2,
+  CheckCircle2,
+  Clock3,
+  ExternalLink,
+  FileQuestion,
+  GraduationCap,
+  LogOut,
+  UserCheck,
+  UserPlus,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
 import { supabase } from "@/lib/supabase";
-import { getGeneralAdminSession, signOutGeneralAdmin } from "@/lib/generalAdminAuth";
+import {
+  getGeneralAdminSession,
+  signOutGeneralAdmin,
+} from "@/lib/generalAdminAuth";
+import GeneralAdminSectionNav from "@/components/GeneralAdminSectionNav";
 
-interface Stats {
-    total: number;
-    byExamType: { exam_type: string; count: number }[];
-    bySubject: { subject: string; count: number; years: number[] }[];
+type RangeDays = 7 | 30 | 90;
+
+type LabelValue = {
+  label: string;
+  value: number;
+};
+
+type GrowthPoint = {
+  date: string;
+  newUsers: number;
+  attempts: number;
+  activeUsers: number;
+};
+
+type RecentContent = {
+  id: string;
+  title: string;
+  subject: string;
+  status: string;
+  createdAt: string;
+  questionCount: number;
+  creator: string;
+  source: string;
+};
+
+type AnalyticsPayload = {
+  generatedAt: string;
+  timezone: string;
+  periodDays: number;
+  metrics: {
+    totalLearners: number;
+    newUsersToday: number;
+    returningUsersToday: number;
+    activeUsersToday: number;
+    newUsersPeriod: number;
+    newUsersGrowthPct: number | null;
+    activeUsersPeriod: number;
+    userQuestionsTotal: number;
+    userQuestionsToday: number;
+    generalQuestionsTotal: number;
+    userExamsTotal: number;
+    userExamsToday: number;
+    publishedUserExams: number;
+    activeSchools: number;
+    attemptsToday: number;
+    attemptsPeriod: number;
+    completionRatePeriod: number;
+    averageScorePeriod: number | null;
+  };
+  accountMix: LabelValue[];
+  growthTrend: GrowthPoint[];
+  questionSources: LabelValue[];
+  activityByMode: LabelValue[];
+  topSubjects: LabelValue[];
+  recentContent: RecentContent[];
+};
+
+type AnalyticsSnapshot = {
+  generatedAt: string;
+  nextRefreshAt: string;
+  timezone: string;
+  ranges: Record<string, AnalyticsPayload>;
+};
+
+const RANGE_OPTIONS: RangeDays[] = [7, 30, 90];
+const ANALYTICS_CACHE_VERSION = "v1";
+const BAR_COLORS = [
+  "bg-emerald-600",
+  "bg-blue-600",
+  "bg-violet-600",
+  "bg-amber-500",
+  "bg-cyan-600",
+  "bg-rose-500",
+];
+
+function analyticsCacheKey(userId: string) {
+  return `assessly:general-admin:cbt-analytics:${ANALYTICS_CACHE_VERSION}:${userId}`;
+}
+
+function isAnalyticsSnapshot(value: unknown): value is AnalyticsSnapshot {
+  if (!value || typeof value !== "object") return false;
+
+  const snapshot = value as Partial<AnalyticsSnapshot>;
+  if (
+    typeof snapshot.generatedAt !== "string" ||
+    typeof snapshot.nextRefreshAt !== "string" ||
+    typeof snapshot.timezone !== "string" ||
+    !snapshot.ranges ||
+    typeof snapshot.ranges !== "object"
+  ) {
+    return false;
+  }
+
+  return RANGE_OPTIONS.every((days) => {
+    const payload = snapshot.ranges?.[String(days)];
+    return Boolean(
+      payload &&
+        typeof payload === "object" &&
+        payload.periodDays === days &&
+        payload.metrics &&
+        Array.isArray(payload.growthTrend),
+    );
+  });
+}
+
+function readAnalyticsCache(userId: string): AnalyticsSnapshot | null {
+  try {
+    const key = analyticsCacheKey(userId);
+    const raw = window.localStorage.getItem(key);
+    if (!raw) return null;
+
+    const snapshot: unknown = JSON.parse(raw);
+    if (!isAnalyticsSnapshot(snapshot)) {
+      window.localStorage.removeItem(key);
+      return null;
+    }
+
+    const nextRefreshAt = Date.parse(snapshot.nextRefreshAt);
+    if (!Number.isFinite(nextRefreshAt) || Date.now() >= nextRefreshAt) {
+      window.localStorage.removeItem(key);
+      return null;
+    }
+
+    return snapshot;
+  } catch {
+    return null;
+  }
+}
+
+function writeAnalyticsCache(userId: string, snapshot: AnalyticsSnapshot) {
+  try {
+    window.localStorage.setItem(analyticsCacheKey(userId), JSON.stringify(snapshot));
+  } catch {
+    // The daily database snapshot still prevents expensive recalculation when
+    // browser storage is unavailable.
+  }
+}
+
+function formatNumber(value: number | null | undefined) {
+  return new Intl.NumberFormat("en-NG").format(value ?? 0);
+}
+
+function formatDate(value: string) {
+  return new Intl.DateTimeFormat("en-NG", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "Africa/Lagos",
+  }).format(new Date(value));
+}
+
+function formatShortDate(value: string) {
+  return new Intl.DateTimeFormat("en-NG", {
+    day: "numeric",
+    month: "short",
+  }).format(new Date(`${value}T12:00:00`));
+}
+
+function MetricCard({
+  label,
+  value,
+  support,
+  Icon,
+  tone = "emerald",
+}: {
+  label: string;
+  value: string;
+  support: string;
+  Icon: LucideIcon;
+  tone?: "emerald" | "blue" | "violet" | "amber";
+}) {
+  const tones = {
+    emerald: "bg-emerald-50 text-emerald-700 ring-emerald-100",
+    blue: "bg-blue-50 text-blue-700 ring-blue-100",
+    violet: "bg-violet-50 text-violet-700 ring-violet-100",
+    amber: "bg-amber-50 text-amber-700 ring-amber-100",
+  };
+
+  return (
+    <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <p className="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">
+            {label}
+          </p>
+          <p className="mt-3 text-3xl font-extrabold tabular-nums tracking-tight text-slate-950">
+            {value}
+          </p>
+        </div>
+        <span
+          className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ring-1 ${tones[tone]}`}
+        >
+          <Icon size={19} aria-hidden="true" />
+        </span>
+      </div>
+      <p className="mt-3 text-xs leading-5 text-slate-500">{support}</p>
+    </article>
+  );
+}
+
+function LoadingDashboard() {
+  return (
+    <div className="space-y-6" role="status" aria-label="Loading CBT analytics">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        {Array.from({ length: 4 }).map((_, index) => (
+          <div
+            key={index}
+            className="h-40 animate-pulse rounded-2xl border border-slate-200 bg-white"
+          />
+        ))}
+      </div>
+      <div className="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(0,1.7fr)_minmax(300px,0.8fr)]">
+        <div className="h-[360px] animate-pulse rounded-2xl border border-slate-200 bg-white" />
+        <div className="h-[360px] animate-pulse rounded-2xl border border-slate-200 bg-white" />
+      </div>
+    </div>
+  );
+}
+
+function BreakdownBars({
+  rows,
+  emptyMessage,
+}: {
+  rows: LabelValue[];
+  emptyMessage: string;
+}) {
+  const max = Math.max(...rows.map((row) => row.value), 1);
+
+  if (rows.length === 0) {
+    return (
+      <p className="rounded-xl bg-slate-50 px-4 py-8 text-center text-sm text-slate-500">
+        {emptyMessage}
+      </p>
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      {rows.map((row, index) => {
+        const percentage = Math.max((row.value / max) * 100, row.value > 0 ? 3 : 0);
+        return (
+          <div key={row.label}>
+            <div className="mb-1.5 flex items-center justify-between gap-4 text-xs">
+              <span className="min-w-0 font-semibold text-slate-700">{row.label}</span>
+              <span className="shrink-0 font-extrabold tabular-nums text-slate-950">
+                {formatNumber(row.value)}
+              </span>
+            </div>
+            <div
+              className="h-2.5 overflow-hidden rounded-full bg-slate-100"
+              role="progressbar"
+              aria-label={`${row.label}: ${formatNumber(row.value)}`}
+              aria-valuemin={0}
+              aria-valuemax={max}
+              aria-valuenow={row.value}
+            >
+              <div
+                className={`h-full rounded-full ${BAR_COLORS[index % BAR_COLORS.length]}`}
+                style={{ width: `${percentage}%` }}
+              />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function GrowthChart({ rows }: { rows: GrowthPoint[] }) {
+  const width = 720;
+  const height = 250;
+  const left = 44;
+  const right = 18;
+  const top = 18;
+  const bottom = 42;
+  const chartWidth = width - left - right;
+  const chartHeight = height - top - bottom;
+  const maxValue = Math.max(
+    1,
+    ...rows.flatMap((row) => [row.newUsers, row.attempts]),
+  );
+  const x = (index: number) =>
+    left + (rows.length <= 1 ? chartWidth / 2 : (index / (rows.length - 1)) * chartWidth);
+  const y = (value: number) => top + chartHeight - (value / maxValue) * chartHeight;
+  const points = (key: "newUsers" | "attempts") =>
+    rows.map((row, index) => `${x(index)},${y(row[key])}`).join(" ");
+  const ticks = [0, 0.25, 0.5, 0.75, 1];
+  const labelIndexes = Array.from(
+    new Set([0, Math.floor((rows.length - 1) / 2), rows.length - 1]),
+  ).filter((index) => index >= 0);
+  const totalNew = rows.reduce((sum, row) => sum + row.newUsers, 0);
+  const totalAttempts = rows.reduce((sum, row) => sum + row.attempts, 0);
+
+  if (rows.length === 0) {
+    return (
+      <p className="rounded-xl bg-slate-50 px-4 py-12 text-center text-sm text-slate-500">
+        No growth data is available for this range yet.
+      </p>
+    );
+  }
+
+  return (
+    <>
+      <div className="mb-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold text-slate-600">
+        <span className="inline-flex items-center gap-2">
+          <span className="h-2.5 w-2.5 rounded-full bg-emerald-600" />
+          New learners ({formatNumber(totalNew)})
+        </span>
+        <span className="inline-flex items-center gap-2">
+          <span className="h-2.5 w-2.5 rounded-full bg-blue-600" />
+          CBT attempts ({formatNumber(totalAttempts)})
+        </span>
+      </div>
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        className="h-auto w-full"
+        role="img"
+        aria-labelledby="growth-chart-title growth-chart-description"
+      >
+        <title id="growth-chart-title">Learner growth and CBT attempts</title>
+        <desc id="growth-chart-description">
+          Daily new learner accounts and CBT attempts for the selected period.
+        </desc>
+        {ticks.map((tick) => {
+          const tickY = top + chartHeight - tick * chartHeight;
+          return (
+            <g key={tick}>
+              <line
+                x1={left}
+                x2={width - right}
+                y1={tickY}
+                y2={tickY}
+                stroke="#e2e8f0"
+                strokeWidth="1"
+              />
+              <text
+                x={left - 9}
+                y={tickY + 4}
+                textAnchor="end"
+                className="fill-slate-400 text-[10px]"
+              >
+                {Math.round(maxValue * tick)}
+              </text>
+            </g>
+          );
+        })}
+        <polyline
+          points={points("attempts")}
+          fill="none"
+          stroke="#2563eb"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <polyline
+          points={points("newUsers")}
+          fill="none"
+          stroke="#059669"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {rows.length <= 30 &&
+          rows.map((row, index) => (
+            <g key={row.date}>
+              <circle cx={x(index)} cy={y(row.attempts)} r="4" fill="#2563eb">
+                <title>{`${formatShortDate(row.date)}: ${row.attempts} attempts`}</title>
+              </circle>
+              <circle cx={x(index)} cy={y(row.newUsers)} r="4" fill="#059669">
+                <title>{`${formatShortDate(row.date)}: ${row.newUsers} new learners`}</title>
+              </circle>
+            </g>
+          ))}
+        {labelIndexes.map((index) => (
+          <text
+            key={rows[index].date}
+            x={x(index)}
+            y={height - 13}
+            textAnchor={index === 0 ? "start" : index === rows.length - 1 ? "end" : "middle"}
+            className="fill-slate-500 text-[10px] font-semibold"
+          >
+            {formatShortDate(rows[index].date)}
+          </text>
+        ))}
+      </svg>
+      <details className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+        <summary className="cursor-pointer text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          View daily data table
+        </summary>
+        <div className="mt-3 max-h-64 overflow-y-auto">
+          <table className="w-full text-left text-xs">
+            <thead className="sticky top-0 bg-slate-50 text-slate-500">
+              <tr>
+                <th className="py-2 font-bold">Date</th>
+                <th className="py-2 text-right font-bold">New</th>
+                <th className="py-2 text-right font-bold">Active</th>
+                <th className="py-2 text-right font-bold">Attempts</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-200 text-slate-700">
+              {rows.map((row) => (
+                <tr key={row.date}>
+                  <td className="py-2">{formatShortDate(row.date)}</td>
+                  <td className="py-2 text-right tabular-nums">{row.newUsers}</td>
+                  <td className="py-2 text-right tabular-nums">{row.activeUsers}</td>
+                  <td className="py-2 text-right tabular-nums">{row.attempts}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </>
+  );
+}
+
+function RecentContentList({ rows }: { rows: RecentContent[] }) {
+  if (rows.length === 0) {
+    return (
+      <p className="px-5 py-12 text-center text-sm text-slate-500">
+        User-created CBT exams and assessments will appear here.
+      </p>
+    );
+  }
+
+  return (
+    <div className="divide-y divide-slate-100">
+      <div className="hidden grid-cols-[minmax(0,2fr)_minmax(120px,0.8fr)_100px_90px] gap-4 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.12em] text-slate-400 md:grid">
+        <span>Content</span>
+        <span>Creator</span>
+        <span>Status</span>
+        <span className="text-right">Questions</span>
+      </div>
+      {rows.map((row) => (
+        <article
+          key={`${row.source}-${row.id}`}
+          className="grid gap-3 px-5 py-4 md:grid-cols-[minmax(0,2fr)_minmax(120px,0.8fr)_100px_90px] md:items-center md:gap-4"
+        >
+          <div className="min-w-0">
+            <p className="break-words text-sm font-bold text-slate-900">{row.title}</p>
+            <p className="mt-1 text-xs text-slate-500">
+              {row.subject} · {row.source} · {formatDate(row.createdAt)}
+            </p>
+          </div>
+          <div className="text-xs font-semibold text-slate-600">
+            <span className="mr-1 text-slate-400 md:hidden">Creator:</span>
+            {row.creator}
+          </div>
+          <div>
+            <span
+              className={`inline-flex rounded-full px-2.5 py-1 text-[10px] font-extrabold ring-1 ${
+                row.status === "Live" || row.status === "Published"
+                  ? "bg-emerald-50 text-emerald-700 ring-emerald-200"
+                  : "bg-slate-100 text-slate-600 ring-slate-200"
+              }`}
+            >
+              {row.status}
+            </span>
+          </div>
+          <p className="text-sm font-extrabold tabular-nums text-slate-950 md:text-right">
+            <span className="mr-1 text-xs font-medium text-slate-400 md:hidden">Questions:</span>
+            {formatNumber(row.questionCount)}
+          </p>
+        </article>
+      ))}
+    </div>
+  );
 }
 
 export default function GeneralDashboardPage() {
-    const router = useRouter();
-    const [stats, setStats] = useState<Stats | null>(null);
-    const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  const [range, setRange] = useState<RangeDays>(30);
+  const [snapshot, setSnapshot] = useState<AnalyticsSnapshot | null>(null);
+  const [adminUserId, setAdminUserId] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        getGeneralAdminSession().then((session) => {
-            if (!session) {
-                router.replace("/general/dashboard/login");
-                return;
-            }
-            fetchStats();
-        });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+  const fetchAnalytics = useCallback(async (userId: string) => {
+    setLoading(true);
+    setError(null);
 
-    async function fetchStats() {
-        setLoading(true);
-        try {
-            const { data } = await supabase
-                .from("questions")
-                .select("exam_type, subject, year")
-                .is("exam_id", null)
-                .eq("is_active", true);
-
-            const rows = data ?? [];
-
-            // Count by exam_type
-            const examTypeMap: Record<string, number> = {};
-            const subjectMap: Record<string, number> = {};
-            const subjectYearMap: Record<string, Set<number>> = {};
-
-            for (const row of rows) {
-                const et = row.exam_type ?? "Unknown";
-                examTypeMap[et] = (examTypeMap[et] ?? 0) + 1;
-
-                const sub = row.subject ?? "Unknown";
-                subjectMap[sub] = (subjectMap[sub] ?? 0) + 1;
-
-                if (!subjectYearMap[sub]) subjectYearMap[sub] = new Set<number>();
-                if (typeof row.year === "number") subjectYearMap[sub].add(row.year);
-            }
-
-            setStats({
-                total: rows.length,
-                byExamType: Object.entries(examTypeMap)
-                    .map(([exam_type, count]) => ({ exam_type, count }))
-                    .sort((a, b) => b.count - a.count),
-                bySubject: Object.entries(subjectMap)
-                    .map(([subject, count]) => ({
-                        subject,
-                        count,
-                        years: Array.from(subjectYearMap[subject] ?? []).sort((a, b) => b - a),
-                    }))
-                    .sort((a, b) => b.count - a.count),
-            });
-        } catch {
-            setStats({ total: 0, byExamType: [], bySubject: [] });
-        } finally {
-            setLoading(false);
+    try {
+      const { data, error: analyticsError } = await supabase.functions.invoke<AnalyticsSnapshot>(
+        "general-admin-cbt-analytics",
+        {
+          body: {},
+        },
+      );
+      if (analyticsError) {
+        let message = analyticsError.message;
+        const context = (analyticsError as { context?: unknown }).context;
+        if (context instanceof Response) {
+          const body = await context.clone().json().catch(() => null) as { error?: unknown } | null;
+          if (typeof body?.error === "string") message = body.error;
         }
+        throw new Error(message);
+      }
+      if (!isAnalyticsSnapshot(data)) {
+        throw new Error("The analytics service returned no data.");
+      }
+      writeAnalyticsCache(userId, data);
+      setSnapshot(data);
+    } catch (caught) {
+      const message = caught instanceof Error ? caught.message : "Could not load CBT analytics.";
+      setError(message);
+    } finally {
+      setLoading(false);
     }
+  }, []);
 
-    const handleLogout = async () => {
-        await signOutGeneralAdmin();
-        router.push("/general/dashboard/login");
+  useEffect(() => {
+    let active = true;
+    async function initialise() {
+      const session = await getGeneralAdminSession();
+      if (!active) return;
+      if (!session) {
+        router.replace("/general/dashboard/login");
+        return;
+      }
+      setAdminUserId(session.user.id);
+      const cachedSnapshot = readAnalyticsCache(session.user.id);
+      if (cachedSnapshot) {
+        setSnapshot(cachedSnapshot);
+        setLoading(false);
+        return;
+      }
+      await fetchAnalytics(session.user.id);
+    }
+    initialise();
+    return () => {
+      active = false;
     };
+  }, [fetchAnalytics, router]);
 
-    const examTypeColors: Record<string, string> = {
-        JAMB: "bg-green-50 text-green-700 border-green-200",
-        WAEC: "bg-blue-50 text-blue-700 border-blue-200",
-        NECO: "bg-violet-50 text-violet-700 border-violet-200",
-        "Post-UTME": "bg-amber-50 text-amber-700 border-amber-200",
-    };
+  const handleLogout = async () => {
+    await signOutGeneralAdmin();
+    router.push("/general/dashboard/login");
+  };
 
-    return (
-        <div className="min-h-screen bg-[#f0f2f5]">
-            <header className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-md bg-green-700 flex items-center justify-center">
-                            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span className="text-base font-bold text-gray-900">Assessly</span>
-                            <span className="ml-2 text-[10px] font-semibold text-green-600 bg-green-50 border border-green-200 px-1.5 py-0.5 rounded uppercase tracking-wide">General Mode</span>
-                        </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                        <Link href="/general" target="_blank" className="text-xs text-gray-500 hover:text-green-600 font-medium transition-colors hidden sm:block">
-                            Public View ↗
-                        </Link>
-                        <div className="h-4 w-px bg-gray-200 hidden sm:block" />
-                        <button
-                            onClick={handleLogout}
-                            className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-red-600 border border-gray-200 hover:border-red-200 hover:bg-red-50 px-3 py-1.5 rounded-lg transition-colors"
-                        >
-                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
-                            </svg>
-                            Logout
-                        </button>
-                    </div>
-                </div>
-            </header>
+  const analytics = snapshot?.ranges[String(range)] ?? null;
 
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-                {/* Title + actions */}
-                <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
-                    <div>
-                        <h1 className="text-xl font-bold text-gray-900">General Console</h1>
-                        <p className="text-sm text-gray-500 mt-0.5">Overview of your question bank and admissions content</p>
-                    </div>
-                    <div className="flex items-center gap-3">
-                        <Link
-                            href="/general/dashboard/admissions"
-                            className="flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-700 font-bold text-sm px-4 py-2.5 rounded-lg transition-colors shadow-sm border border-gray-200"
-                        >
-                            <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                            </svg>
-                            Admissions Hub
-                        </Link>
-                        <Link
-                            href="/general/dashboard/create"
-                            className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors shadow-sm"
-                        >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 4.5v15m7.5-7.5h-15" />
-                            </svg>
-                            Upload Questions
-                        </Link>
-                    </div>
-                </div>
+  const growthText = useMemo(() => {
+    const growth = analytics?.metrics.newUsersGrowthPct;
+    if (growth === null || growth === undefined) return "No previous baseline";
+    if (growth === 0) return "No change vs previous period";
+    return `${growth > 0 ? "+" : ""}${growth}% vs previous period`;
+  }, [analytics]);
 
-                {/* Total */}
-                <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-6 flex items-center gap-5">
-                    <div className="w-14 h-14 rounded-xl bg-green-50 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-7 h-7 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 2.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-                        </svg>
-                    </div>
-                    <div>
-                        <p className={`text-4xl font-extrabold text-gray-900 leading-none ${loading ? "animate-pulse text-gray-200" : ""}`}>
-                            {loading ? "—" : stats?.total.toLocaleString()}
-                        </p>
-                        <p className="text-sm text-gray-500 mt-1">Total questions in the bank</p>
-                    </div>
-                    <button
-                        onClick={fetchStats}
-                        disabled={loading}
-                        className="ml-auto flex items-center gap-1.5 text-xs font-semibold text-gray-400 hover:text-gray-700 transition-colors disabled:opacity-40"
-                    >
-                        <svg className={`w-3.5 h-3.5 ${loading ? "animate-spin" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
-                        Refresh
-                    </button>
-                </div>
+  const metrics = analytics?.metrics;
+  const lastUpdated = snapshot?.generatedAt
+    ? new Intl.DateTimeFormat("en-NG", {
+        day: "numeric",
+        month: "short",
+        hour: "numeric",
+        minute: "2-digit",
+        timeZone: snapshot.timezone,
+      }).format(new Date(snapshot.generatedAt))
+    : null;
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {/* By Exam Type */}
-                    <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-                        <div className="px-5 py-4 border-b border-gray-100">
-                            <h2 className="text-sm font-bold text-gray-700">By Exam Type</h2>
-                        </div>
-                        <div className="p-5 space-y-3">
-                            {loading ? (
-                                Array.from({ length: 4 }).map((_, i) => (
-                                    <div key={i} className="animate-pulse flex items-center gap-3">
-                                        <div className="h-4 bg-gray-100 rounded w-20" />
-                                        <div className="flex-1 h-2 bg-gray-100 rounded-full" />
-                                        <div className="h-4 bg-gray-100 rounded w-10" />
-                                    </div>
-                                ))
-                            ) : stats?.byExamType.length === 0 ? (
-                                <p className="text-sm text-gray-400 text-center py-4">No questions yet</p>
-                            ) : (
-                                stats?.byExamType.map(({ exam_type, count }) => {
-                                    const pct = stats.total > 0 ? Math.round((count / stats.total) * 100) : 0;
-                                    const colorCls = examTypeColors[exam_type] ?? "bg-gray-50 text-gray-600 border-gray-200";
-                                    return (
-                                        <div key={exam_type} className="flex items-center gap-3">
-                                            <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full border w-24 text-center flex-shrink-0 ${colorCls}`}>
-                                                {exam_type}
-                                            </span>
-                                            <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
-                                                <div
-                                                    className="h-full bg-green-500 rounded-full transition-all"
-                                                    style={{ width: `${pct}%` }}
-                                                />
-                                            </div>
-                                            <span className="text-xs font-bold text-gray-700 w-16 text-right flex-shrink-0">
-                                                {count.toLocaleString()} <span className="text-gray-400 font-normal">({pct}%)</span>
-                                            </span>
-                                        </div>
-                                    );
-                                })
-                            )}
-                        </div>
-                    </div>
-
-                    {/* By Subject */}
-                    <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-                        <div className="px-5 py-4 border-b border-gray-100">
-                            <h2 className="text-sm font-bold text-gray-700">By Subject</h2>
-                        </div>
-                        <div className="p-5 space-y-4">
-                            {loading ? (
-                                Array.from({ length: 6 }).map((_, i) => (
-                                    <div key={i} className="animate-pulse flex items-center gap-3">
-                                        <div className="h-4 bg-gray-100 rounded w-24" />
-                                        <div className="flex-1 h-2 bg-gray-100 rounded-full" />
-                                        <div className="h-4 bg-gray-100 rounded w-10" />
-                                    </div>
-                                ))
-                            ) : stats?.bySubject.length === 0 ? (
-                                <p className="text-sm text-gray-400 text-center py-4">No questions yet</p>
-                            ) : (
-                                stats?.bySubject.map(({ subject, count, years }) => {
-                                    const pct = stats.total > 0 ? Math.round((count / stats.total) * 100) : 0;
-                                    return (
-                                        <div key={subject} className="border-b border-gray-100 pb-4 last:border-b-0 last:pb-0">
-                                            <div className="flex items-start justify-between gap-4">
-                                                <span className="min-w-0 break-words text-sm font-semibold text-gray-700">
-                                                    {subject}
-                                                </span>
-                                                <span className="shrink-0 text-xs font-bold text-gray-700">
-                                                    {count.toLocaleString()} <span className="font-normal text-gray-400">questions ({pct}%)</span>
-                                                </span>
-                                            </div>
-
-                                            <div
-                                                className="mt-2 flex flex-wrap gap-1.5"
-                                                aria-label={`Years stored for ${subject}`}
-                                            >
-                                                {years.length > 0 ? (
-                                                    years.map((year) => (
-                                                        <span
-                                                            key={year}
-                                                            className="rounded-md border border-blue-100 bg-blue-50 px-2 py-0.5 text-[11px] font-semibold tabular-nums text-blue-700"
-                                                        >
-                                                            {year}
-                                                        </span>
-                                                    ))
-                                                ) : (
-                                                    <span className="text-[11px] text-gray-400">No year stored</span>
-                                                )}
-                                            </div>
-
-                                            <div className="mt-3 h-2 overflow-hidden rounded-full bg-gray-100">
-                                                <div
-                                                    className="h-full bg-blue-400 rounded-full transition-all"
-                                                    style={{ width: `${pct}%` }}
-                                                />
-                                            </div>
-                                        </div>
-                                    );
-                                })
-                            )}
-                        </div>
-                    </div>
-                </div>
-
-                <div className="mt-8 text-center text-xs text-gray-400">
-                    Assessly General Mode Console · {new Date().getFullYear()}
-                </div>
-            </main>
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-950">
+      <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
+        <div className="mx-auto flex min-h-16 max-w-[1500px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/general/dashboard"
+            className="flex min-h-11 items-center gap-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-700 text-white">
+              <GraduationCap size={19} aria-hidden="true" />
+            </span>
+            <span>
+              <span className="block text-sm font-extrabold tracking-tight text-slate-950">Assessly</span>
+              <span className="block text-[10px] font-bold uppercase tracking-[0.14em] text-emerald-700">
+                General admin
+              </span>
+            </span>
+          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/general"
+              target="_blank"
+              className="hidden min-h-11 items-center gap-2 rounded-xl px-3 text-xs font-bold text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 sm:flex"
+            >
+              Public CBT
+              <ExternalLink size={14} aria-hidden="true" />
+            </Link>
+            <button
+              type="button"
+              onClick={handleLogout}
+              className="flex min-h-11 items-center gap-2 rounded-xl px-3 text-xs font-bold text-slate-600 hover:bg-rose-50 hover:text-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500"
+            >
+              <LogOut size={15} aria-hidden="true" />
+              <span className="hidden sm:inline">Log out</span>
+            </button>
+          </div>
         </div>
-    );
+      </header>
+
+      <main className="mx-auto max-w-[1500px] px-4 py-7 sm:px-6 lg:px-8 lg:py-10">
+        <div className="mb-7">
+          <GeneralAdminSectionNav active="analytics" />
+        </div>
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <div className="mb-2 flex items-center gap-2 text-xs font-bold text-emerald-700">
+              <span className="h-2 w-2 rounded-full bg-emerald-500" />
+              CBT-only analytics
+            </div>
+            <h1 className="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">
+              Learner growth overview
+            </h1>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+              Track learner acquisition, returning users, CBT engagement and questions created outside the general admin console.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="flex min-h-11 items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-4 text-xs font-bold text-emerald-800">
+              <Clock3 size={15} aria-hidden="true" />
+              Refreshes daily at 4:00 AM
+            </span>
+          </div>
+        </div>
+
+        <div className="mt-7 flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-3 px-2 text-xs text-slate-500">
+            <Clock3 size={15} className="text-emerald-700" aria-hidden="true" />
+            <span>
+              Daily snapshot in <strong className="font-bold text-slate-700">Lagos time</strong>
+              {lastUpdated ? ` · refreshed ${lastUpdated}` : ""}
+            </span>
+          </div>
+          <div className="grid grid-cols-3 gap-1 rounded-xl bg-slate-100 p-1" aria-label="Analytics date range">
+            {RANGE_OPTIONS.map((days) => (
+              <button
+                key={days}
+                type="button"
+                onClick={() => setRange(days)}
+                aria-pressed={range === days}
+                className={`min-h-10 rounded-lg px-4 text-xs font-extrabold focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
+                  range === days
+                    ? "bg-white text-emerald-800 shadow-sm"
+                    : "text-slate-500 hover:text-slate-800"
+                }`}
+              >
+                {days} days
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {loading ? (
+          <div className="mt-6">
+            <LoadingDashboard />
+          </div>
+        ) : error ? (
+          <section className="mt-6 rounded-2xl border border-rose-200 bg-white px-5 py-14 text-center shadow-sm" role="alert">
+            <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 text-rose-700">
+              <BarChart3 size={22} aria-hidden="true" />
+            </span>
+            <h2 className="mt-4 text-lg font-extrabold text-slate-950">Analytics could not be loaded</h2>
+            <p className="mx-auto mt-2 max-w-xl text-sm leading-6 text-slate-600">{error}</p>
+            <button
+              type="button"
+              onClick={() => adminUserId && fetchAnalytics(adminUserId)}
+              disabled={!adminUserId}
+              className="mt-5 min-h-11 rounded-xl bg-slate-950 px-5 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-slate-600 focus:ring-offset-2"
+            >
+              Try again
+            </button>
+          </section>
+        ) : analytics && metrics ? (
+          <div className="mt-6 space-y-6">
+            <section aria-labelledby="today-heading">
+              <div className="mb-4 flex items-end justify-between gap-4">
+                <div>
+                  <h2 id="today-heading" className="text-base font-extrabold text-slate-950">Today at a glance</h2>
+                  <p className="mt-1 text-xs text-slate-500">Activity recorded by the daily 4:00 AM snapshot.</p>
+                </div>
+                <span className="hidden text-xs font-semibold text-slate-400 sm:inline">{formatDate(analytics.generatedAt)}</span>
+              </div>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                <MetricCard
+                  label="New users today"
+                  value={formatNumber(metrics.newUsersToday)}
+                  support="Learner accounts created today"
+                  Icon={UserPlus}
+                />
+                <MetricCard
+                  label="Returning today"
+                  value={formatNumber(metrics.returningUsersToday)}
+                  support="Existing learners whose latest sign-in is today"
+                  Icon={UserCheck}
+                  tone="blue"
+                />
+                <MetricCard
+                  label="CBT-active today"
+                  value={formatNumber(metrics.activeUsersToday)}
+                  support={`${formatNumber(metrics.attemptsToday)} CBT attempt${metrics.attemptsToday === 1 ? "" : "s"} recorded today`}
+                  Icon={Activity}
+                  tone="violet"
+                />
+                <MetricCard
+                  label="User-added questions"
+                  value={formatNumber(metrics.userQuestionsTotal)}
+                  support={`+${formatNumber(metrics.userQuestionsToday)} today · excludes general admin content`}
+                  Icon={FileQuestion}
+                  tone="amber"
+                />
+              </div>
+            </section>
+
+            <section className="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(0,1.65fr)_minmax(310px,0.85fr)]">
+              <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="growth-heading">
+                <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <h2 id="growth-heading" className="text-base font-extrabold text-slate-950">Growth and engagement</h2>
+                    <p className="mt-1 text-xs text-slate-500">Daily learner sign-ups and recorded CBT attempts.</p>
+                  </div>
+                  <span className="w-fit rounded-full bg-emerald-50 px-3 py-1 text-[10px] font-extrabold text-emerald-700 ring-1 ring-emerald-200">
+                    Last {range} days
+                  </span>
+                </div>
+                <GrowthChart rows={analytics.growthTrend} />
+              </article>
+
+              <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="activity-heading">
+                <div className="mb-6">
+                  <h2 id="activity-heading" className="text-base font-extrabold text-slate-950">Activity by CBT mode</h2>
+                  <p className="mt-1 text-xs text-slate-500">Attempts started or submitted in this period.</p>
+                </div>
+                <BreakdownBars rows={analytics.activityByMode} emptyMessage="No CBT attempts in this period." />
+              </article>
+            </section>
+
+            <section aria-labelledby="health-heading">
+              <div className="mb-4">
+                <h2 id="health-heading" className="text-base font-extrabold text-slate-950">Growth health</h2>
+                <p className="mt-1 text-xs text-slate-500">Core totals and {range}-day engagement quality.</p>
+              </div>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+                <MetricCard label="Total learners" value={formatNumber(metrics.totalLearners)} support="Individual learners and school pupils" Icon={Users} />
+                <MetricCard label={`New in ${range} days`} value={formatNumber(metrics.newUsersPeriod)} support={growthText} Icon={UserPlus} tone="blue" />
+                <MetricCard label={`Active in ${range} days`} value={formatNumber(metrics.activeUsersPeriod)} support="Signed in or recorded CBT activity" Icon={Activity} tone="violet" />
+                <MetricCard label={`Attempts in ${range} days`} value={formatNumber(metrics.attemptsPeriod)} support="Across every tracked CBT mode" Icon={BookOpen} tone="amber" />
+                <MetricCard label="Completion rate" value={`${metrics.completionRatePeriod ?? 0}%`} support={`Completed attempts in the last ${range} days`} Icon={CheckCircle2} />
+                <MetricCard label="Average score" value={metrics.averageScorePeriod === null ? "—" : `${metrics.averageScorePeriod}%`} support="Scored exam and assessment submissions" Icon={BarChart3} tone="blue" />
+              </div>
+            </section>
+
+            <section className="grid grid-cols-1 gap-6 xl:grid-cols-2">
+              <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="question-source-heading">
+                <div className="mb-6 flex items-start justify-between gap-4">
+                  <div>
+                    <h2 id="question-source-heading" className="text-base font-extrabold text-slate-950">Questions by source</h2>
+                    <p className="mt-1 text-xs leading-5 text-slate-500">Separates general-admin content from questions created by schools and other creators.</p>
+                  </div>
+                  <span className="rounded-xl bg-amber-50 px-3 py-2 text-right text-xs font-extrabold tabular-nums text-amber-800 ring-1 ring-amber-200">
+                    {formatNumber(metrics.userQuestionsTotal)} user-added
+                  </span>
+                </div>
+                <BreakdownBars rows={analytics.questionSources} emptyMessage="No questions have been added yet." />
+              </article>
+
+              <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="subject-heading">
+                <div className="mb-6">
+                  <h2 id="subject-heading" className="text-base font-extrabold text-slate-950">Top user-created subjects</h2>
+                  <p className="mt-1 text-xs text-slate-500">Subjects receiving the most questions outside the general admin console.</p>
+                </div>
+                <BreakdownBars rows={analytics.topSubjects} emptyMessage="No user-created subject data yet." />
+              </article>
+            </section>
+
+            <section aria-labelledby="content-health-heading">
+              <div className="mb-4">
+                <h2 id="content-health-heading" className="text-base font-extrabold text-slate-950">Creator content health</h2>
+                <p className="mt-1 text-xs text-slate-500">How quickly users and schools are building their own CBT libraries.</p>
+              </div>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                <MetricCard label="User-created CBTs" value={formatNumber(metrics.userExamsTotal)} support={`+${formatNumber(metrics.userExamsToday)} created today`} Icon={BookOpen} />
+                <MetricCard label="Published or live" value={formatNumber(metrics.publishedUserExams)} support="Creator CBTs currently available to learners" Icon={CheckCircle2} tone="blue" />
+                <MetricCard label="General questions" value={formatNumber(metrics.generalQuestionsTotal)} support="Question bank and public exams managed by you" Icon={FileQuestion} tone="violet" />
+                <MetricCard label="Active schools" value={formatNumber(metrics.activeSchools)} support="School workspaces currently active" Icon={Building2} tone="amber" />
+              </div>
+            </section>
+
+            <section className="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(0,1.55fr)_minmax(290px,0.7fr)]">
+              <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" aria-labelledby="recent-content-heading">
+                <div className="border-b border-slate-100 px-5 py-4">
+                  <h2 id="recent-content-heading" className="text-base font-extrabold text-slate-950">Recent user-created CBT content</h2>
+                  <p className="mt-1 text-xs text-slate-500">Latest exams and school assessments across the platform.</p>
+                </div>
+                <RecentContentList rows={analytics.recentContent} />
+              </article>
+
+              <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="learner-mix-heading">
+                <div className="mb-6">
+                  <h2 id="learner-mix-heading" className="text-base font-extrabold text-slate-950">Learner mix</h2>
+                  <p className="mt-1 text-xs text-slate-500">Where registered CBT learners come from.</p>
+                </div>
+                <BreakdownBars rows={analytics.accountMix} emptyMessage="No learner accounts yet." />
+                <details className="mt-6 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                  <summary className="cursor-pointer text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    How these metrics are counted
+                  </summary>
+                  <ul className="mt-3 space-y-2 text-xs leading-5 text-slate-600">
+                    <li><strong className="text-slate-800">Returning today:</strong> an account created before today whose latest sign-in happened today.</li>
+                    <li><strong className="text-slate-800">User-added questions:</strong> current questions in creator exams and School workspaces; general-admin uploads are excluded.</li>
+                    <li><strong className="text-slate-800">CBT attempts:</strong> submitted exams and assessments plus tracked practice, mock, past-question and survival sessions.</li>
+                  </ul>
+                </details>
+              </article>
+            </section>
+          </div>
+        ) : null}
+      </main>
+    </div>
+  );
 }
