@@ -10,6 +10,7 @@ import {
   CheckCircle2,
   ChevronRight,
   CircleHelp,
+  Clock3,
   ClipboardCheck,
   Copy,
   FilePlus2,
@@ -61,9 +62,10 @@ import {
   type SchoolDashboardStudent,
   type SchoolDashboardTerm,
 } from "@/lib/schoolDashboardService";
-import type {
-  PublishSchoolAssessmentResult,
-  SchoolAssessmentDraftResult,
+import {
+  closeSchoolAssessment,
+  type PublishSchoolAssessmentResult,
+  type SchoolAssessmentDraftResult,
 } from "@/lib/schoolAssessmentService";
 import {
   createSchoolPupil,
@@ -123,6 +125,13 @@ function formatDashboardDate(value: string | null): string {
     day: "numeric",
     month: "short",
     year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  }).format(new Date(value));
+}
+
+function formatDashboardTime(value: string): string {
+  return new Intl.DateTimeFormat("en-NG", {
     hour: "numeric",
     minute: "2-digit",
   }).format(new Date(value));
@@ -218,10 +227,60 @@ function StatusBadge({ status }: { status: SchoolDashboardAssessment["status"] }
   return <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-bold ${styles[status]}`}>{status === "Live" && <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" aria-hidden="true" />}{status}</span>;
 }
 
-function AssessmentList({ items, onAction, onPublish }: {
+function AssessmentActionsMenu({ assessment, onViewResults, onRequestClose }: {
+  assessment: SchoolDashboardAssessment;
+  onViewResults: (assessment: SchoolDashboardAssessment) => void;
+  onRequestClose?: (assessment: SchoolDashboardAssessment) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const menuId = `assessment-options-${assessment.id}`;
+
+  useEffect(() => {
+    if (!open) return;
+    const closeOnOutsidePress = (event: PointerEvent) => {
+      if (!containerRef.current?.contains(event.target as Node)) setOpen(false);
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("pointerdown", closeOnOutsidePress);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("pointerdown", closeOnOutsidePress);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [open]);
+
+  return (
+    <div ref={containerRef} className="relative justify-self-start md:justify-self-end">
+      <button
+        type="button"
+        onClick={() => setOpen((current) => !current)}
+        className="flex h-11 w-11 items-center justify-center rounded-xl text-[var(--cbt-muted)] hover:bg-[var(--cbt-surface-muted)] focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        aria-label={`More options for ${assessment.title}`}
+        aria-expanded={open}
+        aria-controls={menuId}
+        aria-haspopup="menu"
+      >
+        <MoreHorizontal size={18} aria-hidden="true" />
+      </button>
+      {open && (
+        <div id={menuId} role="menu" className="absolute left-0 top-full z-30 mt-1 w-48 overflow-hidden rounded-xl border border-slate-200 bg-white p-1.5 shadow-xl md:left-auto md:right-0">
+          <button type="button" role="menuitem" onClick={() => { setOpen(false); onViewResults(assessment); }} className="flex min-h-11 w-full items-center gap-2.5 rounded-lg px-3 text-left text-xs font-bold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-emerald-500"><BarChart3 size={16} className="text-emerald-700" aria-hidden="true" />View results</button>
+          {assessment.status === "Live" && onRequestClose && <button type="button" role="menuitem" onClick={() => { setOpen(false); onRequestClose(assessment); }} className="flex min-h-11 w-full items-center gap-2.5 rounded-lg px-3 text-left text-xs font-bold text-red-700 hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-500"><X size={16} aria-hidden="true" />Close assessment</button>}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function AssessmentList({ items, onEdit, onPublish, onViewResults, onRequestClose }: {
   items: SchoolDashboardAssessment[];
-  onAction: (message: string) => void;
+  onEdit?: (assessment: SchoolDashboardAssessment) => void;
   onPublish?: (assessment: SchoolDashboardAssessment) => void;
+  onViewResults: (assessment: SchoolDashboardAssessment) => void;
+  onRequestClose?: (assessment: SchoolDashboardAssessment) => void;
 }) {
   return (
     <div className="divide-y divide-[var(--cbt-border)]">
@@ -231,20 +290,19 @@ function AssessmentList({ items, onAction, onPublish }: {
             <div className="flex flex-wrap items-center gap-2"><h3 className="truncate text-sm font-extrabold">{assessment.title}</h3><StatusBadge status={assessment.status} /></div>
             <p className="mt-1 text-xs text-[var(--cbt-muted)]">{assessment.subject} · {assessment.classNames.length > 0 ? assessment.classNames.join(", ") : "No class assigned"}</p>
           </div>
-          <div className="flex items-center gap-2 text-xs font-semibold text-[var(--cbt-muted)] md:block"><CalendarDays size={15} className="md:hidden" aria-hidden="true" /><div><p>{formatDashboardDate(assessment.startsAt)}</p><p className="mt-1 text-[11px] font-normal">{assessment.durationMinutes} min · {assessment.questionCount} questions</p></div></div>
+          <div className="flex items-start gap-2 text-xs font-semibold text-[var(--cbt-muted)] md:block"><CalendarDays size={15} className="mt-0.5 md:hidden" aria-hidden="true" /><div><p>{formatDashboardDate(assessment.startsAt)}</p>{assessment.status === "Live" && <p className="mt-1 inline-flex items-center gap-1 font-bold text-emerald-700"><Clock3 size={13} aria-hidden="true" />{assessment.endsAt ? `Ends ${formatDashboardTime(assessment.endsAt)}` : "No closing time"}</p>}<p className="mt-1 text-[11px] font-normal">{assessment.durationMinutes} min · {assessment.questionCount} questions</p></div></div>
           <div className="text-xs text-[var(--cbt-muted)]"><p className="font-extrabold tabular-nums text-[var(--cbt-ink)]">{assessment.submittedCount} / {assessment.assignedStudentCount}</p><p className="mt-1 text-[11px]">Submitted</p></div>
-          {assessment.status === "Draft" && onPublish ? <button type="button" onClick={() => onPublish(assessment)} className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 text-xs font-extrabold text-emerald-800 hover:bg-emerald-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"><Send size={15} aria-hidden="true" />Assign &amp; publish</button> : <button type="button" onClick={() => onAction(`Opened options for ${assessment.title}`)} className="flex h-11 w-11 items-center justify-center rounded-xl text-[var(--cbt-muted)] hover:bg-[var(--cbt-surface-muted)] focus:outline-none focus:ring-2 focus:ring-emerald-500" aria-label={`More options for ${assessment.title}`}><MoreHorizontal size={18} aria-hidden="true" /></button>}
+          {assessment.status === "Draft" && onPublish ? <div className="flex gap-2 md:flex-col">{onEdit && <button type="button" onClick={() => onEdit(assessment)} className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-3 text-xs font-extrabold text-slate-700 hover:border-emerald-300 hover:bg-emerald-50 hover:text-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"><Pencil size={15} aria-hidden="true" />Edit draft</button>}<button type="button" onClick={() => onPublish(assessment)} className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 text-xs font-extrabold text-emerald-800 hover:bg-emerald-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"><Send size={15} aria-hidden="true" />Assign &amp; publish</button></div> : <AssessmentActionsMenu assessment={assessment} onViewResults={onViewResults} onRequestClose={onRequestClose} />}
         </article>
       ))}
     </div>
   );
 }
 
-function Overview({ data, loading, onNavigate, onAction }: {
+function Overview({ data, loading, onNavigate }: {
   data: SchoolDashboardData;
   loading: boolean;
   onNavigate: (view: ViewId) => void;
-  onAction: (message: string) => void;
 }) {
   const liveAssessment = data.assessments.find((assessment) => assessment.status === "Live") ?? null;
   const activeClasses = data.classes.filter((item) => item.status === "active");
@@ -268,7 +326,7 @@ function Overview({ data, loading, onNavigate, onAction }: {
                 <div>
                   <div className="flex flex-wrap items-center gap-2"><span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-white px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.1em] text-emerald-800"><span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />Live assessment</span><span className="text-xs font-semibold text-emerald-800">{liveAssessment.submittedCount} of {liveAssessment.assignedStudentCount} submitted</span></div>
                   <h2 id="live-heading" className="cbt-balance mt-3 text-xl font-bold text-emerald-950 sm:text-2xl">{liveAssessment.title}</h2>
-                  <p className="mt-2 text-sm leading-6 text-emerald-900/70">{liveAssessment.assignedStudentCount} pupils assigned{liveAssessment.classNames.length > 0 ? ` across ${liveAssessment.classNames.join(", ")}` : ""}. {liveAssessment.endsAt ? `Ends ${formatDashboardDate(liveAssessment.endsAt)}.` : "No closing time set."}</p>
+                  <p className="mt-2 text-sm leading-6 text-emerald-900/70">{liveAssessment.assignedStudentCount} pupils assigned{liveAssessment.classNames.length > 0 ? ` across ${liveAssessment.classNames.join(", ")}` : ""}. {liveAssessment.endsAt ? `Ends ${formatDashboardTime(liveAssessment.endsAt)}.` : "No closing time set."}</p>
                 </div>
                 <button type="button" onClick={() => onNavigate("assessments")} className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-xl bg-[var(--cbt-primary)] px-5 text-sm font-extrabold text-white hover:bg-[var(--cbt-primary-strong)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-emerald-50">View assessment<ChevronRight size={17} aria-hidden="true" /></button>
               </div>
@@ -278,9 +336,9 @@ function Overview({ data, loading, onNavigate, onAction }: {
               <EmptyState Icon={Play} title="0 live assessments" description="A published assessment will appear here when it is assigned to a class and set live." />
             </section>
           )}
-          <section className="overflow-hidden rounded-2xl border border-[var(--cbt-border)] bg-white shadow-sm" aria-labelledby="activity-heading">
+          <section className="relative rounded-2xl border border-[var(--cbt-border)] bg-white shadow-sm" aria-labelledby="activity-heading">
             <div className="flex items-center justify-between gap-4 border-b border-[var(--cbt-border)] px-4 py-4 sm:px-5"><div><h2 id="activity-heading" className="text-base font-bold">Assessment activity</h2><p className="mt-0.5 text-xs text-[var(--cbt-muted)]">Live, scheduled, published, draft, and closed assessments</p></div><button type="button" onClick={() => onNavigate("assessments")} className="min-h-10 rounded-lg px-3 text-xs font-bold text-[var(--cbt-primary)] hover:bg-[var(--cbt-primary-soft)] focus:outline-none focus:ring-2 focus:ring-emerald-500">View all</button></div>
-            {loading ? <DataLoadingState label="Loading assessments…" /> : data.assessments.length > 0 ? <AssessmentList items={data.assessments.slice(0, 3)} onAction={onAction} /> : <EmptyState Icon={ClipboardCheck} title="No assessments yet" description="School assessments will appear here after they are created." />}
+            {loading ? <DataLoadingState label="Loading assessments…" /> : data.assessments.length > 0 ? <AssessmentList items={data.assessments.slice(0, 3)} onViewResults={() => onNavigate("results")} /> : <EmptyState Icon={ClipboardCheck} title="No assessments yet" description="School assessments will appear here after they are created." />}
           </section>
         </div>
         <div className="space-y-5">
@@ -303,7 +361,7 @@ function Overview({ data, loading, onNavigate, onAction }: {
   );
 }
 
-function AssessmentsView({ schoolId, query, items, classes, terms, loading, canManage, onSaved, onPublished, onAction }: {
+function AssessmentsView({ schoolId, query, items, classes, terms, loading, canManage, onSaved, onPublished, onClosed, onViewResults }: {
   schoolId: string;
   query: string;
   items: SchoolDashboardAssessment[];
@@ -313,20 +371,55 @@ function AssessmentsView({ schoolId, query, items, classes, terms, loading, canM
   canManage: boolean;
   onSaved: (result: SchoolAssessmentDraftResult) => Promise<void>;
   onPublished: (result: PublishSchoolAssessmentResult) => Promise<void>;
-  onAction: (message: string) => void;
+  onClosed: (assessment: SchoolDashboardAssessment) => Promise<void>;
+  onViewResults: (assessment: SchoolDashboardAssessment) => void;
 }) {
   const [creatorOpen, setCreatorOpen] = useState(false);
+  const [editingTarget, setEditingTarget] = useState<SchoolDashboardAssessment | null>(null);
   const [publishTarget, setPublishTarget] = useState<SchoolDashboardAssessment | null>(null);
+  const [closeTarget, setCloseTarget] = useState<SchoolDashboardAssessment | null>(null);
+  const [closing, setClosing] = useState(false);
+  const [closeError, setCloseError] = useState("");
   const filtered = items.filter((assessment) => `${assessment.title} ${assessment.subject} ${assessment.classNames.join(" ")}`.toLowerCase().includes(query.toLowerCase()));
+
+  useEffect(() => {
+    if (!closeTarget) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && !closing) {
+        setCloseTarget(null);
+        setCloseError("");
+      }
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [closeTarget, closing]);
+
+  const confirmClose = async () => {
+    if (!closeTarget || closing) return;
+    setClosing(true);
+    setCloseError("");
+    try {
+      await closeSchoolAssessment(schoolId, closeTarget.id);
+      const closedAssessment = closeTarget;
+      setCloseTarget(null);
+      await onClosed(closedAssessment);
+    } catch (caughtError: unknown) {
+      setCloseError(caughtError instanceof Error ? caughtError.message : "Could not close the assessment.");
+    } finally {
+      setClosing(false);
+    }
+  };
+
   return (
     <>
-      <section className="overflow-hidden rounded-2xl border border-[var(--cbt-border)] bg-white shadow-sm" aria-labelledby="all-assessments-heading">
-        <div className="flex flex-col gap-3 border-b border-[var(--cbt-border)] px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5"><div><h2 id="all-assessments-heading" className="text-base font-bold">All assessments</h2><p className="mt-0.5 text-xs text-[var(--cbt-muted)]">{filtered.length} assessment{filtered.length === 1 ? "" : "s"}</p></div>{canManage && <button type="button" onClick={() => setCreatorOpen(true)} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[var(--cbt-primary)] px-4 text-sm font-bold text-white hover:bg-[var(--cbt-primary-strong)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"><Plus size={17} aria-hidden="true" />Create assessment</button>}</div>
+      <section className="relative rounded-2xl border border-[var(--cbt-border)] bg-white shadow-sm" aria-labelledby="all-assessments-heading">
+        <div className="flex flex-col gap-3 border-b border-[var(--cbt-border)] px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5"><div><h2 id="all-assessments-heading" className="text-base font-bold">All assessments</h2><p className="mt-0.5 text-xs text-[var(--cbt-muted)]">{filtered.length} assessment{filtered.length === 1 ? "" : "s"}</p></div>{canManage && <button type="button" onClick={() => { setEditingTarget(null); setCreatorOpen(true); }} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[var(--cbt-primary)] px-4 text-sm font-bold text-white hover:bg-[var(--cbt-primary-strong)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"><Plus size={17} aria-hidden="true" />Create assessment</button>}</div>
         {!canManage && <p className="m-5 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">Your School role can view assessments but cannot create them.</p>}
-        {loading ? <DataLoadingState label="Loading assessments…" /> : filtered.length > 0 ? <AssessmentList items={filtered} onAction={onAction} onPublish={canManage ? setPublishTarget : undefined} /> : query ? <EmptyState Icon={Search} title={`No match for “${query}”`} description="Try a subject, class, or different assessment title." /> : <EmptyState Icon={ClipboardCheck} title="No assessments yet" description="Create the first School assessment and add its questions." />}
+        {loading ? <DataLoadingState label="Loading assessments…" /> : filtered.length > 0 ? <AssessmentList items={filtered} onEdit={canManage ? (assessment) => { setEditingTarget(assessment); setCreatorOpen(true); } : undefined} onPublish={canManage ? setPublishTarget : undefined} onViewResults={onViewResults} onRequestClose={canManage ? (assessment) => { setCloseTarget(assessment); setCloseError(""); } : undefined} /> : query ? <EmptyState Icon={Search} title={`No match for “${query}”`} description="Try a subject, class, or different assessment title." /> : <EmptyState Icon={ClipboardCheck} title="No assessments yet" description="Create the first School assessment and add its questions." />}
       </section>
-      {creatorOpen && <SchoolAssessmentCreator schoolId={schoolId} terms={terms} onClose={() => setCreatorOpen(false)} onSaved={onSaved} />}
+      {creatorOpen && <SchoolAssessmentCreator key={editingTarget?.id ?? "new-assessment"} schoolId={schoolId} assessmentId={editingTarget?.id} terms={terms} onClose={() => { setCreatorOpen(false); setEditingTarget(null); }} onSaved={onSaved} />}
       {publishTarget && <SchoolAssessmentPublisher schoolId={schoolId} assessment={publishTarget} classes={classes} onClose={() => setPublishTarget(null)} onPublished={onPublished} />}
+      {closeTarget && <div className="fixed inset-0 z-[115] flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-sm"><section className="w-full max-w-md rounded-3xl border border-white/70 bg-white p-5 shadow-2xl sm:p-6" role="alertdialog" aria-modal="true" aria-labelledby="close-assessment-heading" aria-describedby="close-assessment-description"><span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-100 text-red-700"><X size={21} aria-hidden="true" /></span><h2 id="close-assessment-heading" className="mt-4 text-xl font-extrabold text-slate-950">Close {closeTarget.title}?</h2><p id="close-assessment-description" className="mt-2 text-sm leading-6 text-slate-700">Pupils who have not started will lose access immediately. Existing submissions and results will remain available.</p>{closeError && <p className="mt-4 rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-900" role="alert">{closeError}</p>}<div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end"><button type="button" onClick={() => { setCloseTarget(null); setCloseError(""); }} disabled={closing} className="min-h-12 rounded-xl border border-slate-300 bg-white px-5 text-sm font-bold text-slate-800 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50">Cancel</button><button type="button" onClick={confirmClose} disabled={closing} autoFocus className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-red-700 px-5 text-sm font-extrabold text-white hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60">{closing && <RefreshCw size={17} className="animate-spin" aria-hidden="true" />}{closing ? "Closing…" : "Close assessment"}</button></div></section></div>}
     </>
   );
 }
@@ -1041,8 +1134,8 @@ export default function CbtDashboard({ onSwitchToIndividual }: { onSwitchToIndiv
             </button>
           )}
 
-          {activeView === "overview" && <Overview data={dashboardData} loading={dashboardLoading} onNavigate={navigate} onAction={showToast} />}
-          {activeView === "assessments" && schoolContext && <AssessmentsView schoolId={schoolContext.school.id} query={searchQuery} items={dashboardData.assessments} classes={dashboardData.classes} terms={dashboardData.terms} loading={dashboardLoading} canManage={canManageAssessments} onSaved={async (result) => { await refreshDashboardData(); showToast(`${result.title} saved as a draft with ${result.questionCount} question${result.questionCount === 1 ? "" : "s"}`); }} onPublished={async (result) => { await refreshDashboardData(); showToast(result.status === "Live" ? `Assessment is live for ${result.classCount} class${result.classCount === 1 ? "" : "es"}` : `Assessment scheduled for ${result.classCount} class${result.classCount === 1 ? "" : "es"}`); }} onAction={showToast} />}
+          {activeView === "overview" && <Overview data={dashboardData} loading={dashboardLoading} onNavigate={navigate} />}
+          {activeView === "assessments" && schoolContext && <AssessmentsView schoolId={schoolContext.school.id} query={searchQuery} items={dashboardData.assessments} classes={dashboardData.classes} terms={dashboardData.terms} loading={dashboardLoading} canManage={canManageAssessments} onSaved={async (result) => { await refreshDashboardData(); showToast(result.operation === "updated" ? `${result.title} draft updated` : `${result.title} saved as a draft with ${result.questionCount} question${result.questionCount === 1 ? "" : "s"}`); }} onPublished={async (result) => { await refreshDashboardData(); showToast(result.status === "Live" ? `Assessment is live for ${result.classCount} class${result.classCount === 1 ? "" : "es"}` : `Assessment scheduled for ${result.classCount} class${result.classCount === 1 ? "" : "es"}`); }} onClosed={async (assessment) => { await refreshDashboardData(); showToast(`${assessment.title} is closed`); }} onViewResults={() => navigate("results")} />}
           {activeView === "results" && schoolContext && <SchoolResultsWorkspace schoolId={schoolContext.school.id} schoolName={schoolName} results={dashboardData.results} loading={dashboardLoading} canGrade={canManageAssessments} onChanged={refreshDashboardData} onAction={showToast} />}
           {activeView === "classes" && schoolContext && <ClassManagementView schoolId={schoolContext.school.id} classes={dashboardData.classes} terms={dashboardData.terms} loading={dashboardLoading} canManage={canManageClasses} canManageTerms={canManageTerms} onChanged={refreshDashboardData} onAction={showToast} />}
           {activeView === "students" && schoolContext && <StudentManagementView schoolId={schoolContext.school.id} schoolCode={schoolCode} students={dashboardData.students} classes={dashboardData.classes} loading={dashboardLoading} canManage={canManagePupils} onChanged={refreshDashboardData} onAction={showToast} schoolName={schoolName} />}
