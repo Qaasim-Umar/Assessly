@@ -27,6 +27,7 @@ import {
   Play,
   Plus,
   RefreshCw,
+  RotateCcw,
   Search,
   Send,
   Settings,
@@ -64,7 +65,9 @@ import {
 } from "@/lib/schoolDashboardService";
 import {
   closeSchoolAssessment,
+  reopenSchoolAssessment,
   type PublishSchoolAssessmentResult,
+  type ReopenSchoolAssessmentResult,
   type SchoolAssessmentDraftResult,
 } from "@/lib/schoolAssessmentService";
 import {
@@ -135,6 +138,17 @@ function formatDashboardTime(value: string): string {
     hour: "numeric",
     minute: "2-digit",
   }).format(new Date(value));
+}
+
+function localDateTimeValue(date: Date): string {
+  const offset = date.getTimezoneOffset() * 60_000;
+  return new Date(date.getTime() - offset).toISOString().slice(0, 16);
+}
+
+function defaultReopenClosingTime(): string {
+  const date = new Date(Date.now() + 60 * 60 * 1000);
+  date.setMinutes(Math.ceil(date.getMinutes() / 15) * 15, 0, 0);
+  return localDateTimeValue(date);
 }
 
 function EmptyState({
@@ -227,10 +241,11 @@ function StatusBadge({ status }: { status: SchoolDashboardAssessment["status"] }
   return <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-bold ${styles[status]}`}>{status === "Live" && <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" aria-hidden="true" />}{status}</span>;
 }
 
-function AssessmentActionsMenu({ assessment, onViewResults, onRequestClose }: {
+function AssessmentActionsMenu({ assessment, onViewResults, onRequestClose, onRequestReopen }: {
   assessment: SchoolDashboardAssessment;
   onViewResults: (assessment: SchoolDashboardAssessment) => void;
   onRequestClose?: (assessment: SchoolDashboardAssessment) => void;
+  onRequestReopen?: (assessment: SchoolDashboardAssessment) => void;
 }) {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -268,6 +283,7 @@ function AssessmentActionsMenu({ assessment, onViewResults, onRequestClose }: {
       {open && (
         <div id={menuId} role="menu" className="absolute left-0 top-full z-30 mt-1 w-48 overflow-hidden rounded-xl border border-slate-200 bg-white p-1.5 shadow-xl md:left-auto md:right-0">
           <button type="button" role="menuitem" onClick={() => { setOpen(false); onViewResults(assessment); }} className="flex min-h-11 w-full items-center gap-2.5 rounded-lg px-3 text-left text-xs font-bold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-emerald-500"><BarChart3 size={16} className="text-emerald-700" aria-hidden="true" />View results</button>
+          {assessment.status === "Closed" && onRequestReopen && <button type="button" role="menuitem" onClick={() => { setOpen(false); onRequestReopen(assessment); }} className="flex min-h-11 w-full items-center gap-2.5 rounded-lg px-3 text-left text-xs font-bold text-emerald-800 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500"><RotateCcw size={16} aria-hidden="true" />Reopen assessment</button>}
           {assessment.status === "Live" && onRequestClose && <button type="button" role="menuitem" onClick={() => { setOpen(false); onRequestClose(assessment); }} className="flex min-h-11 w-full items-center gap-2.5 rounded-lg px-3 text-left text-xs font-bold text-red-700 hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-500"><X size={16} aria-hidden="true" />Close assessment</button>}
         </div>
       )}
@@ -275,12 +291,13 @@ function AssessmentActionsMenu({ assessment, onViewResults, onRequestClose }: {
   );
 }
 
-function AssessmentList({ items, onEdit, onPublish, onViewResults, onRequestClose }: {
+function AssessmentList({ items, onEdit, onPublish, onViewResults, onRequestClose, onRequestReopen }: {
   items: SchoolDashboardAssessment[];
   onEdit?: (assessment: SchoolDashboardAssessment) => void;
   onPublish?: (assessment: SchoolDashboardAssessment) => void;
   onViewResults: (assessment: SchoolDashboardAssessment) => void;
   onRequestClose?: (assessment: SchoolDashboardAssessment) => void;
+  onRequestReopen?: (assessment: SchoolDashboardAssessment) => void;
 }) {
   return (
     <div className="divide-y divide-[var(--cbt-border)]">
@@ -292,7 +309,7 @@ function AssessmentList({ items, onEdit, onPublish, onViewResults, onRequestClos
           </div>
           <div className="flex items-start gap-2 text-xs font-semibold text-[var(--cbt-muted)] md:block"><CalendarDays size={15} className="mt-0.5 md:hidden" aria-hidden="true" /><div><p>{formatDashboardDate(assessment.startsAt)}</p>{assessment.status === "Live" && <p className="mt-1 inline-flex items-center gap-1 font-bold text-emerald-700"><Clock3 size={13} aria-hidden="true" />{assessment.endsAt ? `Ends ${formatDashboardTime(assessment.endsAt)}` : "No closing time"}</p>}<p className="mt-1 text-[11px] font-normal">{assessment.durationMinutes} min · {assessment.questionCount} questions</p></div></div>
           <div className="text-xs text-[var(--cbt-muted)]"><p className="font-extrabold tabular-nums text-[var(--cbt-ink)]">{assessment.submittedCount} / {assessment.assignedStudentCount}</p><p className="mt-1 text-[11px]">Submitted</p></div>
-          {assessment.status === "Draft" && onPublish ? <div className="flex gap-2 md:flex-col">{onEdit && <button type="button" onClick={() => onEdit(assessment)} className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-3 text-xs font-extrabold text-slate-700 hover:border-emerald-300 hover:bg-emerald-50 hover:text-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"><Pencil size={15} aria-hidden="true" />Edit draft</button>}<button type="button" onClick={() => onPublish(assessment)} className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 text-xs font-extrabold text-emerald-800 hover:bg-emerald-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"><Send size={15} aria-hidden="true" />Assign &amp; publish</button></div> : <AssessmentActionsMenu assessment={assessment} onViewResults={onViewResults} onRequestClose={onRequestClose} />}
+          {assessment.status === "Draft" && onPublish ? <div className="flex gap-2 md:flex-col">{onEdit && <button type="button" onClick={() => onEdit(assessment)} className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-3 text-xs font-extrabold text-slate-700 hover:border-emerald-300 hover:bg-emerald-50 hover:text-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"><Pencil size={15} aria-hidden="true" />Edit draft</button>}<button type="button" onClick={() => onPublish(assessment)} className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 text-xs font-extrabold text-emerald-800 hover:bg-emerald-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"><Send size={15} aria-hidden="true" />Assign &amp; publish</button></div> : <AssessmentActionsMenu assessment={assessment} onViewResults={onViewResults} onRequestClose={onRequestClose} onRequestReopen={onRequestReopen} />}
         </article>
       ))}
     </div>
@@ -361,7 +378,7 @@ function Overview({ data, loading, onNavigate }: {
   );
 }
 
-function AssessmentsView({ schoolId, query, items, classes, terms, loading, canManage, onSaved, onPublished, onClosed, onViewResults }: {
+function AssessmentsView({ schoolId, query, items, classes, terms, loading, canManage, onSaved, onPublished, onClosed, onReopened, onViewResults }: {
   schoolId: string;
   query: string;
   items: SchoolDashboardAssessment[];
@@ -372,6 +389,7 @@ function AssessmentsView({ schoolId, query, items, classes, terms, loading, canM
   onSaved: (result: SchoolAssessmentDraftResult) => Promise<void>;
   onPublished: (result: PublishSchoolAssessmentResult) => Promise<void>;
   onClosed: (assessment: SchoolDashboardAssessment) => Promise<void>;
+  onReopened: (result: ReopenSchoolAssessmentResult) => Promise<void>;
   onViewResults: (assessment: SchoolDashboardAssessment) => void;
 }) {
   const [creatorOpen, setCreatorOpen] = useState(false);
@@ -380,6 +398,10 @@ function AssessmentsView({ schoolId, query, items, classes, terms, loading, canM
   const [closeTarget, setCloseTarget] = useState<SchoolDashboardAssessment | null>(null);
   const [closing, setClosing] = useState(false);
   const [closeError, setCloseError] = useState("");
+  const [reopenTarget, setReopenTarget] = useState<SchoolDashboardAssessment | null>(null);
+  const [reopenEndsAt, setReopenEndsAt] = useState(defaultReopenClosingTime);
+  const [reopening, setReopening] = useState(false);
+  const [reopenError, setReopenError] = useState("");
   const filtered = items.filter((assessment) => `${assessment.title} ${assessment.subject} ${assessment.classNames.join(" ")}`.toLowerCase().includes(query.toLowerCase()));
 
   useEffect(() => {
@@ -393,6 +415,18 @@ function AssessmentsView({ schoolId, query, items, classes, terms, loading, canM
     window.addEventListener("keydown", closeOnEscape);
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, [closeTarget, closing]);
+
+  useEffect(() => {
+    if (!reopenTarget) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && !reopening) {
+        setReopenTarget(null);
+        setReopenError("");
+      }
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [reopenTarget, reopening]);
 
   const confirmClose = async () => {
     if (!closeTarget || closing) return;
@@ -410,16 +444,36 @@ function AssessmentsView({ schoolId, query, items, classes, terms, loading, canM
     }
   };
 
+  const confirmReopen = async () => {
+    if (!reopenTarget || reopening) return;
+    if (!reopenEndsAt || new Date(reopenEndsAt).getTime() <= Date.now()) {
+      setReopenError("Choose a closing time in the future.");
+      return;
+    }
+    setReopening(true);
+    setReopenError("");
+    try {
+      const result = await reopenSchoolAssessment(schoolId, reopenTarget.id, reopenEndsAt);
+      setReopenTarget(null);
+      await onReopened(result);
+    } catch (caughtError: unknown) {
+      setReopenError(caughtError instanceof Error ? caughtError.message : "Could not reopen the assessment.");
+    } finally {
+      setReopening(false);
+    }
+  };
+
   return (
     <>
       <section className="relative rounded-2xl border border-[var(--cbt-border)] bg-white shadow-sm" aria-labelledby="all-assessments-heading">
         <div className="flex flex-col gap-3 border-b border-[var(--cbt-border)] px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5"><div><h2 id="all-assessments-heading" className="text-base font-bold">All assessments</h2><p className="mt-0.5 text-xs text-[var(--cbt-muted)]">{filtered.length} assessment{filtered.length === 1 ? "" : "s"}</p></div>{canManage && <button type="button" onClick={() => { setEditingTarget(null); setCreatorOpen(true); }} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[var(--cbt-primary)] px-4 text-sm font-bold text-white hover:bg-[var(--cbt-primary-strong)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"><Plus size={17} aria-hidden="true" />Create assessment</button>}</div>
         {!canManage && <p className="m-5 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">Your School role can view assessments but cannot create them.</p>}
-        {loading ? <DataLoadingState label="Loading assessments…" /> : filtered.length > 0 ? <AssessmentList items={filtered} onEdit={canManage ? (assessment) => { setEditingTarget(assessment); setCreatorOpen(true); } : undefined} onPublish={canManage ? setPublishTarget : undefined} onViewResults={onViewResults} onRequestClose={canManage ? (assessment) => { setCloseTarget(assessment); setCloseError(""); } : undefined} /> : query ? <EmptyState Icon={Search} title={`No match for “${query}”`} description="Try a subject, class, or different assessment title." /> : <EmptyState Icon={ClipboardCheck} title="No assessments yet" description="Create the first School assessment and add its questions." />}
+        {loading ? <DataLoadingState label="Loading assessments…" /> : filtered.length > 0 ? <AssessmentList items={filtered} onEdit={canManage ? (assessment) => { setEditingTarget(assessment); setCreatorOpen(true); } : undefined} onPublish={canManage ? setPublishTarget : undefined} onViewResults={onViewResults} onRequestClose={canManage ? (assessment) => { setCloseTarget(assessment); setCloseError(""); } : undefined} onRequestReopen={canManage ? (assessment) => { setReopenTarget(assessment); setReopenEndsAt(defaultReopenClosingTime()); setReopenError(""); } : undefined} /> : query ? <EmptyState Icon={Search} title={`No match for “${query}”`} description="Try a subject, class, or different assessment title." /> : <EmptyState Icon={ClipboardCheck} title="No assessments yet" description="Create the first School assessment and add its questions." />}
       </section>
       {creatorOpen && <SchoolAssessmentCreator key={editingTarget?.id ?? "new-assessment"} schoolId={schoolId} assessmentId={editingTarget?.id} terms={terms} onClose={() => { setCreatorOpen(false); setEditingTarget(null); }} onSaved={onSaved} />}
       {publishTarget && <SchoolAssessmentPublisher schoolId={schoolId} assessment={publishTarget} classes={classes} onClose={() => setPublishTarget(null)} onPublished={onPublished} />}
-      {closeTarget && <div className="fixed inset-0 z-[115] flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-sm"><section className="w-full max-w-md rounded-3xl border border-white/70 bg-white p-5 shadow-2xl sm:p-6" role="alertdialog" aria-modal="true" aria-labelledby="close-assessment-heading" aria-describedby="close-assessment-description"><span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-100 text-red-700"><X size={21} aria-hidden="true" /></span><h2 id="close-assessment-heading" className="mt-4 text-xl font-extrabold text-slate-950">Close {closeTarget.title}?</h2><p id="close-assessment-description" className="mt-2 text-sm leading-6 text-slate-700">Pupils who have not started will lose access immediately. Existing submissions and results will remain available.</p>{closeError && <p className="mt-4 rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-900" role="alert">{closeError}</p>}<div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end"><button type="button" onClick={() => { setCloseTarget(null); setCloseError(""); }} disabled={closing} className="min-h-12 rounded-xl border border-slate-300 bg-white px-5 text-sm font-bold text-slate-800 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50">Cancel</button><button type="button" onClick={confirmClose} disabled={closing} autoFocus className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-red-700 px-5 text-sm font-extrabold text-white hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60">{closing && <RefreshCw size={17} className="animate-spin" aria-hidden="true" />}{closing ? "Closing…" : "Close assessment"}</button></div></section></div>}
+      {closeTarget && <div className="fixed inset-0 z-[115] flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-sm"><section className="w-full max-w-md rounded-3xl border border-white/70 bg-white p-5 shadow-2xl sm:p-6" role="alertdialog" aria-modal="true" aria-labelledby="close-assessment-heading" aria-describedby="close-assessment-description"><span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-100 text-red-700"><X size={21} aria-hidden="true" /></span><h2 id="close-assessment-heading" className="mt-4 text-xl font-extrabold text-slate-950">Close {closeTarget.title}?</h2><p id="close-assessment-description" className="mt-2 text-sm leading-6 text-slate-700">Pupils who have not submitted will lose access immediately, including anyone currently writing. Existing submissions and results will remain available.</p>{closeError && <p className="mt-4 rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-900" role="alert">{closeError}</p>}<div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end"><button type="button" onClick={() => { setCloseTarget(null); setCloseError(""); }} disabled={closing} className="min-h-12 rounded-xl border border-slate-300 bg-white px-5 text-sm font-bold text-slate-800 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50">Cancel</button><button type="button" onClick={confirmClose} disabled={closing} autoFocus className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-red-700 px-5 text-sm font-extrabold text-white hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60">{closing && <RefreshCw size={17} className="animate-spin" aria-hidden="true" />}{closing ? "Closing…" : "Close assessment"}</button></div></section></div>}
+      {reopenTarget && <div className="fixed inset-0 z-[115] flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-sm"><form onSubmit={(event) => { event.preventDefault(); void confirmReopen(); }} className="w-full max-w-md rounded-3xl border border-white/70 bg-white p-5 shadow-2xl sm:p-6" role="dialog" aria-modal="true" aria-labelledby="reopen-assessment-heading" aria-describedby="reopen-assessment-description"><span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800"><RotateCcw size={21} aria-hidden="true" /></span><h2 id="reopen-assessment-heading" className="mt-4 text-xl font-extrabold text-slate-950">Reopen {reopenTarget.title}?</h2><p id="reopen-assessment-description" className="mt-2 text-sm leading-6 text-slate-700">Pupils who have not submitted will regain access. Existing submissions and results will stay unchanged.</p><label htmlFor="reopen-closing-time" className="mt-5 block text-xs font-bold text-slate-700">New closing time <span className="text-red-600" aria-hidden="true">*</span></label><input id="reopen-closing-time" type="datetime-local" required value={reopenEndsAt} min={localDateTimeValue(new Date())} onChange={(event) => { setReopenEndsAt(event.target.value); setReopenError(""); }} autoFocus className="mt-2 min-h-12 w-full rounded-xl border border-slate-300 bg-white px-3.5 text-base text-slate-900 outline-none transition-colors focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 sm:text-sm" /><p className="mt-2 text-xs leading-5 text-slate-600">The time uses this device&apos;s local timezone.</p>{reopenError && <p className="mt-4 rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-900" role="alert">{reopenError}</p>}<div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end"><button type="button" onClick={() => { setReopenTarget(null); setReopenError(""); }} disabled={reopening} className="min-h-12 rounded-xl border border-slate-300 bg-white px-5 text-sm font-bold text-slate-800 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50">Cancel</button><button type="submit" disabled={reopening} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-emerald-700 px-5 text-sm font-extrabold text-white hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60">{reopening ? <RefreshCw size={17} className="animate-spin" aria-hidden="true" /> : <RotateCcw size={17} aria-hidden="true" />}{reopening ? "Reopening…" : "Reopen assessment"}</button></div></form></div>}
     </>
   );
 }
@@ -1135,7 +1189,7 @@ export default function CbtDashboard({ onSwitchToIndividual }: { onSwitchToIndiv
           )}
 
           {activeView === "overview" && <Overview data={dashboardData} loading={dashboardLoading} onNavigate={navigate} />}
-          {activeView === "assessments" && schoolContext && <AssessmentsView schoolId={schoolContext.school.id} query={searchQuery} items={dashboardData.assessments} classes={dashboardData.classes} terms={dashboardData.terms} loading={dashboardLoading} canManage={canManageAssessments} onSaved={async (result) => { await refreshDashboardData(); showToast(result.operation === "updated" ? `${result.title} draft updated` : `${result.title} saved as a draft with ${result.questionCount} question${result.questionCount === 1 ? "" : "s"}`); }} onPublished={async (result) => { await refreshDashboardData(); showToast(result.status === "Live" ? `Assessment is live for ${result.classCount} class${result.classCount === 1 ? "" : "es"}` : `Assessment scheduled for ${result.classCount} class${result.classCount === 1 ? "" : "es"}`); }} onClosed={async (assessment) => { await refreshDashboardData(); showToast(`${assessment.title} is closed`); }} onViewResults={() => navigate("results")} />}
+          {activeView === "assessments" && schoolContext && <AssessmentsView schoolId={schoolContext.school.id} query={searchQuery} items={dashboardData.assessments} classes={dashboardData.classes} terms={dashboardData.terms} loading={dashboardLoading} canManage={canManageAssessments} onSaved={async (result) => { await refreshDashboardData(); showToast(result.operation === "updated" ? `${result.title} draft updated` : `${result.title} saved as a draft with ${result.questionCount} question${result.questionCount === 1 ? "" : "s"}`); }} onPublished={async (result) => { await refreshDashboardData(); showToast(result.status === "Live" ? `Assessment is live for ${result.classCount} class${result.classCount === 1 ? "" : "es"}` : `Assessment scheduled for ${result.classCount} class${result.classCount === 1 ? "" : "es"}`); }} onClosed={async (assessment) => { await refreshDashboardData(); showToast(`${assessment.title} is closed`); }} onReopened={async (result) => { await refreshDashboardData(); showToast(`${result.title} is live again until ${formatDashboardDate(result.endsAt)}`); }} onViewResults={() => navigate("results")} />}
           {activeView === "results" && schoolContext && <SchoolResultsWorkspace schoolId={schoolContext.school.id} schoolName={schoolName} results={dashboardData.results} loading={dashboardLoading} canGrade={canManageAssessments} onChanged={refreshDashboardData} onAction={showToast} />}
           {activeView === "classes" && schoolContext && <ClassManagementView schoolId={schoolContext.school.id} classes={dashboardData.classes} terms={dashboardData.terms} loading={dashboardLoading} canManage={canManageClasses} canManageTerms={canManageTerms} onChanged={refreshDashboardData} onAction={showToast} />}
           {activeView === "students" && schoolContext && <StudentManagementView schoolId={schoolContext.school.id} schoolCode={schoolCode} students={dashboardData.students} classes={dashboardData.classes} loading={dashboardLoading} canManage={canManagePupils} onChanged={refreshDashboardData} onAction={showToast} schoolName={schoolName} />}
