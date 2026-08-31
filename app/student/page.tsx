@@ -55,6 +55,13 @@ export default function StudentPortalPage() {
     const [codeError, setCodeError] = useState("");
     const [codeLoading, setCodeLoading] = useState(false);
     const [loadError, setLoadError] = useState("");
+    const [schoolAssessmentView, setSchoolAssessmentView] = useState<"available" | "completed">("available");
+
+    const availableSchoolAssessments = schoolAssessments.filter((assessment) => assessment.can_attempt && !assessment.submitted_at);
+    const completedSchoolAssessments = schoolAssessments.filter((assessment) => Boolean(assessment.submitted_at));
+    const visibleSchoolAssessments = schoolAssessmentView === "available"
+        ? availableSchoolAssessments
+        : completedSchoolAssessments;
 
     useEffect(() => {
         getStudentProfile().then(profile => {
@@ -188,9 +195,34 @@ export default function StudentPortalPage() {
 
                 {/* Exams List */}
                 <div className="flex items-center justify-between mb-2 px-1">
-                    <h2 className="text-lg font-bold text-gray-900">{isSchoolPupil ? "Available School Assessments" : "Available Exams"}</h2>
-                    <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">{loading ? "Loading…" : isSchoolPupil ? `${schoolAssessments.length} assessment${schoolAssessments.length !== 1 ? "s" : ""}` : `${exams.length} exam${exams.length !== 1 ? "s" : ""}`}</span>
+                    <h2 className="text-lg font-bold text-gray-900">{isSchoolPupil ? schoolAssessmentView === "available" ? "Available Assessments" : "Completed Assessments" : "Available Exams"}</h2>
+                    <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">{loading ? "Loading…" : isSchoolPupil ? `${visibleSchoolAssessments.length} assessment${visibleSchoolAssessments.length !== 1 ? "s" : ""}` : `${exams.length} exam${exams.length !== 1 ? "s" : ""}`}</span>
                 </div>
+
+                {isSchoolPupil && !loading && !loadError && (
+                    <div className="grid grid-cols-2 gap-1 rounded-2xl border border-gray-200 bg-white p-1.5 shadow-sm" role="tablist" aria-label="School assessment views">
+                        <button
+                            type="button"
+                            role="tab"
+                            aria-selected={schoolAssessmentView === "available"}
+                            aria-controls="school-assessment-panel"
+                            onClick={() => setSchoolAssessmentView("available")}
+                            className={`min-h-12 rounded-xl px-3 text-sm font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${schoolAssessmentView === "available" ? "bg-green-700 text-white shadow-sm" : "text-gray-600 hover:bg-gray-50"}`}
+                        >
+                            Available <span className={`ml-1 rounded-full px-2 py-0.5 text-[11px] tabular-nums ${schoolAssessmentView === "available" ? "bg-white/20 text-white" : "bg-green-50 text-green-700"}`}>{availableSchoolAssessments.length}</span>
+                        </button>
+                        <button
+                            type="button"
+                            role="tab"
+                            aria-selected={schoolAssessmentView === "completed"}
+                            aria-controls="school-assessment-panel"
+                            onClick={() => setSchoolAssessmentView("completed")}
+                            className={`min-h-12 rounded-xl px-3 text-sm font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${schoolAssessmentView === "completed" ? "bg-green-700 text-white shadow-sm" : "text-gray-600 hover:bg-gray-50"}`}
+                        >
+                            Completed <span className={`ml-1 rounded-full px-2 py-0.5 text-[11px] tabular-nums ${schoolAssessmentView === "completed" ? "bg-white/20 text-white" : "bg-gray-100 text-gray-600"}`}>{completedSchoolAssessments.length}</span>
+                        </button>
+                    </div>
+                )}
 
                 {/* School code entry — shown when no code is set */}
                 {!isSchoolPupil && !schoolCode && !loading && (
@@ -257,7 +289,7 @@ export default function StudentPortalPage() {
                             <button type="button" onClick={reloadSchoolAssessments} className="mt-5 min-h-11 rounded-xl bg-green-700 px-5 text-sm font-bold text-white hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">Try again</button>
                         </div>
                     ) : schoolAssessments.length === 0 ? (
-                        <div className="bg-white border border-gray-100 rounded-2xl py-16 px-6 text-center shadow-sm">
+                        <div id="school-assessment-panel" role="tabpanel" className="bg-white border border-gray-100 rounded-2xl py-16 px-6 text-center shadow-sm">
                             <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-100">
                                 <svg className="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
                             </div>
@@ -265,9 +297,22 @@ export default function StudentPortalPage() {
                             <p className="text-sm text-gray-500 mt-1 max-w-sm mx-auto">Your teacher has not published an assessment for your class yet. Check back later.</p>
                             <button type="button" onClick={reloadSchoolAssessments} className="mt-5 min-h-11 rounded-xl border border-gray-200 bg-white px-5 text-sm font-bold text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500">Refresh</button>
                         </div>
+                    ) : visibleSchoolAssessments.length === 0 ? (
+                        <div id="school-assessment-panel" role="tabpanel" className="bg-white border border-gray-100 rounded-2xl py-16 px-6 text-center shadow-sm">
+                            <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border ${schoolAssessmentView === "available" ? "bg-green-50 border-green-100" : "bg-gray-50 border-gray-100"}`}>
+                                {schoolAssessmentView === "available" ? (
+                                    <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" d="M12 6v6l4 2m5-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                ) : (
+                                    <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.7" d="M9 12.75l2.25 2.25L15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                )}
+                            </div>
+                            <p className="text-base font-bold text-gray-700">{schoolAssessmentView === "available" ? "No live assessments" : "No completed assessments"}</p>
+                            <p className="text-sm text-gray-500 mt-1 max-w-sm mx-auto">{schoolAssessmentView === "available" ? "There is no assessment available to take right now. Check back when your teacher publishes one." : "Assessments you submit will appear here with their result status."}</p>
+                            {schoolAssessmentView === "available" && <button type="button" onClick={reloadSchoolAssessments} className="mt-5 min-h-11 rounded-xl border border-gray-200 bg-white px-5 text-sm font-bold text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500">Refresh</button>}
+                        </div>
                     ) : (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                            {schoolAssessments.map((assessment) => {
+                        <div id="school-assessment-panel" role="tabpanel" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                            {visibleSchoolAssessments.map((assessment) => {
                                 const awaitingGrading = Boolean(assessment.submitted_at && assessment.show_results && assessment.theory_status === "pending");
                                 const statusLabel = assessment.result_available ? "Result ready" : awaitingGrading ? "Awaiting grading" : assessment.submitted_at ? "Submitted" : "Available";
                                 const statusClass = assessment.result_available
@@ -331,62 +376,60 @@ export default function StudentPortalPage() {
                 ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                         {exams.map((exam) => (
-                            <div
+                            <button
+                                type="button"
                                 key={exam.id}
                                 onClick={() => router.push(`/exam/${exam.id}`)}
-                                className="group relative bg-white border border-gray-200/80 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col overflow-hidden"
+                                className="group relative flex min-h-72 w-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 text-left shadow-sm transition-[border-color,box-shadow] duration-200 hover:border-green-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-green-100 sm:p-6"
                             >
-                                {/* Decorative top gradient accent */}
-                                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 via-green-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                <span className="absolute inset-x-0 top-0 h-1 bg-green-600" aria-hidden="true" />
 
-                                <div className="flex justify-between items-start mb-5">
+                                <span className="mb-5 flex items-start justify-between gap-3">
                                     <span className={`inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.25 rounded-full uppercase tracking-wider ${statusStyle[exam.status] ?? "bg-gray-100 text-gray-700 border border-gray-200"}`}>
                                         {exam.status === "Live" && (
-                                            <span className="relative flex h-2 w-2">
-                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75" />
-                                                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-                                            </span>
+                                            <span className="h-2 w-2 rounded-full bg-green-600" aria-hidden="true" />
                                         )}
                                         {exam.status}
                                     </span>
                                     <span className={`text-[11px] font-bold px-3 py-1.25 rounded-full ${typeStyle[exam.type] ?? "bg-gray-100 text-gray-700"}`}>
                                         {exam.type}
                                     </span>
-                                </div>
+                                </span>
 
-                                <div className="mb-6 flex-grow">
-                                    <h3 className="font-extrabold text-gray-900 text-xl leading-tight mb-2 group-hover:text-green-700 transition-colors line-clamp-2">
+                                <span className="mb-6 block flex-grow">
+                                    <span className="mb-2 block line-clamp-2 text-xl font-extrabold leading-tight text-gray-900 transition-colors group-hover:text-green-700">
                                         {exam.title}
-                                    </h3>
-                                    <div className="flex items-center gap-2 text-sm text-gray-500 font-medium">
-                                        <span className="px-2 py-0.5 bg-gray-100 rounded text-gray-700">{exam.subject}</span>
+                                    </span>
+                                    <span className="flex flex-wrap items-center gap-2 text-sm font-medium text-gray-500">
+                                        <span className="rounded-md bg-gray-100 px-2 py-1 text-gray-700">{exam.subject}</span>
                                         <span className="text-gray-300">•</span>
                                         <span>{exam.class_level}</span>
-                                    </div>
-                                </div>
+                                    </span>
+                                </span>
 
-                                <div className="flex items-center gap-4 mb-4 mt-auto text-sm text-gray-500 font-medium">
-                                    <div className="flex items-center gap-1.5">
-                                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                        <span>{exam.question_count} Qs</span>
-                                    </div>
-                                    <div className="flex items-center gap-1.5">
-                                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                        <span>{exam.duration ? `${exam.duration}m` : "None"}</span>
-                                    </div>
-                                    <div className="flex items-center gap-1.5">
-                                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                                        <span className="capitalize">{exam.difficulty}</span>
-                                    </div>
-                                </div>
+                                <span className="mb-5 grid grid-cols-3 gap-2">
+                                    <span className="rounded-xl bg-gray-50 px-2 py-3 text-center">
+                                        <span className="block text-[10px] font-bold uppercase tracking-wide text-gray-400">Questions</span>
+                                        <span className="mt-1 block text-sm font-bold text-gray-800">{exam.question_count}</span>
+                                    </span>
+                                    <span className="rounded-xl bg-gray-50 px-2 py-3 text-center">
+                                        <span className="block text-[10px] font-bold uppercase tracking-wide text-gray-400">Duration</span>
+                                        <span className="mt-1 block text-sm font-bold text-gray-800">{exam.duration ? `${exam.duration} min` : "No timer"}</span>
+                                    </span>
+                                    <span className="rounded-xl bg-gray-50 px-2 py-3 text-center">
+                                        <span className="block text-[10px] font-bold uppercase tracking-wide text-gray-400">Level</span>
+                                        <span className="mt-1 block truncate text-sm font-bold capitalize text-gray-800">{exam.difficulty}</span>
+                                    </span>
+                                </span>
 
-                                <div className="pt-4 border-t border-gray-100 flex items-center justify-end">
-                                    <div className="flex items-center gap-1 text-green-600 font-bold group-hover:text-green-700 transition-colors">
-                                        <span className="text-sm">Start Assessment</span>
-                                        <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-                                    </div>
-                                </div>
-                            </div>
+                                <span className="flex min-h-11 items-center justify-between border-t border-gray-100 pt-4">
+                                    <span className="text-xs font-medium text-gray-400">Ready when you are</span>
+                                    <span className="flex items-center gap-1.5 text-sm font-bold text-green-700 transition-colors group-hover:text-green-800">
+                                        Start assessment
+                                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                                    </span>
+                                </span>
+                            </button>
                         ))}
                     </div>
                 )}
