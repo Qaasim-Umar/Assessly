@@ -6,6 +6,7 @@ export const SCHOOL_ASSESSMENT_TYPES = ["Assignment", "Test", "Exam", "Practice"
 export type SchoolAssessmentType = (typeof SCHOOL_ASSESSMENT_TYPES)[number];
 
 export type SchoolAssessmentQuestionInput = {
+  id?: string | null;
   text: string;
   type: SchoolQuestionType;
   topic: string | null;
@@ -29,6 +30,27 @@ export type SchoolAssessmentDraftResult = {
   id: string;
   title: string;
   questionCount: number;
+  operation: "created" | "updated";
+};
+
+export type SchoolAssessmentDraft = {
+  id: string;
+  academicTermId: string | null;
+  title: string;
+  subject: string;
+  assessmentType: SchoolAssessmentType;
+  durationMinutes: number | null;
+  showResults: boolean;
+  questions: Array<Required<Pick<SchoolAssessmentQuestionInput, "text" | "type" | "difficulty">> & {
+    id: string;
+    topic: string | null;
+    options: Array<{ label: string; text: string }> | null;
+    correctAnswer: number | null;
+  }>;
+};
+
+export type UpdateSchoolAssessmentDraftInput = CreateSchoolAssessmentDraftInput & {
+  assessmentId: string;
 };
 
 export type PublishSchoolAssessmentInput = {
@@ -46,9 +68,24 @@ export type PublishSchoolAssessmentResult = {
   status: "Live" | "Published";
 };
 
+export type CloseSchoolAssessmentResult = {
+  assessmentId: string;
+  closedAt: string;
+};
+
 function writeError(error: { code?: string; message?: string }, fallback: string): Error {
   if (error.code === "42501") {
     return new Error("You do not have permission to create School assessments.");
+  }
+  if (error.code === "23514") {
+    return new Error("Check the assessment details and questions, then try again.");
+  }
+  return new Error(error.message?.trim() || fallback);
+}
+
+function draftEditError(error: { code?: string; message?: string }, fallback: string): Error {
+  if (error.code === "42501") {
+    return new Error("You do not have permission to edit assessments for this school.");
   }
   if (error.code === "23514") {
     return new Error("Check the assessment details and questions, then try again.");
@@ -74,6 +111,24 @@ function publishError(error: { code?: string; message?: string }, fallback: stri
     return new Error("You do not have permission to publish assessments for this school.");
   }
   return new Error(error.message?.trim() || fallback);
+}
+
+function closeError(error: { code?: string; message?: string }, fallback: string): Error {
+  if (error.code === "42501") {
+    return new Error("You do not have permission to close assessments for this school.");
+  }
+  return new Error(error.message?.trim() || fallback);
+}
+
+function readOptions(value: unknown): Array<{ label: string; text: string }> | null {
+  if (!Array.isArray(value)) return null;
+  const options = value.flatMap((option) => {
+    if (!option || typeof option !== "object") return [];
+    const row = option as { label?: unknown; text?: unknown };
+    if (typeof row.label !== "string" || typeof row.text !== "string") return [];
+    return [{ label: row.label, text: row.text }];
+  });
+  return options.length > 0 ? options : null;
 }
 
 function validateInput(input: CreateSchoolAssessmentDraftInput) {
@@ -178,7 +233,197 @@ export async function createSchoolAssessmentDraft(
     id: assessment.id,
     title,
     questionCount: input.questions.length,
+    operation: "created",
   };
+}
+
+export async function getSchoolAssessmentDraft(
+  schoolId: string,
+  assessmentId: string,
+): Promise<SchoolAssessmentDraft> {
+  const cleanSchoolId = schoolId.trim();
+  const cleanAssessmentId = assessmentId.trim();
+  if (!cleanSchoolId || !cleanAssessmentId) {
+    throw new Error("This draft could not be identified. Refresh the page and try again.");
+  }
+
+  const { data: authData, error: authError } = await supabase.auth.getUser();
+  if (authError || !authData.user) {
+    throw new Error("Your session has expired. Sign in again before editing the assessment.");
+  }
+
+  const { data: assessment, error: assessmentError } = await supabase
+    .from("school_assessments")
+    .select("id, academic_term_id, title, subject, assessment_type, duration_minutes, show_results, status")
+    .eq("school_id", cleanSchoolId)
+    .eq("id", cleanAssessmentId)
+    .maybeSingle();
+
+  if (assessmentError) throw draftEditError(assessmentError, "Could not load the assessment draft.");
+  if (!assessment) throw new Error("The draft was not found or you do not have permission to edit it.");
+  if (assessment.status !== "Draft") throw new Error("Only draft assessments can be edited.");
+
+  const { data: questionRows, error: questionError } = await supabase
+    .from("school_assessment_questions")
+    .select("id, text, type, topic, difficulty, options, correct_answer, order_index")
+    .eq("school_id", cleanSchoolId)
+    .eq("assessment_id", cleanAssessmentId)
+    .eq("is_active", true)
+    .order("order_index", { ascending: true });
+
+  if (questionError) throw draftEditError(questionError, "Could not load the draft questions.");
+
+  return {
+    id: assessment.id,
+    academicTermId: assessment.academic_term_id,
+    title: assessment.title,
+    subject: assessment.subject ?? "",
+    assessmentType: (SCHOOL_ASSESSMENT_TYPES as readonly string[]).includes(assessment.assessment_type)
+      ? assessment.assessment_type as SchoolAssessmentType
+      : "Test",
+    durationMinutes: assessment.duration_minutes,
+    showResults: assessment.show_results,
+    questions: (questionRows ?? []).map((question) => ({
+      id: question.id,
+      text: question.text,
+      type: question.type === "Theory" ? "Theory" : "MCQ",
+      topic: question.topic,
+      difficulty: question.difficulty === "Simple" || question.difficulty === "Hard" ? question.difficulty : "Medium",
+      options: readOptions(question.options),
+      correctAnswer: typeof question.correct_answer === "number" ? question.correct_answer : null,
+    })),
+  };
+}
+
+export async function updateSchoolAssessmentDraft(
+  input: UpdateSchoolAssessmentDraftInput,
+): Promise<SchoolAssessmentDraftResult> {
+  const { title, subject } = validateInput(input);
+  const assessmentId = input.assessmentId.trim();
+  if (!assessmentId) throw new Error("This draft could not be identified. Refresh the page and try again.");
+
+  const { data: authData, error: authError } = await supabase.auth.getUser();
+  const userId = authData.user?.id;
+  if (authError || !userId) {
+    throw new Error("Your session has expired. Sign in again before saving the assessment.");
+  }
+
+  const [{ data: assessment, error: assessmentError }, { data: existingQuestions, error: existingQuestionsError }] = await Promise.all([
+    supabase
+      .from("school_assessments")
+      .select("id, status")
+      .eq("school_id", input.schoolId)
+      .eq("id", assessmentId)
+      .maybeSingle(),
+    supabase
+      .from("school_assessment_questions")
+      .select("id, text, type, topic, difficulty, options, correct_answer, order_index")
+      .eq("school_id", input.schoolId)
+      .eq("assessment_id", assessmentId)
+      .eq("is_active", true),
+  ]);
+
+  if (assessmentError) throw draftEditError(assessmentError, "Could not check the assessment before saving.");
+  if (!assessment) throw new Error("The draft was not found or you do not have permission to edit it.");
+  if (assessment.status !== "Draft") throw new Error("This assessment is no longer a draft. Refresh the page before making changes.");
+  if (existingQuestionsError) throw draftEditError(existingQuestionsError, "Could not check the existing draft questions.");
+
+  const existingIds = new Set((existingQuestions ?? []).map((question) => question.id));
+  const savedIds = input.questions.map((question) => question.id && existingIds.has(question.id) ? question.id : crypto.randomUUID());
+  const addedIds = savedIds.filter((id) => !existingIds.has(id));
+  const removedIds = [...existingIds].filter((id) => !savedIds.includes(id));
+  const questionRows = input.questions.map((question, index) => ({
+    id: savedIds[index],
+    school_id: input.schoolId,
+    assessment_id: assessmentId,
+    text: question.text.trim(),
+    type: question.type,
+    topic: question.topic?.trim() || null,
+    difficulty: question.difficulty,
+    options: question.type === "MCQ"
+      ? question.options?.map((option) => ({ ...option, text: option.text.trim() }))
+      : null,
+    correct_answer: question.type === "MCQ" ? question.correctAnswer : null,
+    order_index: index,
+    is_active: true,
+    created_by: userId,
+  }));
+
+  const rollbackQuestions = async () => {
+    if ((existingQuestions ?? []).length > 0) {
+      await supabase.from("school_assessment_questions").upsert((existingQuestions ?? []).map((question) => ({
+        id: question.id,
+        school_id: input.schoolId,
+        assessment_id: assessmentId,
+        text: question.text,
+        type: question.type,
+        topic: question.topic,
+        difficulty: question.difficulty,
+        options: question.options,
+        correct_answer: question.correct_answer,
+        order_index: question.order_index,
+        is_active: true,
+        created_by: userId,
+      })), { onConflict: "id" });
+    }
+    if (addedIds.length > 0) {
+      await supabase
+        .from("school_assessment_questions")
+        .delete()
+        .eq("school_id", input.schoolId)
+        .eq("assessment_id", assessmentId)
+        .in("id", addedIds);
+    }
+  };
+
+  const { error: questionUpsertError } = await supabase
+    .from("school_assessment_questions")
+    .upsert(questionRows, { onConflict: "id" });
+  if (questionUpsertError) {
+    await rollbackQuestions();
+    throw draftEditError(questionUpsertError, "Could not save the draft questions.");
+  }
+
+  if (removedIds.length > 0) {
+    const { error: removeError } = await supabase
+      .from("school_assessment_questions")
+      .delete()
+      .eq("school_id", input.schoolId)
+      .eq("assessment_id", assessmentId)
+      .in("id", removedIds);
+    if (removeError) {
+      await rollbackQuestions();
+      throw draftEditError(removeError, "Could not remove the deleted draft questions.");
+    }
+  }
+
+  const questionTypes = new Set(input.questions.map((question) => question.type));
+  const difficulties = new Set(input.questions.map((question) => question.difficulty));
+  const { data: updatedAssessment, error: updateError } = await supabase
+    .from("school_assessments")
+    .update({
+      academic_term_id: input.academicTermId,
+      title,
+      subject,
+      assessment_type: input.assessmentType,
+      duration_minutes: input.durationMinutes,
+      difficulty: difficulties.size === 1 ? input.questions[0].difficulty : "Mixed",
+      question_type: questionTypes.size === 1 ? input.questions[0].type : "Mixed",
+      question_count: input.questions.length,
+      show_results: input.showResults,
+    })
+    .eq("school_id", input.schoolId)
+    .eq("id", assessmentId)
+    .eq("status", "Draft")
+    .select("id")
+    .maybeSingle();
+
+  if (updateError || !updatedAssessment) {
+    await rollbackQuestions();
+    throw draftEditError(updateError ?? {}, "The assessment is no longer a draft. Refresh the page and try again.");
+  }
+
+  return { id: assessmentId, title, questionCount: input.questions.length, operation: "updated" };
 }
 
 export async function publishSchoolAssessment(
@@ -280,4 +525,65 @@ export async function publishSchoolAssessment(
     classCount: classIds.length,
     status: assessmentStatus,
   };
+}
+
+export async function closeSchoolAssessment(
+  schoolId: string,
+  assessmentId: string,
+): Promise<CloseSchoolAssessmentResult> {
+  const cleanSchoolId = schoolId.trim();
+  const cleanAssessmentId = assessmentId.trim();
+  if (!cleanSchoolId || !cleanAssessmentId) {
+    throw new Error("This assessment could not be identified. Refresh the page and try again.");
+  }
+
+  const { data: authData, error: authError } = await supabase.auth.getUser();
+  if (authError || !authData.user) {
+    throw new Error("Your session has expired. Sign in again before closing the assessment.");
+  }
+
+  const { data: current, error: currentError } = await supabase
+    .from("school_assessments")
+    .select("id, status, ends_at")
+    .eq("school_id", cleanSchoolId)
+    .eq("id", cleanAssessmentId)
+    .maybeSingle();
+
+  if (currentError) throw closeError(currentError, "Could not check the assessment before closing it.");
+  if (!current) throw new Error("The assessment was not found or you do not have permission to close it.");
+  if (current.status !== "Live") throw new Error("Only a live assessment can be closed from this menu.");
+
+  const closedAt = new Date().toISOString();
+  const { data: closedAssessment, error: assessmentError } = await supabase
+    .from("school_assessments")
+    .update({ status: "Closed", ends_at: closedAt })
+    .eq("school_id", cleanSchoolId)
+    .eq("id", cleanAssessmentId)
+    .eq("status", "Live")
+    .select("id")
+    .maybeSingle();
+
+  if (assessmentError || !closedAssessment) {
+    throw closeError(assessmentError ?? {}, "The assessment is no longer live. Refresh the page and try again.");
+  }
+
+  const { error: assignmentError } = await supabase
+    .from("school_assessment_assignments")
+    .update({ status: "closed", ends_at: closedAt })
+    .eq("school_id", cleanSchoolId)
+    .eq("assessment_id", cleanAssessmentId)
+    .in("status", ["live", "scheduled"]);
+
+  if (assignmentError) {
+    await supabase
+      .from("school_assessments")
+      .update({ status: current.status, ends_at: current.ends_at })
+      .eq("school_id", cleanSchoolId)
+      .eq("id", cleanAssessmentId)
+      .eq("status", "Closed")
+      .eq("ends_at", closedAt);
+    throw closeError(assignmentError, "Could not close the assessment for its assigned classes.");
+  }
+
+  return { assessmentId: cleanAssessmentId, closedAt };
 }

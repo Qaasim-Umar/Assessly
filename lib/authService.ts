@@ -410,6 +410,45 @@ export async function requestStudentEmailChange(email: string): Promise<void> {
   }
 }
 
+export async function sendStudentPasswordReset(email: string): Promise<void> {
+  const cleanEmail = email.trim().toLowerCase();
+  if (!cleanEmail || !isEmail(cleanEmail)) {
+    throw new Error("Enter a valid email address.");
+  }
+  if (isLegacyStudentEmail(cleanEmail)) {
+    throw new Error("Use the real email connected to your Individual student account.");
+  }
+
+  const redirectTo =
+    typeof window === "undefined"
+      ? undefined
+      : `${window.location.origin}/student/reset-password`;
+  const { error } = await supabase.auth.resetPasswordForEmail(
+    cleanEmail,
+    redirectTo ? { redirectTo } : undefined,
+  );
+  if (error) {
+    if (error.message.toLowerCase().includes("rate")) {
+      throw new Error("Please wait before requesting another reset email.");
+    }
+    throw new Error(error.message);
+  }
+}
+
+export async function updateStudentPassword(password: string): Promise<void> {
+  if (password.length < 6) {
+    throw new Error("Password must be at least 6 characters.");
+  }
+
+  const profile = await getStudentProfile();
+  if (!profile || profile.account_type !== "individual_student") {
+    throw new Error("This recovery link is not for an Individual student account.");
+  }
+
+  const { error } = await supabase.auth.updateUser({ password });
+  if (error) throw new Error(error.message);
+}
+
 type SchoolPupilLoginResult = {
   session?: {
     accessToken?: string;

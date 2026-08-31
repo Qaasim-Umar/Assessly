@@ -17,7 +17,9 @@ import {
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   createSchoolAssessmentDraft,
+  getSchoolAssessmentDraft,
   SCHOOL_ASSESSMENT_TYPES,
+  updateSchoolAssessmentDraft,
   type SchoolAssessmentDraftResult,
   type SchoolAssessmentType,
   type SchoolQuestionDifficulty,
@@ -27,6 +29,7 @@ import type { SchoolDashboardTerm } from "@/lib/schoolDashboardService";
 
 type Props = {
   schoolId: string;
+  assessmentId?: string | null;
   terms: SchoolDashboardTerm[];
   onClose: () => void;
   onSaved: (result: SchoolAssessmentDraftResult) => Promise<void>;
@@ -34,6 +37,7 @@ type Props = {
 
 type QuestionDraft = {
   localId: string;
+  databaseId: string | null;
   text: string;
   type: SchoolQuestionType;
   topic: string;
@@ -48,6 +52,7 @@ const inputClass = "mt-1.5 min-h-12 w-full rounded-xl border border-slate-200 bg
 function newQuestion(localId = crypto.randomUUID()): QuestionDraft {
   return {
     localId,
+    databaseId: null,
     text: "",
     type: "MCQ",
     topic: "",
@@ -89,7 +94,8 @@ function StepIndicator({ step }: { step: 1 | 2 }) {
   );
 }
 
-export default function SchoolAssessmentCreator({ schoolId, terms, onClose, onSaved }: Props) {
+export default function SchoolAssessmentCreator({ schoolId, assessmentId = null, terms, onClose, onSaved }: Props) {
+  const editing = Boolean(assessmentId);
   const currentTermId = terms.find((term) => term.status === "current")?.id ?? terms[0]?.id ?? "";
   const [step, setStep] = useState<1 | 2>(1);
   const [details, setDetails] = useState({
@@ -105,6 +111,8 @@ export default function SchoolAssessmentCreator({ schoolId, terms, onClose, onSa
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
   const [dirty, setDirty] = useState(false);
+  const [loadingDraft, setLoadingDraft] = useState(editing);
+  const [loadError, setLoadError] = useState("");
   const titleRef = useRef<HTMLInputElement>(null);
   const questionTextRef = useRef<HTMLTextAreaElement>(null);
 
@@ -114,6 +122,46 @@ export default function SchoolAssessmentCreator({ schoolId, terms, onClose, onSa
     () => questions.filter((question) => questionError(question) === null).length,
     [questions],
   );
+
+  const loadDraft = useCallback(async () => {
+    if (!assessmentId) return;
+    setLoadingDraft(true);
+    setLoadError("");
+    try {
+      const draft = await getSchoolAssessmentDraft(schoolId, assessmentId);
+      const loadedQuestions: QuestionDraft[] = draft.questions.map((question) => ({
+        localId: question.id,
+        databaseId: question.id,
+        text: question.text,
+        type: question.type,
+        topic: question.topic ?? "",
+        difficulty: question.difficulty,
+        options: optionLabels.map((label) => question.options?.find((option) => option.label === label)?.text ?? "") as QuestionDraft["options"],
+        correctAnswer: question.correctAnswer,
+      }));
+      const nextQuestions = loadedQuestions.length > 0 ? loadedQuestions : [newQuestion("question-1")];
+      setDetails({
+        title: draft.title,
+        subject: draft.subject,
+        academicTermId: draft.academicTermId ?? "",
+        assessmentType: draft.assessmentType,
+        durationMinutes: draft.durationMinutes ? String(draft.durationMinutes) : "",
+        showResults: draft.showResults,
+      });
+      setQuestions(nextQuestions);
+      setActiveQuestionId(nextQuestions[0].localId);
+      setDirty(false);
+      setError("");
+    } catch (caughtError: unknown) {
+      setLoadError(caughtError instanceof Error ? caughtError.message : "Could not load the assessment draft.");
+    } finally {
+      setLoadingDraft(false);
+    }
+  }, [assessmentId, schoolId]);
+
+  useEffect(() => {
+    void loadDraft();
+  }, [loadDraft]);
 
   const requestClose = useCallback(() => {
     if (saving) return;
@@ -198,7 +246,7 @@ export default function SchoolAssessmentCreator({ schoolId, terms, onClose, onSa
     setSaving(true);
     setError("");
     try {
-      const result = await createSchoolAssessmentDraft({
+      const draftInput = {
         schoolId,
         academicTermId: details.academicTermId || null,
         title: details.title,
@@ -207,6 +255,7 @@ export default function SchoolAssessmentCreator({ schoolId, terms, onClose, onSa
         durationMinutes: details.durationMinutes ? Number(details.durationMinutes) : null,
         showResults: details.showResults,
         questions: questions.map((question) => ({
+          id: question.databaseId,
           text: question.text,
           type: question.type,
           topic: question.topic || null,
@@ -216,7 +265,10 @@ export default function SchoolAssessmentCreator({ schoolId, terms, onClose, onSa
             : null,
           correctAnswer: question.type === "MCQ" ? question.correctAnswer : null,
         })),
-      });
+      };
+      const result = assessmentId
+        ? await updateSchoolAssessmentDraft({ ...draftInput, assessmentId })
+        : await createSchoolAssessmentDraft(draftInput);
       setDirty(false);
       await onSaved(result);
       onClose();
@@ -233,9 +285,9 @@ export default function SchoolAssessmentCreator({ schoolId, terms, onClose, onSa
           <div className="flex items-start gap-3">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-emerald-100"><ClipboardCheck size={21} aria-hidden="true" /></span>
             <div className="min-w-0 flex-1">
-              <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-emerald-200/75">School assessment creator</p>
-              <h2 id="school-assessment-creator-heading" className="mt-1 text-lg font-extrabold sm:text-xl">Create an assessment draft</h2>
-              <p className="mt-1 text-xs leading-5 text-emerald-100/75">Add the details and questions now. You will assign classes and publish it afterward.</p>
+              <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-emerald-200/75">School assessment {editing ? "editor" : "creator"}</p>
+              <h2 id="school-assessment-creator-heading" className="mt-1 text-lg font-extrabold sm:text-xl">{editing ? "Edit assessment draft" : "Create an assessment draft"}</h2>
+              <p className="mt-1 text-xs leading-5 text-emerald-100/75">{editing ? "Update the draft details or questions, then save your changes." : "Add the details and questions now. You will assign classes and publish it afterward."}</p>
             </div>
             <button type="button" onClick={requestClose} disabled={saving} className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white/10 text-white transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-emerald-300 disabled:cursor-wait disabled:opacity-50" aria-label="Close assessment creator"><X size={19} aria-hidden="true" /></button>
           </div>
@@ -243,6 +295,20 @@ export default function SchoolAssessmentCreator({ schoolId, terms, onClose, onSa
 
         <div className="cbt-scrollbar flex-1 overflow-y-auto">
           <div className="mx-auto w-full max-w-5xl space-y-5 px-4 py-5 sm:px-6 sm:py-6">
+            {loadingDraft ? (
+              <div className="flex min-h-64 flex-col items-center justify-center rounded-2xl border border-[var(--cbt-border)] bg-white p-6 text-center shadow-sm" role="status">
+                <RefreshCw size={24} className="animate-spin text-emerald-700" aria-hidden="true" />
+                <p className="mt-4 text-sm font-extrabold text-slate-900">Loading assessment draft…</p>
+                <p className="mt-1 text-xs text-slate-600">Getting the saved details and questions.</p>
+              </div>
+            ) : loadError ? (
+              <div className="flex min-h-64 flex-col items-center justify-center rounded-2xl border border-red-200 bg-white p-6 text-center shadow-sm" role="alert">
+                <CircleAlert size={26} className="text-red-700" aria-hidden="true" />
+                <p className="mt-4 text-sm font-extrabold text-slate-900">Draft could not be loaded</p>
+                <p className="mt-2 max-w-md text-sm leading-6 text-slate-600">{loadError}</p>
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row"><button type="button" onClick={onClose} className="min-h-12 rounded-xl border border-slate-200 bg-white px-5 text-sm font-bold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">Cancel</button><button type="button" onClick={() => void loadDraft()} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[var(--cbt-primary)] px-5 text-sm font-extrabold text-white hover:bg-[var(--cbt-primary-strong)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"><RefreshCw size={16} aria-hidden="true" />Try again</button></div>
+              </div>
+            ) : <>
             <StepIndicator step={step} />
 
             {error && (
@@ -308,11 +374,12 @@ export default function SchoolAssessmentCreator({ schoolId, terms, onClose, onSa
                   </fieldset>
                   <div className="flex flex-col-reverse gap-3 border-t border-[var(--cbt-border)] bg-[var(--cbt-surface-muted)] px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
                     <button type="button" onClick={() => { setStep(1); setError(""); }} disabled={saving} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 text-sm font-bold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50"><ArrowLeft size={16} aria-hidden="true" />Back to details</button>
-                    <button type="button" onClick={saveDraft} disabled={saving} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[var(--cbt-primary)] px-6 text-sm font-extrabold text-white hover:bg-[var(--cbt-primary-strong)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60">{saving ? <RefreshCw size={17} className="animate-spin" aria-hidden="true" /> : <Save size={17} aria-hidden="true" />}{saving ? "Saving assessment…" : `Save draft · ${questions.length} question${questions.length === 1 ? "" : "s"}`}</button>
+                    <button type="button" onClick={saveDraft} disabled={saving} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[var(--cbt-primary)] px-6 text-sm font-extrabold text-white hover:bg-[var(--cbt-primary-strong)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60">{saving ? <RefreshCw size={17} className="animate-spin" aria-hidden="true" /> : <Save size={17} aria-hidden="true" />}{saving ? "Saving assessment…" : editing ? `Save changes · ${questions.length} question${questions.length === 1 ? "" : "s"}` : `Save draft · ${questions.length} question${questions.length === 1 ? "" : "s"}`}</button>
                   </div>
                 </section>
               </div>
             )}
+            </>}
           </div>
         </div>
       </section>

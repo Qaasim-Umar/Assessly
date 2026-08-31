@@ -23,6 +23,7 @@ import {
     studentSignOut,
 } from "@/lib/authService";
 import { supabase } from "@/lib/supabase";
+import StudentForgotPasswordModal from "@/components/StudentForgotPasswordModal";
 
 const inputClass = "min-h-12 w-full rounded-xl border border-gray-200 bg-white py-2.5 pl-11 pr-4 text-base text-gray-900 outline-none transition-colors placeholder:text-gray-400 focus:border-green-600 focus:ring-2 focus:ring-green-500/20 sm:text-sm";
 
@@ -40,6 +41,7 @@ function LoginForm() {
     const [showSecret, setShowSecret] = useState(false);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
+    const [showForgotPassword, setShowForgotPassword] = useState(false);
 
     useEffect(() => {
         getStudentProfile()
@@ -110,6 +112,10 @@ function LoginForm() {
 
     return (
         <div className="flex min-h-dvh flex-col items-center justify-center bg-gradient-to-br from-green-50 via-white to-green-100 px-4 py-8 sm:py-10">
+            {showForgotPassword && (
+                <StudentForgotPasswordModal onClose={() => setShowForgotPassword(false)} />
+            )}
+
             <div className="mb-3 flex w-full max-w-3xl">
                 <Link href="/" className="group inline-flex min-h-11 items-center gap-1.5 rounded-lg px-1 text-xs font-semibold text-gray-600 transition-colors hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-600">
                     <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-0.5" aria-hidden="true" />
@@ -204,6 +210,15 @@ function LoginForm() {
                                         aria-label={showSecret ? "Hide PIN or password" : "Show PIN or password"}
                                     >
                                         {showSecret ? <EyeOff size={17} aria-hidden="true" /> : <Eye size={17} aria-hidden="true" />}
+                                    </button>
+                                </div>
+                                <div className="flex justify-end">
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowForgotPassword(true)}
+                                        className="inline-flex min-h-11 items-center rounded-lg px-1 text-xs font-semibold text-green-700 transition-colors hover:text-green-900 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2"
+                                    >
+                                        Forgot password?
                                     </button>
                                 </div>
                             </div>
