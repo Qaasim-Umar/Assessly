@@ -73,6 +73,13 @@ export type CloseSchoolAssessmentResult = {
   closedAt: string;
 };
 
+export type ReopenSchoolAssessmentResult = {
+  assessmentId: string;
+  title: string;
+  reopenedAt: string;
+  endsAt: string;
+};
+
 function writeError(error: { code?: string; message?: string }, fallback: string): Error {
   if (error.code === "42501") {
     return new Error("You do not have permission to create School assessments.");
@@ -116,6 +123,20 @@ function publishError(error: { code?: string; message?: string }, fallback: stri
 function closeError(error: { code?: string; message?: string }, fallback: string): Error {
   if (error.code === "42501") {
     return new Error("You do not have permission to close assessments for this school.");
+  }
+  return new Error(error.message?.trim() || fallback);
+}
+
+function reopenError(error: { code?: string; message?: string }, fallback: string): Error {
+  const message = error.message?.toLowerCase() ?? "";
+  if (error.code === "23505" && message.includes("one_live_per_class")) {
+    return new Error("One of the assigned classes already has another live assessment. Close that assessment before reopening this one.");
+  }
+  if (error.code === "23514") {
+    return new Error("Choose a valid closing time in the future.");
+  }
+  if (error.code === "42501") {
+    return new Error("You do not have permission to reopen assessments for this school.");
   }
   return new Error(error.message?.trim() || fallback);
 }
@@ -586,4 +607,98 @@ export async function closeSchoolAssessment(
   }
 
   return { assessmentId: cleanAssessmentId, closedAt };
+}
+
+export async function reopenSchoolAssessment(
+  schoolId: string,
+  assessmentId: string,
+  endsAt: string,
+): Promise<ReopenSchoolAssessmentResult> {
+  const cleanSchoolId = schoolId.trim();
+  const cleanAssessmentId = assessmentId.trim();
+  const newEndsAt = new Date(endsAt);
+  const now = new Date();
+
+  if (!cleanSchoolId || !cleanAssessmentId) {
+    throw new Error("This assessment could not be identified. Refresh the page and try again.");
+  }
+  if (Number.isNaN(newEndsAt.getTime()) || newEndsAt.getTime() <= now.getTime()) {
+    throw new Error("Choose a closing time in the future.");
+  }
+
+  const { data: authData, error: authError } = await supabase.auth.getUser();
+  if (authError || !authData.user) {
+    throw new Error("Your session has expired. Sign in again before reopening the assessment.");
+  }
+
+  const { data: current, error: currentError } = await supabase
+    .from("school_assessments")
+    .select("id, title, status, starts_at, ends_at")
+    .eq("school_id", cleanSchoolId)
+    .eq("id", cleanAssessmentId)
+    .maybeSingle();
+
+  if (currentError) throw reopenError(currentError, "Could not check the assessment before reopening it.");
+  if (!current) throw new Error("The assessment was not found or you do not have permission to reopen it.");
+
+  const { data: assignments, error: assignmentsError } = await supabase
+    .from("school_assessment_assignments")
+    .select("id, status, ends_at")
+    .eq("school_id", cleanSchoolId)
+    .eq("assessment_id", cleanAssessmentId);
+
+  if (assignmentsError) throw reopenError(assignmentsError, "Could not check the assigned classes before reopening the assessment.");
+
+  const activeAssignments = (assignments ?? []).filter((assignment) => assignment.status !== "cancelled");
+  if (activeAssignments.length === 0) {
+    throw new Error("This assessment has no class assignments to reopen.");
+  }
+
+  const assessmentEnded = Boolean(current.ends_at && new Date(current.ends_at).getTime() <= now.getTime());
+  const allAssignmentsEnded = activeAssignments.every((assignment) => (
+    assignment.status === "closed"
+    || Boolean(assignment.ends_at && new Date(assignment.ends_at).getTime() <= now.getTime())
+  ));
+  if (current.status !== "Closed" && !assessmentEnded && !allAssignmentsEnded) {
+    throw new Error("This assessment is not closed. Refresh the assessment list and try again.");
+  }
+
+  const reopenedAt = now.toISOString();
+  const newEndsAtIso = newEndsAt.toISOString();
+  const { data: reopenedAssessment, error: assessmentError } = await supabase
+    .from("school_assessments")
+    .update({ status: "Live", ends_at: newEndsAtIso })
+    .eq("school_id", cleanSchoolId)
+    .eq("id", cleanAssessmentId)
+    .select("id")
+    .maybeSingle();
+
+  if (assessmentError || !reopenedAssessment) {
+    throw reopenError(assessmentError ?? {}, "Could not reopen the assessment.");
+  }
+
+  const { error: assignmentError } = await supabase
+    .from("school_assessment_assignments")
+    .update({ status: "live", ends_at: newEndsAtIso })
+    .eq("school_id", cleanSchoolId)
+    .eq("assessment_id", cleanAssessmentId)
+    .in("status", ["closed", "live", "scheduled"]);
+
+  if (assignmentError) {
+    await supabase
+      .from("school_assessments")
+      .update({ status: current.status, starts_at: current.starts_at, ends_at: current.ends_at })
+      .eq("school_id", cleanSchoolId)
+      .eq("id", cleanAssessmentId)
+      .eq("status", "Live")
+      .eq("ends_at", newEndsAtIso);
+    throw reopenError(assignmentError, "Could not restore pupil access to this assessment.");
+  }
+
+  return {
+    assessmentId: cleanAssessmentId,
+    title: current.title,
+    reopenedAt,
+    endsAt: newEndsAtIso,
+  };
 }
