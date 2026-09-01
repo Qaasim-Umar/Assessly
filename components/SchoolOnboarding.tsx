@@ -7,6 +7,7 @@ import {
   ClipboardCheck,
   GraduationCap,
   Loader2,
+  LogOut,
   MapPin,
   ShieldCheck,
 } from "lucide-react";
@@ -36,11 +37,17 @@ export default function SchoolOnboarding({
   school,
   adminName,
   onBack,
+  onLogout,
+  loggingOut,
+  logoutError,
   onCompleted,
 }: {
   school: School;
   adminName: string;
   onBack: () => void;
+  onLogout: () => void;
+  loggingOut: boolean;
+  logoutError: string;
   onCompleted: (school: School) => void;
 }) {
   const [form, setForm] = useState<SchoolProfileInput>({
@@ -90,16 +97,28 @@ export default function SchoolOnboarding({
   return (
     <div className="cbt-shell min-h-dvh bg-[var(--cbt-background)]">
       <header className="border-b border-[var(--cbt-border)] bg-white">
-        <div className="mx-auto flex min-h-16 w-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex min-h-16 w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
           <div className="flex min-w-0 items-center gap-3">
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--cbt-sidebar)] text-emerald-200"><ClipboardCheck size={20} aria-hidden="true" /></span>
             <div className="min-w-0"><p className="text-sm font-extrabold text-slate-950">Assessly School</p><p className="truncate text-[11px] text-[var(--cbt-muted)]">First-time setup</p></div>
           </div>
-          <button type="button" onClick={onBack} disabled={saving} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-[var(--cbt-border)] bg-white px-3 text-xs font-bold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:cursor-wait disabled:opacity-50 sm:px-4 sm:text-sm">
-            <ArrowLeft size={16} aria-hidden="true" /> Individual mode
-          </button>
+          <div className="ml-auto flex items-center gap-2">
+            <button type="button" onClick={onBack} disabled={saving || loggingOut} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-[var(--cbt-border)] bg-white px-3 text-xs font-bold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:cursor-wait disabled:opacity-50 sm:px-4 sm:text-sm">
+              <ArrowLeft size={16} aria-hidden="true" /> Individual mode
+            </button>
+            <button type="button" onClick={onLogout} disabled={saving || loggingOut} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-red-200 bg-white px-3 text-xs font-bold text-red-700 hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-500 disabled:cursor-wait disabled:opacity-50 sm:px-4 sm:text-sm">
+              {loggingOut ? <Loader2 size={16} className="animate-spin" aria-hidden="true" /> : <LogOut size={16} aria-hidden="true" />}
+              {loggingOut ? "Logging out…" : "Log out"}
+            </button>
+          </div>
         </div>
       </header>
+
+      {logoutError && (
+        <div className="mx-auto mt-4 w-[calc(100%-2rem)] max-w-6xl rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">
+          {logoutError}
+        </div>
+      )}
 
       <main className="mx-auto grid w-full max-w-6xl gap-6 px-4 py-6 sm:px-6 sm:py-8 lg:grid-cols-[minmax(280px,0.7fr)_minmax(0,1.3fr)] lg:px-8 lg:py-12">
         <aside className="h-fit overflow-hidden rounded-3xl bg-[var(--cbt-sidebar)] p-6 text-white shadow-xl sm:p-8 lg:sticky lg:top-8" aria-labelledby="school-setup-heading">
@@ -127,7 +146,7 @@ export default function SchoolOnboarding({
 
           {error && <div className="mx-5 mt-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-6 text-red-800 sm:mx-7" role="alert">{error}</div>}
 
-          <fieldset disabled={saving} className="space-y-7 p-5 sm:p-7">
+          <fieldset disabled={saving || loggingOut} className="space-y-7 p-5 sm:p-7">
             <section aria-labelledby="school-identity-heading">
               <h3 id="school-identity-heading" className="text-sm font-extrabold text-slate-950">School identity</h3>
               <div className="mt-4 grid gap-5 sm:grid-cols-2">
@@ -163,7 +182,7 @@ export default function SchoolOnboarding({
 
           <div className="flex flex-col-reverse gap-3 border-t border-[var(--cbt-border)] bg-[var(--cbt-surface-muted)] px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-7">
             <p className="text-xs leading-5 text-[var(--cbt-muted)]">You can edit this information later in School Settings.</p>
-            <button type="submit" disabled={saving} className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-xl bg-[var(--cbt-primary)] px-6 text-sm font-extrabold text-white hover:bg-[var(--cbt-primary-strong)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60">
+            <button type="submit" disabled={saving || loggingOut} className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-xl bg-[var(--cbt-primary)] px-6 text-sm font-extrabold text-white hover:bg-[var(--cbt-primary-strong)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60">
               {saving ? <Loader2 size={17} className="animate-spin" aria-hidden="true" /> : <CheckCircle2 size={17} aria-hidden="true" />}
               {saving ? "Creating profile…" : "Create School profile"}
             </button>
