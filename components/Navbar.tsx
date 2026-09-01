@@ -95,9 +95,9 @@ export default function Navbar({
   const isAdmissionsActive = pathname.startsWith("/admissions");
 
   const plainLinks = [
-    { href: "/landing#students", label: "For Students" },
-    { href: "/landing#schools", label: "For Schools" },
-    { href: "/landing#pricing", label: "Pricing" },
+    { href: "/#students", label: "For Students" },
+    { href: "/#schools", label: "For Schools" },
+    { href: "/#pricing", label: "Pricing" },
   ];
 
   return (

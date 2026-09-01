@@ -23,11 +23,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Assessly - Smart CBT Exams for Nigerian Schools",
+    default: "Assessly - CBT Practice and School Assessments",
     template: "%s | Assessly",
   },
   description:
-    "Assessly is a Computer-Based Testing (CBT) platform for secondary schools in Nigeria. Create and manage exams, run timed WAEC, JAMB and NECO practice tests, and review results.",
+    "Assessly provides free CBT practice for Nigerian students and tools for educators to manage exams, classes, pupils, grading, and results across every school type.",
   keywords: [
     "CBT exam platform Nigeria",
     "WAEC past questions",
@@ -37,6 +37,11 @@ export const metadata: Metadata = {
     "school exam software Nigeria",
     "computer based test Nigeria",
     "free WAEC practice",
+    "free BECE practice",
+    "Post-UTME practice",
+    "primary school CBT",
+    "tertiary CBT platform",
+    "school assessment software Nigeria",
     "Assessly",
   ],
   authors: [{ name: "Assessly", url: BASE_URL }],
@@ -56,23 +61,23 @@ export const metadata: Metadata = {
     locale: "en_NG",
     url: BASE_URL,
     siteName: "Assessly",
-    title: "Assessly - Smart CBT Exams for Nigerian Schools",
+    title: "Assessly - CBT Practice and School Assessments",
     description:
-      "Create, manage and deliver Computer-Based Tests. Free practice exams for WAEC, JAMB and NECO. No account needed.",
+      "Free CBT practice for Nigerian students and assessment tools for educators to manage exams, classes, pupils, grading, and results.",
     images: [
       {
         url: `${BASE_URL}/opengraph-image.png`,
         width: 1200,
         height: 630,
-        alt: "Assessly - Smart CBT Exam Platform for Nigerian Schools",
+        alt: "Assessly CBT practice and school assessment platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Assessly - Smart CBT Exams for Nigerian Schools",
+    title: "Assessly - CBT Practice and School Assessments",
     description:
-      "Create, manage and deliver Computer-Based Tests. Free WAEC, JAMB and NECO practice exams.",
+      "Free CBT practice for Nigerian students and assessment tools for educators across every school type.",
     images: [`${BASE_URL}/opengraph-image.png`],
     creator: "@assessly",
   },
