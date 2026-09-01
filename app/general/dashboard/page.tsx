@@ -55,6 +55,8 @@ type AnalyticsPayload = {
   generatedAt: string;
   timezone: string;
   periodDays: number;
+  dailyWindowStart: string;
+  dailyWindowEnd: string;
   metrics: {
     totalLearners: number;
     newUsersToday: number;
@@ -91,7 +93,7 @@ type AnalyticsSnapshot = {
 };
 
 const RANGE_OPTIONS: RangeDays[] = [7, 30, 90];
-const ANALYTICS_CACHE_VERSION = "v1";
+const ANALYTICS_CACHE_VERSION = "v2";
 const BAR_COLORS = [
   "bg-emerald-600",
   "bg-blue-600",
@@ -125,6 +127,8 @@ function isAnalyticsSnapshot(value: unknown): value is AnalyticsSnapshot {
       payload &&
         typeof payload === "object" &&
         payload.periodDays === days &&
+        typeof payload.dailyWindowStart === "string" &&
+        typeof payload.dailyWindowEnd === "string" &&
         payload.metrics &&
         Array.isArray(payload.growthTrend),
     );
@@ -174,6 +178,16 @@ function formatDate(value: string) {
     month: "short",
     year: "numeric",
     timeZone: "Africa/Lagos",
+  }).format(new Date(value));
+}
+
+function formatWindowBoundary(value: string, timezone: string) {
+  return new Intl.DateTimeFormat("en-NG", {
+    day: "numeric",
+    month: "short",
+    hour: "numeric",
+    minute: "2-digit",
+    timeZone: timezone,
   }).format(new Date(value));
 }
 
@@ -503,8 +517,8 @@ export default function GeneralDashboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchAnalytics = useCallback(async (userId: string) => {
-    setLoading(true);
+  const fetchAnalytics = useCallback(async (userId: string, background = false) => {
+    if (!background) setLoading(true);
     setError(null);
 
     try {
@@ -530,9 +544,9 @@ export default function GeneralDashboardPage() {
       setSnapshot(data);
     } catch (caught) {
       const message = caught instanceof Error ? caught.message : "Could not load CBT analytics.";
-      setError(message);
+      if (!background) setError(message);
     } finally {
-      setLoading(false);
+      if (!background) setLoading(false);
     }
   }, []);
 
@@ -560,6 +574,35 @@ export default function GeneralDashboardPage() {
     };
   }, [fetchAnalytics, router]);
 
+  useEffect(() => {
+    if (!adminUserId || !snapshot?.nextRefreshAt) return;
+
+    const nextRefreshAt = Date.parse(snapshot.nextRefreshAt);
+    if (!Number.isFinite(nextRefreshAt)) return;
+
+    let cancelled = false;
+    let timeoutId: number | undefined;
+    const initialGraceMs = 10_000;
+    const retryDelayMs = 30_000;
+    let remainingRetries = 10;
+
+    const refreshAfterSnapshotJob = async () => {
+      await fetchAnalytics(adminUserId, true);
+      if (!cancelled && remainingRetries > 0) {
+        remainingRetries -= 1;
+        timeoutId = window.setTimeout(refreshAfterSnapshotJob, retryDelayMs);
+      }
+    };
+
+    const initialDelay = Math.max(initialGraceMs, nextRefreshAt - Date.now() + initialGraceMs);
+    timeoutId = window.setTimeout(refreshAfterSnapshotJob, initialDelay);
+
+    return () => {
+      cancelled = true;
+      if (timeoutId !== undefined) window.clearTimeout(timeoutId);
+    };
+  }, [adminUserId, fetchAnalytics, snapshot?.nextRefreshAt]);
+
   const handleLogout = async () => {
     await signOutGeneralAdmin();
     router.push("/general/dashboard/login");
@@ -575,6 +618,9 @@ export default function GeneralDashboardPage() {
   }, [analytics]);
 
   const metrics = analytics?.metrics;
+  const dailyWindow = analytics
+    ? `${formatWindowBoundary(analytics.dailyWindowStart, analytics.timezone)} – ${formatWindowBoundary(analytics.dailyWindowEnd, analytics.timezone)}`
+    : null;
   const lastUpdated = snapshot?.generatedAt
     ? new Intl.DateTimeFormat("en-NG", {
         day: "numeric",
@@ -698,39 +744,41 @@ export default function GeneralDashboardPage() {
           </section>
         ) : analytics && metrics ? (
           <div className="mt-6 space-y-6">
-            <section aria-labelledby="today-heading">
+            <section aria-labelledby="daily-window-heading">
               <div className="mb-4 flex items-end justify-between gap-4">
                 <div>
-                  <h2 id="today-heading" className="text-base font-extrabold text-slate-950">Today at a glance</h2>
-                  <p className="mt-1 text-xs text-slate-500">Activity recorded by the daily 4:00 AM snapshot.</p>
+                  <h2 id="daily-window-heading" className="text-base font-extrabold text-slate-950">Last 24 hours at a glance</h2>
+                  <p className="mt-1 text-xs text-slate-500">
+                    Completed daily window{dailyWindow ? `: ${dailyWindow}` : ""} (Lagos time).
+                  </p>
                 </div>
                 <span className="hidden text-xs font-semibold text-slate-400 sm:inline">{formatDate(analytics.generatedAt)}</span>
               </div>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
                 <MetricCard
-                  label="New users today"
+                  label="New users"
                   value={formatNumber(metrics.newUsersToday)}
-                  support="Learner accounts created today"
+                  support="Learner accounts created in this window"
                   Icon={UserPlus}
                 />
                 <MetricCard
-                  label="Returning today"
+                  label="Returning users"
                   value={formatNumber(metrics.returningUsersToday)}
-                  support="Existing learners whose latest sign-in is today"
+                  support="Existing learners whose latest sign-in was in this window"
                   Icon={UserCheck}
                   tone="blue"
                 />
                 <MetricCard
-                  label="CBT-active today"
+                  label="CBT-active users"
                   value={formatNumber(metrics.activeUsersToday)}
-                  support={`${formatNumber(metrics.attemptsToday)} CBT attempt${metrics.attemptsToday === 1 ? "" : "s"} recorded today`}
+                  support={`${formatNumber(metrics.attemptsToday)} CBT attempt${metrics.attemptsToday === 1 ? "" : "s"} recorded in this window`}
                   Icon={Activity}
                   tone="violet"
                 />
                 <MetricCard
                   label="User-added questions"
                   value={formatNumber(metrics.userQuestionsTotal)}
-                  support={`+${formatNumber(metrics.userQuestionsToday)} today · excludes general admin content`}
+                  support={`+${formatNumber(metrics.userQuestionsToday)} in this window · excludes general admin content`}
                   Icon={FileQuestion}
                   tone="amber"
                 />
@@ -804,7 +852,7 @@ export default function GeneralDashboardPage() {
                 <p className="mt-1 text-xs text-slate-500">How quickly users and schools are building their own CBT libraries.</p>
               </div>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-                <MetricCard label="User-created CBTs" value={formatNumber(metrics.userExamsTotal)} support={`+${formatNumber(metrics.userExamsToday)} created today`} Icon={BookOpen} />
+                <MetricCard label="User-created CBTs" value={formatNumber(metrics.userExamsTotal)} support={`+${formatNumber(metrics.userExamsToday)} in the last completed window`} Icon={BookOpen} />
                 <MetricCard label="Published or live" value={formatNumber(metrics.publishedUserExams)} support="Creator CBTs currently available to learners" Icon={CheckCircle2} tone="blue" />
                 <MetricCard label="General questions" value={formatNumber(metrics.generalQuestionsTotal)} support="Question bank and public exams managed by you" Icon={FileQuestion} tone="violet" />
                 <MetricCard label="Active schools" value={formatNumber(metrics.activeSchools)} support="School workspaces currently active" Icon={Building2} tone="amber" />
@@ -831,7 +879,7 @@ export default function GeneralDashboardPage() {
                     How these metrics are counted
                   </summary>
                   <ul className="mt-3 space-y-2 text-xs leading-5 text-slate-600">
-                    <li><strong className="text-slate-800">Returning today:</strong> an account created before today whose latest sign-in happened today.</li>
+                    <li><strong className="text-slate-800">Returning users:</strong> an account created before the window whose latest sign-in happened between 4:00 AM yesterday and 4:00 AM today.</li>
                     <li><strong className="text-slate-800">User-added questions:</strong> current questions in creator exams and School workspaces; general-admin uploads are excluded.</li>
                     <li><strong className="text-slate-800">CBT attempts:</strong> submitted exams and assessments plus tracked practice, mock, past-question and survival sessions.</li>
                   </ul>

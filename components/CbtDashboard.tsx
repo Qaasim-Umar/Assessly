@@ -21,6 +21,7 @@ import {
   IdCard,
   KeyRound,
   Library,
+  LogOut,
   Menu,
   MoreHorizontal,
   Pencil,
@@ -37,6 +38,7 @@ import {
   X,
   type LucideIcon,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import DashboardWorkspaceSwitcher from "@/components/DashboardWorkspaceSwitcher";
 import SchoolAssessmentCreator from "@/components/SchoolAssessmentCreator";
@@ -44,6 +46,7 @@ import SchoolAssessmentPublisher from "@/components/SchoolAssessmentPublisher";
 import SchoolOnboarding from "@/components/SchoolOnboarding";
 import SchoolResultsWorkspace from "@/components/SchoolResultsWorkspace";
 import SchoolTermManager from "@/components/SchoolTermManager";
+import { signOut } from "@/lib/authService";
 import {
   getActiveSchoolContext,
   updateSchoolProfile,
@@ -180,7 +183,7 @@ function DataLoadingState({ label = "Loading School data…" }: { label?: string
   );
 }
 
-function Sidebar({ activeView, onNavigate, onSwitchToIndividual, onAction, schoolName, adminName, mobile = false }: { activeView: ViewId; onNavigate: (id: ViewId) => void; onSwitchToIndividual: () => void; onAction: (message: string) => void; schoolName: string; adminName: string; mobile?: boolean }) {
+function Sidebar({ activeView, onNavigate, onSwitchToIndividual, onLogout, loggingOut, onAction, schoolName, adminName, mobile = false }: { activeView: ViewId; onNavigate: (id: ViewId) => void; onSwitchToIndividual: () => void; onLogout: () => void; loggingOut: boolean; onAction: (message: string) => void; schoolName: string; adminName: string; mobile?: boolean }) {
   return (
     <aside className={`${mobile ? "flex h-full w-[min(304px,86vw)]" : "fixed inset-y-0 left-0 hidden w-[272px] lg:flex"} z-40 flex-col bg-[var(--cbt-sidebar)] px-4 py-5 text-white`}>
       <div className="px-2"><BrandMark /></div>
@@ -202,6 +205,12 @@ function Sidebar({ activeView, onNavigate, onSwitchToIndividual, onAction, schoo
       <div className="space-y-1 border-t border-white/10 pt-4">
         <button type="button" aria-current={activeView === "settings" ? "page" : undefined} onClick={() => onNavigate("settings")} className={`flex min-h-11 w-full items-center gap-3 rounded-xl px-3 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-300 ${activeView === "settings" ? "bg-white text-[var(--cbt-sidebar)] shadow-sm" : "text-emerald-50/70 hover:bg-white/10 hover:text-white"}`}><Settings size={18} aria-hidden="true" />Settings</button>
         <button type="button" onClick={() => onAction("Opening help and support")} className="flex min-h-11 w-full items-center gap-3 rounded-xl px-3 text-sm font-semibold text-emerald-50/70 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-300"><CircleHelp size={18} aria-hidden="true" />Help and support</button>
+        <div className="mt-3 border-t border-white/10 pt-3">
+          <button type="button" onClick={onLogout} disabled={loggingOut} className="flex min-h-11 w-full items-center gap-3 rounded-xl px-3 text-sm font-semibold text-emerald-50/70 transition-colors hover:bg-red-500/15 hover:text-white focus:outline-none focus:ring-2 focus:ring-red-300 disabled:cursor-wait disabled:opacity-60">
+            {loggingOut ? <RefreshCw size={18} className="animate-spin" aria-hidden="true" /> : <LogOut size={18} aria-hidden="true" />}
+            {loggingOut ? "Logging out…" : "Log out"}
+          </button>
+        </div>
       </div>
       <div className="mt-4 flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3">
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-200 text-xs font-extrabold text-[var(--cbt-sidebar)]">{initials(adminName)}</span>
@@ -1001,6 +1010,7 @@ function SchoolSettingsView({ school, canEdit, onSaved }: { school: School; canE
 }
 
 export default function CbtDashboard({ onSwitchToIndividual }: { onSwitchToIndividual: () => void }) {
+  const router = useRouter();
   const [activeView, setActiveView] = useState<ViewId>("overview");
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -1011,6 +1021,8 @@ export default function CbtDashboard({ onSwitchToIndividual }: { onSwitchToIndiv
   const [dashboardLoading, setDashboardLoading] = useState(true);
   const [schoolError, setSchoolError] = useState("");
   const [codeCopied, setCodeCopied] = useState(false);
+  const [loggingOut, setLoggingOut] = useState(false);
+  const [logoutError, setLogoutError] = useState("");
   const toastTimer = useRef<number | null>(null);
   const codeTimer = useRef<number | null>(null);
 
@@ -1112,6 +1124,22 @@ export default function CbtDashboard({ onSwitchToIndividual }: { onSwitchToIndiv
     toastTimer.current = window.setTimeout(() => setToast(""), 3200);
   };
 
+  const handleLogout = async () => {
+    if (loggingOut) return;
+    setLogoutError("");
+    setLoggingOut(true);
+    setMobileNavOpen(false);
+    try {
+      await signOut();
+      router.replace("/dashboard/login");
+    } catch {
+      setLoggingOut(false);
+      const message = "Could not log out. Please try again.";
+      setLogoutError(message);
+      showToast(message);
+    }
+  };
+
   const copySchoolCode = async () => {
     try {
       await navigator.clipboard.writeText(schoolCode);
@@ -1140,6 +1168,9 @@ export default function CbtDashboard({ onSwitchToIndividual }: { onSwitchToIndiv
         school={schoolContext.school}
         adminName={adminName}
         onBack={onSwitchToIndividual}
+        onLogout={handleLogout}
+        loggingOut={loggingOut}
+        logoutError={logoutError}
         onCompleted={(school) => {
           setSchoolContext((current) => current ? { ...current, school } : current);
           showToast("School profile created");
@@ -1151,9 +1182,9 @@ export default function CbtDashboard({ onSwitchToIndividual }: { onSwitchToIndiv
   return (
     <div className="cbt-shell min-h-dvh">
       <a href="#school-dashboard-main" className="sr-only z-[100] rounded-lg bg-white px-4 py-3 text-sm font-bold text-[var(--cbt-primary)] focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to main content</a>
-      <Sidebar activeView={activeView} onNavigate={navigate} onSwitchToIndividual={onSwitchToIndividual} onAction={showToast} schoolName={schoolName} adminName={adminName} />
+      <Sidebar activeView={activeView} onNavigate={navigate} onSwitchToIndividual={onSwitchToIndividual} onLogout={handleLogout} loggingOut={loggingOut} onAction={showToast} schoolName={schoolName} adminName={adminName} />
 
-      {mobileNavOpen && <div className="fixed inset-0 z-50 lg:hidden"><button type="button" className="absolute inset-0 bg-black/55" onClick={() => setMobileNavOpen(false)} aria-label="Close navigation" /><div className="relative h-full" role="dialog" aria-modal="true" aria-label="Navigation menu"><Sidebar mobile activeView={activeView} onNavigate={navigate} onSwitchToIndividual={onSwitchToIndividual} onAction={showToast} schoolName={schoolName} adminName={adminName} /><button type="button" onClick={() => setMobileNavOpen(false)} className="absolute left-[min(250px,calc(86vw-54px))] top-5 flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-emerald-300" aria-label="Close menu"><X size={20} aria-hidden="true" /></button></div></div>}
+      {mobileNavOpen && <div className="fixed inset-0 z-50 lg:hidden"><button type="button" className="absolute inset-0 bg-black/55" onClick={() => setMobileNavOpen(false)} aria-label="Close navigation" /><div className="relative h-full" role="dialog" aria-modal="true" aria-label="Navigation menu"><Sidebar mobile activeView={activeView} onNavigate={navigate} onSwitchToIndividual={onSwitchToIndividual} onLogout={handleLogout} loggingOut={loggingOut} onAction={showToast} schoolName={schoolName} adminName={adminName} /><button type="button" onClick={() => setMobileNavOpen(false)} className="absolute left-[min(250px,calc(86vw-54px))] top-5 flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-emerald-300" aria-label="Close menu"><X size={20} aria-hidden="true" /></button></div></div>}
 
       <div className="min-h-dvh lg:pl-[272px]">
         <header className="sticky top-0 z-30 border-b border-[var(--cbt-border)] bg-white/95 backdrop-blur-md">
