@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { BarChart3, ClipboardList, Upload } from "lucide-react";
+import { BarChart3, ClipboardList, MapPinned, Upload } from "lucide-react";
 
-type GeneralAdminSection = "analytics" | "admissions" | "questions";
+type GeneralAdminSection = "analytics" | "admissions" | "questions" | "cbo-centres";
 
 const sections = [
   {
@@ -24,6 +24,12 @@ const sections = [
     href: "/general/dashboard/create",
     Icon: Upload,
   },
+  {
+    id: "cbo-centres" as const,
+    label: "CBO centres",
+    href: "/general/dashboard/cbo-centres",
+    Icon: MapPinned,
+  },
 ];
 
 export default function GeneralAdminSectionNav({
@@ -33,7 +39,7 @@ export default function GeneralAdminSectionNav({
 }) {
   return (
     <nav aria-label="General admin sections" className="w-full sm:w-fit">
-      <div className="grid grid-cols-3 gap-1 rounded-xl border border-slate-200 bg-slate-100 p-1 shadow-sm">
+      <div className="grid grid-cols-2 gap-1 rounded-xl border border-slate-200 bg-slate-100 p-1 shadow-sm sm:grid-cols-4">
         {sections.map(({ id, label, href, Icon }) => {
           const isActive = active === id;
           return (

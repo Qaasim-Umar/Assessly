@@ -20,6 +20,7 @@ const STATIC_LAST_MODIFIED = {
   admissions: "2026-07-29",
   questionBank: "2026-07-18",
   practice: "2026-08-25",
+  cboCentres: "2026-09-04",
 } as const;
 
 interface TimestampedRow {
@@ -122,6 +123,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/contact`,                lastModified: new Date(STATIC_LAST_MODIFIED.contact), changeFrequency: "yearly", priority: 0.5 },
     { url: `${BASE_URL}/admissions`,             lastModified: admissionsLastModified, changeFrequency: "daily",  priority: 0.85 },
     { url: `${BASE_URL}/admissions/question-bank`, lastModified: latestModified(questionPacks, STATIC_LAST_MODIFIED.questionBank), changeFrequency: "daily", priority: 0.85 },
+    { url: `${BASE_URL}/admissions/cbo-centres`, lastModified: new Date(STATIC_LAST_MODIFIED.cboCentres), changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const admissionsCategoryRoutes: MetadataRoute.Sitemap = CATEGORY_SLUGS.map((slug) => ({

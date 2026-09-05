@@ -31,6 +31,7 @@ export default function Footer() {
                         <ul className="flex flex-col gap-2.5">
                             <li><Link href="/general" className="text-sm text-white/55 transition-colors hover:text-white">Student Practice</Link></li>
                             <li><Link href="/admissions" className="text-sm text-white/55 transition-colors hover:text-white">Admissions Hub</Link></li>
+                            <li><Link href="/admissions/cbo-centres" className="text-sm text-white/55 transition-colors hover:text-white">CBO Centre Finder</Link></li>
                             <li><Link href="/login" className="text-sm text-white/55 transition-colors hover:text-white">Student Login</Link></li>
                             <li><Link href="/dashboard/login" className="text-sm text-white/55 transition-colors hover:text-white">Admin Login</Link></li>
                         </ul>
