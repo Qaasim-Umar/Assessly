@@ -13,7 +13,10 @@ const updates = [
   { href: "/admissions/category/deadlines", label: "Admission deadlines" },
 ];
 
-const more = [{ href: "/admissions/category/nysc", label: "NYSC updates" }];
+const more = [
+  { href: "/admissions/category/nysc", label: "NYSC updates" },
+  { href: "/admissions/cbo-centres", label: "CBO registration centres" },
+];
 
 function routeIsActive(pathname: string, href: string) {
   if (href === "/admissions") return pathname === href;
@@ -272,13 +275,19 @@ export default function AdmissionsNavbar() {
                 >
                   Cut-off Marks
                 </Link>
-                <Link
-                  href="/admissions/category/nysc"
-                  onClick={closeAllMenus}
-                  className={navLinkClass(routeIsActive(pathname, "/admissions/category/nysc"))}
-                >
-                  NYSC updates
-                </Link>
+                <p className="mb-1 mt-3 px-3 text-xs font-extrabold uppercase tracking-[0.12em] text-[#829187]">
+                  More
+                </p>
+                {more.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeAllMenus}
+                    className={`${navLinkClass(routeIsActive(pathname, item.href))} pl-6`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
                 <Link
                   href="/admissions/question-bank"
                   onClick={closeAllMenus}

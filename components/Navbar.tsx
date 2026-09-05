@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { Newspaper, BookOpen } from "lucide-react";
+import { Newspaper, BookOpen, MapPinned } from "lucide-react";
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
 export function LogoIcon({
@@ -53,6 +53,12 @@ const ADMISSIONS_ITEMS: {
     href: "/admissions/question-bank",
     label: "Question Bank",
     icon: <BookOpen size={16} />,
+    comingSoon: false,
+  },
+  {
+    href: "/admissions/cbo-centres",
+    label: "CBO Centre Finder",
+    icon: <MapPinned size={16} />,
     comingSoon: false,
   },
 ];
