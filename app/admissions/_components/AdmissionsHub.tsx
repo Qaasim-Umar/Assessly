@@ -4,6 +4,7 @@ import FilterBar from "./FilterBar";
 import ReactionBar from "./ReactionBar";
 import SearchBar from "./SearchBar";
 import NyscWhatsAppCard from "./NyscWhatsAppCard";
+import AdmissionCoverMock from "./AdmissionCoverMock";
 import { computeDeadlineFromDate } from "@/lib/deadline";
 import {
   ArrowRight,
@@ -30,6 +31,7 @@ export interface DbGist {
   is_trending: boolean;
   is_featured: boolean;
   is_new_this_week: boolean;
+  featured_image_url: string | null;
 }
 
 export interface DbScholarship {
@@ -291,7 +293,7 @@ export default function AdmissionsHub({
   nysc: DbNysc[];
 }) {
 
-  const featuredGist = gists.find((g) => g.is_featured) ?? gists[0] ?? null;
+  const featuredGist = gists.find((g) => g.is_featured) ?? null;
   const regularGists = gists.filter((g) => g.id !== featuredGist?.id);
   const newThisWeek = gists.find((g) => g.is_new_this_week) ?? null;
   const trendingGists = [...gists].slice(0, 5);
@@ -418,12 +420,18 @@ export default function AdmissionsHub({
               {/* Featured gist */}
               {featuredGist ? (
                 <article
-                  className="bg-[#0d1a0f] rounded-2xl overflow-hidden mb-4 min-h-[220px] sm:min-h-[240px]"
+                  className="grid overflow-hidden rounded-2xl bg-[#0d1a0f] mb-4 sm:grid-cols-[minmax(240px,0.9fr)_minmax(0,1.1fr)]"
                   data-ph-capture-attribute-item-type="featured_gist"
                   data-ph-capture-attribute-item-title={featuredGist.title}
                   data-ph-capture-attribute-item-school={featuredGist.school}
                 >
-                  <div className="p-6 sm:p-8 flex min-h-[220px] sm:min-h-[240px] flex-col justify-between">
+                  <AdmissionCoverMock
+                    label={featuredGist.tag || "School gist"}
+                    title={featuredGist.title}
+                    imageUrl={featuredGist.featured_image_url}
+                    priority
+                  />
+                  <div className="p-6 sm:p-8 flex min-h-[220px] sm:min-h-[260px] flex-col justify-between">
                     <a
                       href={`/admissions/gists/${featuredGist.slug}`}
                       className="block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d1a0f]"
@@ -461,13 +469,13 @@ export default function AdmissionsHub({
                     </div>
                   </div>
                 </article>
-              ) : (
+              ) : gists.length === 0 ? (
                 <div className="bg-[#0d1a0f]/10 border-2 border-dashed border-[#0d1a0f]/20 rounded-2xl p-8 mb-4 text-center">
                   <p className="text-[#4a5e4e]">
                     No gists published yet. Add some in the admin dashboard.
                   </p>
                 </div>
-              )}
+              ) : null}
 
               {/* Gist grid */}
               {regularGists.length > 0 && (

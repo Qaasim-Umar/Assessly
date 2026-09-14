@@ -25,6 +25,7 @@ import {
   signOutGeneralAdmin,
 } from "@/lib/generalAdminAuth";
 import GeneralAdminSectionNav from "@/components/GeneralAdminSectionNav";
+import UploadedQuestionYears from "@/components/UploadedQuestionYears";
 
 type RangeDays = 7 | 30 | 90;
 
@@ -694,6 +695,8 @@ export default function GeneralDashboardPage() {
             </span>
           </div>
         </div>
+
+        {adminUserId ? <UploadedQuestionYears /> : null}
 
         <div className="mt-7 flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3 px-2 text-xs text-slate-500">

@@ -9,6 +9,7 @@ import { stripMarkdown } from "@/lib/stripMarkdown";
 import { Calendar, Building2 } from "lucide-react";
 import ShareBar from "@/components/ShareBar";
 import ArticleByline from "@/components/ArticleByline";
+import AdmissionCoverMock from "../../_components/AdmissionCoverMock";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
@@ -25,6 +26,8 @@ interface DbGist {
   paragraphs: string[];
   reactions: { fire: number; shock: number; check: number; think: number };
   related: { slug: string; title: string; tag: string }[];
+  is_featured: boolean;
+  featured_image_url: string | null;
   created_at: string;
 }
 
@@ -36,7 +39,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const { data } = await supabase
     .from("admissions_gists")
-    .select("title, paragraphs, created_at")
+    .select("title, paragraphs, created_at, featured_image_url")
     .eq("slug", slug)
     .eq("published", true)
     .single();
@@ -48,8 +51,8 @@ export async function generateMetadata({
     authors: [{ name: "UQB" }],
     description: first,
     alternates: { canonical: url },
-    openGraph: { title: data.title, description: first, type: "article", url, siteName: "Assessly", publishedTime: data.created_at, authors: ["UQB"] },
-    twitter: { card: "summary_large_image", title: data.title, description: first },
+    openGraph: { title: data.title, description: first, type: "article", url, siteName: "Assessly", publishedTime: data.created_at, authors: ["UQB"], images: data.featured_image_url ? [data.featured_image_url] : undefined },
+    twitter: { card: "summary_large_image", title: data.title, description: first, images: data.featured_image_url ? [data.featured_image_url] : undefined },
   };
 }
 
@@ -58,7 +61,7 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
 
   const { data: gist } = await supabase
     .from("admissions_gists")
-    .select("id,slug,tag,tag_color,title,desc,date_label,school,paragraphs,reactions,related,created_at")
+    .select("id,slug,tag,tag_color,title,desc,date_label,school,paragraphs,reactions,related,is_featured,featured_image_url,created_at")
     .eq("slug", slug)
     .eq("published", true)
     .single();
@@ -113,6 +116,12 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
 
           {/* Article */}
           <article>
+            {(g.is_featured || g.featured_image_url) && (
+              <div className="mb-6 overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+                <AdmissionCoverMock label={g.tag || "School gist"} title={g.title} imageUrl={g.featured_image_url} />
+              </div>
+            )}
+
             <div className="bg-white border border-gray-200 rounded-2xl p-8 sm:p-10">
               <GistMarkdown content={g.paragraphs.join("\n\n")} />
               <div className="mt-8 border-t border-gray-200 pt-6">

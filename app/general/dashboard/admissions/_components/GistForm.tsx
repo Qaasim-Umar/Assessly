@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
+import FeaturedGistImageUpload from "./FeaturedGistImageUpload";
 
 const TAG_COLORS = [
     { label: "Green", value: "text-green-600" },
@@ -29,6 +30,8 @@ export interface GistData {
     is_featured: boolean;
     is_new_this_week: boolean;
     published: boolean;
+    featured_image_url?: string | null;
+    featured_image_key?: string | null;
 }
 
 function slugify(t: string) {
@@ -47,6 +50,7 @@ export default function GistForm({ initial, mode }: { initial?: GistData; mode: 
         paragraphs: [""],
         reactions: { fire: 0, think: 0 },
         is_trending: false, is_featured: false, is_new_this_week: false, published: false,
+        featured_image_url: null, featured_image_key: null,
     });
     const [slugLocked, setSlugLocked] = useState(!!initial?.slug);
     const [saving, setSaving] = useState(false);
@@ -94,6 +98,8 @@ export default function GistForm({ initial, mode }: { initial?: GistData; mode: 
             is_trending: form.is_trending,
             is_featured: form.is_featured,
             is_new_this_week: form.is_new_this_week,
+            featured_image_url: form.featured_image_url || null,
+            featured_image_key: form.featured_image_key || null,
             published,
         };
 
@@ -247,6 +253,21 @@ export default function GistForm({ initial, mode }: { initial?: GistData; mode: 
                                 <Toggle label="New This Week" sub="Pinned to the New This Week sidebar card" checked={form.is_new_this_week} onChange={v => set("is_new_this_week", v)} />
                             </div>
                         </div>
+
+                        {form.is_featured ? (
+                            <FeaturedGistImageUpload
+                                imageUrl={form.featured_image_url}
+                                onUploaded={({ url, key }) => setForm(current => ({
+                                    ...current,
+                                    featured_image_url: url,
+                                    featured_image_key: key,
+                                }))}
+                            />
+                        ) : form.featured_image_url ? (
+                            <div className="rounded-xl border border-green-200 bg-green-50 p-4 text-xs leading-relaxed text-green-800">
+                                This gist keeps its saved image on the full post page. Turn on Featured Hero to replace it.
+                            </div>
+                        ) : null}
 
                         {/* Metadata */}
                         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
