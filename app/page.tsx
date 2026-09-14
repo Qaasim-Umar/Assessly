@@ -244,7 +244,7 @@ export default function LandingPage() {
                         <div className="lp-admissions-copy">
                             <div className="lp-section-eyebrow">Admissions Hub</div>
                             <h2 id="admissions-heading">Move from exam practice to your next opportunity</h2>
-                            <p>Browse scholarships, admission deadlines, cut-off marks, school updates, NYSC information, and focused question packs in one place.</p>
+                            <p>Browse scholarships, upcoming events, cut-off marks, school updates, NYSC information, and focused question packs in one place.</p>
                             <div className="lp-admissions-actions">
                                 <Link href="/admissions" className="lp-admissions-primary">Explore Admissions Hub <ArrowRight size={17} aria-hidden="true" /></Link>
                                 <Link href="/admissions/question-bank" className="lp-admissions-secondary">Open Question Bank</Link>

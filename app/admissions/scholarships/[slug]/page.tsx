@@ -7,6 +7,7 @@ import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
 import ShareBar from "@/components/ShareBar";
 import ArticleByline from "@/components/ArticleByline";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
@@ -93,6 +94,10 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
               <GistMarkdown content={data.body} />
             </div>
 
+            <div className="mt-8 lg:hidden">
+              <NewsletterSignup id={`scholarship-${data.slug}-mobile`} variant="inline" />
+            </div>
+
             {/* Apply CTA */}
             {data.apply_url && (
               <a
@@ -112,6 +117,9 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ sl
 
           {/* Sidebar */}
           <aside className="flex flex-col gap-6">
+            <div className="hidden lg:block">
+              <NewsletterSignup id={`scholarship-${data.slug}-desktop`} />
+            </div>
             <Sidebar />
           </aside>
         </div>
