@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.assessly.ng",
+      },
+    ],
+  },
   async redirects() {
     return [
       // Legacy /general/category/* pages were replaced by dedicated practice

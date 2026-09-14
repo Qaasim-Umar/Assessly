@@ -49,6 +49,7 @@ interface RawOption {
 interface RawQuestion {
     number?: number;
     question: string;
+    image_url?: string;
     topic?: string;
     difficulty?: string;
     explanation?: string;
@@ -108,7 +109,16 @@ function parseJson(raw: string, config: BatchConfig): {
         if (correctIndex === -1) {
             throw new Error(`Question ${q.number ?? idx + 1}: no option has "is_correct": true.`);
         }
-        if (q.has_diagram) {
+        const imageUrl = q.image_url?.trim() || undefined;
+        if (imageUrl) {
+            try {
+                const parsedUrl = new URL(imageUrl);
+                if (parsedUrl.protocol !== "https:" && parsedUrl.protocol !== "http:") throw new Error();
+            } catch {
+                throw new Error(`Question ${q.number ?? idx + 1}: "image_url" must be a valid HTTP or HTTPS URL.`);
+            }
+        }
+        if (q.has_diagram && !imageUrl) {
             diagramIndices.push(idx);
             if (q.diagram_note) diagramNotes[idx] = q.diagram_note;
         }
@@ -125,9 +135,10 @@ function parseJson(raw: string, config: BatchConfig): {
             hint: q.hint ?? "",
             instruction: q.instruction ?? "",
             passage: q.passage ?? "",
+            imageUrl,
             options: q.options.map((o) => ({ label: o.key, text: o.text })),
             correctAnswer: correctIndex,
-            hasDiagram: q.has_diagram,
+            hasDiagram: q.has_diagram || Boolean(imageUrl),
             diagramNote: q.diagram_note,
         };
     });
@@ -679,7 +690,7 @@ export default function QuestionBankPage() {
                             <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-lg px-4 py-3 text-xs text-green-800 space-y-0.5">
                                 <div>
                                     <p><strong>Required per question:</strong> <code className="bg-green-100 px-1 rounded">question</code>, <code className="bg-green-100 px-1 rounded">options[]</code> with one <code className="bg-green-100 px-1 rounded">&quot;is_correct&quot;: true</code></p>
-                                    <p className="mt-0.5"><strong>Optional:</strong> <code className="bg-green-100 px-1 rounded">topic</code>, <code className="bg-green-100 px-1 rounded">difficulty</code>, <code className="bg-green-100 px-1 rounded">explanation</code>, <code className="bg-green-100 px-1 rounded">hint</code>, <code className="bg-green-100 px-1 rounded">instruction</code>, <code className="bg-green-100 px-1 rounded">passage</code>, <code className="bg-green-100 px-1 rounded">has_diagram</code></p>
+                                    <p className="mt-0.5"><strong>Optional:</strong> <code className="bg-green-100 px-1 rounded">topic</code>, <code className="bg-green-100 px-1 rounded">difficulty</code>, <code className="bg-green-100 px-1 rounded">explanation</code>, <code className="bg-green-100 px-1 rounded">hint</code>, <code className="bg-green-100 px-1 rounded">instruction</code>, <code className="bg-green-100 px-1 rounded">passage</code>, <code className="bg-green-100 px-1 rounded">has_diagram</code>, <code className="bg-green-100 px-1 rounded">image_url</code></p>
                                 </div>
                             </div>
                             <textarea
