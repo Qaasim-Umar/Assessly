@@ -8,6 +8,7 @@ import { supabase } from "@/lib/supabase";
 import { stripMarkdown } from "@/lib/stripMarkdown";
 import { Building2 } from "lucide-react";
 import Sidebar from "../../_components/Sidebar";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
@@ -114,6 +115,10 @@ export default async function CutoffPage({ params }: { params: Promise<{ slug: s
               </div>
             </article>
 
+            <div className="mt-8 lg:hidden">
+              <NewsletterSignup id={`cutoff-${c.id}-mobile`} variant="inline" />
+            </div>
+
             <Link href="/admissions" className="mt-8 inline-flex items-center gap-2 text-base font-bold text-green-600 hover:underline">
               ← Back to Admissions Hub
             </Link>
@@ -121,6 +126,9 @@ export default async function CutoffPage({ params }: { params: Promise<{ slug: s
 
           {/* Sidebar */}
           <aside className="flex flex-col gap-6">
+            <div className="hidden lg:block">
+              <NewsletterSignup id={`cutoff-${c.id}-desktop`} />
+            </div>
             <Sidebar />
           </aside>
           

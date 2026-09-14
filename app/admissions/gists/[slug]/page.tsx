@@ -10,6 +10,7 @@ import { Calendar, Building2 } from "lucide-react";
 import ShareBar from "@/components/ShareBar";
 import ArticleByline from "@/components/ArticleByline";
 import AdmissionCoverMock from "../../_components/AdmissionCoverMock";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import "../../../landing/landing.css";
 
 export const revalidate = 60;
@@ -129,6 +130,10 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
               </div>
             </div>
 
+            <div className="mt-8 lg:hidden">
+              <NewsletterSignup id={`gist-${g.id}-mobile`} variant="inline" />
+            </div>
+
             {g.related && g.related.length > 0 && (
               <div className="mt-8">
                 <h2
@@ -163,6 +168,9 @@ export default async function GistPage({ params }: { params: Promise<{ slug: str
 
           {/* Sidebar */}
           <aside className="flex flex-col gap-6">
+            <div className="hidden lg:block">
+              <NewsletterSignup id={`gist-${g.id}-desktop`} />
+            </div>
             <Sidebar />
           </aside>
         </div>

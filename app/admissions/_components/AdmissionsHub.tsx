@@ -5,6 +5,7 @@ import ReactionBar from "./ReactionBar";
 import SearchBar from "./SearchBar";
 import NyscWhatsAppCard from "./NyscWhatsAppCard";
 import AdmissionCoverMock from "./AdmissionCoverMock";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import { computeDeadlineFromDate } from "@/lib/deadline";
 import {
   ArrowRight,
@@ -151,64 +152,6 @@ function ScholarshipCard({
   );
 }
 
-const URGENCY_STYLES = {
-  urgent: {
-    block: "bg-rose-100 border border-rose-200",
-    text: "text-rose-600",
-    badge: "bg-rose-100 text-rose-600",
-  },
-  soon: {
-    block: "bg-amber-100 border border-amber-200",
-    text: "text-amber-600",
-    badge: "bg-amber-100 text-amber-600",
-  },
-  open: {
-    block: "bg-green-100 border border-green-200",
-    text: "text-green-600",
-    badge: "bg-green-100 text-green-700",
-  },
-};
-
-function DeadlineCard({
-  deadlineDate,
-  title,
-}: {
-  deadlineDate: string;
-  title: string;
-}) {
-  const {
-    day_label: day,
-    month_label: month,
-    urgency,
-    badge,
-  } = computeDeadlineFromDate(deadlineDate);
-  const s = URGENCY_STYLES[urgency] ?? URGENCY_STYLES.open;
-  return (
-    <div className="px-3 py-2.5 transition-colors hover:bg-green-50/40 sm:px-4">
-      <div className="grid grid-cols-[48px_minmax(0,1fr)_auto] gap-3 items-center">
-        <div
-          className={`w-12 h-12 rounded-lg flex flex-col items-center justify-center flex-shrink-0 ${s.block}`}
-        >
-          <span className={`text-lg font-extrabold leading-none ${s.text}`}>
-            {day}
-          </span>
-          <span
-            className={`text-[10px] font-extrabold tracking-wide uppercase ${s.text}`}
-          >
-            {month}
-          </span>
-        </div>
-        <h3 className="min-w-0 text-sm sm:text-base font-bold leading-snug text-[#0d1a0f]">{title}</h3>
-        <span
-          className={`text-[11px] sm:text-xs font-extrabold tracking-wide px-2 py-1 rounded-full flex-shrink-0 ${s.badge}`}
-        >
-          {badge}
-        </span>
-      </div>
-    </div>
-  );
-}
-
 function SidebarCard({
   icon,
   title,
@@ -301,7 +244,6 @@ export default function AdmissionsHub({
   // Filter content based on active tab
   const showGists = activeTab === "all" || activeTab === "gists";
   const showScholarships = activeTab === "all" || activeTab === "scholarships";
-  const showDeadlines = activeTab === "all" || activeTab === "deadlines";
   const showCutoffs = activeTab === "all" || activeTab === "cutoffs";
   const showNysc = activeTab === "all" || activeTab === "nysc";
 
@@ -362,7 +304,7 @@ export default function AdmissionsHub({
               <em className="not-italic text-green-500">university</em>, sorted.
             </h1>
             <p className="text-lg text-white/45 max-w-[520px] leading-relaxed pb-10">
-              Scholarships, admission deadlines, school gists, and everything
+              Scholarships, upcoming events, school gists, and everything
               else you need, in one place. Updated weekly.
             </p>
           </div>
@@ -503,6 +445,12 @@ export default function AdmissionsHub({
             </section>
           )}
 
+          {activeTab === "all" && (
+            <div className="mb-12 lg:hidden">
+              <NewsletterSignup id="mobile" variant="inline" />
+            </div>
+          )}
+
           {/* ── SCHOLARSHIPS ── */}
           {showScholarships && (
             <section className="mb-12" aria-label="Scholarships">
@@ -538,44 +486,12 @@ export default function AdmissionsHub({
                   </p>
                 </div>
               )}
-            </section>
-          )}
-
-          {/* ── DEADLINES ── */}
-          {showDeadlines && (
-            <section
-              className="mb-12"
-              id="deadlines"
-              aria-label="Admission Deadlines"
-            >
-              <div className="flex items-center justify-between mb-5">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center text-rose-600">
-                    <Calendar size={20} />
-                  </div>
-                  <h2
-                    className="text-[26px] tracking-[-0.5px] text-[#0d1a0f]"
-                    style={{ fontFamily: "var(--font-lora), Georgia, serif" }}
-                  >
-                    Admission Deadlines
-                  </h2>
-                </div>
-                <SectionLink href="/admissions/category/deadlines" />
-              </div>
-
-              {deadlines.length > 0 ? (
-                <div className="overflow-hidden rounded-2xl border border-gray-300 bg-white divide-y divide-gray-200">
-                  {deadlines.map((d) => (
-                    <DeadlineCard
-                      key={d.id}
-                      deadlineDate={d.deadline_date}
-                      title={d.title}
-                    />
-                  ))}
-                </div>
-              ) : (
-                <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center">
-                  <p className="text-[#9db5a3]">No deadlines published yet.</p>
+              {scholarships.length > 0 && (
+                <div className="mt-6 text-center">
+                  <SectionLink
+                    href="/admissions/category/scholarships"
+                    label="View all scholarships"
+                  />
                 </div>
               )}
             </section>
@@ -618,6 +534,14 @@ export default function AdmissionsHub({
                   <p className="text-[#9db5a3]">
                     No cutoff marks published yet.
                   </p>
+                </div>
+              )}
+              {cutoffs.length > 0 && (
+                <div className="mt-6 text-center">
+                  <SectionLink
+                    href="/admissions/category/cutoffs"
+                    label="View all cutoff marks"
+                  />
                 </div>
               )}
             </section>
@@ -665,6 +589,14 @@ export default function AdmissionsHub({
               ) : (
                 <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center">
                   <p className="text-[#9db5a3]">No NYSC posts published yet.</p>
+                </div>
+              )}
+              {nysc.length > 0 && (
+                <div className="mt-6 text-center">
+                  <SectionLink
+                    href="/admissions/category/nysc"
+                    label="View all NYSC updates"
+                  />
                 </div>
               )}
               <NyscWhatsAppCard />
@@ -743,6 +675,10 @@ export default function AdmissionsHub({
               ))}
             </SidebarCard>
           )}
+
+          <div className="hidden lg:block">
+            <NewsletterSignup id="desktop" />
+          </div>
 
           {/* Practice CTA */}
           <div className="bg-green-600 rounded-2xl p-6">

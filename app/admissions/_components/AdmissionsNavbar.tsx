@@ -10,7 +10,7 @@ type MenuId = "updates" | "more" | null;
 
 const updates = [
   { href: "/admissions/category/gists", label: "School gists" },
-  { href: "/admissions/category/deadlines", label: "Admission deadlines" },
+  { href: "/admissions/category/deadlines", label: "Upcoming events" },
 ];
 
 const more = [
