@@ -5,7 +5,8 @@ type NewsletterSignupProps = {
   variant?: "sidebar" | "inline" | "footer";
 };
 
-const SUBSTACK_EMBED_URL = "https://assessly.substack.com/embed";
+const SUBSTACK_EMBED_URL =
+  "https://assessly.substack.com/embed?transparent=1&light=1";
 
 export default function NewsletterSignup({
   id,
@@ -59,12 +60,12 @@ export default function NewsletterSignup({
             src={SUBSTACK_EMBED_URL}
             title="Subscribe to the Assessly newsletter on Substack"
             width="480"
-            height="320"
+            height="150"
             loading="lazy"
             frameBorder="0"
             scrolling="no"
-            className="block h-[320px] w-full max-w-full bg-white"
-            style={{ border: "1px solid #EEE", background: "white" }}
+            className="block h-[150px] w-full max-w-full bg-transparent"
+            style={{ border: 0, background: "transparent" }}
           />
         </div>
       </div>
