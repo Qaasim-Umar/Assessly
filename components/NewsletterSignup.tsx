@@ -64,6 +64,7 @@ export default function NewsletterSignup({
             loading="lazy"
             frameBorder="0"
             scrolling="no"
+            sandbox="allow-forms allow-scripts allow-same-origin"
             className="block h-[150px] w-full max-w-full bg-transparent"
             style={{ border: 0, background: "transparent" }}
           />
