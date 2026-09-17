@@ -283,12 +283,12 @@ export async function submitExamResult(
   const accessToken = sessionData?.session?.access_token;
 
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/submit-exam`,
+    `${process.env.SUPABASE_URL}/functions/v1/submit-exam`,
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "apiKey": process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+        "apiKey": process.env.SUPABASE_ANON_KEY!,
         "Authorization": `Bearer ${accessToken}`,
       },
       body: JSON.stringify({

@@ -8,36 +8,17 @@ async function test() {
     return acc;
   }, {});
   const supabase = createClient(
-    env["NEXT_PUBLIC_SUPABASE_URL"],
-    env["NEXT_PUBLIC_SUPABASE_ANON_KEY"],
+    env["SUPABASE_URL"],
+    env["SUPABASE_ANON_KEY"],
   );
 
-  console.log("URL", env["NEXT_PUBLIC_SUPABASE_URL"]);
-  const { data, error } = await supabase.from("admin_profiles").select("*");
-  console.log("=== admin_profiles ===");
-  console.log("data length:", data ? data.length : 0);
-  console.log("data:", data);
-  if (error) console.error("error:", error);
+  const { count, error } = await supabase
+    .from("admin_profiles")
+    .select("id", { count: "exact", head: true });
 
-  if (data && data.length > 0) {
-    const code = data[0].school_code;
-    const { data: row, error: err } = await supabase
-      .from("admin_profiles")
-      .select("school_code")
-      .eq("school_code", code)
-      .single();
-    console.log(`\n=== admin_profiles (eq ${code}) ===`);
-    console.log("row:", row, "err:", err);
-  } else {
-    console.log("\n=== Testing arbitrary code ===");
-    const code = "ABCDEF";
-    const { data: row, error: err } = await supabase
-      .from("admin_profiles")
-      .select("school_code")
-      .eq("school_code", code)
-      .single();
-    console.log("row:", row, "err:", err);
-  }
+  console.log("Supabase connection:", error ? "failed" : "ok");
+  console.log("Visible admin profile count:", count ?? 0);
+  if (error) console.error("Error:", error.message);
 }
 
 test();

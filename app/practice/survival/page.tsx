@@ -41,6 +41,7 @@ const DIFFICULTIES: { value: Difficulty; label: string; desc: string; bg: string
 ];
 
 const LIVES_OPTIONS: Lives[] = [2, 3, 4];
+const TOPIC_PREVIEW_COUNT = 8;
 
 // ─── Heart icon ───────────────────────────────────────────────────────────────
 function HeartIcon({ size = 20 }: { size?: number }) {
@@ -73,11 +74,12 @@ export default function SurvivalSetupPage() {
     const router = useRouter();
 
     const [subjectList, setSubjectList]         = useState<SubjectInfo[]>([]);
-    const [loadingSubjects, setLoadingSubjects]  = useState(true);
+    const [loadingSubjects, setLoadingSubjects]  = useState(false);
     const [subjectError, setSubjectError]        = useState("");
 
     const [selectedSubject,    setSelectedSubject]    = useState("");
     const [selectedTopic,      setSelectedTopic]      = useState("");
+    const [showAllTopics,      setShowAllTopics]      = useState(false);
     const [selectedExamBody,   setSelectedExamBody]   = useState<ExamBody | "">("");
     const [selectedSchool,     setSelectedSchool]     = useState("");
     const [schoolSearch,       setSchoolSearch]       = useState("");
@@ -85,16 +87,41 @@ export default function SurvivalSetupPage() {
     const [selectedLives,      setSelectedLives]      = useState<Lives | 0>(0);
     const [starting,           setStarting]           = useState(false);
 
-    // Fetch all distinct subjects + topics on mount
+    const needsSchool = selectedExamBody === "post_utme";
+    const canLoadSubjects = selectedExamBody !== "" && (!needsSchool || selectedSchool !== "");
+
+    // Fetch only the subjects and topics available for the selected exam body.
     useEffect(() => {
+        let cancelled = false;
+
         async function load() {
+            setSelectedSubject("");
+            setSelectedTopic("");
+            setShowAllTopics(false);
+            setSubjectList([]);
+            setSubjectError("");
+
+            if (!canLoadSubjects) {
+                setLoadingSubjects(false);
+                return;
+            }
+
             setLoadingSubjects(true);
             try {
-                const { data, error } = await supabase
+                let query = supabase
                     .from("questions")
                     .select("subject, topic")
                     .is("exam_id", null)
                     .eq("is_active", true);
+
+                if (selectedExamBody !== "mixed") {
+                    query = query.eq("exam_type", selectedExamBody);
+                }
+                if (needsSchool) {
+                    query = query.eq("university", selectedSchool);
+                }
+
+                const { data, error } = await query;
 
                 if (error) throw error;
 
@@ -111,23 +138,27 @@ export default function SurvivalSetupPage() {
                     .map(([subject, topicSet]) => ({ subject, topics: Array.from(topicSet).sort() }))
                     .sort((a, b) => a.subject.localeCompare(b.subject));
 
-                setSubjectList(list);
+                if (!cancelled) setSubjectList(list);
             } catch {
-                setSubjectError("Failed to load subjects.");
+                if (!cancelled) setSubjectError("Failed to load subjects.");
             } finally {
-                setLoadingSubjects(false);
+                if (!cancelled) setLoadingSubjects(false);
             }
         }
         load();
-    }, []);
+        return () => { cancelled = true; };
+    }, [canLoadSubjects, needsSchool, selectedExamBody, selectedSchool]);
 
     const currentSubjectInfo = subjectList.find((s) => s.subject === selectedSubject);
     const availableTopics    = currentSubjectInfo?.topics ?? [];
+    const previewTopics = availableTopics.slice(0, TOPIC_PREVIEW_COUNT);
+    const visibleTopics = showAllTopics || !selectedTopic || previewTopics.includes(selectedTopic)
+        ? (showAllTopics ? availableTopics : previewTopics)
+        : [...previewTopics, selectedTopic];
     const filteredSchools    = POST_UTME_SCHOOLS.filter((s) =>
         s.toLowerCase().includes(schoolSearch.toLowerCase())
     );
 
-    const needsSchool = selectedExamBody === "post_utme";
     const allSelected =
         selectedSubject !== "" &&
         selectedExamBody !== "" &&
@@ -199,84 +230,9 @@ export default function SurvivalSetupPage() {
 
                 <div className="space-y-5">
 
-                    {/* ── Step 1: Subject ── */}
+                    {/* ── Step 1: Exam Body ── */}
                     <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
-                        <StepHeader n={1} label="Choose a Subject" done={selectedSubject !== ""} />
-
-                        {loadingSubjects && (
-                            <div className="flex items-center gap-2 py-4">
-                                <svg className="w-5 h-5 animate-spin text-amber-600" fill="none" viewBox="0 0 24 24">
-                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                                </svg>
-                                <span className="text-sm text-gray-400">Loading subjects…</span>
-                            </div>
-                        )}
-
-                        {!loadingSubjects && subjectError && (
-                            <p className="text-sm text-red-600 font-medium">{subjectError}</p>
-                        )}
-
-                        {!loadingSubjects && !subjectError && (
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-                                {subjectList.map(({ subject }) => (
-                                    <button
-                                        key={subject}
-                                        onClick={() => { setSelectedSubject(subject); setSelectedTopic(""); }}
-                                        className={pill(selectedSubject === subject)}
-                                    >
-                                        {subject}
-                                    </button>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-
-                    {/* ── Step 1b: Topic (optional, appears after subject chosen) ── */}
-                    {selectedSubject && availableTopics.length > 0 && (
-                        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="w-7 h-7 rounded-full bg-orange-100 border border-amber-200 flex items-center justify-center flex-shrink-0">
-                                    <svg className="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h2 className="text-base font-bold text-gray-900">Filter by Topic</h2>
-                                    <p className="text-xs text-gray-400">Optional — leave on All for mixed topics</p>
-                                </div>
-                            </div>
-                            <div className="flex flex-wrap gap-2">
-                                <button
-                                    onClick={() => setSelectedTopic("")}
-                                    className={`text-xs font-semibold px-3.5 py-2 rounded-lg border-2 transition-all ${
-                                        selectedTopic === ""
-                                            ? "border-amber-500 bg-amber-50 text-amber-700"
-                                            : "border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50"
-                                    }`}
-                                >
-                                    All Topics
-                                </button>
-                                {availableTopics.map((t) => (
-                                    <button
-                                        key={t}
-                                        onClick={() => setSelectedTopic(t)}
-                                        className={`text-xs font-semibold px-3.5 py-2 rounded-lg border-2 transition-all ${
-                                            selectedTopic === t
-                                                ? "border-amber-500 bg-amber-50 text-amber-700"
-                                                : "border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50"
-                                        }`}
-                                    >
-                                        {t}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-
-                    {/* ── Step 2: Exam Body ── */}
-                    <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
-                        <StepHeader n={2} label="Select Exam Body" done={selectedExamBody !== "" && (!needsSchool || selectedSchool !== "")} />
+                        <StepHeader n={1} label="Select Exam Body" done={selectedExamBody !== "" && (!needsSchool || selectedSchool !== "")} />
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                             {EXAM_BODIES.map((eb) => (
                                 <button
@@ -300,7 +256,6 @@ export default function SurvivalSetupPage() {
                             ))}
                         </div>
 
-                        {/* ── Step 2b: School picker (Post-UTME only) ── */}
                         {needsSchool && (
                             <div className="mt-5 pt-5 border-t border-gray-100">
                                 <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-3">Select Your School</p>
@@ -332,6 +287,105 @@ export default function SurvivalSetupPage() {
                             </div>
                         )}
                     </div>
+
+                    {/* ── Step 2: Subject ── */}
+                    {selectedExamBody && (
+                    <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
+                        <StepHeader n={2} label="Choose a Subject" done={selectedSubject !== ""} />
+
+                        {needsSchool && !selectedSchool && (
+                            <p className="text-sm text-gray-500">Choose a school above to see its available subjects.</p>
+                        )}
+
+                        {loadingSubjects && (
+                            <div className="flex items-center gap-2 py-4">
+                                <svg className="w-5 h-5 animate-spin text-amber-600" fill="none" viewBox="0 0 24 24">
+                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                                </svg>
+                                <span className="text-sm text-gray-400">Loading subjects…</span>
+                            </div>
+                        )}
+
+                        {!loadingSubjects && subjectError && (
+                            <p className="text-sm text-red-600 font-medium">{subjectError}</p>
+                        )}
+
+                        {!loadingSubjects && !subjectError && (
+                            subjectList.length > 0 ? (
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                                    {subjectList.map(({ subject }) => (
+                                        <button
+                                            key={subject}
+                                            onClick={() => {
+                                                setSelectedSubject(subject);
+                                                setSelectedTopic("");
+                                                setShowAllTopics(false);
+                                            }}
+                                            className={pill(selectedSubject === subject)}
+                                        >
+                                            {subject}
+                                        </button>
+                                    ))}
+                                </div>
+                            ) : canLoadSubjects ? (
+                                <p className="text-sm text-gray-500">No subjects are available for this selection.</p>
+                            ) : null
+                        )}
+                    </div>
+                    )}
+
+                    {/* ── Step 2b: Topic (optional, appears after subject chosen) ── */}
+                    {selectedSubject && availableTopics.length > 0 && (
+                        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-7 h-7 rounded-full bg-orange-100 border border-amber-200 flex items-center justify-center flex-shrink-0">
+                                    <svg className="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h2 className="text-base font-bold text-gray-900">Filter by Topic</h2>
+                                    <p className="text-xs text-gray-400">Optional — leave on All for mixed topics</p>
+                                </div>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                                <button
+                                    onClick={() => setSelectedTopic("")}
+                                    className={`text-xs font-semibold px-3.5 py-2 rounded-lg border-2 transition-all ${
+                                        selectedTopic === ""
+                                            ? "border-amber-500 bg-amber-50 text-amber-700"
+                                            : "border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50"
+                                    }`}
+                                >
+                                    All Topics
+                                </button>
+                                {visibleTopics.map((t) => (
+                                    <button
+                                        key={t}
+                                        onClick={() => setSelectedTopic(t)}
+                                        className={`text-xs font-semibold px-3.5 py-2 rounded-lg border-2 transition-all ${
+                                            selectedTopic === t
+                                                ? "border-amber-500 bg-amber-50 text-amber-700"
+                                                : "border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50"
+                                        }`}
+                                    >
+                                        {t}
+                                    </button>
+                                ))}
+                                {availableTopics.length > TOPIC_PREVIEW_COUNT && (
+                                    <button
+                                        onClick={() => setShowAllTopics((show) => !show)}
+                                        className="text-xs font-bold px-3.5 py-2 rounded-lg border-2 border-dashed border-amber-300 text-amber-700 hover:border-amber-400 hover:bg-amber-50 transition-all"
+                                    >
+                                        {showAllTopics
+                                            ? "Show less"
+                                            : `Show all (+${availableTopics.length - TOPIC_PREVIEW_COUNT})`}
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+                    )}
 
                     {/* ── Step 3: Difficulty ── */}
                     <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">

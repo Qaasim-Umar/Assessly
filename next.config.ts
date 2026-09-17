@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // The Supabase URL and anonymous key are intentionally public and required
+  // by browser clients. Keep every privileged/server-only key out of this map.
+  env: {
+    SUPABASE_URL: process.env.SUPABASE_URL,
+    SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY,
+  },
   images: {
     remotePatterns: [
       {
