@@ -3,7 +3,7 @@
 import { Suspense, useEffect, useState, useCallback, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { supabase } from "@/lib/supabase";
+import { publicSupabase } from "@/lib/supabase";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 interface Question {
@@ -166,7 +166,7 @@ function SurvivalSessionPage() {
             }
 
             try {
-                let query = supabase
+                let query = publicSupabase
                     .from("questions")
                     .select("id, text, topic, difficulty, explanation, image_url, instruction, passage, options, correct_answer")
                     .is("exam_id", null)
