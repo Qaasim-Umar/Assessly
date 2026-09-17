@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { supabase } from "@/lib/supabase";
+import { publicSupabase } from "@/lib/supabase";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 type ExamBody = "jamb" | "waec" | "neco" | "post_utme" | "bece" | "mixed";
@@ -108,7 +108,7 @@ export default function SurvivalSetupPage() {
 
             setLoadingSubjects(true);
             try {
-                let query = supabase
+                let query = publicSupabase
                     .from("questions")
                     .select("subject, topic")
                     .is("exam_id", null)
