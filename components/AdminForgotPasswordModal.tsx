@@ -77,7 +77,7 @@ export default function AdminForgotPasswordModal({
             {step === "done" ? "Password updated" : "Reset admin password"}
           </h2>
           <p className="mt-1 text-sm leading-5 text-gray-500">
-            {step === "email" && "We'll email a 6-digit code to your admin address."}
+            {step === "email" && "We'll email an 8-digit code to your admin address."}
             {step === "code" && (
               <>
                 Enter the code sent to{" "}
@@ -145,20 +145,20 @@ export default function AdminForgotPasswordModal({
         {/* ── Step 2: code + new password ── */}
         {step === "code" && (
           <form onSubmit={handleVerifyAndUpdate} className="px-6 py-6 space-y-4">
-            {/* 6-digit code */}
+            {/* 8-digit code */}
             <div>
               <label htmlFor="admin-reset-code" className="block text-xs font-semibold text-gray-600">
-                6-digit code
+                8-digit code
               </label>
               <input
                 id="admin-reset-code"
                 type="text"
                 inputMode="numeric"
-                pattern="\d{6}"
-                maxLength={6}
+                pattern="\d{8}"
+                maxLength={8}
                 value={code}
-                onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
-                placeholder="000000"
+                onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 8))}
+                placeholder="00000000"
                 autoComplete="one-time-code"
                 autoFocus
                 required
@@ -220,7 +220,7 @@ export default function AdminForgotPasswordModal({
 
             <button
               type="submit"
-              disabled={loading || code.length < 6}
+              disabled={loading || code.length < 8}
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-green-700 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-green-800 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading && <LoaderCircle size={16} className="animate-spin" aria-hidden="true" />}
