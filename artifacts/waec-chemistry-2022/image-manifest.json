@@ -1,0 +1,28 @@
+{
+  "subject": "Chemistry",
+  "examType": "WAEC",
+  "year": 2022,
+  "objectiveQuestionCount": 50,
+  "theoryQuestionCount": 5,
+  "questionsWithImages": 1,
+  "uniqueImagesUploaded": 1,
+  "objectPrefix": "question-assets/waec/chemistry/2022",
+  "generatedAt": "2026-09-14T18:11:08.808Z",
+  "questions": [
+    {
+      "sourceId": "65891",
+      "sourceUrl": "https://myschool.ng/classroom/chemistry/65891",
+      "section": "objective",
+      "number": 50,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/rEPZfjbznx0CmVGyhe2T4aiikanZhbBMBOKP1QKt.png",
+          "objectKey": "question-assets/waec/chemistry/2022/rEPZfjbznx0CmVGyhe2T4aiikanZhbBMBOKP1QKt.png",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/chemistry/2022/rEPZfjbznx0CmVGyhe2T4aiikanZhbBMBOKP1QKt.png",
+          "contentType": "image/png",
+          "bytes": 3177
+        }
+      ]
+    }
+  ]
+}

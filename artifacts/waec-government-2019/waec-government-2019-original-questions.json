@@ -1,0 +1,1349 @@
+{
+  "subject": "Government",
+  "year": 2019,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The constitutional power given to the judiciary to interpret legislative acts, executive and administrative actions and to declare its constitutionality or otherwise is _____",
+      "options": [
+        {
+          "key": "A",
+          "text": "judicial power",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "separation of power",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "judicial review",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "administrative processes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The ultimate duty of a citizen is to demonstrate his/her __________",
+      "options": [
+        {
+          "key": "A",
+          "text": "allegiance to the sovereign",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "loyalty to the state",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "respect for the national flag",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "contribution to government expenditure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Conventions and usages are rules based on ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "traditions and customs",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "previous constitutions",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "legal documents",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "decisions of commoners",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The body responsible for the execution of the policies of government is the ______",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pressure group",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Civil service",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Constitutional Conference",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Electoral Commission",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The Electorate is defined as ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "intended candidates for voting",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "elected party members",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "elected civil society group",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "citizens that are qualified to vote",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The right to govern and administer the affairs of the people of a country is ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "power",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "diplomacy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "authority",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "influence",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "One of the following is a characteristic of a unitary system",
+      "options": [
+        {
+          "key": "A",
+          "text": "Heterogeneous society",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Homogeneous society",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Communal society",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Feudal society",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "The mass type of party is ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "broad-based",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "capitalist",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "feudalist",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "conservative",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Who among the following provided the detailed work on sovereignty?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Jean Bodin",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Fredrick Englels",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Bolaji Akinyemi",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Thomas Hobbes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The family and peer groups are important agents of _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "political culture",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "political socialization",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "charismatic authority",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "traditional authority",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "The confederal system of government is unpopular because ___________",
+      "options": [
+        {
+          "key": "A",
+          "text": "the government operates oligarchy system",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "it does not follow due process",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "it discourages rapid development",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "all the component units are sovereign",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Local government is relevant because it provides political ______",
+      "options": [
+        {
+          "key": "A",
+          "text": "discussion among electorate",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "discipline among party members",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "representation in the judiciary",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "participation at the grassroots",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "Pressure groups provide _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "manifestoes for political parties",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sponsorship of candidates",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "aims and objectives for a wider appeal to the electorates.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "means by which government ascertain public reactions to their policies",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The authority of the state is collectively exercised by the _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "executive, legislative, judiciary",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "president, governor and chairman",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "police, army and navy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "government, people and civil servants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "In a presidential system of government, legislative approval is not necessary for the ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "appointment of supreme court judges",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "rectification of treaties",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "granting of pardons",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "appointments of civil servants",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "The following are the reasons widely espoused for military intervention and rules in West Africa except ______",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tribalism and Nepotism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "inordinate ambition of soldiers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "maladministration",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "religion",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Which of the following electoral systems is ideal for a heterogeneous society?",
+      "options": [
+        {
+          "key": "A",
+          "text": "simple majority",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "preferential ballot",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "non-transferable vote",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "proportional representation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "A constitution performs the role of ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "law making",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "law enforcement",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "communicating the ideals of leaders",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "stating the functions and limitations of leaders",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "The impeachment process is a unique feature of the ______",
+      "options": [
+        {
+          "key": "A",
+          "text": "parliamentary system",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "presidential system",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "federal system",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "unitary system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "Which of the following is a function of the party whip?",
+      "options": [
+        {
+          "key": "A",
+          "text": "flogging erring party members",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ensuring that the members tow the party position",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "ensuring the safety of the speaker",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "assessing the performance of the law makers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Labour groups mostly come under the umbrella of the ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "industrial workers' union",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "trades union congress",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "anomic group",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "civil defence",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The major problem facing electoral management bodies in West Africa is _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lack of qualified personnel",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "poor communication network",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "foreign interference",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "electoral malpractice",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "The features of a state include all the following except _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "government",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "territory",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "society",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "population",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "To facilitate the movement of people from one member to another the Economic Community of West African States (ECOWAS) has _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "created several border posts within member states",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "waived visa requirements for citizens of member countries",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "created one currency for all member countries",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "maintained regional peace and security through deployment of forces",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "Public Corporations are referred to as statutory bodies because they are established by _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "a legislative instrument",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Acts of parliament",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "an executive instrument",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Bye-laws",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Which state institution serves as a link between the government and the people?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Office of the president",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The civil service",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the judiciary",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the church",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The media play a vital role in the political environment in that, it ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "articulates the views of individuals",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "incites people to be lawless",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "projects individuals above the state",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "articulates the views of the ruling party",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Military might is a major determinant of a country's _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "independence",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "democracy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "foreign policy",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "wealth",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The major role of minority parties in parliament is to _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "criticize every government policy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ensure democratic governance",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "monitor the activities of the president",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "supervise the passage of bills",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The political parties established in West Africa in the 1950's were aimed at ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "securing independence for their people",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Participating in the colonial administration",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "introducing guerilla warfare against Europeans",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "representing their people in the British parliament",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "The Commonwealth Secretariat is located in _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Los Angeles",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Kuala-Lumpur",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "London",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Glasgow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Which colonial administration in West Africa sought to integrate her colonies with their home country?",
+      "options": [
+        {
+          "key": "A",
+          "text": "British",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Dutch",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "French",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Danes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The following are benefits member countries derive from the Economic Community of West African State (ECOWAS) except _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "economic cooperation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Larger market",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "military assistance",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "free ports",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Which of the following is not an obligation of a citizen?",
+      "options": [
+        {
+          "key": "A",
+          "text": "payment of taxes",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "voting in an election",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "protecting public property",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "attending religious gathering",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The implementation of indirect rule was supervised by the __________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chiefs and Councils of elders",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "British officials",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "spiritual leaders of the land",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "educated elite",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The electronic and print media makes their views heard on national issues through_______",
+      "options": [
+        {
+          "key": "A",
+          "text": "public notice",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "adverisement",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "documentary",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "editorial commentary",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Any type of restricted franchise is a violation of the principle of ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "constitutionalism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "soveriegnty",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "political equality",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "editorial commentary",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Public corporation can operate in a more efficient manner if they are ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "free from political interference",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "controlled by the judicial service commission",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "under the head of the civil service",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "controlled by the military",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The agency responsible for fulfilling the purpose of the state is ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "government",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "pressure group",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "public corporation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "The power of the electorate signifies _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "political sovereignty",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "legal sovereignty",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "external sovereignty",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "internal sovereignty",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The removal of government direct control and monopoly in manufacturing and service sectors is called __________",
+      "options": [
+        {
+          "key": "A",
+          "text": "privatization",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "specialization",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "commercialization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "decentralization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "ECOWAS monitoring group (ECOMOG) was established to ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "recruit able-bodied men to defend West Africa",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "restore peace to war-torn West African countries",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "change bad government in West Africa",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "corporation of the ex-servicemen with the governor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The major concern of the United Nations Organization (UNO) is world ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "trade",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "peace",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "health",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cooperation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Nationalist agitation in British West Africa after the World War II led to the ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "disregard for traditional rulers who supported the British",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "formation of political parties",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "killing of British administrative officials",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cooperation of the ex-servicemen with the governor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "An African- American who contributed greatly to the growth of nationalism in West Africa was _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "Martin Luther King",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Jesse Jackson",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Nelson Mandela",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "William Du Bois",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Which of the following is not a component of political culture?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Norms",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Age",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Beliefs",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Attitudes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The following were checks on the powers of chiefs during the pre-colonial era except the __________",
+      "options": [
+        {
+          "key": "A",
+          "text": "British Officials",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Kingsmakers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Council of Elders",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Age grades",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "A common feature of pre-independence constitutions of British West African colonies was the _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "existence of separation of power",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "governor's membership of both the legislative and executive councils",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "adoption of federalism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "establishment of council of elders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Which of the following features of indirect rule contributed immensely to Nationalism in British West Africa",
+      "options": [
+        {
+          "key": "A",
+          "text": "Establishment of native courts",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the appointment of resident district commissioners",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "establishment of the native courts",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "exclusion of the educated elites",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "The first inter-territorial association organised by some educated African elite in the Gold Coast as the ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Aborigine's Rights Protection Society (ARFS)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "National Congress of British West Africa (NCBWA)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Movement of Educated Elites in West Africa (MEEWA)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "West Africa Frontier Forces(WAFF)",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "Explain five reasons for the study of government?"
+    },
+    {
+      "number": 2,
+      "question": "(a)Who is a citizen?\n(b) Outline four responsibilities of a citizen to the state."
+    },
+    {
+      "number": 3,
+      "question": "Highlight five roles played by the mass media in strengthening modern democracy"
+    },
+    {
+      "number": 4,
+      "question": "(a)What is Local Government?\n(b) Outline four reasons for the creation of Local Government."
+    },
+    {
+      "number": 5,
+      "question": "(a) State three types of elections\n(b) explain four purposes elections serve in a democratic state"
+    },
+    {
+      "number": 6,
+      "question": "(a)List three pre-independence constitutions in Nigeria\n(b) identify four features of 1960 independence constitution of Nigeria"
+    },
+    {
+      "number": 7,
+      "question": "(a) State two problems confronting Nigeria Federalism\n(b) Highlight three features of Nigeria Federalism"
+    },
+    {
+      "number": 8,
+      "question": "(a) List three key members of the Nigerian Youth Movement (NYM)\n(b) Highlight four achievements of the Nigerian Youth Movement (NYM) in the political development of Nigeria"
+    },
+    {
+      "number": 9,
+      "question": "(a) What is the New Partnership for Africa's Development (NEPAD)\n(b) identify four objectives of the new Partnership for Africa's Development (NEPAD)"
+    },
+    {
+      "number": 10,
+      "question": "(a) List three contributions of the National Congress of British West Africa (NCBWA) to the nationalist struggle\n(b) identify four contributions of Nnamdi Azikwe to the nationalist struggle of Nigeria"
+    }
+  ]
+}

@@ -1,0 +1,1361 @@
+{
+  "subject": "Chemistry",
+  "year": 2019,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The periodic table is an arrangement of elements according to their?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Oxidation number",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Atomic number",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Mass number",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Number of neutrons",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "A solid with higher melting and boiling points is likely to be?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Covalent compound",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "A Dative compound",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "An Electrovalent compound",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "A Non-metal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Which of the following metals reacts slowly with cold water?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Iron",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Silver",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Calcium",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Pottassium",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "which of the following elements has the highest ionization energy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Calcium",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Chlorine",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Flourine",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Magnesium",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The bleaching action of chlorine is through the process?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hydration",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Hydrolysis",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Reduction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Oxidation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "If 6.5g of magnesium ribbon reacts completely with Hydrochloric acid, how many grams of hydrogen gas would be liberated?\nMg(s) + 2 HCl(aq) --> MgCl 2(aq) + H 2(g)\n[ H = 1.0, Mg = 24.0 ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.54g",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "0.70g",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1.08g",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1.40g",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Calcium and magnesium belong to the group of the periodic table because both?",
+      "options": [
+        {
+          "key": "A",
+          "text": "are metals",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "form cations",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "form colourless salts",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "have same number of valence electrons",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Which of the substances is non-polar?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bromine",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Ammonia",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Water",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Hydrogen Bromide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Which of the following pairs of components have the same molecular mass?\n[ H = 1.0, C = 12.0, O = 16.0 ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ethene and Ethyne",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Ethane and Ethene",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Carbon (ii) Oxide and Ethene",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Carbon (iv) Oxide and Ethyne",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "When an equilibrium is established between dissolved and undissolved solutes, the solution is said to be?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Saturated",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Unsaturated",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Concentrated",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Diluted",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "How many moles of carbon(iv)oxide contains 16.0g of oxygen?\n[ C = 12.0, O = 16.0 ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.20 mol",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.25 mol",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "0.40 mol",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.50 mol",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Stoichiometry is based on the law?",
+      "options": [
+        {
+          "key": "A",
+          "text": "multiple proportion",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "constant composition",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "conservation of energy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "conservation of mass",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "What is the percentage by mass of H in CH\\(_3\\)COOH ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.7%",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "5.0%",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "6.7%",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "7.1%",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "Which of the following compounds has coordinate bonds in its structure?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Al\\(_2\\)Cl\\(_6\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "MgCl\\(_2\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "AgCl",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "NaCl",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The name of the compound CH\\(_3\\)C(CH\\(_3\\))\\(_2\\)CH\\(_2\\)CH\\(_2\\)CH\\(_3\\)",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 - methyl butane",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2,2 - dimethyl butane",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "2 - methyl pentane",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "2,2 - dimethyl pentane",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "The properties of a good primary standard solution include the following except?",
+      "options": [
+        {
+          "key": "A",
+          "text": "High molecular mass",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "low molecular mass",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "high degree of purity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "readily available",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "What is the solubility of a salt X at 25&ordm;C if the saturated solution of the salt contains 0.28g in 100cm\\(^3\\) of the solution in mol\\dm\\(^3\\)?\n[ X = 56.0g ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.05",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "0.10",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "2.60",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "2.80",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Vinegar is an aqueous solution of?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hydrochloric acid",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ethanedioc acid",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ethanoic acid",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "hydrofluoric acid",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "which of the following solutions containing one mole per dm\\(^3\\) of the compound would have the lowest PH?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ethanoic acid",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "hydrochloric acid",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "sodium chloride",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sodium hydrogentrioxocarbonate(iv)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "A sample of air was bubbled into water. The PH of the water slowly changed from 7 to 6. Which of the following gases in the samples caused the change?",
+      "options": [
+        {
+          "key": "A",
+          "text": "carbon(iv)oxide",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "carbon(ii)oxide",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "nitrogen",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "oxygen",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The most suitable indicator for the reaction between NaOH and HCOOH is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "bromocresol",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "methyl orange",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "methyl red",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "phenolphthalein",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "consider the following reaction equation: 2Al(OH)\\(_3\\) + 3H\\(_2\\)SO\\(_4\\) &rarr; Al\\(_2\\)(SO4)\\(_3\\)(aq)+6H\\(_2\\)O. How many moles of tetraoxosulphate(vi)acid is needed to produce 0.5mol of aluminium tetraoxosulphate(vi)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.5",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "1.0",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1.5",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "3.0",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "which of the following pairs of substances has the highest heat of neutralization?",
+      "options": [
+        {
+          "key": "A",
+          "text": "strong acid and strong base",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "weak acid and weak base",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "strong acid and weak base",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "weak acid and strong base",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "When quicklime dissolves in water?",
+      "options": [
+        {
+          "key": "A",
+          "text": "heat is absorbed",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "heat is evolved",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "oxygen is liberated",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "hydrogen is given off",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "If the value of &Delta;H is positive for a reaction, it means that the reaction is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "exothermic",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "endothermic",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "spontaneous",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "slow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Which of the following compounds is formed by the oxidation of ethanol?",
+      "options": [
+        {
+          "key": "A",
+          "text": "C\\(_2\\)H\\(_4\\)CO\\(_2\\)H",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "C\\(_2\\)H\\(_5\\)CO\\(_2\\)H",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "CH\\(_3\\)OH",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "CH\\(_3\\)CO\\(_2\\)H",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "What is the characteristic of the gas liberated when dilute hydrochloric acid is added to Iron(ii)sulphide?",
+      "options": [
+        {
+          "key": "A",
+          "text": "turns lime water milky",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "decolorizes bromine water",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "gives a pop sound",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "turns lead(ii)ethanoate paper black",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "An organic compound contains 72% carbon, 12% hydrogen and 16% oxygen by mass. What is the empirical formula of the compound?\n[ H = 1.0. C = 12.0, O = 16.0 ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "C\\(_3\\)H\\(_8\\)O",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "C\\(_6\\)H\\(_{12}\\)O",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "C\\(_6\\)H\\(_{12}\\)O\\(_2\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "C\\(_{12}\\)H\\(_{12}\\)O\\(_{11}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "When excess chlorine is mixed with ethane at room temperature, the product formed is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,2-dichloroethane",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "1,2-dichloroethene",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1,1-dichloroethane",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1,1-dichloroethene",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Which of the following reagents could be used to distinguish between propan-1-ol and propan-2-ol ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "H+ / K2Cr2O7",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "I\\(_2\\) / OH\\(^-\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "CH\\(_3\\)COOH",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "NaCl",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "If a catalyst is added to a system, the temperature and the pressure remain constant, there would be no effect on the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "activation energy of the reaction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "rate of the reaction",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "rate of the reverse reaction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "heat of reaction",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "consider the following reaction equation: 2NH\\(_3 \\) .+ 3Cl\\(_2\\) &rarr; N2 + 6HCl.\nNH\\(_3\\) is acting as?",
+      "options": [
+        {
+          "key": "A",
+          "text": "a reducing agent",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a dehydrating agent",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a drying agent",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an oxidizing agent",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The oxidation of chromium in Cr\\(_2\\)O\\(_7\\)\\(^{2-}\\) ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "+4",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "+5",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "+6",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "+7",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The process by which alkanoic acid reacts reversibly with alkanols is known as?",
+      "options": [
+        {
+          "key": "A",
+          "text": "saponification",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "esterification",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "carboxylation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "halogenation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "If the oxidation potential of Mg and Al are +2.37 volts and + 1.66 volts respectively, then the Mg would?",
+      "options": [
+        {
+          "key": "A",
+          "text": "not replace Al",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "be replaced by Al",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "remain in the solution",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "replace Al",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "consider the reaction represented by the following equation: 2SO\\(_2\\) + O\\(_2\\) ⇌ 2SO\\(_3\\)\nA decrease in the pressure of the reaction would",
+      "options": [
+        {
+          "key": "A",
+          "text": "decrease in the concentration of SO\\(_2\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have no effect on the reaction",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "shift the equilibrium position to the left",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "shift the equilibrium position to the right",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "In a mixture of gases which do not react chemically together, the pressure of the individual gas is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "atmospheric pressure",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "vapor pressure",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "total pressure",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "partial pressure",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Biotechnology is applied in the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "treatment of sewage",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "treatment of water",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "purification of chemicals",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "purification of metals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "which of the following organic compounds has the lowest boiling point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "C\\(_6\\)H\\(_14\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "C\\(_5\\)H\\(_12\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "C\\(_4\\)H\\(_10\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "( CH\\(_3\\) )\\(_3\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Consider the following reaction represented by the following equation:\nC\\(_2\\)H\\(_2\\) \\(^{H_2}_{&rarr;}\\) X \\(^{H_2}_{&rarr;}\\) Y. X and Y respectively are?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ethane and ethene",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ethene and ethane",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "ethyne and ethene",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "ethane and ethyne",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Which of the following substances can be classified as heavy chemicals?",
+      "options": [
+        {
+          "key": "A",
+          "text": "CaOCl\\(_2\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "H\\(_2\\)SO\\(_4\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "AgNO\\(_3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "CaO",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "in Boyle's law?",
+      "options": [
+        {
+          "key": "A",
+          "text": "T is constant, P varies directly with V",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "P is constant, V varies inversely with T",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "V is constant, P varies directly with T",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "T is constant, V varies inversely with P",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Which of the following apparatus is NOT used in volumetric analysis?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pipette",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Burette",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Desiccator",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "conical flask",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "One of the deductions from Rutherford's alpha particle scattering experiment is that?",
+      "options": [
+        {
+          "key": "A",
+          "text": "electrons are negatively charged",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "electrons have a negligible mass",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "nuclei of atoms are positively charged",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "protons are positively charged",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The atoms of \\(^{64}_{29}\\)Cu and \\(^{65}_{30}\\)Zn have the same number of?",
+      "options": [
+        {
+          "key": "A",
+          "text": "nucleon",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "electrons",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "neutrons",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "protons",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The number of electrons in the 3d orbital of \\(_24\\)Cr is",
+      "options": [
+        {
+          "key": "A",
+          "text": "2",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "3",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "4",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The method used to collect gas in the laboratory depends on its?\nI. boiling point II. density III. smell IV. solubility in water",
+      "options": [
+        {
+          "key": "A",
+          "text": "i and ii only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ii and iv only",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "iii and iv",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "i, ii, iii and iv",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Which of the following methods is NOT used for the separation of mixtures?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chromatography",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Crystallization",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Distillation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Electrolysis",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "The group to which elements belong in the periodic table is determined by the number?",
+      "options": [
+        {
+          "key": "A",
+          "text": "electrons",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "core electrons",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "valence shells",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "valence electrons",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Kipps apparatus can be used to prepare?",
+      "options": [
+        {
+          "key": "A",
+          "text": "H\\(_2\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "NH\\(_3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "O\\(_2\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "H\\(_2\\)S",
+          "is_correct": true
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) Explain briefly why \\(_2^4He\\) has a stable electron configuration compared to \\(_4^9Be\\)\n(b) Consider the following elements: 1H and 3Li.\n(i) State the number of electrons that an atom of each element would have after forming an ionic bond.\n(ii) Give a reason for each of your answers stated in (b)(i).\n(c) State two factors that should be considered when siting a chemical industry.\n(d) State two advantages of using a catalyst instead of high temperatures in chemical reactions.\n(e) Turpentine burns in chlorine according to the following equation:\nC\\(_{10}\\)H\\(_{16}\\)\\(_{(I)}\\) + 8Cl\\(_{2(g)}\\) \\(\\to\\) 10C\\(_{(s)}\\) + 16HCl\\(_{(g)}\\)\nCalculate the mass of turpentine that would completely burn in 21.3 g of chlorine.\n[Molar mass of chlorine = 71 gmol\\(^{-1}\\); Molar mass of Turpentine = 136 gmol\\(^{-1}\\)]\n(f) What is cracking?\n(g) State two factors that may influence the value of electron affinity.\n(h) What are carbohydrates?\n(i) State two differences between a simple sugar and starch.\n(j) Write an equation to show the dissociation of each of the following acids:\n(i) H\\(_2\\)CO\\(_3\\);\n(ii) CH\\(_3\\)COOH."
+    },
+    {
+      "number": 2,
+      "question": "(a) (i) Name three different methods for preparing salts.\n(ii) Give one example of a balanced equation for each of the methods named in (a)(i) .\n(iii) State two uses of sodium trioxocarbonate (IV).\n(b) If you were given some impure copper, describe how you would\nobtain a specimen of the pure metal by electrolysis.\n(c) Given that sodium chloride has a solubility of 36.3 at 30 and 39.0 at\n100 and that of silver nitrate is 297.0 at 30 and 952.0 at 100.\n(i) Calculate the percentage of each substance in the saturated solution at 100 that is deposited on cooling to 30\n(ii) Deduce which of the two salts can be purified more efficiently by crystallization."
+    },
+    {
+      "number": 3,
+      "question": "(a) (i) State the important points put forward in Dalton’s atomic theory.\n(ii) How does the theory explain the law of multiple proportion?\n(b) (i) Name three commercially useful products that may be obtained by chemical transformation of vegetable oils.\n(ii) With the aid of equations, describe the chemical reaction involved in the transformations stated in (b)(i).\n(c) Certain properties of Beryllium (Be) and its compounds differ from those of Magnesium (Mg) and its compounds, but rather resembles those of Aluminium and its compounds. Explain briefly why this is so.\n(d) Write balanced equation for the reaction between iodine and aqueous sodium trioxothiosulphate(VI)."
+    },
+    {
+      "number": 4,
+      "question": "(a) (i) What is meant by hardness of water?\n(ii) Describe briefly how you would determine what proportion of hardness in a given sample of water is due to permanent hardness.\n(iii) Give two reasons why hardness of water is an undesirable property.\n(b) State the:\n(i) reagents;\n(ii) conditions for the laboratory preparation of trioxonitrate (V) acid.\n(iii) How does concentrated trioxonitrate (V) acid reacts with:\n(I) sulphur;\n(II) aluminium.\n(c) Name one amphoteric oxide."
+    },
+    {
+      "number": 5,
+      "question": "(a) (i) Write an equation for the reaction by which sulphur dioxide in solution could be converted to tetraoxosulphate (VI) acid.\n(ii) State one test to confirm the conversion of sulphur dioxide to tetraoxosulphate (VI) acid.\n(iii) State the reaction of concentrated tetraoxosulphate (VI) acid with:\n(I) oxalic acid;\n(II) copper.\n(iv) What property of concentrated tetraoxosulphate (VI) acid does each of the reactions stated in (a)(iii ) illustrate?\n(b) (i) Explain briefly why water is referred to as a universal solvent.\n(ii) Give one chemical test for water.\n(c) (i) What is the major component of synthetic gas?\n(ii) Give one reason why synthetic gas is not a major source of air pollution.\n(d) Name one product of destructive distillation of coal that is:\n(i) solid;\n(ii) liquid;\n(iii) gas.\n(e) (i) Write a balanced chemical equation for the complete combustion of carbon.\n(ii) State one :\n(I) physical;\n(II) chemical property of the products in (e)(i)."
+    },
+    {
+      "number": 6,
+      "question": "(a) State the conditions necessary for the cracking of long-chain hydrocarbons to produce more gasoline.\n(b) State two reasons why metallic objects are electroplated\n(c) (i) Explain briefly why calcium oxide cannot be used to dry hydrogen chloride gas.\n(ii) State one drying agent for hydrogen chloride gas.\n(d) Concentrated trioxonitrate (V) acid was added to a solution of iron (II) tetraoxosulphate (VI) and the mixture heated. The mixture turned from pale green to yellow with the evolution of a brown gas. Explain briefly these observations.\n(e) (i) Write the equation for the reaction between zinc oxide and\ndilute tetraoxosulphate (VI) acid,\nsodium hydroxide solution.\n(ii) State which property of zinc oxide is shown by the reaction in (e) (i).\n(f) Two isotopes of chlorine are \\(^{35}_{17}\\)Cl and \\(^{37}_{17}\\)Cl State one:\nsimilarity;\ndifference between the isotopes.\n(g) State the two products formed when chlorine water is exposed to sunlight.\n(h) Consider the reaction represented by the following equation:\nState the:\nspecies that is undergoing oxidation;\noxidizing agent.\n(i) What is meant by carbon-12 scale ?\n(j) State two properties of a chemical system in equilibrium."
+    },
+    {
+      "number": 7,
+      "question": "(a) A hydrocarbon having the formula C\\(_{10}\\)H\\(_{22}\\) was cracked to produce C\\(_6\\)H\\(_{14}\\) and another hydrocarbon P .\n(i) Give the molecular formula of P .\n(ii) Draw the structures of two isomers of P .\n(ii) Give a reason why P could be polymerized.\n(b) State the guiding principles which are used to explain the way electrons of the atoms of the elements are arranged in atomic orbitals.\n(c)Consider each of the following substances: NaH, H\\(_2\\), H\\(_2\\)S, NH\\(_4\\)Cl.\n(i) Describe the nature of the intermolecular forces holding the units or molecules together in the condensed (liquid or solid) state.\n(ii) Explain briefly what happens when a sample of each of the substances is added to water.\n(iii) Write the chemical equations of any reactions occurring or of any equilibria established.\n(d) Element J has the following electron configuration: Is\\(^2\\)2s\\(^2\\)2p\\(^6\\)3s\\(^2\\).\n(i) How many unpaired electrons can be found in J ?\n(ii) State whether J would be a good oxidizing or reducing agent.\n(iii) Give a reason for the answer in (d) (ii)."
+    },
+    {
+      "number": 8,
+      "question": "(a) In the Solvay process, explain briefly with equations the functions of the following substances:\nlimestone;\nammonia.\n(b) (i) Write a chemical equation for the fermentation of glucose.\n(ii) Explain briefly why a tightly-corked glass bottle filled to the brim with fresh palm-wine shatters on standing for some time.\n(c) Consider the following metals: Na, Fe, K and Cu.\n(i) Arrange the metals in order of increasing reactivity.\n(ii) Which of the metals will react with cold water?\n(ii) Which of the metals could form coloured salts?\n(d)(i) What is a redox reaction ?\n(ii) Identify which of the following reaction equations are redox.\n(I) 2Na + Cl\\(_2\\) &rarr; 2NaCl\n(II) AgCl + 2NH\\(_3\\) &rarr; [Ag(NH\\(_3\\))\\(_2\\)]Cl\n(III) C\\(_2\\)H\\(_2\\) + H\\(_2\\) &rarr; C\\(_2\\)H\\(_4\\)\n(IV) HCl + KOH &rarr; KCl + H\\(_2\\)O\n(V) 2FeCl\\(_3\\) + 2KI &rarr; 2FeCl\\(_2\\) + 2KCl + I\\(_2\\)\n(iii) Give a reason for each of the answers in (d) (ii) .\n(iv) Write balanced equations of the half reactions for any two of the redox reactions in (d) (ii) ."
+    },
+    {
+      "number": 9,
+      "question": "(a) The following reaction scheme is an illustration of the contact process. Study the scheme and answer the questions that follow.\n(i) Name X and Y\n(ii) Write a balanced chemical equation for each of the processes I, II, III and IV\n(iii) Name the catalyst used in process II\n(iv) Using Le Chatelier's principle, explain briefly why increasing the temperature would not favour the reaction in II\n(v) State two uses of SO\\(_2\\)\n(b) Consider the following equation: 2H\\(_{2(g)}\\) + O\\(_{2(g)}\\) \\(\\to\\) 2H\\(_2\\)O\\(_{(g)}\\)\nCalculate the volume of unused oxygen gas when 40 cm\\(^3\\) of hydrogen gas is sparked with 30cm\\(^3\\) of oxygen gas\n(c) Calcium carbonate of mass 1.0 g was heated until there was no further change.\nWrite an equation for the reaction which took place.\nCalculate the mass of the residue.\nCalculate the volume of the gas evolved at s.t.p .\nWhat would be the volume of the gas measured at 15 and 760 mm Hg ? [C= 12.0, O = 16.0, Ca = 40.0, molar volume of a gas at s.t.p. = 22.4 dm \\(^3\\) ]"
+    },
+    {
+      "number": 10,
+      "question": "(a)(i) Draw and label a diagram to illustrate the preparation and collection of dry chlorine gas in the laboratory.\n(ii) State two uses of chlorine.\n(b) Describe the preparation of hydrogen from water gas.\n(i) Name the chief ore of aluminium.\n(ii) Why is the ore purified?\n(iii) Name the electrode used in the electrolysis.\n(iv) Give one reason why cryolite, NaAlF\\(_6\\), is added to the electrolyte.\n(c) Name three products obtained directly from the destructive distillation of coal."
+    },
+    {
+      "number": 11,
+      "question": "All your burette readings (initials and final) as well as the size of your pipette must be recorded but no account of experimental procedure is required. All calculations must be done in your answer booklet.\nA is a solution containing 15.8 g dm\\(^3\\) of Na\\(_2\\)S\\(_2\\)O\\(_3\\). B was obtained by dissolving 9.0 g of an impure sample of I\\(_2\\) in aqueous Kl and the solution made up to 1 dm\\(^3\\).\n(a) Put A into the burette and titrate it against 20.0 cm\\(^3\\) or 25.0 cm\\(^3\\) portions of B. Use starch solution as indicator. Repeat the titration to obtain concordant titre values. Tabulate your results and calculate the average volume of A used. The equation for the reaction involved in the titration is I\\(_2\\) + 2S\\(_2\\)O\\(_3\\) \\(\\to\\) 2I\\(^-\\) + S\\(_4\\)O\\(_6^{2-}\\).\n(b) From your results and the information provided, calculate the:\n(i) concentration of A in mol dm\\(^{-3}\\)\n(ii) concentration of I\\(_2\\) in B in mol dm\\(^{-3}\\);\n(iii) percentage by mass of I\\(_2\\) in the sample\n(c) Give reasons why the starch indicator was not added to the titration mixture at the beginning of the titration. [O = 16.0, Na = 23.0, S = 32.0, 1 = 127.0] Credit will be given for strict adherence to the instructions for observations precisely recorded and for accurate inferences. AIl tests, observations and inferences must be clearly entered in the booklet in ink at the time they are made."
+    },
+    {
+      "number": 12,
+      "question": "All your burette readings (initials and final) as well as the size of your pipette must be recorded but no account of experimental procedure is required. All calculations must be done in your answer booklet.\nC is a mixture of two inorganic compounds. Carry out the following exercises on C. Record your observations and identify any gas(es) evolved. State the conclusions you draw from the result of each test.\n(a) Put all of C in a boiling tube and add about 10 cm\\(^3\\) of distilled water. Shake thoroughly and filter. Keep both the residue and the filtrate.\n(b)(i) To about 2 cm\\(^3\\) of the filtrate add a few drops of Silver trioxoitrate (V) followed by dilute HNO\\(_{3}\\)\n(ii) Add excess NH\\(_3\\) solution to the resulting mixture in (b)(i).\n(C)(i) Put the residue in a test tube, add about 2 cm\\(^3\\) of dilute HCl and shake.\n(ii) Add NH\\(_3\\) Solution in drops to the mixture from (c)(i) and then in excess."
+    },
+    {
+      "number": 13,
+      "question": "All your burette readings (initials and final), as well as the size of your pipette, must be recorded but no account of experimental procedure is required. All calculations must be done in your answer booklet.\n(a) State what would be observed when \\(BaCl_2\\) solution is a portion of a saturated Na\\(_2\\)CO\\(_2\\) followed by dilute HCI in excess.\n(ii) A gas Q decolorized acidified kMnO\\(_4\\) Solution. Suggest what Q could be\n(b) Name one substance used in the laboratory for drying each of the following substances:\n(i) ammonia gas:\n(ii) carbon (IV) oxide.\n(c) Give a reason why a given mass of sodium hydroxide pellets cannot be used to prepare a standard solution."
+    }
+  ]
+}

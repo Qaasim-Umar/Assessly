@@ -1,0 +1,1398 @@
+{
+  "subject": "Physics",
+  "year": 2021,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following quantities is not an example of force?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mass",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Tension",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Weight",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Friction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The reason for laminating the soft iron core of a transformer is to?",
+      "options": [
+        {
+          "key": "A",
+          "text": "reduce eddy current.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "reduce magnetic flux.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "increase the magnetic flux.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "reduce its efficiency.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Formation of hydrogen bubbles at the copper plate of a primary cell is called?",
+      "options": [
+        {
+          "key": "A",
+          "text": "polarization.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "back e.m.f.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "electrolysis.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "local action.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "Which of the following factors does not affect the rate of evaporation of a liquid?",
+      "options": [
+        {
+          "key": "A",
+          "text": "temperature",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "volume",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "wind",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "surface area",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Opening in the eye through which light passes to the retina is called the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "pupil",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "cornea.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "iris",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "optic nerve.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "A heat sensitive resistor made of a semiconductor is called?",
+      "options": [
+        {
+          "key": "A",
+          "text": "thermometer.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "thermostat.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "thermistor",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "thermopile.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Electric motor primarily converts?",
+      "options": [
+        {
+          "key": "A",
+          "text": "electrical energy to chemical energy.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "kinetic energy to potential energy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "electrical energy to mechanical energy",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "electrical energy to heat energy.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Which of the following statements about the molecules of solids and liquids is correct? They both",
+      "options": [
+        {
+          "key": "A",
+          "text": "have weak attraction.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have wide separations.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "exhibit random motion.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "exhibit vibratory motion.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The distance between a node and its adjacent antinode of a transverse wave is equal to?",
+      "options": [
+        {
+          "key": "A",
+          "text": "half of the wavelength.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the wavelength.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "thrice the wavelength.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "quarter of the wavelength.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "Which of the sketched graphs above illustrates the correct variation of the gravitational force, Fg between two objects and the distance, d, between the centre",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 10.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2021/Ub5RlakJBgQ0a41NTLJETa9U4vHzviKWPS7pA2qT.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "D",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Which of the following actions will increase capacitance of a parallel plate capacitor?\nI. Decreasing the distance between the plates\nII. Increasing the distance between the plates.\nIII. Increasing the area of the plates overlap.\nIV. Avoiding the use of dielectric between the plate",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and III only",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "II and III only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "I and IV",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": ". III and IV only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "A metallic sphere is heated from 27°C to 200°C Without change of state. Which of the following changes would have resulted from the heating?",
+      "options": [
+        {
+          "key": "A",
+          "text": "No changes occur in its volume and density",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Its volume increases and its density increases",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Its volume increases and its density decrease",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Its volume increases without a change in density",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The acceleration of a moving object can be determined from the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "slope of its distance-time graph.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "area under its distance-time graph.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "slope of its velocity-time graph.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "area under its velocity-time graph",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "A student wishes to measure the potential difference across a resistor,R. She has a galvanometer,G and some connecting wires.\nWhat else does she need?",
+      "options": [
+        {
+          "key": "A",
+          "text": "high value resistor connected in parallel with G",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": ". low value resistor connected in parallel with G low value",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "resistor connected in series with G",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "high value resistor connected in series with G.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The handle of a screw jack is 35 cm long and the pitch of the screw is 0.5 cm. What force must be applied at the end of the handle to lift a load of 2000N, if the efficiency of the jack is 30% [π = \\(\\frac{22}{7}\\)]?",
+      "options": [
+        {
+          "key": "A",
+          "text": "152.0N",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "132.0N",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "15.2N",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "440.0N",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "The inductive reactance in a circuit of frequency 100Hz is 1ohms. Calculate the inductance of the inductor[π = 3.14]",
+      "options": [
+        {
+          "key": "A",
+          "text": "2.00 x 10\\(_{-3}\\)H",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "1.59 x 10\\(_{-3}\\)H",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "1.09 x 10\\(_{-3}\\)H",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "6.28x 10\\(_{-3}\\)H",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The diagram above illustrates the velocity-time graph of a body. Calculate the distance covered by the body during the motion",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 17.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2021/UyB58s5W69kkcyNrELohlzA4pt3iKOQnJym0CuhP.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "15m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "84m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "72m",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "48m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "An atom that emits an a-particle?",
+      "options": [
+        {
+          "key": "A",
+          "text": "may become a different element.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "becomes a different isotope of the element.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "daughter with increased mass.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "becomes a daughter of a different element always.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Which of the following units is equivalent to the unit of electric current?",
+      "options": [
+        {
+          "key": "A",
+          "text": "C s\\({-1}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "W",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "J s\\({-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "C",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "A ball is swung in a horizontal circle of centre O with a constant speed. What is the direction of its acceleration?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Away from O",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Along the Circumference of the circle",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Toward centre O",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Along a tangent to the circle",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Which of the following statements is an effect of compressing gas molecules at constant temperature?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The pressure on the molecules decreases.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The molecules gain more kinetic energy.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "The molecules make more impact per second on the walls of the container.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "The molecules increase in size.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The diagram above is an illustration of an a.c. circuit.Calculate the reactance of the capacitor.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 22.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2021/wnS7rDviDQnpBZB5qRIf6016IAaVyHZwZw78ZJQ5.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "2016Ω",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2000Ω",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "200Ω",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "4000Ω",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "A current of 2A passes through a wire of resistance 4Ω for 3 minutes. Calculate the energy lost.",
+      "options": [
+        {
+          "key": "A",
+          "text": "960J",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "1440J",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "2880J",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "48J",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Which of the following statements about the universal gravitational constant, G, is true?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is fundamental quantity.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "It has dimension  M-¹L³T-².",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Its S.I. unit is N m\\(^2\\)kg",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "It is a vector quantity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The sketched graph above represents a progressive wave moving from the left to the right. The period of the wave is 0.125s.\nDetermine the values of the amplitude and wavelength, respectively, of the wave.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 25.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2021/lZxC3lYW7oGpAqmAhhGpdutKuHzBXy5DSleqOFV2.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "8 cm; 27 cm",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "8 cm; 9 cm",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "4 cm; 9 cm",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "16 cm; 27 cm",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Determine the speed of the wave.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 26.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2021/kJM5oQh2GAxC6Q8iHoZYvQTTvbJlwqEeoHClB4hl.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "64 cm/s",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "32 cm/s",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "24 cm/s",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "72 cm/s",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Which of the following curved surfaces will produce a real image? I. Concave mirror II. Convex mirror III. Diverging lens IV. Converging lens",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and III only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "I, II and IV only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "II, III and V only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "I and IV only",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The components of vectors Q and R are (-3.0, 5.5) and (9.2, 4.4) respectively. Determine the components of Q + R.",
+      "options": [
+        {
+          "key": "A",
+          "text": "(3.7, 7.4)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "(6.2, 9.9)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "(2.5, -4 .8).",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "(14.7, 1.4)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "Which of the arrangements of radiations below shows decreasing order of wavelengths?",
+      "options": [
+        {
+          "key": "A",
+          "text": "X-rays> radio waves > infrared radiations",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Radio waves> infrared radiations > X-rays",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Infrared radiations > radio waves > X-rays",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "X-rays> infrared radiations > radio waves",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "An electric pressing iron is connected to the mains using an insulated wire. wire becomes very hot.\nThe heat generated in the wire can be minimized by replacing the wire with one of?",
+      "options": [
+        {
+          "key": "A",
+          "text": "thinner insulation.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "greater diameter.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "smaller diameter.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "thicker insulation.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "In the diagram above, a bulb is lit by drawing 2.0A from 440V a.c. source. Calculate the cost of keeping the bulb on for two days at $0.40 per kilowatt-hour.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 31.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2021/waFPFB6eD36IM5ZhckQubHv30ctUfzbnjJDTP2lX.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "$16.90",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "$84.48",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "$1690.00",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "$8.48",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "A wire of cross-sectional area 2π x 10\\(^-{8}\\) m\\(^2\\) and resistivity 1.1 x 10\\(^-{8}\\) Ω m, has a resistance of 21Ω.\nCalculate the length of the wire. [π=22/7]",
+      "options": [
+        {
+          "key": "A",
+          "text": "180 m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "140 m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "120 m",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "240 m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Which of the following statements best describes the particles in a solid at room temperature? They are",
+      "options": [
+        {
+          "key": "A",
+          "text": "far apart and moving randomly.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "close together and vibrating.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "close together and stationary.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "close together and moving randomly.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "A man weighing 200 N runs up a staircase in 5s. If the height of the staircase is 9 m, calculate the power of the man.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1000 W",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "360 W",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "40 W",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1800 W",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "A rotating disc contains a set of holes in a circle. An air jet is directed onto the holes and a note of frequency 480 Hz is produced. If the number of holes is 20, calculate the speed of rotation of the disc.",
+      "options": [
+        {
+          "key": "A",
+          "text": "10 rev/s",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "20 rev/s",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "24 rev/s",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "8 rev/s.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "A force of 10 N, acting continuously, increases the kinetic energy of an object from 20.J to 60 J. Find the distance moved by the object.",
+      "options": [
+        {
+          "key": "A",
+          "text": "200m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "40m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "4m",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "400m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "An electric circuit consists of a resistor. a battery and a key. If the voltage of the battery is increased, there Would be an increase in the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "current and resistance only.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "current resistance and temperature.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "current and temperature only.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "resistance and temperature only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "A radioactive material has a half-life of 1.0 hour If 200.0 g of it was present at 6 a.m. on a certain day, how many grams will have decayed by 9 a.m. on the same day?",
+      "options": [
+        {
+          "key": "A",
+          "text": "175.0 g",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "150.0 g",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "100.0 g",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "187.5 g",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The following statements about a loudspeaker are correct except?",
+      "options": [
+        {
+          "key": "A",
+          "text": "its contains a permanent magnet.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sound signal converted  to varying current signal enters the speech coil.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the current in the speech coil creates a magnetic force on the coil.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the magnetic force on the speech coil is uni-directional.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "An ice cube has mass of 20 g at 5°C. Calculate the energy required to raise its temperature to 0°C. [Specific heat capacity of ice = 2.1 J/g°c]",
+      "options": [
+        {
+          "key": "A",
+          "text": "105 J",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "100 J",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "42 J",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "210 J",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "A stone is thrown horizontally with initial velocity 15m/s from a tower 20 m high. How long does it take to reach the ground? [g= 10m/s\\(^2\\)",
+      "options": [
+        {
+          "key": "A",
+          "text": "2s",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "4s",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "5s",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1s",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Which of the following statements is not a characteristic of a plane progressive wave?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Energy travels out through the medium",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Neighboring points along the profile possess different amplitudes",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Neighboring points along the profile possess the same amplitude",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Neighboring particles vibrate with different phase",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The electrons in a cathode-ray tube are produced by?",
+      "options": [
+        {
+          "key": "A",
+          "text": "heating a metal filament.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "ionization of the air.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "applying a magnetic field to the y-plates.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "applying an electric field to the x-plates.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Which of the following statements about distance and displacement is not correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Displacement is a vector quantity.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Distance has dimension",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Displacement is measured in meters.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Distance is a vector quantity.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "A note produced by an instrument is distinguished from a similar note produced by another instrument by the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "intensity,",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "pitch.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "overtones.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "loudness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "According to Pascal's principle, the pressure in a fluid is always?",
+      "options": [
+        {
+          "key": "A",
+          "text": "dependent on density of the fluid.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "distributed partially in all directions.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "transmitted equally in all directions.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "increasing with height.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "Which of the following set of quantities have members which are all vectors?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pressure, energy and force",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Force, displacement and momentum",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Distance, acceleration and work",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Density, volume and weight",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "If the relative humidity of the atmosphere increases, the rate of evaporation of sweat from the human body?",
+      "options": [
+        {
+          "key": "A",
+          "text": "decreases",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "remains the same",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "increases then decreases",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Which of the following factors is not among that determines the resistance of a wire?",
+      "options": [
+        {
+          "key": "A",
+          "text": "mass",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "cross-sectional area",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "length",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "material",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Which of the following scientist suggested that moving particles exhibit wave properties?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Isaac Newton",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Ernest Rutherford",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Louis de Broglie",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "J.J. Thompson",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "The load-extension graph of an elastic material is illustrated above. Use the graph to determine the work done in stretching the material",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 1.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2021/ySIcoG1ZLC9NIMI2Ava8S7VJcONhiAtYF8tjZzOj.jpg"
+    },
+    {
+      "number": 2,
+      "question": "(a) Name two artificial satellites.\n(b) A geostationary satellite moves in an orbit of radius 6300 km. Calculate the speed with which it moves in the orbit. π = \\(\\frac{22}{7}\\)"
+    },
+    {
+      "number": 3,
+      "question": "A projectile is fired at an angle of 30° to the horizontal with a velocity of 40 m/s Calculate the velocity attained after 1 s. [g = 10 m/s\\(^2\\)]"
+    },
+    {
+      "number": 4,
+      "question": "The circuit diagram above is a simple current rectifier circuit. Use it to answer the questions that follow\n(a) State the function of each of the parts labeled A and B. Sketch the output signal produces.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 4.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2021/zqDySzTMXFke4JQPdapjj7hvYlmJ9aIQVnPNhRrz.png"
+    },
+    {
+      "number": 5,
+      "question": "Explain the wave-particle duality of light. (b) A particle of wavelength 4.2x 10\\(^{-11}\\)m travels (a) With a momentum of 1.6 x 10\\(^{-23}\\) kg m/s,\nDetermine the value of the Planck's constant, h."
+    },
+    {
+      "number": 6,
+      "question": "State three observable phenomena where a particle behaves like waves. State the scientific principle underlying the operation of fibre optics.\n(b) Explain each of the following terms as used in fibre optics: (i) core; (ii) cladding"
+    },
+    {
+      "number": 7,
+      "question": "(a)(i) State Hooke's law. (ii) A spring has a length of 0.20 m when a mass of 0.30 kg hangs on it, and a length of 0.75 nm when a mass of 1.95 kg hangs on it. Calculate the: (i) force constant of the spring; (ii) length of the spring when it is unloaded. [g = 10m/s\\(^2\\)]\n(b)(i) What is diffusion? (ii) State two factors that affect the rate of diffusion of a substance. (iii) State the exact relationship between the rate of diffusion of a gas and its density.\n(c) A satellite of mass, m orbits the earth of mass. M with a velocity, v at a distance R from the centre of the earth. Derive the relationship between the period T, of orbit and R."
+    },
+    {
+      "number": 8,
+      "question": "c(ii)\n(a)(i) Define dew point. (ii) Explain why dew forms more quickly on the metal parts than on the rubber parts of a bicycle placed in the open overnight.\n(b)(i) Explain the statement. the specific heat capacity of copper is 400 J/kg/K. (ii) Two metals, P and Q are supplied with the same quantity of heat.\nIf the ratio of the specific heat capacity of P to Q is 3: 1 and their masses are in the ratio I:2 respectively.\ncalculate the ratio of the temperature rise of P to Q.\n(c)(i) Define coefficient of thermal conductivity of a material.\nThe diagram above c(ii) illustrates a composite bar of iron and copper. The bar is insulated along its sides and it has a diameter of 10 mm. The length and thermal conductivity of the iron are 0.15 m and 40 W/m/K, respectively and those of copper are 0.05 m and 360 W/m/K, respectively. If the free ends of the iron and copper are kept at 100°C and 0°C respectively. calculate the (i) temperature at the interface between the bars; (ii) rate of heat flow along the bar.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 8.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2021/8Ab0fkLYqYLgqV3jlOSbNRORvnCvE0F7mDZ6ELqn.jpg"
+    },
+    {
+      "number": 9,
+      "question": "(a)(i) Define each of the following terms as it relates to converging lenses (i) focal length; (ii) optical Centre.\n(iii) Draw a ray diagram to illustrate how a converging lens is used to produce a virtual image of an object.\n(b)(i) Name the primary colors of light. (ii) Match each primary color to its corresponding complementary color.\n(c) A ray passes symmetrically through a glass prism of angle 60° and refractive index of 1.5. Calculate the angle of: (i) incidence; (ii) minimum deviation."
+    },
+    {
+      "number": 10,
+      "question": "(a)(i) What is meant by the root-mean-square value of an alternating current? (ii) Define impedance of an alternating current circuit.\n(b) An electrical device rated 120 V, 60 W is opened on a 240 V, 50Hz mains supply. The circuit has a capacitor connected in series with ihe electrical device and the supply. Calculate the capacitance of the capacitor. [π=3.142].\n(c)(i) Define the capacitance of a capacitor.\n(ii)\nThe circuit diagram above illustrates two capacitors of capacitance C\\(_1\\) and C\\(_2\\) connected in series across a 2V source.\n(i)Obtain an expression for the total capacitance in terms of C\\(_2\\). 2 mm 5 n (ii) Calculate the potential difference across each capacitor."
+    },
+    {
+      "number": 11,
+      "question": "(a)(i) State the principal factor that determines the relative stability of a radioactive nucleus.\n(ii) Arrange the following radioactive nucleus in decreasing order of stability. Justify your answer: X,W and Y:\n\\(^40{X}_20\\) \\(^920{Y}_36\\) and \\(^95{Z}_42\\)\n(b)(i) Explain the term ionization potential.\n(ii)\nThe diagram above illustrates energy levels in the hydrogen atom. E, is the energy of the E\\(_0\\) ground state.\n(i) When an electron makes a transition from level n = 3 to level n = 1, it emits a photon of wavelength 1.02x 10\\(^{-7}\\)m. Calculate E\\(_0\\).\n(ii) Calculate the ionization potential of the hydrogen atom.\n(c)(i) Explain the statement, the work function of sodium is 2.0 eV. (ii) Light of wavelength 160 mm is shone on the surface of a sodium metal of work function 2.0 eV. Determine whether photoelectrons will be emitted. [h = 6.6 x 10\\(^{-34}\\) Js, e = 3.0 x 10\\(^{8}\\)m/s, I eV = 1.6 x 10\\(^{-19}\\) J]"
+    },
+    {
+      "number": 12,
+      "question": "(a) You are provided with a set of masses, a metre rule, a thread, two retort stands and clamps, a stop watch, a knife edge and split corks.\nCarry out the following instructions using the diagram above as a guide.\n(i) Determine the centre of gravity, C, of the metre rule using the knife edge.\n(ii) Read and record the mass, M, of the metre rule written on the reverse side of it.\n(iii) Suspend the metre rule by means of two parallel threads of equal length, h =70 cm, with one at the 10 cm mark and the other at 90 cm mark of the metre rule.\n(iv) Attach a mass m = 30g firmly to the metre rule at C. Ensure that the graduated face of the metre rule is facing upwards and that d= 80 cm throughout the experiment. (v) Set the metre rule into small angular oscillations about the vertical axis through its centre of gravity by displacing its ends in opposite directions.\n(VI) Determine the time,i, for 20 oscillations and evaluate the period T, T\\(^2\\) and T\\(^{-2}\\).\n(vii) Repeat the procedure for four other values of m =40 g, 50 g, 60 g and 70 g n each case, determine I and evaluate T\\(^2\\) and T\\(^{-2}\\).\n(viii) Plot a graph of T on the vertical axis and m on the horizontal axis.\n(ix) Determine the slope, s, of the graph.\n(x) Evaluate Q= 0.68 / s.\n(xi) State two precautions taken to ensure accurate results.\n(b) (i) Give two examples of simple harmonic motion other than the motion of a simple pendulum.\n(ii) Explain the term centre of gravity of a body.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 12.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2021/y6kl82YaQUl3bvz3qwU6yDxSWHaDU2islGIvTY3t.png"
+    },
+    {
+      "number": 13,
+      "question": "You have been provided with a ray box, a converging lens, a lens holder, a screen, a metre rule, and half- metre rule. Use the diagram above as a guide to perform the experiment.\n(i) Determine the approximate focal length f, of the lens by focusing a distant object on the screen.\n(ii) Place the ray box and the screen such that the distance between the illuminated cross-Wire and the screen, D= 150 cm.\n(iii) Place the lens at a position L where a sharp mage of the cross-Wire Is obtained on the screen Note L.\n(iv) Move the lens at a position L, to 0btain another sharp image of the cross-wire on the screen. Note L\n(V) Measure the distance, d. between L\\(_1\\) and L\\(_2\\).\n(Vi) Evaluate D\\(^2\\): d\\(^2\\) and D\\(^2\\) - d\\(^2\\).\n(vii) Repeat the procedure for four other values of D = 130cm, 100 cm, 90 cm and 80 cm. in each case.evaluate D\\(^2\\); d\\(^2\\) and D\\(^2\\) - d\\(^2\\).\n(viii) Tabulate the result\n(ix) Plot a graph with D\\(^2\\) - d\\(^2\\) on the vertical axis and D on the horizontal axis.\n(x) Determine the r values of D axis and Determine the slopes, S, of the graph.\n(xi) Evaluate k = \\(\\frac{s}{4}\\)\n(xii) State two precautions taken to ensure accurate results.\n(bi) Distinguish between a virtual image and. plain image?\n(ii) With the aid of a ray diagram, explain how a converging lens produces a Virtual image"
+    },
+    {
+      "number": 14,
+      "question": "(a) You are provided with a battery, an ammeter, a voltmeter, a resistance box, a key and connection wires.\n(i) Set up circuit as shown in the diagram above.\n(ii) With the key opened, measure and record the e.m.f. E\\(_o\\) of the battery\n(iii) With the key closed, select the resistance R=1 on the resistance box. Read and record the current, 1Ω.\n(iv) Evaluate I\\(^{-1}\\).\n(v) Repeat the procedure for five other values of R=2Ω,3Ω, 4Ω, 5Ω, and 6Ω.\nIn each case, record I and evaluate I\\(^{-1}\\) results.\n(vii) Plot a graph with R on the vertical axis and I\\(^{-1}\\) on the horizontal axis.\n(Viii) Determine the slope, s, of the graph.\n(ix) Determine the intercept C, On the vertical axis.\n(x) State two precautions taken to ensure accurate results.\n(b)(i) Define potential difference in an electric field.\n(ii) A piece of resistance wire of diameter 0.2 mm and length 25 cm has a resistance of 7Ω. Calculate the resistivity of the wire of the battery. [ π = 22\\7]",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 14.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2021/fu3P8HJxT154G1U0rWdrCsWL5L9d4bTNLJwZPVJ2.png"
+    }
+  ]
+}

@@ -1,0 +1,1394 @@
+{
+  "subject": "Chemistry",
+  "year": 2018,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following raw materials is used in the plastic industry?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ethene",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Methane",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Sulphur",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Hydrogen",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Which of the following organic compounds can undergo both addition and substitution reactions?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pentane",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Benzene",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Propane",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Hexane",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Which of the following equations represents a redox reaction?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(HNO_{{3}{(aq)}} + NaOH_{(aq)} \\to NaNO_{{3}{(aq)}} + H_{2}O_{(l)}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(AgNO_{{3}{(aq)}}+KCl_{(aq)} \\to AgCl_{(s)}+KNO_{{3}{(aq)}}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(CaCO_{{3}{(s)}} \\to CaO_{(s)} + CO_{{2}{(g)}}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(2H_{2}S_{(s)} + SO_{{2}{(g)}} \\to 2HO_{2} + 3S_{(g)}\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The process of extraction of iron from its ore is",
+      "options": [
+        {
+          "key": "A",
+          "text": "decomposition",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "oxidation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "reduction",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "sublimation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "What is the solubility of a salt if 0.4g of it is obtained on evaporating 200\\(cm^{3}\\) of its saturated solution to dryness?",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.08\\(gdm^{-3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2.00\\(gdm^{-3}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "8.00\\(gdm^{-3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "80.00\\(gdm^{-3}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "An acidic salt has",
+      "options": [
+        {
+          "key": "A",
+          "text": "double anions in its aqueous solution",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a single cation in its aqueous solution",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "hydrogen ions in its aqueous solution",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "hydrogen atoms in its aqueous solution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "A reaction is endothermic if the",
+      "options": [
+        {
+          "key": "A",
+          "text": "reaction vessel feels cool during the reaction",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "enthalpy change is negative",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "bond forming energy exceeds bond breaking energy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "heat of formation of reactants exceeds heat of formation of products",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "In which of the following compounds does hydrogen form ionic compounds?",
+      "options": [
+        {
+          "key": "A",
+          "text": "CH\\(_{4}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "HCl",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "NH\\(_{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "NaH",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "An organic compound has the empirical formula \\(CH_{2}\\). If its molar mass is 42\\(gmol^{-1}\\), what is its molecular formula? (C = 12.0, H = 1.0)",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(C_{2}H_{4}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(C_{3}H_{4}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(C_{3}H_{6}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "\\(C_{4}H_{8}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "Consider the following reaction equation: \\(Br_{2} + 2KI \\to 2KBr + I_{2}\\). Bromine is acting as",
+      "options": [
+        {
+          "key": "A",
+          "text": "an oxidizing agent",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a reducing agent",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "an acid",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a base",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Ethene is produced from ethanol by",
+      "options": [
+        {
+          "key": "A",
+          "text": "decomposition",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "hydrolysis",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ozonolysis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "dehydration",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Consider the following equilibrium reaction: \\(2AB_{{2}{(g)}} + B_{{2}{(g)}} \\to 2AB_{{3}{(g)}}\\). \\(\\Delta H= -X kJmol^{-1}\\). The backward reaction will be favored by",
+      "options": [
+        {
+          "key": "A",
+          "text": "a decrease in pressure",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "an increase in pressure",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a decrease in temperature",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an introduction of a positive catalyst",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "What is the mass of solute in 500\\(cm^{3}\\) of 0.005\\(moldm^{-3}\\) \\(H_{2}SO_{4}\\)? ( H = 1, S = 32.0, O=16.0)",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.490g",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.049g",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "0.245g",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "0.0245g",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "Pure water can be made to boil at a temperature lower than 100&deg;C by",
+      "options": [
+        {
+          "key": "A",
+          "text": "reducing its quantity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "decreasing the external pressure",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "distilling it",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increasing the external pressure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "At what temperature does the solubility of \\(KNO_{3}\\) equal that of \\(NaNO_{3}\\)?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 15.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/chemistry/2018/ENcKhIgAoW371IpYVrUywG4Kuw4gGuCRAJA7dYyK.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "0°C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "20°C",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "30°C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "40°C",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "When a salt is added to its saturated solution, the salt",
+      "options": [
+        {
+          "key": "A",
+          "text": "dissolves and the solution becomes super saturated",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "dissolves and the solution becomes unsaturated",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "precipitates and the solution remains unchanged",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "dissolves and crystals are formed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "When substance X was added to a solution of bromine water, the solution became colourless. X is likely to be",
+      "options": [
+        {
+          "key": "A",
+          "text": "propane",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "propanoic acid",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "propyne",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "propanol",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The preferential discharge of ions during electrolysis is influenced by the",
+      "options": [
+        {
+          "key": "A",
+          "text": "mechanism of electrolysis",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "electrolytic reactions",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "nature of the electrode",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "type of electrolytic cell",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "The valence electrons of \\(_{12}Mg\\) are in the",
+      "options": [
+        {
+          "key": "A",
+          "text": "3s orbital",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "2p\\(_{x}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "2s orbital",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1s orbital",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "Stainless steel is an alloy comprising of",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fe and C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Fe and Ni",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Fe, C and Ni",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Fe, C and Al",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The number of Hydrogen ions in 1.0\\(dm^{3}\\) of 0.02\\(moldm^{-3}\\) tetraoxosulphate(VI) acid is \\([N_{A} = 6.02 \\times 10^{23}]\\)",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(1.2 \\times 10^{22}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(1.2 \\times 10^{23}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(2.4 \\times 10^{22}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(2.4 \\times 10^{23}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The most suitable substance for putting out petrol fire is",
+      "options": [
+        {
+          "key": "A",
+          "text": "water",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "carbon(IV) oxide",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "fire blanket",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sand",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "The following factors would contribute to environmental pollution except",
+      "options": [
+        {
+          "key": "A",
+          "text": "production of ammonia",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "manufacture of cement",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "photosynthesis",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "combustion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The position of equilibrium in a reversible reaction is affected by",
+      "options": [
+        {
+          "key": "A",
+          "text": "particle size of the reactants",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "vigorous stirring of the reaction mixture",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "presence of a catalyst",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "change in concentration of the reactants",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The diagram above illustrates a conical flask containing water and ice. Which of the following is correct about the diagram?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 25.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/chemistry/2018/SXF3SWeYAOUdwNHgSRzlILmzCYhJSUX0G6AuC8Gv.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "The water is at lower temperature than the ice",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Energy is absorbed when the ice changes to water",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Energy is released when the ice changes to water",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "The water molecules vibrate about a fixed point",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Which of the following statements best explains the difference between a gas and a vapour?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Unlike gases, vapours are liquids at room temperature",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Unlike gases, vapour can easily be condensed into liquids",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Unlike gases, vapour is readily converted into solids",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Vapours are generally denser than gases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Consider the following reaction equation: \\(2HCl + Ca(OH)_{2} \\to CaCl_{2} + H_{2}O\\). What is the volume of 0.1\\(moldm^{-3}\\) HCl that would completely neutralize 25\\(cm^{3}\\) of 0.3\\(moldm^{-3}\\) Ca(OH)\\(_{2}\\)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "150\\(cm^{3}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "75\\(cm^{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "30\\(cm^{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "25\\(cm^{3}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "\\(Cu\\) and \\(HNO_{3}\\) are not suitable for preparing hydrogen gas because of their",
+      "options": [
+        {
+          "key": "A",
+          "text": "reactivity and oxidation respectively",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "conductivity and corrosiveness respectively",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "melting point and reduction respectively",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "electronegativity and solubility respectively",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "Which of the following CANNOT be an empirical formula?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(CH\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(CH_{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(P_{2}O_{5}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(N_{2}O_{4}\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "One of the criteria for confirming the purity of benzene is to determine its",
+      "options": [
+        {
+          "key": "A",
+          "text": "heat capacity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "boiling point",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "mass",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "colour",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "When chlorine is passed through a sample of water, the pH of the water sample would be",
+      "options": [
+        {
+          "key": "A",
+          "text": "< 7",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "> 7",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "= 7",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "How many atoms are contained in 0.2moles of nitrogen? \\([N_{A} = 6.02 \\times 10^{23}]\\)",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(1.20 \\times 10^{23}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(2.41 \\times 10^{23}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(3.62 \\times 10^{23}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(4.82 \\times 10^{23}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The strength of metallic bonds depends on the",
+      "options": [
+        {
+          "key": "A",
+          "text": "charge density of the atoms",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ductility of the metal",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "number of valence electrons",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "total number of electrons in the atom",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "When zinc is added to AgNO\\(_{3}\\) solution, crystals of silver forms on the zinc surface. This indicates that zinc is",
+      "options": [
+        {
+          "key": "A",
+          "text": "oxidised",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "reduced",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "decomposed",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "dissociated",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The empirical formula of a compound containing 0.067mol Cu and 0.066mol O is [Cu = 63.5, O = 16]",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(Cu_{2}O\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(CuO\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "\\(CuO_{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(CuO_{4}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The change in the oxidation state of iron in the reaction represented by the equation: \\(2FeCl_{3} + H_{2}S \\to 2FeCl_{2} + 2HCl + S\\) is",
+      "options": [
+        {
+          "key": "A",
+          "text": "+2 to +3",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0 to +2",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "+3 to +2",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "+3 to 0",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Which of the following methods can be used to seperate blood cells from plasma?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Centrifugation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Filtration",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Chromatography",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Distillation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Which of the following statements is true about ionic radius? Ionic radius",
+      "options": [
+        {
+          "key": "A",
+          "text": "increases as nuclear charge increases",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "decreases as nuclear charge increases",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "decreases as nuclear charge decreases",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "remains constant as nuclear charge increases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Analysis of a hydrocarbon shows that it contains 0.93g of Carbon per gram of the compound. The mole ratio of carbon to hydrogen in the compound is [H = 1.0, C=12.0]",
+      "options": [
+        {
+          "key": "A",
+          "text": "1:1",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "1:2",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "2:1",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "2:3",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "The law of definite proportions states that",
+      "options": [
+        {
+          "key": "A",
+          "text": "pure samples of the same compound contain the same elements combined in the same proportion by mass",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "pure samples of substances are in the same proportion by mass",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "chemical compounds are pure because they contain the same elements",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "matter can neither be created nor destroyed.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "What is the relative molecular mass of a compound which has empirical formula \\(CH_{2}O\\)? [C= 12, H= 1, O= 16]",
+      "options": [
+        {
+          "key": "A",
+          "text": "42",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "45",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "126",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "180",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Atoms are electrically neutral because they",
+      "options": [
+        {
+          "key": "A",
+          "text": "do not conduct electricity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "contain equal number of protons and electrons",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "are composed of neutrons and electrons",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cannot be attracted by electromagnetic field.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Common Salt (NaCl) is used to preserve foods. Which of the following properties can be used to determine its purity before use?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Solubility in water",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Melting point",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Relative density",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Crystalline nature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Which of the following electron configurations represents the transition element Chromium \\(_{24}Cr\\)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(1s^{2} 2s^{2} 2p^{6} 3s^{2} 3p^{6} 4s^{2} 3d^{4}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(1s^{2}2s^{2}2p^{6}3s^{2}3p^{6}3d^{6}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(1s^{2}2s^{2}2p^{6}3s^{2}3d^{4} 4s^{1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(1s^{2}2s^{2}2p^{6}3s^{2}3p^{6}4s^{1}3d^{5}\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The atomic number of an isotope of hydrogen is equal to its mass number because it",
+      "options": [
+        {
+          "key": "A",
+          "text": "has a totally filled valence shell",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "has a high charge to mass ratio",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "does not contain neutrons",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "exhibits isotopy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "What is the total number of shared pair of electrons in the compound above?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 46.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/chemistry/2018/y3PjMDR3qvcSDpN3nZHnL68eVs1ciAMSbnKE13N1.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "5",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "8",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "10",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "12",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The bonding pair of electrons in a Hydrogen Chloride molecule is pulled towards the chlorine atom because",
+      "options": [
+        {
+          "key": "A",
+          "text": "chlorine has a larger atomic size",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "chlorine has a larger atomic mass",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "chlorine is more electronegative",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "there is no bonding orbitals within the hydrogen atom",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "The solubility of \\(CO_{2}\\) in water can be accounted for by",
+      "options": [
+        {
+          "key": "A",
+          "text": "Van der Waal's forces",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Ionic attraction",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "dipole attraction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "covalent bonding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Which of the following properties would not influence electrovalent bond formation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Electronegativity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Electron Affinity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Ionization potential",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Catalytic ability",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Particles in a solid exibit",
+      "options": [
+        {
+          "key": "A",
+          "text": "vibrational motion",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "vibrational and translational motion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "vibrational and random motion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "random and translational motion",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a)(i) Sketch a graphical representation of Charles' law.\n(ii) Calculate the volume of oxygen that would be required for the complete combustion of 2.5 moles of ethanol at s.t.p. [molar volume at s.t.p. = 22.4 dm\\(^3\\)]\n(b)(i) State the collision theory of reaction rates.\n(ii) Using the collision theory, explain briefly how temperature can affect the rate of a chemical reaction.\n(c)(i) Define esterification.\n(ii) Give two uses of alkanoates.\n(iii) Give the products of the alkaline hydrolysis of ethyl ethanoate.\n(d) A tin coated plate and a galvanized plate were exposed for the same length of time.\n(i) Which of the two plates corrodes faster\n(ii) Explain briefly your answer in 2(d)(i)"
+    },
+    {
+      "number": 2,
+      "question": "(a)(i) Draw the structure of the sixth member of the alkenes.\n(ii) Calculate the relative molecular mass of the sixth member of the alkene.\n(iii) State one difference between cracking and reforming in the petroleum industry. [H = 1, C = 12]\n(b)(i) Define the term enthalpy of neutralization.\n(ii) Describe briefly how the enthalpy of neutralization of the reaction of dilute hydrochloric acid and aqueous potassium hydroxide could be determined.\n(c) An electrochemical cell is constructed with copper and silver electrodes.\n(i) State which of the electrodes will be the: 1. anode; II. cathode.\n(ii) Give the reason for your answer in 3(c)(i).\n(iii) State the type of reaction occurring at each electrode.\n(iv) Write a balanced equation for the overall cell reaction.\n(d)(i) Name the compound formed when iron is exposed to moist air for a long time.\n(ii) Write a balanced chemical equation for the reaction in 3(d)(i).\n(iii) Name one ore of iron."
+    },
+    {
+      "number": 3,
+      "question": "(a)(i) Draw and label a diagram for the laboratory preparation of a dry sample of sulphur(IV)oxide.\n(ii) Write a balanced chemical equation for the reaction in (a)(i).\n(iii) State the precaution that must be taken in the preparation of the gas stated in (a)(i).\n(iv) Give a reason why the precaution stated in (a)(ii) must be taken.\n(b)(i) State Dalton's law of partial pressures.\n(ii) The volume of a sample of methane collected over-water at a temperature of 12&deg;C and a pressure of 700 mmHg was 30cm\\(^3\\). Calculate the volume of the dry gas at s.t.p. [Saturated vapour pressure of water at 12&deg;C is 10 mmHg] &bull;\n(c)(i) Write an equation for the reaction between chlorine and water.\n(ii) Why does litmus paper turn red when put in the resulting solution in (c)(i)?\n(d)(i) State the trend in the boiling points of chlorine, bromine and iodine.\n(ii) Explain briefly why water has a higher boiling point than ammonia."
+    },
+    {
+      "number": 4,
+      "question": "(a)(i) State two industrial uses of hdrogen.\n(ii) Consider the equation below. Mg(HCO\\(_3\\))\\(_{2(aq)}\\) \\(\\to\\) MgCO\\(_{3(g)}\\) + H\\(_2\\)0\\(_{(l)}\\) + CO\\(_{2(g)}\\)\n1. State the type of hardness of water being removed as shown by the above equation.\n2. Give two disadvantages of hardness of water.\n(b)(i) In the extraction of aluminium by electrolysis, graphite electrodes are used. State the disadvantages of using this type of electrode.\n(ii) Calcuim oxide reacts with water to form slaked line: I. Write a balanced equation for this reaction; II. State one use of slaked line.\n(c)(i) What is meant by saponification?\n(ii) List the raw materials needed for the manufacture of soap.\n(iii) Name the main by-product obtained from the manufacture of soap.\n(d) With the aid of chemical equations explain briefly how iron is extracted in the blast furnace using iron ore, coke and limestone as raw materials at the:\n(i) bottom of the furnace; (ii) middle of the furnace (iii) top of the furnace."
+    },
+    {
+      "number": 5,
+      "question": "(a) (i) Define the term fermentation\n(ii) Name the catalyst that can be used for this process\n(b) Name two factors which determine the choice of an indicator for an acid-base titration\n(c) Consider the following reaction equation: Fe + H\\(_2\\)SO\\(_4\\) \\(\\to\\) FeSO\\(_4\\) + H\\(_2\\). Calculate the mass of unreacted iron when 5.0g of iron reacts with 10cm\\(^3\\) of 1.0 moldm\\(^3\\) H\\(_2\\)SO\\(_4\\), [Fe = 56.0]\n(d) Name one:\n(i) Heavy chemical used in electrolytic cells\n(ii) Fine chemical used in textile industries\n(e) Explain briefly how a catalyst increases the rate of a chemical reaction.\n(f) (i) Write the chemical formula for the product formed when ethanoic acid reacts with ammonia\n(ii) Give the name of the product formed in (f)(i)\n(g) List three properties of aluminum that makes it suitable for the manufacture of drinks cans\n(h) State two industrial uses of alkylalkanoates\n(i) Name two steps involved in the crystallization of a salt from its solution\n(j) List two effects of global warming"
+    },
+    {
+      "number": 6,
+      "question": "(a) (i) List the two gaseous fuels produced from coke.\n(ii) Which of the two fuels listed in 5(a)(i) is a better fuel?\n(iii) Give reasons for your answer in 5(a)(ii)\n(iv) Write a balanced equation for the production of each of the fuels. [9 marks]\n(b)(i) Differentiate between thermosets and thermoplastics.\n(ii) Give one example of:\nI. thermosets;\nII. thermoplastics.\n(iii) State three properties of plastics.\n(c)(i) State the method of collecting gases which are denser than air.\n(ii) Name two gases that could be used to perform the fountain experiment in the laboratory.\n(iii) State the physical properties of the gases named in 5(c)(ii) which makes them suitable for the experiment. [4 marks]\n(d) (i) State two compounds that could be used to test for water.\n(ii) Give three disadvantages of hard water."
+    },
+    {
+      "number": 7,
+      "question": "1. (a ) Define the term compound.\n(b) State two conditions necessary for the cracking of petroleum fractions.\n(c) Name two transition elements that are used as catalyst.\n(d) (i) Write an equation for the reaction between zinc dust and trioxonitrate (V) solution.\n(ii) Which of the reactants in 1(d)(i) is:\nI. reduced;\nII. oxidized.\n(e) Two isotopes of oxygen 16O and 18O have relative abundance of 90 % and 10 % respectively. Calculate the relative atomic mass of oxygen.\n(f) List two ores of iron.\n(g) (i) What is biotechnology?\n(ii) Name one product that can be obtained using biotechnology.\n(h) Define the term element.\n(i ) State two sources of methane in the atmosphere.\n(j) Explain briefly why the trend of the boiling points for group VII elements is in the order I\\(_2\\) > Brl\\(_2\\)> Cl\\(_2\\)."
+    },
+    {
+      "number": 8,
+      "question": "(a) Explain the statement, the standard electrode potential of zinc is -0.76 v.What is meant by the term periodic property of elements ?\n(b) Consider the following standard electrode potentials:\nZn\\(^{2+}\\)\\(_{(aq)}\\) + 2e\\(^-\\) Zn(s) Eᶿ = - 0.76 V\nCu\\({2+}\\)\\(_{(aq)}\\) + 2e\\(^-\\) Cu(s) Eᶿ = + 0.34 V\nWhen the two half cells are connected:\n(i) write the reaction equation at each electrode;\n(ii) write the overall cell reaction equation;\n(iii) state the type of reaction occurring at each electrode;\n(iv) calculate the e.m.f. of the cell.\n(c) (i) Name two chemical industries.\n(ii) State two factors that should be considered when siting a chemical industry.\n(iii) List two effects of a chemical industry on the community in which it is sited.\n(d) Using chemical equations, explain briefly what would happen when hydrogen peroxide is added to:\n(i) silver oxide;\n(ii) chlorine gas.\n(e) List three physical properties of nitrogen."
+    },
+    {
+      "number": 9,
+      "question": "(a)(i) Describe briefly the laboratory preparation of hydrogen gas from the action of steam on iron.\n(ii) Write the equation for the reaction in (a)(i).\n(iii) List three methods for the industrial preparation of hydrogen gas.\n(b)Consider the following reaction equation:\nCO(g) + 2H\\(_{2(g)}\\) CH\\(_3\\)OH\\(_{(g)}\\) + 201 kJmo l-J\nPredict the effect of each of the following factors on the position of equilibrium:\n(i) decrease in temperature;\n(ii) increase in pressure;\n(iii) increase in concentration of CO\\(_{(g)}\\).\n(c) (i) Define condensation polymerization.\n(ii) Name two condensation polymers.\n(iii) Write the formula of ethylethanoate.\n(d) (i) Define the term allotropy.\n(ii) Name two crystalline allotropes of carbon.\n(iii) State one use of each of the allotropes named in (d)(ii).\n(e) State two differences between nitrogen (I) oxide and oxygen."
+    },
+    {
+      "number": 10,
+      "question": "(a) (i) Name the ore mostly used in the extraction of aluminium.\n(ii) Name two major impurities in the ore named in (a)(i).\n(iii) Name the material used in making the electrodes in the extraction of aluminium.\n(iv) Give two reasons why aluminium is commonly recycled.\n(v) Explain briefly why the anode has to be replaced at regular intervals during the extraction of aluminium.\n(b) A current of 0.75 amperes was passed through an electrolysis containing chromium ions for one hour and four minutes. If the mass of chromium deposited was 0.52 g, calculate the:\n(i) quantity of electricity passed;\n(ii) moles of chromium deposited;\n(iii) quantity of electricity required to deposit one mole of chromium;\n(iv) charge on the chromium ion.\n[Cr = 52.0, 1 F = 96500 C]\n(c) In the contact process for the manufacture of tetraoxosulphate(VI) acid, the following reaction occurs:\n2SO\\(_2\\)\\(_{(g)}\\) + O\\(_2\\)\\(_{(g)}\\) 2SO\\(_3\\)\\(_{(g)}\\) H = - 197 kJ mol\\(^{-1}\\)\n(i) Name the catalyst used in the reaction;\n(ii) State the optimum temperature for this reaction;\n(iii) What would be the effect on the yield of SO\\(_3\\) if a temperature higher than the optimum is used?\n(d)(i) State two chemical methods by which temporary hardness of water can be removed.\n(ii) Write a balanced chemical equation for each of the methods stated in (d)(i)."
+    },
+    {
+      "number": 11,
+      "question": "(a) (i) State the collision theory of reaction rates.\n(ii) Using the collision theory, explain briefly how temperature can affect the rate of a chemical reaction.\n(b) (i) Sketch a graphical representation of Charles’ law.\n(ii) Calculate the volume of oxygen that would be required for the complete combustion of 2.5 moles of ethanol at s.t.p.\n[molar volume at s.t.p = 22.4 dm\\(^3\\)]\n(c) (i) Define esterification .\n(ii) Give two uses of alkanoates.\n(iii) Give the products of the alkaline hydrolysis of ethyl ethanoate.\n(d) A tin coated plate and a galvanized plate were exposed for the same length of time.\n(i) Which of the two plates corrodes faster?\n(ii) Explain briefly your answer in 2 (d) (i)."
+    },
+    {
+      "number": 12,
+      "question": "(a) Arrange the three states of matter in order of decreasing:\n(i) kinetic energy;\n(ii) force of cohesion.\n(b) Consider the redox reaction equation:\n(i) State the change in oxidation number of:\nI. magnesium;\nII. hydrogen.\n(ii) Which of the species is being:\nI. oxidized;\nII. reduced?\n(iii) Identify the oxidizing agent.\n(c) (i) State two differences between boiling and evaporation .\n(ii) What will be the effect of reduction of atmospheric pressure on the boiling point of water?\n(d) For a given chemical equilibrium system, what is the significance of the equilibrium constant K?\n(e) Consider the following organic compounds:\nC\\(_3\\)H\\(_7\\)COOH; (CH\\(_3\\))\\(_3\\)COH.\nGive the IUPAC name of each compound.\n(f) Why are organic compounds classified on the basis of functional groups?\n(g) State three differences between the solubility of solids in liquids and gases in liquids.\n(h) Write a balanced chemical equation for the reaction between fluorine and water.\n(i) Define the term basicity of an acid."
+    },
+    {
+      "number": 13,
+      "question": "(a) A compound of carbon, hydrogen and chlorine contains 0.48 g of carbon, 0.08 g of hydrogen and 1.42 g of chlorine.\n(i) Determine the empirical formula of the compound.\n(ii) If the molar mass of the compound is 99, calculate the molecular formula of the compound.\n[H = 1.0, C = 12.0, Cl = 35.5]\n(b) State three properties of NaCl (s) which shows that it is ionic.\n(c) Consider the following reaction equation:\n(i) On the same diagram, sketch and label a reaction profile for a catalysed and uncatalysed reaction between H\\(_2\\) and O\\(_2\\).\n(ii) Indicate the possible positions of the activated complexes for the reaction profiles in (c) (i).\n(d) The petrochemical industry produces addition polymers using one of the fractions obtained from crude oil.\n(i) Name the fraction used as a raw material for the process.\n(ii) What process is used to obtain the fraction from crude oil?\n(iii) Name two gaseous hydrocarbons that can be used in making polymers.\n(iv) Describe briefly how these hydrocarbons can be obtained.\n(v) Name the polymer produced from one of the hydrocarbons named in (d) (iii)."
+    },
+    {
+      "number": 14,
+      "question": "a) (i) Describe, using the kinetic theory of matter, what happens when potassium chloride dissolves in water.\n(ii) Give a reason why the process in (a) (i) is endothermic.\n(b) (i) An underground iron pipe is less likely to corrode if it is bonded at intervals with magnesium rods. Give reasons for this observation.\n(ii) State the stages involved in the rusting of iron.\n(iii) State the condition for the rusting of iron in water.\n(c) (i) What is a spontaneous reaction ?\n(ii) State two conditions that could make a reaction spontaneous.\n(iii) Explain briefly why one gramme of sodium reacts more rapidly with water at 250C than one gramme of calcium at the same temperature.\n(iv) Write equations for the reactions in (c)( iii).\n(d) What mass of lead (II) trioxocarbonate (IV) would contain 35.0 g of lead?\n[C=12.0, O = 16.0, Pb = 207.0]\n(e) Name the type of intermolecular force present in:\n(i) fluorine;\n(ii) hydrogen fluoride."
+    },
+    {
+      "number": 15,
+      "question": "(a) Outline the procedures for the treatment of water for town supply.\n(b) (i) State two main impurities present in bauxite.\n(ii) Give one reason why bauxite is usually preferred as the ore for the extraction of aluminium.\n(iii) Outline the manufacture of aluminium form purified bauxite.\n(c) (i) Explain briefly the term fine chemical industry .\n(ii) State two differences between a fine chemical and a heavy chemical .\n(d) (i) Write a balanced chemical equation for the combustion of coal.\n(ii) If 5.4 g of coal is burnt completely, calculate the amount of oxygen measured at s.t.p. that would be required for the combustion.\n[C = 12.0, O = 16.0, Molar volume of a gas at s.t.p. = 22.4 dm\\(^3\\)]\n(e) Name two substances which can be used as electrodes during the electrolysis of acidified water."
+    },
+    {
+      "number": 16,
+      "question": "(a) (i) List two gaseous pollutants that can be generated by burning coal.\n(ii) Explain briefly why coal burns more easily when it is broken into pieces than when it is in lumps.\n(iii What gas is responsible for most of the explosions in coal mines?\n(iv) Name the non-volatile residue left behind after the destructive distillation of coal.\n(b) State one oxide in each case which:\n(i) is used in bleaching;\n(ii) oxidizes hot concentrated HCl to chlorine;\n(iii) dissolves in water to give a solution with pH greater than 7;\n(iv) reacts with NaOH and also with HCl;\n(v) is a reddish-brown gas.\n(c) (i) Write a balanced chemical equation for the reaction between chlorine gas and iron(II) chloride solution.\n(ii) State the type of reaction in (c)(i).\n(iii) Give a reason for your answer in (c)(ii).\n(d) Consider the following set-up:\n(i) Identify A and B .\n(ii) Write a balanced chemical equation for the reaction.\n(iii) Name the gas produced.\n(iv) Why was the flask tilted downwards?\n(v) What is the:\n(I) function of B in the experiment;\n(II) method of collection of the gas?\n(e) Give one product obtained from refining petroleum that is solid."
+    },
+    {
+      "number": 17,
+      "question": "All your burette readings (initials and final) as well as the size of your pipette must he recorded but no account of experimental procedure is required. All calculations must be done in your booklet.\nA solution of potassium tetraoxomanganate( VII). B is a solution of iron(II)chloride containing 4.80g of the salt in 250 cm\\(^{3}\\) of solution.\n(a) Put A into the burette. Pipette 20.0cm\\(^3\\) or 2.50.0 of B into a conical flask, add 20.0 cm\\(^3\\) of H\\(_2\\)SO4\\(_{(aq)}\\) and titrate with A. Repeat the titration to obtain concordant titre values. Tabulate your results and calculate the average volume of A used. The equation of the reaction is: MnO\\(_{4(aq)}\\) + 5Fe\\(^{3+}_{ (aq)}\\) + H\\(_2\\))\n(b) From your results and the information provided, calculate the;\n(i) concentration of B moldm\\(^{-3}\\):\n(ii) concentration of A in moldm\\(^{-3}\\)\n(iii) number of moles of Fe\\(^{2+}\\) in the volume of B pipetted. [FeCl\\(_2\\) = 127 gmol\\(^{-1}\\)] Credit will be given for strict adherence to the instruction, for observations precisely recorded and for accurate inferences. AlI tests, Observations and inferences must be clearly entered in the booklet in ink at the time they are made."
+    },
+    {
+      "number": 18,
+      "question": "All your burette readings (initials and final) as well as the size of your pipette must be recorded but no account of experimental procedure is required. All calculations must be done in your booklet.\nC and D are inorganic salts. Carry out the following exercises on them. Record your observations and identify any gas(es) evolved. State the conclusions you draw from the result of each test.\n(a) Put all of C in a test tube and add about 5 cm of distilled water. Shake thoroughly and test the resulting solution with Litmus paper. Divide the solution into three portions.\n(i) To the first portion, add NaOH\\(_{(aq)}\\) in drops, then in excess.\n(ii) To the second portion. add NH\\(_{3(aq)}\\) in drops. then in excess.\n(iii) To the third portion. add AgNO\\(_{3 (aq)}\\) followed by HCl\\(_{(aq)}\\)\n(b)(i) Put all of D in a test tube and add about 5 cm\\(^3\\) of distilled water. Shakę thoroughly and feel the test tube.\n(ii) To about 2 cm\\(^3\\) of the solution, add HCl\\(_{(aq)}\\)"
+    },
+    {
+      "number": 19,
+      "question": "All your burette readings (initials and final) as well as the size of your pipette must he recorded but no account of experimental procedure is required. All calculations must be done in your booklet.\nState the observation that would be made when each of the following reactions is carried out in the laboratory:\n(a) Addition of 2 cm\\(^3\\) of bench H\\(_2\\)SO\\(_{4(aq)}\\) to 2 cm\\(^{3}\\) of barium chloride solution;\n(b) Addition of 2 cm\\(^3\\) of dilute hydrochloric acid to 1g of powered iron(II) sulphide (FeS):\n(C) Addition of 2 cm\\(^3\\) of dilute hydrochloric acid to 1g of iron filings and allowed to stand for sometime."
+    }
+  ]
+}

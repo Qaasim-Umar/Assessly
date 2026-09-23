@@ -1,0 +1,28 @@
+{
+  "subject": "Economics",
+  "examType": "WAEC",
+  "year": 2022,
+  "objectiveQuestionCount": 52,
+  "theoryQuestionCount": 8,
+  "questionsWithImages": 1,
+  "uniqueImagesUploaded": 1,
+  "objectPrefix": "question-assets/waec/economics/2022",
+  "generatedAt": "2026-09-15T14:04:32.891Z",
+  "questions": [
+    {
+      "sourceId": "66647",
+      "sourceUrl": "https://myschool.ng/classroom/economics/66647",
+      "section": "theory",
+      "number": 2,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/LnXVPidj8uixtVYQ8O1q2EgUaAFb2l9tcCfqo3Lr.jpeg",
+          "objectKey": "question-assets/waec/economics/2022/LnXVPidj8uixtVYQ8O1q2EgUaAFb2l9tcCfqo3Lr.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/economics/2022/LnXVPidj8uixtVYQ8O1q2EgUaAFb2l9tcCfqo3Lr.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 7044
+        }
+      ]
+    }
+  ]
+}

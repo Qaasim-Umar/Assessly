@@ -1,0 +1,1399 @@
+{
+  "subject": "Physics",
+  "year": 2015,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following statements about mass and weight are correct? i. Weight is the force of gravity on a body. ii. The mass of a body is the quantity of matter in the body. iii. The weight of a body is greatest at the equator. iv. The mass of a body is greatest at the poles",
+      "options": [
+        {
+          "key": "A",
+          "text": "i and ii only",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "i and iii only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ii and iv only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "iii and iv only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Materials that can be stretched and still return to their original forms when the stresses are removed are said be",
+      "options": [
+        {
+          "key": "A",
+          "text": "elastic",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "elastomer",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "plastic",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "thermoplastic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Which of the following units is derived?",
+      "options": [
+        {
+          "key": "A",
+          "text": "kg",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "K",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "N",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The barometric reading at a place is 73.5m Hg. Calculate the pressure at a point 30m below the surface of water contained in a reservoir at the place. [g = 10ms\\(^{-2}\\), density of mercury = 1.2 x 10\\(^4\\)kg m\\(^{-3}\\), density of water = 1.0 x 10\\(^3\\)m\\(^{-3}\\)]",
+      "options": [
+        {
+          "key": "A",
+          "text": "4.0 x 10 5 Nm -2",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "3.0 x 10 5 Nm -2",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "2.0 x 10 5 Nm -2",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1.0 x 10 5 Nm -2",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "An object floats in a fluid when it displaces it's",
+      "options": [
+        {
+          "key": "A",
+          "text": "volume of liquid in which it floats",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "mass of fluid in which it foats",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "weith of fluid in which it foats",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "density of fluid in which it foats",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The resultant force in a couple is",
+      "options": [
+        {
+          "key": "A",
+          "text": "zero",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "infinite",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the sum of the forces",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "thr product of the forces",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The slope of a straight-line velocity-time graph represents",
+      "options": [
+        {
+          "key": "A",
+          "text": "uniform acceleration",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "uniform speed",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "total distance travelled",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "workdone",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "A body is projected with an initial velocity U at an angle O to the horizontal. The time taken by it to reach its maximum height is given by the expression",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(\\frac{2u \\text{sin}\\theta}{g}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(\\frac{u^2 \\text{sin}^2\\theta}{2g}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(\\frac{u \\text{sin}\\theta}{g}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "\\(\\frac{u \\text{sin}\\theta}{2g}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Which of the following statements describes a body in a stable equilibrium correctly?",
+      "options": [
+        {
+          "key": "A",
+          "text": "a person walking on a tight-rope",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ball on a smooth horizontal table",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ball resting on an inverted hemisphere bowl",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "ball in the middle of a nemispherical bowl",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "In a school compound a girl walks 40m due east from the laboratory to the staff room to submit her report. Then she returns and walks 30m due north to her classroom. Determine the magnitude of her displacement from the10m laboratory",
+      "options": [
+        {
+          "key": "A",
+          "text": "10m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "35m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "50m",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "70m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Two strings each inclined at an angle 30o to the horizontal are used to hold a bucket of water weighing 20N. Calculate the tension i n each string.",
+      "options": [
+        {
+          "key": "A",
+          "text": "20 (\\sqrt{3}\\)N",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "20N",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "10 (\\sqrt{3}\\)N",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "10N",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "A bullet fired vertically upwards reaches a height of 500m. Neglecting air resistance, calculate the magnitude of the initial velocity of the bullet. [g = 10ms -2 ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "500.0ms -1",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "100.0ms -1",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "70.0ms -1",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "50.0ms -1",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "A uniform bar AB is balanced on a knife-edge which is 60cm from B by a mass of 22g which hangs at C 10cm from A. Calculate the mass of the bar.",
+      "options": [
+        {
+          "key": "A",
+          "text": "133.2g",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "66.0g",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "60.0g",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "22.0g",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "A body of mass 1000kg is released from a height of 10m above the ground. Determine its kinetic energy just before it strikes the ground .[g = 10ms -2 ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "10J",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "10 3 J",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "10 4 J",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "10 5 J",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The crackling noise produced by aluminum roofing sheets on a house during a hot sunny day is a result of",
+      "options": [
+        {
+          "key": "A",
+          "text": "thermal equilibrium of the sheets",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "conduction of heat by the sheets",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "contraction of the sheets",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "expansion of the sheets",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Water is unsuitable for use as a thermometric liquid because it",
+      "options": [
+        {
+          "key": "A",
+          "text": "expands unevenly between 0 o C and 40 o C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "has narrow temperature range",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "has a concave meniscus",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "maintains a fixed density",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The diagram above illustrates a block ans tackle pulley system in which an effort E supports a load of 100.0N. If the efficiency of the machine is 75%, calculate the value of E",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 17.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2015/7403372655_15281021_1243961572335174_1207874539_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "22.2N",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "38.0N",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "67.0N",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "75.0N",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "A quantity of hot water at 100 o C is added to 400g of water at 10 o C until the temperature of the mixture is 60 o C.\nCalculate the mass of the hot water added. [Specific heat capacity of water =4200JKg -1 K -1 ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "200g",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "320g",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "400g",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "500g",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "A battery of emf 24V is connected to three resistor P, Q and R as illustrated in the diagram. Determine the voltage across the resistor Q",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 19.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2015/13326084270_15327611_1243956335669031_1974807225_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "5v",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "10v",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "14v",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "24v",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "In an experiment in which a molten substance is allowed to cool, the cooling curve above was obtained. The temperature 60 o C is known as the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 20.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2015/23690848160_15328243_1243960385668626_1196014114_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "vaporization point",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cooling temperature",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "boiling point",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "melting point",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "In an experiment in which a molten substance is allowed to cool, the cooling curve above was obtained. The temperature 60 o C is known as the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 21.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2015/16287458396_15328243_1243960385668626_1196014114_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "vaporization point",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cooling temperature",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "boiling point",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "melting point",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "Which of the following concepts is a method of heat transfer that does not require a material medium?",
+      "options": [
+        {
+          "key": "A",
+          "text": "conduction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "radiation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "diffusion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "convection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Which of the following units is the S.I. unit of heat capacity?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Jkg -1",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Jkg -1 K -1",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "JK -1",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Jg -1 K -1",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The pressure applied to an enclosed fluid to one end id transmitted equally throughout the fluid and to the container walls. This statement is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Archimede's principle",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Bernoulli's principle",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Pascal's principle Heisenberg's",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Heisenberg's uncertainty principle",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The diagram given illustrates a wave form. Determine the speed of the wave",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 25.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2015/RbL4wMwDsYYEsz4DH464yDHLSRXvbHpQ9pzdU2uv.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "5.4 ms -1",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "8.4 ms -1",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "9.6 ms -1",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "10.0 ms -1",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "What type of wave is emitted by a loud speaker?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Transverse",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Longitudinal",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Gamma",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Radio",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "An object is placed 15cm from a diverging lens of focal length 12cm. The image of the object formed by the lens in",
+      "options": [
+        {
+          "key": "A",
+          "text": "real and 6.67cm from the lens",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "virtual and 6.67cm from the lens",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "real and 60.00cm from the lens",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "virtual and 60.00cm from the lens",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "A swimming pool is 2.1m deep. If it contains water of refractive index 1.3, calculate the apparent depth of pool",
+      "options": [
+        {
+          "key": "A",
+          "text": "3.4m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2.7m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1.6m",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "0.8m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "When an air column is set into vibrations, the distance between two consecutive nodes of the resultant wave is",
+      "options": [
+        {
+          "key": "A",
+          "text": "one quarter of the wavelength",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "half of the wavelength",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the wavelength",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "twice the wavelength",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "A girl standing some distance from the cliff claps her hands and hears the echo 0.8s later. calculate her distance from the cliff. [speed of sound in air = 320 ms -1 ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "23m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "128m",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "288m",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "298m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Red light travels faster than blue light when both of them pass through a glass prism because the",
+      "options": [
+        {
+          "key": "A",
+          "text": "refractive index of red light is grester than that of blue light",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "refractive index of blue light is greater than that of red light",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "red light is more intense than the blue light",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "blue light is more intense than the red light",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "An object is placed 20cm from a concave mirror of focal length 15cm. Calculate the linear magnification of the image formed",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.5",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "1.5",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "2.0",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "3.0",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "All electromagnetic waves in a vacuum have the same",
+      "options": [
+        {
+          "key": "A",
+          "text": "wavelength",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "frequency",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "speed",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "amplitude",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The diagram given illustrates two charged particles W and X. The charges on W and x are respectively",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 34.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2015/26652447792_15281064_1243970885667576_325566491_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "negative; negative",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "negative; positive",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "positive; positive",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "positive; negative",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "An alternating current supply is connected to an electric lamp which lights with the same brightness as it does with direct current source emf 6v. The peak potential difference of the a.c supply is",
+      "options": [
+        {
+          "key": "A",
+          "text": "4.6v",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "6.0v",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "8.5v",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "12.0v",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "An electric generator rated 12 kW, 2 kV distribute power through a cable of resistance 20\\(\\Omega\\). Calculate the power loss in the cable.",
+      "options": [
+        {
+          "key": "A",
+          "text": "120 w",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "360 w",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "720 w",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "2400 w",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Which of the following statements is correct? When capacitors of different values are connected in series",
+      "options": [
+        {
+          "key": "A",
+          "text": "the same charge flows through them",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "the same voltage appears across each capacitor",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "different quantities of charges flow through them in different voltages across them",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "different quantities of charges flows through them with the same voltage across them",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Which of the following statements about a three-pin plug is/are correct. i. The brown wire is the live wire. ii. The fuse is connected to the live wire. iii. The earth wire is coloured blue",
+      "options": [
+        {
+          "key": "A",
+          "text": "i only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ii only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "i and ii only",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "i, ii and iii",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The symbol illustrated above is that of a resistor?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 39.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2015/25171835111_15301229_1243957105668954_1630179901_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "which absorb light",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "which emits light",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "which absorbs heat to function properly",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "whose resistance is light dependent",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "A wire of cross-sectional area 0.60mm 2 has a restivity of 7.2 x 10 -7 \\(\\Omega\\). Calculate the length of wire that will have a resistance of 3\\(\\Omega\\).",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.25m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2.50m",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "3.60m",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "36.00",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "A battery of emf 24V is connected to three resistor P, Q and R as illustrated in the given diagram. Determine the voltage across the resistor Q.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 41.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2015/14809381480_15327611_1243956335669031_1974807225_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "5V",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "10V",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "14V",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "24V",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The mass of the earth is 6.0 x 10 24 kg and that of the moon is 7.0 x 10 22 kg. If the distance between them is 4.0 x 10 8 m, calculate the force of attraction between them. [G = 6.7 x 10 -11 Nm 2 kg -2 ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.8 x 10 5 N",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "1.8 x 10 10 N",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1.8 x 10 15 N",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1.8 x 10 20 N",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The angle which the direction of the earth magnetic field makes with the horizontal at a palace is know as.",
+      "options": [
+        {
+          "key": "A",
+          "text": "angle of contact",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "angle of dip",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "angle of declination",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "magnetic meridian",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "What must be connected between the points P and Q to establish a steady current through the incomplete circuit diagram given?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 44.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2015/2961881970_15320312_1243954435669221_1034251792_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fuse",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ammeter",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Cell",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "voltmeter",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "When current flows through a moving-coil galvanometer, the force exerted on the pointer depends on the: i. strength of the current. ii. magnetic field strength. iii. length of the coil. Which of the statement(s) above is/are correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "i only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ii only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "i and iii only",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "i, ii and iii",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "in a nuclear fission process, the mass defect was 1.2 x 10 -5 kg. Calculate the energy released. [speed of the light in vacuum = c = 3.0 x 10 8 ms -1 ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.08 x 10 11 J",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "5.20 x 10 11 J",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1.08 x 10 12 J",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "2.50 x 10 13 J",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "Which of the following statements about diode is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "reverse bias diodes have low resistance",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "forward bias diodes have high resistance",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "forward bias diodes produce high current",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "forward bias diodes function as a result of heat",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Which of the following radiations constitutes a stream of electrons?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ramma rays",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "X-rays",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Cathode rays",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Radio waves",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "\\(^{226}_{88}Ra\\) emits two alpha particles to produce polonium(po) nuclide. The correct formula for the nuclide?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(^{224}_{86}po\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(^{222}_{86}po\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(^{222}_{84}po\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(^{218}_{84}po\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Two angles of a pentagon are in the ratio 2:3. The others are 60 o each. Calculate the smaller of the two angles",
+      "options": [
+        {
+          "key": "A",
+          "text": "72 o",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "100 o",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "120 o",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "144 o",
+          "is_correct": true
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) What is a projectile?\n(b) Give the reason why the horizontal component of the velocity of a projectile remains the same at every point of its flight."
+    },
+    {
+      "number": 2,
+      "question": "A body is projected at an angle of 30&deg; to the horizontal with a velocity of 150 ms\\(^{-1.}\\). Calculate the time it takes to reach the greatest height [Take g = 10 ms\\(^2\\) and neglect air resistance]"
+    },
+    {
+      "number": 3,
+      "question": "A wire of length 2.00 m and radius 1.0 mm is stretched by 25.0 mm on the application of a force of \\(10^3\\) N. Calculate Young's modulus for the wire."
+    },
+    {
+      "number": 4,
+      "question": "State three ways of increasing the rate of cooling of a cup of hot tea."
+    },
+    {
+      "number": 5,
+      "question": "(a) What is doping in a semi conductor?\n(b) Draw the symbol for OR gate."
+    },
+    {
+      "number": 6,
+      "question": "The circuit above consists of an a. c. voltage input, a diode, a resistor and a voltmeter.\n(a) Identify the circuit.\n(b) Draw the waveform for the output voltage."
+    },
+    {
+      "number": 7,
+      "question": "(a) Write the de Broglie equation.\n(b) Explain the significance of the equation."
+    },
+    {
+      "number": 8,
+      "question": "(a) (i) Define uniform acceleration.\n(ii) Write an equation that relates linear velocity, angular velocity and radius\nof path in circular motion.\n(b) Two forces 30 N and 40 N act at right angles to each other. Determine by scale drawing, the magnitude and direction of the resultant force,.using a scale of 1 cm to 5 N.\n(c) Explain why ships are usually refilled with sand and water after they have been emptied of their cargo.\n(d) A crate of drinks of mass 20 kg is placed on a plane inclined at 30&deg; to the horizontal. If the crate slides down with a constant speed, calculate the:\n(i) co-efficient of kinetic friction;\n(ii) magnitude of the frictional force acting on the crate. [ g = 10 ms\\(^{-2}\\)]"
+    },
+    {
+      "number": 9,
+      "question": "(a) Define specific latent heat of vaporization.\n(b) (i) What are renewable energy sources?\n(ii) List four renewable energy sources.\n(c) Explain why tomatoes keep longer when kept in a moist jute bag in a clay pot.\n(d) A box has a volume of 0.28 m\\(^3\\) and is 70% filled with iron fillings at 25&deg;C. Calculate the:\n(i) total mass of the iron fillings;\n(ii) energy required to melt 10% of the iron fillings. [Density of iron = 8.00 x 10\\(^3\\) kgm\\(^{-3}\\); specific latent heat of fusion of iron = 1.38 x 10\\(^5\\) Jkg\\(^{-1}\\), specific heat capacity of iron = 460 Jkg\\(^{-1}\\) k\\(^{-1}\\), melting point of iron = 1500&deg;C] 10."
+    },
+    {
+      "number": 10,
+      "question": "(a)(i) what is resonance?\n(ii) State two eXwilples of resonance.\n(iii) Differentiate between loudness and intensity of sound.\n(b) When a ray is refracted through a rectangular glass prism, which of the following properties of the ray will change? Wavelength, frequency and speed.\n(c)\n(i) Copy the diagram above in your answer booklet.\n(iii) On the copied diagram, sketch the pattern of the waves immediately after passing through the opening.\n(d) A diverging lens of focal length 18.0 in is used to view a shark that is 90.0 in away from the lens. If the image formed is 1.0 m long, calculate the:\n(i) image distance;\n(ii) length of the shark."
+    },
+    {
+      "number": 11,
+      "question": "(a) Define:(i) the coulomb; (ii) resistance.\n(b) State the three effects of an electric current.\n(c) State the standard international colour convention for the insulating material covering the following electrical wires in a three-pin plug: (i) live; (ii) neutral; (iii) earth.\n(d)\nA water melon of mass 5.0 kg is suspended on a uniform rod of mass 4.0 kg and 4.0 in long as illustrated in the diagram above. If the rod is in equilibrium by the action of the force between the charges +q and -q, calculate the:\n(i) anti-clockwise moment;\n(ii) value of q. [ g = 10 ms\\(^{-2}\\)]"
+    },
+    {
+      "number": 12,
+      "question": "(a) Define nucleon number\n(b) A radioactive isotope of Americium (Am —241) decays into a nucleus of Neptunium (Np — 237) and an alpha (\\(\\alpha\\)) particle as shown in the nuclear equation below. \\(^{241}_{95}Am\\) \\(\\to\\) \\(^{237}_{c} + ^b_a \\alpha\\)\n(i) State the number of neutrons in the nucleus of Americium — 241.\n(ii) Determine the values of a,b and c.\n(c)(i) Why are y-rays not deflected by electromagnetic field?\n(ii) State two properties of gamma rays that make them suitable for sterilizing medical equipment.\n(d) A sample of radioactive substance was found to be left with h of its initial count rate after 110 years. Calculate its decay constant."
+    },
+    {
+      "number": 13,
+      "question": "You are provided with a retort stand, boss head, clamp, stopwatch, slotted weights, hanger, grooved pulley, thread, measuring tape, and other necessary materials.\ni. Measure and record the radius R of the pulley.\nii. Setup the apparatus as illustrated in the diagram above, such that the clamp is 1.5 m above the floor.\niii. Tie one end of the thread to the pulley.\niv. Tie the other end of the thread to the hanger.\nv. Slot a mass m = 50 g on the hanger.\nvi. Wind the thread around the groove of the pulley until the base of the hanger is at a height h = 1.4 m above the floor. Maintain this height h for every other value of m through out the experiment.\nvii. Release the mass to unwind the thread.\nviii. Determine and record the time t taken by the mass m to reach the floor.\nix. Evaluate t\\(^{2}\\)\nx. Also evaluate\na =\\(\\frac{2h}{t^{2}}\\),T = \\(\\frac{m}{1000}\\) (10 - a) and \\(\\propto\\) = \\(\\frac{a}{R}\\)\nxi. Repeat the procedure for four other values of m = 70 g, 90 g, 110 g and 130 g\nxii. Tabulate your readings.\nxiii. Plot a graph with \\(\\propto\\) on the vertical axis and T on the horizontal axis.\nxiv. Determine the slope s, of the graph.\nxv. Evaluate I = \\(\\frac{R}{s}\\).\nxvi. State two precautions taken to obtain accurate results.\n(b)i. Define centripetal force\nii. An object drops to the ground from a height of 2.0 m. Calculate the speed with which it strikes the ground. [g=10 ms\\(^{-2}\\)]"
+    },
+    {
+      "number": 14,
+      "question": "You are provided with a triangular glass prism, four optical pins, and other necessary materials.\nPlace the triangular glass prism on a drawing paper and draw its outline UMR . Remove the prism.\nMeasure and record the value of the angle at U .\nDraw a normal to the line UM at N . Also, draw another line TN to the normal such that \\(\\phi\\)-60. Fix two pins at P\\(_{1}\\) and P\\(_{2}\\).\nReplace the prism and fix two other pains at P\\(_{3}\\), and P\\(_{4}\\), such that the pins appear to be in a straight line with the images of the pins at P\\(_{1}\\) and P\\(_{2}\\), when viewed from the side UR . Remove the prism.\nJoin points P\\(_{3}\\), and P\\(_{4}\\), producing the line to meet TN produced at Z . Draw the normal XY .\nMeasure and record the angle of emergence e and that of deviation d .\nRepeat the experiment with \\(\\phi\\) = 55&deg;, 50&deg;, 40&deg; and 35&deg;.\nIn each case, measure and record the Corresponding values of e and d .\nTabulate your readings.\nPlot a graph with d on the vertical axis and e on the horizontal axis starting both axes from the origin (0.0) Join your points with a smooth curve.\nFrom your graph, obtain the minimum deviation d\\(_{m}\\) and the corresponding angle of emergence e\\(_{m}\\) . Hence, calculate the refractive index n of the prism using the formula:\nn = \\(\\frac{sin (\\frac{d_{m}+U}{2})}{sin{(\\frac{u}{2})}}\\)\nState two precautions taken to obtain accurate results. Attach your traces to your answer booklet.\n(b)i. State the conditions necessary for total internal reflection of light to occur.\nii. The critical angle for a transparent substance is 39&deg;. Calculate the refractive index of the substance.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 14.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2015/Kw4VCDlh4enN53N3fLcF2Duc91GCU4FuU8MDDN7O.jpg"
+    },
+    {
+      "number": 15,
+      "question": "You have been provided with a resistance box, a voltmeter, a key, a battery, and other necessary materials.\nConnect the circuit as shown in the diagram above.\nWith the key K closed, read and record the voltmeter reading V \\(_{0}\\).\nSet the resistance R in the resistance box equal to I\\(\\Omega\\).\nClose the key, read and record the potential difference V on the voltmeter.\nEvaluateR\\(^{-1}\\) and V\\(^{-1}\\) .\nRepeat the procedure for five other values or R = 2\\(\\Omega\\), 3\\(\\Omega\\), 4\\(\\Omega\\), 5\\(\\Omega\\) and 6\\(\\Omega\\).\nTabulate your readings.\nPlot a graph with V \\(^{-1}\\) on the vertical axis and R on the horizontal axis.\nDetermine the slope, s , of the graph and the intercept, C , on the vertical axis.\nEvaluate c\\(^{-1}\\)\nState two precautions taken to obtain accurate results.\n(b)i. Define the potential difference between two points in an electric circuit.\nii. Explain why the emf of a cell is greater than the p.d. across the call when it is supplying Current through an external resistance."
+    }
+  ]
+}

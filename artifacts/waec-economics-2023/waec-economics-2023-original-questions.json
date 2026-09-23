@@ -1,0 +1,1350 @@
+{
+  "subject": "Economics",
+  "year": 2023,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following is a non-renewable natural resources?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rubber",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Oil palm",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Coal",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Cocoa",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The demand for a factor input as a result of the demand for its output is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "market demand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "complementary demand",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "competitive demand",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "derived demand",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "If the government stops subsidy on cocoa production, the supply curve of cocoa will",
+      "options": [
+        {
+          "key": "A",
+          "text": "become vertical",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "remain unchanged",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "shift to the left",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "shift to the right",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "A monopolist may enjoy abnormal profit only if its",
+      "options": [
+        {
+          "key": "A",
+          "text": "marginal cost exceeds marginal revenue",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "demand curve is perfectly elastic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "expenditure on advertisement increases",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "price exceeds average total cost",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The supply of light could be met using a candle, lantern and gas lamp. This is an example of a",
+      "options": [
+        {
+          "key": "A",
+          "text": "complementary supply",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "abnormal supply",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "joint supply",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "composite supply",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "Industries are sometimes located in areas which are not profitable so as to",
+      "options": [
+        {
+          "key": "A",
+          "text": "encourage rural-urban migration",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "be able to even-out development",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "bring about external economies of scale",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "be able to reap internal economies of scale",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "A government may cause a favourable change in her invisible trade account by",
+      "options": [
+        {
+          "key": "A",
+          "text": "developing tourism and other services",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "imposing high tariff on exports",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "encouraging people to go for medical treatment abroad",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increasing the export of her primary products",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "To overcome the problem of double counting under the expenditure approach,",
+      "options": [
+        {
+          "key": "A",
+          "text": "spending on intermediate goods and inputs are considered",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "valued added method is used",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "proper accounting standards must be used",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "only spending on final goods are considered",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "At what point on the total product curve shown above will marginal product be negative?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 9.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/economics/2023/pzQvbcgydm58jrFauVyYQplQ6oWwAqQnlC2xjkfs.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Q",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "S",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "R",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "P",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "National income is calculated mainly to",
+      "options": [
+        {
+          "key": "A",
+          "text": "determine how income is to shared",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "help firms generate more funds",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "determine aid to to be received from other nations",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "determine the level of sectoral performance",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Assisting members to solve temporary balance of payments problems is the reasons for the establishment of the",
+      "options": [
+        {
+          "key": "A",
+          "text": "International Monetary Fund",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Economic Commission for Africa",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "World Bank",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "African Development Bank",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Money is able to function more as a medium of exchange when",
+      "options": [
+        {
+          "key": "A",
+          "text": "there is a fall in production",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "more prople engage in subsistence production",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "individuals and nations are self-sufficient",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "there is specialization of labour",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "An economy system is mainly concerned with",
+      "options": [
+        {
+          "key": "A",
+          "text": "studying the relationship between ends and means",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the allocation of scarce resources between alternative ends",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "handling situations of abudant resources",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the establishment of economic laws",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "When the marginal utility from the consumption of commodity X (Mux) is greater than the price commodity X (Px), a rational consumer should",
+      "options": [
+        {
+          "key": "A",
+          "text": "strive to remain in disequilibrium",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "consume the same quantity of commodity X",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "consume more of commodity X",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "reduce consumption of commodity X",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "Which of the following items is not classified as working capital?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fuel",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Money to pay wages",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Semi-finished goods",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Equipment",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "If the demand for a commodity remains constant as price increases, the commodity is said to be",
+      "options": [
+        {
+          "key": "A",
+          "text": "perfectly price inelastic",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "unit price elastic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "price elastic",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "price inelastic",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Warehousing is an economic activity that falls under",
+      "options": [
+        {
+          "key": "A",
+          "text": "secondary production",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "primary production",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "tertiary production",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "intermediate production",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The study of economics is mainly concerned with how to",
+      "options": [
+        {
+          "key": "A",
+          "text": "rank individuals' wants given the abundant resources",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "make choice when resources are inadequate",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "satisfy every member of all societies",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "produce all the goods needed by everyone",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Use the graph above to answer the question\nThe curve labelled W shows the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 19.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/economics/2023/5pEh4Nahegckp58LwBJ8FSQRkTVJXqBHNb6RkEK9.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "regressive tax",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "proportional tax",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "specific tax",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "progressive tax",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "Resources are pooled for the mutual benefit of its members mainly in a",
+      "options": [
+        {
+          "key": "A",
+          "text": "cooperative society",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "joint stock company",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "private company",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "partnership",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The total fixed cost curve is",
+      "options": [
+        {
+          "key": "A",
+          "text": "horizontal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "upward sloping",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "vertical",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "downward sloping",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "A small scale firm located within an industrial estate will enjoy",
+      "options": [
+        {
+          "key": "A",
+          "text": "government protection and funding",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "technological economies of scale",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "financial economies of scale",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "external economies of scale",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Country M enjoys absolute advantage over country N in the production of commodities X and Y , if country M",
+      "options": [
+        {
+          "key": "A",
+          "text": "is inefficient in the production of both commodities X and Y",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "is more efficient than country N in producing both commodities X and Y",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "can produce only commodity Y cheaper than country N",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "and country N are efficient in the production of both goods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Commericial banks help in economic development mainly by",
+      "options": [
+        {
+          "key": "A",
+          "text": "acting as trustees and executors of wills",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "acting as intermediaries between government and borowers",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "serving as custodians of valuables",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "giving financial advice to the government",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "When job vacancies are publicized, the government is mainly trying to solve the problem of",
+      "options": [
+        {
+          "key": "A",
+          "text": "residual unemployment",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cyclical unemployment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "technological unemployment",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "frictional unemployment",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "An indication that there is inflation in a country is that",
+      "options": [
+        {
+          "key": "A",
+          "text": "there is a decrease in the demand for goods and services",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "there are too many goods in circulation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the same amount of money buys lower quantity of goods",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "people prefer to lend than to borrow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "An example of government's recurrent expenditure is",
+      "options": [
+        {
+          "key": "A",
+          "text": "electrification projects in rural areas",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the cost of building a school",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "purchase of new vehicles",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "paying salaries of workers",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "A fall in the price of a normal commodity which has elastic demand will result in",
+      "options": [
+        {
+          "key": "A",
+          "text": "a fall in demand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a fall in quantity demanded",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "an increase in revenue",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "a decrease in revenue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The dependency ratio of a country is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "the children and aged who rely on the active population for support",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "people who are cared for by their extended families",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "total active population who depend on government for survival",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "number of children who depend on their parents for survival",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "When the demand for a commodity increases while supply remains unchanged, the equilibrium price and quantity will",
+      "options": [
+        {
+          "key": "A",
+          "text": "increase",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "remain constant",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "decrease",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "turn negative",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Consumers have access to a variety of goods through the activities of the",
+      "options": [
+        {
+          "key": "A",
+          "text": "retailers",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "advertising agencies",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mass media",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "wholesalers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "The malthusian theory of population is best illustrated when",
+      "options": [
+        {
+          "key": "A",
+          "text": "the size of the population and available resources are equal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "both population and food supply increase at the same rate",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "food supply increases much faster than population growth",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "population increases much faster than food supply",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The Net National Product (NNP) of a country is $50m while the depreciation allowance is $10m. The Gross National Product (GNP) is",
+      "options": [
+        {
+          "key": "A",
+          "text": "$40m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "$60m",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "$30m",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "$500m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The rate of growth of population is",
+      "options": [
+        {
+          "key": "A",
+          "text": "initial population plus number of births and net migration",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the difference between birth rate and death rate",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "birth rate less death rate plus net migration",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "the number of immigrants plus number of births",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The price level and the value of money are",
+      "options": [
+        {
+          "key": "A",
+          "text": "positively related",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "directly related",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "not related",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "inversely related",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "One of the factor that may not promote industrial development is",
+      "options": [
+        {
+          "key": "A",
+          "text": "local firms entering into partnerships with foreign firms",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "granting capital to firms at reasonable interest rates",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "setting up industrial estates with modern amenities",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "granting old firms tax exemptions",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "If a firm retrenches some of its factory workers its",
+      "options": [
+        {
+          "key": "A",
+          "text": "average fixed cost may increase",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "variable cost will decline",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "marginal cost may increase",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "fixed cost is likely to increase",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Many workers are employed in the agricultural sector of developing countries because",
+      "options": [
+        {
+          "key": "A",
+          "text": "labour intensive method is mostly adopted",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "abnormal profits are made",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "wages in the sector is high",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "they practice mechanized system of farming",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Taxes levied on goods and services by government are called",
+      "options": [
+        {
+          "key": "A",
+          "text": "indirect taxes",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "direct taxes",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "coporate taxes",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "poll taxes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "The average revenue curve of a firm in a perfect market is the same as the",
+      "options": [
+        {
+          "key": "A",
+          "text": "supply curve of the firm",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "average cost curve of the firm",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "demand curve of the firm",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "total revenue curve of the firm",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The most liquid asset among the following is",
+      "options": [
+        {
+          "key": "A",
+          "text": "bonds",
+          "is_correct": false
+        },
+        {
+          "key": "A",
+          "text": "cheque",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cash",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "shares",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Petrol and Kerosene are jointly obtained from crude oil. If the supply of petrol increases, the",
+      "options": [
+        {
+          "key": "A",
+          "text": "cost of crude oil production has increased",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "supply of kerosene will rise",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "supply of kerosene will remain unchanged",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "supply of kerosene will fall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The fixing of maximum prices by government is mainly on",
+      "options": [
+        {
+          "key": "A",
+          "text": "imported capital goods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "inferior goods",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "selected essential goods",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "luxury goods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "When more of tax on a product is borne by the buyer than the seller, the commodity involved has",
+      "options": [
+        {
+          "key": "A",
+          "text": "perfectly elastic demand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "perfectly inelastic demand",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fairly inelastic demand",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "elastic demand",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The marks obtained by 9 students in a class test are recorded below: 9, 8, 7, 5,7, 6, 8, 9 and 7. What is the median mark?",
+      "options": [
+        {
+          "key": "A",
+          "text": "7",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "8.5",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "8",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "7.5",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Tariffs, quotas and embargoes are examples of",
+      "options": [
+        {
+          "key": "A",
+          "text": "trade restriction policies",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "monetary policies",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fiscal policies",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "foreign exchange policies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "Trade protection will assit economic growth in developing countries if it can",
+      "options": [
+        {
+          "key": "A",
+          "text": "allow the importation of cheaper goods people want",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "effectively safeguard newly established firms",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "eliminate importation of all commodities",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "generate enough revenue through export duties",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "A country is described as developing if",
+      "options": [
+        {
+          "key": "A",
+          "text": "the income per head is low",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "the contribution of tertiary sector to national income is high",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the population is decreasing",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "there is low labour supply",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "A joint stock company enjoys perpetual existence because",
+      "options": [
+        {
+          "key": "A",
+          "text": "there is a higher degree of specialization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "it is a corporate entity",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "it is formed by a minimum of seven members",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "its shares are easily",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Which of the following is not a problem facing Economic Community of West African States (ECOWAS)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Language barriers",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Inadequate supply of labour",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Production of the same commodities",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Poor transportation and communication",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "a. The equilibrium position of a firm is illustrated in the diagram above. Study the diagram and answer the questions that follows:\ni. equilibrium output level\nii. equilibrium price\nb. At equilibrium output level, calculate the firm's\ni. total cost\nii. total revenue\niii. total profit\nc. At equilibrium output level, calculate the firm's\nIs the firm operating is the long-run or short-run? Explain your answer.\nd. At equilibrium output level, calculate the firm's\ni. What type of market is the firm operating in?\nii. List three features of the market type identified in d(i)",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 1.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/economics/2023/dB8HL9dXhudvHAMaOMubwDhzLtRUXFrXEmTds64B.jpg"
+    },
+    {
+      "number": 2,
+      "question": "a.\ni. Table 1 below represents the output levels of a firm producing hand sanitizer. Use the information to answer the questions that follow.\nTable 1\nOutput (units)\n0\n10\n18\n28\n36\n45\nIf the cost function of the firm is given as C = 30 + 4q, where C is the total cost and q is the units produced, calculate the:\ntotal cost in dollars of producing:\n18 units\nii. Table 1 below represents the output levels of a firm producing hand sanitizer. Use the information to answer the questions that follow.\nTable 1\nOutput (units)\n0\n10\n18\n28\n36\n45\nIf the cost function of the firm is given as C = 30 + 4q, where C is the total cost and q is the units produced, calculate the:\ntotal cost in dollars of producing:\n36 units\nb.\ni. Average costs in dollars of producing:\n28 units\nii. Average costs in dollars of producing:\n45 units\nc. What is the marginal cost in dollars of producing 28 units?\nd. Determine the profit made from producing 45 units when the market price is fixed at $5.00 per unit.\ne. Determine the fixed cost of the firm. Explain your answer."
+    },
+    {
+      "number": 3,
+      "question": "a.\ni. Distinguish between:\nmoney cost and opportunity cost\nii. Distinguish between:\nnormal good and inferior goods\nb.\ni. Explain how the scale of preference assists the following economic groups in making efficient allocation of their resources:\nindividuals\nii. Explain how the scale of preference assists the following economic groups in making efficient allocation of their resources:\nfirms\niii. Explain how the scale of preference assists the following economic groups in making efficient allocation of their resources:\ngovernment"
+    },
+    {
+      "number": 4,
+      "question": "a. Define economic system\nb. Distinguish between a capitalist economy and a socialist economy under the following:\ni. aim of production\nii. consumer sovereignty\niii. competition\nc. State three features of land as a factor of production"
+    },
+    {
+      "number": 5,
+      "question": "a. Differentiate between a sole proprietorship and a partnership\nb. List four characteristics of a sole proprietorship\nc. Outline four advantages of a public limited liability company."
+    },
+    {
+      "number": 6,
+      "question": "a. Define location of industry\nb. Explain how the following factors influence where a firm is sited:\ni. raw materials\nii. market\niii. government policy\nc. Outline three advantages of localization of industry"
+    },
+    {
+      "number": 7,
+      "question": "a. Define Gross Domestic Product (GDP)\nb. Describe the output approach as a method of computing national income\nc. Identify any three problems associated with the expenditure approach of calculating national income"
+    },
+    {
+      "number": 8,
+      "question": "a. What is an embargo?\nb. Outline any **three* reasons for imposing tariffs on imports\nc. Explain any three reasons against the use of tariffs"
+    }
+  ]
+}

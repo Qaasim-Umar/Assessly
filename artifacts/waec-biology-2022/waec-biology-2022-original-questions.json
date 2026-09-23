@@ -1,0 +1,1333 @@
+{
+  "subject": "Biology",
+  "year": 2022,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "which of the following statements about living things is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "animals respire using carbon(iv)oxide as a raw material",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "growth in plants is limited after some time",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "most plants respond to stimulus slowly",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "higher animals can reproduce asexually",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Organ level of organization in living things is found in?",
+      "options": [
+        {
+          "key": "A",
+          "text": "waterleaf plant",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "virus particle",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "kidney",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "spermatozoon",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Diagrams X and Y above are illustrations of transverse sections of a part of plants. study them and answer this question\nwhich of the following statements is not correct? Diagrams X and Y are sections of",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 3.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/SujX3lJjIXdUeFnbXfPofECybqLa71W7dKgMzRY6.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "roots",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a dicotyledonous root",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "vascular bundies",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "stems",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "Diagrams X and Y above are illustrations of transverse sections of a part of plants, Study them and answer this question.\nThe part responsible for conducting water and dissolved mineral salts from the soil to the leaves is labelled",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 4.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/Eyywg3mLKqGiQHwuzz0smE55FDn2APCBN1UUaBRF.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Diagrams X and Y above are illustrations of transverse sections of a part of plants, Study them and answer this question.\nThe part labelled Il is the?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 5.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/TqO3grUo6Mt3b41fIUxoWfLWXfn3B26Q6K3rHylW.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pith",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "xylem",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Phloem",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "endodermis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The organelles in cells which are also referred to as suicidal bags are the",
+      "options": [
+        {
+          "key": "A",
+          "text": "mithchondria",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "lysosomes",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "ribosomes",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "nuclei",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The process that brings about the shrinking of a spirogyra cell when placed in a strong solution is ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "osmosis",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "autolysis",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "plasmolysis",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "diffusion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "The region of a plant stem in which cells divide to increase its diameter is",
+      "options": [
+        {
+          "key": "A",
+          "text": "cambium",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "phloem",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "xylem",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "collenchyma",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The total number of caudal vertebrae in animals X and Y is 4 and 27 respectively. The animals are likely to be.",
+      "options": [
+        {
+          "key": "A",
+          "text": "fish and human",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "toad and rat",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "toad and fish",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "humans and rat",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "Which of the following blood components has the greatest affinity for oxygen and carbon (IV) oxide?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lymphocyte",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Erythrocyte",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Blood plasma",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Thrombocyte",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Use the following processes to answer this question.\nI-Ribs move upward and outward\nII- Diaphragm relaxes\nIIl-Volume of thorax increases\nIV-Air is forced out of the lungs\nWhich of the processes take place during inspiration?",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and III only",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "II and III only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "II and III only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "III and IV only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Use the following processes to answer this question.\nI-Ribs move upward and outward\nII- Diaphragm relaxes\nIIl-Volume of thorax increases\nIV-Air is forced out of the lungs\nwhich of the following processes is a direct result of contraction of the intercostal muscles?",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The table above shows the effect of hormones I,II,III and IV on some parts of the human body. Where (✓) represents effects and (X) represents no effect of hormone on the corresponding part of the body. study it and answer this question.\nWhich of the following hormones are l, II, Ill and IV respectively?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 13.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/gyQWJNSQbyq9cYerdpnWCcuiDllJ8MekYt2K3WZi.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "ADH, Glucagon,\nOestrogen, Adrenaline",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Adrenaline,\nGlucagon, Oestrogen, ADH",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Glucagon,ADH, Oestrogen, Adrenaline",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Adrenaline,\nADH, Oestrogen, Glucagon",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The table above shows the effect of hormones I,II,III and IV on some parts of the human body. Where (✓) represents effects and (X) represents no effect of hormone on the corresponding part of the body. study it and answer this question.\nThe hormone responsible for anxiety is?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 14.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/2vWAXQb8K8xT85s4L25YlvYAA11J3KdlrVsvHA1C.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The diagram above is an illustration of some parts of a mammalian ear. Study it and answer this question.\nThe middle ear is connected to the pharynx by the part labelled",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 15.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/BELuyBGhwtlnB8U4Venfru2oYDu1Dm1QvRDh5XUd.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "The diagram above is an illustration of some parts of a mammalian ear. Study it and answer this question.\nThe parts labelled I are the?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 16.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/szyd7SKTJqr60kWQNLoqfe4FC25V70tpqFKGZukc.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "semi circular canals",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ossicles",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "cochlea",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "external auditory meatus",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The diagram above is an illustration of some parts of a mammalian ear. Study it and answer this question.\nWhich of the parts are correctly grouped?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 17.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/MErb4uDPXcTOXWd6ze4zuYptZ4rHx8hkjqNtAsA1.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "(Inner ear I, IV) (Middle ear III) (Outer ear II)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "(Inner ear III) (Middle ear II, IV) (Outer ear I)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "(Inner ear III) (Middle ear II) (Outer ear III,IV)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "(Inner ear II) (Middle ear I, III) (Outer ear IV)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The diagrams above are illustrations of two different cells involved in biological processing in mammals. Study them and answer this question.\nWhich parts of P and Q fuse to complete the biological process?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 18.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/A1hXCQpRVUOmpZrKnk1mLd80San7wRIq11VfZV6f.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "III and I",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "IV and I",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III and II",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV and II",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "The diagrams above are illustrations of two different cells involved in biological processing in mammals. Study them and answer this question.\nWhich of the following statements about P and Q is correct?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 19.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/mey8B1T0WtlKGd8wT1HsGxk0HxZzJ45oeL4c8aoa.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Both cells are structures for asexual reproduction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Both cells normally belong to the same individual",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Both cells are found in plants",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "The union of both cells gives rise to a new mammal",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The diagrams above are illustrations of two different cells involved in biological processing in mammals. Study them and answer this question.\nIf the number of chromosomes in the skin cells of mammals is 46, how many chromosomes would be found in P and Q respectively?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 20.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/gkLxOblmmXKIlCrs8a74Bofs9Jh1fUytgzBZpUeo.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "23 and 23",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "23 and 46",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "46 and 23",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "46 and 46.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "In which of the following structures is simple sugar produced?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vacuole",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Cytoplasm",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Chloroplast",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Cell wall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "An evidence of the occurrence of photosynthesis in an experiment is the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "release of carbon (IV) oxide",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "release of oxygen",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "formation of water molecules",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "formation and release of fructose",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "The major source of vitamin A are ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "egg yolk, carrot and palm oil",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "mango, pawpaw,and eggs",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "sorghum,soya bean and liver",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "rice,bran,green vegetables and milk",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Diagram J is a protease while diagrams K,L,M, and N are food substances, study them and answer this question.\nProtease J would react with the particular illustrated substance because enzymes?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 24.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/ipWS7LU83z7rMsYgSTawek4hTW1P0CJ5ZHKMFWVN.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "are denatured at a high frequency",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "are specific in their action",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "remain unchanged after a reaction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "speed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "Diagram J is a protease while diagrams K,L,M, and N are food substances, study them and answer this question.\nAfter a reaction between protease J and the food substance, the end product would be",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 25.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/0JaqtxF6ka7JXNZOhR0KsJcl1SZ1ota9fATTvYPY.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "fatty acids",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "glucose",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "amino acids",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "water",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The property of clayey soil that prevents it from supporting thick vegetation is its?",
+      "options": [
+        {
+          "key": "A",
+          "text": "composition of chemically weathered granite rocks",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "inability to retain much water",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "tendency of becoming waterlogged",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "porosity and low water retention ability",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "which of the following practices will not maintain soil fertility?",
+      "options": [
+        {
+          "key": "A",
+          "text": "preventing soil erosion",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "bush fallowing",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "tendency of becoming waterlogged",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "porosity and low water retention ability",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "A group of organisms of the same species living in a particular place is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "colony",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ecosystem",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Niche",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "population",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The diagram below is an illustration of an experiment on sedimentation of soil, use it to answer this question.\nThe organic component of the soil is labelled",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 29.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/2oVENpj8bK2REh6WB3q1Ejih8vOWTDZDDgUE7k24.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The diagram below is an illustration of an experiment on sedimentation of soil, use it to answer this question.\nThe part labelled IV is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 30.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/W7GztFEiHHnZoccdD7zHewog04dJEdWkCjBFygk7.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "silt",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sand",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "humus",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "clay",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "which of the follwing pyramids is not used in ecology? pyramid of",
+      "options": [
+        {
+          "key": "A",
+          "text": "energy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "numbers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "biomass",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "orgsnisms",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Study the food chain illustrated below and use it to answer this question.\nJ-K-L-M-N\nOrganism J is normally sustained by energy from?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Green plants",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "carbohydrates",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "organism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sunlight",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Study the food chain illustrated below and use it to answer this question.\nJ &rarr;K &rarr;L &rarr;M &rarr;N\nWhich of the following statements about organism L is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "feeds on organism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "is a primary consumer",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "is the producer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "is a secondary consumer",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Study the food chain illustrated below and use it to answer this question.\nJ-K-L-M-N\nThe position occupied by each of organisms J K L M N in the food chain is known as the",
+      "options": [
+        {
+          "key": "A",
+          "text": "energy level",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "trophic level",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "food web",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "pyramid of numbers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "which of the following features is not an adaptation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Breathing roots for entry air",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "flowers are raised above water to attract pollinators",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "spongy tissues containing gases for boyancy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "hairy structures on the leaves to reduce water loss",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The biological association that contributes directly to succession in a community is",
+      "options": [
+        {
+          "key": "A",
+          "text": "competition",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "predation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "parasitism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "commensialism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The conservation of natural resources is enhanced by the following practices except",
+      "options": [
+        {
+          "key": "A",
+          "text": "controlling farm activities",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "protecting endangered species",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "poaching in game reserves",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "establishing parks and gardens",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The burning of farmlands ahould be discouraged because?",
+      "options": [
+        {
+          "key": "A",
+          "text": "destroys organic components of the soil",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "increases population of wild animals",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "increases dormancy period of some seeds",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "destroys some plant seeds",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The use of a lighter instead of matchsticks is a way of conserving",
+      "options": [
+        {
+          "key": "A",
+          "text": "petroleum",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "forest",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "water",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "wildlife",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "An accident victim was successfully transfused with blood from the father whose blood, group is AB. The blood group of the accident victim is",
+      "options": [
+        {
+          "key": "A",
+          "text": "B",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "O",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "AB",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "A",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Which of the followig traits in humans is an example of physiological variation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "skin colour",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "fingerprint",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "tongue rolling",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "height",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Individuals belonging to the blood group O are universal donors because ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "antigens are absent in thier blood cells",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "members of the group consitutute the highest number of humans",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "there are no of antibodies in thier blood plasma",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the antigens in thier blood cells are easily destroyed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Two tall plants were crossed and all the F1 plants were tall. when the F1 plants were selfed, some of the F2 plants were tall while others were short what are the possible genotypes of the original plants ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tt and tt",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "TT and TT",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "tt and tt",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "TT and Tt",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Which of the following statements best describes a test cross?",
+      "options": [
+        {
+          "key": "A",
+          "text": "to determine the genotype of an individual whose phenotype is to be known",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "to determine the phenotype of an individual whose genotype is known",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "between the progeny of parents to ascertain external expressions",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "between two homozygous recessive individuals to confirm the genotypes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Which of the following statements about sex linked traits is not correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "male inherit sex linked traits from thier fathers",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sex linked traits are more common in males",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "females can be carriers beacuse they can be heterozygous for the trait",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "males are never carriers since they only recieve one sex chromosome",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Diagram J is a protease while diagrams K,L,M, and N are food substances, study them and answer this question.\nProtease J would react with the particular illustrated substance because enzymes?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 46.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/RuoQay0Edo9V5P2FdDDGK07QNY56B792eY3sxehW.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "k",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "L",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "M",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "N",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The process by which the amount of water and solutes in the blood is controlled is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "hemolysis",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "diffusion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "turgidity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "osmoregulation",
+          "is_correct": true
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "ai What is a cell?\nii name three scientists that are associated with the discovery of the cell.\nb. make a diagram, 6cm to 8cm long of a plant cell and label only the organelle responsible for cell production\nname one blood cell in humans that does not have the oraganelle labelled in [b]i.\niii What is the biological implication of the cell named in (b)(i) not possessing the organelle responsible for\ncell reproduction?\n(c) List six organelles found in a plant celI."
+    },
+    {
+      "number": 2,
+      "question": "[a]complete the table below by ticking the appropriate group to which each of the listed elements required by plants belongs\nGroup\nelements\nmicroelement\nmacroelement\nhydrogen\ncopper\nmagnesium\nzinc\nphosphorus\nmanganese\nboron\nnitrogen\ncarbon\noxygen\n[b] [!] state three differences between the definition of a herbivore and a carnivore\n[!!] four differences between the definition of a human and a goat\n[c] what are milk teeth?"
+    },
+    {
+      "number": 3,
+      "question": "b[i] State three differences between the definition of a herbivore and a carnivore"
+    },
+    {
+      "number": 4,
+      "question": "b[ii]state four differences between the definition of a human and a goat"
+    },
+    {
+      "number": 5,
+      "question": "[c] what are milk teeth?"
+    },
+    {
+      "number": 6,
+      "question": "(a)(i) What is an ecological niche?\n(i) State five roles played by a mango tree in its ecological niche.\n(b)i) State two reasons why ecologists use sampling techniques in population studies.\n(i) State four examples of sampling techniques used in population studies.\n(c)Name four types of fingerprints in humans.\n(d)) Name the plant used by Gregor Mendel in his experiment.\n(ii) State two reasons why the plant named in 3(d) was used."
+    },
+    {
+      "number": 7,
+      "question": "(a) What are conversation laws?\n(i) State three conservation laws\n(b) State two reasons why animals are poached.\n(i) Name five animals that are commonly poached.\n(c) State four effects of excessive use of the forest.\n(d) Explain briefly the following terms: i.blood transfusion ii.antigen"
+    },
+    {
+      "number": 8,
+      "question": "5.(a) State three differences between the alimentary canals of earthworm and cockroach.\n(i) State three similarities between the alimentary canals of earthworm and cockroach.\n(b) The diagram below is an illustration of a biological cycle.\nStudy it and answer questions 5(b)i) to 5(b)(iii)\n[i]Name the biological cycle (i) Explain briefly three roles played by plants and animals in the cycle (ii) Name the process that occur in X, Y and Z.\nc. complete the table below.\norgans associated with excretion in human\nthree diseases that affect the organ\n(d)i) What is decay of organic matter\n(i) Name two groups of organisms that cause decay of organic matter.\n(i) State one other factor that causes decay.\n(iv) Name the biological cycle that involves decay.\n(e) Explain briefly the mode of nutrition in carnivorous plants.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 8.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/Xn0qTsYHbytywsyVVJnpkQ95R8c2uewhk6ApSQlc.jpg"
+    },
+    {
+      "number": 9,
+      "question": "5.(a) State three differences between the alimentary canals of earthworm and cockroach.\n(i) State three similarities between the alimentary canals of earthworm and cockroach.\n(b) The diagram below is an illustration of a biological cycle.\nStudy it and answer questions 5(b)i) to 5(b)(iii)\n[i]Name the biological cycle (i) Explain briefly three roles played by plants and animals in the cycle (ii) Name the process that occur in X, Y and Z.\nc. complete the table below.\norgans associated with excretion in human\nthree diseases that affect the organ\n(d)i) What is decay of organic matter\n(i) Name two groups of organisms that cause decay of organic matter.\n(i) State one other factor that causes decay.\n(iv) Name the biological cycle that involves decay.\n(e) Explain briefly the mode of nutrition in carnivorous plants.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 9.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2022/BRGkSto34DbgKkIEgwVK27innC1w7nDBjkJq2EVZ.jpg"
+    },
+    {
+      "number": 10,
+      "question": "specimens A and C and answer question 1(a) to 1(e).\n(a) Classify specimens A and C based on their life cycle.\nA;.....................................................................\nB;.......................................................................\n(b) State four observable differences between specimens A and C.\n(c) State three ways by which the damage to specimen A could have been prevented.\n(d) Name the type of germination that would be observed when specimens A and C are planted.\nA...........................................................\nC...........................................................\n(e) Place a flat side of specimen C on the tile.\nprovided, cut through the specimen longitudinally.\nMake a drawing, 6 cm to 8 cm long of the cut surface of one half of specimen c and label fully.\nspecimen C and label fully.\n(i) Add a drop of iodine solution to the cut surface of th other half of specimen C and record the activity on the table below"
+    },
+    {
+      "number": 11,
+      "question": "Study specimen D and E and answer questions\n(a) and (b).\n(a)i Name the specific habitats of each of specimens D and E.\nD:...........................................\nE:...........................................\n(i) State five observable structural difference between specimens D and E.\n(i) What is the behavioural adaptation that specimens D and E exhibit? (b) State two ways by which specimen E is of economic importance.\nStudy specimen G and answer questions 2(c) to (e).\n(c) On the table below, name the types of teeth present in specimen G and state one function each of the types of teeth named.\ntypes of teeth\none function\n(d)(i) Name the mode of feeding of the organism from which specimen G was obtained.\n(ii)(d) Name the mode of feeding of the organism from which specimen G was obtained.\nState three ways by which specimen G adapts its organism to the mode of feeding stated in (d)(i)\n(e) Name two mineral elements which are needed for the proper functioning of specimen G in the body."
+    },
+    {
+      "number": 12,
+      "question": "Study specimens H,K,L,M and N and answer questions a to f\n{a} state two observable structural differences between:\n{i} specimens H and L\n{ii} specimens K and M\n{b}i state two ways each by which specimens H and M adapt the organisms to thier modes of life\nH............................... M.....................................\n[ii] name two types of food that the organism that posseses specimen H feeds on\n[c] make a drawing , 8cm to 10cm long of specimen k.\n[d] name one habitat of the organism that posseses specimen k\n[e] name one feeding habit of each of the organisms that posseses specimen H and L\nH............................................... M....................................\n[f] state two observable similarities between specimens:\ni H and L\nii k and M"
+    }
+  ]
+}

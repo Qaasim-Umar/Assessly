@@ -1,0 +1,103 @@
+{
+  "subject": "Physics",
+  "examType": "WAEC",
+  "year": 2020,
+  "objectiveQuestionCount": 50,
+  "theoryQuestionCount": 15,
+  "questionsWithImages": 6,
+  "uniqueImagesUploaded": 6,
+  "objectPrefix": "question-assets/waec/physics/2020",
+  "generatedAt": "2026-09-14T21:41:29.142Z",
+  "questions": [
+    {
+      "sourceId": "59379",
+      "sourceUrl": "https://myschool.ng/classroom/physics/59379",
+      "section": "objective",
+      "number": 12,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/MZ5SwnRA1P0BESJWEEIWkROp7k2zoRW6ng2W9yjq.png",
+          "objectKey": "question-assets/waec/physics/2020/MZ5SwnRA1P0BESJWEEIWkROp7k2zoRW6ng2W9yjq.png",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/physics/2020/MZ5SwnRA1P0BESJWEEIWkROp7k2zoRW6ng2W9yjq.png",
+          "contentType": "image/png",
+          "bytes": 20466
+        }
+      ]
+    },
+    {
+      "sourceId": "59439",
+      "sourceUrl": "https://myschool.ng/classroom/physics/59439",
+      "section": "objective",
+      "number": 23,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/HdEF4oiLCMQA9ZlSlNOBmCvzbXljyZvfmEvl4x4t.jpeg",
+          "objectKey": "question-assets/waec/physics/2020/HdEF4oiLCMQA9ZlSlNOBmCvzbXljyZvfmEvl4x4t.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/physics/2020/HdEF4oiLCMQA9ZlSlNOBmCvzbXljyZvfmEvl4x4t.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 4904
+        }
+      ]
+    },
+    {
+      "sourceId": "59449",
+      "sourceUrl": "https://myschool.ng/classroom/physics/59449",
+      "section": "objective",
+      "number": 25,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/V2TK1qMNwfrvdZQGySvR9rhtNmTr1NU848XQ2B5Z.png",
+          "objectKey": "question-assets/waec/physics/2020/V2TK1qMNwfrvdZQGySvR9rhtNmTr1NU848XQ2B5Z.png",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/physics/2020/V2TK1qMNwfrvdZQGySvR9rhtNmTr1NU848XQ2B5Z.png",
+          "contentType": "image/png",
+          "bytes": 4464
+        }
+      ]
+    },
+    {
+      "sourceId": "59451",
+      "sourceUrl": "https://myschool.ng/classroom/physics/59451",
+      "section": "objective",
+      "number": 26,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/CxuF07TpO7bjc3rkXnYetjrZmgdihjKeXJdyhsqR.jpeg",
+          "objectKey": "question-assets/waec/physics/2020/CxuF07TpO7bjc3rkXnYetjrZmgdihjKeXJdyhsqR.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/physics/2020/CxuF07TpO7bjc3rkXnYetjrZmgdihjKeXJdyhsqR.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 2723
+        }
+      ]
+    },
+    {
+      "sourceId": "59465",
+      "sourceUrl": "https://myschool.ng/classroom/physics/59465",
+      "section": "objective",
+      "number": 34,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/1wOTol8NT1MhDdtJdaUbRTvD806jOQ5BUfcc6bSe.png",
+          "objectKey": "question-assets/waec/physics/2020/1wOTol8NT1MhDdtJdaUbRTvD806jOQ5BUfcc6bSe.png",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/physics/2020/1wOTol8NT1MhDdtJdaUbRTvD806jOQ5BUfcc6bSe.png",
+          "contentType": "image/png",
+          "bytes": 17607
+        }
+      ]
+    },
+    {
+      "sourceId": "59735",
+      "sourceUrl": "https://myschool.ng/classroom/physics/59735",
+      "section": "theory",
+      "number": 14,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/f9yzkQkAHF15sl0aCZ3Ugr8ljBNJuxBswROnT0WI.png",
+          "objectKey": "question-assets/waec/physics/2020/f9yzkQkAHF15sl0aCZ3Ugr8ljBNJuxBswROnT0WI.png",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/physics/2020/f9yzkQkAHF15sl0aCZ3Ugr8ljBNJuxBswROnT0WI.png",
+          "contentType": "image/png",
+          "bytes": 50635
+        }
+      ]
+    }
+  ]
+}

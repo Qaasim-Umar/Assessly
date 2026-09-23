@@ -1,0 +1,1368 @@
+{
+  "subject": "Biology",
+  "year": 2016,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Flaccidity in plants is associated with",
+      "options": [
+        {
+          "key": "A",
+          "text": "cessation of photosynthesis",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "wilting",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "turgidity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "discolouration of leaves",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Which of the following substances is not usually present in the urine of a healthy person?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Urea",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Mineral salts",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Glucose",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Water",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Lateral meristem in flowering plants is found in the",
+      "options": [
+        {
+          "key": "A",
+          "text": "cortex",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "pericycle",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cambium",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "pith",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The cells and tissues of the nose, throat, chest diaphragm and lungs from the",
+      "options": [
+        {
+          "key": "A",
+          "text": "circulatory system",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "respiratory",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "transport system",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "digestive system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The exchange of gases between the environment and the respiratory organs of vertebrates is referred to as",
+      "options": [
+        {
+          "key": "A",
+          "text": "inhalation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "respiration",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "expiration",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "breathing",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The maintenance of a constant internal environment in an organism is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "homeostasis",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "homoiothermy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "diuresis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "dialysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Which of the following organs is responsible for the production of insulin?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Spleen",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Adrenal gland",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Thyroid gland",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Pancreas",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Which of the following actions is NOT a voluntary action?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Stealing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Sneezing",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Fighting",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Cheating",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Which of the following parts of the ear does NOT contain endolymph?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Semi-circular canals",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Utriculus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Tympanum",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Sacculus",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The steps below are involved in the testing of a leaf for starch. Study them carefully and answer the question:\nI. Decolorize them\nII. Dip decolorized leaf in warm water\nIII. Place leaf in boiling water\nIV. Add iodine solution\nThe CORRECT order for the test is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, II, III and IV",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "I, III, II and IV",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "II, III,, I and IV",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "III, I, II and IV",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "The best time to pluck the leaf for the experiment is",
+      "options": [
+        {
+          "key": "A",
+          "text": "after being exposed to sunlight",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "three hours after sunset",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "before sunrise",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "six hours after sunset",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The steps below are involved in the testing of a leaf for starch. Study them carefully and answer the question:\nI. Decolorize them\nII. Dip decolorized leaf in warm water\nIII. Place leaf in boiling water\nIV. Add iodine solution\nThe best time to pluck the leaf for the experiment is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "after being exposed to sunlight",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "three hours after sunset",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "before sunrise",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "six hours after sunset",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "In which of the plant tissues are guard cells located?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Epidemis",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "MesophyII",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Vascular bundles",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Meristems",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The association between two organisms in which one of the organisms gains and the other loses is referred to as",
+      "options": [
+        {
+          "key": "A",
+          "text": "saprophytism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "commensalism",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mutualism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "parasitism",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The function of the villi in the alimentary canal is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "secrete gastric juice",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Curdle milk",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "emulsify fat",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increase the surface area for absorption",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "The function of the villi in the alimentary canal is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "secrete gastric juice",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Curdle milk",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "emulsify fat",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increase the surface area for absorption",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The function of the villi in the alimentary canal is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "secrete gastric juice",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Curdle milk",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "emulsify fat",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increase the surface area for absorption",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The function of the villi in the alimentary canal is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "secrete gastric juice",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Curdle milk",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "emulsify fat",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increase the surface area for absorption",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Which of the following structures is not an organ of the disgestive system?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Oesophagus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Pancreas",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Stomach",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Kidney",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "In ecology, a community refers to",
+      "options": [
+        {
+          "key": "A",
+          "text": "a number of individuals of a given species",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "groups of different organisms living in a habitat",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "existing species in an abandoned farmland",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the dominant species in a habitat",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The direction wind is determined by",
+      "options": [
+        {
+          "key": "A",
+          "text": "an anemometer",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a Secchi disc",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a wind vane",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "a barometer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "Food webs are complex because",
+      "options": [
+        {
+          "key": "A",
+          "text": "the number of producers are large",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "many animals feed directly on producers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "they include primary, secondary and tertiary consumers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "some animals form part of several food chains",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Special modification which enable an organism to survive in its habitat is known as.",
+      "options": [
+        {
+          "key": "A",
+          "text": "adaptation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "tolerance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mimicry",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "colouration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Which of the following relationships does not involve two organisms?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Commensalism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Saprophitism",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Symbiosis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Parasitism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "Overcrowding in a population does not result in",
+      "options": [
+        {
+          "key": "A",
+          "text": "death",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "commensalism",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "competition",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "migration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "A pandemic is an outbreak of disease that",
+      "options": [
+        {
+          "key": "A",
+          "text": "is confined to a town",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "is wide spread",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "will not spread",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "has limited spread",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The rational and prudent use of natural resources is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "presrevation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "conservation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "utilization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Which of the following natural resources cannot be conserved?",
+      "options": [
+        {
+          "key": "A",
+          "text": "soil",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "water",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "wildlife",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "air",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "Which of the following actions supports conservation? To",
+      "options": [
+        {
+          "key": "A",
+          "text": "protect endangered species",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "preserve trees for timber",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "permit hunting activities",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "provide income for the government",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "A noticeable physical appearance of individuals of the same species is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "physical variation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "morphological variation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "physiological variation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "discontinuous variation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "A blend of inherited and acquired characteristics shows",
+      "options": [
+        {
+          "key": "A",
+          "text": "variation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "inheritance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "evolution",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "heredity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "A sick baby was successfully transfused with blood from the father who has blood group AB.\nWhat is the group of the the sick baby?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "AB",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "O",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "A cross between two parents produced four offspring's with blood groups AB, BB, BO and AO. what is the blood group of their parents?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AA and BO",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "BB and AO",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "AB and BO",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "AB and AO",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Scientists who study genetics are known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "genealogist",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "geneticist",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "mendalists",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "genescientists",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "Which of the following scientists did not contribute to the development of genetics?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Wilhem Johannsen",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Felix Durjadin",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Thomas Morgan",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Gregor Mendel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Which of the following terms is associated with natural selections?",
+      "options": [
+        {
+          "key": "A",
+          "text": "adaptive radiation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Differential reproduction",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Population variability",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Survival of the fittest",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "In which of the following insects is group instinct not displayed?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Solder ants",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Cockroaches",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Honey bees",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Termites",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The inability of an organism to adapt to its habitat can lead to",
+      "options": [
+        {
+          "key": "A",
+          "text": "dormancy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "adaptation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "extinction",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "survival",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Use the diagram above that shows the effect of nitrates on water bodies Study it carefully and answer questions.\nThe source of the nitrates in the diagram is termed",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 39.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2016/22205014335_10338704_451303094972045_6346984764590567314_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "root nodules of legumes",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cloud",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fertilizers",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "organic matter",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Use the diagram above that shows the effect of nitrates on water bodies Study it carefully and answer questions.\nThe phenomenon in the diagram is termed",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 40.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2016/11842678328_10338704_451303094972045_6346984764590567314_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "denitrification",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "conservation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "eutrophication",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "global warming",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Use the diagram above that shows the effect of nitrates on water bodies Study it carefully and answer questions.\nAnother cause that could lead to the phenomenon in the diagram is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 41.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2016/14804208210_10338704_451303094972045_6346984764590567314_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "exhaust from cars",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "oil spillage",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "dumping of sewage",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "excess rainfall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The illustration above represents a cross between a colour blind male and normal female.\nStudy it carefully and answer the questions.\nWhat is the genotype ratio of carrier females to normal males in the cross?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 42.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2016/22205044215_10338704_451303094972045_6346984764590567314_n.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "1:1",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "2:3",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "3:4",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "4:1",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The illustration above represents a cross between a colour blind male and normal female.\nStudy it carefully and answer the questions.\nWhich of the genotypes are carriers of colour blindness?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 43.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2016/29608413160_0000.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "1 and 11 only",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "1 and 111 only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "11 and 111 only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1, 11 and 111 only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The type of placentation illustrated in the diagram above is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 44.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2016/23685388736_10338704_451303094972045_6346984764590567314_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "marginal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "perietal",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "axile",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "basal",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Plant A was seen to appear as Plant B after seven hours\nStudy the above diagrams carefully and answer the questions.\nThe term that can be used to describe what happened to Plant A after seven hours is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 45.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2016/10362396380_10338704_451303094972045_6346984764590567314_n.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "wilting",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "competition",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "transpiration",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Osmosis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Plant A was seen to appear as Plant B after seven hours\nStudy the above diagrams carefully and answer the questions.\nThe environmental factors responsible for the condition in plant B are",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 46.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2016/8882055504_10338704_451303094972045_6346984764590567314_n.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "low humidity and low temperature",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "high humidity and low temperature",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "low humidity and high temperature",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "high humidity and high temperature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "Study the diagram above and answer the question.\nA decrease in the number of 11 will result in",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 47.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2016/2960840360_10338704_451303094972045_6346984764590567314_n.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "an increase in urine production",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "an increase in energy production",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a decreased population",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "decreased immunity",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "The major problem experience by organisms living in small water bodies is",
+      "options": [
+        {
+          "key": "A",
+          "text": "drying up",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "oxygen deficiency",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "scarcity of food",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "wave action",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "The capillarity of a soil refers to",
+      "options": [
+        {
+          "key": "A",
+          "text": "the particle size of soil",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "how easily water passes through soil",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "how well water rises up in soil",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "proportion of water a soil holds",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "An organism at the start of a food chain which provides the total input energy into an ecosystem is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "sun",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "producer",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "consumer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "decomposer",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) (i) List three forms in which living cells exist\n(ii) Give one example each of the forms listed in 1 (a)(a)\n(b) Make a diagram, 6 cm — 10 cm long, of a typical plant cell and label fully\n(c) (i) In a tabular form, state three differences between a plant cell and animal cell.\n(ii) State three similarities between a plant cell and animal cell."
+    },
+    {
+      "number": 2,
+      "question": "(a) In sequence, name the organs that constitute the alimentary canal of humans\n(b) State: (i) three structural differences; (ii) three structural similarities; between the alimentary canal of a bird and human.\n(c) Explain briefly how the dentition of herbivores is adapted for feeding\n(d) State two roles of the pancreas in digestion"
+    },
+    {
+      "number": 3,
+      "question": "(a) (i) What is a habitat?\n(ii) Explain briefly three roles of a decomposer in an ecosystem.\n(b) Explain briefly energy flow in a freshwater habitat.\n(c) (i) State three harmful effects or microorganisms to plants\n(ii) State six beneficial effects of microorganism to humans."
+    },
+    {
+      "number": 4,
+      "question": "(a) (i) Explain the term agglutination as used in blood transfusion.\n(ii) The table below represents blood transfusion between blood donors and recipients.\nDonor\nRecipient\nA\nB\nAB\nO\nA\nB\nAB\nO\n+\n(b) Explain how each of the following organisms are adapted for obtaining food.\n(i) Mosquito larva\n(ii) Dodder plant\n(iii) Grasshopper"
+    },
+    {
+      "number": 5,
+      "question": "(a) State two difference between tactic and nastic movements in plants.\n(b) Give two examples each of organisms that show:\n(i) tactic movement\n(ii) nastic movement\n(c) (i) State three ways of caring for the mammalian skin.\n(ii) List three stimuli to which the mammalian skin is sensitive.\n(d) State five effects of high temperature on a terrestrial habitat.\n(e) (i) What is courtship behaviour in animals?\n(ii) List three courtship behaviours in animals.\n(f) Name three organisms that carry out holozoic mode of nutrition.\n(g) Explain briefly how fingerprinting can be used to detect crime."
+    },
+    {
+      "number": 6,
+      "question": "(a)(i) Cut a pieces of specimen A, place it on the white tile. Add a few drops of iodine solution. Record the observation and result in a tabular form.\n(ii) Squeeze a few drops of specimen E on another clean white tile provided, add a few dre Record the observation and result in a tabular form.\n(b)(i) State two observables differences between specimens A and B. (ii) Suggest two factors that are likely to be responsible for the state of specimen B.\n(iii) With the aid of hand lens/magnifying lens, observe.specimen B. and name an organism that is likely growing on it. (iv) State the mode of feeding of the organism on specimen B (c) ) Make a drawing 6cm-8 cm long, of specimen C and label fully. one function each of any three parts labeled."
+    },
+    {
+      "number": 7,
+      "question": "Study specimens H, K, L and M and answer questions 2 (a) to 2 (e).\n(a) Name the location of each of the specimens H, K and M in the body of a mammal.\n(b)(i) Name the fluid in specimen L (ii) State two functions of the fluid named in 2 (b) (i). (iii) Which of the other specimens is specimen L associated with?\n(c)(i) State two observable differences between specimens H and K. (i) State two observable features of specimen K that adapt it to its function.\nState one biological importance each of specimens K and M.\n(d) Make a drawing 8 cm -10 cm long, of specimen M and label fully."
+    },
+    {
+      "number": 8,
+      "question": "Answer all the questions in this section.\nStudy specimen S, T, U, V and Wand answer questions 4 (a) to 4(e).\n(a) (i) Name the habitats of each of specimens S, U and W.\n(ii) Name the class to which each of specimens S, U and W belong.\n(b) State: (i) Four observable similarities between specimens S and U. (ii) five observable differences between specimens S and U.\n(c)(i) identify the sex of specimen U. (i) State two reasons for the answer in 4 (c)(i).\n(d)State four observable features that adapt specimen S to its habitat.\n(e) Construct a food chain using at least three of the given specimens."
+    }
+  ]
+}

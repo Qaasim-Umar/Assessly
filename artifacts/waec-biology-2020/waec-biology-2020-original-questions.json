@@ -1,0 +1,1374 @@
+{
+  "subject": "Biology",
+  "year": 2020,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The cell as the basic unit of life consists of",
+      "options": [
+        {
+          "key": "A",
+          "text": "cell wall and vacuole",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "nucleus and cell wall",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cytoplasm and nucleus",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "cytoplasm and vacuole",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Use the following Classes of Arthropoda to answer the question below\nI. Crustacea II. Insecta III. Arachinda IV. Chilopoda\nWhich members of the classes live mainly in an aquatic habitat?",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Use the following Classes of Arthropoda to answer the question below\nI. Crustacea II. Insecta III. Arachinda IV. Chilopoda\nWhich of the classes is characterised by the possession of two pairs of antennae?",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The organism with spiral chloroplasts and nucleus suspended by cytoplasmic strands is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Volvox",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Spirogyra",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Paramecium",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Euglena",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The network of double membrane that conveys materials through the cytoplasm is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "plasma membrane",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "nuclear membrane",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mitochondrion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "endoplasmic reticulum",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The diagram above is an illustration of the longitudinal section of a plant organ. Study to answer the question below.\nFood is stored in the part labeled",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 6.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2020/z6Gmw4JVkuAMInTGBVeoAgRxk41CW9OJneEtXHU9-v2.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The diagram above is an illustration of the longitudinal section of a plant organ. Study it and answer the question below;\nThe plant is a?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 7.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2020/pZkzVhP8iUIhD8cB4tFQxDMQLAfmffVqb25OpX3C-v2.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "stem tuber",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "bulb",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "stolon",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "runner",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "The diagram below is an illustration of the longitudinal section of a plant organ. Study it and answer the question below;\nThe part labeled i is the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 8.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2020/H92sWu7TV1FSkyx2l7ItmRVyGWPC2r3STRmJJgY3-v2.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "apical bud",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "scale leaf",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "adventitious root",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "fleshy leaf",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Which of the following materials is not a living semi-permeable membrane?",
+      "options": [
+        {
+          "key": "A",
+          "text": "pig's bladder",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Unripe pawpaw fruit",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Yam tuber",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Sheet of cellophane",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "In an experiment, mould and yeast cells were transferred into an environment with low oxygen concentration. After a few days, the mould dies while the yeast cells did not. Which of the following statements best explains the following observation.",
+      "options": [
+        {
+          "key": "A",
+          "text": "The yeast cells carried out photosynthesis while the mould did not",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Photosynthesis does not take place in the absence of oxygen",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Respiration can take place in yeast cells in the absence of oxygen",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Respiration does not occur in the mould",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Which of the following tissues does not provide support in flowering plants?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Collenchyma",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Parenchyma",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Xylem",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Phloem",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The diagram is an illustration of an experimental set-up. Study it and answer the question;\nThe set-up directly measure",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 12.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2020/myvVt7nAGTmgi1a7IyDLXzYqUm3AWcx0M0PSVL3Z-v2.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "transpiration of water by the shoot",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "evaporation of water from the leaves",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "absorption of water by the shoot",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "loss of mineral salts from the leaves",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The diagram above is an illustration of an experimental setup. Study it and answer the question below;\nThe setup can measure comparatively the rate of",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 13.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2020/OvyDIEnsbZel6XbwF9ygudnk3GPCgDEs5rxLOcZR-v2.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "evaporation from leaves on a single shoot under different experimental conditions",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "salt uptake by shoots from different plants",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "transpiration of a single shoot of a plant under different experimental conditions",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "water uptake by roots of different plants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The respiratory organ of a cockroach",
+      "options": [
+        {
+          "key": "A",
+          "text": "air sac",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "trachea",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "lung book",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "lung",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The excretory product of some reptiles, birds and insects is",
+      "options": [
+        {
+          "key": "A",
+          "text": "urea",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "urine",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ammonia",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "uric acid",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "The part of the mammalian kidney that stores urine is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "capsule",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "medulla",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "pelvis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bladder",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The properties of endocrine system include the following except",
+      "options": [
+        {
+          "key": "A",
+          "text": "secretion of hormones",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "transportation by blood to target organ",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "having specific effect",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "release of secretion into ducts",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The part of the central nervous system that controls unconscious actions in humans is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "cerebellum",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cerebrum",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "spinal cord",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "optic nerves",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "What happens when the ciliary muscles of the eye contract? The",
+      "options": [
+        {
+          "key": "A",
+          "text": "lens become more concave",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "lens become more convex",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "lens gets a longer focal length",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "suspensory ligament becomes tight",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The diagram is an illustration of a part of a flower. Study it and answer the question below;\nThe function of the part labeled I is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 20.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2020/XQa7CfH1yypMN179IwpsZ7WaHvHX2jkzlmKSURxA-v2.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "receiving the pollen grain",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "attract pollinators",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "germination of the pollen grain",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "site for double fertilization in the plant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The diagram below is an illustration of a part of a flower. Study it and answer the question below.\nThe part labeled II is the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 20.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2020/XQa7CfH1yypMN179IwpsZ7WaHvHX2jkzlmKSURxA-v2.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "unfused stigma",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "fused style",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fused ovaries",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "unfused anther",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The reagent used in testing for carbon (IV) oxide is",
+      "options": [
+        {
+          "key": "A",
+          "text": "copper sulphate solution",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "lime water",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "hydrochloric acid",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sodium hydroxide solution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Oxygen comes out of the stomata during photosynthesis through the process known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "diffusion",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "transpiration pull",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "osmosis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "active transport",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The first stable product of photosynthesis is",
+      "options": [
+        {
+          "key": "A",
+          "text": "starch",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "fructose",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "glucose",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "sucrose",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "An example of a trace elements is",
+      "options": [
+        {
+          "key": "A",
+          "text": "potassium",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "calcium",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "magnesium",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "copper",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Which of the following statements about a mixture of a protein-digesting enzyme and starch solution would be correct? The protein-digesting enzyme",
+      "options": [
+        {
+          "key": "A",
+          "text": "has no effect on the starch solution",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "leads to the production of amino acids",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "leads to the production of glucose",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "digest the starch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The mutualism type of relationship is different from a parasitic relationship because in mutualism",
+      "options": [
+        {
+          "key": "A",
+          "text": "both organisms involved benefit",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "none of the organisms benefits or harm each other",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "both organisms harm each other",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "only one of the organisms is harmed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The table below shows the number of some organisms in habitats W and Y. Study it to answer the question below;\nOrganism\nNumber in the habitat\nhabitat W\nhabitat Y\nPlankton\n126\n0\nAntelope\n0\n51\nWater flea\n10\n0\nTilapia\n23\n0\nLion\n0\n6\nFrog\n6\n0\nGrass\n0\n250\nWhat type of habitat is W?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rainforest",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Pond",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Desert",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Ocean",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The table below shows the number of some organisms in habitats W and Y. Study it to answer the question below;\nOrganism\nNumber in the habitat\nhabitat W\nhabitat Y\nPlankton\n126\n0\nAntelope\n0\n51\nWater flea\n10\n0\nTilapia\n23\n0\nLion\n0\n6\nFrog\n6\n0\nGrass\n0\n250\nWhich of the following statements about habitat W is correct? The",
+      "options": [
+        {
+          "key": "A",
+          "text": "absence of lions and antelopes shows that the habitat is terrestrial",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "presence of Tilapia and planktons shows that the habitat is not aquatic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "type of organisms present indicate that habitat is aquatic",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "absence of grasses indicates that the habitat is terrestrial",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The table below shows the number of some organisms in habitats W and Y. Study it to answer the question below;\nOrganism\nNumber in the habitat\nhabitat W\nhabitat Y\nPlankton\n126\n0\nAntelope\n0\n51\nWater flea\n10\n0\nTilapia\n23\n0\nLion\n0\n6\nFrog\n6\n0\nGrass\n0\n250\nThe number of lions and antelops in habitat Y shows that the lion",
+      "options": [
+        {
+          "key": "A",
+          "text": "is the prey while the antelope is the predator",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "is the predator while the antelope is the prey",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "and the antelope are preys to each other",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "and the antelopes are predators",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "The diagram above illustrates an ecological instrument. Study it and answer the question below;\nA disadvantage of the abiotic factor measured by the instrument is that it",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 31.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2020/IDHASJVk1Jp1phl2dhw5Y75VNZ0dPZglkU0jjiO6-v2.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "is an agent of pollination",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "is necessary for germination",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "leads to flooding when in excess",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "is used for irrigation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "The diagram below is an illustration of an ecological instrument. Study it an answer the question below;\nWhen the instrument is in use, it is usually?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 31.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2020/IDHASJVk1Jp1phl2dhw5Y75VNZ0dPZglkU0jjiO6-v2.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "placed slightly above soil level",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "placed on a table",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "suspended in air",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "suspended to moving water",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Soil with the finest texture is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "silt",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "clay",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "sand",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "gravel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The position occupied by an organism in food chain is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "energy level",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "niche",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "trophic level",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "biomass",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The depletion of the ozone layer will result in the earth surface receiving more",
+      "options": [
+        {
+          "key": "A",
+          "text": "gamma rays",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "infra-red rays",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ultraviolet rays",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "X-rays",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Use the list of insects below to answer the question below;\nI. Cotton stainer II. Honeybee III. Termite IV. Weevil\nThe insects whose activities are both beneficial and harmful to humans are;",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and II",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II and III",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "II and IV",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "III and IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Use the list of insects below to answer the question below;\nI. Cotton stainer II. Honeybee III. Termite IV. Weevil\nWhich of the insects destroys grains?",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Conservation of natural resources does not",
+      "options": [
+        {
+          "key": "A",
+          "text": "maintain a balanced ecosystem",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "preserve the beauty of nature",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "attract tourists",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "threaten the survival of species",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "A company was prohibited from producing bags made from natural leopard skin. This is an attempt to conserve",
+      "options": [
+        {
+          "key": "A",
+          "text": "land",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "water",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "wildlife",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "minerals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Which of the following substances is not a conservable natural resource?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mineral",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Air",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Soil",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Water",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "A child that can receive blood donation from anybody belongs to the blood group",
+      "options": [
+        {
+          "key": "A",
+          "text": "O",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "B",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "AB",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Variation which exhibits a wide range from one extreme to the other is",
+      "options": [
+        {
+          "key": "A",
+          "text": "phenotypic variation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "discontinuous variation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "continuous variation",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "genotypic variation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Measurements of height and weight of students in a class show",
+      "options": [
+        {
+          "key": "A",
+          "text": "discontinuous variation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "continuous variation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "shortness is more prevalent",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "fatness is less prevalent",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Which of the following statements about chromosomes is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "All the chromosomes of a species are the same shape",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The number present in a specie is constant",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "They are neatly arranged in a cytoplasm",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "They bear ribosomes on their outer membranes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Which of the following diseases can be inherited?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pneumonia",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Whooping cough",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Sickle cell anemia",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Malaria",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The diagram below is an illustration of a cross between plants A and B of the same species. Study it and answer the question below;\nIf the F1 generation are plants with high yield and resistance, the genotype of the F1 generation plants would be",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 47.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2020/Oe5Wc3pr6ChLBDIhvpjW4xGCwcnzFCvFOJ4zXLPv-v2.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "YYRR",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "YyRr",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "yyRr",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "yyrr",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The diagram above is an illustration of a cross between plants A and B of the same species. Study it to answer the question below\nThe process that gave rise to the F1 generation is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 47.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2020/Oe5Wc3pr6ChLBDIhvpjW4xGCwcnzFCvFOJ4zXLPv-v2.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "self fertilization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cross fertilization",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "out-breeding",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "test cross",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Replication of DNA molecules is catalysed by an enzyme called",
+      "options": [
+        {
+          "key": "A",
+          "text": "polymerase",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "ptyalin",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "pepsin",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "amylase",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Who proposed the theory of evolution by natural selection",
+      "options": [
+        {
+          "key": "A",
+          "text": "Darwin",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Lamark",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Aristotle",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Linnaeus",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Which of the following statements best explains the reason why termites swarm at night?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Light is not necessary for swarming",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "They avoid day-flying birds",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Light destroys their wings",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "They can only see in the dark",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) Explain briefly how the human ear carries out its function of balancing.\n(b) (i) make a drawing 8 cm - 10 cm long of the structure of the human ear and label fully.\n(ii) Describe briefly the structure of the middle ear in humans."
+    },
+    {
+      "number": 2,
+      "question": "(a)(i) What is a deficiency disease?\n(ii) Complete the table below by naming five nutrient deficiency diseases in humans and stating one remedy for each of the diseases.\n(b) Outline a chemical test for (i) Starch in a tuber of yam (ii) Glucose in orange fruit\nNutrient deficiency disease\nRemedy"
+    },
+    {
+      "number": 3,
+      "question": "(a) Complete the table below;\nDisease\nCausative organism\nVector\nControl\nCholera\nTrypanosome\nFemale Anopheles mosquito\nRingworm\nNone\n(b) Explain briefly the biological basis of preserving foods using each of the following methods;\n(i) salting (ii) irradiation (iii) smoking"
+    },
+    {
+      "number": 4,
+      "question": "(a) Explain briefly; (i) independent assortment of genes (ii) the reason blood group O in humans can only exist in homozygous form while blood groups A and B can exist both in homozygous and heterozygous forms.\n(b) Complete the table below by naming the classes of vertebrates in their evolutionary trend and giving one example each of the classes.\nClasses of vertebrate\nOne example"
+    },
+    {
+      "number": 5,
+      "question": "(a) Explain briefly the following types of fertilization in animals; (i) external fertilization (ii) internal fertilization\n(b) Name two groups of animal each that exhibit the types of fertilization in (a)\n(c)(i) If the placenta in a pregnant woman is detached from the uterine wall, give three effect this will have on the foetus\n(ii) Name three other features in the uterus of a pregnant woman that are useful for the development of the foetus\n(d) Explain briefly how the activities of organisms bring bout dynamic equilibrium in the habitat.\n(e) State four problems that organisms in the intertidal zone of a marine habitat could encounter.\n(f) Explain briefly the reasons that the following factors are necessary for germination; (i) moisture (ii) viable seeds\n(g) Explain briefly the reason light energy is considered a limiting factor in the production of foods by autotrophs."
+    },
+    {
+      "number": 6,
+      "question": "1. Study Specimens B, C and D and answer questions 1(a) To 1(f).\n(a) i) Place two drops of specimen B on a white tile and add two drops of iodine solution.\nComplete the table below with the test, observation and inference:\ntest\nobservation\ninference\n(aii) Put 5 ml of specimen B into a test tube and add 2 ml of sodium hydroxide solution followed by three drops of copper (ii) tetraoxosulphate (VI) solution and shake Complete the table below with the test, observation and inference.\ntest\nobservation\ninference\n(b) Give the name of each of the tests in 1(a)i) and 1(a)(ii). (i) ____________ (ii) _____________\n(c) State two ways by which specimen C is of economic importance.\n(d)(i) Name the Kingdom to (1) (ii) which specimen C belongs. (ii) State three reasons for the. answer in 1(d)(i). (iii) Name four other organisms that belong to the same Kingdom as specimen C.\n(ei) Name the Phylum to which specimen D belongs. (ii) State three reasons for the answer in 1(d)(i).\n(f)(i) Explain briefly the role of specimen C in nutrient cycling. (ii) What is the mode of nutrition of specimen C."
+    },
+    {
+      "number": 7,
+      "question": "Study Specimens E, F, and H and answer questions 2(a) to 2(f).\n(a) What types of fruits are specimens E, F, and H?\nE: _________ F:_________ H: ___________\n(b) Name the types of placentation possessed by each of specimens E, F and H:\n(c) Name one agent of dispersal each of specimens E, F and H? E: H: F: F:\n(d)(i) Explain briefly how specimen E is dispersed. (ii) State two types of nutrients present in specimen E.\n(e)(i) What is the color of specimen H? (ii) What does the color of specimen H signify?\n(f) Using the scalpel/blunt knife provided, cut open specimen H along the line of split from one side only.\n(i) Name the type of placentation found in specimen H.\n(ii) Make a drawing, 6 cm to 8 cm long of the two split halves of specimen H while still joined at one length and label fully."
+    },
+    {
+      "number": 8,
+      "question": "Study Specimens P, Q and R and answer questions 4(a) to 4(d).\n(a) Use the information below to complete the following table. (i) Add two drops of specimen P into a beaker containing water, leave it undisturbed and note the time it completely disperses in water. (ii) Add a leveled teaspoonful of specimen Q into another beaker containing water, stir for one second and note the time it takes to completely dissolve. (iii) Cut open specimen R and note the time the odor was perceived. (iv) Give the medium of spread for each of the tests in 4(a)(i) to 4(a) i).\n(v) Name the sense organ in humans involved in each of the observations in 4(a)(i) to 4(a)(iii).\nspecimen\nTest\nObservation time(sec)\nMedium of spread\nsense organ\n(b) Name the biological phenomenon that occurred in 4(a)(iii).\n(c) State two factors each that will increase the rate of the phenomenon named in 4(b) for each of the activities in 4(a)(i). (ii) and (iii)\n(i) _____________ (ii) _____________ (iii) _____________\n(d) Gently place your thumb on the inked stamp pad provided. (i) Neatly thumbprint clearly showing the pattern in the box below.\n(ii) Name the type of pattern in the fingerprint in 4(e)(i).\n(iii) List three other types of fingerprints. (iv) State three advantages of fingerprints.\n(v) What type of variation is fingerprint?"
+    }
+  ]
+}

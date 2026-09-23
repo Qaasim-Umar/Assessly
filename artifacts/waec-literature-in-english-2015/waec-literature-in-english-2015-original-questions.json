@@ -1,0 +1,1373 @@
+{
+  "subject": "Literature-In-English",
+  "year": 2015,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The expression 'such a rude room of such a poor pair' illustrates",
+      "options": [
+        {
+          "key": "A",
+          "text": "onomatopoeia",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "pun",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "rhyme",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "alliteration",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The setting is",
+      "options": [
+        {
+          "key": "A",
+          "text": "dawn",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sunset",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "midday",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "night",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "The rhyme scheme is",
+      "options": [
+        {
+          "key": "A",
+          "text": "aabb ccdd eeff",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "abab abab aabb",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "abca abbc abab",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "abba abca abab",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The theme of the poem is",
+      "options": [
+        {
+          "key": "A",
+          "text": "the love of mother",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "invoking the spirit of womanhood",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "admiration for women's hard work",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "the suffering of women",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The literary device used in line 7 is",
+      "options": [
+        {
+          "key": "A",
+          "text": "conceit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "personification",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "hyperbole",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "pathos",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "A speech in a play in which a character speaks his or her thoughts alone is",
+      "options": [
+        {
+          "key": "A",
+          "text": "a monologue",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "an aside",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "an epilogue",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a soliloquy",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "In literature, repetition is used essentially for",
+      "options": [
+        {
+          "key": "A",
+          "text": "rhyme",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "suspense",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "allusion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "emphasis",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "The pattern of a poem without reference to its content is referred to as the",
+      "options": [
+        {
+          "key": "A",
+          "text": "limerick",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "metre",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "free verse",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "form",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The performers in a play constitute the",
+      "options": [
+        {
+          "key": "A",
+          "text": "chorus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "characters",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "audience",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cast",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The stanza is an example of",
+      "options": [
+        {
+          "key": "A",
+          "text": "appellation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "apostrophe",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "euphemism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "elegy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Pan is used here as",
+      "options": [
+        {
+          "key": "A",
+          "text": "an allusion",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "symbol",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "irony",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "metonymy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The rhyme scheme of the stanza is",
+      "options": [
+        {
+          "key": "A",
+          "text": "abcabcc",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ababcdd",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "babacc",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bcbccaa",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "A metrical foot in which a stressed syllable is followed by an unstressed syllable is",
+      "options": [
+        {
+          "key": "A",
+          "text": "iambic",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "spondaic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "trochaic",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "dactylic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "........... Is the location of the action of the plot",
+      "options": [
+        {
+          "key": "A",
+          "text": "Setting",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Narrative technique",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Point of view",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Characterization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "A ballad is essentially a ........... poem",
+      "options": [
+        {
+          "key": "A",
+          "text": "descriptive",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "dramatic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "pastoral",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "narrative",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "The first four lines of the Shakespearian sonnet rhyme",
+      "options": [
+        {
+          "key": "A",
+          "text": "abcd",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "abba",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "abab",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "cdcd",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "A story in which characters or actions represent abstract ideas or moral qualities is",
+      "options": [
+        {
+          "key": "A",
+          "text": "an epic",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a legend",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "an allegory",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "a satire",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The use of imagery in prose or verse",
+      "options": [
+        {
+          "key": "A",
+          "text": "appeals to the senses",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "develops the plot",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "creates confusion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "obscures meaning",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "The lines illustrate",
+      "options": [
+        {
+          "key": "A",
+          "text": "soliloquy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "parallelism",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "dialogue",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "contrast",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "'heads' in the second line is an example of",
+      "options": [
+        {
+          "key": "A",
+          "text": "synecdoche",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "inversion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "epithet",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "conceit",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "A character that develops in the course of a novel or play is described as",
+      "options": [
+        {
+          "key": "A",
+          "text": "flat",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "antagonist",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "round",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "protagonist",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "A dirge is a poem sung",
+      "options": [
+        {
+          "key": "A",
+          "text": "to send a child to sleep",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "to make workers happy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "at a birthday party",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "at a funeral",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "In drama, the ............. creates humour",
+      "options": [
+        {
+          "key": "A",
+          "text": "hero",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "clown",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "villain",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "chorus",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "'Let me not love thee if I love thee not' illustrates",
+      "options": [
+        {
+          "key": "A",
+          "text": "metaphor",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "proverb",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "paradox",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "meiosis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "...........is a literary device used to express unpleasant in a more acceptable manner",
+      "options": [
+        {
+          "key": "A",
+          "text": "Epilogue",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Epigram",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Euphemism",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Eulogy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The write's attitude to the couple is one of",
+      "options": [
+        {
+          "key": "A",
+          "text": "resignation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "indifference",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "patronage",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "praise",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The dominant literary device used in the passage is",
+      "options": [
+        {
+          "key": "A",
+          "text": "litotes",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "personification",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "simle",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "paradox",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The rhetorical question that ends the passage stresses the",
+      "options": [
+        {
+          "key": "A",
+          "text": "wickedness of thieves",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "poverty of the couple",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "security of the hut",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "filthiness of the surrounding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The poet's tone is one of",
+      "options": [
+        {
+          "key": "A",
+          "text": "sadness",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "joy",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "condemnation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sarcasm",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "'To bring forth sons and daughters brave'' illustrates",
+      "options": [
+        {
+          "key": "A",
+          "text": "paradox",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "zeugma",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "inversion",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "epigram",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "The Speaker is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gonzalo",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Antonio",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Prospero",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Alonso",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "The addressee is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ariel",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Ferdinand",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Caliban",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Miranda",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The ''impostor'' is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sebastian",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Antonio",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Ferdinand",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Alonso",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The ''advocate'' and the ''impostor'' are",
+      "options": [
+        {
+          "key": "A",
+          "text": "conspirators",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "suspicious of each other",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "enemies",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "attracted to each other",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The speaker's utterance betrays his",
+      "options": [
+        {
+          "key": "A",
+          "text": "anger",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "pretence",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "hatred",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sorrow",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The speaker is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gonzalo",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Antonio",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Sebastian",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Alonso",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "''These words'' refer to",
+      "options": [
+        {
+          "key": "A",
+          "text": "the shipwreck",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the son's disappearance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the daughter's wedding",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Prospero's magic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Where did the wee\\dding take place?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Algiers",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Milan",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Tunis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Naples",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The setting is",
+      "options": [
+        {
+          "key": "A",
+          "text": "outside Prospero's cell",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "on a ship",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "in front of Prospero's cell",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "another part of the island",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "''.......in my rate'' means",
+      "options": [
+        {
+          "key": "A",
+          "text": "I'm very certain",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "so far as I can see",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "there's no doubt",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "as it appears",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Ariel has 'come' because",
+      "options": [
+        {
+          "key": "A",
+          "text": "he has been invited by Prospero",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "he wants to make a request",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "he desires a meeting",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "flying is no problem to him",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Prospero has actually",
+      "options": [
+        {
+          "key": "A",
+          "text": "raised a storm at sea",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "punished Miranda",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "dismissed Ferdinand",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "commanded Ariel to disappear",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Before Ariel's entry",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ferdinand has brought in some wood",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Prospero had put Miranda to sleep",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Caliban had been sweaing at prospero",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Trinculo had discovered Caliban's cloak",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "'Ariel and all his quality' means Ariel and",
+      "options": [
+        {
+          "key": "A",
+          "text": "all at his command",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the quality of a spirit",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "his band of spirit",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "an ability to cause mischief",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Soon after, Ariel",
+      "options": [
+        {
+          "key": "A",
+          "text": "flies off to do his duty",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "recounts the confusion on board the ship",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "kneels down to worship Prospero",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "calls Ceres and another spirit",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "''we two'' are",
+      "options": [
+        {
+          "key": "A",
+          "text": "Antonio and Adrian",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Sebastian and Adrian",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Sebastian and Franciso",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Antonio and Sebastian",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "X and Y are",
+      "options": [
+        {
+          "key": "A",
+          "text": "Antonio and Alonso",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Sebastian and Alonso",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Antonio and Gonzalo",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Sebastian and Gonzalo",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "The situation in the extract is highly",
+      "options": [
+        {
+          "key": "A",
+          "text": "satirical",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "prophetic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ironical",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "comical",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "What has happened to all the other characters in the scene?",
+      "options": [
+        {
+          "key": "A",
+          "text": "They have been made deaf and dumb",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Ariel has put them all to sleep",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "They have been sent away",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Prospero has put them to sleep",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "The ''two'' later plot to_______",
+      "options": [
+        {
+          "key": "A",
+          "text": "kill all the other characters",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "escape from the island",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "kill Prospero and Miranda",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "kill Alonso and Gonzalo",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "AFRICAN PROSE\nASARE KONADU: A WOMAN IN HER PRIME\nWhat role does tradition play in the relationship between Pokuwaa and her mother?"
+    },
+    {
+      "number": 2,
+      "question": "AFRICAN PROSE\nASARE KONADU: A WOMAN IN HER PRIME\nDiscuss the significance of Tano Kofi in the novel."
+    },
+    {
+      "number": 3,
+      "question": "AFRICAN PROSE\nADICHIE CHIMAMANDA NGOZI: PURPLE HIBISCUS\nExamine the relationship between Eugene and his wife in the novel."
+    },
+    {
+      "number": 4,
+      "question": "AFRICAN PROSE\nADICHIE CHIMAMANDA NGOZI: PURPLE HIBISCUS\nExamine the importance of the military in the novel."
+    },
+    {
+      "number": 5,
+      "question": "NON - AFRICAN PROSE\nWILLIAM GOLDING: LORD OF THE FLIES\nComment on the significance of Piggy's glasses"
+    },
+    {
+      "number": 6,
+      "question": "NON - AFRICAN PROSE\nWILLIAM GOLDING: LORD OF THE FLIES\nConsider Ralph as the hero in the novel."
+    },
+    {
+      "number": 7,
+      "question": "NON - AFRICAN PROSE\nERNEST HEMINGWAY: THE OLD MAN AND THE SEA\nTo what extent was the old man successful on his last fishing trip?"
+    },
+    {
+      "number": 8,
+      "question": "NON - AFRICAN PROSE\nERNEST HEMINGWAY: THE OLD MAN AND THE SEA\nComment on the significance of Santiago's dream about lions."
+    },
+    {
+      "number": 9,
+      "question": "NON - AFRICAN DRAMA\nBERNARD SHAW: ARMS AND THE MAN\nHow is romantic love treated in the play?"
+    },
+    {
+      "number": 10,
+      "question": "NON — AFRICAN DRAMA\nBERNARD SHAW: ARMS AND THE MAN\nHow is the conflict between Bluntschli and Sergius resolved in the play?"
+    },
+    {
+      "number": 11,
+      "question": "NON — AFRICAN DRAMA\nOSCAR WILDE: THE IMPORTANCE OF BEING EARNEST\nComment on the use of irony in the play."
+    },
+    {
+      "number": 12,
+      "question": "NON — AFRICAN DRAMA\nOSCAR WILDE: THE IMPORTANCE OF BEING EARNEST\nExamine Miss Prism's importance in the play."
+    },
+    {
+      "number": 13,
+      "question": "AFRICAN POETRY\nExamine the identity crisis in \"Boy on a Swing\"."
+    },
+    {
+      "number": 14,
+      "question": "AFRICAN POETRY\nHow does the poet present his experiences as a blackman in \"Expelled\"?"
+    },
+    {
+      "number": 15,
+      "question": "NON —AFRICAN POETRY\nDiscuss the changing mood of the poet in \"The Sun Rising\""
+    },
+    {
+      "number": 16,
+      "question": "NON —AFRICAN POETRY\nComment on the errand of the soul in \"The Soul's Errand\"."
+    }
+  ]
+}

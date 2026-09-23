@@ -1,0 +1,1389 @@
+{
+  "subject": "Physics",
+  "year": 2020,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "In collision between two objects, kinetic energy is conserved only if",
+      "options": [
+        {
+          "key": "A",
+          "text": "one of the objects was initially at rest",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "potential energy is converted to work",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the collision is inelastic",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the collision is elastic",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The quantity of motion of a body is its",
+      "options": [
+        {
+          "key": "A",
+          "text": "acceleration",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "displacement",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mometum",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "velocity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "The volume of a fixed mass of a gas varies inversely as the pressure on it provided the temperature is constant. This statement is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pressure law",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Charles law",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Boyle's law",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "General gas law",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "An image formed on a screen is always?",
+      "options": [
+        {
+          "key": "A",
+          "text": "inverted",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "magnified",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "upright",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "virtual",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "How would the capacitance of a parallel plate capacitor be affected if the distance of separation of its plates is decreased? It will",
+      "options": [
+        {
+          "key": "A",
+          "text": "increase in value",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "decrease slightly",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "remain unchanged",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "drop to zero",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "Which of the following machines does not apply the lever principle?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Claw hammer",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Wheelbarrow",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Single pulley",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "sugar tong",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The average distance moved by a molecule between collisions is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "molecular distance",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "intermolecular distance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mean distance",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "mean free path",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Which of the following waves requires a material medium for its propagation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Radio waves",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Light waves",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Sound waves",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "X-rays",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The depolarising agent in a Leclanche cell is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "carbon  rod",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ammonium chloride",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "manganese (IV) oxide",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "zinc plate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The material used to slow down the neutrons in a nuclear reactor is",
+      "options": [
+        {
+          "key": "A",
+          "text": "boron",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "copper",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "graphite",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "uranium",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Which of the following statements explain why hot soapy water is more effective in cleaning oil-stained dishes?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The oil on the dishes repels the soap",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "soap and heat decrease the surface tension of oil",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "soap increases the surface tension of oil and water",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Hot water increases the surface tension of oil",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The diagram above illustrates a beam of parallel rays from a distant object O, incident on one side of the total reflecting prism. Which diagram does not represent the correct path of the beam when it emerges from the prism?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 12.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2020/MZ5SwnRA1P0BESJWEEIWkROp7k2zoRW6ng2W9yjq.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "W",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "X",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Y",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Z",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "An electrical device has 50 turns in its primary coil and 20 turns in the secondary coil. The device can be a\\an?",
+      "options": [
+        {
+          "key": "A",
+          "text": "step-up transformer",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "step-down transformer",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "d.c generator",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a.c generator",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The earpiece of a telephone handset converts energy from",
+      "options": [
+        {
+          "key": "A",
+          "text": "electrical to sound",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "sound to electrical",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "sound to electrical",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sound to radio wave",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "Two identical cups containing the same volume of water at 45°C and 5°C, are left in a room at 25°C. Which of the following graphs correctly illustrates the variation of temperature with time?",
+      "has_diagram": true,
+      "diagram_note": "The source references option graphics, but no image file is available.",
+      "options": [
+        {
+          "key": "A",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "C",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "D",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "A ray of light traveling from glass into ethyl alcohol is incident at the boundary at an angle of incidence 30\\(^o\\). Calculate the angle of refraction.\n[Refractive index of glass =1.5; refractive index of ethyl alcohol = 1.36]",
+      "options": [
+        {
+          "key": "A",
+          "text": "27\\(^o\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "33.5\\(^o\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "51.7\\(^o\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "72.8\\(^o\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "A 60kg man stands on a weighing balance in an elevator. If the elevator accelerates upwards at 5ms\\(^{-2}\\), determine the reading of the scale. [g = 10ms\\(^{-2}\\)]",
+      "options": [
+        {
+          "key": "A",
+          "text": "300N",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "600N",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "800N",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "900N",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The length of an iron bar is 100cm at 20°C. At what temperature will its length increase by 0.01%? [Linear expansivity of iron = 1.2 x 10\\(^{-5}\\)°C]",
+      "options": [
+        {
+          "key": "A",
+          "text": "48.0°C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "38.0°C",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "28.3°C",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "23.0°C",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "A moving-coil galvanometer which gives a full-scale on deflection with 0.005A is converted to a voltmeter reading up to 5V using an external resistance of 975\\(\\Omega\\). What is the resistance of the metre?",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.25\\(\\Omega\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2.50\\(\\Omega\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "25.00\\(\\Omega\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "250.00\\(\\Omega\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "A beam consisting of \\(\\alpha\\)-particles. \\(\\beta\\)-particles and \\(\\gamma\\)-rays pass through a magnetic field at right angles to the direction of the field. Which of the following observations would be made about the \\(\\alpha\\)-particles, \\(\\beta\\)-particles, and \\(\\gamma\\)-rays respectively?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Deflected, deflected, deflected",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Deflected, deflected, not deflected",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Deflected, not deflected, deflected",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Not deflected, deflected, deflected",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "A parallel plate capacitor is charged and the charging battery is subsequently disconnected. lf the plates of the capacitor are moved farther apart by means of insulating handles, the",
+      "options": [
+        {
+          "key": "A",
+          "text": "capacitance would increase",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "capacitance would decrease",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "charge on the capacitor would increase",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "charge on the capacitor would decrease",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The velocity of sound in air at 15°C is 340ms\\(^{-1}\\). Calculate the velocity at 47\\(^o\\)C",
+      "options": [
+        {
+          "key": "A",
+          "text": "790ms\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "602ms\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "358ms\\(^{-1}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "322ms\\(^{-1}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Which of the current-voltage characteristics shown above is that exhibited an ohmic conductor?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 23.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2020/HdEF4oiLCMQA9ZlSlNOBmCvzbXljyZvfmEvl4x4t.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "D",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "A 500N box rests on a horizontal floor. A constant horizontal force is exerted on the box so that it moves through 8m. If the coefficient of kinetic friction between the floor and the box is 0.22, calculate the workdone on the box",
+      "options": [
+        {
+          "key": "A",
+          "text": "880J",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "440J",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "400J",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "110J",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The diagram illustrates a ball of mass m sliding down a plank inclined at an angle of 0 to the horizontal. The kinetic friction between the ball and the plank is F, and the acceleration of free fall is g. The normal force on the ball is?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 25.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2020/V2TK1qMNwfrvdZQGySvR9rhtNmTr1NU848XQ2B5Z.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "mgsin \\(\\theta\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "mgtan \\(\\theta\\), mgcos \\(\\theta\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mgcos \\(\\theta\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "mgcot \\(\\theta\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The diagram above illustrates a ball of mass m sliding down a plank inclined at an angle of 0 to the horizontal. The kinetic friction between the ball and the plank is F and the acceleration of free fall is g. The net force on the ball along the plank is?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 26.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2020/CxuF07TpO7bjc3rkXnYetjrZmgdihjKeXJdyhsqR.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "mgsin \\(\\theta\\) + F",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "F - mgcos \\(\\theta\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mgsin \\(\\theta\\) - F",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "F + mgcos \\(\\theta\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "What factors determine the frequency of a note emitted by a vibrating string?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amplitude of vibration, force constant of string and length of string",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Amplitude of vibration, force constant of string, and tension in string",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Mass per unit length of string, tension in string and length of string",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Force constant of string, tension in string, and length of string.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The magnitude of the force experienced by a charge of 1.6 x 10\\(^{-8}\\)C in a uniform electric field of intensity 5 x 10\\(^5\\)NC\\(^{-1}\\) is",
+      "options": [
+        {
+          "key": "A",
+          "text": "3.2 x 10\\(^{-14}\\)N",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "8.0 x 10\\(^{-13}\\)N",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "8.0 x 10\\(^{-3}\\)N",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "3.1 x 10\\(^{13}\\) N",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "A motorcycle starting from rest is uniformly accelerated such that its velocity in 10s is 72kmhr\\(^{-1}\\). What is its acceleration?",
+      "options": [
+        {
+          "key": "A",
+          "text": "108ms\\(^2\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "86ms\\(^2\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "4ms\\(^2\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "2ms\\(^2\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The temperature of an object is raised by 120°C. The resulting increase in its absolute temperature is",
+      "options": [
+        {
+          "key": "A",
+          "text": "50K",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "120 K",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "200K",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "393K",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Which of the following statements about the motion of a simple pendulum is true?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is a simple harmonic motion when the angle of displacement is large",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "It passes the equilibrium position with minimum speed",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "It possesses maximum kinetic energy at the extreme positions",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "lt swings faster at the poles than at the equator",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "An electron of mass m and charge e moves in a circular path in a magnetic field of flux density B. How long does it take to complete one orbit?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(\\frac{2me}{B\\pi}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(\\frac{2B}{me\\pi}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(\\frac{2\\pi m}{Be}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "\\(\\frac{Be}{2 \\pi m}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Which of the following statements about photoelectrons is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A faint green light produces photoelectrons with less kinetic energy than a bright red light",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "A red light releases a smaller number of electrons than a green light",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "A faint green light produces photoelectrons with greater kinetic energy than a bright red light",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "A red light produces more photoelectrons than a green light",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The sketched graph above illustrates the heating curve of a 0.02kg of water. Determine the approximate value of the specific latent heat of vapourization of water",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 34.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2020/1wOTol8NT1MhDdtJdaUbRTvD806jOQ5BUfcc6bSe.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "2.25 x 10\\(^6\\) J kg\\(^{-1}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "4.17 x 10\\(^3\\) J kg\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "2.00 x 10\\(^3\\) J kg\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1.00 x 10\\(^3\\) J kg\\(^{-1}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "In the hydraulic press, the force F applied is related to the diameter d of the cylinder by",
+      "options": [
+        {
+          "key": "A",
+          "text": "F \\(\\alpha\\) d\\(^2\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "F \\(\\alpha\\) d",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "F \\(\\alpha\\) d\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "F \\(\\alpha\\) d\\(^{-2}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "In an electric circuit, an inductor of inductance 0.5 H and resistance 50\\(\\Omega\\) is connected to an alternating current source of frequency 60 Hz. Calculate the impedance of the circuit.",
+      "options": [
+        {
+          "key": "A",
+          "text": "50.0\\(\\Omega\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "450.5 \\(\\Omega\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "195.0 \\(\\Omega\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "1950.1 \\(\\Omega\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Which of the following statements correctly explains why a total solar eclipse would be seen by people on only a small portion of the earth's surface? The",
+      "options": [
+        {
+          "key": "A",
+          "text": "moon is larger in diameter than the earth",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "earth is larger in diameter than the sun",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "earth revolves around the sun",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "earth is larger in diameter than the moon.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Water waves have a wavelength of 3.6cm and speed of 18cms\\(^{-1 }\\) in deep water. If the waves enter shallow water with wavelength of 2.0cm, calculate the speed of the waves in the shallow water.",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.4cms\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2.5cms\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "10.0cms\\(^{-1}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "10.8cms\\(^{-1}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "An a.c. generator can be converted to a d.c. electric motor by replacing the",
+      "options": [
+        {
+          "key": "A",
+          "text": "slip rings with a split ring and connecting a battery",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "split ring with slip rings and connecting a battery",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a.c. with d.c. source and connecting slip rings",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a.c. with d.c. source and connecting split rings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "A ray of light travels obliquely from a less dense medium to a denser medium. Which of the following statements is true about the light?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The wavelength of the light increases in the second medium",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The speed of the light increases in the second medium",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "The light refracts towards the normal",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "There Is a change in the frequency of the light",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "An electron of mass 9.1x 10\\(^{-31}\\) kg is travelling at a speed of 2.0 x 10\\(^6\\)ms\\(^{-1}\\). Calculate the associate wavelength of the electron. [h = 6.6. x 10\\(^{-34}\\) Js]",
+      "options": [
+        {
+          "key": "A",
+          "text": "3.63 x10\\(^{-10}\\) m",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "3.63 x 10\\(^{-8}\\) m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "3.63 x 10\\(^{-7}\\) m",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "6.89 x 10\\(^{-4}\\) m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Which of the following statements about the process of melting of a solid are true? The temperature of the solid will\nI. remain steady until melting starts.\nll. keep rising until melting starts,\nIll remain steady as melting proceeds.\nV, keep rising as melting proceeds.",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and llI only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "IlI and IV only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Il and Ill only",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "ll and IV only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "A diver steps off a diving platform that is 10m above the water. If there is no air resistance during the fall, there will be a decrease in the diver's",
+      "options": [
+        {
+          "key": "A",
+          "text": "gravitational potential energy",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "total mechanical energy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "kinetic energy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "momentum",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Which of the following actions would increase the electric force between two positively charged particles?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Decreasing the mass of the particles",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Decreasing the distance between the particles",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Increasing the assistance between the particles",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Increasing the mass of the particles",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "A luminous object is one that",
+      "options": [
+        {
+          "key": "A",
+          "text": "gives off dim blue-green light only in the dark.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "gives out light of its own",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "shines by reflected light only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "glows only in the presence of light",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Which of the following units is not fundamental?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Metre",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Kilogram",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Joule",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Candela",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The vacuum between the double walls of a thermos flask reduces heat loss through",
+      "options": [
+        {
+          "key": "A",
+          "text": "conduction and radiation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "convection and conduction",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "radiation only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "conduction only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "In photoelectric effect, the number of electrode emitted per second from a metallic surface is proportional to the",
+      "options": [
+        {
+          "key": "A",
+          "text": "intensity of the incident radiation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "frequency of the incident radiation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "energy of the incident radiation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "work function of the metal.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "When two cells of negligible internal resistances and equal e.m.f. denoted by E\\(_1\\) and E\\(_2\\) are connected in parallel, combined e.m.f. E is given by",
+      "options": [
+        {
+          "key": "A",
+          "text": "E = E\\(_1\\) + E\\(_2\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(\\frac{1}{E} = \\frac{1}{E_1} + \\frac{1}{E_2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "E = E\\(_1\\) = E\\(_2\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "E = \\(\\frac{E_1}{E_2}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Which of the following statement about viscosity is not true? it",
+      "options": [
+        {
+          "key": "A",
+          "text": "depends on areas of the surfaces in contact",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "occurs in fluids",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "is independent of the relative velocity of the layers",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "depends on the tangential force between the layers",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "An elastic material of length 3m is to be stretched to reduce an extension three times its original length. Calculate the force required to produce the extension"
+    },
+    {
+      "number": 2,
+      "question": "In a solar panel for heat supply, state the function of each of the following parts: (a) metal flat plate; (b) thermal insulator: (c) tubes."
+    },
+    {
+      "number": 3,
+      "question": "(a) In the design of an optical fibre, what type of material is most suitable for the design of the core?\n(b) State one condition necessary to confine signals to the core of an optical fibre."
+    },
+    {
+      "number": 4,
+      "question": "The velocity v, of a wave in a stretched string, depends on the tension T, in the spring and the mass per unit length of the spring. Obtain an expression for v in terms of T and u, using the method of dimensions."
+    },
+    {
+      "number": 5,
+      "question": "A satellite launched with velocity V\\(_E\\) just escapes the earth's gravitational attraction. Given that the radius of the earth is R, show that V\\(_E\\) = \\(\\sqrt{20R}\\) [g = 10ms\\(^{-2}\\)"
+    },
+    {
+      "number": 6,
+      "question": "A bullet is fired from a gun at 30\\(^o\\) to the horizontal. The bullet remains in flight for 25s before touching the ground. Calculating the velocity of projection. [g = 10ms\\(^{-2}\\)]"
+    },
+    {
+      "number": 7,
+      "question": "State three properties of lasers that make them preferable to ordinary light beam."
+    },
+    {
+      "number": 8,
+      "question": "(a)i) Define a torque.\n(ii)State three factors that determine a torque\n(b)(i) Define free fall.\n(ii) A body is thrown vertically upwards from the top of a tower 40.0m high with a velocity of 10.0ms\\(^{-1}\\). Calculate the time taken for the body to reach the ground. [g.= 10.0ms\\(^{-2}\\)]\nc) A cube of wood of side 8.0cm, floats at the interface between oil and water with 2.0cm of its surface below the interface as shown in the diagram below. Given that the relative densities of oil and water are 0.72 and 1.00 respectively, calculate the mass of the wood"
+    },
+    {
+      "number": 9,
+      "question": "(a)Explain resonance frequency as applied in RLC series Circuit.\n(ii) Sketch a diagram to illustrate the variation of frequency, f, with the resistance, R, the capacitive reactance, X\\(_c\\) and the inductive reactance X\\(_L\\), in RLC series circuit.\n(iii) Using the diagram drawn in (a)(ii) state whether the current in the circuit leads, lags or is in phase with the supply voltage when: (\\(\\alpha\\)) f = f\\(_o\\); (\\(\\beta\\)) f b)(i) Define mutual inductance.\n(i) The coil of an electric generator has 500 turns and 8.0cm diameter. If it rotates in a magnetic field of density 0.25T, calculate the angular speed when its peak voltage is 480V. [\\(\\pi\\) = 3.142]."
+    },
+    {
+      "number": 10,
+      "question": "(a) (i) Define Optical angle.\n(ii) Explain two conditions necessary for total internal reflection to occur.\n(iii) List three practical applications of total internal reflection.\n(b) State two effects of refraction.\n(c)(i) Define progressive waves.\n(ii) A plane progressive wave is represented by the equation y = 0.5 sin(1000\\(\\pi\\)r = \\(\\frac{100 \\pi \\lambda}{17}\\)) where y is in millimetres, t in seconds and x in metres. Calculate the: (\\(\\alpha\\)) frequency of the wave; (\\(\\beta\\))of the wave; (\\(\\gamma\\)) speed of the wave"
+    },
+    {
+      "number": 11,
+      "question": "(a) In an experiment to measure the specific latent heat of vapourisation of water, a student places a heater in a beaker containing water. The beaker stands on an electronic balance so that the mass of the beaker and water could be measured. The heater is switched on and readings were taken every 100s when the water starts boiling.\nThe table below shows the readings.\nTime/s\n0\n100\n200\n300\n400\nReading on balance/g\n203.22\n201.62\n199.79\n198.26\n196.50\nMass of water evaporated/g\n0\nEnergy supplied by heated/J\n0\n(I) Fill in the mass of water evaporated.\n(ii) Given that the heater supplies energy at the rate of 38J/s, fill in the values of the energy supplied by the heater in 100s, 200s, 300s, and 400s.\n(ii) Plot a graph of energy supplied on the vertical axis and mass of water evaporated on the horizontal axis, starting both axes from the origin(0,0).\n(iv) Determine the slope of the graph.\n(v) what does the value of the slope mean?"
+    },
+    {
+      "number": 12,
+      "question": "(a) Define isotopes.\n(b) Mention two uses of radioactive tracers in each of the following areas:\n(\\(\\alpha\\)) medicine\n(\\(\\beta\\)) industry\n(\\(\\gamma\\)) agriculture.\n(c) State three features of electromagnetic waves.\n(d)) Mention four components of the nuclear reactor.\n(i) State the functions of each of the components stated in (d)(i)."
+    },
+    {
+      "number": 13,
+      "question": "(a)\nYou are provided with a metre rule, a knife-edge, set of masses, inextensible string, retort support and other necessary apparatus.\ni. Place the metre rule on the knife edge. Read and record the point G where the metre rule balances horizontally, as shown in Fig (a).\nii. Suspend the metre rule at G with the aid of the string provided and attach the string to the retort support as shown in Fig 1(b). Keep the string attached to this point throughout the experiment.\niii. Attach the mass M\\(_{0}\\) at the 80cm mark of the metre rule. Determine the distance of y from G. Keep M\\(_{0}\\) at this\nposition throughout the experiment.\niv. Suspend a mass M= 40g on the side AG and adjust its position until the metre rule balances horizontally.\nv. Measure and record the distance of x of M from G. Evaluate x\\(^{-1}\\)\nvi. Repeat the procedure for four other values of M= 60g, 80g, 100g and 120g. Measure and record x and evaluate x\\(^{-1}\\) in each case.\nvii. Tabulate the readings.\nviii. Plot a graph of M on the vertical axis and x on the horizontal axis, starting both axes from the origin (0,0).\nix. Determine the slope s of the graph:\nx. Given that s = yM\\(_{0}\\), determine M\\(_{0}\\).\nxi. State two precautions taken to obtain accurate results.\n(b) i. Define the moment of a force about a point.\nii. A uniform metre rule is suspended by an inextensible string at its centre of gravity. If a mass of 60g is placed at the 25cm mark, what mass should be placed at the 80cm mark of the metre rule to balance it horizontally?"
+    },
+    {
+      "number": 14,
+      "question": "You are provided with a glass block, plane mirror, and optical pins.\n(i) Place the glass block on a drawing sheet and trace its outline ABCD as shown in the diagram above.\n(ii) Remove the block, measure and record the width W of the block.\n(iii) Draw a normal ON to DC at a point about one-quarter the length of DC.\n(iv) Draw a line making an angle i = 10° with the normal.\n(v) Replace the block on its outline and mount the plane mirror vertically behind the block such that it makes good contact with the face AB.\n(vi) Stick two pins P\\(_{1}\\) and P\\(_{2}\\) on the line MO.\n(vii) Looking through the face CD, stick two other pins P\\(_{3}\\) and P\\(_{4}\\) such that they appear to be in a straight line with the images of pins P\\(_{1}\\) and P\\(_{2}\\) seen through the block.\n(viii) Join P\\(_{3}\\) and P\\(_{4}\\) with a straight line and extend it to touch the face CD at O\\(^{1}\\).\n(ix)Draw a perpendicular line from the midpoint of OO\\(^{1}\\) to meet AB at Q.\n(x) Draw lines OQ, O\\(^{1}\\)Q and normal O\\(^{1}\\)N\\(^{1}\\) produced.\n(xi) Measure and record \\cos\\theta, e, and d.\n(xii) Evaluate m = sin e, and n cos\\(\\frac{\\theta}{2}\\)\n(xii)Repeat the procedure for i = 20°, 30°, 40° and 50.\n(xiv) Tabulate your readings.\n(xv) Plot a graph with m on the vertical axis and n on the horizontal axis.\n(xvi) Determine the slope, s, of the graph and evaluate \\cos\\theta = 2Ws.\n(xvii) State two precautions are taken to ensure accurate results.\n(xviii) Sketch a diagram to show the path of the ray through the glass block when the angle of incidence i = 90° in the experiment above.\n(xix) A coin lies at the bottom of a tank containing water to a depth of 130cm. If the refractive index of water is 1.3, calculate the apparent displacement of the coin when viewed vertically from above.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 14.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2020/f9yzkQkAHF15sl0aCZ3Ugr8ljBNJuxBswROnT0WI.png"
+    },
+    {
+      "number": 15,
+      "question": "You are provided with a resistance box R, voltmeter, key, cell of e.m.f. E, constantan wire, standard resistor, RX, an ammeter, and other necessary apparatus.\n(i) Measure and record the e.m.f. E of the cell provided.\n(ii) Set up the circuit as shown in the diagram above.\n(iii) Set R to 1\\(\\Omega\\). Close the key, read and record the current I and the corresponding voltage V.\n(iv) Repeat the procedure for four other values of R= 2\\(\\Omega\\), 4\\(\\Omega, 6\\(\\Omega\\), and 8\\(\\Omega\\).\n(v) In each case, read and record I and V.\n(vi) Tabulate the reading.\n(vii) Plot a graph of V on the vertical axis and I on the horizontal axis.\n(viii) Determine the slope s, of the graph.\n(ix) State two precautions are taken to ensure accurate results\n(b) )State two advantages of connecting identical cells in parallel.\n(ii) State two factors to consider in choosing the material for the design of a resistor"
+    }
+  ]
+}

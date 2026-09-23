@@ -1,0 +1,1318 @@
+{
+  "subject": "Economics",
+  "year": 2016,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Human wants are insatiable because wants are",
+      "options": [
+        {
+          "key": "A",
+          "text": "limited while means are scarce",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "unlimited and means are also unlimited",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "limited and means are also limited",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "unlimited while means are scarce",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Scale of preference is important for the following reasons except in",
+      "options": [
+        {
+          "key": "A",
+          "text": "satisfying wants",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "making rational",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "making optinum allocation of resources",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "using scarce resources efficiently",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "In a socialist economy, prices of commodities are determined by",
+      "options": [
+        {
+          "key": "A",
+          "text": "forces of demand and supply",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "producers of the commodities",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the central planning authority",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "consumers who are sovereign",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "Which of the following cannot be classified as land in economics",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bauxite deposit in the ground",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "A lake used for irrigation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "A bulldozer for clearing farm land",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Grazing field for cattle",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "A country allocation to various sectors of the economy is shown in the pie chat below, use it to answer question 5 and 6\nIf the budget of the country was $7,200, how much is allocated to Education?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$2,400.00",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "$2,000.00",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "$1,200.00",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "$1,000.00",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "A country's budget allocation to various sectors of the economy is shown in the pie chart above. Use it to answer the question below.\nWhat is the ratio of expenditure on health to agriculture?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 6.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/economics/2016/1jwGXjYbykbA4DhO4TuX6nB6ZfSr7gMIMPERzw9M.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "2:3",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "3:4",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "4:3",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "5:4",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The demand curve for neccessity is usually",
+      "options": [
+        {
+          "key": "A",
+          "text": "vertical",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "backward bending",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "horizontal",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "negatively sloped",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "What effect will an increase in price have on the total revenue of a firm whose product has inelastic demand? total revenue will",
+      "options": [
+        {
+          "key": "A",
+          "text": "increase",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "fall",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fluctuate",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "remain unchanged",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "If the quantity of men's hat demanded per week is represented by the function Qd=20-\\(\\frac{1}{3}\\)P, where P is price, how many hats are demanded when the price is $9.00?",
+      "options": [
+        {
+          "key": "A",
+          "text": "11",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "17",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "23",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "47",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The demand for torch and batteries is an example of",
+      "options": [
+        {
+          "key": "A",
+          "text": "competitive demand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "composite demand",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "complementary demand",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "derived demand",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Price elasticity of demand or supply measures how responsive",
+      "options": [
+        {
+          "key": "A",
+          "text": "consumers are to a change in price",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sellers are to a change in price",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "sellers are to a change in price",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "buyers are to a change in income",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The tendency for workers to value their leisure hours more than hours of work as wage rate increases gives rise to",
+      "options": [
+        {
+          "key": "A",
+          "text": "positively sloping supply curve",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "perfectly elastic supply curve",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "backward bending supply curve",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "perfectly inelastic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The supply of rice in tons is given by the equation:\nQs -80 - 0.7P = 0.\nWhere Qs = Quantity supplied\nP = price in naira.\nFind Qs, when P = N40",
+      "options": [
+        {
+          "key": "A",
+          "text": "108ton",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "52tons",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "-52tons",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "-108tons",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "How does producers expectation of a price fall affect the supply curve of a product? There will be",
+      "options": [
+        {
+          "key": "A",
+          "text": "a moment along the curve",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a leftward shift",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "no shift of the supply curve",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a shift to the right",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "A price floor results in",
+      "options": [
+        {
+          "key": "A",
+          "text": "excess demand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "excess supply",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "parallel market",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "hoarding of goods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "An entrepreneur is encouraged to adopt division of labour in production because it",
+      "options": [
+        {
+          "key": "A",
+          "text": "provide more employment opportuinities",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "leads to increased output and lower cost of production",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "brings about equal cost and employment opportuinities",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "leads to increased cost of production and lower output",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The long run is a period when",
+      "options": [
+        {
+          "key": "A",
+          "text": "only the variable factors can be altered",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "all factors become variable",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the firm will cease to exist",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "only the fixed factors can be altered",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The necessary condition for a firm to be in equilibrium is that marginal revenue is",
+      "options": [
+        {
+          "key": "A",
+          "text": "greater than marginal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "equal to marginal",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "less than average revenue",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "equal to average",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "At which stage of production should a firm shut down? when",
+      "options": [
+        {
+          "key": "A",
+          "text": "AVC=ATC",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "AVC",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "AVC>price",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "AVC=MC",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "Charging different prices for the same commodity is a feature of a",
+      "options": [
+        {
+          "key": "A",
+          "text": "perfect competition",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "commodity market",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "monopolistic competition",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "monopoly market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "In a partnership, the conduct of members is guided by",
+      "options": [
+        {
+          "key": "A",
+          "text": "a memorandum of understanding",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the article of partnership",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "an article of association",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a partnership constitution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "Indigenization policy is a measure aimed at",
+      "options": [
+        {
+          "key": "A",
+          "text": "privating the existing business owned by the state",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "commercializing state owned businesses",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "reducing foreign economic domination",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "making the indegenes managing directors of businesses",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Which of the following measures will hinder efficient distribution of goods in West Africa",
+      "options": [
+        {
+          "key": "A",
+          "text": "Improving roads networks",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "provision of adequate storage facilities",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "instituting price control",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "formation of producers' co-operative societies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The type of unemployment that occurs as a result physical or mental disability of labour is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "frictional unemployment",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "structural unemployment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cyclical unemployment",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "residual unemployment",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "One relationship between marginal utility and total utility. When total is",
+      "options": [
+        {
+          "key": "A",
+          "text": "rising, marginal utility is rising",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "falling, marginal utility is negative",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "maximum, marginal utility is maximum",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "falling, marginal utility is rising",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "One feature of a growing population",
+      "options": [
+        {
+          "key": "A",
+          "text": "increase in the number of young people",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "increase in the number of old people",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "decrease in the dependent population",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "decrease in the life expectancy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Efficiency of labour in a country is determined by the following factor except the",
+      "options": [
+        {
+          "key": "A",
+          "text": "social attitude to work",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "education and training",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "working conditions of workers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "total polulation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Which of the following will encourage capital intensive farming",
+      "options": [
+        {
+          "key": "A",
+          "text": "encouraging communal system of land ownership",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "adopting policies that will encourage rural-urban migration",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "provision of subsidies on equipment",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Restrictive lending policies by banks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "Which of the following best explains why more foreign investments are not attracted to West Africa",
+      "options": [
+        {
+          "key": "A",
+          "text": "Small population size",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "small sizes of market places",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "instability in political and industrial policies",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "lack of manpower needed to work in industries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Location of firm in rural areas may",
+      "options": [
+        {
+          "key": "A",
+          "text": "enable the firm to enjoy existing infrastructural facilities",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "make finance readily avalaible",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "enhance even or balanced development",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "make such firm enjoy external economics of scale",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "International income accounting, double counting occurs when",
+      "options": [
+        {
+          "key": "A",
+          "text": "intermediate goods are counted twice",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "intermediate goods are counted with the final goods",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "final goods are counted more than twice",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "different people count the products",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "The difference between GDP and GNP",
+      "options": [
+        {
+          "key": "A",
+          "text": "consumption of fixed capital",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "indirect business tax",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "net factor income from abroad",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "public transfer payment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Which of the following items is not included in the measurement of the national income using the income approach",
+      "options": [
+        {
+          "key": "A",
+          "text": "wages and salary",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "government purchases",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "interest",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "divedend",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "A bank note is said to be a legal tender because it is",
+      "options": [
+        {
+          "key": "A",
+          "text": "printed by government",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a store of value",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "signed by the head of state",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "backed by law",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "During Inflation, interest rate will",
+      "options": [
+        {
+          "key": "A",
+          "text": "rise",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "flunctuate",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "remain constant",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "fall",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Cost push inflation is likely to arise when",
+      "options": [
+        {
+          "key": "A",
+          "text": "there is an increase in banking lending",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "there is an increase in subsidies",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "stock exchange",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "rise in the cost of production.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Which of the following financial institutions cannot be found on the capital market of a country",
+      "options": [
+        {
+          "key": "A",
+          "text": "commercial bank",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "mortgage bank",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "stock exchange",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Agricultural bank",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The stock market is a market for",
+      "options": [
+        {
+          "key": "A",
+          "text": "new and second hand shares",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "debentures",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "goods and services",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "short terms securities",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Indirect taxes are generally",
+      "options": [
+        {
+          "key": "A",
+          "text": "progressive",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "regressive",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "equitable",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "proportionate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Fiscal policy that can control inflation will include the use of",
+      "options": [
+        {
+          "key": "A",
+          "text": "balanced budgeting",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "tax holidays",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "budget deficit",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "budget surplus",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Which is following is a cause of under-development in West Africa",
+      "options": [
+        {
+          "key": "A",
+          "text": "Availability of manpower",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "increasing population",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "high rate of capital formation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "large size of market places",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Which of the following is not a major problem of development",
+      "options": [
+        {
+          "key": "A",
+          "text": "shortage of skilled manpower",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "inadequate data for planning",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "political instability",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "poor identification of projects",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The principle of comparative cost advantage was propounded by",
+      "options": [
+        {
+          "key": "A",
+          "text": "David Ricardo",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Alfred Marshal",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "J. S Mill",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Adam Smith",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The rate at which a country's export is exchanged for her imports is",
+      "options": [
+        {
+          "key": "A",
+          "text": "trade balance",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "balance of payment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "term of trade",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "balance on current account",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Balance of payment surplus implies that receipts for exports are",
+      "options": [
+        {
+          "key": "A",
+          "text": "at par with payments for imports",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "greater than payment for imports",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "less than payment for imports",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "proportional to payments for imports",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "When the international value of a country's currency rises, other things being equal, the country's",
+      "options": [
+        {
+          "key": "A",
+          "text": "net exports tend to increase",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "imports tend to increase",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "net exports tend to decrease",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "export tend to be stable",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "One of the physical measures that can be used to reduce the volume of imports is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "reduction of personnel income tax",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "removal of imports duties",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "use of foreign exchange control",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "liberalization of credit for importers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "When a number of countries agree to remove all trade barriers among themselves and at the same time charge a common tariff against non member countries, it known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "free trade area",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "common market",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "custom union",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "economic community",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Which of the following international organizations is concerned with the stabilization of the balance of payments? the",
+      "options": [
+        {
+          "key": "A",
+          "text": "International Monetary Fund (IMF)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "World Bank (IBRD)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "United Nations Organization (UNO)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Economic Commission for Africa (ECA)",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "The following data shows the budget of hypothetical country in2006. Study data and answer the questions that follow:\nRevenue\n[$ million]\nCompany tax\n240\nWorkers' income tax\n160\nExcise duties\n80\nTaxes on exports\n100\nValue added tax\n150\nImport duties\n90\nNon-tax revenue\n40\nExpenditure\n[$ million]\nConstruction of roads\n100\nBuilding of schools\n120\nPayment of workers' salaries\n150\nGovernment administration\n200\nMaintenance of health facilities\n220\nExtension of electricity to rural areas\n180\nMaintenance of official vechicles\n70\n(a) How many revenue was realised from:\n(i) direct taxes;(3 marks) ,(ii) indirect taxes (3 marks)\n(b)Calculate the total:\n(i) recurrent expenditure (3 marks) ,(ii) capital expenditure (3 marks)\n(c) What pencentage of total revenue was collected as indirect taxe? (3 marks)\n(d) State two examples of non-tax revenue (2 marks)\n(e) What was the budget surplus or deficit? Explain your answer. (3 marks)."
+    },
+    {
+      "number": 2,
+      "question": "The utility schedule of a consumer for a brand of ice cream is shown in the table below. Use the information to answer the questions that follow:\nUnits Consumed (Q)\nTotal Utility (TU)\nMarginal Utility (MU)\n0\n0\n-\n1\n10\n10\n2\n19\nR\n3\nP\n6\n4\n30\n5\n5\n31\nS\n6\nQ\n0\n7\n29\n-2\n(a) Calculate the values of P,Q,and S. (8 marks).\n(b) Given that the jprice of ice cream is $ 1.00 per unit, at what level of consumption is the consumer in equilibrium? Explain your answer. (3 marks).\n(c) Use a graph sheet, draw the marginal utility curve.(3 marks).\n(d) State the law of diminishing marginal utility. (3 marks)."
+    },
+    {
+      "number": 3,
+      "question": "(a) What is production possibility curve? (3marks)\n(b) Draw a production possibility curve and indicate any:\n(i) Point P, where resources are fully utilized;\n(ii) Point U, where resources are under utilized;\n(iii) Point X, where production is not feasible. (8 marks)\n(c) Explain any two factors that can make production at Point X feasible. (6marks).\n(d) Why is the production possibility curve negatively sloped? (3marks)"
+    },
+    {
+      "number": 4,
+      "question": "(a) What is:\n(i) peasant farming? (2marks)\n(ii) Co-operative farming?(3marks)\n(b) Identify any five ways through which government can assist peasant farmers. (15 marks)."
+    },
+    {
+      "number": 5,
+      "question": "(a) What is price elasticity of supply?(2marks)\n(b) Differentiate between joint supply and cometitive supply.(6marks)\n(c) Explain any four determinants of elasticity of supply. (12marks)"
+    },
+    {
+      "number": 6,
+      "question": "(a) Define:\n(i) Building Society (2marks);\n(ii) Central Bank. (3marks)\n(b) Highlight any five instruments of the Central Bank in regulating the supply of money. (15marks)."
+    },
+    {
+      "number": 7,
+      "question": "(a) Who is a discriminating monopolist. (2 marks)\n(b) Explain any four conditions necessary for a monopolist to practise price discrimination. (12 marks).\n(c) Explain any two benefits enjoyed by a discriminating monopolist. (6 marks)"
+    },
+    {
+      "number": 8,
+      "question": "Explain the following National Income concepts:\n(a) Gross Domestic Product (GDP; (4 marks)\n(b) Gross National Product (GNP; (4 marks)\n(c) Cost of living; (4 marks)\n(d) Per Capital income; (4 marks)\n(e) Standard of living; (4 marks)"
+    }
+  ]
+}

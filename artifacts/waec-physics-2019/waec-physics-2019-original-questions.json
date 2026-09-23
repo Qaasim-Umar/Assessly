@@ -1,0 +1,1370 @@
+{
+  "subject": "Physics",
+  "year": 2019,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The time rate of increase in velocity is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "force",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "momentum",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "acceleration",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "speed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Which of the following quantities is a vector?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Volume",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Momentum",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Energy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Speed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "In an elastic collision, momentum is conserved as well as well as?",
+      "options": [
+        {
+          "key": "A",
+          "text": "velocity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "kinetic energy",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "potential energy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "speed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The induced current in a coil always flows in a direction so as to oppose the change that causes it. This statement is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "Coulomb's law",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Lenz's law",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Faraday's law",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Ampere's law",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Which of the following instruments can be used to compare the magnitudes of charges on two given bodies?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Electrophorus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Ebonite rod",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Gold-leaf electroscope",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Proof planes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "A body of mass 2 kg is released from a point 100 m above the ground. Calculate its kinetic energy 80m from the point of release.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1600 J",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "900 J",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "600 J",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "200 J",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Which of the following waves is not mechanical?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Waves in pipes",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Water waves",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Radio waves",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Sound waves",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "A loaded spring is set in simple harmonic motion. The force that tends to restore the load to its equilibrium position is",
+      "options": [
+        {
+          "key": "A",
+          "text": "adhesive",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "elastic",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "frictional",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "gravitational",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Which of the following cases cannot produce total internal reflection? A light ray travelling from",
+      "options": [
+        {
+          "key": "A",
+          "text": "glass to water",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "kerosene to air",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "air to water",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "water to ice",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The vacuum in a thermoflask reduces heat loss resulting from",
+      "options": [
+        {
+          "key": "A",
+          "text": "radiation only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "conduction and convection only",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "radiation and convection only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "conduction only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "The diagram above represents an experimental set-up for verifying?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 11.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2019/jco5oakze2n0iPeCZ3bELmiiqumkVTlUToSKRPGP.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "lens formula",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "refraction laws",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "reflection laws",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "mirror formula",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Which of the following statements about a moving object is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "When accelerating, the resultant force acting on it must be equal to zero.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "There must always be a non-zero resultant force acting on it.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "At a steady velocity, the resultant force acting on it must be equal to zero",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "At a steady velocity, the air resistance must be equal to zero.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "If the efficiency of a transformer is 100%, which of the following equations would be correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "N\\(_p\\)E\\(_p\\) = N\\(_s\\)E\\(_s\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "N\\(_s\\)I\\(_p\\)= N\\(_p\\)I\\(_s\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "N\\(_s\\)I\\(_s\\) = N\\(_p\\)I\\(_p\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "I\\(_p\\)E\\(_s\\) = I\\(_s\\)E\\(_p\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "A freshly demagnetized bar magnet is placed in the East-West direction to ensure that",
+      "options": [
+        {
+          "key": "A",
+          "text": "the molecular magnets remain randomly arranged.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "the molecular magnets are properly aligned",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "it is affected by the earth's magnetic field",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the magnetic domains are within the earth's field",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "Which of the following graphs above of a charge Q against potential difference V across the capacitor is correct?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 15.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2019/w18DDHadcEWdg6OqI3Tr1YkmwZKA71PPTpPKiJEk.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "D",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "A small amount of air is introduced into the vacuum above the mercury in a mercury barometer tube. The mercury level goes down because the air molecules",
+      "options": [
+        {
+          "key": "A",
+          "text": "heat the mercury and make it expand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "increase the pressure above the mercury.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "cool the mercury and make it contract.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "decrease the pressure above the mercury",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Calculate the quantity of heat needed to change the temperature of 60g of ice at 0 °C to 80 °C. [specific latent heat of fusion of ice= 3.36 x 10\\(^5\\) Jkg\\(^{-1}\\) specific heat capacity of water 4.2 x 10\\(^3\\) J kg\\(^{-1}\\) K\\(^{-1}\\)]",
+      "options": [
+        {
+          "key": "A",
+          "text": "4.80 kJ",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "20.16 kJ",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "40.32 kJ",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "22.17 kJ",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The wire of a platinum resistance thermometer has d resistance of 3.5\\(\\Omega\\) at 0 °C and 10.52\\(\\Omega\\) at 100°C. Calculate the temperature of the wire when its resistance is 7.5\\(\\Omega\\).",
+      "options": [
+        {
+          "key": "A",
+          "text": "78 °C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "25 \\(^o\\)C",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "30\\(^o\\)C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "57 \\(^o\\)C",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "A transverse pulse of frequency 9 Hz traves 4.5m in 0.6 s. Calculate the wavelength of the pulse.",
+      "options": [
+        {
+          "key": "A",
+          "text": "3.33 m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.30 m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "0.83 m",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "1.20 m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "In which of the following media is the speed of sound the least?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Air",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Brass",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Water",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Wood",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Which of the following characteristics of waves can a ripple tank be used to demonstrate?\nI. Reflection\nII. Refraction\nIII. Diffraction",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, II and Ill",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "ll and ll only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "l and lII only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "I and II only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "Which of the following graphs gives the correct relationship between energy and mass when mass is converted to energy.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 22.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2019/MU0TO7ReyzPPVLt2aK0qGzkCu2vnCdB87tEaP0Ju.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "D",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "An 800 kg car moving at 80 km hr\\(^{-1}\\) collides with a 1200 kg car moving at 40 km hr\\(^{-1}\\) in the same direction. If the cars stick together, calculate their common velocity.",
+      "options": [
+        {
+          "key": "A",
+          "text": "60 km hr\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "8 km hr\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "40 km hr\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "56 km hr\\(^{-1}\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The mass of a load is doubled while the force acting on it is halved. The resulting acceleration of the load is",
+      "options": [
+        {
+          "key": "A",
+          "text": "quadrupled",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "quartered",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "halved",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "doubled",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The maximum and minimum thermometer reads the",
+      "options": [
+        {
+          "key": "A",
+          "text": "the maximum temperature during the day and the minimum temperature at night at all times.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the maximum temperature at night and minimum temperature during the day from the last reset",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the maximum temperature at night and minimum temperature during the day at all times",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the maximum temperature during the day and minimum temperature at night from the last reset",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "An a.c. the generator can be converted to a d.c. generator by replacing the",
+      "options": [
+        {
+          "key": "A",
+          "text": "commutator with an armature",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "armature with a commutator",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "commutator with slip rings",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "slip rings with a commutator",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Which of the following statements is the correct reason for using soft iron in making the armature or an electric bell?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is a diamagnetic material",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "It loses its magnetism readily",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "It is not easily magnetized",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "It retains its magnetism for a long time",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The diagram above illustrates a meter bridge circuit underbalanced conditions. Determine the value of x.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 28.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2019/a9wNYzyBjlLLjbYzWgNPIm3ulsrCqUFLfDcdaq7R.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "50.cm",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "10.0 cm",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "28.6 cm",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "57.2 cm",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "Which of the following devices is used for storing electric charges?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Transformer",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Ammeter",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Potentiometer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Capacitor",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "An electron of mass 9.1 x 10\\(^{-31}\\) kg moves with a speed of 2.0 x 10\\(^6\\) ms\\(^{-1}\\) round the nucleus of an atom in a Circular path of radius 6.1 x 10(^{11}\\) m. Determine the angular speed of the electron.",
+      "options": [
+        {
+          "key": "A",
+          "text": "3.28 x 10\\(^{16}\\) rad s\\(^{-1}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "8.55 x 10\\(^{3}\\) rad s\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "9.11 x 10\\(^{13}\\) rad s\\(^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "5.22 x 10\\(^{15}\\) rad s\\(^{-1}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "An electron of mass 9.1 x 10\\(^{-31}\\) kg moves with a speed of 2.0 x 10\\(^6\\) ms\\(^{-1}\\) round the nucleus of an atom in a Circular path of radius\n6.1 x 10\\(^{11}\\) m. Calculate the centripetal force acting on the electron.",
+      "options": [
+        {
+          "key": "A",
+          "text": "7.7 x 10\\(^{47}\\) N",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "6.0 x 10\\(^{-8}\\)N",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "3.0 x 10\\(^{-14}\\)N",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1.3 x 10\\(^{-26}\\)N",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "A device consumes 100 W of power when connected to a 120 V source. Calculate its resistance.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.2\\(\\Omega\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "12,000 \\(\\Omega\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "20.0\\(\\Omega\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "144\\(\\Omega\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Which property of a wave remains constant when the wave travels from one medium into another?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amplitude",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Wavelength",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Velocity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Frequency",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The anomalous expansion of water occurs in the range",
+      "options": [
+        {
+          "key": "A",
+          "text": "0 °C to 100 °C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0 °C to 4 °C",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "4 °C to 100 C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "-4 °C to 0 °C",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "A ray of light traveling from a rectangular glass block of refractive index 1.5 into air strikes the block at an angle of incidence of 30. Calculate its angle of refraction.",
+      "options": [
+        {
+          "key": "A",
+          "text": "48.6°",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "19.5°",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "20.0",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "45.0",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "A rectangular piece of iron measuring 4 cm by 3 cm at 20\\(^o\\)C is heated until its temperature increases by 100 C. Calculate the new area of the metal. [Linear expansivity of iron is 1.2x 10\\(^{-5}\\) K\\(^{-1}\\)]",
+      "options": [
+        {
+          "key": "A",
+          "text": "12.0144 cm\\(^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "12.0346 cm\\(^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "12.0288 cm\\(^3\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "12.0173 cm\\(^3\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Two bodies of masses 3.0 kg and 2.0 kg are separated by a distance of 50 cm. Calculate the force of attraction between them. [G = 6.67 x 10\\(^{-11}\\) Nm\\(^2\\) kg\\(^2\\)]",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.6 x 10\\(^{-9}\\)N",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "1.3 x 10\\(^{3}\\)N",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "2.3 x 10\\(^{3}\\)N",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "5.0x 10\\(^{3}\\)N",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The diagram above illustrates an object moving in a circular path at a constant speed. Which of the arrows indicates the direction of linear velocity?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 38.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2019/amTrZ6bk8dvXvawRuQLHxqoJiwBBM5D40Y7ELbGk.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "z",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "X",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Y",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "W",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Which of the following thermometers is used to measure the temperature of the human body?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thermocouple",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Alcohol-in-glass thermometer",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Gas thermometer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Platinum resistance thermometer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "In the diagram above, the time taken to trace a wave between P and Q is?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 40.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2019/1FaEMTq6jz1yq6lLZCfmOWjqixr5KTZniJgZAAuj.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 periods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "1 period",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1\\(\\frac{1}{2}\\) periods",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "1\\(\\frac{1}{4}\\) periods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Which of the following materials does not serve as a safety device in electrical circuits?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Connecting wires",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Earth wire",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Fuse",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Switch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Which of the following liquids has the highest surface tension?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Soapy water",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Cold water",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Hot water",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "oily water",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The nucleon and proton numbers of a neutral atom of an element are 238 and 92 respectively. Determine the number of neutrons in the atom.",
+      "options": [
+        {
+          "key": "A",
+          "text": "119",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "330",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "165",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "146",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "An instrument used to measure relative humidity is the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "hygrometer",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "hydrometer",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "pyrometer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "manometer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The area under a velocity-time graph represents",
+      "options": [
+        {
+          "key": "A",
+          "text": "speed",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "acceleration",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "moment",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "distance",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Which of the following statements about a neutral atom is correct? The",
+      "options": [
+        {
+          "key": "A",
+          "text": "core is composed of electrons and protons",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "number of electrons is equal to that of neutron",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "number of neutrons is equal to that of protons",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "number of protons is equal to that of electrons.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "Which of the following properties is not exhibited by sound waves?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Diffraction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Polarization",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Interference",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Reflection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "When ultraviolet light is incident on certain metallic p articles are emitted. These particles are called",
+      "options": [
+        {
+          "key": "A",
+          "text": "positrons",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "protons",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "photoelectrons",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "photons",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "The graph above illustrates the variation of temperature \\(\\theta\\) with time (t) for a solid that is being heated. Which processes take place at segments P and Q respectively?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 49.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2019/8ODEtwffMu57E8p86Q3oxSUv3qeTpj7YlQXIlk3C.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Freezing and vaporization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Evaporation and solidification",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Melting and boiling",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Condensation and evaporation",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "A stone of mass 20g is released from a catapult whose rubber is stretched through 5cm. If the force constant of the rubber is 200Nm\\(^{-1}\\), calculate the speed with which the stone leaves the catapult."
+    },
+    {
+      "number": 2,
+      "question": "(a) The diagram above illustrates a projectile motion. Identify each of the physical quantities labeled P, β, H and R.\n(b) Write an equation to show the relationship between P, g and Rmax’ where g is the acceleration due to gravity and Rmax is maximum R."
+    },
+    {
+      "number": 3,
+      "question": "State three observable phenomena in which waves behave like a particle."
+    },
+    {
+      "number": 4,
+      "question": "List three magnetic elements that determine the earth’s magnetic field at a point."
+    },
+    {
+      "number": 5,
+      "question": "Explain each of the following terms as used in Electronics.\n(a) free electrons;\n(b) holes."
+    },
+    {
+      "number": 6,
+      "question": "(a) State the principle of operation of fibre optics.\n(b) State two applications of fibre optics in medicine."
+    },
+    {
+      "number": 7,
+      "question": "(a) Define diffusion\n(b) State two factors that affect the rate of diffusion"
+    },
+    {
+      "number": 8,
+      "question": "(a) (i) State Newton’s Law of Universal Gravitation.\n(ii) Define gravitational field.\n(b) (i) Derive the equation relating the universal gravitational constant, G, and the acceleration of free fall, g, at the surface of the earth from Newton’s law of universal gravitation.\n(ii) State two assumptions for which the relationship in 8(b)(i) holds.\n(c) Calculate the force of attraction between a star of mass 2.00 x 1030 kg and the earth assuming the star is located 1.50 x 108 km from the earth. [Mass of the earth = 5.98 x 1024kg; G = 6.67 x 10-11N m\\(^{2}\\) kg-2; g = 10 m s\\(^{-2}\\)\n(d) (i) Define escape velocity.\n(ii) State two differences between the acceleration of free fall (g) and the universal gravitational constant (G)."
+    },
+    {
+      "number": 9,
+      "question": "(a) (i) Explain latent heat.\n(ii) State two factors that affect the rate of evaporation of a liquid\n(b) Explain each of the following observations:\n(i) On a dry day, water in a clay pot is cooler than water in a closed plastic container;\n(ii) Food gets cooked faster in a pressure cooker than in an ordinary cooking pot.\n(c) State two effects of heat on a substance.\n(d) A 40 V electric heater is used to supply a current of 12 A for 1400 s to a body of mass 1.5 kg at the melting point of the body. The body melts and its temperature rises through 60\\(^o\\)C in an extra 72 s. Determine the:\n(i) latent heat of fusion of the body;\n(ii)specific heat capacity of the body."
+    },
+    {
+      "number": 10,
+      "question": "(a) (i) Define force and state its S.I unit.\n(ii) List the two types of solid friction.\n(b) A car travelling at a constant speed of 30 ms-1 for 20 s was suddenly decelerated when the driver sighted a pot-hole. It took the driver 6 s to get to the pot-hole with a reduced speed of 18 ms-1. He maintained the steady speed for another 10 s to cross the pot-hole. The brakes were then applied and the car came to rest 5 s later.\n(i) Draw the velocity-time graph for the journey.\n(ii) Calculate the deceleration during the last 5 s of the journey.\n(iii) Calculate the total distance covered."
+    },
+    {
+      "number": 11,
+      "question": "The diagram above illustrates a structure of a typical photocell.\n(i) Identify each of the parts labelled A and B.\n(ii) State one function each of A and B\n(iii) Einstein’s photoelectric equation can be written as E = hf – Wo. State what each of the terms E, hf and Wo represent.\n(b) A photon is incident on a metal whose work function is 1.32 eV. An electron is emitted from the surface with a maximum kinetic energy of 1.97 eV. Calculate the frequency of the photon. [1 eV = 1.6 x 10-19 J]\n(c)(i) Define half-life of a radioactive element.\n(ii) Sketch a graph of the relation N = Noe-λt and indicate the half-life."
+    },
+    {
+      "number": 12,
+      "question": "(a) (i) Define atomic spectra.\n(ii) Differentiate between emission spectra and absorption spectra.\n(b)\nThe diagram above illustrates an electron transition from energy level n = 3 to n = 1. Calculate the:\n(i) energy of the photon\n(ii) frequency of the photon\n(ii) wavelength of the photon [h = 6.6 x 10\\(^{-34}\\)J s, c = 3.0 x 10\\(^8\\) ms\\(^{-1}\\); 1 ev = 1.6 x 10\\(^{-19}\\) J]\nc)(i)Differentiate between soft x-rays and hard x-rays\n(ii) Draw the circuit symbol for a p-n junction diode.\n(iiii) Give the reason for doping a semiconductor material"
+    },
+    {
+      "number": 13,
+      "question": "You are provided with a stopwatch, a meter rule, a split cork, retort stand and clamp, a pendulum bob, a piece of thread, and other necessary apparatus.\ni. Place the retort stand on a laboratory stool. Clamp the split cork.\nii. Suspend the pendulum bob from the split cork such that the point of support P of the bob is at height H = 100cm above the floor Q . The bob should not touch the floor and H should be kept constant throughout the experiment.\niii. Adjust the length of the thread such that the center A of the bob is at a height y= AQ = 20cm from the floor.\niv. Displace the bob such that it oscillates in a horizontal plane.\nv. Take the time t for 20 complete oscillations.\nvi. Determine the period T of oscillation and evaluate T\nvii. Repeat the procedure for four other values of y = 30cm, 40cm, 50cm, and 60cm. In each case, determine T and T .\nviii. Tabulate the results.\nix. Plot a graph of T on the vertical axis and y on the horizontal axis, starting both axes from the origin (0,0).\nx. Determine the slope, s, of the graph and the intercept c on the vertical axis.\nxi. If in this experiment SR= c, calculate R.\nx. State two precautions taken to ensure accurate results.\n(b) i. The bob of a simple pendulum is displaced a small distance from the equilibrium position and then released to perform simple harmonic motion Identify where its:\n(\\(\\propto\\)) kinetic energy is maximum\n(\\(\\beta\\)) acceleration is maximum\nii. An object of weight 120N vibrates with a period of 4.0s when hung from a spring. Calculate the force per unit length of the spring. [g= 10ms\\(^{-2}\\), \\(\\pi\\)=3.142]",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 13.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2019/M7oMrIrijCj432CnpGEME5h4nOJHvt02jWcKxSW2.jpg"
+    },
+    {
+      "number": 14,
+      "question": "You are provided with a converging lens and holder, a screen, a ray box containing an illuminated object pin, and a meter rule.(See illustration above)\ni. Place the lens in its holder such that it is facing a distant object seen through a well-lit laboratory window. Move the screen to and fro until a sharp image of the distant object is formed on it. Measure the distance, f \\(_{0}\\), between the screen and the lens.\nii. Clamp the meter rule securely to the table. Place the illuminated object pin at the end R of the meter rule.\niii. Place the lens at a position P such that X = RP = 20cm.\niv. Move the screen to a position Q to receive a sharp image of the object. Measure the distance Y = PQ .\nv. Evaluate Z = (X+Y)\nvi. Repeat the procedure for five other values of x = 25cm. 3Ocm, 35cm, 40cm and 45cm. In each case, record X,Y and evaluate Z.\nvii. Tabulate the results.\nviii. Plot a graph with Z on the vertical axis and X on the horizontal axis. Draw a smooth curve through the points.\nix. Determine from your graph the minimum value of Z=Z\\(_{0}\\) and its corresponding distance\nx. Evaluate W = ½ (\\(\\frac{Z_0}{4} + \\frac{X_0}{2}\\))\nxi. State two precautions taken to ensure accurate results.\n(b) i. Draw a ray diagram to show how a Convex lens forms an image of magnification less than one.\nii. Name two pairs of features in the human eye and a lens camera that performs similar functions.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 14.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2019/GY5xP7cKw6WMw22TLUuZbnJ58umxnogxGKHTRP0S.png"
+    },
+    {
+      "number": 15,
+      "question": "You are provided with a battery of e.m.f. E , a key K , a voltmeter, a standard resistor R \\(_{0}\\) = 2\\(\\Omega\\), a resistance box R, and some connecting wires.\ni. Measure and record the e.m.f. E of the battery.\ni. Set up a circuit as shown in the diagram above with the key open.\niii. Set the resistance on the resistance box to R 22.\niv. Close the key, read and record the potential difference V on the voltmeter.\nv. Evaluate V\\(^{-1}\\)\nvi. Repeat the procedures for five other values of R = 5\\(\\Omega\\) 10\\(\\Omega\\),12\\(\\Omega\\),15\\(\\Omega\\) and 20\\(\\Omega\\). In each case, record V and evaluate V \\(^{-1}\\)\nvii. Tabulate the results.\nviii. Plot a graph with R on the vertical axis and V\\(^{-1}\\) l on the horizontal axis, starting both axes from the origin (0,0).\nix. Determine the slope, s , of the graph and the intercept c on the vertical axis.\nx. Calculate \\(\\propto\\) and \\(\\beta\\) from the equations s = R \\(_{0}\\) \\(\\propto\\) and c= - (R\\(_{0}\\)+B).\nxi. State two precautions taken to obtain accurate results."
+    }
+  ]
+}

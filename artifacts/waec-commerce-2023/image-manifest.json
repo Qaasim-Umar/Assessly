@@ -1,0 +1,73 @@
+{
+  "subject": "Commerce",
+  "examType": "WAEC",
+  "year": 2023,
+  "objectiveQuestionCount": 48,
+  "theoryQuestionCount": 8,
+  "questionsWithImages": 4,
+  "uniqueImagesUploaded": 2,
+  "objectPrefix": "question-assets/waec/commerce/2023",
+  "generatedAt": "2026-09-15T14:47:13.444Z",
+  "questions": [
+    {
+      "sourceId": "69326",
+      "sourceUrl": "https://myschool.ng/classroom/commerce/69326",
+      "section": "objective",
+      "number": 42,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/Tt7tkav22Opr1dMIL9Qz2wCBPFmDxTQNRNnkxNGk.png",
+          "objectKey": "question-assets/waec/commerce/2023/Tt7tkav22Opr1dMIL9Qz2wCBPFmDxTQNRNnkxNGk.png",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/commerce/2023/Tt7tkav22Opr1dMIL9Qz2wCBPFmDxTQNRNnkxNGk.png",
+          "contentType": "image/png",
+          "bytes": 14155
+        }
+      ]
+    },
+    {
+      "sourceId": "69327",
+      "sourceUrl": "https://myschool.ng/classroom/commerce/69327",
+      "section": "objective",
+      "number": 43,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/YzoVpQb2KaOiNMtgNHFM3LgAS5QilEF5Jb1DF2cK.png",
+          "objectKey": "question-assets/waec/commerce/2023/Tt7tkav22Opr1dMIL9Qz2wCBPFmDxTQNRNnkxNGk.png",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/commerce/2023/Tt7tkav22Opr1dMIL9Qz2wCBPFmDxTQNRNnkxNGk.png",
+          "contentType": "image/png",
+          "bytes": 14155
+        }
+      ]
+    },
+    {
+      "sourceId": "69328",
+      "sourceUrl": "https://myschool.ng/classroom/commerce/69328",
+      "section": "objective",
+      "number": 44,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/reTOvdyaBBmkjRepFOzH82nVYBXUd3T1Th2iJ5R4.png",
+          "objectKey": "question-assets/waec/commerce/2023/Tt7tkav22Opr1dMIL9Qz2wCBPFmDxTQNRNnkxNGk.png",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/commerce/2023/Tt7tkav22Opr1dMIL9Qz2wCBPFmDxTQNRNnkxNGk.png",
+          "contentType": "image/png",
+          "bytes": 14155
+        }
+      ]
+    },
+    {
+      "sourceId": "69411",
+      "sourceUrl": "https://myschool.ng/classroom/commerce/69411",
+      "section": "theory",
+      "number": 8,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/maSOW1oGzWMAG4h3NTgXBNM9CL2qNqMlhfPVVfeS.png",
+          "objectKey": "question-assets/waec/commerce/2023/maSOW1oGzWMAG4h3NTgXBNM9CL2qNqMlhfPVVfeS.png",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/commerce/2023/maSOW1oGzWMAG4h3NTgXBNM9CL2qNqMlhfPVVfeS.png",
+          "contentType": "image/png",
+          "bytes": 4419
+        }
+      ]
+    }
+  ]
+}

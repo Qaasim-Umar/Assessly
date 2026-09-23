@@ -1,0 +1,43 @@
+{
+  "subject": "Chemistry",
+  "examType": "WAEC",
+  "year": 2015,
+  "objectiveQuestionCount": 50,
+  "theoryQuestionCount": 8,
+  "questionsWithImages": 2,
+  "uniqueImagesUploaded": 2,
+  "objectPrefix": "question-assets/waec/chemistry/2015",
+  "generatedAt": "2026-09-14T17:43:45.200Z",
+  "questions": [
+    {
+      "sourceId": "45778",
+      "sourceUrl": "https://myschool.ng/classroom/chemistry/45778",
+      "section": "objective",
+      "number": 28,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/28152779123_11.jpg",
+          "objectKey": "question-assets/waec/chemistry/2015/28152779123_11.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/chemistry/2015/28152779123_11.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 13207
+        }
+      ]
+    },
+    {
+      "sourceId": "59987",
+      "sourceUrl": "https://myschool.ng/classroom/chemistry/59987",
+      "section": "theory",
+      "number": 6,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/eAzvZXqK0Y6FIVEkDTuslntkPic0CMq3bw8iZWkw.jpeg",
+          "objectKey": "question-assets/waec/chemistry/2015/eAzvZXqK0Y6FIVEkDTuslntkPic0CMq3bw8iZWkw.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/chemistry/2015/eAzvZXqK0Y6FIVEkDTuslntkPic0CMq3bw8iZWkw.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 7384
+        }
+      ]
+    }
+  ]
+}

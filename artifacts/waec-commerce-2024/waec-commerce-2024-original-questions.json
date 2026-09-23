@@ -1,0 +1,1289 @@
+{
+  "subject": "Commerce",
+  "year": 2024,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The development of commerce was promoted by",
+      "options": [
+        {
+          "key": "A",
+          "text": "warehousing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "transportation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "specialization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "manufacturing",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The major setback of e-commerce in West Africa is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "unbalance economic growth",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "poor communication infrastructure",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "political interference",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "lack of industries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Conversion of raw materials into finished goods is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "tertiary production",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "secondary production",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "primary production",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "batch production",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "A source of finance peculiar to public companies is",
+      "options": [
+        {
+          "key": "A",
+          "text": "sales of shares",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "personal savings",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "membership contribution",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "borrowing from friends",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "An example of an entrepreneur is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "board member",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "debenture holder",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "bank manager",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sole proprietor",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "A partner who loses his capital only, in case of bankruptcy, is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "a normal partner",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a limited partner",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "general partner",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an active partner",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Ship building is an activity under",
+      "options": [
+        {
+          "key": "A",
+          "text": "commercial occupation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "indirect service",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "industrial occupation",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "direct service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "The process of making goods and proving services for consumption is",
+      "options": [
+        {
+          "key": "A",
+          "text": "exchange",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "occupation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "production",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "specialization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "A disadvantage of a sole trader is that they pay",
+      "options": [
+        {
+          "key": "A",
+          "text": "pay tax to the government",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "has limited liability",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "has unlimited liability",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "does not share profit with others",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "Raw materials are classified as",
+      "options": [
+        {
+          "key": "A",
+          "text": "capital employed",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "capital owned",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "circulating capital",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "fixed capital",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "A factor that determines the occupation of people living along coastal areas is",
+      "options": [
+        {
+          "key": "A",
+          "text": "availability of housing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Good road network",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "natural resources available",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "size of the population",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "An advantage of self-service to customers is that it",
+      "options": [
+        {
+          "key": "A",
+          "text": "encourages impulse buying",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "enables customers to inspect goods",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "enables customers to buy on credit",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "leads to a reduction in price",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "use the information below to answer this question\nopening stock 22,000.00\npurchases 20,000.00\nDebtor 12,000.00\nCreditors 8,000.00\nClosing stock 8,000.00\noverdraft 5,000.00\ncalculate the average stock",
+      "options": [
+        {
+          "key": "A",
+          "text": "D15,000.00",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "D14,000.00",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "D13,000.00",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "D10,000.00",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "use the information below to answer this question\nopening stock 22,000.00\npurchases 20,000.00\nDebtor 12,000.00\nCreditors 8,000.00\nClosing stock 8,000.00\noverdraft 5,000.00\nThe value of current liabilities is",
+      "options": [
+        {
+          "key": "A",
+          "text": "D10,000.00",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "D13,000.00",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "D13,000.00",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "D15,000.00",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "One of the aims of customers' association is to advocate for",
+      "options": [
+        {
+          "key": "A",
+          "text": "low-income tax",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "high wages",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "high prices of product",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Good quality product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Pre-financing production is a wholesaler's function to",
+      "options": [
+        {
+          "key": "A",
+          "text": "manufactures",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "retailers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "distributors",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "consumers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "An advanced balance payment could be corrected through",
+      "options": [
+        {
+          "key": "A",
+          "text": "increase in the put",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "increase in export",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "reduction of export",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "removal of tariffs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "A price quotation that includes the cost of delivering the goods up to the ship but excludes the cost of loading is",
+      "options": [
+        {
+          "key": "A",
+          "text": "FAS",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "FOB",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Franco",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "CIF",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "To inform the buyer that the goods are in transit, the seller sends",
+      "options": [
+        {
+          "key": "A",
+          "text": "a quotation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "an invoice",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a debit note",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an advice note",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "A financial institution established to raise funds for people who wish to build homes is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "central bank",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "commercial bank.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "development bank",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "mortgage bank",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The insurance policy that covers a company against cashiers' dishonesty is",
+      "options": [
+        {
+          "key": "A",
+          "text": "consequential loss",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "employers' liability",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fidelity guarantee",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "third party",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "Which of the following instruments is not a means of payment?",
+      "options": [
+        {
+          "key": "A",
+          "text": "debit note",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "debit card",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "credit cards",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bank notes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "To correct an overcharge for goods on an invoice, the seller sends the buyer",
+      "options": [
+        {
+          "key": "A",
+          "text": "an advice note",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a credit note",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "a consignment note",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a delivery note",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "A market for long-term loans is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "capital market",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "foreign exchange market",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "money market",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "new issues market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The most suitable means of transporting liquid and gas over long distances within a country is by",
+      "options": [
+        {
+          "key": "A",
+          "text": "tasker",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "tanker",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "pipeline",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "aircraft",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "A computer's main storage device is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "compact disk",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "flash drive",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "hard disk",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "memory chip",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The amount an assured receives if he discontinues a life policy is",
+      "options": [
+        {
+          "key": "A",
+          "text": "surrender value",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "sum assured",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "net value",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "indemnity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Which of the following means of advertising generates a wider coverage?",
+      "options": [
+        {
+          "key": "A",
+          "text": "radio",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "neon signs",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cinema",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "billboards",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "A cheque that bears a date later than the current date is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "stale cheque",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "post-dated cheque",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "dishonoured cheque",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "certified cheque",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The holder of a bill who wishes to pose it before maturity would be paid",
+      "options": [
+        {
+          "key": "A",
+          "text": "dividend",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "interest",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the discounted value",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "the face value",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "A medium of advertising that a hawker could use to promote sales is",
+      "options": [
+        {
+          "key": "A",
+          "text": "window display",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "hoarding",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "free samples",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "cinema",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Which of the following activities would make continuous production possible",
+      "options": [
+        {
+          "key": "A",
+          "text": "Grading",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Packaging",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Transportation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Warehousing",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "An advantage of personal selling is that is",
+      "options": [
+        {
+          "key": "A",
+          "text": "appeals to many people at a time",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ensures a wider market coverage",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "involves little expenditure",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "generate immediate feedback",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "A protection of an author's published work",
+      "options": [
+        {
+          "key": "A",
+          "text": "copyright",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "patent",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "trademark",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "warranty",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "Under which act could a buyer of a faulty television set claim for replacement?",
+      "options": [
+        {
+          "key": "A",
+          "text": "food and drugs act",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "price control act",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Rent Control Act",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "standard organization act",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Which of the following retail businesses sell without a shop",
+      "options": [
+        {
+          "key": "A",
+          "text": "department store",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "mail order",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "multiple store",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "tied shop",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The process of providing cover for goods is",
+      "options": [
+        {
+          "key": "A",
+          "text": "blending",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "branding",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "grading",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "packaging",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The right of an unpaid seller includes the right to",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sue a debtor for the amount owed",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Stop a debtor from purchasing goods elsewhere",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "publish the act of debtor",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "seize a debtor's property",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "One of the legislation that protects consumers is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "copyright act",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "company act",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "partnership act",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sales of good act",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Internal and external factors that affect how business functions is",
+      "options": [
+        {
+          "key": "A",
+          "text": "business environment",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "business structures",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "span control",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "scalar chain",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The management function that provides guidance and supervision to subordinates is",
+      "options": [
+        {
+          "key": "A",
+          "text": "organizing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "planning",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "directing",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "controlling",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "A document issued by the captain of a ship to acknowledge receipt of goods is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "dock receipt",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "bill of lading",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mate receipt",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "ships manifest",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "A reason for the privatization of the petroleum industry is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "reduce the production of petroleum products",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "reduce private businesses",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Encourage private businesses in the sector",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Control production in the sector",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "An advantage of commercialization to consumers is that",
+      "options": [
+        {
+          "key": "A",
+          "text": "it promotes inefficiency",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "it reduces loyalty of workers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Customers do not have a value for their money",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "prices of the product increase",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "One of the social responsibilities of a business to the community is",
+      "options": [
+        {
+          "key": "A",
+          "text": "provision of after sale service",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "payment of salary",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ensuring profitability",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "controlling pollution",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "An objective of the Niger Basin Commission is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "enhance the development of irrigation systems",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Encourage the use of a common language",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Encourage free trade in the area",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "facilitate the settlement of indebtedness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The act of reducing government intervention in business is",
+      "options": [
+        {
+          "key": "A",
+          "text": "commercialization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "deregulation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "merger",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "privatization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Which of the following is not problem of ECOWAS ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "pursuit of different political ideologies",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "existence of meagre resources in the member countries",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "The difference in colonial history",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "disagreement of leadership",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "ABC Breweries Limited started operations with production, finance, marketing, and administration departments. The following personnel were in its employment:\nGeneral manager;\nFinance manager;\nPersonal secretary;\nAccounts officers;\nMarketing manager;\nProduction manager;\nProduction supervisors;\nFactory workers;\nSales agents;\nAdministrative manager;\nAdministrative officers.\n(a) Draw an organizational chart for ABC Breweries Limited.\n(b) State two functions of each of the departments in the company."
+    },
+    {
+      "number": 2,
+      "question": "List five contents of a Memorandum of Association and five contents of an Articles of Association.\n(b) Explain five problems faced by public corporations."
+    },
+    {
+      "number": 3,
+      "question": "State five factors a bank manager would consider before granting a loan to a young school leaver.\n(b) State five conditions that will make a bank to dishonor a customer's cheque."
+    },
+    {
+      "number": 4,
+      "question": "State five features of itinerant trade.\n(b) State five features of a supermarket."
+    },
+    {
+      "number": 5,
+      "question": "Differentiate between the following:\n(i) a factor and a broker;\n(i1) a stock exchange and a commodity exchange.\n(b) Explain the following terms as used in the commodity market:\n(i) open outcry\n(ii) futures contract.\n(iii) clearing system.\n(iv) pit outcry."
+    },
+    {
+      "number": 6,
+      "question": "Digital Trading Limited agreed to supply 200 computers to Mr. Konteh at the cost of D10,000 per computer. The company promised to deliver the machines within 30 days of the agreement.\n(a)State four factors that may lead to the cancellation of the agreement.\n(b) List and explain four essential elements of the agreement between Mr.Kontch and Digital Trading Limited."
+    },
+    {
+      "number": 7,
+      "question": "Differentiate between deregulation and commercialization.\n(b) The government of country Z wishes to sell its transport company\n. (i)Name the policy that the government wishes to adopt\n(ii)Explain five reasons which could have necessitated the government's course of action."
+    },
+    {
+      "number": 8,
+      "question": "The following information was extracted from the books of XYZ Ventures as at 31st June 2023.\nOpening stock 200,000\nClosing stock 100,000\nSalaries and wages 120,000\nPurchases 900,000\nShop rent 150,000\n30% profit was made on cost of goods sold.\nYou are required to calculate:\n(a) cost of goods sold\n(b)gross profit\n(e)total sales\n(d) net profit\n(e) rate of turnover."
+    }
+  ]
+}

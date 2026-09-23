@@ -1,0 +1,1380 @@
+{
+  "subject": "Biology",
+  "year": 2024,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following organisms contains Chlorophyll in its cells?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Caterpillar",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Paramecium",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Euglena",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Grasshopper",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Species are groups of organisms that",
+      "options": [
+        {
+          "key": "A",
+          "text": "are of different origins and are always found together",
+          "is_correct": false
+        },
+        {
+          "key": "A",
+          "text": "are of common origin but cannot interbreed freely",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "have similar features and can interbreed freely",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "resemble each other and occupy different niches",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "A plant with short, vertical underground stem is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "bulb",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "corm",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "rhizome",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "tuber",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The diagram above is an illustration of a reproductive process in an organism. Study it and answer ques tions 4 and 5.\nThe type of reproduction illustrated is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 4.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/PC5dBQBYRaSZwnc1MuVaO4ZUHFrKtGW5v9snwEOG.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "budding",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "binary fission",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "grafting",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "vegetative propagation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The illustrated organism is capable of reproducing by",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 5.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/d95I9rNYrebAFuz4MO8nHhTempwQ93sDMsBBzcDT.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "sexual means only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "asexual means only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "vegetative propagation only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sexual and asexual means",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "Which of the following organisms consists of unicellular cells joined to form a filament?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amoeba",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Spirogyra",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Euglena",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Chlamydomonas",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The structure in the cell that controls the movement of substances in and out of the cell is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "cytoplasmic membrane",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "nuclear membrane",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "protoplasm",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "endoplasm",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "The bursting of a red blood cell placed in a hypotonic solution is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "crenation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "haemolysis",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "plasmolysis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cytolysis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The function of the root hair in plants is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "absorb soil water by the process of osmosis.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "excrete water and mineral salts by simple diffusion.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "purify the soil for the plant.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "translocate manufactured food.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "If a germinating seed is attached horizontally to a revolving klinostat, what would be the effect on the seedling after three days? The",
+      "options": [
+        {
+          "key": "A",
+          "text": "plumule will curve vertically upward while the radicle will not show any curvature",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "radicle will curve towards the ground while the plumule will not show any curvature.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "plumule and radicle will not show any curvature.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "plumule will curve vertically upwards while the radicle will curve towards the ground",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "The lumbar vertebra differs from the thoracic vertebra because it possesses a",
+      "options": [
+        {
+          "key": "A",
+          "text": "longer neural spine.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "wider neural canal.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "thicker centrum.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "shorter transverse process.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Which of the following blood vessels carries oxygenated blood into the heart?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pulmonary artery",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Anterior vena cava",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Pulmonary vein",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Posterior vena cava",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "Filtrates in the Bowman's capsule contain vitamins because",
+      "options": [
+        {
+          "key": "A",
+          "text": "they have low molecular weight.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "most of them are fat soluble.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "they cannot be reabsorbed into the blood.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "little amount is required by the blood.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The structures that contain grey matter and white matter are found in the",
+      "options": [
+        {
+          "key": "A",
+          "text": "reproductive system.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "nervous system.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "respiratory system.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "digestive system.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The diagram above is an illustration of sense organ in humans. Study it and answer questions 15 and 16.\nThe part that protects the organ is labelled",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 15.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/0T4U5uOumRmLknF9nlo7mM6cFfwYoOV652B31kJY.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "The part labelled III is the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 16.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/uGcLpovDv6y4vqlNlVV6kn8xt5oItJT0LLdLcL2e.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "iris.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "pupil",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "sclera",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cornea",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The diagram above is an illustration of two plants P and Q. Arrows I, II and III illustrate the transfer of pollen grains among flowers of plants P and Q. Studly it and answer questions 17 and 18.\nThe types of pollination illustrated as I,Il and III, respectively are",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 17.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/Z2dskQAwINGwDEr75rfbuywRBiB2DgTkXX44KPSg.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "cross, self and cross",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "self, self and cross",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "self, cross and self",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "self, cross and cross",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The condition necessary for reproduction to occur between plants P and Q after pollination is that plants P and Q should be",
+      "options": [
+        {
+          "key": "A",
+          "text": "of the same species.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "brightly coloured.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "well scented",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "of different species.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "The diagram above illustrates a dry dehiscent fruit. Use it to answer questions 19 and 20.\nThe agent of dispersal of the fruit is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 19.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/Q1SS8cEY7mC9CG1q38BNjEBmKgwpu1WpvjaZfCa2.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "animal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "explosive mechanism",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "water",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "wind",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The Parachute-like tuft of hairs developed from the",
+      "options": [
+        {
+          "key": "A",
+          "text": "pedicel",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "petals",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "receptacle",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sepals",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Which of the following events does not occur in the light reaction stage of photosynthesis?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chlorophyll absorbs sunlight",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Carbon (IV) oxide combines with hydrogen",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Photolysis of water occurs",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Hydroxyl ions are produced",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The rate of photosynthesis decreases in a wilted herbaceous plant because the",
+      "options": [
+        {
+          "key": "A",
+          "text": "enzymes in the leaf were denatured",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "chlorophyll in the leaves was not broken down",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "amount of light reaching the plant was reduced",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "amount of carbon dioxide entering the leaf decrease.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "The element required for chlorophyll formation in plants is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Iron",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Calcium",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Phosphorus",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Sulphur",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The process of food digestion in mammals would",
+      "options": [
+        {
+          "key": "A",
+          "text": "make energy immediately available to the body",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "promote growth and repair of tissues",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "provide sufficient food materials within the body",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "render food substances soluble and absorbable",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "Which of the following food substances would give a negative reaction with Benedict's reagent?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fructose",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Glucose",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Galactose",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Sucrose",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Sunlight is the major source of",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vitamin D",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "vitamin C",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "vitamin B",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "vitamin A",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Discouraging the use of poison to kill fish in a large water body is a way of",
+      "options": [
+        {
+          "key": "A",
+          "text": "impoverishing the people.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "conserving the fish species.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "allowing the fittest organism to survive",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "making the fish adapt to their environment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The pathway through which nutrient are replenished and circulated in an ecosystem is called a",
+      "options": [
+        {
+          "key": "A",
+          "text": "cycle",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "pyramid of energy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "pyramid of numbers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Food chain",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The illustration below is a food chain. Study it and answer questions 29 and 30.\nGrasses &rarr; Grasshoppers &rarr; Lizards &rarr; Hawks\nWhich of the following statements is not correct about the food chain? The number of",
+      "options": [
+        {
+          "key": "A",
+          "text": "grasses eaten by grasshoppers is greater than the number of grasshoppers.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "grasses eaten by grasshoppers is fewer than the number of grasshoppers.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "grasshoppers eaten by lizards is greater than the number\nof lizards.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "lizards eaten by hawks is greater than the number of hawks.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Grasses &rarr; Grasshoppers &rarr; Lizards &rarr; Hawks\nIf the individual species of organisms in the food chain are counted and arranged as a pyramid, the result would be a pyramid of",
+      "options": [
+        {
+          "key": "A",
+          "text": "numbers",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "energy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "biomass",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "biomes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Which of the following gases is released during the decomposition of organic matter?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Carbon(II) oxide",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Sulphur (IV) oxide",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Hydrogen Sulphide",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Nitrous oxide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "The diagrams above are the illustrations of organisms from different habitat. Study them and answer questions 32 and 33.\nThe structures labelled I are for",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 32.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/uNxZY59GvhTV48V9TtBYEgmB83Tld5rEHBPmw10k.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Camouflage",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Chemical offence",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Physical defence",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Mimicry",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Habitats of the organisms respectively are",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 33.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/zmNBwgmGkbED9fKoOBBgTq1uVeYWMf1illYGl2kt.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "river and stream",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "rainforest and stream",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "pond and leaf litter",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "garden and desert",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "An environmental problem caused by Sulphur (IV) oxide is",
+      "options": [
+        {
+          "key": "A",
+          "text": "acid rain",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "deforestation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "global warming",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Erosion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The phenomenon by which a farmland that is left to fallow for several years develops into a forest is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "Succession",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "afforestation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "population",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "colonization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "A farmer planted many seeds on a small piece of land. The plants that germinated are as shown above.\nWhich of the following effects would not be observed among the population of the plants?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 36.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/nHzp9FIoqX2UtQGUJhvdCMJpcDDwOevjkm2lQqeG.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rise in disease condition",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Death",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Mutualistic relationship",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Competition",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The bar chart above shows the data of sources of energy used for cooking in a community. Study it and answer questions 37 and 38.\nThe source of energy that is mostly used in the community is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 37.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/ARjAZEcCpitdWC3CJYLrNRFxyQv8HyvAiBzYCUk2.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "solar",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Kerosene",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "coal",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "wind",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The two sources of energy that would mostly lead to pollution in the community are",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 38.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/909q4fQAKRkiaX3uV6DO3ICKZLXxVVjhG318DMAJ.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "solar and kerosene",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "coal and wind",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "kerosene and coal",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "solar and wind",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "An individual found a strange bird that is tagged as an endangered specie. What should the individual do?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kill it",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Take it to an aquatic environment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Return it to its natural habitat",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Sell it at a very high price",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Which of the following traits is not inheritable? Ability to",
+      "options": [
+        {
+          "key": "A",
+          "text": "taste P.T.C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "roll the tongue",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "move the ear",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "roll the eyeball",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Which of the following statements is correct about the ABO blood group system?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Antigens are located on the surface of white blood cells",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Antibodies are located in the blood plasma",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Antibodies are located on the surface of the red blood cells",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Antigens are located in the blood plasma",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "A woman with blood group A gives birth to a child with blood group O . Which of the following blood groups cannot belong to the father?",
+      "options": [
+        {
+          "key": "A",
+          "text": "B",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "AB",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "O",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The diagram above is an illustration of genetic cross between two parents. The parental gametes I, II, III and IV gave rise to the offspring below. Study it and answer questions 43 and 44.\nGametes I, II, III and IV, respectively are",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 43.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/4DNF0yMUQXKuq3gyr0YXjo8G1qnBMX4l3x7b1p6k.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "T,T,T and t",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "T, t, t, and t",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "T, T, t and t",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "T, t, T and t",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Which of the following statements is correct about the cross?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 44.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2024/wWqxrDZukETH2GoHkgPeJdhOc5Docgz5QP17nHkW.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Both parents are heterozygous",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The male is not heterozygous",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "The female is homozygous",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Both parents are homozygous",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The physical appearance of an organism is described as its",
+      "options": [
+        {
+          "key": "A",
+          "text": "phenotype",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "genotype",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "allele",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "chromosome",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Mutation leads to evolution because it",
+      "options": [
+        {
+          "key": "A",
+          "text": "kills all organisms where it has occurred.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "gives rise to offspring having same characteristics as the parents",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "does not confer adaptability to the offspring",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "gives rise to new individuals that differ from their parents",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The male and female gametes which bear genes for inheritance in plants are located in the",
+      "options": [
+        {
+          "key": "A",
+          "text": "anthers and petals",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sepals and petals",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "stamens and pistils",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "stamens and petals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Which type of breeding is represented by industrial melanism in peppered moths?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Artificial selection",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Natural selection",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Inbreeding",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Outbreeding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "In a test, a student paired some scientists with their famous work as shown below. Use it to answer questions 49 and 50.\nScientist Famous work\nI. Charles Darwin &rarr; Preservation of some food with heat\nII. Gregor Mendel &rarr; Natural selection\nIII. Jean Baptiste Lamarck &rarr; Inheritance of acquired characteristics\nIV. Louis Pasteur &rarr; Independent assortment of genes.\nThe Scientists that are not correctly paired with their famous work are",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and II only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II and III only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "I, II and IV.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "II, III and IV.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Which of the scientists were involved in the study of evolution?\nScientist Famous work\nI. Charles Darwin &rarr; Preservation of some food with heat\nII. Gregor Mendel &rarr; Natural selection\nIII. Jean Baptiste Lamarck &rarr; Inheritance of acquired characteristics\nIV. Louis Pasteur &rarr; Independent assortment of genes.",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and III",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "II and III",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "I, II and IV",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "II. III and IV",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a)State one function each of the following parts of the nephron:\n(i) glomerulus (ii)Bowman's capsule (iii)proximal convoluted tubule (iv) distal convoluted tubule\n(b) Complete the table below.\nOrganism\nStructure for excretion\nForm in which waste is excreted by organism\ncontractile vacuole\nFlatworm\nEarthworm\nCockroach\nHuman\nLiquid\nStomata pore\n(c) List five excretory products of plants."
+    },
+    {
+      "number": 2,
+      "question": "An individual ate a hot and large meal of cassava with salty groundnut soup. The individual was sweating profusely and did not drink water after the meal.\n(a) State one role each played by the following organs involved in the activity above:\n(i) mouth; (ii) skin; (iii) tongue; (iv) kidney; (v) stomach; (vi) small intestine; (vii) large intestine; (viii) liver.\n(b) Name three of the organs listed in 2(a) that contain enzymes needed to breakdown the food.\n(c) Name three digestive enzymes that would be involved in the digestion of the meal.\n(d) Name two end products of the meal after digestion.\n(e)(i) State one effect that the excess salt in the meal might have on the individual.\n(ii) State three advantages that the individual would derive from the meal."
+    },
+    {
+      "number": 3,
+      "question": "(a)A piece of raw meat was left in an uncovered bowl for seven days. Use the information to answer questions 3(a) and 3(b) .\n(i) State four likely changes that would be observed in the meat.\n(ii) Name the biological process that led to the changes that are observed in the meat.\n(iii)On the table below, list four methods of preserving meat to prevent it from the changes stated in 3a(i) and mention the principle involved in the methods.\nFour methods of preserving the meat\nOne principle involved in the preservation method\n(iv)Name two environmental factors that may be responsible for the changes in 3a(i)\n(b) Name one method of preserving the following food items:\n(i) dried maize grains; (ii) fresh tomatoes; (iii) vegetables; (iv) beans; (v) milk"
+    },
+    {
+      "number": 4,
+      "question": "a(i)Complete the table below by stating the type of cell division and the type of set of chromosomes for the listed cells.\nCell\nType of cell division\nset of chromosomes\nOnion cell\nmitosis\nSperm cell\nPollen grain\nOvum\nGuard cell\nCheek cell\ndiploid\n(ii) What is mitosis?\n(b)Explain briefly how parents with blood groups A or B could have an offspring with blood group O .\n(c)Explain briefly how genes are involved in the process of evolution."
+    },
+    {
+      "number": 5,
+      "question": "SECTION B\na(i)What is competition ?\n(ii)List two types of competition.\n(iii)List four factors that organisms compete for in a habitat.\n(iv)Explain briefly the relationship between competition and succession .\nb(i)What is structural adaptation ?\n(ii)State four types of structural adaptations in animals.\n(c)List four features of variation in humans that are used in crime detection.\n(d)Complete the table below by listing three types of adaptive colouration in animals and give one example each of animals that show the colourations.\nThree types of adaptive colouration in animals\nOne example of animal that show the type of colouration\n(e) Give three examples of plants found in a tropical Rainforest."
+    },
+    {
+      "number": 6,
+      "question": "SECTION A\nStudy specimens B, D and E and answer questions 1(a) to 1(f).\n(a) Name the phylum and class of the organism that possesses specimen D .\nPhylum:\nClass:\n(b) State three observable features of Specimen B .\nc(i) Give three functions of specimen B to the organism from which it was obtained\n(ii) State one function each of specimens D and E to the organism from which they were obtained.\nD:\nE:\n(iii) Mention one adaptation each of specimens D and E to the function stated in 1c (ii)\nD:\nE:\nd(i) Use the office pin provided to prick the dark green structure attached to specimen B. Touch the fluid oozing from the structure with each of the red and blue litmus\npapers at intervals. Record the observations and inferences on the table below:\nTest\nObservation\nInferences\nRed litmus paper + fluid\nBlue litmus paper + fluid\n(ii) Give three functions of the fluid tested in 1d(i) to the organism that possesses it.\ne(i) Name the biological system in the body of vertebrates that specimens D and E belongs to.\n(ii) Which of specimens B, D or E is absent in humans?\nf(i) Name the mode of feeding of the organism that possesses specimen E .\n(ii) Name one type of food that the organism that possesses specimen D consumes."
+    },
+    {
+      "number": 7,
+      "question": "Study specimens F, H and K and answer questions 2(a) to 2(d) .\n(a) State four functions of specimen H to the plant from which it was obtained.\nb(i) State one function each of specimen F and K to the plants from which they were obtained.\nF:\nK:\n(ii) Give one reason for the answers in 2b (i)\nF:\nK:\n(iii) What part of the plant is modified for the function stated in 2b (i)?\nF:\nK:\nc(i) State four observable differences between specimens F and K .\nF\nK\n(ii) State one similarity between specimens F and K .\n(d) Make a drawing; 6 cm to 8 cm long of the specimen H and label fully."
+    },
+    {
+      "number": 8,
+      "question": "SECTION B\nAnswer all the questions in this section\nStudy specimens L, M, P, and Q and answer questions 3(a) to 3(d).\n(a) Name the region of the human body where each of specimens L and Q are located.\nL:\nQ:\nb(i) State four observable differences between specimens L and Q.\nL\nQ\n(ii) State four observable similarities between specimens L and Q.\nc(i) Name two bones each that articulate with specimens M and P.\n(ii) Name one vertebra each that is located and after each of specimens L and Q in the vertebral column.\nBefore After\nL: ................................. ....................................\nQ: ................................ .....................................\n(d) Complete the table below by using tick (✔) to indicate presence and cross (X) to indicate absence of the following features in each of specimens L, M, P and Q.\nSpecimen\nFeatures\nNeural canal\nRounded head\nNeural spine\nLong shaft\nL\nM\nX\nP\nQ\n✔"
+    }
+  ]
+}

@@ -1,0 +1,1349 @@
+{
+  "subject": "Government",
+  "year": 2015,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The most visible feature of a state is",
+      "options": [
+        {
+          "key": "A",
+          "text": "compulsory membership",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "defined geographical territory",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "written constitution",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sovereign power",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Representative democracy is characterized by",
+      "options": [
+        {
+          "key": "A",
+          "text": "free election and proper register of voters",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a politically educated elite",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "representation of the poor only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "rule of the interest groups",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "The set of attitudes and beliefs that determine the behaviour of citizens in a political system is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "socialization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "political culture",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "representative government",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "devolution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The set of attitudes and beliefs that determine the behaviour of citizens in a political system is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "socialization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "political culture",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "representative government",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "devolution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Fundamental Human Rights are entrenched in constitutions purposely to",
+      "options": [
+        {
+          "key": "A",
+          "text": "ensure freedom of speech",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "guarantee the liberty of citizens",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "promote good governance",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "promote trade",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "Diplomatic and parliamentary immunities put limitations on",
+      "options": [
+        {
+          "key": "A",
+          "text": "the rule of law",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "separation of powers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "checks and balances",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "foreign policies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Montesquieu's political theory of separation of powers was meant to",
+      "options": [
+        {
+          "key": "A",
+          "text": "promote unity in government",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "prevent dictatorial rule",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "ensure social justice",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "enhance state security",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Which of the following countries practices a centralized system of government?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nigeria",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Ghana",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "USA",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "India",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Which of the following countries operates unwritten constitution?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Britain",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "USA",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Japan",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Canada",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "A constitution that can be amended through ordinary law making process is said to be",
+      "options": [
+        {
+          "key": "A",
+          "text": "written",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "unwritten",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "rigid",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "flexible",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Which of the following systems of government operates on the checks and balances?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Theocracy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Presidential",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Parliamentary",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Monarchical",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Confederal systems of government means",
+      "options": [
+        {
+          "key": "A",
+          "text": "powerful centre and weak component units",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "weak centre and powerful component units",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "powerful centre and powerful component units",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "weak component units and weak centre",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "In a federal system of government, the power shared between the Centre and state governments is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "legislative power",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "exclusive power",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "concurrent power",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "judicial power",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The prerogative power resides with the",
+      "options": [
+        {
+          "key": "A",
+          "text": "ombudsman",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "executive",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "national assembly",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "civil organization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "Quick decision making is an advantage of",
+      "options": [
+        {
+          "key": "A",
+          "text": "unicameralism",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "constitutionalism",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "federalism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "republicanism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "The organ of government responsible for implementation of polices in a state is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "legislature",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "judiciary",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "executive",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "public bureau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "A citizen is an individual who",
+      "options": [
+        {
+          "key": "A",
+          "text": "has the legal and political rights in a country",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "has lived in a country for sometime",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "enjoys only economic rights",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "enjoys immunity in the country",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Which of the following is a condition for granting citizenship to a foreigner?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Swearing an oath of allegiance",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Possession of a university degree",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "A registered member of a political party",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Possession of an international passport",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Citizenship can be acquired through all of the following methods except",
+      "options": [
+        {
+          "key": "A",
+          "text": "birth",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "nationalization",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "naturalization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "marriage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The conferment of citizenship on a distinguished personality of another country is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "citizenship by birth",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "honorary citizenship",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "adoption",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "citizenship by registration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The primary aim of any political party is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "pressurize the government",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "remain in the opposition",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "control the government",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "ensure fair play in business",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "A manifesto can be defined as the",
+      "options": [
+        {
+          "key": "A",
+          "text": "opportunity to form a political party",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "proposed programmes of a political party",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "policy of a political party in power",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "power to rule the masses",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Which of the following exists in a one - party state?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only the workers party is allowed to exist",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Only the students' party is allowed to exist",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Elections to the legislature are held at the party's conference",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "The ruling party is the only legal party",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Which of the following party systems best represents all shades of opinions?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Multi-party",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Two -party",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "One- party",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Elite- party",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The practice of multi - party system in West Africa tends to promote",
+      "options": [
+        {
+          "key": "A",
+          "text": "sectionalism and factionalism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "national integration",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "social discrimination",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "economic integration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Franchise is the right to",
+      "options": [
+        {
+          "key": "A",
+          "text": "express political views",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "control the government",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "vote and be voted for",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "ensure good governance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The following are the aims of an election except that",
+      "options": [
+        {
+          "key": "A",
+          "text": "a group sticks on to power",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "there is accountability of the leaders",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "there is a smooth change of government",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the people determine who rules",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Politics is practically demonstrated during",
+      "options": [
+        {
+          "key": "A",
+          "text": "electioneering campaigns",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "parliamentary debates",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "formation of political parties",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "inter-party consultative meetings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "An election held to fill a vacant post in the legislature due to the death or resignation of a member is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "run-off election",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "electoral college",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "by-election",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "primary elections",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Which of the following is a function of pressure groups?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Represent and protect the rich",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Protect the interest of government",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Serve as avenue for political victimization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Provide forum for the ventilation of grievances",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Public opinion is defined as the",
+      "options": [
+        {
+          "key": "A",
+          "text": "aggregate views of the people",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "sentiments of opposition parties",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "consensus of the mass media",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "reaction of pressure groups",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Public opinion on the performance of a government is best measured by",
+      "options": [
+        {
+          "key": "A",
+          "text": "military strength",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "general elections",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the mass media",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "parliamentary debates",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The method in which a group of people are interviewed on a specific political issue is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "referendum",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "individual speech",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "individual writing",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "opinion sampling",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The Civil Service is an administrative institution of",
+      "options": [
+        {
+          "key": "A",
+          "text": "the executive arm of government",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Public corporations",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Para - military organization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a business enterprise",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "Which of the following is a feature of the civil service?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Disloloyalty",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Impartiality",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Political activism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Temporary tenure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The major source of local government revenue is",
+      "options": [
+        {
+          "key": "A",
+          "text": "donations",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "income from investments",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "loans from finance institutions",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "grants from the central authority",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "In the pre -colonial African political system, the functions of the kingmakers were performed by",
+      "options": [
+        {
+          "key": "A",
+          "text": "Age grades",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Woman",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Council of elders",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Special people",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Colonialism is defined as the",
+      "options": [
+        {
+          "key": "A",
+          "text": "struggle against foreign domination",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "political struggle for independence",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "economic dependence on developed nations",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "imposition of foreign rule on a territory",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "'Casting vote' was one of the ways the Governor in British West Africa controlled the",
+      "options": [
+        {
+          "key": "A",
+          "text": "Colonial treasurer",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Colonial secretary",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Native authority",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Legislative council",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "The French policy of assimilation was based on the assumption that African culture was",
+      "options": [
+        {
+          "key": "A",
+          "text": "expensive",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "inferror",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "unpopular",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "superior",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The administrative structure adopted in the French colonial territories was",
+      "options": [
+        {
+          "key": "A",
+          "text": "more of a centralized administration",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "focused mainly on traditional rulers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "favourable to the African age grades",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "for the development of African culture",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The Pan -African Movements emerged as a result of",
+      "options": [
+        {
+          "key": "A",
+          "text": "African cultural heritage",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "European racial domination",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the formation of the African Union",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the growth of socialism in Europe",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Which of the following was the first print media used by nationalists to oppose colonialism in the British West Africa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Daily News",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Daily Times",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "West African pilot",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Guardian newspaper",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "One of the prominent West African nationalist leaders was",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kwane Nkrumah",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Jomo Kenyatta",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "S. L. Akintola",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Sekou Tource",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Which of the following cannot be altered by a military coup d'etat? The",
+      "options": [
+        {
+          "key": "A",
+          "text": "constitution",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "legal system",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "legislature",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "state",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Laws promulgated by a military government are called",
+      "options": [
+        {
+          "key": "A",
+          "text": "bills",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "acts",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "decress",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "proclamations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The origin of the Commonwealth of Nations can be traced to",
+      "options": [
+        {
+          "key": "A",
+          "text": "colonial ties",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "world economic order",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "equality of states",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sovereignty of states",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "The origin of the Commonwealth of Nations can be traced to",
+      "options": [
+        {
+          "key": "A",
+          "text": "colonial ties",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "world economic order",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "equality of states",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sovereignty of states",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "The first black African to hold the position of UN Secretary-General was",
+      "options": [
+        {
+          "key": "A",
+          "text": "Salim Ahmed Salirn",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Kofi Annan",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Emeka Anyaoku",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Nelson Mandela",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "The Secretary-General of the United Nations Organization (UNO) is appointed for a period of",
+      "options": [
+        {
+          "key": "A",
+          "text": "there years",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "five years",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Seven years",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "nine years",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) Explain constitutionalism.\n(b) State four factors that can promote constitutionalism"
+    },
+    {
+      "number": 2,
+      "question": "(a) What is separation of power?.\n(b) How does it operate under the (i) Presidential System of government? (ii) Cabinet System of government?"
+    },
+    {
+      "number": 3,
+      "question": "(a) Define parliamentarianism.\n(b) Identify four differences between parliamentary and presidential systems of government."
+    },
+    {
+      "number": 4,
+      "question": "(a) Define public opinion.\n(b) Highlight three ways by which Public Opinion can be formed.\n(c) In what three ways can Public Opinion be encouraged in your country?"
+    },
+    {
+      "number": 5,
+      "question": "(a) IdentiMive officials used in the conduct of election on the polling day.\n(b) State one function of each of the officials identified in (a)."
+    },
+    {
+      "number": 6,
+      "question": "Highlight any five functions of the Secretary of State for the colonies in the colonial period."
+    },
+    {
+      "number": 7,
+      "question": "(a) State any three Newspapers formed by nationalist in Nigeria after the Second World War.\n(b) Highlight any four roles played by local Newspapers in the struggle against colonial rule."
+    },
+    {
+      "number": 8,
+      "question": "Outline five achievements of the Action Group as a political party in Nigeria."
+    },
+    {
+      "number": 9,
+      "question": "(a)(i) Explain the term military. (ii) What is a military coup d' etat?\n(b) Outline three basic features of military rule."
+    },
+    {
+      "number": 10,
+      "question": "What are the factors that determine the external relations of West African countries?"
+    }
+  ]
+}

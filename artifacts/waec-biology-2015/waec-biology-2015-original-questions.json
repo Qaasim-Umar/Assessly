@@ -1,0 +1,1332 @@
+{
+  "subject": "Biology",
+  "year": 2015,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following organisms is not a protozoan?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amoeba",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Ascaris",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Plasmodium",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Paramecium",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The structure of the cell membrane is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "double layer and a double protein layer",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "middle bi-layer of protein with a lipid layer on either surface",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "middle bi-layer of lipid with a protein layer on either surface",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "protein layer with two inner lipid layers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Which of the following cells is a specialized cell?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amoeba",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Plasmodium",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Guard cell",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Meristematic cell",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "When a Spirogyra filament is placed in a concentrated salt solution for 30 minutes, the cell would become",
+      "options": [
+        {
+          "key": "A",
+          "text": "plasmolysed",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "turgid",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "shortened",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "elongated",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Water and salts are both lost from the human body in",
+      "options": [
+        {
+          "key": "A",
+          "text": "breath and sweat",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "breath and Urine",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "breath, urine and sweat",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sweat and urine",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "Which of the following features could be used to determine the growth of a seedling?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Number of flowers",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Number of leaves",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Length of flowers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Length of radicle",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "A plant that commonly undergoes vegetative propagation by means of leaves is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hibiscus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Bryophylum",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Crotalaria",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Spirogyra",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Blood pressure is higher in the arteries as a result of",
+      "options": [
+        {
+          "key": "A",
+          "text": "stress",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "contraction and relaxation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "blockage in the arteries",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "presence of valves",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "A farmer who wants to keep seeds for three years before planting and wants to prevent them from sprouting uses",
+      "options": [
+        {
+          "key": "A",
+          "text": "auxin",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "gibberellins",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "abscisin",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "cytokinins",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "A person had an accident that affected the skull but not the nose and later lost the sense of smell. The accident must have a affected the",
+      "options": [
+        {
+          "key": "A",
+          "text": "nose by extension",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "olfactory lobes of the brain",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "passage from the nose to the brain",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "part of the skull near the nose",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Ability of the human eye to focus images accurately on the retina is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "astigmatism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "myopia",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "adjustment",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "accommodation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Which of the following processes removes carbon (IV) oxide from the atmosphere?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Burning fuels",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Putrefaction",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Photosynthesis",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Respiration in plants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "Which of the following characteristic features is not associated with monocotyledonous plants?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Well differentiated sepals and petals",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Presence of fibrous root system",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Presence of narrow leaves",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Flora parts are in multiples of three",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The main difference between a seed and a fruit is that a fruit",
+      "options": [
+        {
+          "key": "A",
+          "text": "is large while a seed is small",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "has two scars while a seed is has one",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "is pigmented while a seed is not",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "can be dispersed by animals while a seed cannot",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "A student used the following steps in testing for a non-reducing sugar.\nI. added Benedict's solution to the sugar solution\nll. added dilute hydrochloric acid to the sugar and boiled it;\nlll. added sodium hydroxide solution to the solution in ll. and boiled;\nIV. added Benedict's solution to the cooled solution in lll.\nUse this information above to answer the question.\nWhy did the student add the dilute hydrochloric acid to the sugar solution in step ll? To",
+      "options": [
+        {
+          "key": "A",
+          "text": "oxidize the sugar solution",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "hydrolyse the sugar solution",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "dry the sugar solution",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increase the volume of the sugar solution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "A student used the following steps in testing for a non-reducing sugar.\nI. added Benedict's solution to the sugar solution\nll. added dilute hydrochloric acid to the sugar and boiled it;\nlll. added sodium hydroxide solution to the solution in ll. and boiled;\nIV. added Benedict's solution to the cooled solution in lll.\nUse this information above to answer the question.\nWhat is the importance of step ll in the testing process? To",
+      "options": [
+        {
+          "key": "A",
+          "text": "neutralize the sugar solution",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "soften the sugar solution",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "change the colour of the sugar solution",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increase the acid content of the sugar solution",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "A student used the following step in testing for a non-reducing sugar.\nI. added Benedict's solution to the sugar solution\nII. added dilute hydrochloric acid to the sugar solution and boiled it\nIII. added sodium hydroxide solution to the solution in II and boiled;\nIV. added Benedict's solution to the cooled solution in III.\nThe colour change to be observed in step IV is",
+      "options": [
+        {
+          "key": "A",
+          "text": "blue-black",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "brick-red",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "purple",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "violet",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Which of the following organs of the alimentary canal is not correctly matched with its function?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gall bladder- stores bile",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Liver - stores glycogen",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Appendix - releases enzymes",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Teeth = grind food",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "A person suffering from obstruction of the bile duct is advised not to eat fats and oil because",
+      "options": [
+        {
+          "key": "A",
+          "text": "bile digests fats and oil",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "fats and oil can only be absorbed whenbile is absent",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "bile emulsifies fat and oil",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "bile adds water to digesting food",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "A community reaches a climax when",
+      "options": [
+        {
+          "key": "A",
+          "text": "only pioneer organisms are present",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "new habitats are constantly being formed",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "there is an introduction of new plants and animal species within the community",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the composition and size of a community remains constant over a long period",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Which of the following components make up an ecosystem?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Decomposers, animals and non-living factors",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Living and non-living factors",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Plants and non-living factors",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Plants decomposers and non-living factors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "Study the diagram above and answer the question\nThe structure labelled I is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 22.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/11845470856_0000.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "a pitcher",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "an onion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a flower",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a tendril",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Which of the following organisms is an endo-parasite?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tapeworm",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Flea",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Tick",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Aphid",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Which of the following organisms is an endo-parasite?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tapeworm",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Flea",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Tick",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Aphid",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "Oil applied to the surface of water kills the larvae of mosquitoes through",
+      "options": [
+        {
+          "key": "A",
+          "text": "dehydration",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "poisoning",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "starvation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Suffocation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Which of the following natural resources is most readily available to all organisms?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Oil",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Water",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Air",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Food",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Which of the following resources is non-renewable?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Forest reserve",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Mineral deposit",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Water",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Wild life",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Soil erosion could be prevented by",
+      "options": [
+        {
+          "key": "A",
+          "text": "flooding a farmland",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cover-cropping",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "deforestation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "leaving the soil bare",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "Which of the following statements about human blood groups is not true?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A is dominant over B",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "O is recessive",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "B is dominant over O",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "A and B are co-dominant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Which of the following traits is not inheritable? Ability to",
+      "options": [
+        {
+          "key": "A",
+          "text": "taste PTC",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "roll the tongue",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "move the ear",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "rool the eyeball",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "A woman with blood group A gives birth to a child with blood group O. Which of the following blood groups cannot belong to the father?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "C",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "AB",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "How many chromosomes will be in a gamete if the normal cell has four chromosomes?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "4",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "6",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "8",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Use the diagram above to answer this question.\nWhat of the following statements about the cross is correct?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 33.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/4442070591_10338704_451303094972045_6346984764590567314_n.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "The gene for the spotted coat is recessive to the gen for the black coat",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Black coat and spotted coat are co-dominant",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "The gene for the spotted coat is dominant over the gene for the black coat",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "the genotype for the F1 are homozygous dominant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Use the diagram above to answer this question.\nWhat are the genotypes of the parents if the gene for skin colour is H?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 34.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/16287604201_10338704_451303094972045_6346984764590567314_n.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "Spotted Leopard HH Black Panther hh",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Spotted Leopard HH Black Panther Hh",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Spotted Leopard Hh Black Panther Hh",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Spotted Leopard Hh Black Panther hh",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "Use the diagram above to answer this question.\nWhat are the genotypes of the parents if the gene for skin colour is H?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 35.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/28133134738_10338704_451303094972045_6346984764590567314_n.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "Spotted Leopard HH Black Panther hh",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Spotted Leopard HH Black Panther Hh",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Spotted Leopard Hh Black Panther Hh",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Spotted Leopard Hh Black Panther hh",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "According to Mendel's first law of inheritance, segregation of genes occur when",
+      "options": [
+        {
+          "key": "A",
+          "text": "tall plants are crossbred",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "short plants are crossbred",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "tall plants and short plants are crossbred",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "plants are crossbred",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Which of the following statements about sex-linked characters is not true?",
+      "options": [
+        {
+          "key": "A",
+          "text": "They are usually borne on the X = chromosome",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "They are more common in males",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Males are usually carriers",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "They are not usually carried on the Y chromosomes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "In explaining the term camouflage, to a class, the diagram above show four varieties, P, Q, R, and S of the same species of fish living amongst water plants in a river were used\nWhich of the varieties is likely to decrease most in number if a predatory fish is introduced into the river?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 38.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/26652473154_0000.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "P",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Q",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "R",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "S",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "In explaining the term camouflage, to a class, the diagram above show four varieties, P, Q, R, and S of the same species of fish living amongst water plants in a river were used\nWhich of the varieties is most likely to outlive the others?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 39.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/4442079363_0000.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "P",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Q",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "R",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "S",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "The variety P,Q,R and S Outlive the others because the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 40.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/2963099220_0000.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "variety is the most beautiful",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "variety does not have markings",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "markings of the variety are similar to those of the environment",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "predator does not like eating the variety",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The diagram above illustrates a part of the mammalian skeleton . use it to answer this this question\nThe part of the skeleton illustrated in the diagram is the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 41.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/1481549808_0000.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "atlas vertebrae",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "axis vertebrae",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cervical vertebrae",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "thoraeic vertebrae",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The diagram above illustrates a part of the mammalian skeleton . use it to answer this this question\nThe function of the part lebelled I is to",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 42.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/20733060936_0000.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "provide support to the spinal cord",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "provide surface for attachment of the muscle",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "carry the spinal cord",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "articulate with adjacent vertebrae",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The following diagram above show the sequence of events in early cell division. Study the diagram and answer the question.\nIn which of the following cells is this divisin likely to take plce?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 43.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/10366537517_0000.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sperm cell",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Blood cell",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Muscle cell",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Uterine cell",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The diagram above is illustration of a crocodile. Use it to answer this question.\nWhich of the labelled parts enable the animal to stay under water most of the time?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 44.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/8885622186_0000.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, IV and V",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "I, II and V",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "I, III and IV",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "III, IV and V",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The diagram above is illustration of a crocodile. Use it to answer this question.\nTwo characteristic features of the class to which the crocodile belongs are labelled",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 45.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/19252193220_0000.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and II",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "III and IV",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "II and IV",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "II and V",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The diagram above is illustration of a crocodile. Use it to answer this question.\nTwo characteristic features of the class to which the crocodile belongs are labelled",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 46.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2015/17771255436_0000.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and II",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "III and IV",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "II and IV",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "II and V",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The following organisms have structures for movement except",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amoeba",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Spirogyra",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Volvox",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Paramecium",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Which of the following statements about protoplasm of a cell is not correct? It",
+      "options": [
+        {
+          "key": "A",
+          "text": "comprises of the nucleus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "consists of the cytoplasm",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "comprises of the cell organelles",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "consists the nucleus only",
+          "is_correct": true
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) Explain briefly sexual reproduction in Rhizopus.\n(b) A student suddenly stepped on a big snake, he cried for help and ran away.\n(i) Name the hormone produced in the body for the reaction.\n(ii) In which part of the human body is the hormone named in (b) (i) produced?\n(iii) State five changes that must have taken place as a result of the hormone named in (a) (i).\n(c) (i) In tabular form, state three differences between excretion in flowering plants and excretion in humans,\n(ii) List two organelles found in plant cell that are responsible for the excretion of metabolic wastes."
+    },
+    {
+      "number": 2,
+      "question": "(a) Explain how the leaf of a flowering plant is adapted for photosynthesis.\n(b) Describe briefly the mode of feeding in tapeworm.\n(c) Name one mineral element each needed for the proper functioning of :\n(i) bones (ii) red blood cells\n(iii) thyroid gland.\n(d)(i) State three benefits of including roughages in the diet of humans.\n(ii) State three reasons why proteins are important to humans."
+    },
+    {
+      "number": 3,
+      "question": "(a)(i) What is sewage?\n(ii) State five effects of releasing untreated sewage into a stagnant water body.\n(b) Explain surface terracing as a soil conservation method.\n(c) Explain the term adaptation.\n(d) Explain two ways each by which the following organisms adapt to their habitats:\n(i) hydrophytes\n(ii) xerophytes."
+    },
+    {
+      "number": 4,
+      "question": "(a) Explain the following terms:\n(i) test cross\n(ii) monohybrid cross.\n(b) In a mango plant the, the allele for bean-shaped seed is r and is recessive to round-shaped seed R. With the aid of a genetic diagram, determine the genotypes of the offspring if:\n(i) a homozygous bean-shaped parent with a homozygous round shaped parent;\n(ii) a heterozygous bean-shaped parent is crossed with a heterozygous round shaped parent."
+    },
+    {
+      "number": 5,
+      "question": "(a) Copy and complete the table below\nDisease\none effect\none remedy\nkidney stones\nNephritis\nDiuresis\n(b) Make a labelled diagram of the carbon cycle.\n(c)(i) What is Estuarine habitat?\n(ii) Construct a food chain typical of an Estuarine habitat.\n(d)(i) Name two diseases that can attack plant crops.\n(ii) State three ways of controlling plant diseases.\n(e) State four functions of a public health authority\n(f) State four ways of maintaining food hygiene in the community."
+    },
+    {
+      "number": 6,
+      "question": "Study Specimens A and B carefully and use them to answer question 1 (a) to 1 (e).\n(a) Classify Specimen p no its division and class.\n(b) (i) State the types of leaf arrangements in specimens A and B.\n(ii) Name the leaf shape of specimens A and B.\n(c)(i) State the type of leaf margin in specimen A. (ii) State the types of venation found in the leaves of specimens A and B.\n(d)(i) List three observable similarities found in specimen A and E. (ii) In a tabular form, state four observable differences between specimens A and B.\n(e) Make a drawing 8-10 cm long of the leaf of specimen A and label fully."
+    },
+    {
+      "number": 7,
+      "question": "Study Specimen G and H carefully them to answer question 2 (a) to 2(c).\n(a) (i) Name the phylum of specimens G and H.\n(ii) State two reasons for the answer given in 2 (a)(i).\n(b) Name the structures on specimen G and H that are used for defense.\n(c)(i) State two habitat of each of specimen G and H. (i) State two ways in which each of specimen G and H are of economic importance.\nStudy specimen M, N and P carefully and use them to answer question 2 (d) and 2 (e).\n(d) (i) Name the class of organisms to which each of the specimen M, N and P are associated. (ii) State one function common to the specimen named in 2 (d)(i).\n(iii) In a tabular form, State four observable difference between specimen M and P.\n(e) Explain three features of biological importance in Specimen M."
+    },
+    {
+      "number": 8,
+      "question": "Observe Specimen Q, under a microscope and specimen R Carefully, Use them to answer questions 3 (a) to 3 (e).\n(a)(i) State the phylum to which each of specimen Q and R belong. (ii) State one reason each for the answers stated in 3 (a) (i).\n(iii) What is the symmetry of specimen Q and R?\n(b)(i) State two observable feature each of specimen Q and R. (ii) State one function each of the features mention in 3 (b) (i).\n(c) (i) Name the sex of specimen R. (ii) Give one reason for the answer given in 3 (C) (i).\n(d) In tabular form, state four observable differences between specimen Q and R,\n(e) Make a drawing 10 cm-12 cm long of the lateral view of specimen Rand label fully."
+    },
+    {
+      "number": 9,
+      "question": "Study specimens T, V and W carefully and use them to answer questions 4(a) to 4(d)\n(a) Classify Specimen T,V and W according to the following criteria: (i) Agricultural classification: (ii) Life cycle.\n(b) State two ways in which specimen W is important to human nutrition.\n(c) With a scalpel or knife, make a cross Section of specimen T.\n(ii) What type of placentation is observed in the cut section of specimen T? Name one example of a fruit with similar placentation as observed in the cut section of specimen T.\nMake a drawing 10 cm - 12 cm long of the transverse section and label fully.\n(d) Make a transverse section of Specimen V and state: (i) Three Observable differences;\n(ii) Three observable similarities; between the transverse section of specimen T and V.\nStudy specimen Xi and Xii and use them to answer question 4 (e) (i) to 4 (e) (ii)\n(e) Carefully remove the bark of specimen Xi to expose the naked part.\n(i) State two observable differences between Specimen Xi and Xii.\n(ii) If Xi and Xii are planted, what difference will be noticed after a month? State one reason for the answer in 4 (e)(ii)"
+    }
+  ]
+}

@@ -1,0 +1,1326 @@
+{
+  "subject": "Economics",
+  "year": 2020,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following is central to the definition of Economics?",
+      "options": [
+        {
+          "key": "A",
+          "text": "resources",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "wants",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "scarcity",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "capital",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "When the production possibility curve shifts outwards, the economy experiences",
+      "options": [
+        {
+          "key": "A",
+          "text": "growth",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "over-production",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "inefficient use of resources",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "under-production",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Land as a factor of production is made useful through the",
+      "options": [
+        {
+          "key": "A",
+          "text": "application of human effort",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "acts of nature",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "application of fertilizer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "use of machines",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "In a free market economy, resources are allocated through the",
+      "options": [
+        {
+          "key": "A",
+          "text": "government department",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "price mechanisms",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "trade union",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "state planning committee.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Use the figure below to answer the question that follows\nWhat does the diagram above depict",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 5.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/economics/2020/f2aZg3tDNVnJZDiCbHPYDmdbGi6xYDpmvBI2ezpF.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "simple bar chart",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "complex bar chart",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "component bar chart",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Pictogram bar chart",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The figure above shows the change in demand for Commodity X which is a normal good. Use it to answer the question that follows.\nWhich of the following caused the change in demand from D\\(_{1}\\) D\\(_{1}\\) to D\\(_{2}\\)D\\(_{2}\\)",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 6.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/economics/2020/L4L7ldQictIxXh8VaeSgX3vmSOHo2DkVl4lSc6tp.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fall in the income of consumers",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Rise in the price of a substitute",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Rise in the price of a complement",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Fall in the supply of commodity X",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Use the figure below to answer the question that follows\nThe curves D\\(_{0}\\)D\\(_{0}\\) and S\\(_{0}\\)S\\(_{0}\\) are the initial demand and supply curves respectively. What happens when government provides subsidies to producers?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The supply curve will shift from S\\(_{0}\\)S\\(_{2}\\) to S\\(_{2}\\)S\\(_{0}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The supply curve will shift from S\\(_{0}\\)S\\(_{0}\\) to S\\(_{1}\\)S\\(_{1}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "The demand curve will shift from D\\(_{0}\\)D\\(_{0}\\) to D\\(_{1}\\)D\\(_{1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "The supply curve will shift from S\\(_{0}\\)S\\(_{0}\\) to S\\(_{0}\\)S\\(_{0}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "In the figure above, YZ represents",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 8.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/economics/2020/3MFMcWuwzF1ZfQSBMZPzzICsja2ghdzKQpi8fZwq.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "excess demand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "excess supply",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "equilibrium quantity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "equilibrium price",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Goods are described as inferior if their demand",
+      "options": [
+        {
+          "key": "A",
+          "text": "decreases as price falls",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "increases as income rises",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "decreases as income increases",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "increases as price increases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "A consumer is in equilibrium when",
+      "options": [
+        {
+          "key": "A",
+          "text": "his market Supply is equal to his market demand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "he maximizes his satisfaction from spending his income",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the market is also in equilibrium",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "he has consumed all he wants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Goods that are abundant in supply usually have low",
+      "options": [
+        {
+          "key": "A",
+          "text": "total utility",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "marginal utility",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "average utility",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "time utility",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "If an increase in the price of crude oil led to an increase in the prices of kerosene and grease, then kerosene and grease are in",
+      "options": [
+        {
+          "key": "A",
+          "text": "joint supply",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "competitive supply",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "market Supply",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "composite supply",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "If an increase in the supply of beef increased the supply of hides, then beef and hides are in",
+      "options": [
+        {
+          "key": "A",
+          "text": "competitive supply",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "joint supply.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "composite supply",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "joint demand",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "An increase in supply means that",
+      "options": [
+        {
+          "key": "A",
+          "text": "more is sold at different prices",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "more is sold at the same price",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "there is a leftward shift of the supply\ncurve",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "there is a movement along the supply\ncurve",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "A seller increased the quantity he offered for sale from 200 units to 250 units when the price of his product increased by 12.5%. What is the price elasticity of the supply of his product?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2.00",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "1.50",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1.00",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.50",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "If a beef market is in equilibrium at $4.00 per kg, an increase in price to $6.00 per kg may cause",
+      "options": [
+        {
+          "key": "A",
+          "text": "surplus in the market",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "shortage in the in market",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "black market to come into operation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "rationing to be introduced",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "A large firm may experience diseconomies of scale if there is",
+      "options": [
+        {
+          "key": "A",
+          "text": "difficulty in coordinating decisions",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "division of labor in production",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "employment of more specialist",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "decrease in the cost of production",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Increasing returns to scale suggests that",
+      "options": [
+        {
+          "key": "A",
+          "text": "a firm can make a profit by reducing output",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a firm can make more profit by increasing output",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "as the producer reduces the quantity of raw materials used, the marginal product will double",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "as the producer increases the quantity of raw materials used, the marginal product will fall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "One feature of the average fixed cost is that it",
+      "options": [
+        {
+          "key": "A",
+          "text": "falls continuously but is never equal to zero.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "is U-shaped and intersects the Y-axis",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "rises and falls faster than the marginal cost",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "is always higher than the average variable cost",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "If the average fixed cost (AFC) of producing 5 bags of rice is $20.00, the average fixed cost of producing 10 bags will be",
+      "options": [
+        {
+          "key": "A",
+          "text": "$2.00",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "$4.00",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "$10.00",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "$20.00",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The table below shows the total revenue schedule of a firm. Use the information to answer the question that follows\nOutput (units)\n50\n60\n70\n80\n90\nTotal revenue (TR) $\n85\n102\n119\n136\n153\nWhat is the unit price of the firm's output",
+      "options": [
+        {
+          "key": "A",
+          "text": "$10.00",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "$2.70",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "$2.00",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "$1.70",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The table below shows the total revenue schedule of a firm. Use the information to answer the question that follows\nOutput (units)\n50\n60\n70\n80\n90\nTotal revenue (TR) $\n85\n102\n119\n136\n153\nWhat is the firm's marginal revenue?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$153.00",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "$17.00",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "$1.70",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "$O.80",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Organization and entrepreneurship are vested in diferrent persons in a",
+      "options": [
+        {
+          "key": "A",
+          "text": "cooperative society",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sole proprietorship",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "partnership",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "public company.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The public sector in a mixed economy is not always because of",
+      "options": [
+        {
+          "key": "A",
+          "text": "bureaucratic practice",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "the desire to make huge change",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "annual planning of activities",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the activities of shareholders",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "Which function of the wholesaler enables him to stabilize prices?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Warehousing goods",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Advertising the goods",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Granting credit to retailers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Transporting goods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "In the long run, as individuals receive higher wages, it causes",
+      "options": [
+        {
+          "key": "A",
+          "text": "demand for food to decrease",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "demand for leisure to decrease",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "supply of normal goods to decrease",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "supply of labour to decrease",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Labor productivity is defined as",
+      "options": [
+        {
+          "key": "A",
+          "text": "output per man-hour",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "average Output",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the maximum number of hours Worked",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "total output of labour",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Which of the following problem has the least effect on agricultural productivity in West Africa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Incidence of pests and diseases",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Unfavourable weather conditions",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Urban-rural migration",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Illiteracy",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The location of iron and steel industry at a place is due to",
+      "options": [
+        {
+          "key": "A",
+          "text": "easy access to raw materials",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "access to cheap labour",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "government policy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "good infrastructure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Import substitution as a strategy of industrialization is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "replacement of locally produced goods with imported ones",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "development of locally produced goods with imported ones",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "establishment of firms to process imported raw materials",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "act of using local inputs to produce goods for export",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Which of the following are intermediate products?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cement and steel",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Furniture and shirt",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Handkerchief and shoe",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Table and door",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "How is NNP at factor cost derived from GNP at market prices?",
+      "options": [
+        {
+          "key": "A",
+          "text": "GNP - Depreciation + Indirect taxes + Subsidies",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "GNP Depreciation -\nIndirect taxes + Subsidies",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "GNP + Depreciation\nIndirect taxes - Subsidies",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "GNP+\nDepreciation- Indirect taxes + Subsidies",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Inflation may occur if",
+      "options": [
+        {
+          "key": "A",
+          "text": "rate of productivity is higher than the wage rate",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "prices fluctuate during a particular season of the year",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "wage increase is granted without an increase in productivity",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "the government embarks on restrictive monetary policies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Money would cease to be a good store of value when",
+      "options": [
+        {
+          "key": "A",
+          "text": "prices of goods and services are falling slowly",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "there is a high level of unemployment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "prices of goods and services are rising rapidly",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "prices of go0ds and services are rising slowing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "Which of the following factors may lead to the underestimation of national income figures?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Availability of skilled statisticians",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "High volume of exports",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Emigration of skilled workers to foreign countries",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Subsistence production",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Governments in West Africa can curtail inflation by",
+      "options": [
+        {
+          "key": "A",
+          "text": "purchasing securities in the open market",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "selling securities in the open market",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "encouraging importation of goods from all countries",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "encouraging banks to lend for",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The central bank Can reduce the ability of commercial banks to give out loans by",
+      "options": [
+        {
+          "key": "A",
+          "text": "raising the bank rates",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "reducing special deposits",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "reducing the liquidity ratio",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "issuing more currency",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Tools of monetary policy do not include",
+      "options": [
+        {
+          "key": "A",
+          "text": "open market operations",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "reserve requirement",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "bank rate",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "tax and public expenditure",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "During inflation, the appropriate fiscal measure to adopt is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "increase indirect taxes",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "increase direct taxes",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "reduce personal income tax",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increase government expenditure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Mr. X and Mrs. Y pay $500.00 and $1,400.00 as taxes on their earning of S5,000.00 and $7,000.00 respectively. The system of taxation employed is",
+      "options": [
+        {
+          "key": "A",
+          "text": "specific tax",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "proportional tax",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "regressive tax",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "progressive tax",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Expenditure on food takes a large proportion of the incomes of people in",
+      "options": [
+        {
+          "key": "A",
+          "text": "industrialized countries",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "advanced countries",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "developing countries",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "capitalist countries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "A country should embark on development planning to ensure that",
+      "options": [
+        {
+          "key": "A",
+          "text": "it becomes popular among the comity of nations",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "it also does what others are doing",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "its scarce productive resources are efficiently utilized",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "the nation is able to contribute its own quota to international organizations.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "A country is allowed to import just 50,000 tonnes of rice annually. This describes",
+      "options": [
+        {
+          "key": "A",
+          "text": "devaluation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "tariff",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "embargo",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "quota",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Dumping is selling goods in a foreign market at a price",
+      "options": [
+        {
+          "key": "A",
+          "text": "below what is sold at the home market",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "above what is sold at the home market.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "equal to what is sold at the home market",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "equal to the cost of producing the goods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The principle of comparative advantage encourages a country to",
+      "options": [
+        {
+          "key": "A",
+          "text": "produce only consumer goods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "engage in trade if it can produce a commodity at a lower cost",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "specializes in the production of all goods",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "try as much as possible to be self-sufficient",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The foremost objective of the International Bank of Reconstruction and Development (IBRD) is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "help promote private and public investments",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "assist members achieve a balance of payments stability",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "grant long term loans for infrastructure",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "maintain stabilily of foreign exchange",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "In order to discourage the importation of manufactured goods, a country should adopt",
+      "options": [
+        {
+          "key": "A",
+          "text": "import promotion strategy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "export led strategy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "liberal foreign exchange",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "import substitution strategy",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Free trade is one in which",
+      "options": [
+        {
+          "key": "A",
+          "text": "each member operates its own barriers against non-members",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "factors of production are mobile",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "members adopt a common external tariff against non- members",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "members adopt common fiscal and economic policies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "The exploitation of mineral resources constitutes which form of production?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Primary production",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Secondary production",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Tertiary production",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Services production",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "The table below shows the workers engaged by an agricultural firm over a period of time. Study it and answer the questions that follow;\nNumber of workers\nTotal product\nMarginal product\nAverage product\n0\n0\n0\n0\n1\n20\n20\n20\n2\n50\n30\nz\n3\n70\n20\n23.3\n4\n80\ny\n20\n5\n80\n0\n16\n6\nx\n-9.8\n11.7\n(a) Calculate the values of X, Y, and Z.\n(b) At what level of employment of labour does the firm experience:\ni. increasing returns\nii. decreasing returns\nii. negative returns\n(c) State the law of diminishing returns\n(d) i. On a graph sheet, draw the total product and marginal product curves.\nii. State any two relationships between the two curves in (d)(i) above"
+    },
+    {
+      "number": 2,
+      "question": "The figure represents the production possibility curve of a nation, Use it to answer the questions that follow\n(a) What is the opportunity cost of:\ni. producing 30 units of cocoa;\nii. increasing textile production from 30 to 40 bales?\n(b) interpret the following points as found in the graph:\ni. point Y\nii. point G\niii. point X\n(c) List three conditions that can enable the nation to produce at point X.\n(d) State two basic economic concepts illustrated in the diagram above.\n(e) i. Define production possibility curve\nii. What does the slope of the production possibility curve Indicate?",
+      "has_diagram": true,
+      "diagram_note": "The source references a diagram, but no usable image file is available."
+    },
+    {
+      "number": 3,
+      "question": "(a) Define consumer goods.\n(b) Explain the following forms of capital with an example each:\ni. fixed capital\nii. social capital\niii. circulating capital\n(c) Outline three reasons for the low level of savings in a country"
+    },
+    {
+      "number": 4,
+      "question": "(a) Distinguish between the following pairs of terms:\ni. capital expenditure and recurrent expenditure:\nii. fiscal policy and monetary policy.\nb. Explain four reasons why the government of a country imposes taxes."
+    },
+    {
+      "number": 5,
+      "question": "(a) Define tariff.\n(b) State the following laws:\ni. The law of absolute cost advantage:\nii. The law of comparative cost advantage.\n(c) Outline any four assumptions behind the law of comparative cost advantage"
+    },
+    {
+      "number": 6,
+      "question": "a. What is money?\nb. Explain the following concepts:\ni. value of money:\nii. demand for money,\n(c) ldentify any four determinants of transaction demand for money"
+    },
+    {
+      "number": 7,
+      "question": "(a) Distinguish between competitive demand and joint demand.\n(b) Using diagrams, explain how the following factors will affect the equilibrium price and quantity of commodity R in the market\ni. an increase in the price of the Complement of commodity R:\nii. an increase in the price of a substitute of commodity R\niii. imposition of an indirect tax on commodity"
+    },
+    {
+      "number": 8,
+      "question": "(a) Differentiate between subsistence farming and commercial farming.\n(b) State four features of subsistence farming.\n(c) Outlines two positive and two negative effects of mining on the economy of West African countries"
+    }
+  ]
+}

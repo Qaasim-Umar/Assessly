@@ -1,0 +1,1357 @@
+{
+  "subject": "Literature-In-English",
+  "year": 2022,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "A novel that features spiritual apparitions as major character is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Epistolary",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Gothic",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Historical",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Socialogical",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The literary term describing individuals in a work of literature is",
+      "options": [
+        {
+          "key": "A",
+          "text": "characters",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "protagonist",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "narrator",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "villain",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Several hands stretched out for free meals at the refugee camp illustrates",
+      "options": [
+        {
+          "key": "A",
+          "text": "Antithesis",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Euphemism",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Litotes",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Synecdoche",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "A short play performed between the acts of a bigger play for entertainment is",
+      "options": [
+        {
+          "key": "A",
+          "text": "an in media res",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "an interlude",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "an incantation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a deux ex machina",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "In literature, the two components of diction are",
+      "options": [
+        {
+          "key": "A",
+          "text": "sentence construction and punctuation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "vocabulary and punctuation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "syntax and sentence construction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "vocabulary and syntax",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "A story with elements that have both literal and figurative meanings is",
+      "options": [
+        {
+          "key": "A",
+          "text": "an allegory",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a fable",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a novella",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an epistle",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "My bounty is as boundless as the sea my love as deep\nThe above lines illustrate",
+      "options": [
+        {
+          "key": "A",
+          "text": "apostrophe",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "epigram",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "hyperbole",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "euphemism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "In drama, catharsis is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "change of setting",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "conflict between two characters",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "resolution of conflict",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "purgation of emotion from tension",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The poem is",
+      "options": [
+        {
+          "key": "A",
+          "text": "allegoric",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "didactic",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "metaphysical",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "romantic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The tone of the poet is",
+      "options": [
+        {
+          "key": "A",
+          "text": "jocular",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "harsh",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mournful",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sombre",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Lines 3 and 4 illustrate",
+      "options": [
+        {
+          "key": "A",
+          "text": "antithesis",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "oxymoron",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "anti-climax",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "metonymy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "A word or a phrase that is repeated at regular intervals in a poem or a play is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "dirge",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "refrain",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "lullaby",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "verse",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The warriors conquered my men and my country illustrates the use of",
+      "options": [
+        {
+          "key": "A",
+          "text": "Paradox",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Litotes",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Parallelism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Zeugma",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "Disguise in drama mostly portrays the theme of",
+      "options": [
+        {
+          "key": "A",
+          "text": "known identity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "plain identity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "unknown identity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "mistaken identity",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "Men swift to see things done , do not run their commanding.\nThe words in italics exemplify",
+      "options": [
+        {
+          "key": "A",
+          "text": "pun",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "end rhyme",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "internal rhyme",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "paradox",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "An aside in drama is used mostly to create a sense of",
+      "options": [
+        {
+          "key": "A",
+          "text": "admiration",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "conspiracy",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "greatness",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "superiority",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "More haste, less speed illustrates the use of",
+      "options": [
+        {
+          "key": "A",
+          "text": "anaphora",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "paradox",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "litotes",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "synecdoche",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Poetry gets bored of being alone\nIt wants to go outdoors to chew the winds.\nThe mental picture evoked in the above lines is that of",
+      "options": [
+        {
+          "key": "A",
+          "text": "smell and touch",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sight and hearing",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "taste and touch",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sight and taste",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "A novel that recounts the adventures of a likeable rogue is",
+      "options": [
+        {
+          "key": "A",
+          "text": "panegyric",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "gothic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "picaresque",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "grotesque",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "At the fall of their house, the widow lost her husband, her sewing machine and her ear-rings illustrates",
+      "options": [
+        {
+          "key": "A",
+          "text": "bathos",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "epigram",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "pathos",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "oxymoron",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The narrative technique used is",
+      "options": [
+        {
+          "key": "A",
+          "text": "1st person",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Dialogue",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "3rd person",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "stream of consciousness",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The reference to mountain illustrates",
+      "options": [
+        {
+          "key": "A",
+          "text": "allusion",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "irony",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "parallelism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "antithesis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "The overall feeling evoked by the passage is one of",
+      "options": [
+        {
+          "key": "A",
+          "text": "anger",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "empathy",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "love",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "relief",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Flood waters met in a mocking kiss illustrates",
+      "options": [
+        {
+          "key": "A",
+          "text": "contrast",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "euphemism",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "personification",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "litotes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The last sentence conveys the mood of",
+      "options": [
+        {
+          "key": "A",
+          "text": "anxiety",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "despondency",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "excitement",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "nonchalance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The main theme of the poem is",
+      "options": [
+        {
+          "key": "A",
+          "text": "evil of lying",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "hopeless hope",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "message of peace",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "message of war",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The tone of the speaker shows",
+      "options": [
+        {
+          "key": "A",
+          "text": "contentment",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "helplessness",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "patience",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "resilience",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Did your read our minds in your lies? exemplifies",
+      "options": [
+        {
+          "key": "A",
+          "text": "personification",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "oxymoron",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "pathetic fallacy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "rhetorical question",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "But they have soothed us calmly, your lies illustrate",
+      "options": [
+        {
+          "key": "A",
+          "text": "paradox",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "irony",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "synecdoche",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "zeugma",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The last lines of both stanzas present",
+      "options": [
+        {
+          "key": "A",
+          "text": "Negative but similar ideas",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "opposite ideas",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Positive but opposite ideas",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "similar ideas",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Who is the speaker?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Demetrius",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Egeus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Hermia",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Theseus",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Philostrate is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Clown of Hippolyta",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Duke's entertainer",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Fairy king's cuckold",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Rival of Puck",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The speaker's attitude towards melancholy is",
+      "options": [
+        {
+          "key": "A",
+          "text": "adoration",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "dislike",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "intolerance",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "tolerance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "While the speaker is talking",
+      "options": [
+        {
+          "key": "A",
+          "text": "Egeus departs",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Flute arrives",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the fairies sing",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Philostrate departs",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "To win Hippolyta's love, the speaker",
+      "options": [
+        {
+          "key": "A",
+          "text": "disowned his friends",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "had to fight against her",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "killed his father",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sent Puck away",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Speakers X and Y are",
+      "options": [
+        {
+          "key": "A",
+          "text": "Demetrious and Puck",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Lysander and Demetrius",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Hermia and Helen",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Lysander and Puck",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Speaker Y speaks in the voice of",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bottom",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Demetrius",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Oberon",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Lysander",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Speaker Y's intention is to stop",
+      "options": [
+        {
+          "key": "A",
+          "text": "plan",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "fight",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "plot",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "flight",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The wars are over",
+      "options": [
+        {
+          "key": "A",
+          "text": "Helena",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Titania",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Hermia",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Hippolyta",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Speaker Y's speech can be described as",
+      "options": [
+        {
+          "key": "A",
+          "text": "cowardly",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "solemn",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "taunting",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "silly",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The speaker is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Egeus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Oberon",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Puke",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Theseus",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The relationship between the speaker and thou in the first line is one of",
+      "options": [
+        {
+          "key": "A",
+          "text": "companionship",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "friendship",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "king and courtier",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "master and errand boy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "This sweet sight refers to",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bottom and Titania",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Demetrius and Helena",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Lysander and Hermia",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Pyramus and Thisbe",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The pair are lovers by",
+      "options": [
+        {
+          "key": "A",
+          "text": "accident",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "fate",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "design",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "fortune",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The speaker appears to be",
+      "options": [
+        {
+          "key": "A",
+          "text": "blaming himself",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "commending the addressee",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "enjoying himself",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "lamenting the sight",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The speaker is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bottom",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Puck",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Quince",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Peaseblossom",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The speaker has just come out of",
+      "options": [
+        {
+          "key": "A",
+          "text": "an appalling experience",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a nightmare",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "an induced sleep",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a rehearsal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "The architect of the speaker's current state is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hippolyta",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Oberon",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Titania",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Theseus",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "It is a state of",
+      "options": [
+        {
+          "key": "A",
+          "text": "deception",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ignorance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "illusion",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "innocence",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "The speaker's language is best described as",
+      "options": [
+        {
+          "key": "A",
+          "text": "comic",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "satiric",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "conceit",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "metaphoric",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "John K. Kargbo: Let me Die Alone\nHow do men behave towards women in the play?"
+    },
+    {
+      "number": 2,
+      "question": "John K. Kargbo: Let me Die Alone\nDiscuss Gbanya as a remarkable character"
+    },
+    {
+      "number": 3,
+      "question": "WOLE SOYINKA: The Lion and the Jewel\nHow is the contest between tradition and modernity presented in the play?"
+    },
+    {
+      "number": 4,
+      "question": "WOLE SOYINKA: The Lion and the Jewel\nDiscuss the significance of the use of play-within-a play technique."
+    },
+    {
+      "number": 5,
+      "question": "JOHN, OSBORNE: Look Back in Anger\nConsider Jimmy's views about the Victorian society of his time."
+    },
+    {
+      "number": 6,
+      "question": "JOHN, OSBORNE: Look Back in Anger\nComment on Alison's reactions to Jimmy's attacks on her family."
+    },
+    {
+      "number": 7,
+      "question": "AUGUST, WILSON: Fences\nHow does Troy's upbringing influence his relationship with his children?"
+    },
+    {
+      "number": 8,
+      "question": "AUGUST, WILSON: Fences\nTo what extent does Gabriel provide comic relief in the play?"
+    },
+    {
+      "number": 9,
+      "question": "How effective is the use of contrast in The Song of the Women of my Land ?"
+    },
+    {
+      "number": 10,
+      "question": "Examine The Leader and the led as a criticism of leadership in Africa"
+    },
+    {
+      "number": 11,
+      "question": "Consider the mood of the person in The Good Morrow ."
+    },
+    {
+      "number": 12,
+      "question": "Discuss the theme of regret in The Journey of the Magi ."
+    }
+  ]
+}

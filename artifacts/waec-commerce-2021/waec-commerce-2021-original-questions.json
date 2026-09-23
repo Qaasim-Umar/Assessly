@@ -1,0 +1,1289 @@
+{
+  "subject": "Commerce",
+  "year": 2021,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Commerce started as a result of _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "competition",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "distribution",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "privatization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Specialization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The process of changing raw materials into finished goods is ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "construction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "extraction",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "manufacturing",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "marketing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "An example of a primary product is _____",
+      "options": [
+        {
+          "key": "A",
+          "text": "textile",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "palm oil",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "flour",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cocoa",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "All activities geared towards the distribution and exchange of goods and services is _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "commerce",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "market survey",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "personal selling",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "trade",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The word ''limited\" written after the name of a company means that",
+      "options": [
+        {
+          "key": "A",
+          "text": "it has a democratic system of management",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "members are liable to the extent of their shareholdings only",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the company is a going concern",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "profit is determined by management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "Which type of occupation is a carpenter engaged in?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Commercial",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Construction",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Extraction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Manufacturing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The reward for land as a factor of production is",
+      "options": [
+        {
+          "key": "A",
+          "text": "wage",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "rent",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "profit",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "interest",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Which of the following businesses can raise capital through the stock exchange?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sole proprietorship",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Private company",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Public company",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Cooperative society",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "One of the disadvantages of selling on credit is",
+      "options": [
+        {
+          "key": "A",
+          "text": "reduction in turnover",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "reduction in profit",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "increase in liquidity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bad debts",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "A number of shops under one roof is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "chain store",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "department store",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "discount store",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "unit store",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "An organization of producers of similar produces, which controls output with the intention to fix price is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "trust",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "syndicate",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "consortium",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cartel",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "One of the functions of a trade association is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "provide infrastructure for members",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "provide employment for members",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "promote members' welfare",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "pay members' salaries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The practice of selling goods to a foreign country at lower prices than obtainable in the exporting country is",
+      "options": [
+        {
+          "key": "A",
+          "text": "speculation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "skimming",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "hedging",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "dumping",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "A foreign order which instructs an agent to buy certain goods from a particular supplier is",
+      "options": [
+        {
+          "key": "A",
+          "text": "closed indent",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "open indent",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "letter of credit",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "letter of enquiry",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "Which of the following is not a condition for dissolution of a partnership?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Continuous disagreement among partners",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Expiration of a business year",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Mutual consent of the patners",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Termination of the venture",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "A country's balance of trade of -$20 million shows that its",
+      "options": [
+        {
+          "key": "A",
+          "text": "import volume is greater than export",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "import and export volumes are equal",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "export volume is greater than imports",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "exports are mainly primary products",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The collection of import duty is a function of the",
+      "options": [
+        {
+          "key": "A",
+          "text": "ports authority",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "marketing boards",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "clearing and forwarding agents",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "customs and excise authority",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "An error on an invoice may be rectified by issuing",
+      "options": [
+        {
+          "key": "A",
+          "text": "an advice note",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a consignment note",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a credit note",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "a delivery note",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "What is the average stock?",
+      "options": [
+        {
+          "key": "A",
+          "text": "NI0,500",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "N8.500",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "N8,000",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "6000",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The cost of goods sold is",
+      "options": [
+        {
+          "key": "A",
+          "text": "N4,000",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "N9,000",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "N16,000",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "N21,000",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The expected response from the recipient of a quotation is to send",
+      "options": [
+        {
+          "key": "A",
+          "text": "an advice note",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a cheque for payment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "an invoice",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an order",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The main function of a bureau-de-change is",
+      "options": [
+        {
+          "key": "A",
+          "text": "buying and selling foreign currency",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "buying and selling securities information",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "providing trade information",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "selling goods and services",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "The right of a seller to make corrections on invoices is expressed by the term",
+      "options": [
+        {
+          "key": "A",
+          "text": "errors and omissions excepted",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "errors omissions excluded",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "errors and omissions exempted",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "errors and omissions expected",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Speed is an important factor to be considered for the choice of means of transport where goods are",
+      "options": [
+        {
+          "key": "A",
+          "text": "perishable",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "interior",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fragile",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bulky",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The practice by which insurance companies share risks with other insurance companies is",
+      "options": [
+        {
+          "key": "A",
+          "text": "contribution",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "re-insurance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "insurance",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "underwriting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "One of the functions of the ports authority is",
+      "options": [
+        {
+          "key": "A",
+          "text": "checking the activities of smugglers.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "collecting import duties",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "enforcing law and order in harbours",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "providing warehousing services.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Which of the following means of payment requires acceptance by the debtor to make it valuable?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bearer's cheque",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Bill of exchange",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Postal order",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Promissory note",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The purpose for which the Central Bank sells securities is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "reduce the interest rate",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "reduce cash in the economy",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "increase cash in the economy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "incrcase the interest rate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The amount a current account holder is allowed to withdraw in excess of the balance in his account is _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "standing order",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "overdraft",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "interest",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "credit transfer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "One of the qualities of tradable goods is",
+      "options": [
+        {
+          "key": "A",
+          "text": "divisibility",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "heterogeneity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "homogeneity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "perishability",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Which of the following instruments of payment could be used in international trade?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Promissory note",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B. Postal order",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "I. O.U",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Bill of exchange",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Bonded warehouses are supervised by",
+      "options": [
+        {
+          "key": "A",
+          "text": "clearing and forwarding agents",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "customs and excise authorities",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "immigration officers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "posts Authorities",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "An advertising campaign by a chicken seller designed to sell his products at the expense of a beef seller is",
+      "options": [
+        {
+          "key": "A",
+          "text": "competitive",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "direct",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "informative",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "persuasive",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Which of the following business risks would an insurance firm not cover for an entrepreneur?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Theft",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Fire",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Loss of goods in transit",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Change in consumers' taste",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The main idea of the marketing concept is that all the firm's plans and operations should be",
+      "options": [
+        {
+          "key": "A",
+          "text": "product oriented",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "price oriented",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "consumer oriented",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "company oriented.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "A person who is for the purpose of bringing his principal into contractual relationship with third parties is",
+      "options": [
+        {
+          "key": "A",
+          "text": "a merchant",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a consignee",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "a consignor",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an agent",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The transfer of a government company to the public is",
+      "options": [
+        {
+          "key": "A",
+          "text": "commercialization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "localization",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "deregulation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "privatization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "One of the roles performed by middle managers is",
+      "options": [
+        {
+          "key": "A",
+          "text": "formulation of objectives and strategies",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "implementation of organizational plans",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "review and appraisal of operational results",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "review of master plans, programmes, and budgets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Which of the following is responsible for protecting consumers against poor quality goods",
+      "options": [
+        {
+          "key": "A",
+          "text": "Industrial tribunal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Manufacturers associations",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Standard organization of Nigeria",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Trade associations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "The saying that the 'consumer is always right' describes the doctrine of",
+      "options": [
+        {
+          "key": "A",
+          "text": "caveat emptor",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "consumer sovereignty",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "consumer protection",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "proximate cause",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "A disadvantage of privatization is that",
+      "options": [
+        {
+          "key": "A",
+          "text": "there is reduction in the quality of goods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "there is incipiency in the supply of goods",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the existence of monopoly is high",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the profit motive outweighs public interest",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The practice of making a state firm more profit-oriented is",
+      "options": [
+        {
+          "key": "A",
+          "text": "privatization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "nationalization",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "deregulation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "commercialization",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Trade fairs and exhibitions are media of",
+      "options": [
+        {
+          "key": "A",
+          "text": "sales promotion",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "market segmentation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "market research",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Customer service.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The income generated from tourism forms part of the country's",
+      "options": [
+        {
+          "key": "A",
+          "text": "visible imports",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "visible exports",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "invisible imports",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "invisible exports",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "An objective of the European Union is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "eliminate drug addiction in member countries",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "eliminate tariffs and quotas among member countries",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "encourage migrant workers from developing countries",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "fight against child abuse in developing countries.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "An inventor of a new machine for canning tomatoes can protect his product by",
+      "options": [
+        {
+          "key": "A",
+          "text": "obtaining a trademark",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "obtaining a patent",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "labelling the product",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "choosing a brand name",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The concept of determining the objectives of a business and stating how they can be actualized is",
+      "options": [
+        {
+          "key": "A",
+          "text": "directing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "motivating",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "organizing",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "planning",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "One of the aims of ECOWAS is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "provide a market for stocks and shares",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have a common political system",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "foster exchange of goods and services",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "create a common transport policy",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "Differentiate between a merger and an acquisition.\nExplain five ways commerce is important in the life of a nation"
+    },
+    {
+      "number": 2,
+      "question": "Differentiate between the following pairs of terms: (i) Interest and profit: (ii) Share and denture (iii) Ordinary share and preference share (iv)Cumulative preference share and participating preference share (v) Cum div and ex div"
+    },
+    {
+      "number": 3,
+      "question": "(a) State four functions of Money:\n(b)Explain how the following operators function on a stock exchange"
+    },
+    {
+      "number": 4,
+      "question": "(a) List five Means of payment in Home Trade\n(b) Explain ways computers could be useful to a Motor vehicle seller"
+    },
+    {
+      "number": 5,
+      "question": "(a) What is Entrepot Trade?\n(bi)Differentiate between a Bill of Lading and Consignment Note\n(bii) Explain the use of bill of sight in foreign trade\n(c) State five reasons for the criticism against Advertising"
+    },
+    {
+      "number": 6,
+      "question": "Madam Fana, the human resources manager of Baku limited, is due to start her annual leave. She wishes to assign one of her assistants to perform her duties in her absence.\n(i) identify and explain the organizational principle on which Madam Fana has based her decision\n(ii) State four duties of Madam Fana in Baku limited.\n(iii) Explain the following management functions: (a) Planning: (b) Organizing (c) Directing: (d) Controlling"
+    },
+    {
+      "number": 7,
+      "question": "(a) What is an economic grouping?\n(b) State three objectives of each of the following organizations\nI) Lake Chad Basin Commission\nii) ECOWAS\nIii) Niger Basin Commission"
+    },
+    {
+      "number": 8,
+      "question": "(a) Explain the following types of capital (i)Authorized capital (ii) Liquid capital\n(b) the following records were extracted from the books of Bandin and Bachur Partnership as at March 31st, 2020\nEquipment\nI50,000\nCash at bank\n25.000\nCreditors\n120.000\nDebtors\n150 000\nStock as at 1/03/20\n30.000\nMotor van\n300,000\nFixtures and fittings\n40,000\nOverdraft\n45.000\nStock as at 31/ 03/ 20\n25,000\nCalculate: (i) Fixed assets. (ii) Current liabilities: (iii) Current assets: (iv) Working capital (v) Average stock"
+    }
+  ]
+}

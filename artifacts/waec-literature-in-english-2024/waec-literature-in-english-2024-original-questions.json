@@ -1,0 +1,1289 @@
+{
+  "subject": "Literature-In-English",
+  "year": 2024,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "A poem that is shaped in the image of the object it talks about is",
+      "options": [
+        {
+          "key": "A",
+          "text": "concrete",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "lyrical",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "metaphysical",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "romantic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The choir is on wheels to a convention illustrates",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hyperbole",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Allusion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Metonymy",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Personification",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Which of the following helps best to create and sustain interest in a literary work?",
+      "options": [
+        {
+          "key": "A",
+          "text": "plot",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "rhyme",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "rhythm",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "suspense",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The dominant device used in \" Macbeth doth murdered sleep; the innocent sleep\" is",
+      "options": [
+        {
+          "key": "A",
+          "text": "alliteration",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "conceit",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "metonymy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "personification",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "A narrative that extols the deeds of a heroic figure is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "ballad",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "folktale",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "panegyric",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "pastoral",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "Ife is a woman of great virtue\nShe is a woman of great vice illustrate",
+      "options": [
+        {
+          "key": "A",
+          "text": "antithesis",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "alliteration",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "paradox",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "pathos",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The overwhelming confidence and pride that lead to the fall of the protagonist is",
+      "options": [
+        {
+          "key": "A",
+          "text": "catharsis",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ego",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "harmatia",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "hubris",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "The major divisions in a play are",
+      "options": [
+        {
+          "key": "A",
+          "text": "acts",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "chapters",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "scenes",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "stanzas",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The metrical pattern is",
+      "options": [
+        {
+          "key": "A",
+          "text": "anapestic",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "dactylic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "iambic",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "trochaic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The mood of the poet is that of",
+      "options": [
+        {
+          "key": "A",
+          "text": "anger",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "apathy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "drunkenness",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sadness",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "A narrative composed in the form of a letter is",
+      "options": [
+        {
+          "key": "A",
+          "text": "an eponymous novel",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "an epistolary novel",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "a novella",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a panegyric",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The device used in She gave him lots of cash and tender attention is",
+      "options": [
+        {
+          "key": "A",
+          "text": "bathos",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "pathos",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "suspense",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "zeugma",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The Shakespearean sonnet differs from the Petrachan sonnet by ending with a",
+      "options": [
+        {
+          "key": "A",
+          "text": "couplet",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "quatrain",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "sestet",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "tercet",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "Read the lines below and answer the question:\nThe closing of the day\nIs the beginning of the day\nThe lines",
+      "options": [
+        {
+          "key": "A",
+          "text": "are alliterated",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "are repeated",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "end stop",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "run on",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "One of the important means available to a writer of a literary work is",
+      "options": [
+        {
+          "key": "A",
+          "text": "diction",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "fiction",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "stage",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "stanza",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Read the lines below and answer the question:\nThe curl of my lips, the swing of my waist, the\nThe ride of my breast, the stride of my steps, the\nFlash of my tech and the palm of my hand\nThe line is an example of",
+      "options": [
+        {
+          "key": "A",
+          "text": "euphemism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "parallelism",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "personification",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "synecdoche",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Read the lines below and answer the question:\nThe curl of my lips, the swing of my waist, the\nThe ride of my breast, the stride of my steps, the\nFlash of my tech and the palm of my hand\nThe image created in the line appeals to the sense of",
+      "options": [
+        {
+          "key": "A",
+          "text": "sight",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "taste",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "smell",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "touch",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Characters in a play that the author uses as a vehicle for commentary is",
+      "options": [
+        {
+          "key": "A",
+          "text": "chorus",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "dancers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "drummers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "singers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "The _______ comes after the loose ends of the plot have been tied up.",
+      "options": [
+        {
+          "key": "A",
+          "text": "climax",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "denouncement",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "epilogue",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "epilogue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The passage is about",
+      "options": [
+        {
+          "key": "A",
+          "text": "a meeting place",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "jenny's expert cooking",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the disappointment of love",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the passion of love",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The figure of speech used in she was listening to the silence of the room is",
+      "options": [
+        {
+          "key": "A",
+          "text": "conceit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "irony",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "oxymoron",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "zeugma",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The technique of narration is",
+      "options": [
+        {
+          "key": "A",
+          "text": "First person",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Second person",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Third person",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "stream of consciousness",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "In _____ and moved inwards the kitchen, like one sleepwalking, the simile portrays one who is",
+      "options": [
+        {
+          "key": "A",
+          "text": "absent minded",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "disappointed",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "passion driven",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "morose",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The mood is one of",
+      "options": [
+        {
+          "key": "A",
+          "text": "anxiety",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "despondency",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "sorrow",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "regret",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The poem is about",
+      "options": [
+        {
+          "key": "A",
+          "text": "unforgettable",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sacrificial",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "unrequited",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "selfish",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The lines that provide evidence for what the poem is about are _____",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 and 3",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "7 and 8",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "9 and 10",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "11 and 12",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The poem is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "haiku",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "kenning",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "limerick",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "lyric",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The dominant image is one of",
+      "options": [
+        {
+          "key": "A",
+          "text": "beginning",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "flying",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "running",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "waiting",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "In the poem, cupid is",
+      "options": [
+        {
+          "key": "A",
+          "text": "an allusion",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a metonymy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the persona's mistress",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the persona's rival",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The speaker is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Helena",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Hermia",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Philostrate",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Theseus",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "The speaker is addressing",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hippolyta",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Lysander",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Philostrate",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Quince",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "The speech is in reaction to",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hippolyta's rejection of the burden the poor bear",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Philostrate's rejection of the play-within-the play",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the address of the chorus",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the arrival of the players",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The speaker's experience is that",
+      "options": [
+        {
+          "key": "A",
+          "text": "the poor are eloquent",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "even the eloquent can falter in their speech",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the poor are inhibited",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "even the poor can be tongue-tied",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "At the end of the speech,",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hippolyta storms out of the place",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Philostrate announces the prologue",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the ladies settle down",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the curtain is drawn",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The speaker and the addressee are",
+      "options": [
+        {
+          "key": "A",
+          "text": "Demetrius and Lysander",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Hermia and Lysander",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Demetrius and Hermia",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Lysander and Helena",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Earlier the addressee has accused the speaker of",
+      "options": [
+        {
+          "key": "A",
+          "text": "disloyalty",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "infidelity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "murder",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "theft",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "In turn, the speaker accuses the addressee of",
+      "options": [
+        {
+          "key": "A",
+          "text": "cruelty",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "discrimination",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "deceit",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "indiscretion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The underlined lines portray the addressee as a",
+      "options": [
+        {
+          "key": "A",
+          "text": "coward",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "hunter",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "painter",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "traitor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The setting of the extract is",
+      "options": [
+        {
+          "key": "A",
+          "text": "another part of the wood",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Helena's place",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the wood",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Theseus' palace",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "The speaker is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Egeus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Helena",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Lysander",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Titania",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The addressee is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Demetrius",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Hermia",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Oberon",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Puck",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The wildest refers to",
+      "options": [
+        {
+          "key": "A",
+          "text": "good people",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the least cruel man",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "wild beasts",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "the most deceptive",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The speech is intended to ____ the addressee.",
+      "options": [
+        {
+          "key": "A",
+          "text": "confuse",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "pacify",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "provoke",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "reclaim",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Another character present at the scene is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Egeus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Lysander",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Oberon",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Theseus",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "...you and I in the first line refers to",
+      "options": [
+        {
+          "key": "A",
+          "text": "Demetrius and Helena",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Hermia and Helena",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Hippolyta and Lysander",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Oberon and Titania",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The couple are going to the wood because",
+      "options": [
+        {
+          "key": "A",
+          "text": "it is their favourite spot",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "they are running away from the Athenian law",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "they want to have their peace",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the wood is romantic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The underlined expression means being",
+      "options": [
+        {
+          "key": "A",
+          "text": "careful",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "faithful",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "flirtatious",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "reckless",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Farewell, sweet playfellow refers to",
+      "options": [
+        {
+          "key": "A",
+          "text": "Demetrius",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Hermia",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Helena",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Lysander",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "SECTION A: AFRICAN PROSE\nHow is conflict in marriage portrayed in the novel?"
+    },
+    {
+      "number": 2,
+      "question": "SECTION A: AFRICAN PROSE\nExamine the relationship between Adah and Bill."
+    },
+    {
+      "number": 3,
+      "question": "SECTION A: AFRICAN PROSE\nDiscuss the meeting between Nii Tackie and Tally O"
+    },
+    {
+      "number": 4,
+      "question": "SECTION A: AFRICAN PROSE\nExamine Nii's rejection of Linda's advances"
+    },
+    {
+      "number": 5,
+      "question": "SECTION B: NON-AFRICAN PROSE\nHow is the epilogue significant to the structure of the novel?"
+    },
+    {
+      "number": 6,
+      "question": "SECTION B: NON-AFRICAN PROSE\nComment on the use of blindness as a metaphor."
+    },
+    {
+      "number": 7,
+      "question": "SECTION B: NON-AFRICAN PROSE\nWhy does Heathcliff hate Hindley?"
+    },
+    {
+      "number": 8,
+      "question": "SECTION B: NON-AFRICAN PROSE\nHow does the death of Mr Earnshaw affect the fortunes of Heathcliff?"
+    }
+  ]
+}

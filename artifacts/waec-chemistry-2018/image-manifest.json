@@ -1,0 +1,58 @@
+{
+  "subject": "Chemistry",
+  "examType": "WAEC",
+  "year": 2018,
+  "objectiveQuestionCount": 50,
+  "theoryQuestionCount": 19,
+  "questionsWithImages": 3,
+  "uniqueImagesUploaded": 3,
+  "objectPrefix": "question-assets/waec/chemistry/2018",
+  "generatedAt": "2026-09-14T17:24:16.857Z",
+  "questions": [
+    {
+      "sourceId": "49023",
+      "sourceUrl": "https://myschool.ng/classroom/chemistry/49023",
+      "section": "objective",
+      "number": 15,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/ENcKhIgAoW371IpYVrUywG4Kuw4gGuCRAJA7dYyK.jpeg",
+          "objectKey": "question-assets/waec/chemistry/2018/ENcKhIgAoW371IpYVrUywG4Kuw4gGuCRAJA7dYyK.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/chemistry/2018/ENcKhIgAoW371IpYVrUywG4Kuw4gGuCRAJA7dYyK.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 16506
+        }
+      ]
+    },
+    {
+      "sourceId": "49068",
+      "sourceUrl": "https://myschool.ng/classroom/chemistry/49068",
+      "section": "objective",
+      "number": 25,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/SXF3SWeYAOUdwNHgSRzlILmzCYhJSUX0G6AuC8Gv.png",
+          "objectKey": "question-assets/waec/chemistry/2018/SXF3SWeYAOUdwNHgSRzlILmzCYhJSUX0G6AuC8Gv.png",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/chemistry/2018/SXF3SWeYAOUdwNHgSRzlILmzCYhJSUX0G6AuC8Gv.png",
+          "contentType": "image/png",
+          "bytes": 91694
+        }
+      ]
+    },
+    {
+      "sourceId": "49158",
+      "sourceUrl": "https://myschool.ng/classroom/chemistry/49158",
+      "section": "objective",
+      "number": 46,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/y3PjMDR3qvcSDpN3nZHnL68eVs1ciAMSbnKE13N1.jpeg",
+          "objectKey": "question-assets/waec/chemistry/2018/y3PjMDR3qvcSDpN3nZHnL68eVs1ciAMSbnKE13N1.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/chemistry/2018/y3PjMDR3qvcSDpN3nZHnL68eVs1ciAMSbnKE13N1.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 6975
+        }
+      ]
+    }
+  ]
+}

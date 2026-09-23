@@ -1,0 +1,1367 @@
+{
+  "subject": "Literature-In-English",
+  "year": 2017,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "A praise poem is ____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "A Ballad",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "A Panegyric",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "An Allegory",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "An Epigram",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "A literary work in which the characters are animals is a ____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lampoon",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Fable",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Parody",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Pantomine",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "A short single act drama is called____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Opera",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Allusion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Farce",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Playlet",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "Through the trees, I'll hear a single\nRinging sound, a cowbell jingle\nThe underlined is an example of____________ryhme",
+      "options": [
+        {
+          "key": "A",
+          "text": "End",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Feminine",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Internal",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Masculine",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Yet, let me flap this bug with gilded wings,\nThis painted child of dirt, that stinks and stings\nThe alliteration in stinks and stings effectively conveys__________-",
+      "options": [
+        {
+          "key": "A",
+          "text": "Distaste",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Admiration",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Indifference",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Approval",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "Yet, let me flap this bug with gilded wings,\nThis painted child of dirt, that stinks and stings\nThe poets intention is to___________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Create Humor",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Arouse sympathy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Create fun",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Show Contempt",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Yet, let me flap this bug with gilded wings,\nThis painted child of dirt, that stinks and stings\nThe lines illustrates________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Blank Verse",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "End ryhme",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Internal rhyme",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Free Verse",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "A play on words for literary effect is_________",
+      "options": [
+        {
+          "key": "A",
+          "text": "A Paradox",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "A Pun",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "A Satire",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "An Elegy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "\"Its a matter of sad joy\" Iillustrates__________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Metonymy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Oxymoron",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Euphemism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Irony",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The leading character in a literary work is the________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Foil",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Villain",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Antagonist",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Protagonist",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "A narrative poem that relates heroic exploits is an___________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Epilogue",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Epitaph",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Epic",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Epigram",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Over the cobbles it clattered and crashed is an example of__________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Oxymoron",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Pun",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Onomatopoeia",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Paradox",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "An essential features of drama is___________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Soliloquy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Conflict",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Irony",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Aside",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "A humorous poem with five lines, the first two ryhming with the last is______________",
+      "options": [
+        {
+          "key": "A",
+          "text": "An ode",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Sestet",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Octave",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "A Limerick",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "Death be not proud, though some have called thee might and dreadful is an example of___________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Euphemism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Metaphor",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Apostrophe",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Aliteration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "An essential part of the plot is____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Characterization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Exposition",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Atmosphere",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Foreshadow",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The climax in a literary work is the_____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Middle",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Beginning",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Central part of the dialogue",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Peak of the conflict",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Dramatis personae is the same as ____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chorus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Prompter",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Foil",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Cast",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Ten thousand saw i at glance....... Illustrates_________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Caesura",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Climax",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Bathos",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Hyperbole",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "Catharsis is normally associated with____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pantomime",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Tragedy",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Comedy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Farce",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The dominant feeling in the passage is that of______________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hostility",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Anger",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Anxiety",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Bitterness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The feeling is conveyed by the use of_________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Long sentences",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Visual images",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Tactile images",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Short sentences",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Their silence spoke millions illustrates___________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Oxymoron",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Litotes",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Tactile images",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Short sentences",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The family bell summoned us is an example of__________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Apostrophe",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Personification",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Allusion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Euphemism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The passage is__________",
+      "options": [
+        {
+          "key": "A",
+          "text": "In First person",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "In Third Person",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "A Dialogue",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Monologue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The first stanza is a ____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tercet",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Couplet",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Quatrain",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Sestet",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The poem evokes the senses of_______",
+      "options": [
+        {
+          "key": "A",
+          "text": "Smell and Sight",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Smell and Hearing",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Sight and Hearing",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Touch and Smell",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The dominant literary device used in the poem is_____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Allusion",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Repetition",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Allegory",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Metonymy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The poet's tone is one of__________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Anxiety",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Defiance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Nostalgia",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Regret",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "My ears will drink by eager of choice illustrates________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Oxymoron",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Onomatopoeia",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Synecdoche",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Meiosis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "The speaker is_____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Duke",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Othello",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Brabantio",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Cassio",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "The tale being referred to is___________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Duke's war exploits",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Brabantio's rejection of the Othello and Desdemona relationship",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Othello's war exploits",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Brabantio's rejection of Othello's love for his daughter",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "........this tale justifies_________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Roderigo's unrequited love for Desdemona",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Cassio's promotion above Iago",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Desdemona's attraction to Othello",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Brabantio's rejection of Othello's love for his daughter",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The underlined expression means___________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seek counsel elsewhere",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Wait till the war is ended",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Take your revenge",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Make the best out of this",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "According to the speaker__________",
+      "options": [
+        {
+          "key": "A",
+          "text": "The tale was good enough to win a woman's heart",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "The fight was unnecessary",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "The charges were a waste of time",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "There were other matters demanding the attention of the Senate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Othello is speaking to_____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Brabantio",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Duke",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Montano",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Roderigo",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The speech illustrates the use of________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Irony",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Litotes",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Paradox",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Comic relief",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "A man he is honesty and trust refers to_________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cassio",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Lodovico",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Gratiano",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Iago",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Othello is leaving to__________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fight in Rhodes",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Make peace with the Turks",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Meet the government of Cyprus",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Take over the government of Cyprus",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Othello then_________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Leaves with Desdemona",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Entrusts Desdemona to Iago's care",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Calls his lieutenant",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Confers with the Duke",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "His soldiership refers to______________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Roderigo",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Montano",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Cassio",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Brabantio",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Sir refers to__________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cassio",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Roderigo",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Othello",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Duke",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "His eyes refers to____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lodovico",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Cassio",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Othello",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Duke",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The setting is_______",
+      "options": [
+        {
+          "key": "A",
+          "text": "The Castle",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Cyprus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "A sea-port",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Venice",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The speaker is ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Iago",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Othello",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Brabantio",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Duke",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The first two lines express the speaker's_____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Loneliness",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Fear",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Confusion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Regret",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The speaker has just_______________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Divorced his wife",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Arrived home from war",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Had a nightmare",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Smothered his wife",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "The speech is provoked by______",
+      "options": [
+        {
+          "key": "A",
+          "text": "Emilia's call",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Iago's treachery",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Cassio's confession",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Desdemona's plea",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "The underlined expression suggests that____________",
+      "options": [
+        {
+          "key": "A",
+          "text": "There is an imminent eclipse",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Life will never be the same again for the speaker",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Nothing will change",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "There is an impending danger for the speaker",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "Iago___________"
+    },
+    {
+      "number": 2,
+      "question": "AMMA DARKO: Faceless\nExamine the significance of Fofo's visit to Odarley in the novel."
+    },
+    {
+      "number": 3,
+      "question": "AMMA DARKO: Faceless\nConsider Baby \"T\" as a victim of Social Injustice?"
+    },
+    {
+      "number": 4,
+      "question": "BAYO ADEBOWALE: Lonely Days\nHow is Ajumobi portrayed in the Novel?"
+    },
+    {
+      "number": 5,
+      "question": "BAYO ADEBOWALE: Lonely Days\nComment on the attitude of the people of Kufi towards superstition."
+    },
+    {
+      "number": 6,
+      "question": "RICHARD WRIGHT: Native Son\nExamine Mrs Dalton's Blindness as a metaphor for race relations in the novel"
+    },
+    {
+      "number": 7,
+      "question": "RICHARD WRIGHT: Native Son\nComment on the use of irony in the Novel"
+    },
+    {
+      "number": 8,
+      "question": "HORACE WALPOLE: The Castle Of Otranto\nJustify the view that the novel presents a stuggle between good and evil"
+    },
+    {
+      "number": 9,
+      "question": "HORACE WALPOLE: The Castle Of Otranto\nTo what extent can we say that Manfred's downfall is caused by his lust for power?"
+    },
+    {
+      "number": 10,
+      "question": "AFRICAN DRAMA\nDELE CHARELY: The Blood Of A Stranger\nWhat do you learn about the culture of Mando Land in the Play?"
+    },
+    {
+      "number": 11,
+      "question": "AFRICAN DRAMA\nDELE CHARELY: The Blood Of Stranger\nExamine Wara's role in the development of the plot"
+    },
+    {
+      "number": 12,
+      "question": "AFRICAN DRAMA\nFRANK OGODO OGBECHE: Harvest Of Corruption\nJustify the title of the play?"
+    },
+    {
+      "number": 13,
+      "question": "AFRICAN DRAMA\nFRANK OGODO OGBECHE: Harvest Of Corruption\nAssess the character of Ogeyi in the play?"
+    },
+    {
+      "number": 14,
+      "question": "NON-AFRICAN DRAMA\nLorraine Hansberry: A Raisin in the Sun\nExamine the youngers as a close -knit family?"
+    },
+    {
+      "number": 15,
+      "question": "NON-AFRICAN DRAMA\nLorraine Hansberry: A Raisin in the Sun\nHow are Mama, Ruth and Beneatha portrayed in the play?"
+    },
+    {
+      "number": 16,
+      "question": "NON-AFRICAN DRAMA\nOliver Goldsmith: She Stoops to Conquer\nCompare the relationship between Tony and Constance with that between Young Marlow and Kate ?"
+    },
+    {
+      "number": 17,
+      "question": "NON-AFRICAN DRAMA\nOliver Goldsmith: She Stoops to Conquer\nHow does Mr Hardcastle feel towards his step son?"
+    },
+    {
+      "number": 18,
+      "question": "AFRICAN POETRY\nRelate the title of the poem Ambush to the theme of fustrated dreams?"
+    },
+    {
+      "number": 19,
+      "question": "AFRICAN POETRY\nDiscuss the use of symbolism in Okara's Piano and Drums?"
+    },
+    {
+      "number": 20,
+      "question": "NON-AFRICAN POETRY\nComment on the use of pun in Herberts the Pulley?"
+    },
+    {
+      "number": 21,
+      "question": "NON-AFRICAN POETRY\nExamine the theme of Endurance in Birches?"
+    }
+  ]
+}

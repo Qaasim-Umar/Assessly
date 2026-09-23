@@ -1,0 +1,1349 @@
+{
+  "subject": "Government",
+  "year": 2022,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which political system allows only one ideology for the state?",
+      "options": [
+        {
+          "key": "A",
+          "text": "socialism",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "aristocracy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "communalism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "capitalism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "In a representative government, citizens exercise their political power",
+      "options": [
+        {
+          "key": "A",
+          "text": "directly",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "indirectly",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "in reverence for the political system",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "under undue political pressure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "The essence of the concept of devolution is to cater for the interests of the",
+      "options": [
+        {
+          "key": "A",
+          "text": "ruling governement",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "majority",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "minority",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "rule of law",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "A country's constitution may be derived from which one of the following sources?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Educated elites",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Civil society organisations",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "civil disobedience",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Customs and conventions",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "One major problem associated with the cabinet system of government is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "abuse of power",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "frequent change of government",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "large number of ministers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "supremacy of the executive",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "Representative governments around the world pay attention to public opinion because of the following factors except",
+      "options": [
+        {
+          "key": "A",
+          "text": "protection of the government from media scrutiny",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "indication of government in good standing with the people",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "provision of feedback on implementation of government policies",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "national security concerns",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The determination and execution of government policies is the core function of",
+      "options": [
+        {
+          "key": "A",
+          "text": "Public Complain Commission",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Public Service Commission",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Civil Service",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Judicial Service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Public corporation has a legal personality which means that",
+      "options": [
+        {
+          "key": "A",
+          "text": "no legal suit can be brought against",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "it can sue and can be sued",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "it has ultimate power to make its own laws",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "there is a legal department that represents it",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Local Government authorities may not receive cooperation from the local people due to the issue of",
+      "options": [
+        {
+          "key": "A",
+          "text": "top bottom approach to development",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "accessibility to internet facilities",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "lack of support for the ruling governemnt",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "non availability of spiritual centres",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "Delegated legislation can be controlled by",
+      "options": [
+        {
+          "key": "A",
+          "text": "report writing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "press conferences",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "parliamentary question time",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "threat of secession",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "A one-party system imposed by law with all other parties proscribed is",
+      "options": [
+        {
+          "key": "A",
+          "text": "a social party system",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a de jure one party system",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "a communist political system",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an elitist party system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Multi-party system is saddled with the problem of",
+      "options": [
+        {
+          "key": "A",
+          "text": "divisiveness",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "limited choice",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "weak opposition",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "political consciousness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "One of the importance of voting in a democracy is that, it",
+      "options": [
+        {
+          "key": "A",
+          "text": "is less expensive",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ensures development for all voters",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "commits citizens to the political system",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "ensures winner takes all policy.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "An electoral system in which the electorate elects a small group of people who in turn elects political office holders is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "general election",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "second ballot system",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Electoral college",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "local election",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "Most pressure groups especially in West Africa fail to achieve their goals as a result of",
+      "options": [
+        {
+          "key": "A",
+          "text": "good governance",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "charisma of the president",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "transparency of the legislature",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "corrupt leadership",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "A pressure group which resorts to violence as a means of pressing home its demands is described as",
+      "options": [
+        {
+          "key": "A",
+          "text": "anomic",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "associational",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "labour",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "attitudinal",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Press control is necessary for a state, particularly in the area of",
+      "options": [
+        {
+          "key": "A",
+          "text": "the economy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "auditor general's report",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "state security and secrets",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "foreign trade",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The media helps to enrich discourse on national issues through its",
+      "options": [
+        {
+          "key": "A",
+          "text": "marketing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "editorial comments",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "sales and advertisement",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "correspondents",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Information dissemination and communication in a political environment had been made faster and easier with the advent of",
+      "options": [
+        {
+          "key": "A",
+          "text": "educated practitioners",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "press censorship",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "government spokemen",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "social media",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The passing of laws by an arm of government to regulate society is the function of the",
+      "options": [
+        {
+          "key": "A",
+          "text": "judiciary",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "executive",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "legislature",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "police",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Militant nationalism in British West Africa after World War II sought to",
+      "options": [
+        {
+          "key": "A",
+          "text": "kill British nationals",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "overthrow colonialism",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "stop the export of raw materials",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "stop the denigration of the African culture.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "Proto-nationalism was a movement limited to the demands for",
+      "options": [
+        {
+          "key": "A",
+          "text": "immediate end to colonialism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "reforms of the political class and respect for African religion",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "western education",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "social amenities and political participation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "The youth movement across British West African territories served as a spring board for the formation of",
+      "options": [
+        {
+          "key": "A",
+          "text": "militant groups to fight and kill British officials",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "political parties to champion the course of self-rule",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "committees to represent the people",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "associations in pursuit of justice for the people",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "A country's foreign policy is foremost driven by",
+      "options": [
+        {
+          "key": "A",
+          "text": "economy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "location",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "natural resources",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "national interest",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The first inter-territorial political movement organized in the 1920s which sought to bring all the British West African territories together to fight the colonial establishment was the",
+      "options": [
+        {
+          "key": "A",
+          "text": "Aborigines Right Protection Society",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "West African Youth League",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "National Congress of British West African",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "WestAfrican Students Union",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The African Union is unable to play its role on the global political scene very well due to the",
+      "options": [
+        {
+          "key": "A",
+          "text": "inadequate system of education",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "low level of wages in the member countries",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Outbreak of pandemic on the African continent",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "divided loyalty among member states.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Which of the following options does the Commonwealth of Nations commit resources to?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Use of a common currency",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Superiority of the British Crown",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "British Leadership on all matters of diplomacy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Promotion of representative democracy",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Which summit drew the road map for the implementation of the African Union?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sirte Summit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Lusaka Summit",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Lome Summit",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Lagos summit",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "One of the benefits which the West African state derives from the United Nations is",
+      "options": [
+        {
+          "key": "A",
+          "text": "equal opportunities of appointments to its highest office",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "permanent membership of the Security Council",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "greater access to all the organs of the United Nations",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "total eradication of poverty from the African continent",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The Atlantic Charter gave birth to the",
+      "options": [
+        {
+          "key": "A",
+          "text": "Commonwealth of Nations",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Allied powers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "United Nations",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "North Atlantic Treaty Organisation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Which of the following factors does not influence a country's foreign policy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Human resources",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Geographical location",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "System of education and number of universities",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "International laws and conventions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "In which political system does the government control every aspect of a citizen's life?",
+      "options": [
+        {
+          "key": "A",
+          "text": "communism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Dictatorship",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Totalitarianism",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Aristocracy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The administrative head of the ministry is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "official of the ruling government",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "general manager",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "permanent secretary",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "chief coordinating officer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The sovereignty of a state can be limited to a great extent by",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rule of law",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "separation of powers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "International Laws and conventions",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Legislative Assembly",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "A coalition government is a common feature of a",
+      "options": [
+        {
+          "key": "A",
+          "text": "two party systems",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "multi-party system",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "one party system",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "non-party system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The appointment of judges is based on the recommendation of the",
+      "options": [
+        {
+          "key": "A",
+          "text": "Civil Service\nCommission",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Public Service Commission",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Eminent persons in society",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Judicial Service Commission",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Which of the following options is not a function of political parties?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Policy implementation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Political socialisation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Political education",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Aggregation of interest",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "In an election, a secret ballot is described as the process where the voter",
+      "options": [
+        {
+          "key": "A",
+          "text": "is screened off to conceal the vote",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cast the vote in a sealed box",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "in assisted to cast the vote",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "is searched before casting the vote",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "In which system of government does the legislature pass a vote of no confidence in the government?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Federal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Cabinet",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "De jure",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Monarchical",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "The concept of social justice implies that the state must ensure",
+      "options": [
+        {
+          "key": "A",
+          "text": "sharing of political power with opponents",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "security for multi- national businesses",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "equality of citizens",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "fairmess to foreign nationals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The basic human right of citizens in a state are",
+      "options": [
+        {
+          "key": "A",
+          "text": "freedom of movement, free education and free health",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "free social services, speech and religion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "right to life, liberty and property",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Right to higher education, property and freedom of thought",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "A quasi-federal structure is so arranged in order for the",
+      "options": [
+        {
+          "key": "A",
+          "text": "centre to coordinate national level programmes",
+          "is_correct": true
+        },
+        {
+          "key": "A",
+          "text": "citizens to have dual allegiance and dual citizenship",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "component units to breakaway at will",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "president to amend the constitution at will",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "When a superior court declares an action of the executive ultra-vires, it means that",
+      "options": [
+        {
+          "key": "A",
+          "text": "the executive should leave power",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a vote of no confidence had been passed on the government",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the judiciary is more powerful than the executive",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the action is illegal and of no effect",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Which of the following options does not constitute the main objectives of the United Nations?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The maintenance of international peace and security",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The promotion of the well-being of the peoples of the world",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "International cooperation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "The use of force to comply with its provisions",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The Economic Community of West African States was established with the following aims except to",
+      "options": [
+        {
+          "key": "A",
+          "text": "use force to depose unconstitutional regimes",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "improve the living standard of its people",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "contribute to the progress and development of the African continent",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "foster relations among membe states",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The process of international integration arising from the inter-change of world views, products, ideas and other aspects of culture is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "national interest",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "globalisation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "geopolitics",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "interest aggregation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "One negative effect of colonialism on the people of West Africa over the years is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "introduction of modern idea of governance",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "creation of large political units",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "change of the socio-political systems of living",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "development of political institutions",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "The Council of Elders in the pre-colonial political institutions of West Africa best served on the Council as",
+      "options": [
+        {
+          "key": "A",
+          "text": "warriors of the state",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "go-between the gods and the people",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "custodians of the wealth of the state",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "representative of the commoners",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Public corporations are struggling in the West African States as a result of",
+      "options": [
+        {
+          "key": "A",
+          "text": "heavy social and political cost",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "private-public partnership",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "public scrutiny and accountability",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "direct foreign investment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "The following options are today the biggest threat to the democracy of West African States except",
+      "options": [
+        {
+          "key": "A",
+          "text": "election disputes and related violence",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "military intervention in politics",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "youth unemployment",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "non involvement of traditional rulers in politics.",
+          "is_correct": true
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "Identify five reasons for which citizens lose trust in government."
+    },
+    {
+      "number": 2,
+      "question": "In what five ways can the electoral management body ensure fair play in an electoral contest in Nigeria."
+    },
+    {
+      "number": 3,
+      "question": "Highlight five negative impacts on a state should the judiciary fail to live up to its constitutional mandate."
+    },
+    {
+      "number": 4,
+      "question": "Identify five differences between the state as an entity and government as an institution."
+    },
+    {
+      "number": 5,
+      "question": "Explain five reasons for the decline in the public trust of the media in your country."
+    },
+    {
+      "number": 6,
+      "question": "Identify five ways in which traditional rulers controlled their subjects in pre-colonial Nigeria."
+    },
+    {
+      "number": 7,
+      "question": "Outline five significant provisions of the 1989 Third Republican Constitution which deepened the democratic development of Nigeria."
+    },
+    {
+      "number": 8,
+      "question": "Highlight five benefits which the adoption of federalism has brought to the political development of Nigeria."
+    },
+    {
+      "number": 9,
+      "question": "(a) What is meant by E-government? (b) Explain five benefits Nigeria stand to gain in adopting E-governance."
+    },
+    {
+      "number": 10,
+      "question": "Highlight five compelling reasons for which Nigeria interact with international organisations."
+    }
+  ]
+}

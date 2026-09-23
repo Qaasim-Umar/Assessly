@@ -1,0 +1,1420 @@
+{
+  "subject": "Physics",
+  "year": 2018,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The S.I unit for sound energy is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hz",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cd",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "dB",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "J",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The general definition of elastic modulus is",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(\\frac{stress}{strain}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(\\frac{strain}{stress}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(stress \\times strain\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(\\sqrt{\\frac{stress}{strain}}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "The diagram above illustrates a simple barometer. Which distance measures the atmospheric pressure?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 3.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/uyTcizqr5PYVBfixggyMCzV5JutvzN4Kadl4noau.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "PQ",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "QR",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "RS",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "QS",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The property of a body to remain at rest or to continue in uniform motion in a straight line is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "momentum",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Inertia",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "impulse",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Energy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "During a training session, two footballers pass a ball repeatedly between each other. The 'to and fro' motion of the ball is not simple harmonic because the\nI. Acceleration of the ball is not directed towards a fixed point\nII. Restoring force is not directed towards the centre\nIII. Acceleration of the ball is not directly proportional to the displacement from a fixed point\nWhich of the statements above are correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and III only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "I and II only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "II and III only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "I, II and III",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "A dam is able to hold a large quantity of water because its wall is",
+      "options": [
+        {
+          "key": "A",
+          "text": "thickest at the top",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "thickest at the middle",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "thickest at the bottom",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "of the same thickness throughout",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "A body of mass m moving around a circle of radius r with a uniform speed v experiences a centripetal force F. The work done by the centripetal force on it is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fv",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "zero",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Fmr",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(\\frac{Fr}{m}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "A block is acted upon by TWO horizontal forces as illustrated in the diagram above. The block accelerates at 1.5\\(ms^{-2}\\). Calculate the mass of the block.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 8.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/5IL88z55Dysn2Rj0HIQ2otEt4Ib9mT6RZuRe0Otn.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "6kg",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "9kg",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "10kg",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "15kg",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Which of the following quantities are dimensionally independent?\nI. Dielectric constant II. Momentum III. Efficiency IV. Refractive index",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and II",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II, III and IV",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "I, II, III and IV",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "I, III and IV",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "A body is projected with an initial velocity u at angle \\(\\theta\\) to the horizontal. If \\(R_{max}\\) is the maximum range of the projectile, what does the relation \\(\\frac{u^{2}}{R_{max}}\\) represent?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The vertical distance covered",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Acceleration due to gravity",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "The horizontal distance covered",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "The acceleration of the body",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "An object at rest is said to possess",
+      "options": [
+        {
+          "key": "A",
+          "text": "potential energy",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "kinetic energy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "chemical energy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "electrical energy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "According to Newton's law of cooling, the heat energy lost per unit area of a body depends on the\nI. Surface area\nII. Nature of the surface\nIII. Temperature of the surface\nIV. Excess temperature over the surroundings",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and II only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II and IV only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "I,II and III",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "I, II and IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The graph of density against temperature for water is correctly illustrated by",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 13.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/YcGNZFRDUcHX9EXxSKqW5qzi7OcS9gcd6hjzUDJk.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "A football is kicked at an angle of 45° to the horizontal over a defense line up with a velocity of 15\\(ms^{-1}\\). Calculate the magnitudeof horizontal velocity of the ball at its highest point [Neglect friction, g = 10\\(ms^{-2}\\)].",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.0\\(ms^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "5.6\\(ms^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "10.6\\(ms^{-1}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "15.0\\(ms^{-1}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The ice point on the absolute scale of temperature is",
+      "options": [
+        {
+          "key": "A",
+          "text": "0K",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "32K",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "100K",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "273K",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Which of the following factors does not increase the rate of evaporation of water in a lake?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Increase in the pressure of the atmosphere",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Rise in temperature",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Increase in the surface area of the lake",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Increase in the speed of the wind",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The bob of a simple pendulum takes 8.0s to complete 10 oscillations. Determine the frequency of oscillation of the bob.",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.125Hz",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "1.25Hz",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "7.50Hz",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "8.00Hz",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The diagram above illustrates the mercury-in-glass thermometer used for determining the temperature of a room. Use the data on it to determine the room temperature.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 18.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/WX5ed98XlQR1Qozpi1dI371FVBXs9370WtqWKCDH.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "3.3°C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "7.0°C",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "13°C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "30.0°C",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Frequency is measured in",
+      "options": [
+        {
+          "key": "A",
+          "text": "meter per second",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "seconds",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "hertz",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "farad",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "Which of the following electromagnetic waves is most energetic?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Radio waves",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "X-ray",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Gamma rays",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Ultra-violet rays",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Rainbow formation is a natural phenomenon illustrating that white light",
+      "options": [
+        {
+          "key": "A",
+          "text": "splits into three components after rainfall",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "is dispersed by glass prisms",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "splits into its constituent colours before rainfall",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "is dispersed into its constituent colours after rainfall",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The lens illustrated above can best be described as a",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 22.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/ZlKk0sb0Zxjuq9Bp9mbKQYuUGQZukhyuO2kd4Khe.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "converging meniscus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "plano-convex",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "diverging meniscus",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bi-convex",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Two plane mirrors are inclined to each other such that an object placed between them has 11 images. Determine the angle of inclination",
+      "options": [
+        {
+          "key": "A",
+          "text": "30°",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "45°",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "60°",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "90°",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The pitch of a note is not affected by",
+      "options": [
+        {
+          "key": "A",
+          "text": "frequency",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "tension in a vibrating string",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mass of a vibrating string",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "amplitude of sound wave",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "When two flat plate conductors are arranged in such a way that they possess equal and opposite charges seperated by a dielectric, they form a/an",
+      "options": [
+        {
+          "key": "A",
+          "text": "electroscope",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "electrophorus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "capacitor",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "cell",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Which electrical device is illustrated above?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 26.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/gQKivMw3t1dHVoSCxgNqAOAxyphgDyBiJSUxKbGH.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "a.c. generator",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a.c. motor",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "d.c. generator",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "d.c. motor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "A simple barometer is constructed using a liquid \\(Q_{1}\\) of density 16.2\\(g/cm^{3}\\). Calculate the least lenth of the tube to be used to measure pressure of 1.5atm. [Density of mercury = 13.6\\(g/cm^{3}\\), 1atm = 76.0 cm of Mercury]",
+      "options": [
+        {
+          "key": "A",
+          "text": "1358mm",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "957mm",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "760mm",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "638mm",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "A bar AB is balanced horizontally on two knife edges as illustrated as in the diagram above. Determine the weight of the bar.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 28.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/iEyRIUR4TPZpAhDl7V3gL64T3r6Gc8vJzRDS3GpA.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "10.0N",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "20.0N",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "40.0N",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "50.0N",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "To obtain a virtual, erect and magnified image from a thin converging lens, an object must be placed",
+      "options": [
+        {
+          "key": "A",
+          "text": "between the focus and the lens",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "at the focus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "between the focal length and twice the focal length",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "beyond twice the focal length",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The diagram above represents a transverse travelling wave. Which two points are 180° out of phase?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 30.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/ImUaRf4JhZu9qruidw6RhPejedsGtsYMocXMwUgt.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "A and E",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B and D",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "C and F",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "D and H",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Two objects P and Q of masses 100kg and 20kg respectively are 1.2m apart on a horizontal surface. Calculate the net gravitational force acting on Q. \\([G= 6.67 \\times 10^{-11} Nm^{2}kg^{-2}]\\)",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(1.11\\times 10^{-7} N\\) towards P",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(1.11\\times 10^{-7} N\\) towards Q",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(9.26\\times 10^{-8} N\\) towards P",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "\\(9.26\\times 10^{-8} N\\) towards Q",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "The primary of a transformer has 100 turns and its secondary has 200 turns. If the voltage at the primary is 100V, determine the voltage at the secondary.",
+      "options": [
+        {
+          "key": "A",
+          "text": "50V",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "100V",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "200V",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "400V",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "In the diagram illustrated a block of mass M is at rest on a plane inclined at an angle \\(\\theta\\) to the horizontal. As \\(\\theta\\) increases, the velocity ratio of the plane",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 33.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/jUjB763KM7OZVfO0Nzw0wes21mv1HAjFIwMqBAkv.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "increases",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "decreases",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "remain the same",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "decreases and later increases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "When the speed of a car is halved, its kinetic energy is",
+      "options": [
+        {
+          "key": "A",
+          "text": "doubled",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "quartered",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "halved",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "quadrupled",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "A wire of length 400cm is stretched between two fixed points. When plucked, its fundamental frequency is 150Hz. Calculate the speed of the wave produced.",
+      "options": [
+        {
+          "key": "A",
+          "text": "250\\(ms^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "625\\(ms^{-1}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1200\\(ms^{-1}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "1500\\(ms^{-1}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The diagram above illustrates a waveform. Determine the number of wavelengths in it",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 36.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/UgFXJcv6zJ5FOUBgMzsTYHGPSFB4elWqmO6YEVwI.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "3\\(\\frac{1}{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "2\\(\\frac{1}{2}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "2",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "A resistor with fixed resistance value is called a",
+      "options": [
+        {
+          "key": "A",
+          "text": "resistance box",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "standard resistor",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "shunt resistor",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "multiplier resistor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Which of the following statements is not an advantage of an alkaline accumulator?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The electrolyte does not need attention",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "It can be recharged",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "It has low internal resistance",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "It has a much longer life than lead-acid accumulator",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The diagram above illustrates the wire connections to a three-pin plug. The wires P, Q and R respectively are:",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 39.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/1NSpzXQYSGws81LjQv3rMDzUcBCC0tGd3nDXcOw7.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "live, neutral and earth",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "neutral, earth and live",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "earth, live and neutral",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "earth, neutral and live",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Which of the following statements about parallel plate capacitors is/are correct?\nI. Capacitance of the capacitor is inversely proportional to the distance between the plates\nII. Capacitors can filter a.c signals from d.c\nIII. Capacitors can store charges",
+      "options": [
+        {
+          "key": "A",
+          "text": "I only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "I and II only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "II and III only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "I, II and III",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The circuit contains three ammeters A1, A2 and A3 with readings of A2 and A3 shown as indicated in the diagram. Determine the reading of A1.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 41.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/1NwdT1ubhINFvcvzRXAvjYP2Pq6d8CsAxi0r7f4Z.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "2A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "3A",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "5A",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "8A",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Which of the following statements about magnetic lines of force is not correct? They",
+      "options": [
+        {
+          "key": "A",
+          "text": "pass through even non-magnetic materials",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "run from the north pole to the south pole",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "are in a state of tension and tend to be shorted",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "intersect one another",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "In which of the following activities is an induction coil not useful?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Investigation of high voltages",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Study of electric discharge",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Operation of X-ray tubes",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "A.C. power transmission",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "In a series R-L-C circuit, R = 10\\(\\Omega\\), \\(X_{c}\\)= 4\\(\\Omega\\) and \\(X_{L}\\) = 9\\(\\Omega\\). The impedance of the circuit is",
+      "options": [
+        {
+          "key": "A",
+          "text": "4.1\\(\\Omega\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "5.0\\(\\Omega\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "10.8\\(\\Omega\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "11.2\\(\\Omega\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "A student uses two compass needles to investigate the magnetic field around a bar magnet. Which of the following diagrams show the correct directions of the needles?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 45.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/zQ2iDQSCNsLTdLPR4lgwywmtv6Yeqe2qtg6xnSBp.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "D",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Which of the following is emitted in a process of natural radioactivity?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(\\alpha\\)- particles and \\(\\beta\\)- particles",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(\\alpha\\)- particles and X-rays",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(\\beta\\)- particles and X-rays",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(\\lambda\\)- rays and X-rays",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "In which of the following situations is photoelectric effect employed?\nI. Automatic devices for switching on light at dusk\nII. Automatic doors in departmental stores\nIII. Automatic devices for switching on air conditioners\nIV. Automatic voltage stabilizers",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, II and IV only",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "I, III and IV only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III and IV only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "I and II only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Which of the following radiations has the longest wavelength?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gamma ray",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Radio wave",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Infrared ray",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "X-ray",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "In which of the following fields is radioisotopes not used?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Medicine",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Oil industry",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Agriculture",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Weather forecast",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "A nuclide is represented by \\(_{32}^{70}B\\). Determine its neutron-proton ratio",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.5",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.8",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1.2",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "1.5",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) Define strain.\n(b) A rubber band is stretched to twice its original length. Calculate the strain on the rubber band."
+    },
+    {
+      "number": 2,
+      "question": "State three materials used for making optical fibres."
+    },
+    {
+      "number": 3,
+      "question": "Name three classes of magnetic materials."
+    },
+    {
+      "number": 4,
+      "question": "(a) What is an intrinsic semiconductor?\n(b) Distinguish between the p-type and n-type semi-conductors."
+    },
+    {
+      "number": 5,
+      "question": "A missile is projected so as to attain its maximum range. Calculate the maximum height attained if the initial velocity of projection is 200 ms\\(^{-1}\\). [g = 10ms\\(^{-2}\\)]"
+    },
+    {
+      "number": 6,
+      "question": "A black body radiates maximum energy when its surface temperature T and the corresponding wavelength \\(\\lambda\\)max are related by the equation \\(\\lambda\\)max T = constant. Given the values of the constant and surface temperature as 2.9 x 10\\(^{-3}\\) mK and 57°C respectively; Calculate the frequency of the energy radiated."
+    },
+    {
+      "number": 7,
+      "question": "a) What does the acronym LASER stand for?\nb) What is a laser?"
+    },
+    {
+      "number": 8,
+      "question": "(a) Define uniform acceleration.\n(b) Forces act on a car in motion. List the\n(i) horizontal forces and their directions;\n(ii) vertical forces and their directions\n(c) A car starts from rest and accelerates uniformly for 20s to attain a speed of 25 ms\\(^{-1}\\). It maintains this speed for 30s before decelerating uniformly to rest. The total time for the journey is 60 seconds.\n(i) Sketch a velocity-time graph for the motion.\n(ii) Use the graph to determine the (\\(\\alpha\\)) total distance travelled by the car (\\(\\beta\\)) deceleration of the car.\nThe figure above illustrates a force-extension graph for a stretched spiral spring. Determine the work done on the spring. SEE THE DIAGRAM ABOVE",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 8.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/NzNHTyDvBkhzuOtnYuL60NCK2WOcvoTcn4wHnuzF.png"
+    },
+    {
+      "number": 9,
+      "question": "(a) List two factors each that affect heat loss by:\n(i) radiation;\n(ii) convection.\n(b) State two factors that determine the quantity of heat in a body.\n(c) Explain the statement: The vecilic latent heat of vaporization of mercury is 2.72 x 10\\(^5\\) Jkg\\(^{-1}\\).\n(d)A jug of heat capacity 250 Jkg\\(^{-1}\\) contains water at 28°C. An electric heater of resistance 35\\(\\Omega\\) connected to a 220 V source is used to raise the temperature of the water until it boils at 100°C in 4 minutes. After. another 5 minutes, 300 g of water has evaporated. Assuming no heat is lost to the surroundings, calculate the:\n(i) mass of water in the jug before heating;\n(ii) specific latent heat of vaporization of steam. [Specific heat capacity of water = 4200 kg\\(^{-1}\\)K\\(^{-1}\\)]"
+    },
+    {
+      "number": 10,
+      "question": "(a) Define dffraction.\n(b)(i) Explain critical angle. The diagram here illustrates a ray of light passing through a rectangular transparent plastic block \\(\\alpha\\) Determine the value of the critical angle. \\(\\beta\\) Calculate the refractive index of the block.\n(c) A pipe closed at one end has fundamental frequency of 200Hz. The frequency of the first overtone of the closed pipe is equal to the frequency of the first overtone of an open pipe. Calculate the:\n(i) fundamental frequency of the open pipe;\n(ii) length of the closed pipe;\n(iii) length of the open pipe. [Speed of sound in air = 330 ms\\(^{-1}\\)]"
+    },
+    {
+      "number": 11,
+      "question": "(a) Define:\n(i) reactance;\n(ii) impedance in an a.c.\nThe diagram here illustrates an a.c. generator. When the coil is rotated, an e.m.f is induced in the coil.\n(i) Explain why an e.m.f. is induced.\n(ii) State the purpose of the slip-rings.\n(iii) Name and state the law used to determine the direction of the induced current.\n(iv) State two ways to increase the induced e.m.f.\n(c) A lamp is rated 12 V. 6 W. Calculate the amount of energy transformed by the lamp in 5 minutes."
+    },
+    {
+      "number": 12,
+      "question": "(a) Define binding energy in an atom.\n(b) List three evidence to support the claim that X-rays are electromagnetic waves.\n(c) List three peaceful uses of nuclear energy.\n(d) Light of wavelength 4.5 x 10\\(^{-7}\\) in is incident on a metal resulting in the emission of photo electrons. If the work function of the metal is 3.0 x 10\\(^{-9}\\) J, calculate the:\n(i) frequency of the incident light;\n(ii) energy of the incident light;\n(iii) energy of the photoelectrons. [Speed of light = 3.0 x 10\\(^8\\) ms\\(^{-1}\\), h = 6.6 x 10\\(^{-34}\\) Js]"
+    },
+    {
+      "number": 13,
+      "question": "You are provided with a pendulum bob, a metre rule, a stopwatch, a retort stand with clamp, and other necessary apparatus.\ni. Suspend the pendulum bob from the clamp as illustrated in the diagram.\nii. Adjust the pendulum such that AC=L= 90 cm\niii. Displace the pendulum bob slightly such that it oscillates in a vertical plane.\niv. Measure and record the time t for 20 complete oscillations.\nv. Evaluate T and \\(\\sqrt L\\)\nvi.Repeat the procedure for four others values of L= 80 cm,70 cm, 60 cm, and 50cm.\nvii. Tabulate your readings\nviii. Plot a graph with T on the vertical axis and \\(\\sqrt L\\) on the horizontal axis.\nix. Determine the slope, s, of the graph.\nx. Evaluate g= \\(\\frac{4\\pi^{2}}{5^{2}}\\)\nxi. State two precautions taken to ensure accurate results.\n(b) i. Determine from your graph, the period of the pendulum for L= 75 cm.\nii. A simple pendulum bob is set into simple harmonic motion. Sketch a diagram of the setup and indicate on it; the positions of:\n(a) maximum velocity.\n(b) maximum acceleration of the bob",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 13.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/byXUuLAKbd37yD93GYaKwzCVhQrRpevcXkHlaQlZ.jpg"
+    },
+    {
+      "number": 14,
+      "question": "You are provided with a metre rule, lens, screen, ray box, and other necessary apparatus.\ni. Set up the experiment as shown in the diagram above. Measure and record the diameter a\\(_{0}\\), of the illuminated object.\nii. Place the object at a distance x= 25cm from the lens. Adjust the screen until a sharp image is obtained on the screen.\niii. Measure and record the diameter, a, of the image.\niv. Measure and record the distance v between the lens and the screen.\nv. Evaluate y = P = \\(\\frac{1+y^{2}}{y}\\) and T= x+v.\nvi. Repeat the procedure for x = 30cm, 35cm, 40cm and 45cm. In each case, determine the corresponding values of a,v,y, P and T.\nvii. Tabulate your results.\nviii. Plot a graph of P on the vertical axis against T on the horizontal axis starting both axes from the origin (0,0).\nix. Determine the slope, s, of the graph.\nx. Determine the intercept, c, on the horizontal axis.\nxi Evaluate K = \\(\\frac{c}{2}\\)\nxii. State two precautions taken to ensure accurate results.\n(b)i. Explain the statement, the focal length of a converging lens is 20cm.\nii. An object is placed at a distance x from a converging lens of focal length 20cm. If the magnification of the real image is 5, calculate the value of x .",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 14.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/kq8LvTx2maOiwnmRjNHI3FfXKCBMFefEFUM3Vm26.jpg"
+    },
+    {
+      "number": 15,
+      "question": "You are provided with an ammeter, a resistor, key, metre bridge, and other necessary apparatus.\ni. Connect a circuit as shown in the diagram above.\nii. Close the key and use the jockey to make contact with AB at N such that AN = d = 25cm\niii. Read and record the ammeter reading.\niv. Evaluate 1\\(^{-1}\\).\nv. Repeat the procedures for values of d = 35cmm, 50cm, 65cm and 80cm. In each case, record I and determine 1\\(^{-1}\\)\nvi. Tabulate your results.\nvii. Plot a graph with log on the vertical axis and d on the horizontal axis.\nviii. Determine the slope, s of the graph.\nix. State two precautions taken to obtain accurate results.\n(b)i. Use your graph to determine the value of d = l = 1.5A.\nii. State two factors that affect the resistance of a wire.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 15.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2018/3p4nDwDr3NtUg7jkzYms96XgHXRZP0nLfSSfI9aP.png"
+    }
+  ]
+}

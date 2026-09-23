@@ -1,0 +1,1349 @@
+{
+  "subject": "Government",
+  "year": 2018,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "A government performs the following functions except?",
+      "options": [
+        {
+          "key": "A",
+          "text": "safeguarding life and property",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "maintaining law and order",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "providing all the needs of its citizens",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "providing basic welfare needs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "A political system in which the government controls every aspect of a citizen's life is _________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "feudalism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "monarchy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "democracy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "totalitarianism",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "A political system in which the state owns and controls the major means of production is known as?",
+      "options": [
+        {
+          "key": "A",
+          "text": "feudalism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "socialism",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "fascism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "capitalism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "Communist governments aim at distributing goods and services according to _____________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "gender and class",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "loyalty to the party",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "need and ability",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "work and residence",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The theory of separation of power is associated with?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Jean Bodin",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Baron de Montesquieu",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "A.V Dicey",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "J.J Rousseau",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The basic purpose of setting up a state is to ___________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "maintain law and order",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "protect foreign interest",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Promote development",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "provide social facilities",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The process of taking part in the selection of leaders in a country is political ___________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "socialization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "participation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "interaction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "culture",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "By comparison, a state is ______________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "less permanent than a government",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "more permanent than a government",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "more changeable than a government",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "equally permanent with a government",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "in modern democracy, a government is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "a contract between the rulers and the ruled",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a preserve of the political party in power",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "monopoly of the ethnic groups in the majority",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "alternation of power between the minority and majority tribes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The rule of law can be limited by?",
+      "options": [
+        {
+          "key": "A",
+          "text": "power",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "state of emergency",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "legitimacy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "checks and balances",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "The principle of separation of power becomes meaningful when it is linked with the concept of?",
+      "options": [
+        {
+          "key": "A",
+          "text": "the certainty of the law",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "checks and balances",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "legality of the law",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "judicial independence",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Which of the following does not militate against representative government in West Africa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "electoral irregularities",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "coup d' etat",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "gagged media",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "universal adult suffrage",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "Those who believe in democracy and good governance are opposed to a single party system because?",
+      "options": [
+        {
+          "key": "A",
+          "text": "encourages weak leadership",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "does not ensure national unity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "curtails personal liberty",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "encourages divisiveness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The fundamental law of a country refers to its?",
+      "options": [
+        {
+          "key": "A",
+          "text": "acts of parliament",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "conventions",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "constitution",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "judicial precedence",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "A country's constitution could be derived from the following sources except?",
+      "options": [
+        {
+          "key": "A",
+          "text": "judicial precedents",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "customary sources",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "statutory sources",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "party manifestoes",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Planning and formulation of government policies are first initiated at?",
+      "options": [
+        {
+          "key": "A",
+          "text": "cabinet meetings",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "media houses",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "political rallies",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "open forum",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Which of the following is the primary function of a parliament?",
+      "options": [
+        {
+          "key": "A",
+          "text": "impeachment of the president",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "making of laws",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "ratifying international treaties",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "acting as an electoral college",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Judicial review is a mechanism for checking __________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "arbitrary use of power",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "irresponsible journalism",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "electoral malpractices",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "military adventures",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "In a parliamentary system of government, the legislature and executive are fused to ensure\n.",
+      "options": [
+        {
+          "key": "A",
+          "text": "supremacy of the ruling party in administering the state",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "smoothness in the administration of the state",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the constitution is read in parliament at all time",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the judiciary consults parliament before ruling on cases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "A country with homogeneous societies and a small population is suitable for the establishment of ____________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "a unitary state",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a nation state",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a federal state",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an autonomous state",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Which of the following factors usually leads to the collapse of a confederal state?",
+      "options": [
+        {
+          "key": "A",
+          "text": "weak central government",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "absent of a confederal parliament",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ill equipped armed forces",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "absence of a ceremonial head of state",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "In the presidential system of government, the chief executive is responsible to the _____________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "judiciary",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "monarch",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "electorate",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "senate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "A federal government is a form of __________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "decentralization",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "centralization",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "confederation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "revolution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Which of the following alternatives is a feature of a federation",
+      "options": [
+        {
+          "key": "A",
+          "text": "unwritten constitution",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "unicameral legislature",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "supremacy of the constitution",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "right to secede",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "To preserve individual liberties, the judiciary should _____________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "consist of honest and impartial judges",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "be appointed by the executives",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "be prosecuted for judgement against the executive",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "participate in partisan politics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Citizens can seek redress against injustice from the state through the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ombudsman",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "head of civil service",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "civil service commission",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "titular executive",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Which of these functions is performed by both political parties and pressure groups?",
+      "options": [
+        {
+          "key": "A",
+          "text": "interest aggregation and articulation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "source of mediation in a state",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "provision of specialized information",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "seeking to manage the affairs of the state",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Which of these is not a source of revenue for political parties?",
+      "options": [
+        {
+          "key": "A",
+          "text": "dues",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "grants",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "tolls",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "donations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "Pressure groups seek to influence the policies of the government ______________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "to the advantage of their members",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "so that all citizens can benefit",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "to suit the manifestos of political parties",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "to conform with electoral act",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Which of the following agencies helps the most in shaping public opinion?",
+      "options": [
+        {
+          "key": "A",
+          "text": "pressure groups",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "mass media",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "college and universities",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "peer groups",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Public opinion can be measured through all of the following except the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "imposition of laws without any debate",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "conduct of opinion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "general review",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "holding of referendum in a state",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "An electoral system which allows party members to elect candidates for elective offices is called?",
+      "options": [
+        {
+          "key": "A",
+          "text": "by election",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "primary election",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "general election",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "direct election",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "On which of the following grounds can a citizen abstain from voting?",
+      "options": [
+        {
+          "key": "A",
+          "text": "religion",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "education",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "wealth",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "status",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Indirect election is best described as?",
+      "options": [
+        {
+          "key": "A",
+          "text": "only women electing legislators",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the citizenry electing legislators",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "electoral college electing legislators",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "only adults electing legislators",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The class that controls and supervises the activities of the executive class in the civil service is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "clerical class",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "manipulative class",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "professional class",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "administrative class",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The agency responsible for investigating allegations of maladministration and punishing offending career officers in the executive is the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "federal character commission",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ethics commission",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "judicial commission",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "public/civil service commission",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The anonymity of civil servants means that they should not be?",
+      "options": [
+        {
+          "key": "A",
+          "text": "prosecuted for any professional misconduct",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "disciplined because of their expertise",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "above the law of the land",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "praised or blamed publicly",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The following were limitations imposed on traditional rulers under colonial rule except?",
+      "options": [
+        {
+          "key": "A",
+          "text": "were not permitted to raise armed forces",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "had no power to impose tax",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "had no power to install or dispose a chief",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "were no longer spiritual heads of the people",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "A system of administration which allowed traditional rulers to rule their people under the supervision of the British officials in West Africa is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "divide and rule",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "colonization",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "indirect rule",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "assimilation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Local government is established in order to _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "bring government nearer to the people",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "build churches and mosque",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "curb corruption in the society",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "promote political apathy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "One reason for the adoption of Indirect Rule in British West Africa was?",
+      "options": [
+        {
+          "key": "A",
+          "text": "availability of British officials",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "to ensure justice",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "inadequate finance",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "to assimilate the indigenes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Which of the following policies replaced Assimilation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "indigenat",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "loi cadre",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "association",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "indirect rule",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Which of the following is a reason for the failure of the assimilation policy in French West Africa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "the change in the name of their culture",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the refusal of Africans to be culturally colonized",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the democratic policy of the french",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bribery of the opinion leaders by the french",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Nationalism prior to the second world war was led by?",
+      "options": [
+        {
+          "key": "A",
+          "text": "educated elites and chiefs",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "chiefs and elders",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "aggrieved cocoa farmers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "African merchants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Which of the following is not a factor leading to military intervention in West African states?",
+      "options": [
+        {
+          "key": "A",
+          "text": "excessive control of public enterprise",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "falsification of election results",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mismanagement of the country's economy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "corruption in high places",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "One of the problems of military administration in West Africa is that soldiers",
+      "options": [
+        {
+          "key": "A",
+          "text": "are representatives of the people",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "lack discipline",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "are not well organized",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "are not trained for governance",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "In order to promote democracy and good governance, the commonwealth of Nations",
+      "options": [
+        {
+          "key": "A",
+          "text": "prosecutes leaders who commit atrocities at the international criminal court",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "organises seminars and training programs on technical assistance to members",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "sanction members who do not pay their dues",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sponsors election observer teams to monitor the conduct of elections.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "The foreign policy of a country could be influenced by?",
+      "options": [
+        {
+          "key": "A",
+          "text": "personality of political leader",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "number of schools in a country",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "number of ministers in a country",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "national",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Which of the following is not a problem faced by ECOWAS",
+      "options": [
+        {
+          "key": "A",
+          "text": "financial security",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "political instability",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "larger market",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "colonial heritage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "The United Nation Organisation (UNO) is primary regarded as successful because",
+      "options": [
+        {
+          "key": "A",
+          "text": "its members continue to increase",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "of its control of outbreak of another world war",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "all member countries have veto power",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "more member countries acquire more nuclear power",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) Define society\n(b) identify four features of a society"
+    },
+    {
+      "number": 2,
+      "question": "(a) what is communalism\n(b) state four difference between feudalism and communalism."
+    },
+    {
+      "number": 3,
+      "question": "(a). Highlight three methods of acquiring citizenship\n(b). Outline two conditions an alien must satisfy before becoming a citizen of another country."
+    },
+    {
+      "number": 4,
+      "question": "(a) Define opinion polls.\n(b). state any four factors that make the conduct of opinion poll unreliable in West Africa"
+    },
+    {
+      "number": 5,
+      "question": "(a). Define a constituency\n(b). Highlight any four merits of the singular member constituency."
+    },
+    {
+      "number": 6,
+      "question": "Highlight five features of the Hausa/Fulani pre-colonial political system in Nigeria"
+    },
+    {
+      "number": 7,
+      "question": "(a) What is proto-Nationalism?\n(b). Identify four features of proto-nationalism."
+    },
+    {
+      "number": 8,
+      "question": "Highlight five functions of the president in the 1989 constitution of Nigeria"
+    },
+    {
+      "number": 9,
+      "question": "What mechanism should be put in place to forestall military intervention in politics."
+    },
+    {
+      "number": 10,
+      "question": "State five obstacles to the implementation of the Economic Community of West African States (ECOWAS) aims and objectives."
+    }
+  ]
+}

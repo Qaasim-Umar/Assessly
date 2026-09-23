@@ -1,0 +1,1375 @@
+{
+  "subject": "Commerce",
+  "year": 2019,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "A firm which turns timber into wooden office desks belongs to the",
+      "options": [
+        {
+          "key": "A",
+          "text": "extractive industry",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "direct service industry",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "indirect service industry",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "construction industry",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "E-commerce is an activity which involves",
+      "options": [
+        {
+          "key": "A",
+          "text": "trading in products through the post office",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "trading in products through the internet",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "buying and selling of products through telegram messages",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "buying and selling of products through fax messages",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Rent is the return on",
+      "options": [
+        {
+          "key": "A",
+          "text": "a loan",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "labour",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "land",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "a share",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "A partner whose only contribution to the partnership is his name and goodwill is",
+      "options": [
+        {
+          "key": "A",
+          "text": "an active partner",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a limited partner",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a nominal partner",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "a sleeping partner",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Computer manufacturers in an area could a form of a",
+      "options": [
+        {
+          "key": "A",
+          "text": "producer association",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "thrift society",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "chamber of commerce",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "consumer association",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The problem of double coincidence of wants is that",
+      "options": [
+        {
+          "key": "A",
+          "text": "it is hard to determine the exchange rate of goods",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "it does not encourage purchase of large quantities and varieties",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "deferred payment is not possible because goods exchange are not durable",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "one has to find someone who wants his surplus and also has what he needs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The type of business where management is separated from ownership is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "sole proprietorship",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "public company",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "partnership",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "cooperative society",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Where there is no deed of partnership, members share profit on",
+      "options": [
+        {
+          "key": "A",
+          "text": "the basis of participation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the basis of shares held",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "patronage basis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "equal basis",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The factor of production that is fixed in nature is",
+      "options": [
+        {
+          "key": "A",
+          "text": "land",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "labour",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "entrepreneurship",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "capital",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "A means of payment through the post office is",
+      "options": [
+        {
+          "key": "A",
+          "text": "standing order",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "money order",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "debit order",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "credit card",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "A stock exchange broker is engaged in",
+      "options": [
+        {
+          "key": "A",
+          "text": "construction occupation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "commercial occupation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "extractive occupation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "manufacturing occupation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "A group of companies formed to carry out an activity that is beyond the ability of any individual company is",
+      "options": [
+        {
+          "key": "A",
+          "text": "a subsidiary",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a merger",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "a consortium",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an acquisition",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The share capital of a company stated in the memorandum of association and approved by the registrar of companies is",
+      "options": [
+        {
+          "key": "A",
+          "text": "working capital",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "paid-up capital",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "nominal capital",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "called-up capital",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "one of the aims of a trade association is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "liaise with other trade associations in other countries",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "organize trade fairs and exhibitions",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "provide quality goods and services",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "promote commercial activities in their business",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "Retail outlets which sell from vehicles are",
+      "options": [
+        {
+          "key": "A",
+          "text": "supermarkets",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "mobile shops",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "departmental stores",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "chain stores",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Cash in hand and at bank, plus debtors are components of",
+      "options": [
+        {
+          "key": "A",
+          "text": "intangible assets",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "current assets",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "current liabilities",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "depleting assets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Goods sold under a distinctive trademark are",
+      "options": [
+        {
+          "key": "A",
+          "text": "branded goods",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "unsought goods",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "perishable goods",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "public goods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "A firm which imports goods with the view of re-exporting them is engaged in",
+      "options": [
+        {
+          "key": "A",
+          "text": "bilateral trade",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "entrepot trade",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "multilateral trade",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "counter trade",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "A risk whose probability of occurrence is impossible to estimate is",
+      "options": [
+        {
+          "key": "A",
+          "text": "uninsurable risk",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "pure risk",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "particular risk",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "insurable risk",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "An instruction to a bank regular payment to a third party on behalf of a customer is",
+      "options": [
+        {
+          "key": "A",
+          "text": "standing order",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "money order",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "money transfer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "credit transfer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The diagram above shows a",
+      "has_diagram": true,
+      "diagram_note": "The source references option graphics, but no image file is available.",
+      "options": [
+        {
+          "key": "A",
+          "text": "standing order",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "receipt",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cheque",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "bill of exchange",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "XYZ Bank of commerce PLC is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "payee",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "endorser",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "drawer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "drawee",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Oki Williams is the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 23.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/commerce/2019/L4JcO1RcfySf8SXdjSDxk69RKjuoH2HmQ1UPeTlJ.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "payee",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "endorser",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "drawer",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "drawee",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "An international trade practice where goods are exchanged for other goods is",
+      "options": [
+        {
+          "key": "A",
+          "text": "entrepot trade",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "bilateral trade",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "barter trade",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "counter trade",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "A proportion of the total deposit that a commercial bank must keep as cash and convertible paper is",
+      "options": [
+        {
+          "key": "A",
+          "text": "special deposit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "liquidity ratio",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "interest rate",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bank rate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The principle that applies when Greene and Sunwar Insurance Companies jointly indemnified Fatou for the destruction of her storey building by fire is",
+      "options": [
+        {
+          "key": "A",
+          "text": "contribution",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "insurance interest",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "proximate cause",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "subrogation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The charge paid by a speculator for non-settlement of his account within the specified period is",
+      "options": [
+        {
+          "key": "A",
+          "text": "backwardation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "brokerage",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "commission",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "contango",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "A cheque for which payment is refused due to insufficient funds is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "bearer cheque",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "crossed cheque",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "dishonored cheque",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "stale cheque",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The keyboard of a computer is classified as",
+      "options": [
+        {
+          "key": "A",
+          "text": "an input device",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a memory device",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "an output device",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a storage device",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "A communication equipment which is stationed in space for sending signals is",
+      "options": [
+        {
+          "key": "A",
+          "text": "data processor",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "internet",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "satellite",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "telex machine",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "One of the factors which determines the choice of transport for goods is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "cost of purchasing the mode of transport",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "maintenance cost of the mode of transport",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "number of users of the mode of transport",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "nature of the goods to be transported",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Which of the following activities increases demands for goods and services",
+      "options": [
+        {
+          "key": "A",
+          "text": "advertising",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "banking",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "transportation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "warehousing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "A diagram showing the positions of the structure of a company is",
+      "options": [
+        {
+          "key": "A",
+          "text": "span of control",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "organizational chart",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "vertical integration",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "flowchart",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Good customer service practice requires",
+      "options": [
+        {
+          "key": "A",
+          "text": "charging high prices so as to make profit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "hanging up customers` calls when busy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "patience towards ill-mannered customers",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "promoting hard working employees",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The element of a contract are offer,",
+      "options": [
+        {
+          "key": "A",
+          "text": "acceptance and performance",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "consideration and performance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "legality and formality",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "acceptance and consideration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Which of the following types of advertising is aimed at taking away existing buyers from their slippers?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Negative",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "competitive",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "informative",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "mass",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The marketing concept emphasizes the need to",
+      "options": [
+        {
+          "key": "A",
+          "text": "identify and satisfy customers wants",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "maximize foreign investment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "maximize profit for the company",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "build a strong and solid brand",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "An agent whose authority, as conferred by the principal, has no limit is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "del credere agent",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "general agent",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "special agent",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "universal agent",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "An agreement in which Phillip paid half of a car and accepted to pay the rest in instalments is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "condition sale contract",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "credit sale contract",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "hire purchase contract",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "haulage contract",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "A new offer of contract that terminates the original offer is",
+      "options": [
+        {
+          "key": "A",
+          "text": "a void contract",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a counter offer",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "an invalid offer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "quasi contract",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Which of the following roles is performed by middle management in an organization?",
+      "options": [
+        {
+          "key": "A",
+          "text": "formation of objectives and strategies",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "review of master plans, programmes and budgets",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "review and appraisal of operational results",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "implementation of organizational plans and objectives",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The management term which refers to the number of staff a superior officer can efficiently supervise is",
+      "options": [
+        {
+          "key": "A",
+          "text": "delegation of authority",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "division of labour",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "unity of command",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "span of control",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Which of the following business units could be commercialized?",
+      "options": [
+        {
+          "key": "A",
+          "text": "public corporation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "cooperative society",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "private company",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sole proprietorship",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The restructuring of a government enterprise with the intention of making it profit oriented is",
+      "options": [
+        {
+          "key": "A",
+          "text": "privatization",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "nationalization",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "commercialization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "deregulation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The headquarters of the Mano River Union is in",
+      "options": [
+        {
+          "key": "A",
+          "text": "Freetown",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Monrovia",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Conakry",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Abidjan",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "A source of capital to a public company which attracts a fixed rate of interest is",
+      "options": [
+        {
+          "key": "A",
+          "text": "an ordinary share",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a subvention",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a debenture",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an overdraft",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "Which of the following is not an economic grouping in West Africa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lake Chad Basin Commission",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Economic Community Of West African States",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "European Union",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Niger Basin Commission",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "A customer who wishes to withdraw an amount greater than the balance in his current account would apply for?",
+      "options": [
+        {
+          "key": "A",
+          "text": "a standing order",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "an overdraft",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "a loan",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a credit transfer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "The combination of business activities of Abbas Ltd and Denko Ltd to form one large company is",
+      "options": [
+        {
+          "key": "A",
+          "text": "an amalgamation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a consortium",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "an acquisition",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a cartel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "The difference between commercialization and privatization is that commercialized businesses",
+      "options": [
+        {
+          "key": "A",
+          "text": "are government-owned while privatized businesses are owned by individuals",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "are non-profit making ventures while privatized businesses are profit oriented",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "can sell shares while privatized businesses cannot",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "employs more workers than privatized businesses",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 51,
+      "question": "An instruction to a bank to make regular payment to a third party on behalf of a customer is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 51.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/commerce/2019/12FX1DFwhtxOcsJjvLUzgwDKZG8Yoxfjxs9zCT2j.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "standing order",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "money order",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "money transfer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "credit transfer",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) List four career opportunities available to a student of commerce.\n(b) State two functions of an entrepreneur.\n(c) Explain the following activities giving two examples of each:\ni. extractive industry\nii. construction industry;\niii. manufacturing industry;\niv. tertiary industry."
+    },
+    {
+      "number": 2,
+      "question": "The staff of Kander Manufacturing Company Limited formed a cooperative society to enable them to have access to funds.\n(a) Name the type of cooperative society they formed.\n(b) State four features of the cooperative society.\n(c) State three advantages and two disadvantages of the cooperative society"
+    },
+    {
+      "number": 3,
+      "question": "(a) State five reasons that would make a bank dishonor a customer's cheque.\n(b) State five reasons countries introduce restrictions in foreign trade."
+    },
+    {
+      "number": 4,
+      "question": "(a) State three benefits of a commodity exchange.\n(b) Explain two methods of trading in a commodity exchange.\n(c) State four requirements for trading in a commodity exchange"
+    },
+    {
+      "number": 5,
+      "question": "(a) List six advertising media used in business.\n(b) What is personal selling?\n(c) State four advantages and two disadvantages of personal selling"
+    },
+    {
+      "number": 6,
+      "question": "Country X is facing a situation where its total payments to other countries are greater than its total earnings from abroad.\n(a) State the term that relates to the above situation.\n(b) Explain six measures the country could take to correct the situation"
+    },
+    {
+      "number": 7,
+      "question": "(a) State four services rendered by courier companies.\n(b) State three advantages and three disadvantages of rail transport"
+    },
+    {
+      "number": 8,
+      "question": "The following information was extracted from the books of Jinka Enterprises as of 31st August 2015\n15 cartoons of sweets at N 2,000 per carton.\n25 cartons of milk at 4,000 per carton.\n15 cartons of sugar 3,000 per carton.\n17 cartons of soap at x5,000 per carton\nThe following payments were made:\nRent and rates\nSalaries and wages\nFuel\nElectricity\nA cash discount of 6% and a 10% trade discount were allowed if payment was made within 7 days.\ni. Calculate how much cash was paid for the goods bought if payment was made within 7 days.\nii. If all the goods were sold at a mark up of 20% determine the selling price.\niii. Calculate the value of the newt profit made."
+    }
+  ]
+}

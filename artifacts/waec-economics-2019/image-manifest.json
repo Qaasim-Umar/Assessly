@@ -1,0 +1,28 @@
+{
+  "subject": "Economics",
+  "examType": "WAEC",
+  "year": 2019,
+  "objectiveQuestionCount": 50,
+  "theoryQuestionCount": 23,
+  "questionsWithImages": 1,
+  "uniqueImagesUploaded": 1,
+  "objectPrefix": "question-assets/waec/economics/2019",
+  "generatedAt": "2026-09-15T13:16:38.485Z",
+  "questions": [
+    {
+      "sourceId": "57977",
+      "sourceUrl": "https://myschool.ng/classroom/economics/57977",
+      "section": "theory",
+      "number": 16,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/zgIrVrN0GuYHEwFjyxUPWEX8GJIY8CIk2Czd6DtH.jpeg",
+          "objectKey": "question-assets/waec/economics/2019/zgIrVrN0GuYHEwFjyxUPWEX8GJIY8CIk2Czd6DtH.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/economics/2019/zgIrVrN0GuYHEwFjyxUPWEX8GJIY8CIk2Czd6DtH.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 5437
+        }
+      ]
+    }
+  ]
+}

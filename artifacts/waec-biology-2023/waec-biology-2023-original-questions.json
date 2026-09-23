@@ -1,0 +1,1374 @@
+{
+  "subject": "Biology",
+  "year": 2023,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The type of nutrition in which organisms take solid organic materials into their body is",
+      "options": [
+        {
+          "key": "A",
+          "text": "parasitic",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "holozoic",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "saprophytic",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "symbiotic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The ability of organisms to maintain a constant internal environment is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "diuresis",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "plasmolysis",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "endosmosis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "homeostasis",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Organisms that feed on dead, decaying tissues of other organisms are known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "saprophytes",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "autotrophs",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "parasites",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "heterotrophs",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "Which of the following activities is against the conservation of natural resources?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Contour ploughing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "establishment of game reserves",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "deforestation",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "afforestation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The food substance that would produce the highest amount of energy is",
+      "options": [
+        {
+          "key": "A",
+          "text": "protein",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "amino acid",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fat",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "glucose",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The diagrams above are illustrations of forms in which a particular group of organisms exist. Study them and answer the question.\nWhich group of organisms is illustrated?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 6.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/q17EDKh8h3mgdReR51qBmr0GMyKATEnpvfF5spq0.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "protozoa",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "viruses",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fungi",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bacteria",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The diagrams above are illustrations of forms in which a particular group of organisms exist. Study them and answer the question.\nin which of the illustrated forms does the organism that causes cholera exist?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 7.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/kaRZB7JClCs9pLlmrPRRC3JlRSyoYKGcNn1NKJkz.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "IV",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "V",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Growth in animals differs from that in plants because growth in",
+      "options": [
+        {
+          "key": "A",
+          "text": "plants is indefinite",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "plants is intercalary",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "animals is apical",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "plants is from within",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The structure that its action could result in choking when talking and eating at the same time is",
+      "options": [
+        {
+          "key": "A",
+          "text": "oesophagus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "epiglottis",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "pharynx",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "liver",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The diagram above is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer the question.\nThe likely reason why the student failed the test was that the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 10.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/yeRXJ4JkU5yxLiWZubqUiIrifbVHXWr6zgbZ6ZLa.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "labels were wrong and the guidelines were not touching the structures",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "net venation shown were few, rough, not properly drawn and wrongly placed",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "leaf venation should have been parallel and the midrib should be thicker",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "leaf was too tapered at the apex, the leaf stalk was too short and the shape of leaf was wrong.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer the question.\nwhich features of the diagram would have earned the student more marks if shown",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 11.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/710u5MVoWsEkAHgRN0nodp3tIcdsZoykFWnD4TSe.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "colour and size",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "spelling of label and length of midrib",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "habitat and agricultural qualities of leaf",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "title and margin",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "A group of organisms belonging to different species that coexist in the same habitat and interact is referred to as",
+      "options": [
+        {
+          "key": "A",
+          "text": "community",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "biosphere",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "niche",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "population",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The mouthparts of a grasshopper are adapted for",
+      "options": [
+        {
+          "key": "A",
+          "text": "sucking",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "chewing",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "grinding",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "absorption",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "What is the probability that a pregnancy would result in a male child?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(\\frac{3}{4}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(\\frac{1}{2}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "1",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(\\frac{1}{4}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "A vestigial structure in humans is",
+      "options": [
+        {
+          "key": "A",
+          "text": "earlobe",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "gallbladder",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "tailbone",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "villus",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Which of the following instruments is not used in measuring abiotic factors in a habitat?",
+      "options": [
+        {
+          "key": "A",
+          "text": "microscope",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Wind vane",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "thermometer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "hygrometer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Which of the following factors is the main problem facing xerophytes?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Conservation of excess water",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "competition for sunlight",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "lack of adequate water",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "formation of poor roots",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "A Rhesus negative woman may experience stillbirth of the second child that is Rhesus positive because",
+      "options": [
+        {
+          "key": "A",
+          "text": "the foetus is deprived of nourishment",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "they have poor circulatory system",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the blood of the foetus might clump",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "the woman is susceptible to diseases during pregnancy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Which of the following hormones is wrongly paired with its secretory organ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "oestrogen and ovary",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Oxytocin and hypothalamus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "adrenalin and kidney",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "insulin and pancreas",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The rate of decomposition of dead organisms is faster in the tropical rainforest than in other biomes because",
+      "options": [
+        {
+          "key": "A",
+          "text": "of consistent cool temperature",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "of availability of moisture",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "of the relatively constant day light.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "there are more plants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Which of the following organisms would be the producer in a food chain?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Goat",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "maize",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "man",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bacterium",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The diagrams below are illustrations of organisms in a habitat. Study them and answer the question,\nThe feeding relationship between the organisms labelled III and IV in the diagrams is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 22.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/Dp53SYPQ5q3JDXXKZUFykiyUrh7ouZgpGofrVGfT.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "predation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "mutualism",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "parasitism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "saprophytism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "The diagrams below are illustrations of organisms in a habitat. Study them and answer the question, the producer in the diagram is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 23.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/Qr4sOeNvcadH4eRWqD2UQO5o6xKuvKd6N0mbOUDF.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "IV because it is the largest organism in the diagram",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "IV because it is the organism that receives the highest amount of sunlight",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "I because it uses sunlight to manufacture food",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "I because it contains the least amount of energy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Which of the following soil types have a high capillarity?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sand and clay",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "loam and sand",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "silt and sand",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "silt and clay",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The diagram above is an illustration of a structure in the skeletal system of humans. Study it and answer the question\nthe illustrated structure is a part of the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 25.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/5CHYx22a8qkYPFm42Qgo4NLt7MmQ6c6Q7NMjFyHb.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "appendicular skeleton",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "axial skeleton",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "axis vertebrae",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cervical vertebrae",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The diagram below is an illustration of a structure in the skeletal system of humans. Study it and answer the question\nAn individual was involved in a car accident and the illustrated structure was badly injured. Which of the following structures would most likely be affected?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 26.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/9FOwq4stY0489mZVWxPqGo1FwPRm6FW26cr93dhR.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "Clavicle, tongue and pelvis",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Eye, cerebellum and ear",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Ear, brain and hinge joint",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Lumbar, eye and teeth",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Study the list of organisms below and use them to answer the questions.\nI-Hydra\nII-Owl\nIII-Snake\nIV-Snail\nThe arrangement of the organisms in order of increasing complexity is",
+      "options": [
+        {
+          "key": "A",
+          "text": "II-III-I-IV",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "I-IV-III - II",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "I-II-III-IV",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV-III-II - I.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Study the list of organisms below and use them to answer the questions.\nI-Hydra\nII-Owl\nIII-Snake\nIV-Snail\nThe Phylum of the organism labeled IV is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Platyhelminthes",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "mollusca",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Arthropoda",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Coelenterata",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "Placentation in fruits is referred to as the",
+      "options": [
+        {
+          "key": "A",
+          "text": "arrangement of ovules in the ovary of a flower",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "part of the ovary where the ovules originate and remain till maturity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ovules borne on a central column of tissues in an ovary",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "formation of a single carpel joined at the two edges of an ovule",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Which of the following characteristics shows discontinuous variation in plants?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Colour of flower",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Leaf size",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Height of plant",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "fruit size",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "An example of a process that involves osmosis is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "movement of water from root hairs into cortical cell",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "reabsorption of food nutrients from the kidney into blood capillaries",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "translocation of starch from leaves to all parts of a plant",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "movement of digested food from ileum into blood capillaries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Stunted growth and small yellow leaves in plants are symptoms of the deficiencies of",
+      "options": [
+        {
+          "key": "A",
+          "text": "nitrogen",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "iron",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "sulphur",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "magnesium",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The eye defect caused by an uneven curvature of the cornea or lens or both is",
+      "options": [
+        {
+          "key": "A",
+          "text": "myopia",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "presbyopia",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "astigmatism",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "hypermetropia",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Which of the following processes does not occur during photosynthesis?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Energy from sunlight is absorbed",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Carbon (IV) oxide is evolved",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "oxygen is evolved",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "water is split",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The illustration above is a genetic diagram. Study it and answer the question below.\nWhat is the name of the genetic diagram?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 35.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/EuPAE3xGmVVA7ks5BNSPd9EgPWTfwECMFXMrMoRh.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "Genetic square",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Inheritance diagram",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Punnett square",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Genetic cross",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The illustration above is a genetic diagram. Study it and answer the question below\nWhat do the labels I, II, III, and IV respectively represent?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 36.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/6RJnlZ1VDwJD5vefa4YVPw0OpAkEq7O4Uq9NDtix.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ee, Ee, EE and E",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "EE, EE, Ee, and Ee",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "EE, EE, EE and EE",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "EE, EE, Ee and ee",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The illustration above is a genetic diagram. Study it and answer the question\nWhat is the genotypic ratio",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 37.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/9daj166BNIFZ0OpnlVjalEonFHNgNkJ9jHTMzbqh.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "1:1",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "4:0",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1:3",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1:2:1",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The diagram above is an illustration of a cell in which photosynthesis takes place. Study it and answer the question\nIn which of the labeled parts would molecules of water and carbon (IV) oxide combine to form sugar?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 38.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/Lius8LdKctaO6iEnmqk219suOqEJVoElZu8Zpq63.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The diagram above is an illustration of a cell in which photosynthesis takes place. Study it and answer the question. the oxygen gas formed in the cell diffuses out of the cytoplasm into the air spaces through the part labeled",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 39.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/6xw8MGeVQT7BUo44PoNSzTs3oYlbUXHeZTFo7tAf.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Fishes survive in water mainly because they possess",
+      "options": [
+        {
+          "key": "A",
+          "text": "streamlined body",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "scales",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "paired fins",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "gills",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The tricuspid valve is located between the",
+      "options": [
+        {
+          "key": "A",
+          "text": "right auricle and right ventricle.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "aorta and the left ventricle",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "left auricle and left ventricle",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "right auricle and the superior vena cava",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The androecium in a flowering plant is a collection of",
+      "options": [
+        {
+          "key": "A",
+          "text": "stamens",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "sperms",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ovules",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "filament",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The diagram above is an illustration of some structures used for gaseous exchange in humans. Study it and answer the question\nThe parts labeled 1, II, III, and IV respectively are",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 43.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/CDpj5VNqTEjrgfbkp8Ucth69N1I70x5R65L6Onfn.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "larynx, bronchus, bronchiole and trachea.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "bronchus, bronchiole, trachea and larynx.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "bronchiole, trachea, bronchus and larynx.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "larynx, trachea, bronchiole, and bronchus.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The diagram above is an illustration of some structures used for gaseous exchange in humans. Study it and answer the question\nthe part labeled III can be found in the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 44.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2023/QZfYspjb7cS27IIA5bT2Jb6NfBWtWGqHHytgg8Kz.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "lung",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "heart",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "kidney",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sternum",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Use the information below to answer the question\nI - making shoes from crocodile skin\nII - making tables with plastic\nIII - using elephant tusk for decoration\nIV - using firewood for cooking\nThe act that should be encouraged for the conservation of wildlife and forests is",
+      "options": [
+        {
+          "key": "A",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "IV",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "II",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "I",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Use the information below to answer the question\nI - making shoes from crocodile skin\nII - making tables with plastic\nIII - using elephant tusk for decoration\nIV - using firewood for cooking\nIn order to avoid some of the acts that would have negative effects on conservation. Government should",
+      "options": [
+        {
+          "key": "A",
+          "text": "encourage over-utilization of forest resources",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "enact and enforce laws towards conservation of resources",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "encourage indiscriminate killing of wildlife",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "promote felling of trees without planting new ones",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The following activities are associated with termites except",
+      "options": [
+        {
+          "key": "A",
+          "text": "nuptial flight",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "searching for food",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "communication",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "pollination",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "The capturing and digestion of insects by a pitcher plant is a special form of nutrition that is",
+      "options": [
+        {
+          "key": "A",
+          "text": "heterotrophic",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "saprophytic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "chemosynthetic",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "autotrophic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Paternity disputes could be resolved accurately through",
+      "options": [
+        {
+          "key": "A",
+          "text": "finger printing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "tongue rolling",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "DNA test",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "blood group",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "A sudden change in the genetic composition of an organism is termed",
+      "options": [
+        {
+          "key": "A",
+          "text": "mutation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "linkage",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "variation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "epistasis",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "a.What is classification of living things?\nb. State four ways each by which the following groups of organisms are of economic importance in their habitats:\ni) fungi ii) plants.\nc. complete the table below by stating five major phyla of the kingdom Animalia and give one example of each\nPhyla of kingdom Animalia\nExample"
+    },
+    {
+      "number": 2,
+      "question": "a.Complete the table below\nElement\nFunction in plants\nEffect of deficiency in plants\nIron\nMolybdenum\npotassium\ncopper\nnitrogen\nb.Name three classes of organic foods which are essential constituents in the diet of a mammal.\nc.State two roles each of the following structures of the digestive system in humans:\ni.buccal cavity ii, duodenum iii.stomach\nd. Name the end product of adding dilute hydrochloric acid to sucrose"
+    },
+    {
+      "number": 3,
+      "question": "a.Relationships I, II, III, IV and V exist among some organisms in an ecosystem. Use them to answer the question\nI: Organism A grows on dead organism B.\nII: Organism C feeds on the remnants of food left by organism D without affecting organism D negatively or positively\nIII: Organism E provides shelter for organism F while organism F transports organism E towards food\nIV: Organism G kills organism B for food\nV: Organism H feeds on organism J, causing organism J a disease.\nName the type of relationship in: I,II,III,IV,V\nb. what is the biological term for each of organisms B and G?\nc. Name one example each of organisms B to J\ndi. Name the relationship that is most beneficial to the ecosystem.\nii Give one reason for the answer in 3d(i)\nei. Give two examples of organism A\nii. Name the group to which organism A belongs"
+    },
+    {
+      "number": 4,
+      "question": "a. Complete the following Punnett squares of a dihybrid cross between two rats. One has black fur (BB) and short tail (tt), the other has brown fur (bb) and long tail (TT).\nX\nBt\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\nbT\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n&bull;\n(b)i.How many of the offspring will have black fur and short tail?\nii. How many of the offspring will have brown fur and long tail?\niii. How many of the offspring will have black fur and long tail?\niv. How many of the offspring will have brown fur and short tail?\n(c)\ni.If there were twenty (20) chromosomes in the leaf cell of a plant, how many chromosomes would be in each of the following cells of the plant?pollen grain.\nii. If there were twenty (20) chromosomes in the leaf cell of a plant, how many chromosomes would be in each of the following cells of the plant? guard cell.\niii. If there were twenty (20) chromosomes in the leaf cell of a plant, how many chromosomes would be in each of the following cells of the plant? ovule.\niv. If there were twenty (20) chromosomes in the leaf cell of a plant, how many chromosomes would be in each of the following cells of the plant? root cell"
+    },
+    {
+      "number": 5,
+      "question": "ai. What are sense organs?\nii. Name three sense organs that respond to the stimulus of chemicals\nb. List three animals each that exhibit the following courtship behaviours\ni.territoriality ii. pairing\nci. State one similarity between the eggs of toad and the eggs of birds.\nii. State three differences between the eggs of toads and the eggs of birds.\nd. Complete the table below by listing four organisms involved in the nitrogen cycle and state one role each of the organisms.\nfour organisms involved in nitrogen circle\none role of organism\ne. Complete the table below by naming two types of heterotrophic modes of nutrition in animals and give two examples each of the organisms that carry out the modes of nutrition.\nTwo modes of heterotrophic nutrition\nTwo examples of organisms that carry out mode of nutrition"
+    }
+  ]
+}

@@ -1,0 +1,1377 @@
+{
+  "subject": "Physics",
+  "year": 2023,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following statements about the properties of the electric field produced by charged parallel plates is not correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The electric field in the region outside the parallel plate is zero, except for the edge effects",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The magnitude of the electric field strength at any point between the plates, except near the edges, depends on the magnitude of the charge on each plate.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "The magnitude of the electric field strength at any point between the plates is directly proportional to the magnitude of the charge on each plate.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "The electric field is uniform everywhere in the space between the parallel plates",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The diagram above illustrates a mode of vibration of a wire of length 125 cm. The speed of the waves along the wire is 120 ms-1. Use the diagram to answer questions 2 and 3. Determine the wavelength of the waves.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 2.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2023/A0AahSYEmvXwIiLdHXJDr6WndsQ82pwm7QndQanD.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.00m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.75m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "0.25m",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.50m",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "The diagram above illustrates a mode of vibration of a wire of length 125 cm. The speed of the waves along the wire is 120 ms-1. Use the diagram to answer questions 2 and 3.\nDetermine the frequency of the waves",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 3.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2023/bYu0iHK3YKDFbJXJsgs8JiB5XKiYLNVF1wED4kT8.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "240Hz",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "24Hz",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "192Hz",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "286Hz",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "Which of the following diagrams correctly illustrates the mode of oscillation of air in a tube for the first overtone?\n( The diagrams above are meant to help you in answering this question)",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 4.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2023/Fq7ub4BW6faT04X3427UzmduuVqWZkb6WIonNpWw.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "D",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The process of producing electric current by a changing magnetic field is referred to as",
+      "options": [
+        {
+          "key": "A",
+          "text": "magnet induction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "electromagnetic induction",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "flux linkage",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "electrostatic induction.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "In a controlled thermal fission reactor, the use of control rods will not affect the",
+      "options": [
+        {
+          "key": "A",
+          "text": "energy generated in the nuclear reactor",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "rate of production of the neutrons.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "speed of the neutrons released on fission.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "amount of radiation produced in the nuclear reactor.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "A body starts with an initial velocity of 20 m/s and moves with a uniform acceleration, a, for 15 seconds. Which of the following equations represents the distance, S, traveled?",
+      "options": [
+        {
+          "key": "A",
+          "text": "300 + 56\\(\\frac{a}{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "300 + \\(\\frac{225a}{2}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "300 + \\(\\frac{225}{2a}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "300a + \\(\\frac{225}{2}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "In a mass spectrometer, an ion of charge, q, and mass, m, moving in a path of radius, r, in a field of flux density, B, has a speed of",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(\\frac{qBr}{m}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(\\frac{mr}{qB}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(\\frac{qm}{Br}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(\\frac{mq}{r}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Increasing the frequency of a sound wave produces a sound with",
+      "options": [
+        {
+          "key": "A",
+          "text": "higher pitch",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "longer wavelength",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "more overtones",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "reduced loudness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "A planet has mass, M, and radius R, If the universal gravitational constant is G, what is the expression for the escape velocity of an object on the planet?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(\\frac{\\sqrt{GR}}{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(\\frac{\\sqrt{2GM}}{R}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "\\(\\frac{\\sqrt{2G}}{R}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(\\frac{\\sqrt{GM}}{R}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "An atom in an excited state is one whose",
+      "options": [
+        {
+          "key": "A",
+          "text": "electrons are in the conduction band.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "potential energy is minimum.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "potential energy is maximum.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "electrons have moved to a higher energy level.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The most appropriate value of fuse for a kettle rated 220 V, 1.06 kW is",
+      "options": [
+        {
+          "key": "A",
+          "text": "3A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "6A",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "5A",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "4A",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "A 100 kg device is pulled up a plane inclined at 30° to the horizontal with a force of 1000 N. If the coefficient of friction between the device and the surface is 0.25, determine the total force opposing the motion.\n[ g = 10 ms-2]",
+      "options": [
+        {
+          "key": "A",
+          "text": "283.5N",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "975.0N",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "216.5N",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "716.5N",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "A solenoid is constructed by winding an insulated copper on a long test tube. A constant direct current is passed through the solenoid. Which of the following actions will not increase the strength of the magnetic field of the solenoid? Inserting a",
+      "options": [
+        {
+          "key": "A",
+          "text": "steel rod in the test tube",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Nickel rod in the test tube",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Brass rod in the test tube",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Soft iron rod in the test tube",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The following statements are advantages of a solid dielectric material between the plates of a capacitor except that",
+      "options": [
+        {
+          "key": "A",
+          "text": "the maximum potential difference the capacitor can withstand is increased.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "it increases the electrical conduction of the capacitor.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the capacitance of the capacitor of given dimensions is much greater than that of the plates in a vacuum.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "it keeps the plates at a fixed separation.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Which of the following devices is used to compare the relative magnitudes of charges on two given bodies?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ebonite rod",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Proof Plane",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Gold Leaf Electroscope",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Electrophorus",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The instrument used to measure relative humidity is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hygrometer",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Barometer",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Hydrometer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Manometer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "A ball of mass 0.8 kg is dropped from a height, H. Just before hitting the ground, its velocity is 5.0 m/s. Determine H.\n[g = 10 ms-2]",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.25m",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "4.00m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "6.25m",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1.60m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "The following statements are observations made about a towing vehicle and a bus that is being towed\nI. The force exerted on the bus by the towing vehicle is of the same magnitude as the force that the bus exerts on the road.\nII. The force exerted on the bus by the towing vehicle is of the same magnitude as the force exerted on the towing vehicle by the bus.\nIII. The towing vehicle exerts a force on the bus greater than the force exerted by the bus on the towing vehicle.\nIV. The towing vehicle exerts a force on the bus that is the same as the force the road exerts on the towing vehicle.\nWhich of the following statements is/are correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "II, III and IV",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II only",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "I, II and III only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "I only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "Which of the following statements about a ferromagnetic material is correct ? It",
+      "options": [
+        {
+          "key": "A",
+          "text": "has a high susceptibility.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "attracts non-magnetic materials.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "has low relative permeability.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "repels other magnetic materials.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The type of mirror used by dentists to inspect the teeth of patients is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "Plane mirror",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cylindrical mirror",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "concave mirror",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "convex mirror",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "In an RLC series circuit at resonance, the voltages across the resistor and the inductor are 30 V and 40 V respectively. Determine the voltage across the capacitor.",
+      "options": [
+        {
+          "key": "A",
+          "text": "50V",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "30V",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "70V",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "40V",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "The diagram above illustrates a velocity-time graph. Determine the distance between X and Y.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 23.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2023/jOGJ4RtiZymORHEHYhuF4H9SHDCAgYqjIQMJlzbj.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "80.0m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "160.0m",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "40.0m",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "10.0m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "A sound of frequency 512 Hz reaches a listener 100 m away. If the sound travels in air at s.t.p., what is its wavelength?\n[speed of sound in air = 331 m/s]",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.550m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0,646m",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "5.120m",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.195m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "A charge of 10 C is transferred across a potential difference of 220 V. Determine the work done.",
+      "options": [
+        {
+          "key": "A",
+          "text": "22J",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2200J",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "210J",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "230J",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The ratio of maximum range to maximum height of a projectile is 4. Determine the angle of projection.",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(30^0\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(60^0\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(45^0\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "\\(0^0\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The range of wavelengths of the infrared waves in an electromagnetic spectrum is \\(10^{-3}\\) m to \\(10^{-6}\\)m. The wavelength of the radiation is",
+      "options": [
+        {
+          "key": "A",
+          "text": "longer than \\(10^{-6} m\\).",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "shorter than \\(10^{-6} m\\).",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "shorter than \\(10^{3} m\\).",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "longer than \\(10^{3} m\\).",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "An electron moves from an energy level of -8.6 eV to another level of -3.5 eV. Determine the frequency of the absorbed radiation. [1 eV = 1.6 × \\(10^{19}\\) J, h = 6.6 × \\(10^{34}\\) Js]",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\( 2.93 \\times 10^{15}\\)Hz",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\( 3.59 \\times 10^{16}\\)Hz",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\( 5.39 \\times 10^{15}\\)Hz",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\( 1.24 \\times 10^{15}\\)Hz",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "A liquid is left in an open dish. After several days, there is less liquid in the dish. Which of the following statements explains this observation? The",
+      "options": [
+        {
+          "key": "A",
+          "text": "most energetic molecules leave the surface and escape into the air.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "least energetic molecules leave the surface and escape into air.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "most energetic molecules leave the surface and return.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "least energetic molecules leave the surface and return.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The specific latent heat of vapourization of lead is 8.7 × \\(10^5 Jkg_1\\). This means that 8.7 × \\(10^5\\) J of thermal energy is required to change",
+      "options": [
+        {
+          "key": "A",
+          "text": "a given mass of molten lead to vapour at constant temperature and pressure.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "1 kg of molten lead to vapour at constant temperature and pressure.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "1 kg of solid lead to vapour at constant temperature and pressure.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1 kg of molten lead to vapour for every degree rise in temperature.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "A car, P, with a velocity of 30 m/s is traveling in the same direction as a car, Q, with a velocity of 20 m/s. The velocity of P relative to Q is",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(50ms^1\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(45ms^1\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(20ms^1\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(10ms^1\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "When a light-weight body and a massive body are acted upon by the same force for the same period of time, the",
+      "options": [
+        {
+          "key": "A",
+          "text": "massive body has a higher momentum.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "massive body builds up a higher velocity.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "lighter body has a higher momentum.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "momenta of both bodies remain the same.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "A cell of emf 2 V has an internal resistance of 0.5 Ω. A current of 0.4 A passes through an external resistor, P. Determine the resistance of P.",
+      "options": [
+        {
+          "key": "A",
+          "text": "4.5Ω",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "5Ω",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1Ω",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "4Ω",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The diagram above illustrates a hot metal suspended at the centre of a closed uniform box. Thermometers E, F, G and H are placed in contact with four sides of the box. Which of the thermometers would register the highest temperature?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 34.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2023/EGobApl1PRebAC5NkdmSvxwrKvuiSiWVRbqK0NwN.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "G",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "F",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "H",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "E",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "A direct current cannot pass through a parallel plate capacitor because",
+      "options": [
+        {
+          "key": "A",
+          "text": "the plates are non-conducting.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the dielectric between the plates is non-conducting.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "there is a leakage of charge from the plates.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the plates have equal but opposite charges.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The sagging of overhead electrical wires is caused by",
+      "options": [
+        {
+          "key": "A",
+          "text": "radiation of heat.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "rough handling.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "gravitational attraction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Linear expansion",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The property of a body that determines the direction of heat flow when the body is in contact with another body is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "Heat capacity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "mass",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Power",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Temperature",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The colours of the visible light region of the electromagnetic spectrum that have the shortest and longest wavelengths respectively are",
+      "options": [
+        {
+          "key": "A",
+          "text": "red and blue.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "indigo and violet",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "violet and red.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "yellow and blue.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "A ball, P, is released from the roof of a building at the same time as another ball, Q, is thrown vertically upward from the base of the building. Which of the following statements is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The acceleration of P is greater than that of Q and both are in the same direction.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The acceleration of P is less than that of Q and both are in the same direction.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "The acceleration of P is equal to that of Q and both are in the same direction.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "The acceleration of P is equal to that of Q and are in opposite directions.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "A lead bullet of mass 0.05 kg is fired with a speed of 200 m/s into a lead block of mass 0.95 kg at rest. Given that the lead block moves after the impact, determine its kinetic energy.",
+      "options": [
+        {
+          "key": "A",
+          "text": "150J",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "200J",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "50J",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "100J",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "In the Rutherford scattering experiment, a beam of alpha particles was fired at a thin gold film and few of the particles were deflected considerably. This shows that the nucleus of an atom",
+      "options": [
+        {
+          "key": "A",
+          "text": "is positively charged and is concentrated in a tiny volume",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "contains protons and electrons distributed in a tiny volume.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "is concentrated in a tiny volume and contains alpha particles.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "is distributed in a tiny volume and emits alpha particles.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "What is the name given to the force of attraction between the nucleons in the nucleus of an atom?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gravitational force.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Electrostatic force.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Magnetic force.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Nuclear force.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "When an electron jumps directly from an orbit of n = 4 to n = 2,",
+      "options": [
+        {
+          "key": "A",
+          "text": "a photon is absorbed",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a photon is emitted",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "two photons are emitted.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "two photons are absorbed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Two objects, A and B, accelerate from rest at uniform rates. B accelerates twice as much as Compared to A, B travels",
+      "options": [
+        {
+          "key": "A",
+          "text": "at the same distance as A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "six times as far.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "two times as far",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "three times as far",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Two objects, A and B, accelerate from rest at uniform rates. B accelerates twice as much as Compared to A, B travels",
+      "options": [
+        {
+          "key": "A",
+          "text": "at the same distance as A.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "six times as far.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "two times as far.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "three times as far.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Which part of the human eye performs the same function as the diaphragm in a lens camera?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Choroid",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Retina",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Iris",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Cornea",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "Which of the following equations is not a correct mirror formula? [The symbols have their usual meanings]",
+      "options": [
+        {
+          "key": "A",
+          "text": "N = \\(\\frac{360}{\\theta}\\) - 1",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(\\frac{1}{f} = \\frac{1}{u} + \\frac{1}{v}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "m = \\(\\frac{v}{u}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "f = \\(\\frac{1}{D}\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Which of the following devices is associated with alternating currents only?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Step-up transformer",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Induction coil",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Moving coil galvanometer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Lead-acid accumulator",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "The conclusive test for magnetism in a steel bar suspended horizontally at its midpoint is when the bar",
+      "options": [
+        {
+          "key": "A",
+          "text": "always settles in the magnetic N-S direction.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "is repelled by a magnet.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "always settles in the magnetic E-W direction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "is attracted by a magnet.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "The purpose of commutators in a direct current motor is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "reverse the direction of the current after every half rotation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "increase the number of rotations per second",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "enable a uniform couple to act on the coil.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increase the efficiency of the motor.",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "The force, F, acting on the wings of an aircraft moving through the air of velocity, v, and density, ρ, is given by the equation F = \\(kv^xρ^yA^z\\), where k is a dimensionless constant and A is the surface area of the wings of the aircraft. Use dimensional analysis to determine the values of x, y, and z."
+    },
+    {
+      "number": 2,
+      "question": "a. Define strain energy.\nb. Write an expression for the energy stored, E, in a stretched wire of original length, l , cross-sectional area, A, extension, e, and Young's modulus, Y, of the material of the wire."
+    },
+    {
+      "number": 3,
+      "question": "a. A projectile is fired at an angle, θ, to the horizontal with velocity, u. Show that at any time, t, during the motion, the: i. horizontal component of the velocity is independent of t;\nii. vertical component of the velocity depends on t.\nb. State the assumption on which projectile motion is based."
+    },
+    {
+      "number": 4,
+      "question": "State three differences between geostationary satellites and polar satellites."
+    },
+    {
+      "number": 5,
+      "question": "a. Using the kinetic theory, explain the term diffusion of fluid molecules.\nb. Name one phenomenon that demonstrates that light behaves as a:\ni. wave ii. particles"
+    },
+    {
+      "number": 6,
+      "question": "a. State one difference between an intrinsic and an extrinsic semiconductor.\nb. Draw a circuit diagram to illustrate full wave smoothing rectification."
+    },
+    {
+      "number": 7,
+      "question": "a. What is fibre optics?\nb. State two reasons why optical fibres are preferred to copper cables in the telecommunication industry."
+    },
+    {
+      "number": 8,
+      "question": "ai. State the reason why simple harmonic motion is periodic.\nii. State two factors that affect the period of oscillation of a simple pendulum.\niii. Sketch a graph of the total mechanical energy, E, against displacement, y, for the motion of a simple pendulum from one extreme position to the other.\nb. The diagram above illustrates an oscillatory pendulum. Calculate the work done in raising the pendulum to point B, if the mass of the bob is 50 g.\n[g = \\(10 ms^2\\)] see the figure above\nc. A spiral spring of spring constant, k, and natural length, l, has a scale pan of mass 0.04 kg hanging on its lower end while the upper end is firmly fixed to a support. When an object of mass 0.20 kg is placed on the scale pan, the length of the spring becomes 0.055 m and when the object is replaced with another object of mass 0.28 kg, the length of the spring becomes 0.065 m. Calculate the values of k and l.\n[g = \\(10 ms^2\\)]",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 8.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2023/QLOSrqVkawgXzcAFVXozuQ8SdbMybObVTVGdlVBu.png"
+    },
+    {
+      "number": 9,
+      "question": "a. Define each of the following terms used with simple machines:\ni. Pivot ii.Load iii. Efficiency.\nb. A truck of mass 1.2 × \\(10^3\\) kg is pulled from rest by a constant horizontal force of 25.2N on a leveled road. If the maximum speed attainable in the process is 60 km/h.\nCalculate the: i. work done by the force; ii. distance traveled by the truck in reaching the maximum speed.\nc. State two differences between absolute zero temperature and ice point.\nd. An uncalibrated liquid-in-glass thermometer was used in determining a Celsius temperature. The readings are tabulated below\nTemperature/°C\n-6\n0\n100\nLength of column/ cm\nL\n2.0\n15.0"
+    },
+    {
+      "number": 10,
+      "question": "ai. Why are parabolic mirrors suitable for use in the headlamps of vehicles?\nii. Draw a ray diagram to illustrate the answer in 10(a)(i).\nbi. State two applications of echoes.\nii. An observer standing at a point, P, on the same horizontal ground as the foot, H, of a tower, shouts, and 1.20 s later, he hears the echo. He then moved to another point, Q, 40 m from P, and shouted again but the echo was heard after 1.45 s. Calculate the:\nI. distance between P and H;\nII. speed of sound in air.\nci. Define the term absolute refractive index of a medium.\nii. A piece of coin falls accidentally into a tank containing two immiscible liquids A and B as illustrated in Fig. 10.0 above.\nCalculate the displacement of the coin when viewed vertically from above.\n[refractive index of A = 1.3, refractive index of B = 1.4]",
+      "has_diagram": true,
+      "diagram_note": "The source references a diagram, but no usable image file is available."
+    },
+    {
+      "number": 11,
+      "question": "ai. Define the electric potential at a point in an electric field.\nii. An uncharged body, A, was charged electrostatically by a test charge, B, using the method of induction and the method of contact. State two differences between the two methods.\nb. An important precaution during an electricity experiment is to open the circuit when no readings are being taken. Give two reasons for the stated precaution.\nci. Fig. 11.0 is a circuit diagram in which a coil of inductance, L, and a resistor of resistance, R, are connected to a variable alternating source of frequency, f.\nThe table shows the square of the impedance, \\(Z^2\\); corresponding to each value of \\(ƒ^2\\).\n\\(ƒ^2\\)/ \\(Hz^2\\)\n198.80\n400.00\n600.30\n800.90\n900.00\n\\(Z^2\\)/ \\(Ω^2\\)\n249.60\n400.00\n550.30\n702.30\n800.90\nWrite down the equation for Z in terms of \\(f^2\\), \\(R^2\\), and \\(L^2\\).\nii. Plot a graph \\(Z^2 against \\(f^2\\) of and use it to determine the values of:\ni. L\nii. R\n[\\(π^2\\) = 10]"
+    },
+    {
+      "number": 12,
+      "question": "a. State the function of each of the following parts of a modern x-ray tube: i. heater; ii. high tension source; iii. cooling fins.\nb. State one reason for each of the following design features of a modern x-ray tube: i. the glass envelope is highly evacuated; ii. the target is a metal of very high melting point; iii. the cooling fins are located outside the glass envelope.\nc. In a nuclear fission reaction, a nuclide \\(^{235}U_{92}\\) is bombarded with a neutron to produce \\(^{93}Kr_{36}\\) and \\(^{141}Ba_{56}\\) with additional neutrons, the energy involved in the process is Q.\n[mass of \\(^{235}U_{92}\\) = 235.044 u, mass of \\(^{93}Kr_ {36}\\) = 91.898 u, mass of \\(^{141}Ba_ {56}\\) = 140.914 u,\nmass of neutron = 1.009u, 1u = \\(1.66 \\times 10^{-27}\\) kg, c = 3.0 × \\(10^8ms^1\\)]\ni. Write down the balanced nuclear reaction equation for the process.\nii. State with reason whether Q is absorbed or released in the process.\niii. Calculate the value of Q in joules."
+    }
+  ]
+}

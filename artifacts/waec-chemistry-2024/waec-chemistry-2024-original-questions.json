@@ -1,0 +1,1353 @@
+{
+  "subject": "Chemistry",
+  "year": 2024,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following gases could be collected by downward displacement of air?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chlorine",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Hydrogen",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "hydrogen chloride",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Sulphur(IV) oxide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Which of the following substances has the lowest boiling point?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Aqueous sodium chloride",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Ethanol",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Tetrachloromethane",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Water",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "The branch of science that deals with the nature and properties of substances and how one substance can be converted to another is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "biology",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "chemistry",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "geography",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "physics",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The electron configuration 1S\\(^2\\) 2S\\(^2\\) 2P\\(_x\\)\\(^2\\) contravenes the",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pauli's exclusion principle",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Aufbau's principle",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "octet rule",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Hund's rule",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The oxidation number of Chromium in Na\\(_2\\)Cr\\(_2\\)O\\(_7\\) is",
+      "options": [
+        {
+          "key": "A",
+          "text": "+2",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "+6",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "+7",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "+12",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The most important ore of aluminium is",
+      "options": [
+        {
+          "key": "A",
+          "text": "bauxite",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "haematite",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "magnetite",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "monazite",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Bases normally",
+      "options": [
+        {
+          "key": "A",
+          "text": "are corrosive",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "turn litmus paper from blue to red",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "turn litmus paper from red to blue",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "are non-metal oxides",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "The product formed when concentrated sodium chloride solution is electrolysed using carbon electrodes is",
+      "options": [
+        {
+          "key": "A",
+          "text": "chloride water",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "hydrochloric acid",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "sodium hydroxide",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "sodium oxochlorate (I)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The product of the reaction between ethanol and excess acidified K\\(_2\\)Cr\\(_2\\)O\\(_7\\) is",
+      "options": [
+        {
+          "key": "A",
+          "text": "CH\\(_2\\)=CH\\(_2\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "CH\\(_3\\)OCH\\(_3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "CH\\(_3\\)COOH",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "CH\\(_3\\)CH\\(_3\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "Which of the following statements about ammonium salt is correct? It",
+      "options": [
+        {
+          "key": "A",
+          "text": "dissolves in water to form solution of pH > 1",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "dissolves in water to form solution of pH < 7",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "does not decompose on heating",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "is insoluble in water",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Ethanedioic acid is an organic solid that can be purified by",
+      "options": [
+        {
+          "key": "A",
+          "text": "decantation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "distillation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "crystallization",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "filtration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Which of the following functional groups is present in alkanoic acid?",
+      "options": [
+        {
+          "key": "A",
+          "text": "-COOH",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "-OH",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "-COOR",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "-CHO",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "In ethanol, the attractive forces between adjacent molecules are",
+      "options": [
+        {
+          "key": "A",
+          "text": "covalent bonds only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "hydrogen bonds only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "hydrogen bonding and Van der Waal's forces",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Van der Waal's forces only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "At 25\\(^0\\)C, the saturated solution of a salt in water was found to contain 0.24g of the salt in 100cm\\(^3\\). What is the solubility of the salt in gdm\\(^{-1}\\)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.024",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.240",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "2.40",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "24.0",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The reaction represented by the equation: Ni\\(^{2+}\\)\\((_{aq}\\)) + Fe\\((_s\\)) &rarr; Ni\\((_s\\)) + Fe\\(^{2+}\\)\\((_{aq}\\)) is a redox reaction because",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ni\\(^{2+}\\) ions are oxidized and Fe acts as a oxidizing agent",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Ni\\(^{2+}\\) ions are oxidized and Fe acts as a reducing agent",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Ni\\(^{2+}\\) ions are reduced and Fe acts as an oxidizing agent",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Ni\\(^{2+}\\) ions are reduced and Fe acts as a reducing agent.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Which of the following statements describes transition elements? They",
+      "options": [
+        {
+          "key": "A",
+          "text": "are very reactive",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have low melting points",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "possess variable oxidation state",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "form colourless salts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Aluminium is suitable for making alloys for aircraft construction because it",
+      "options": [
+        {
+          "key": "A",
+          "text": "is hard and brittle",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "is light and very resistant to corrosion",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "has high density and also a non-conductor of electricity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "is amphoteric and allotropic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Which of the following arrangements of elements is in order of increasing ionization energy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Si, Al, S, P",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "S, P, Si, Al",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Al, Si, P, S",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "P, Si, S, Al",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Consider the reaction represented by the equation:\nC\\(_3\\)H\\(_8\\) + 5 O\\(_2\\) &rarr; 3CO\\(_2\\) + 4H\\(_2\\)O\nIf 0.1 mole of C\\(_3\\)H\\(_8\\) was completely burnt, what volume of CO\\(_2\\) would be produced at stp? [volume of gas at stp = 22.4dm\\(^3\\)mol\\(^{-1}\\)].",
+      "options": [
+        {
+          "key": "A",
+          "text": "6.72dm\\(^3\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "2.24dm\\(^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "0.30 dm\\(^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.10dm\\(^3\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "Naturally occurring Boron is made up of 19.9% \\(^{10}\\)B and 80.1% \\(^{11}\\)B. The relative atomic mass of Boron is",
+      "options": [
+        {
+          "key": "A",
+          "text": "21.0",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "10.8",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "10.5",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "10.0",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The number of shared pair of electrons in a molecule of methane is",
+      "options": [
+        {
+          "key": "A",
+          "text": "2",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "4",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "6",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "8",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "Isotopes of the same element have similar chemical properties because they have the same number of",
+      "options": [
+        {
+          "key": "A",
+          "text": "nuclides",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "protons",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "neutrons",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "atoms",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Which of the following household liquids would be effective in treating someone with too much acid in the stomach?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Strong salt solution with pH 7.0",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Tomato juice with pH 4.1",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Milk of Magnesia with pH 10.5",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Black coffee with pH 5.0",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The percentage by mass of Oxygen in MgSO\\(_4\\).7H\\(_2\\)O is [ M\\(_r\\) of MgSO\\(_4\\).7H\\(_2\\)O = 246 ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "26.0%",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "45.5%",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "71.5%",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "84.0%",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "Catalysts alter reaction rates by",
+      "options": [
+        {
+          "key": "A",
+          "text": "providing an alternative reaction pathway",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "lowering the energy of reaction",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "increasing the surface area of reactants",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "aligning the reactant molecules properly",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Ethane of volume 400 cm\\(^3\\) was completely burnt in excess oxygen according to the following equation:\n2C\\(_2\\)H\\(_6\\)\\(_(g)\\) + 7O\\(_2\\)\\(_(g)\\) &rarr; 6H\\(_2\\)O\\(_(g)\\) + 4CO\\(_2\\)\\(_(g)\\)\nCalculate the volume of steam that would be produced.",
+      "options": [
+        {
+          "key": "A",
+          "text": "200 cm\\(^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "400 cm\\(^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "600 cm\\(^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1200 cm\\(^3\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "A saturated solution at 30\\(^0\\)C will normally produce crystals at a temperature of",
+      "options": [
+        {
+          "key": "A",
+          "text": "50\\(^0\\)C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "40\\(^0\\)C",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "35\\(^0\\)C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "20\\(^0\\)C",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The following organic compounds are polymers except",
+      "options": [
+        {
+          "key": "A",
+          "text": "rubber",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "starch",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "proteins",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "fats",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "According to the collision theory of reaction rates, which of the following conditions is not required for two molecules to react? The molecules must",
+      "options": [
+        {
+          "key": "A",
+          "text": "come into contact without loss of energy on colliding with each other",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "collide with enough energy to overcome the activation energy barrier",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "collide in an orientation that makes formation of product possible",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "possess enough speed to overcome intermolecular forces of attraction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "A weak acid is one which",
+      "options": [
+        {
+          "key": "A",
+          "text": "is not corrosive",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "completely ionizes in water",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "does not produce salt with alkali",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "slightly ionizes in water",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Which of the following conditions are necessary for the preparation of alkanoates from alkanols and alkanoic acid?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Water and NaOH",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Conc. H\\(_2\\)SO\\(_4\\) and heat",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "NaOH and heat",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "water and aqueous HCl",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "The volume of 22g of CO\\(_2\\) at stp is equivalent to [C =12, O =16, molar volume at stp = 22.4 dm\\(^3\\) ]",
+      "options": [
+        {
+          "key": "A",
+          "text": "22.0 dm\\(^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "22.4 dm\\(^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "11.2 dm\\(^3\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "5.6 dm\\(^3\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Pairs of outermost shell electrons which are not used in bonding are",
+      "options": [
+        {
+          "key": "A",
+          "text": "lone pairs",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "bonding pairs",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "valence electrons",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "electrovalent electrons",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "\\(_8\\)X\\(^{2-}\\) and \\(_{10}\\)Y are",
+      "options": [
+        {
+          "key": "A",
+          "text": "isomers",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "isotopes",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "allotropes",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "isoelectronic",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "Pure water contaminated with quicklime will have a pH of",
+      "options": [
+        {
+          "key": "A",
+          "text": "1",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "6",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "7",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "8",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The electron configuration of \\(_{29}\\) Cu is",
+      "options": [
+        {
+          "key": "A",
+          "text": "1S\\(^2\\) 2S\\(^2\\) 2P\\(^6\\) 3S\\(^2\\) 3P\\(^6\\) 4S\\(^1\\) 3d\\(^{10}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "1S\\(^2\\) 2S\\(^2\\) 2P\\(^6\\) 3S\\(^2\\) 3P\\(^6\\) 4S\\(^3\\) 3d\\(^9\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1S\\(^2\\) 2S\\(^2\\) 2P\\(^5\\) 3S\\(^2\\) 3P\\(^6\\) 4S\\(^2\\) 3d\\(^{10}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1S\\(^2\\) 2S\\(^2\\) 2P\\(^6\\) 3S\\(^2\\) 3P\\(^2\\) 4S\\(^1\\) 3d\\(^{10}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "When s and p block elements react, the bond formed is",
+      "options": [
+        {
+          "key": "A",
+          "text": "electrovalent",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "covalent",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "metallic",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "dative-covalent",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The hardest form of carbon is",
+      "options": [
+        {
+          "key": "A",
+          "text": "charcoal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "coke",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "diamond",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "graphite",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The metallic bonding in aluminium is strong because of large number of",
+      "options": [
+        {
+          "key": "A",
+          "text": "delocalized electrons",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "immobile electrons",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "lone pair electrons",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "valence electrons",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "How many covalent bonds are formed by Nitrogen?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "4",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "When an element exists in two or more forms in the same physical state, it exhibits",
+      "options": [
+        {
+          "key": "A",
+          "text": "isotopy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "allotropy",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "isobars",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "isomerism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "An atom of an element in the ground state contains 8 valence electrons. The element is considered as a",
+      "options": [
+        {
+          "key": "A",
+          "text": "metal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "semi-metal",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "noble gas",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "halogen",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The main function of limestone in the blast furnace during the extraction of iron is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "act as catalyst",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "remove impurities",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "act as a reducing agent",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "supply Carbon(IV) oxide",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Which of the following is a monomer of polythene?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ethanol",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Vinyl chloride",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Ethene",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Ethane",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Which of the following compounds is formed by the oxidation of ethanol?",
+      "options": [
+        {
+          "key": "A",
+          "text": "C\\(_2\\)H\\(_4\\)CO\\(_2\\)H",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "C\\(_2\\)H\\(_5\\)OH",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "CH\\(_3\\)OH",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "CH\\(_3\\)CO\\(_2\\)H",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Tetraoxosulphate (VI) acid is considered as a heavy chemical because",
+      "options": [
+        {
+          "key": "A",
+          "text": "its relative molecular mass is high",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a high tonnage is produced every year",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "it is an inorganic chemical",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "it is used to manufacture heavy chemicals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "How many isomers can be formed from a compound with molecular formula C\\(_5\\)H\\(_{12}\\) ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "One",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Two",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Three",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Four",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "The oxidation number of iron, in its free state is",
+      "options": [
+        {
+          "key": "A",
+          "text": "0",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "+1",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "+2",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "+3",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Water pipes are produced from",
+      "options": [
+        {
+          "key": "A",
+          "text": "polyethene",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Perspex",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "polystyrene",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "poly vinyl chloride",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Consider the reaction represented by the following equation:\nx Al + yCl\\(_2\\) &rarr; z AlCl\\(_3\\)",
+      "options": [
+        {
+          "key": "A",
+          "text": "2, 3 and 2",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "2, 2 and 3",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1, 2 and 1",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1, 1 and 1",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) What is an electrochemical cell ?\n(b) State three differences between an electrochemical cell and an electrolytic cell .\n(c) Explain briefly what would be observed when powdered zinc is added to a solution of copper (II) tetraoxosulphate (IV) in a beaker.\nd(i) Write an equation for the reaction in 1(c) ;\n(ii) State the type of reaction which took place in 1(c) ;\n(e) Name two gases which should be prepared in a fume chamber.\n(f) Give three factors that favour cracking.\n(g) Give the reason why noble gases are chemically inert.\n(h) State four properties of a homologous series.\n(i) What is global warming ?\n(j)State one cause of global warming."
+    },
+    {
+      "number": 2,
+      "question": "SECTION B\na(i)Define each of the following terms;\nI. Deliquescence II. efflorescence\n(ii) Give one example of a substance that undergoes each of the processes in 2a(i)\nb(i)What is meant by ionization energy ?\n(ii)The second ionization energy value of sodium is greater than the first ionization energy. Briefly give an explanation for this observation.\nc(i) State Charles' law\n(ii) Sketch a graph to illustrate Charles' law.\n(iii) A gas occupies 150 cm\\(^3\\) at 21\\(^0\\)C. What would be its volume if the temperature is raised to 45\\(^0\\)C and the pressure is kept constant?\nd(i)Write chemical equations to illustrate what happens when each of the following oxides is dissolved in water:\nI. Sodium oxide;\nII. Phosphorus(III) oxide;\nIII. Chlorine (VII) oxide\nIV. Magnesium oxide\n(ii) Arrange the solutions in 2d(i) in order of increasing acidity."
+    },
+    {
+      "number": 3,
+      "question": "a(i) Write balanced chemical equations for the production of lead(II) chloride by:\nI. direct combination of constituent elements;\nII. double decomposition;\nIII. displacement reaction.\n(ii) State one condition that would increase the rate of reaction for each of the reactions stated in 3a(i) .\nI. ........................... II. ......................... III. .......................\n(b) Consider the following Chemical reaction in equilibrium:\n2SO\\(_2\\)(g) + O\\(_2\\)(g) ⇌ 2SO\\(_3\\)\\(_(g)\\) ; &Delta;H = positive\n(i) State two conditions that would increase the yield of SO\\(_3\\)\\(_(g)\\)\n(ii) If 60cm\\(^3\\) of SO\\(_2\\) reacts with 40cm\\(^3\\) of O\\(_2\\), determine the volume of the residual gas, assuming that the reaction goes to completion in a cylinder.\n(iii) What is the change in the oxidation number of sulphur in the reaction in 3(b) ?\n(c) Using structural diagrams, explain why cyclopropane is not an isomer of n-propane.\n(d) A structural organic compound X containing three carbon atoms reacted with butanoic acid in the presence of dilute H\\(_2\\)SO\\(_4\\) to form a sweet smelling compound Y.\n(i) Name compounds X and Y .\n(ii) State the functional group present in X.\n(iii) Write an equation for the reaction between X and butanoic acid."
+    },
+    {
+      "number": 4,
+      "question": "(a) Write a balanced chemical equation for each of the following reactions:\n(i) ammonia gas with copper(II) oxide;\n(ii) ammonia gas with oxygen gas;\n(iii) aqueous potassium iodide with chlorine gas;\n(iv) iron with dilute tetraoxosulphate (VI) acid;\n(v) aqueous lead(II) trioxonitrate (V) with hydrogen chloride gas.\nb(i) Describe briefly the process involved in the extraction of tin from tin ore.\n(ii) Mention three uses of hydrogen.\n(iii) State two physical properties of hydrogen.\n(c) State the class of oxide to which each of the following compounds belong:\n(i) Na\\(_2\\)O; (ii) ZnO; (iii)SO\\(_2\\); (iv) CO\\(_2\\); (v) N\\(_2\\)O."
+    },
+    {
+      "number": 5,
+      "question": "a(i) Write the chemical formula of alumina.\n(ii) In the extraction of aluminium, state one compound that is used;\nI. to obtain alumina from Bauxite\nII. as solvent for alumina.\n(iii) Name the electrodes used in the extraction of aluminium.\n(iv) Give one reason why the extraction of aluminium is expensive.\n(v) In the extraction of aluminium:\nI. name the substance liberated at the anode;\nII. write the equation for the reaction that leads to decrease in the size of the anode.\nb(i) Give two ions that cause hardness of water.\n(ii) State two advantages and two disadvantages of hard water.\nc(i) What is meant by destructive distillation of coal ?\n(ii) Name four products obtained from the destructive distillation of coal.\nd(i) Name two gases which can be used to demonstrate the fountain experiment.\n(ii) Give the reason why the gases named in 5d(i) are used."
+    },
+    {
+      "number": 6,
+      "question": "ALTERNATIVE TO PRACTICAL A\nA is a solution of KMnO\\(_4\\) containing 0.020 moldm\\(^{-3}\\). B is a solution of Fe\\(^{2+}\\) obtained by dissolving 3.8 g of iron granules in 250 cm\\(^3\\) of solution.\n(a)Put A in the burette. Pipette 20.0 cm\\(^3\\) or 25 cm\\(^3\\) of B into a conical flask and add 10 cm\\(^3\\) of H\\(_2\\)SO\\(_4\\). Titrate it with A.\nRepeat the titration to obtain concordant titre values. Tabulate your result and calculate the average volume of A used.\nMnO\\(_4\\)\\(^-\\)\\(_{(aq)}\\) + 5Fe\\(^{2+}\\)\\(_{(aq)}\\) + 8H\\(^+\\)\\(_{(aq)}\\) &rarr; Mn\\(^{2+}\\)\\(_{(aq)}\\) + Fe\\(^{3+}\\)\\(_{(aq)}\\) + 4H\\(_2\\)O\\(_{(l)}\\)\n[ KMnO\\(_4\\) = 158.0, Fe = 56.0 ]\n(b) From your results and information provided, calculate the:\n(i) concentration of B in moldm\\(^{-3}\\)\n(ii)concentration of B in gdm\\(^{-3}\\)\n(iii) mass of Fe\\(^{2+}\\) in 250 cm\\(^3\\) of B .\n(iv) percentage of Fe\\(^{2+}\\) in the granules."
+    },
+    {
+      "number": 7,
+      "question": "C is a mixture of two simple inorganic salts, one of which is a sodium salt.\nPerform the following exercises on C . Record your observation and identify any gas(es) evolved. State the conclusions you draw from the results of each test.\n(a) Put all of C into a test tube and add about 10 cm\\(^3\\) of distilled water and shake.\nb(i) Put about 2 cm\\(^3\\) of the filtrate into a boiling tube and heat strongly.\n(ii) Put half of the residue into a test tube and add dil. HCl.\n(iii) To about 2 cm\\(^3\\) of the clear solution from b(ii) , add aqueous NaOH in drops, then in excess.\n(iv) To another 2 cm\\(^3\\) of the clear solution from b(ii) , add aqueous ammonia in drops, then in excess."
+    },
+    {
+      "number": 8,
+      "question": "(a) Mention two gases that are soluble in water.\n(b) Name two apparatus that could be used to measure 9.50 cm\\(^3\\) of a solution accurately.\n(c) What is the use of a fume cupboard in the laboratory?\n(d) Name three personal protective equipment that are used in the laboratory."
+    },
+    {
+      "number": 9,
+      "question": "ALTERNATIVE PRACTICAL B\nD contains 6.30 g of HNO\\(_3\\) in 500 cm\\(_3\\) of solution. E was prepared by dissolving 8.20 g of washing soda crystals ( Na\\(_2\\)CO\\(_3\\).xH\\(_2\\)O) in 250 cm\\(^3\\) of distilled water.\n(a) Put D into the burette and titrate it against 20.0 or 25.0 cm\\(^3\\) portion of E using methyl orange as indicator.\nRepeat the exercise to obtain concordance titre values.\nTabulate your results and calculate the average volume of the acid used.\n(b) Write a balanced chemical equation for the reaction.\n(c) From your results and the information given;\n(i) calculate the concentration of E in moldm\\(^{-3}\\);\n(ii) what is the value of x in Na\\(_2\\)CO\\(_3\\).xH\\(_2\\)O? [H= 1.0; C =12.0; O = 16.0; Na = 23.0; N = 14.0 ]"
+    },
+    {
+      "number": 10,
+      "question": "F is an inorganic salt. Carry out the following exercises on F . Record your observations and identify any gas(es) evolved. State the conclusions you draw from the results of each test.\n(a) Transfer F into a test tube and add dil. HCl to it until a clear solution is obtained.\n(b) Divide the clear solution obtained from (a) into two portions\n(i) To the first portion add NaOH\\(_{(aq)}\\) in drops and then in excess.\n(ii) To the second portion, add few drops of potassium hexacyanoferrate (II) solution."
+    },
+    {
+      "number": 11,
+      "question": "(a) An aqueous solution of a salt was added to excess sodium sodium trioxocarbonate (IV) solution in a test tube. There was effervescence, the test tube became warm and a white precipitate was observed. State three inferences that could be drawn from these observations.\n(b) Consider the following salts; NH\\(_4\\)Cl; PbSO\\(_4\\); NaHCO\\(_3\\) and Cu(NO\\(_3\\))\\(_2\\).\nSelect from the list, the salt(s) which:\n(i) would not readily dissolve in water;\n(ii)produce(s) effervescence with dilute mineral acids;\n(iii) decompose(s) on heating;\n(iv) dissolve(s) in water to form an alkaline solution;\n(v) sublime(s) on heating\n(c) A solution of an acid was titrated with sodium hydroxide solution using methylorange as the indicator. State three precautions that are necessary when carrying out such an experiment."
+    }
+  ]
+}

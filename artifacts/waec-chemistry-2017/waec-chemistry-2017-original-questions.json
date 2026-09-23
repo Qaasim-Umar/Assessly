@@ -1,0 +1,1344 @@
+{
+  "subject": "Chemistry",
+  "year": 2017,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following species determines the chemical properties of an atom?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Electron",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Neutron",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Nucleus",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Proton",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The following glasswares are used to measure the volume of liquids EXCEPT",
+      "options": [
+        {
+          "key": "A",
+          "text": "graduated beaker",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "pipette",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "test tube",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "burette",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Pauli exclusion principle is related to",
+      "options": [
+        {
+          "key": "A",
+          "text": "quantity of electrons in the valence shell",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "filling the orbitals with lower energy first",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the filling of degenerated orbitals",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "quantum numbers of electrons",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The species with no electron in the 3d-orbital is",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(Zn^{2+}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(Sc^{3+}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Cu",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(Mn\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The seperation of Nitrogen from oxygen using fractional distillation of air is possible because",
+      "options": [
+        {
+          "key": "A",
+          "text": "nitrogen is less dense than oxygen",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "oxygen is more reactive than nitrogen",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "of the difference in their boiling points",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "they belong to the same period",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The purity of a solid sample can best be determined by its",
+      "options": [
+        {
+          "key": "A",
+          "text": "boiling point",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "melting point",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "conductivity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "solubility",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The mass of one mole of \\((NH_{4})_{2}CO_{3}\\) is [O=16.0, N=14.0, C=12.0, H=1.0]",
+      "options": [
+        {
+          "key": "A",
+          "text": "66.0g",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "76.0g",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "80.0g",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "96.0g",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Atomic orbital is",
+      "options": [
+        {
+          "key": "A",
+          "text": "the circular path through which electrons revolve round the nucleus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a region around the nucleus where electrons are most likely to be found",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the path around the nucleus through which electrons move",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the path around the nucleus through which protons move",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The property of elements which increases down a group of the periodic table is",
+      "options": [
+        {
+          "key": "A",
+          "text": "electronegativity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "electron affinity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ionic radius",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "ionization energy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The reason for the decrease in the atomic size of elements across a period is that",
+      "options": [
+        {
+          "key": "A",
+          "text": "nuclear charge increases while the outermost electrons are drawn closer to the nucleus",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "nuclear charge decreases while the outermost electrons are drawn closer to the nucleus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "valence electrons increase across the period while the valence shell remains constant",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "nuclear charge decreases while the distance of the valence shell from the nucleus is increasing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "The oxidation number of nitrogen in \\(Pb(NO_{3})_{2}\\) is",
+      "options": [
+        {
+          "key": "A",
+          "text": "+2",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "+3",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "+4",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "+5",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Which of the following arrangements indicates the correct decreasing order of ionization energy of period 3 elements?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Na, Al, P, Cl",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Cl, P, Al, Na",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Na, P, Cl, Al",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Al, Na, P, Cl",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "Which of the following metals has the strongest metallic bond?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(_{13}Al\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(_{19}K\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(_{12}Mg\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(_{11}Na\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "Which of the following substances does not have van der Waals' forces?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Copper",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Graphite",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Neon",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Iodine crystals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The oxidation number of X in \\(XO_{4}^{3-}\\) is",
+      "options": [
+        {
+          "key": "A",
+          "text": "+1",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "+3",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "+4",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "+5",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "The ionization energy is affected by the following factors except",
+      "options": [
+        {
+          "key": "A",
+          "text": "distance of the outermost electron(s) from the nucleus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "size of the positive nuclear charge",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ability to attract shared electron(s)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "screening effect of the inner electron(s)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Which of the following statements is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Covalent compounds would readily ionize in solution",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Covalent compounds consist of ions",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Hydrogen bond is formed between a metal and a non-metal",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Ionic compounds in solution would conduct electricity",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The bond angle in tetrahedral molecules such as tetrachloromethane is",
+      "options": [
+        {
+          "key": "A",
+          "text": "180.0°",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "109.5°",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "105.5°",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "90.0°",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "The properties of a good primary standard include the following except",
+      "options": [
+        {
+          "key": "A",
+          "text": "high molecular mass",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "low molecular mass",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "high degree of purity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "readily available",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The use of diamond in abrasives is due to its",
+      "options": [
+        {
+          "key": "A",
+          "text": "high melting point",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "hardness",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "octahedral shape",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "durability",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Which of the following statements about endothermic reaction is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Activation energy is high",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "A catalyst is required",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "It occurs reversibly",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Heat energy is absorbed",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "A 0.1\\(moldm^{-3}\\) solution of sodium hydroxide was diluted with distilled water to 0.001\\(moldm^{-3}\\). What is the dilution factor?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1000.00",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "100.00",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "10.00",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.01",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Graphite and Diamond are similar in that they",
+      "options": [
+        {
+          "key": "A",
+          "text": "have octahedral shape",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have same density",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "form carbon(IV) oxide on combustion",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "conduct electricity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "In a saturated solution at a given temperature, the undissolved solutes are in equilibrium with",
+      "options": [
+        {
+          "key": "A",
+          "text": "the solvent",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "dissolved solute particles",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the saturated solution",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "insoluble solute particles",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The number of atoms present in 2.5moles of a triatomic gas is equivalent to [1mole = \\(6.02\\times 10^{23}\\)]",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(2.5\\times 10^{23}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(1.5\\times 10^{23}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(1.5\\times 10^{24}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "\\(2.5\\times 10^{24}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "When Magnesium reacts with oxygen, heat is",
+      "options": [
+        {
+          "key": "A",
+          "text": "absorbed and the reaction is endothermic",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "evolved and the reaction is endothermic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "evolved and the reaction is exothermic",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "absorbed and the reaction is exothermic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Which of the following gases is not acidic?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(SO_{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(NO_{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(Co_{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "CO",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "A hydrocarbon contained 14.3% hydrogen. The empirical formula for the hydrocarbon is [H= 1.0, C= 12.0]",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(CH\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(CH_{2}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "\\(CH_{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(CH_{4}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "Which of the following statements is NOT a chemical property of an acid?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Evolution of ammonia when heated with ammonium salts",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Evolution of carbon dioxide gas when added to a trioxocarbonate (IV) salt",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Formation of salt and water with alkalis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Formation of salt and hydrogen gas with reactive metals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Halogens generally react with metals to form",
+      "options": [
+        {
+          "key": "A",
+          "text": "alkalis",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "acids",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "bases",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "salts",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Potassium Chloride solid does not conduct electricity because",
+      "options": [
+        {
+          "key": "A",
+          "text": "it is a covalent compound",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "strong cohesive forces make its ions immobile",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "strong cohesive force makes its molecule immobile",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "each of potassium and chlorine structures contain noble gas structure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "When water was added to a white anhydrous substance X, the colour changed to blue. X is",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(CuSO_{4}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(FeSO_{4}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(Na_{2}SO_{4}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(PbSO_{4}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Solubility curve can be used in the determination of the",
+      "options": [
+        {
+          "key": "A",
+          "text": "amount of crystals formed",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "amount of solvent that can be recovered",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "amount of solid drugs in a given solution",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "temperature of the solution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "If 0.2g of a salt is required to saturate 200\\(cm^{3}\\) of water at room temperature, what is the solubility of the salt?",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.2\\(gdm^{-3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "1.0\\(gdm^{-3}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "2.0\\(gdm^{-3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "5.0\\(gdm^{-3}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The property of a chemical reaction that is affected by the presence of a catalyst is",
+      "options": [
+        {
+          "key": "A",
+          "text": "activation energy",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "free energy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "equilibrium position",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "enthalpy change",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Soluble salts can be prepared by the following methods except",
+      "options": [
+        {
+          "key": "A",
+          "text": "neutralization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "reaction of an acid with trioxocarbonate(IV) salt",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "double decomposition",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "reaction of an acid with electropositive metals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Chemical reactions occurs when the colliding reactants have energy that is",
+      "options": [
+        {
+          "key": "A",
+          "text": "less than the activation energy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "greater than the activation energy",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "greater than the energy of the product",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "less than the energy of effective collision",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The common feature of reactions at the anode is that",
+      "options": [
+        {
+          "key": "A",
+          "text": "electrons are consumed",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ions are reduced",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "oxidation is involved",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "the electrode dissolves",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Consider the following reaction equation: \\(2NO_{(g)} + O_{{2}{(g)}} \\to 2NO_{{2}{(g)}}\\). What is the change in the oxidation number of nitrogen?",
+      "options": [
+        {
+          "key": "A",
+          "text": "+2 to 0",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "+2 to -2",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "+2 to +4",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "+4 to +2",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Which of the following factors characterize members of the same homologous series?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The chemical property change gradually throughout the series",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "physical properties of members are similar",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "They have the same molecular formular",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Successive members undergo changes in molecular formula by \\(CH_{2}\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Calculate the mass of copper deposited if a current of 0.45A flows through \\(CuSO_{4}\\) solution for 1hour 15mins. [Cu=64.0, S= 32.0, O =16.0, 1F= 96500C]",
+      "options": [
+        {
+          "key": "A",
+          "text": "6.40g",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.67g",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "0.64g",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.45g",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Classification of alkanols is based on the",
+      "options": [
+        {
+          "key": "A",
+          "text": "number of carbon atoms present in the compound",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "molecular mass of the compound",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "molecular formula of the compound",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "number of alkyl groups bonded to the carbon having the hydroxyl group",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The name of the compound \\(C_{4}H_{9}COOC_{3}H_{7}\\) is",
+      "options": [
+        {
+          "key": "A",
+          "text": "propyl pentanoate",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "pentyl propanoate",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "butyl propanoate",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "propyl butanoate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Which of the following pairs of gases are pollutants from car exhaust?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nitrogen(II) oxide and Carbon(IV) oxide",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Carbon(IV) oxide and Nitrogen",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Carbon(II) oxide and Sulphur(IV) oxide",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Carbon(II) oxide and oxygen",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Fats and oils can be obtained from any of the following sources except",
+      "options": [
+        {
+          "key": "A",
+          "text": "paraffin oil",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "animals",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "groundnuts",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "palm kernel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The condensation of two units of glucose will produce a dissacharide with the formula \\(C_{12}H_{22}O_{11}\\) which is",
+      "options": [
+        {
+          "key": "A",
+          "text": "sucrose",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "maltose",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "galactose",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "mannose",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The IUPAC name for the compound \\(ClCH_{2}CH_{2}OH\\) is",
+      "options": [
+        {
+          "key": "A",
+          "text": "1- chloropropanol",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2-chloropropanol",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1-chloroethanol",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "2-chloroethanol",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "The real harmful effect of the release of chlorofluorocarbons into the atmosphere is that it eventually causes",
+      "options": [
+        {
+          "key": "A",
+          "text": "excessive ultraviolet light from the sun to reach the earth surface",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "excessive release of infrared light from the sun to the earth surface",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "corrosive effect of the chemicals on humans and animals",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "acidic effect of chemicals on humans",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "A primary alkanol has a molecular mass of 60. What is the structural formula of the compound? [C= 12.0, H= 1.0, O= 16.0)",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 49.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/chemistry/2017/eQP9YLl1gA640pJmhDuLM267JHWhE41iazEj9H2z.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "A",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "D",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Petroleum is a non-renewable source of energy because it",
+      "options": [
+        {
+          "key": "A",
+          "text": "is formed naturally",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "is cheap",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "can be recycled after use",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cannot be regenerated once used up",
+          "is_correct": true
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a)(i) What is an acid-base indicator?\n(ii) Give one example of an acid-base indicator.\n(b) State the property exhibited by nitrogen(IV) oxide in each of the following equations:,\n(i) 4Cu + 2NO\\(_2\\) -> 4CuO + N\\(_2\\) (ii) H\\(_2\\)O + 2NO\\(_2\\) --> HNO\\(_3\\) + HNO\\(_2\\)\n(c)(i) Define enthalpy of combustion..\n(ii) State why the enthalpy of combustion is always negative.\n(d)(i) Distinguish between a primary cell and a secondary cell.\n(ii) Give an example of each of the cells stated in I (d)(i).\n(e) Define the term mole.\n(f) Calculate the amount of hydrochloric acid in 40.0 cm\\(^3\\) of 0.40 moldm\\(^{-3}\\) dilute HCl.\n(g) Name two substances which can be used as electrodes during the electroylsis of acidified water.\n(h) List two forces of attraction that can exist between covalent molecules.\n(i) Name the products formed when butane undergoes incomplete combustion.\n(j) Write the electron configuration of \\(_{26}\\)Fe\\(^{3+}\\)"
+    },
+    {
+      "number": 2,
+      "question": "(a)(i) 1. State the periodic law.\n2. What is meant by the term periodic property of elements?\n(ii) List three properties of an element which show periodicity.\n(iii) Explain briefly how each of the properties listed in (a)(i) in varies across the period.\n(b) Defulle relative atomic mass.\n(c)(i) What phenomenon is exhibited by an element Z which exist as \\(^{35}_{17}Z\\) and \\(^{37}_{17}X\\)\n(ii) What accounts for the difference in the mass numbers of the element Z?\n(iii) Calculate the relative atomic mass of Z if the percentage abundance of \\(^{37}_{17}Z\\) is 75%\n(d)(i) State the method used for collecting each of the following gases: I. CO II. HCI III. H\\(_2\\)\n(ii) Give a reason for your answer stated in (d)(i) I and II"
+    },
+    {
+      "number": 3,
+      "question": "(a) Write the molecular formula of X.\n(i) What type of reaction is represented by the equation?\n(ii) Consider the following reaction equation: C\\(_{12}H_2\\) \\(\\to\\) X + C\\(_8\\)H\\(_{18}\\)\n(iii) Draw the structure of two isomers of X.\n(iv) Name the isomers drawn in (a)(iii).\n(v) Write a balanced equation for the reaction between X and hydrogen.\n(b) Describe one test for fats.\n(c) Sulphur (IV) oxide is converted to tetraoxosulphate (VI) acid according to the following equation: 2SO\\(_{2(g)}\\) + O\\(_{2(g)}\\) + 2H\\(_2\\)O\\(_{(l)}\\) \\(\\to\\) 2H\\(_2\\)OSO\\(_{4(aq)}\\). If 1.5 moles of oxgen reacts with sulphur (IV) oxide, calculate the mass of tetraoxosulphate (VI) acid produced. [H = 1.0; O = 16.0; S = 32.0].\n(d) Consider the following neutralization reaction:\nCH\\(_3\\)COOH + NaOH \\(\\to\\) CH\\(_3\\)COONa + H\\(_2\\)O; \\(\\bigtriangleup\\)H\\(_1\\)\nCH\\(_3\\)COOH + NH\\(_4\\)OH \\(\\to\\) CH\\(_3\\)COONH\\(_4\\) + H\\(_2\\)O; \\(\\bigtriangleup\\)H\\(_2\\)\nNaOH + HCl \\(\\to\\) NaCl + H\\(_2\\)O \\(\\bigtriangleup\\)H\\(_3\\)\n(i) Arrange the enthalphy changes for the reactions in order of increasing magnitude.\n(ii) Explain briefly your order in (d)(i).\n(e) Consider the following substances. Cu\\(_{(s)}\\), BeCl\\(_2\\), NaH\\(_{(s)}\\), HF\\(_{(s)}\\)and CCl\\(_{4(l)}\\). State the substance(s) which;\n(i) can conduct electricity;\n(ii) is/are soluble in water."
+    },
+    {
+      "number": 4,
+      "question": "(a)(i) Describe briefly the industrial preparation of ammonia.\n(ii) Write a balanced equation for the reaction in (a)(i).\n(iii) State one way of increasing the yield of ammonia in 4(a)(i).\n(iv) State two uses of ammonia.\n(b) Describe briefly, one chemical test for each of the following gases in the laboratory: (i) hydrogen; (ii) carbon (IV) oxide; (iii) oxygen.\n(c)(i) State the composition of water gas.\n(ii) List two uses of water gas.\n(d) Describe briefly a simple experiment to determine the type of hardness in a sample of water."
+    },
+    {
+      "number": 5,
+      "question": "(a)(i) Describe briefly how trioxonitrate (V) ions could be tested for in the laboratory.\n(ii) State two uses of each of the following compounds: I. sodium chloride; II. sodium trioxocarbonate (IV).\n(b) Write balanced equations for the reactions involved in the extraction of iron in the blast furnace.\n(ii) State Faraday's first law of electrolysis.\n(iii) State two applications of electrolysis.\n(c) Concentrated tetraoxosulphate (VI) acid is added to sugar crystals in a beaker. State what would be observed. Explain briefly your answer.\n(d) Write an equation for the reaction of zinc powder with:\n(i) dilute tetraoxosulphate (VI) acid;\n(ii) concentrated tetraoxosulphate (VI) acid.\n(e) What property of concentrated tetraoxosulphate (VI) acid is shown in (d)(ii)"
+    },
+    {
+      "number": 6,
+      "question": "All your burette readings (initials and final), as well as the size of your pipette, must be recorded but no account of experimental procedure is required. All calculations must be done in your answer booklet.\nState what would be observed if the following reactions are carried out in the laboratory:\n(i) methyl orange is dropped into a solution of lime juice:\n(ii) hydrogen sulphide gas is bubbled through Iron (III) chloride solution:\n(iii) sulphur (IV) oxide gas is bubbled into acidified solution of KMnO\\(_4\\):\n(iv) ethanoic acid is added to a solution of Ka\\(_2\\)CO\\(_3\\)"
+    },
+    {
+      "number": 7,
+      "question": "All your burette readings (initials and final), as well as the size of your pipette, must be recorded but no account of experimental procedure is required. All calculations must be done in your answer booklet.\nF is 2 mixture of two inorganic salts. Carry out the following exercises on F. Record your observations and identify any gas(es) evolved. State the conclusions you draw from the result of each test.\n(a) Put all of F in a beaker and add about 10 cm\\(^3\\) of distilled water. Stir well and filter. Keep the filtrate and the residue.\n(b)(i) To about 2cm\\(^3\\) of the filtrate. add NaOH\\(_{(aq)}\\) in drops and then in excess.\n(ii) To another 2cm\\(^3\\) portion of the solution, add a few drops of NH3\\(_{(aq)}\\) in drops and then in excess.\n(c) To about 2cm\\(^3\\) of the solution, add a few drops of HNO\\(_{3(aq)}\\) followed by few drops of the drops of AgNO\\(_{3(aq)}\\)\n(d)(i) Put all the residue into a clean test-tube and add HNO\\(_{3(aq)}\\)\n(ii) To a portion of the solution from (d)(i)) add NaOH\\(_{(aq)}\\) in drops and then in excess."
+    },
+    {
+      "number": 8,
+      "question": "All your burette readings (initials and final), as well as the size of your pipette, must be recorded but no account of experimental procedure is required. All calculations must be done in your answer booklet.\nA is 0.200 moldm\\(^3\\) of HCl. C is a solution containing 14.3g of Na2CO\\(_{3}\\).xH\\(_2\\)O in 500 cm\\(^3\\) of solution.\na) Put A into the burette and titrate it against 20.0 cm\\(^3\\) or 25.0cm\\(^3\\) portions of C using methyl orange as indicator. Repeat the titration to obtain Consistent titre values. Tabulate vour results and calculate the average volume of A used. The equation for the reaction is;\nNa\\(_2\\)CO\\(_3\\) . xH\\(_2\\)O + 2HCl\\(_{(aq)}\\) \\(\\to\\) 2NaCl\\(_{(aq)}\\) + CO\\(_{2(g)}\\) + (x + 1)\\(_3\\)H\\(_2\\)O\\(_{(l)}\\)\n(b) From your results and the information provided. calculate the:\n(i) concentration of C in moldm\\(^{-3}\\)\n(ii) concentration of C in gdm\\(^{-3}\\)\n(iii) molar mass of Na\\(_2\\)CO\\(_3\\) . xH\\(_2\\)O\n(iv) the value of x in Na\\(_2\\)CO\\(_3\\) . xH\\(_2\\)O. [H =1.0; C = 12.0; O = 16.0; Na = 23.0]\nCredit will be given for strict adherence to the instruction, for observations precisely recorded and for accurale references. All tests. obsenations and influences must be cleary entered in the booklet in ink at the same time they are made."
+    }
+  ]
+}

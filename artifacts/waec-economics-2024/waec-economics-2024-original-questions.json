@@ -1,0 +1,1350 @@
+{
+  "subject": "Economics",
+  "year": 2024,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "There is scarcity when",
+      "options": [
+        {
+          "key": "A",
+          "text": "the means exceed society's wants.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "demand for resources is greater than its supply.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "productive resources are in excess.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "supply of resources is greater than its demand.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Points within a Production Possibilities Curve (PPC) indicate",
+      "options": [
+        {
+          "key": "A",
+          "text": "optimum production levels.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "attainable but inefficient production levels.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "unattainable production levels.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "attainable and efficient production levels.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Which of the following is not a feature of labour?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is an active factor",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "It is highly mobile",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Its reward is wages or salaries",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Its efficiency depends on its size",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The pursuit of private profits is a feature of",
+      "options": [
+        {
+          "key": "A",
+          "text": "command economies.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Socialist economies.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "capitalist economies.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "statutory corporations.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "A major feature of the socialist economic system is",
+      "options": [
+        {
+          "key": "A",
+          "text": "setting of production targets by public authorities.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "freedom of choice for consumers.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "determination of price by market forces.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "private ownership of productive inputs.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "If the budget on education is $50 m out of an annual national budget of $300 m. The sector of a pie chart representing education is",
+      "options": [
+        {
+          "key": "A",
+          "text": "16.6°",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "60°",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "150°",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "300°",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Price elasticity of demand is the responsiveness of quantity demanded to a change in",
+      "options": [
+        {
+          "key": "A",
+          "text": "demand for the product.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "price of another product.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "income of the buyer.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "price of the product.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "When total revenue increases as price falls, the coefficient of price elasticity of demand is",
+      "options": [
+        {
+          "key": "A",
+          "text": "greater than one.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "one",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "less than one",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "zero",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "If the quantity demanded of rice de- creased from 150 bags to 100 bags, the percentage change in quantity demanded is",
+      "options": [
+        {
+          "key": "A",
+          "text": "30.0 %",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "33.3 %",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "50.0%",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "66.7%",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The law of demand will not hold when",
+      "options": [
+        {
+          "key": "A",
+          "text": "normal goods are involved.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "size of the population changes.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "rare commodities are involved.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "incomes of consumers increase.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "The diagram above shows the demand for milk. Use it to answer questions this question.\nThe movement from point x to z might have been caused by",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 11.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/economics/2024/D741SHGoiLdRpBiVy2zhY7U6xfCs268N3FVoagp5.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "a change in taste in favour of milk.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a decrease in price of milk.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "an increase in income of consumers.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a favourable weather condition.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The diagram above shows the demand for milk. Use it to answer questions this question.\nIf demand for postal services decline as a result of increased use of e-mails, then the two services are in",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 12.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/economics/2024/D741SHGoiLdRpBiVy2zhY7U6xfCs268N3FVoagp5.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "composite demand.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "derived demand.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "competitive demand.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "complementary demand.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "Other things being equal, an increase in the demand for land in the short-run will cause an increase in the",
+      "options": [
+        {
+          "key": "A",
+          "text": "price only.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "price and supply.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "quantity supplied only.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "supply only.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "If the coefficient of price elasticity of supply of a commodity is 0.8, then supply is",
+      "options": [
+        {
+          "key": "A",
+          "text": "perfectly elastic.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "fairly inelastic.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "perfectly inelastic.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "fairly elastic.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The negative slope of the demand curve is best explained by",
+      "options": [
+        {
+          "key": "A",
+          "text": "consumer's choice.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "increasing returns to scale",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "diminishing returns to scale",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "diminishing marginal utility.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Minimum price legislation is used to protect the interests of",
+      "options": [
+        {
+          "key": "A",
+          "text": "Small scale producers.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "foreign companies.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "government.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "consumers.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The table below shows the supply and demand schedule for apples. Use it to answer question 17\nPrice ($)\nQuantity demanded\nQuantity supplied\n10\n50\n25\n20\n35\n35\n30\n20\n45\n40\n5\n55\nAt what price is excess supply equal to 25?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$10",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "$30",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "$30",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "$40",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Which of the following best explains diseconomies of scale? Increase in output causes the",
+      "options": [
+        {
+          "key": "A",
+          "text": "average cost to rise.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "marginal revenue to fall.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "marginal cost to fall.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "firm to be de- stabilized.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "In the short-run, a firm can increase output by",
+      "options": [
+        {
+          "key": "A",
+          "text": "increasing the size of its machines.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "purchasing more equipment.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "changing its organizational structure.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increasing the quantity of raw materials.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The fixed cost of producing 100 units of a good is $600. If the variable cost is $400. the average total cost of one unit of the good is",
+      "options": [
+        {
+          "key": "A",
+          "text": "$4",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "$6",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "$8",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "$10",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Firms in perfect competition break even in the long-run because",
+      "options": [
+        {
+          "key": "A",
+          "text": "new firms can not enter the market due to copyright laws.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "more firms can enter the industry due to attractive prof its.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "marginal revenue is greater than marginal cost at all levels.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "profits are not enough to repay traders' loans.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The government policy that encourages public corporations to operate profitably is",
+      "options": [
+        {
+          "key": "A",
+          "text": "liberalization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "nationalization",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "commercialization",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "indigenization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Separation of ownership from control is more pronounced in a",
+      "options": [
+        {
+          "key": "A",
+          "text": "partnership",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "joint-stock company",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "sole proprietorship",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "constimer co- operative society",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Warehousing of goods in the process of distribution is the function of",
+      "options": [
+        {
+          "key": "A",
+          "text": "Supermarkets",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "departmental stores",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "retailers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "wholesalers",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The supply of labour to an occupation will tend to rise when",
+      "options": [
+        {
+          "key": "A",
+          "text": "there are less monetary benefits.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "holiday entitlement is cut.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "welfare packages improve.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "unemployment benefit rises.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Malthus predictions did not come to pass mainly because",
+      "options": [
+        {
+          "key": "A",
+          "text": "food supply and population grew at the same rate.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the use of machines in agriculture was discouraged.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a lot of people died during epidenties.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "many people emigrated to the new lands.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "In determining the growth of a country's population, infant mortality is a component of",
+      "options": [
+        {
+          "key": "A",
+          "text": "immigration rate.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "fertility rate.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "net migration.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "death rate.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The low productivity per worker in agriculture experienced in West African countries is due to",
+      "options": [
+        {
+          "key": "A",
+          "text": "laziness on the part of farmers.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the use of simple traditional implements.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the presence of many extension workers.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the law of increasing returns to scale.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "What will be the likely effect if agriculture is fully mechanized in West Africa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "More jobs will be available for farm labourers",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Labour intensive method of farming will still be dominant",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Less labour will be required on the farm",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Governments will no longer be involved in agriculture",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Locating firms in urban areas",
+      "options": [
+        {
+          "key": "A",
+          "text": "reduce rural-urban migration.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ensure balanced development of rural areas.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "make a firm enjoy the bene- fits of the existence of other firms.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "increase urban-rural migration.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "An advantage a small firm has over a large firm is that the former can better",
+      "options": [
+        {
+          "key": "A",
+          "text": "enjoy financial economics of scale",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "satisfy individual tastes.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "enjoy internal economics of scale.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "attract huge discounts on inputs.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "National income estimates will be understated as a result of the activities of",
+      "options": [
+        {
+          "key": "A",
+          "text": "subsistence farmers.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "musicians.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "laundry women.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "housekeepers.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Use the table below to answer this question.\nGross National Product\n$400m\nDepreciation\n$100m\nTotal Population\n25m\nThe value of Net National Product is",
+      "options": [
+        {
+          "key": "A",
+          "text": "$100 m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "$275 m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "$300 m",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "$500m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Use the table below to answer this question.\nGross National Product\n$400m\nDepreciation\n$100m\nTotal Population\n25m\nThe value of per capita income is",
+      "options": [
+        {
+          "key": "A",
+          "text": "$20.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "$12.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "$16.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "$4.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "One effect of inflation is that",
+      "options": [
+        {
+          "key": "A",
+          "text": "money's purchasing power will increase.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the real incomes of workers will rise.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "both borrowers and lenders benefit from it.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "money's purchasing power will fall.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The function of money that enables credit purchases of goods and services is",
+      "options": [
+        {
+          "key": "A",
+          "text": "unit of account.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "store of value",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "standard for deferred payment.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "D. relative scarcity.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Supply of money is best defined as the",
+      "options": [
+        {
+          "key": "A",
+          "text": "money in circulation plus bank deposits.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "money given out as loans to members of the public.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "amount of currency printed annually by the government.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "amount of money spent on consumer goods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Capital market operators deal in the",
+      "options": [
+        {
+          "key": "A",
+          "text": "supply of and demand for short term loans only.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "supply of and demand for long term loans for investment.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "sales and purchases of treasury bills.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sales and purchases of capital equipment.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Money supply will increase when the Central Bank",
+      "options": [
+        {
+          "key": "A",
+          "text": "buys securities from the public.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "increases the reserve requirements.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "increases the bank rate.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sells securities to the public.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Expansionary fiscal policy implies",
+      "options": [
+        {
+          "key": "A",
+          "text": "decreasing bank loans.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "raising tax rates.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "increasing the bank rate.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "decreasing tax rates.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "A commodity with perfectly inelastic demand has the burden of tax borne by",
+      "options": [
+        {
+          "key": "A",
+          "text": "both the sellers and the buyers.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the buyers alone.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the government alone.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "both the buyers and the government.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "An increase in a country's production capacity usually leads to economic",
+      "options": [
+        {
+          "key": "A",
+          "text": "development.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "stability.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "growth",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "efficiency.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "One indicator of the low level of cap ital formation in developing countries is",
+      "options": [
+        {
+          "key": "A",
+          "text": "low per capita income.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "high rate of investment.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "low importation of consumer goods.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "high rate of household savings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Balance of payments is defined as the",
+      "options": [
+        {
+          "key": "A",
+          "text": "difference between the values of visible imports and visible exports.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "record of financial transactions between a country and the rest of the world.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "relationship between prices of exports and prices of imports.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "difference between a country's expected revenue and proposed expenditure",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Devaluation of currency will help to correct balance of payments deficit if a country's",
+      "options": [
+        {
+          "key": "A",
+          "text": "exports have perfectly inelastic demand.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "imports have inelastic demand.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "exports have elastic demand.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "productivity is low.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Terms of trade is favourable when the",
+      "options": [
+        {
+          "key": "A",
+          "text": "value of visible imports is greater than that of visible exports.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "price on imports is greater than that of exports",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "payments on imports is greater than receipts from exports.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "price of exports is rising faster than that of imports.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "Short-term deficits in the current account of the balance of payments can be financed by balancing with the",
+      "options": [
+        {
+          "key": "A",
+          "text": "invisible account.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "capital account.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "visible account.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "national income account.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Harmonised monetary and fiscal policies is a feature of",
+      "options": [
+        {
+          "key": "A",
+          "text": "a free trade area.",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "an economic union.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a customs union.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a common market.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "One major achievement of the Eco- nomic Commission for Africa (ECA) is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "setting up of the African Development Bank (AfDB).",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "provision of long-term loans to non-members.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "reduction of balance of payments problems in Africa.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "removing the gap between African countries and the rich nations.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Exploitation of solid minerals in developing countries can stabilize their revenue base mainly because it helps in",
+      "options": [
+        {
+          "key": "A",
+          "text": "promoting a mono-economy.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the transfer of technology.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the diversification of the economy.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the provision of energy.",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "The graph shows the imposition of tax on the sellers of a product. Study the graph and answer the questions that follows\n(a) Identify the;\n(i) price per unit of the product before\n(ii) quantity demanded and supplied before tax;\n(iii)price per unit of the product after tax;\n(iv) quantity demanded and supplied after tax.\n(b) Determine the:\n(i) amount of tax imposed per unit of the product\n(ii) amount retained per unit by the sellers after tax.\n(c) Calculate the percentage of the total tax imposed that is paid by;\n(i) buyers per unit, (ii) sellers per unit",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 1.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/economics/2024/mGpwc73TlIETIzTNP2ehG7JZHkowJC5Kg05XH4DG.jpg"
+    },
+    {
+      "number": 2,
+      "question": "The management of a fruit juice pro- duction company was directed by the shareholders to increase the revenue from the sale of its product. The management decided to increase the price of the fruit juice from $7 to $$ 10 per unit and this led to a fall in quantity demanded from 150 units to 30 units.\nUse the information above to answer the questions that follow.\n(a) Calculate the;\n(i) Percentage increase in the price; (ii) percentage decrease in the quantity demanded\n(iii)coefficient of price elasticity of demand for the fruit juice.\n(b) Is the demand for the fruit, price elastic or inelastic? Give a reason for your\nanswer.\n(c) Did the management of the company achieve its objective of increasing revenue? Explain your answer.\n(d) From your answers in 2a(iii), was the increase in the price of the fruit juice a rational strategy to employ in order to increase revenue? Explain your answer."
+    },
+    {
+      "number": 3,
+      "question": "(a) With the aid of relevant diagrams, distinguish between an increase in supply and an increase in quantity supplied.\n(b) Explain how a decrease in income tax will affect the demand for a normal good and an inferior good.\n(c) Explain how an increase in the supply of a substitute will affect the demand for a commodity."
+    },
+    {
+      "number": 4,
+      "question": "(a)Define the term distribution.\n(b) Outline three ways in which the retail- er is important to the consumer.\n(c) Explain three disadvantages of the operation of middlemen in the distribution process"
+    },
+    {
+      "number": 5,
+      "question": "(a) Explain the following concepts (i) labour force; (ii) over-population; (iii) Mobility of labour (iv) optimum population\n(b) Outline four factors responsible for the rapid growth in the population of a country."
+    },
+    {
+      "number": 6,
+      "question": "6. In recent times, developing countries that are predominantly agriculture oriented are searching for ways of diversifying their economies. Many of these countries strive to exploit the available solid mineral deposits in their land as a means of promoting industrialization. In view of the above statement,\n(a) define the term;\n(i) industrialization; (ii) mineral resources.\n(b) apart from promoting industrialization, identify any three benefits of exploiting mineral deposits.\n(c) Outline any three benefits of industrialization to a developing country."
+    },
+    {
+      "number": 7,
+      "question": "(a) Define Central Bank.\n(b) Outline three ways in which the Central Bank of a country can reduce money supply.\n(c) Explain how the Central Bank plays its role as:\n(i) banker to the government; (ii) banker to commercial banks; (iii)lender of last resort."
+    },
+    {
+      "number": 8,
+      "question": "(a) Define economic development.\n(b) Highlight any three characteristics of a developing nation.\n(c) Explain any three measures a country can adopt to facilitate economic development."
+    }
+  ]
+}

@@ -1,0 +1,1329 @@
+{
+  "subject": "Chemistry",
+  "year": 2023,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The vapour density of an organic compound with the molecular formula \\(C_2H_4O_2\\), is\n[H=1.0, C=12.0, O= 16.0]",
+      "options": [
+        {
+          "key": "A",
+          "text": "40",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "120",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "65",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "30",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The following statements are correct except",
+      "options": [
+        {
+          "key": "A",
+          "text": "energy is released when liquids change to solids.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "carbon atoms in gaseous methane are further apart than those in solid diamond.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "there is large decrease in the volume of a solid metal when pressure is applied to it.",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "particles move faster in the gaseous state than in the liquid state.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Which of the following reactions represents the hydrolysis of an alkanoate?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(CH_3COOH + OH^- ⇌H^+⇌ CH_3COO^- + H_2O\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(CH_3COOH + C_2H_5OH ⇌H^+⇌ CH_3COOC_2H_5 + H_2O\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(CH_3COOC_2H_5 + H_2O ⇌H^+⇌ CH_3COO^- + CH_3CH_2OH\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(CH_3COOCH_2CH_3 + H_2O ⇌H^+⇌ CH_3COOH + CH_3CH_2OH\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The following steps are scientific methods except",
+      "options": [
+        {
+          "key": "A",
+          "text": "experimentation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "problem identification",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Analysis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Open-mindedness",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Alkenes can be manufactured by",
+      "options": [
+        {
+          "key": "A",
+          "text": "the combustion of alkanes.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the cracking of hydrocarbons.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "polymerization reactions.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "addition of hydrogen to unsaturated vegetable oils.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The formation of a bond between hydrogen and a highly electronegative atom results in",
+      "options": [
+        {
+          "key": "A",
+          "text": "polarity",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "electrovalent bond.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "dipole",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "metallic bond",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Which of the elements in the table below would react more readily with chlorine?\nElement\nIonization energy (KJ \\(mol^{-1} \\times 10^{-3}\\))\nW\n12.0\nX\n21.0\nY\n106.0\nZ\n200.0",
+      "options": [
+        {
+          "key": "A",
+          "text": "Y and Z only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "X and Z only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "W and X only",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "W and Z only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Which of the following properties does not give evidence of the kinetic theory of matter?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Diffusion",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Melting",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Polymerization",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Evaporation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Dilute trioxonitrate (V) acid does not produce hydrogen when it reacts with metals because",
+      "options": [
+        {
+          "key": "A",
+          "text": "it reacts with the product.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "it is highly corrosive.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "there is no visible reaction.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "it is a strong oxidizing agent.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "Which of the following statements is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Addition reactions occur between alkanes and chlorine.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Butane has a lower boiling point than propane.",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Pentane has five isomers.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "An alkane with 49 carbon atoms contains 100 hydrogen atoms",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "A mixture containing two salts of different solubility can be separated by",
+      "options": [
+        {
+          "key": "A",
+          "text": "chromatography.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "crystallization.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "distillation.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "evaporation.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Species that occur in a reaction pathway but not in the overall reaction are known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "Reactants",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Inhibitors",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Products",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Intermediates",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "How many moles are there in 3.0 g of \\(O_2\\)? [O = 16.0]",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.0093 moles.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.0930 moles.",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "0.0625 moles.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.6250 moles.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "Which of the following equimolar solutions has the highest conductivity?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(H_2SO{_4(aq)}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(NaOH{_(aq)}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(H_2CO{_3(aq)}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(CH_3COOH{_4(aq)}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The pair of compounds that belongs to the same homologous series is",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(C_2H_6\\) and \\(C_4H_{10}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(C_3H_8\\) and \\(C_3H_6\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(C_2H_4\\) and \\(C_4H_{10}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(C_4H_{10}\\) and \\(C_5H_{10}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Which of the following equations does not illustrate correctly one of the reactions of chlorine?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(Ca(OH)_2 + Cl_2 → CaOCl_2 + H_2O\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(Cl_2 + 2NaF → 2NaCl + F_2\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "\\(Cl_2 + 2NaOH → NaCl + NaClO + H_2O\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(H_2S + Cl_2 → 2HCl + S\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The salt solution formed firm a reaction between ethanoic acid and sodium hydroxide solution would be",
+      "options": [
+        {
+          "key": "A",
+          "text": "amphoteric.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "neutral",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "basic",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "acidic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The separation technique that is suitable for separating iodine from tetrachloromethane is",
+      "options": [
+        {
+          "key": "A",
+          "text": "solvent extraction",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "decantation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fractional distillation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "filtration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Consider the following reaction equation:\n\\(2SO_3(g) &rarr; 2SO_2(g) + O_2\\)(g)\n∆H = +198 kJ/mol\nWhich of the following statements about the reaction is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "198 kJ of energy is given off",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The reaction is exothermic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "The reaction container would feel warm.",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "198 kJ of energy is absorbed",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "Arrange the following compounds in decreasing order of their boiling points: \\(NH_3\\), HF, \\(SiH_4\\), \\(CH_4\\)",
+      "options": [
+        {
+          "key": "A",
+          "text": "HF,\\(NH_3\\), \\(SiH_4\\), \\(CH_4\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(CH_4\\), \\(SiH_4\\), HF, \\(NH_3\\),",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(NH_3\\),\\(CH_4\\), \\(SiH_4\\), HF",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(CH_4\\), \\(SiH_4\\), \\(NH_3\\), HF",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Copper (II) ions are able to participate in co-ordinate covalent bonding because they",
+      "options": [
+        {
+          "key": "A",
+          "text": "are coloured",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "are positively charged",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "have vacant d-orbital",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "have unpaired electrons",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "What takes place at the cathode during electrolysis?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Anions lose electrons",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Anions are oxidized",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Cations are oxidized",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Cations are discharged.",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Carbon is deposited in the exhaust pipes of cars because of",
+      "options": [
+        {
+          "key": "A",
+          "text": "presence of additives in petrol",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "incomplete combustion of petrol",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "presence of carbon in petrol",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "contamination of petrol with diesel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Which of the following laws or theory cannot be explained by the application of the kinetic theory of gases?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dalton's atomic theory",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Charle's law",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Boyle's law",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Gay- Lussac's law",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "How many unpaired electrons are present in \\(_{26}Fe^{3+}\\)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "4",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "A consequence of global warming is",
+      "options": [
+        {
+          "key": "A",
+          "text": "air pollution",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "High Humidity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "flooding",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Water pollution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Going down group II in the periodic table normally",
+      "options": [
+        {
+          "key": "A",
+          "text": "ionization energy increases",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "melting point increases",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "shielding effect decreases",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "electronegativity increases",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The primary component of natural gas",
+      "options": [
+        {
+          "key": "A",
+          "text": "ethane",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "methane",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "butane",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "propane",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The gas that is less dense than air is",
+      "options": [
+        {
+          "key": "A",
+          "text": "nitrogen",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "chlorine",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Carbon(IV) oxide",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Oxygen",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The periodic property that is used to determine whether a covalent molecule is polar or not is",
+      "options": [
+        {
+          "key": "A",
+          "text": "atomic radius",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ionization energy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "electron affinity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "electronegativity",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "If \\(100^3\\) of a saturated solution of sodium tetraoxosulphate (VI) at 30&deg; C contains 10.5 g of the salt, what would be its solubility at this temperature? [(\\(Na_2SO_4\\) = 142]",
+      "options": [
+        {
+          "key": "A",
+          "text": "2.15 mol dm-3",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.74 mol dm-3",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "0.60 mol dm-3",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.57 mol dm-3",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "A compound that could be dried by using conc. tetraoxosulphate (VI) acid and not by calcium oxide is likely to be",
+      "options": [
+        {
+          "key": "A",
+          "text": "a deliquescent salt",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a neutral salt",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "an alkaline gas",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "an acid anhydride",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Which of the statements about gases is not correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gases have low densities compared to solids and liquids of equal mass.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The total kinetic energy of the gas is not affected by collision",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Molecules of the gas are in constant motion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Gases are highly soluble in water at high temperatures",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Determine the volume of 0.100 mol of HCl in \\(0.250 mol dm^3\\) of solution.",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(200cm^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(100cm^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(20cm^3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(400cm^3\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "Positive ions in a sea of electrons are found in",
+      "options": [
+        {
+          "key": "A",
+          "text": "covalent bonds",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "metallic bonds",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "dative bonds",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "ionic bonds",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "An element X has two isotopes, \\(^{65}X_{30}\\) and \\(^{66}X_{30}\\) with relative abundance of 60 % and 40% respectively. The relative atomic mass of X is",
+      "options": [
+        {
+          "key": "A",
+          "text": "66.00",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "65.50",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "65.00",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "65.40",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Which of the following statements about the collision theory is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ineffective collision brings about chemical reaction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "All collisions bring about reactions",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "The rate of reaction is proportional to the number of effective collisions",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Collision of molecules will split the molecules to react",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Which of the following elements has its valence electrons in the s-orbital?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Aluminum",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Phosphorus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Sodium",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Carbon",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Petrochemistry is an example of",
+      "options": [
+        {
+          "key": "A",
+          "text": "applied chemistry",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Biochemistry",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Pure chemistry",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Environmental chemistry",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "The molecule that has a non-polar covalent bond is",
+      "options": [
+        {
+          "key": "A",
+          "text": "HCl",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(NH_3\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(Cl_2\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "\\(H_2O\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The reduction half equation of the following reaction is:\n\\(Zn_{(s)} + CuSO_{4(aq)} &rarr; ZnSO_{4(aq)} + Cu_{(s)}\\)",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(Zn_{(s)} → Zn^{2+}_{(aq)} + 2e^-\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(CuSO_{4(s)} + H_2O_{(l)}\\) → \\(Cu^{2+}_{(aq)}\\) +\n\\(SO_{4(aq)}^{2-}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(Cu^{2+}_{(aq)} + 2e^- → Cu_{(s)}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "\\(Cu^{2+}_{(aq)} + e^- → Cu_{(s)}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Why are \\(H_2SO_4\\) and \\(CaCl_2\\), not suitable for drying ammonia gas? They",
+      "options": [
+        {
+          "key": "A",
+          "text": "are poisonous.",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "pollute the gas",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "are corrosive",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "react with the gas",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Isoelectronic species have the same number of",
+      "options": [
+        {
+          "key": "A",
+          "text": "ions",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "electrons",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "protons",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "neutrons",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Which of the following gases has the lowest rate of diffusion?\n[H=1.0, C=12.0, N = 14.0, O= 16.0]",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nitrogen",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "methane",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Ammonia",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Oxygen",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "An example of a crystalline substance that does not possess water of crystallization is",
+      "options": [
+        {
+          "key": "A",
+          "text": "potassium trioxonitrate (V)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sodium tetraoxosulphate (VI).",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "iron (II) tetraoxosulphate (VI)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sodium trioxocarbonate (IV).",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The best indicator to use for the titration of ethanoic acid with sodium hydroxide is",
+      "options": [
+        {
+          "key": "A",
+          "text": "methyl orange",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "phenolphthalein",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "screened methyl orange",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "methyl red",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The relative molar mass of a gaseous hydrocarbon is 30. Determine its vapour density.",
+      "options": [
+        {
+          "key": "A",
+          "text": "45",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "30",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "15",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "60",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Thermal cracking of alkanes usually",
+      "options": [
+        {
+          "key": "A",
+          "text": "is an exothermic process",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "produces only small alkanes",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "involves decomposition",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "requires hydrogen",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "How many grammes of NaOH(s) would be needed to produce 100.0 cm3 of a 0.20 mol dm-3 NaOH, (aq)? [NaOH = 40.0]",
+      "options": [
+        {
+          "key": "A",
+          "text": "800.0g",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.02 g",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "20.0 g",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.80 g",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "How many moles of copper would be deposited by passing 1 Faraday of electricity through a \\(CuCl_2\\) solution?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 moles",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.5moles",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "0.025moles",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "1 mole",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "a. What is a transition element?\nb. Consider the electron configuration of the following elements: A=2, 8,6; B=2,8,2; C=2,8,1, D=2,8,8\nState the element which forms a: i. doubly charged cation; ii. soluble trioxocarbonate (IV).\nc. Explain briefly why there is a general increase in the first ionization energies of the elements across the period in the periodic table.\nd. Give two examples of an aliphatic compound\ne. Explain briefly why alkanols are stronger bases than water.\nf. State the major raw materials used in the Solvay process\ng. What is geometric isomerism?\nh. Give a reason why water gas is a better fuel than producer gas.\ni. Define the term heat of combustion.\nji. State Faraday's second law of electrolysis\nii. Calculate the amount of silver deposited when 10920 coulombs of electricity is passed through a solution of a silver salt.\n[IF = 96500 C mol-1]"
+    },
+    {
+      "number": 2,
+      "question": "a. In an experiment, 20.0 \\(cm^3\\) of a solution containing 4g/\\(dm^3\\) of sodium hydroxide was neutralized by 8.0 \\(cm^3\\) of dilute tetraoxosulphate (VI) acid: i. Write a balanced equation for the reaction; ii. calculate the concentration of the acid in mol/ \\(dm^3\\)\nbi. State two postulates of the Kinetic theory of gases which real gases do not obey\nii. Explain briefly why real gases do not obey the postulates stated in 2(b)(i).\nc. Consider the following compound:\nName the compound\nii. name the two structural isomers of the compound;\niii. state the chemical process involved in the preparation of the compound from starch,\niv. write the chemical equation for the steps involved in the process in 2(c)(ii).\nv. name two enzymes involved in the process in 2(c)(iii)\nd. Explain briefly the term structural isomerism."
+    },
+    {
+      "number": 3,
+      "question": "a. A compound contains 52.2% C, 13.1 % H and Oxygen only. The vapour density of the compound is 23.\nDetermine i. its empirical formula; ii. its molecular formula, [H=1.0, C=12.0, O= 16.0]\niii1). The compound reacts with sodium metal to produce hydrogen gas and when warmed with acidified \\(KMnO_{4(aq)}\\) gives a solution that turns from purple to colorless. It also forms a sweet-smelling liquid when heated with ethanoic acid in the presence of concentrated \\(H_2SO_4\\)\nname the functional group present in the compound; iii2). draw the structural formula of the compound.\nb. Outline the chemical equations for the production of ethanol from cooked cassava.\nci. Explain briefly why a piece of aluminum does not react with water.\nii. How can a pure sample of aluminum chloride crystals be prepared from aluminium\nd. Describe how water can be separated from aqueous \\(CuSO_4\\)"
+    },
+    {
+      "number": 4,
+      "question": "a. Starting with calcium chloride, describe briefly how a solid sample of calcium trioxocarbonate (IV) can be prepared in the laboratory.\nb. With relevant equations outline the procedure for the purification of impure copper.\nc. Copper reacts with concentrated trioxonitrate (V) acid: i. write a balanced chemical equation for the reaction;\nii. state what would be observed in the reaction,\niii. state why the copper is oxidized;\niv. an excess of copper is added to 25.0 \\(cm^3\\) of 16.0 mol \\(dm^3\\) \\(HNO_3\\). Calculate the volume of the gas formed at s.t.p. [H=1.0, N=14.0, O= 16.0, Cu=63.0; Molar volume of gas at .s.t.p.=22.4 \\(dm^3\\)]\ndi. Pure \\(HNO_3\\), is a colourless liquid but when exposed to air, it turns yellowish-brown in colour. Explain briefly this observation.\nii. Write a balanced equation for the laboratory preparation of hydrogen trioxonitrate (V) acid."
+    },
+    {
+      "number": 5,
+      "question": "a. Describe how iron and aluminum reacts with each of the following substances: i. dilute \\(H_2SO_4\\); ii. dilute \\(HNO_3\\)\nbi. Write an equation for the burning of sulphur in air.\nii. Name the catalyst used in the contact process.\niii. In the contact process, why is an excess of air used?\niv. Why is it necessary to cool the catalyst used in 5(b)(ii)?\nv. Give a reason why the air used in the contact process needs to be as clean as possible.\nvi. State two reasons why SO2 should not be discharged into the atmosphere.\nci. State the reagents and conditions used in the laboratory preparation of chlorine.\nii. State two uses of chlorine.\ndi. Name the drying agents for each of the following gases: 1. Hydrogen;\ni2. sulphur (IV) oxide;\ni3. Ammonia.\nii1. State the components of the following\nBronze; ii2. Brass."
+    }
+  ]
+}

@@ -1,0 +1,1353 @@
+{
+  "subject": "Government",
+  "year": 2023,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Apart from globalization, what other factor to a large extent affects the sovereignty of a state?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Right of a franchise",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "System of government",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "International laws",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Inalienability",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "A public declaration of policy and aims especially one issued before an election by a political party or candidate is commonly called",
+      "options": [
+        {
+          "key": "A",
+          "text": "steps to govern",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Policy paper",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "guide to government",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "manifesto",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "The media, commonly referred to as the fourth estate of the realm , monitors the activities of government on behalf of the",
+      "options": [
+        {
+          "key": "A",
+          "text": "people",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "executive",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "civil society",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "media organisation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "Bicameral legislature contributes to the democratic process by",
+      "options": [
+        {
+          "key": "A",
+          "text": "recommending the use of force on policy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "suppressing minority rights",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "imposing programmes and policies on the executive",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "widening the scope of political participation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Maintenance of law and order in a state is the function of the",
+      "options": [
+        {
+          "key": "A",
+          "text": "citizens of the state",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "executive arm of government",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "legislative arm of government",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "judicial service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The official routine observed in carrying out functions in the civil service is commonly known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "official order",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "bureaucracy",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "standard order",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "command",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The Economic Community of West African State (ECOWAS) is now confronted with a new security threat which is",
+      "options": [
+        {
+          "key": "A",
+          "text": "extremism",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "smuggling of illegal goods across states",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "weak national armies",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "proportional representation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "The art of maintaining peaceful relationships between states, groups or individuals mostly comes about as a result of the activities and functions of",
+      "options": [
+        {
+          "key": "A",
+          "text": "the legislature",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "security agencies",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "diplomats",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "the media",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The following issues are some of the challenges the United Nations (UN) addresses except",
+      "options": [
+        {
+          "key": "A",
+          "text": "oligarchical regimes",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "humanitarian aids",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "human rights",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "climate change",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "Which system of government allows for and guarantees maximum competition?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Feudalism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Capitalism",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Communism",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Social Democracy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "The overriding consideration for the creation of the New Partnership for Africa's Development (NEPAD) was to place Africa on the path to",
+      "options": [
+        {
+          "key": "A",
+          "text": "capitalist government",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "non-alignment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "growth and development",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "military might",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The French Colonial policies in her West African colonies were different from the British in many ways except in",
+      "options": [
+        {
+          "key": "A",
+          "text": "discriminatory laws",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "citizenship",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "imperialism",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "cultural imposition",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The reason for which the government should take a key interest in the activities of pressure groups is that, they",
+      "options": [
+        {
+          "key": "A",
+          "text": "provide valuable feedback on government policies and programmes",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "force coalition among political parties for election",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "blackmail political leaders",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "dictate the path and direction for government programmes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The rigid nature of a constitution makes it",
+      "options": [
+        {
+          "key": "A",
+          "text": "accessible to all",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "infallible and standard",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "easy for quick review",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "complicated for amendment",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The Fundamental Human Rights and Liberties must be entrenched in a constitution to",
+      "options": [
+        {
+          "key": "A",
+          "text": "serve majority interest",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "show concern for the people",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "make it difficult to tamper with",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "espouse love for the country",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Unitary system of government is adopted by some states because",
+      "options": [
+        {
+          "key": "A",
+          "text": "of homogeneity",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "it guarnatees democracy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "it builds the capacity of citizens in good time",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "of mineral resources",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The public Service Commission performs the following functions except",
+      "options": [
+        {
+          "key": "A",
+          "text": "advisory body",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "imposition of income tax",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "welfare of personnel",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "discipline of personnel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "What type of right enables citizens to participate in state affairs?",
+      "options": [
+        {
+          "key": "A",
+          "text": "judicial right",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "social right",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "habeas corpus",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "political right",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "What is commonly referred to as the association of the government and the governed?",
+      "options": [
+        {
+          "key": "A",
+          "text": "confederation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "state",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "federation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "monarchy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The local government system assists best in mentoring and grooming people for",
+      "options": [
+        {
+          "key": "A",
+          "text": "military oprations",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "leadership positions",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "citizenship and justice",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "large-scale farming",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Which of the following systems of government does not practice collective responsibility?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Communalism system",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Non-centralised system",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Executive system",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Cabinet system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "One of the formidable challenges the New Partnership for Africa's Development (NEPAD) is confronted with is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "absence of a common platform for debate",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "over reliance on foreign aid",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "absence of technology transfer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "arms race among member states",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "The biggest obstacle which also slowed down nationalist activities in French West African Colonies was the",
+      "options": [
+        {
+          "key": "A",
+          "text": "assimilation policy",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "constitutional reforms and entrenchment of human rights",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "assassination of chiefs",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "deportation of Africans to France",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "A state that has two levels of government is commonly referred to as",
+      "options": [
+        {
+          "key": "A",
+          "text": "concurrent states",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cooperative government",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "federal state",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "coalition government",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "One of the major criticisms levelled against the United Nations (UN) is its inability to",
+      "options": [
+        {
+          "key": "A",
+          "text": "ensure fair permanent representation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "enforce affirmative action and equal wealth",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "adopt a universal language for its operation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "ensure universal access to education",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "One of the function of the electoral management body is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "conduct training programmes for presidential candidates",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "look for external sources besides the government to fund its operations",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "interpret the electoral laws fairly",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "engage in business to increase its financial capacity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The civil service is different from the public service in terms of",
+      "options": [
+        {
+          "key": "A",
+          "text": "educational qualification",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "political affiliation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "conditions of service",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "personality and stature",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The judiciary occupies an important place in every state because it is",
+      "options": [
+        {
+          "key": "A",
+          "text": "mandated to supervise the functions of the executive",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a unique profession of intellectuals",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "protector of the rights of the people",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "a body of upright and just people in society",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "An executive president is one who wields the powers of a",
+      "options": [
+        {
+          "key": "A",
+          "text": "head of state and government",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "ceremonial president only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "leader of government business only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "despot and benevolent dictator",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "There are two types of committee system in the House of parliament as part of their operations and one of such is",
+      "options": [
+        {
+          "key": "A",
+          "text": "parliamentary service board",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "expert committee",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Committee of the Whole House",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Leadership Committee",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "A democratic country is one in which the people have the right to",
+      "options": [
+        {
+          "key": "A",
+          "text": "participate in decision making",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "disregard laws they abhor",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "violently overthrow a government",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "punish government by not honouring tax obligation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "The best way to keep the military at bay from interfering in politics is by ensuring",
+      "options": [
+        {
+          "key": "A",
+          "text": "high pay rise every year",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "their inclusion in government",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "good governance",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "effective control of their day to day operations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The African Union (AU) is saddled with one of these challenges and that is",
+      "options": [
+        {
+          "key": "A",
+          "text": "absence of rich natural resources",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "tensions and political discord among member states",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "inter-ethnic extinction and poor social cohesion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "weak labour force",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The reluctance of military regimes to hand over power to civilian administration is because they",
+      "options": [
+        {
+          "key": "A",
+          "text": "negotiate better loan terms for the country than the civilian government",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have the backing of traditional rulers, their subjects and the clergy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "feel a sense of entitlement",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "perceive civilians and politicians as evil doers and backward",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The exercise of power can arise from any of the following sources except",
+      "options": [
+        {
+          "key": "A",
+          "text": "ideological power",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "legitimate power",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "expert power",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "charismatic power",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "A social, political and economic arrangement in which landed property and other natural resources are collectively owned is referred to as",
+      "options": [
+        {
+          "key": "A",
+          "text": "Federalism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Liberalism",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Communalism",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Feudalism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Public opinion is formed through the following channels except",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cabinet",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Elections",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Mass media",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Political parties",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The function of the Diplomatic Missions include the following except",
+      "options": [
+        {
+          "key": "A",
+          "text": "project the culture of the people",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "woo investors",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "pay salaries of workers of the mission",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "gather intelligence information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "One of the factors that influences decentralization of power in a state is",
+      "options": [
+        {
+          "key": "A",
+          "text": "weak central authority",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "widening political participation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "maximum allegiance to the state",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "maximum loyalty",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "One of the high points of the activities of the National Congress of British West Africa (NCBWA) led to the",
+      "options": [
+        {
+          "key": "A",
+          "text": "proposal for African unity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "creation of the African High Command",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Africanization of the Executive Council",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "introduction of the elective principles",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The pattern of rule by the French in her West African colonies was highly",
+      "options": [
+        {
+          "key": "A",
+          "text": "decentralized",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "proportional",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "consultative",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "centralized",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The Commonwealth of Nations is committed to one of the following principles",
+      "options": [
+        {
+          "key": "A",
+          "text": "human rights and democracy",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "supervise political activities of member states",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "draft constitution for member states",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "finance budget of member states",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The cornerstone of a functioning democracy is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "foreign policy and military alliances",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "appropriation bill",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "free and fair elections",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "expenditure pattern of the executive",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The issues that are at the core of a country's foreign policy are referred to as",
+      "options": [
+        {
+          "key": "A",
+          "text": "globalisation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "state area",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "national interest",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "diplomacy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The underlying principle of the concept of seperation of powers is mainly to",
+      "options": [
+        {
+          "key": "A",
+          "text": "educate people on their rights",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "tame the executive",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "prevent arbitrariness",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "ensure constitutional review",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Secret voting assists the voter in making a decision without",
+      "options": [
+        {
+          "key": "A",
+          "text": "coercion",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "pondering over issues",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "national interest",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "public good",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "Elections plays a major role in the democratic process because, it",
+      "options": [
+        {
+          "key": "A",
+          "text": "ensures only good people rule",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "manipulates the electoral process",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "confers legitimacy",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "projects the class system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Which one among the following is a significant factor that influences the foreign policy of a country?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gender of the political leader",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Educational system",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Recruitment policy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "political system",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "One of the negative effects of colonial rule on West African states was the",
+      "options": [
+        {
+          "key": "A",
+          "text": "building of roads and rail network",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "social interventions",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "western education",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "dependency syndrome",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "One of the low points in the cabinet system of government is that, the",
+      "options": [
+        {
+          "key": "A",
+          "text": "divided loyalty of the cabinet ministers is strong",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "centre of power in the system is stable",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Prime Minister does not regard the Head of State",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "tenure of government is always not stable",
+          "is_correct": true
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "Identify f ive functions of government as an Agent of the State"
+    },
+    {
+      "number": 2,
+      "question": "Explain f ive factors that hamper the effective operation of the justice delivery system"
+    },
+    {
+      "number": 3,
+      "question": "Highlight Five factors that have contributed to the weakened government institutions in many West African States"
+    },
+    {
+      "number": 4,
+      "question": "In what five ways does political socialization assist in the democratic process of a state?"
+    },
+    {
+      "number": 5,
+      "question": "Outline five reasons for which it is important for a state to have efficient local government system"
+    },
+    {
+      "number": 6,
+      "question": "Explain five reasons for which the study of nationalism and nationalist activities is important to the democratic development of a state"
+    },
+    {
+      "number": 7,
+      "question": "Identify four qualities of a good political leader"
+    },
+    {
+      "number": 8,
+      "question": "What is political leadership?"
+    },
+    {
+      "number": 9,
+      "question": "In what five ways is diplomacy important to the development of Nigeria?"
+    },
+    {
+      "number": 10,
+      "question": "Outline five positive political impacts colonial administrations had on West African States leading to statehood"
+    },
+    {
+      "number": 11,
+      "question": "Identify five mistakes committed in democratic governance that give cause for the military to intervene in politics"
+    }
+  ]
+}

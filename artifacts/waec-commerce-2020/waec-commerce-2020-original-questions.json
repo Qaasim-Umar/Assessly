@@ -1,0 +1,1319 @@
+{
+  "subject": "Commerce",
+  "year": 2020,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Commerce is defined as",
+      "options": [
+        {
+          "key": "A",
+          "text": "buying and selling of goods and services only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "all activities in the distribution and exchange of goods and services",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "all activities involved in the production of goods and services",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "transporting and warehousing of goods only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The types of occupation that a broker belongs to is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "commercial",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "construction",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "extraction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "manufacturing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "A form of money which was not used in the early days to trade is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "tobacco",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "metal bars",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cowries",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "coins",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "Which of the following activities is not an example of the extractive industry?",
+      "options": [
+        {
+          "key": "A",
+          "text": "weaving",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "quarrying",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "hunting",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "fishing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "The factor of production which bear all the risk of the business is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "capital",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "entrepreneurship",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "labour",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "land",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "production is complete when product reach the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "warehouses",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "users",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "retailers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "shops",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "A partner whose name is used to boost the image of the business and does not contribute capital is a?",
+      "options": [
+        {
+          "key": "A",
+          "text": "dormant partner",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "general partner",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "limited partner",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "nominal partner",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "One advantage of sole proprietorship is that?",
+      "options": [
+        {
+          "key": "A",
+          "text": "access to large capital is easy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "decisions are made promptly",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "business risks are spread",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "continuity of business is assured",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "A business unit in which savings of members are lent to others is a?",
+      "options": [
+        {
+          "key": "A",
+          "text": "consumer cooperative society",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "producer cooperative society",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "credit and thrift society",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "wholesale cooperative society",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The document issued to a public company allowing it to commence business is the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Article of association",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "certificate of incorporation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "memorandum of association",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "certificate of trading",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Which of the following is not a function of a consumer association?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ensuring that consumers buy quality goods",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "educating consumers on their rights",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "penalizing importers of fake goods",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "ensuring that fair prices are charged",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "An association formed by computer distributors to safeguard and promote their interest is a?",
+      "options": [
+        {
+          "key": "A",
+          "text": "chamber of commerce",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cooperative society",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "trade association",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "trade union",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "Examples of currents assets are?",
+      "options": [
+        {
+          "key": "A",
+          "text": "cash and trade debtors",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "cash and trade creditors",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "trade debtors, trade creditors and cash",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "trade creditors and trade debtors",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "When the cost of sales is divided by the average stock, the result is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "gross profit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "net profit",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "rate of turnover",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "working capital",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The part of issued share capital that the company has asked the subscribers to pay for is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "authorized capital",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "called-up capital",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "nominal capital",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "paid-up capital",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "The last link in a channel of distribution is the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "wholesaler",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "retailer",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "consumer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "agent",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The difference between a country`s imports and exports of goods in a particular year is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "terms of trade",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "terms of payment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "balance of payment",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "balance of trade",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Goods brought into the country for sale are the country`s?",
+      "options": [
+        {
+          "key": "A",
+          "text": "invisible imports",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "invisible exports",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "visible imports",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "visible exports",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "A feature of supermarkets which distinguishes it from other large scale retail outlets is that items sold are?",
+      "options": [
+        {
+          "key": "A",
+          "text": "mainly household goods",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "mainly industrial goods",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "delivered by post",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "one line of products",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "One advantage of small scale retail outlet is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "availability of self service facilities",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ability to buy in bulk",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "easy access to large amount of capital",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "personal attention to customers",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "A discount deducted from the invoice price of goods to enable the retailer to make profit is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "cash discount",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "functional discount",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "trade discount",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "seasonal discount",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "A document issued by the seller`s own courier and signed by the customer to acknowledge receipt of the goods is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "advice note",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "consignment note",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "delivery note",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "freight note",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "A request for goods from another country by an importer would be made using?",
+      "options": [
+        {
+          "key": "A",
+          "text": "an invoice",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "an indent",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "an order",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a quotation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The right to buy or sell stock exchange with a stipulated period is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "option",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "contango",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "backwardation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "brokerage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The share value stated on a share certificate is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "above par value",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "below par value",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "market value",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "nominal value",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The bank which acts as the lender of last resort is the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "central bank",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "commercial bank",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "merchant bank",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "mortgage bank",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The issue of shares which allows existing shareholders to buy shares at a preferential price is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "bonus issue",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "offer for sale",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "public offer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "rights issue",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The financial market where existing shares and bonds are bought and sold is the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "forex market",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "stock market",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "money market",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "commodity market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "An insurance policy which is not a contract of indemnity is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "burglary insurance",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "fire insurance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "life insurance",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "motor insurance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "When a company insures the lives of all its employees collectively, the policy is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "accident insurance",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "fleet insurance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fidelity guarantee insurance",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "group insurance",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "A cheque that could be cashed over the counter by the payee is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "certified cheque",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "crossed cheque",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "open cheque",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bank draft",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "A specially-designed mode of transport for conveying liquid and gas is a?",
+      "options": [
+        {
+          "key": "A",
+          "text": "coaster",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "tanker",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "liner",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "ferry",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The safe keeping of goods produced until they are needed is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "hoarding",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "marking",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "packaging",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "warehousing",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "One of the objectives of the niger basin commission is to?",
+      "options": [
+        {
+          "key": "A",
+          "text": "regulate the movement of citizens across the borders",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "impose tariff and quota on non-members",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "regulate the movement of cargo along the river",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "streamline the construction of dams on the river",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "A paid presentation about a product with a view to encouraging by an identified sponsor is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "publicity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "personal selling",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "sales promotion",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "advertisement",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The face-to-face meeting of the seller with the buyer for the purpose of making sales is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "mass selling",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "impulse buying",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "personal selling",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sales promotion",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The activity which improves the appearance of a product and also aimed at protecting it is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "advertising",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "grading",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "labelling",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "packaging",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Which of the following is not a component of the marketing mix?",
+      "options": [
+        {
+          "key": "A",
+          "text": "product",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "production",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "promotion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "place",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The marketing term which regards the consumer as king that must be satisfied is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "market segmentation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "market research",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "marketing concept",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "marketing mix",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "An agreement that is enforceable in law is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "an offer",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a consideration",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a contract",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "an acceptance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "A contract will not be discharged through?",
+      "options": [
+        {
+          "key": "A",
+          "text": "acceptance",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "aggrement",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "breach",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "A person engaged for the purpose of bringing his principal and a third party into a contractual relation is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "an arbiter",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "an auctioneer",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "an agent",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "middlemen",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The additional commission paid to agents for guaranteeing payment is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "brokerage",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "del credere",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "drawback",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "demurrage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The transfer of ownership of a business from government to the public is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "commercialization",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "deregulation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "privatization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "merger",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "One of the disadvantages of privatization is that it?",
+      "options": [
+        {
+          "key": "A",
+          "text": "promotes inefficiency of staff",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "brings about economic decline",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "reduces government revenue",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "causes increase in the prices of products",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The management function which involves measuring outcomes and taking corrective action to reduce error is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "staffing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "organizing",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "directing",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "controlling",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "In delegation of authority, the subordinate offer is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "accountable to his immediate superior",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "responsible for his superiors actions",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "only answerable to top management",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "expected to replace his superior",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "A medium of inter-departmental communication is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "intercom",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "notice board",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "radiophone",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "circular",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Which of the following is not an objective of ECOWAS?",
+      "options": [
+        {
+          "key": "A",
+          "text": "promotion of a common language",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "improvement of infrastructural facilities",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "encouragement of free movement of people",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "encouragement of trade among member coutries",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "The issue of prospectus by a company is an invitation to members of the public to?"
+    },
+    {
+      "number": 2,
+      "question": "A sole proprietor has been advised to advertise her business in order to increase sales.\n(a) i. List four advertising media she could use.\nii. State four factors she would consider in the choice of a medium.\n(b) State four advantages of advertising to her business"
+    },
+    {
+      "number": 3,
+      "question": "(a) State four functions of a cartel\n(b) Explain three advantages and three disadvantages of public enterprises"
+    },
+    {
+      "number": 4,
+      "question": "(a) List six credit instruments used in business transactions\n(b) Mr. Sylva is considering hire purchase as a source of finance for his business operations. State four advantages and three disadvantages of this source of finance."
+    },
+    {
+      "number": 5,
+      "question": "(a) Explain four factors to be considered in setting up a retail business.\n(b) State how the government uses the following to regulate business:\ni. registration of business name\nii. patent;\niii. trade mark;\niv. copyright."
+    },
+    {
+      "number": 6,
+      "question": "(a) State four functions of a Stock Exchange.\n(b) Explain the following types of securities traded on the Stock Exchange:\ni. debentures\nii. bonds\niii. shares\niv. stock."
+    },
+    {
+      "number": 7,
+      "question": "(a) State five functions of an Export Promotion Council.\n(b) Outline five roles performed by the Customs and Excise Authority towards the growth of commerce"
+    },
+    {
+      "number": 8,
+      "question": "Emeka has been a sales representative for three years but has never met his target.\n(a) State five reasons that could have accounted for his inability to meet his target.\n(b) Explain five promotional tools he could use to stimulate sales of his company's products"
+    },
+    {
+      "number": 9,
+      "question": "The following information relates to Raisa's grocery store as of 31st December 2018.\nStock -1st January 2018\n20,000\nPurchases\n150,000\nSales\n230,000\nCarriage inwards\n4,000\nRent received\n80,000\nSalaries\n29,000\nStock -31st December 2018\nYou are required to calculate:\n(a) cost of goods sold\n(b) gross profit\n(c) net profit\n(d) percentage of gross profit"
+    }
+  ]
+}

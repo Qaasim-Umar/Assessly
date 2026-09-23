@@ -1,0 +1,1349 @@
+{
+  "subject": "Government",
+  "year": 2020,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "In modern democracy, a government is _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "a contrast between the rulers and the ruled",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "a preserve of the political party in power",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "monopoly of the ethnic group",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "alternation of power between the majority and minority tribes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The ability to make and enforce laws and administer justice constitute the major functions of a _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "nation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "society",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "government",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "pressure group",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Executive power in a cabinet system of government is vested in the ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "legislature",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "judiciary",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "civil service",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "council of ministers",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "A feature of a confederal state is that _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "it is a single sovereign state",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "its constitution is flexible",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "any unit can secede at will",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "its powers are distributed equally between the centre and units",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "One of the limitations to the principles of rule of law is _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Immunity",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "equality",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "liberty",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "impartiality",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "Countries adopt the unitary system of government because it __________",
+      "options": [
+        {
+          "key": "A",
+          "text": "detests dictatorship",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "promote national integration",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "concentrates power only at the centre",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "allows the component units to secede at will",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Which of the following is an advantage of monocephalous executive ___________",
+      "options": [
+        {
+          "key": "A",
+          "text": "sharing of power",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "quick decision making",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "impartial dispension of justice",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "enjoyment of press freedom",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "A major difference between power and authority is that, authority is ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "scarcely exercised",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "more dependent on coercion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "acquired popularly",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "exercised through force",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Political participation can take the form of __________",
+      "options": [
+        {
+          "key": "A",
+          "text": "belonging to a trade union",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "being a member of a pressure group",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "canvassing for votes",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "organizing festival for good harvest",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "Which of the following is a disadvantage of proportional representation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "encourages rigging",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "promotes strong government",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "makes for easy decision making in parliament",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "is difficult and cumbersome to operate",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "The sum total of authority in a state unrestrained by law is _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "monarchy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "society",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "oligarchy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sovereignty",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The flexibility and rigidity of the constitution refer to the __________",
+      "options": [
+        {
+          "key": "A",
+          "text": "sources of constitution",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "making of constitution",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ease of amending constitution",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "coding of constitution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The observance of Rule of Law in a state requires _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "an independent judiciary",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "an ineffective police system",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a flexible constitution",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "existence of a two-party system",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The principle of separating the judiciary from the other organs of government and making it free from executive and legislative influence is termed __________",
+      "options": [
+        {
+          "key": "A",
+          "text": "judiciary",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "judicial review",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "separation of powers",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "fusions of powers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The right to respect the personality of the individual is a _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "civil right",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "natural right",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "social right",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "economic right",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Which of the following constitutional provisions gives a high degree of autonomy to component parts of a unitary state?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Devolution",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Delegation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Divestiture",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Declaration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The following are redresses available at the courts for aggrieved people except _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "injunction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "mandamus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "certiorari",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "prorogation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Which of the following usually leads to the curtailment of the rights of citizens?",
+      "options": [
+        {
+          "key": "A",
+          "text": "transitional period",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "granting of presidential pardon",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "period of constitutional pardon",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "violent socio-political unrest",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "The national secretariat of a political party is managed by the ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "presidential candidate",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "funding members",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "national chairman and general secretary",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "national executive and youth organizer",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The type of election which allows party members to elect candidates for elective offices is _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "general election",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "bye election",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "direct election",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "primary election",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "An opposition party which sees itself as ''government -in-waiting'' is called ______",
+      "options": [
+        {
+          "key": "A",
+          "text": "shadow government",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "caretaker government",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "national government",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "responsible government",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The document which sets out the programme of a political party and guides the electorate to vote for it is the ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "constitution",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "electoral register",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "manifesto",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "white paper",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "An advantage of a two-party system is that it __________",
+      "options": [
+        {
+          "key": "A",
+          "text": "simplifies the electoral process",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "ensures winner takes all",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "protects the electoral commission",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "protects the electorate from votr buying",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Which of the following is a non-partisan organisation with the aim of influencing government policies?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Political party",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Pressure group",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Humanitarian",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Relief organization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The collective views held by majority of citizens of a country about a particular policy is _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "national interest",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "public opinion",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "commentary",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "bullentin",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "An institution under the executive arm of government responsible for formulating and implementing government policies is the ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "public service",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "public corporation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "civil service",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "judicial service",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The following are means of controlling public corporation except _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "legislative control",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "judicial control",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ministerial control",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "chief of staff control",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The institution established by the constitution to be responsible for recruiting personnel into the civil service is the ___________",
+      "options": [
+        {
+          "key": "A",
+          "text": "personnel management office",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "office of the president",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "National labour commission",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Public service commission",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "If a winner emerges in an election as a result of his/her votes being more than the combined votes of the opposing contestants, what types of electoral system is being practised?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Absolute majority",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "plurality",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "second ballot",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "alternative vote",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Which of the following is a function of an electoral commission?",
+      "options": [
+        {
+          "key": "A",
+          "text": "adjudicating election petitions",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "provision of electoral registers",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "disciplining personnel in the civil service",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "promotion of public servants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Which of the following is not an electoral malpractice?",
+      "options": [
+        {
+          "key": "A",
+          "text": "impersonation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "threatening",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "campaigning for a candidate",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "gerrymandering",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Local government sources of revenue can best be improved through?",
+      "options": [
+        {
+          "key": "A",
+          "text": "schools",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the collection of import duties",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the provision of housing units",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cottage industries",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Public opinion is important in that, it ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "helps political parties to assess their policies",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "creates delays in the execution of policies",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "may be unreliable and misleading",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "can be manipulated by political opponents",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "One of the features of pressure groups is that all members ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "are rich",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "think in the same way",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "have similar interests",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "oppose the government",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "Which of the following modes of operation of pressure group undermines the economic, social and political stability of the state ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lobbying",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "symposia",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "strikes",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "debates",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The police perform all the following functions except ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Public execution of law breakers",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "prosecuting law breakers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "protection of life and property",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "enforcement of law and order",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Which of the following is a reason for the failure of the assimilation policy in French West Africa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The change in name of their culture",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "The refusal of the African to be culturally colonized",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "The paternal policy of the French",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Bribery of the opinion leaders by the French",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The capital of the French Federation of West Africa states was located in?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bamako, Mali",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Dakar, Senegal",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Conakry. Guinea",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Niamey,Niger",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Under the crown colony system of administration, major policies were implemented in the colonies by the ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chiefs and their elders",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Secretary of states for the colonies",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Chiefs and the British",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Colonial governor",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "One way of improving productivity in the public service is through?",
+      "options": [
+        {
+          "key": "A",
+          "text": "promotion without examination",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "higher salaries and allowances",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "increase in working hours",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "open door policy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Which of the following made the colonial Government a \" Virtual Dictator\"?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Legislative council",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Executive council",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "appointment of departmental heads",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Reserved veto powers",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Which of the following is a feature of the French policy of Association?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Elevation of the position of the chiefs",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "French citizenship to subjects",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "scholarships to needy students",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "language barrier and race",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The African Union is most often unable to resolve conflicts because of _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "financial weekness",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "absence of African High Command",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Differences in Culture",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Language barrier and race",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The formation of the African Union is aimed at achieving a wider goal of ________",
+      "options": [
+        {
+          "key": "A",
+          "text": "cultural integration",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "continental government",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "national solidarity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "African identity",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "A major advantage of a country's foreign policy is that, it __________",
+      "options": [
+        {
+          "key": "A",
+          "text": "encourages infringement on the territories of other states",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "promotes the country's national interest",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "stimulates political activities in the state",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "promotes understanding between the leaders and the led",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The West African Students Union (WASU) was formed by _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "Siaka Stevens",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "K. A. Gbedemah",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "E.F Small",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Oladipo Solake",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "A military coup d'etat is followed by _________",
+      "options": [
+        {
+          "key": "A",
+          "text": "enforcement of fundamental human rights",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "suspension of the constitution",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "breaking of diplomatic relations with foreign countries",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "mass importation of firearms",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Which of the following countries is a unitary state?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nigeria",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Egypt",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Ghana",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Canada",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Which of the following does not influence a country's foreign policy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Desire for foreign investments",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "International law, Conventions and Treaties",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Religion and racial factors",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Age of the leader",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "The National Congress of British West Africa (NCBWA) was founded in _______",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sierra Leone",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Liberia",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Ghana",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Nigeria",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) What is Political socialization?\n(b) identity four features of a nation"
+    },
+    {
+      "number": 2,
+      "question": "Highlight five features of federalism?"
+    },
+    {
+      "number": 3,
+      "question": "(a) What is a Public Corporation?\n(b) Identify four ways in which Public corporations are controlled."
+    },
+    {
+      "number": 4,
+      "question": "Outline five ways in which Public opinion is being measured?"
+    },
+    {
+      "number": 5,
+      "question": "Explain five means of safeguarding rights of citizens?"
+    },
+    {
+      "number": 6,
+      "question": "Identify five challenges faced by the United Nations Organizations (UNO)"
+    },
+    {
+      "number": 7,
+      "question": "Highlights five differences between the crown colony and the protectorates?"
+    },
+    {
+      "number": 8,
+      "question": "(a) List three political parties and their leader who contested during the 1979 presidential elections in Nigeria\n(b) Highlight the features of political parties in Nigeria since independence."
+    },
+    {
+      "number": 9,
+      "question": "Highlight five weaknesses of the 1999 constitution of the Federal Republic of Nigeria."
+    },
+    {
+      "number": 10,
+      "question": "(a) List three features of the Igbo Political system.\n(b)Identify four democratic tenets of the Igbo Traditional Political system."
+    }
+  ]
+}

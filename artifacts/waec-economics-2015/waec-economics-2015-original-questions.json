@@ -1,0 +1,1289 @@
+{
+  "subject": "Economics",
+  "year": 2015,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Economics is regarded as a science because it?",
+      "options": [
+        {
+          "key": "A",
+          "text": "studies laws that govern human behaviour",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "uses scientific method to explain human behaviour",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "makes use of controlled experiments to explain human behaviour",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "makes use of machines to study human behaviour",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "which of the following can be described as land",
+      "options": [
+        {
+          "key": "A",
+          "text": "forest",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "diamond",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "roads",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "crude oil",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "An outward shift of the production possibility curve shows that?",
+      "options": [
+        {
+          "key": "A",
+          "text": "production is shifting to the left",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "resources are under-utilized",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "economic growth has taken place",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "factors of production are moving outward",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The following constitute the criteria for identifying an economic system except?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ownership of resources",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "scarcity of resources",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "method of decision making",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "motivation for production",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "A disadvantage of the mean as measure of central tendency is that?",
+      "options": [
+        {
+          "key": "A",
+          "text": "is affected by extreme values",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "can only be used for continuous data",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cannot be used to measure the qualities of a population",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cannot be determined in group data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "which of the following is not an effect of many middlemen in the chain of production",
+      "options": [
+        {
+          "key": "A",
+          "text": "shortage of commodities",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "low retail prices",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "hoarding of goods",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "high retail prices",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "If the price of floor rises, then bread",
+      "options": [
+        {
+          "key": "A",
+          "text": "demand curve will shift to the left while supply curve will shift to the right",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "supply curve will shift to the left",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "supply curve will shift to the right",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "demand curve will shift to the right while supply curve remains unchanged",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "which of the following is not a reason for abnormal demand",
+      "options": [
+        {
+          "key": "A",
+          "text": "price of the commodity",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "goods of ostentation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "giffen goods",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "rare commodity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "increase in production subsidies will shift",
+      "options": [
+        {
+          "key": "A",
+          "text": "the demand curve to the left",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the supply curve to the right",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "both the supply demand curves to the left",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "supply curve to the left and demand curve to the right",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The market supply curve slopes upward from left to right indicating that?",
+      "options": [
+        {
+          "key": "A",
+          "text": "producers pay high taxes",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "two commodities can be supplied at the same time",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "at a lower price, less is supplied",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "at a lower price, more is supplied and demanded",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "if a given change in price brings a proportionately larger change in quantity demanded, the",
+      "options": [
+        {
+          "key": "A",
+          "text": "demand is relatively price elastic",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "demand is relatively price inelastic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "price elasticity of demand is unitary",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "price elasticity of demand is constant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Government revenue will increase if taxes are levied on goods with?",
+      "options": [
+        {
+          "key": "A",
+          "text": "perfectly elastic demand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "fairly elastic demand",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "perfectly inelastic demand",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "unitary elastic demand",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "if the price of a commodity Z falls and a consumer buys less of it, then commodity Z is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "necessity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "good of ostentation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "normal good",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "giffen good",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "In order to calculate total utility (TU) from given levels of marginal utility (MU), one has to?",
+      "options": [
+        {
+          "key": "A",
+          "text": "subtract MU from TU",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Add MU from the various levels",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "multiply MU by the initial TU",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Divide current MU by previous MU",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "which of the following will not affect the market price of a commodity",
+      "options": [
+        {
+          "key": "A",
+          "text": "increase in demand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "change in taste",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "intersection of demand and supply",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "increase in supply",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "All the following are methods of determing prices except?",
+      "options": [
+        {
+          "key": "A",
+          "text": "maximum pricing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "rationing",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "minimum pricing",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "auctioning",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The law of diminishing marginal returns relate to?",
+      "options": [
+        {
+          "key": "A",
+          "text": "total utility",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "average utility",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "total product",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "marginal utility",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Total cost is obtain by?",
+      "options": [
+        {
+          "key": "A",
+          "text": "adding up the marginal cost at each level",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "dividing the total cost of output at each level",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "adding up the average variable cost at each level",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "adding up the total variable cost and total fixed cost",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "By adding all the marginal products at each level of employment of the variable input, we obtain a value equal to",
+      "options": [
+        {
+          "key": "A",
+          "text": "average product",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "total product",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "average variable cost",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "total cost",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "which of the following curves is not U shaped",
+      "options": [
+        {
+          "key": "A",
+          "text": "marginal cost curve",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "average fixed cost curve",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "average total cost curve",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "average variable cost",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "which of the following business organisations is likely to experience disagreements between management and shareholders",
+      "options": [
+        {
+          "key": "A",
+          "text": "co-operative society",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sole trader",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "partnership",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "joint-stock company",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "which of the following is not a method of controlling monopoly",
+      "options": [
+        {
+          "key": "A",
+          "text": "preventing mergers",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "indigenization",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "privatization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "imposing high profit tax",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "which of the following features distinguishes a public limited company from a private limited company",
+      "options": [
+        {
+          "key": "A",
+          "text": "perpetual existence",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "limited liability",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "legal entity",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sales of shares to the public",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Inflation may occur if there is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "excess supply over demand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "increase in productivity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "excessive demand with limited supply",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "increased government spending in a depressed economy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "Frictional unemployment occurs when?",
+      "options": [
+        {
+          "key": "A",
+          "text": "there is a change in the technique of production",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "job seekers lack information where jobs exist",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "bad weather prevents work from progressing",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "job seekers have disabilities",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "which of the following will increase the demand for labour",
+      "options": [
+        {
+          "key": "A",
+          "text": "Increase wage rate",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "labour's demand for output",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "low wage rate",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "low marginal productivity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "one reason for low agrictural productivity in most west African countries is that?",
+      "options": [
+        {
+          "key": "A",
+          "text": "farmers are not capable of producing cash crops",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "it does not provide income to farmers with large families",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "farmers find it difficult getting help from financial institutions",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "it is not the only source of raw materials for agro-based industries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The movement of labour from one grade to an entirely different grade is an example of?",
+      "options": [
+        {
+          "key": "A",
+          "text": "industrial labour mobility",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "horizontal occupational mobility",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "vertical occupational mobility",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "geographical mobility",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "which of the following is not a strong basis for trade unions demand for higher wages",
+      "options": [
+        {
+          "key": "A",
+          "text": "company is making higher profit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "productivity of workers has increased",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "members of the union have high qualifications",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "commodity produced by the workers is very essential",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The difference between the gross domestic product (GDP) and gross national product (GNP) IS?",
+      "options": [
+        {
+          "key": "A",
+          "text": "depreciation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "transfer payment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "net income from abroad",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "direct taxes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "location of firms of an industry is not influenced by?",
+      "options": [
+        {
+          "key": "A",
+          "text": "availability of raw material",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "existence of other firms",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "nearness to the source of money supply",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "government policy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "In national income accounting, the term '' net '' is used to indicate that a value-----",
+      "options": [
+        {
+          "key": "A",
+          "text": "includes income of foreigners",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "includes income of citizens",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "includes depreciation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "excludes depreciation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "which of the following best describes token money?",
+      "options": [
+        {
+          "key": "A",
+          "text": "money in the vaults of commercial banks",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "currency and coins in circulation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "money with face value higher than its material content",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "coins and notes made of poor quality material",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "In developing countries, a larger percentage of the labour force is employed in the",
+      "options": [
+        {
+          "key": "A",
+          "text": "trade sector",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "tertiary sector",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "primary sector",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "secondary sector",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "An industry is best described as",
+      "options": [
+        {
+          "key": "A",
+          "text": "firm that sells a set of closely related commodities",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a factory that produces different lines of product",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a group of firms that sells a closely related set of products",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "industrial concern that is into production and selling of goods",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "The main item traded on a stock exchange market is",
+      "options": [
+        {
+          "key": "A",
+          "text": "treasury bills",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "travellers cheque",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "foreign currencies",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "new shares",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The proportion of commercial banks' total assets kept in the form of highly liquid assets is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "demand deposit",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "fixed deposit",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cash ratio",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "moral suasion",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "which of the following is not an objective of economic planning",
+      "options": [
+        {
+          "key": "A",
+          "text": "need to direct economic development of the country towards the desired direction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "desire to ensure a sustained cultural development of the country",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "desire to widen the gap between developing countries and the developed world",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "management of scarce resources in the face of unlimited wants of the citizens",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "In order to control inflation, the government should",
+      "options": [
+        {
+          "key": "A",
+          "text": "reduce the cost of borrowing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "buy securities in the open market",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "adopt restrictive monetary policy",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "discourage savings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "when the demand for foreign exchange exceeds its supply, the value of the domestic currency",
+      "options": [
+        {
+          "key": "A",
+          "text": "appreciates",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "depreciates",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "remains inchanged",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "expands",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The export of west A frican countries are mostly composed of",
+      "options": [
+        {
+          "key": "A",
+          "text": "service",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "raw materials",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "manufactured goods",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "consumer goods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "A concious effort of government to achieve a specific set of goals is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "economic planning",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "economic development",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "economic growth",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "economic target",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "A country has favourable terms of trade when the prices of her",
+      "options": [
+        {
+          "key": "A",
+          "text": "exports rises relative to the price of her imports",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "exports falls relative to the price of her imports",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "imports rise faster than the prices of imports",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "imports and exports move in the same direction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "The abolition of all forms of trade barriers among member countries while maintaining common external tariffs against non members is a feature of a",
+      "options": [
+        {
+          "key": "A",
+          "text": "free trade",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "custom union",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "common market",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "economic union",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "In order to correct adverse balance of payments problem, government should?",
+      "options": [
+        {
+          "key": "A",
+          "text": "reduce tariffs",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "increase subsidies on exports",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "increase tax on local industries",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "reduce personal income tax",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "which of the following is a benefit to a member country of World Bank?",
+      "options": [
+        {
+          "key": "A",
+          "text": "easy access to long term loans",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "management of foreign exchange",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mediating in labour dispute",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "financing balance of payment deficit",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "what is the total revenue from indirect tax",
+      "options": [
+        {
+          "key": "A",
+          "text": "$686.0 m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "$400.20 m",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "$135.80 m",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "$100.00 m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "what is the total revenue from non tax sources",
+      "options": [
+        {
+          "key": "A",
+          "text": "$400.20 m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "$375.20 m",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "$135.00 m",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "$75.00 m",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "The total fixed cost (TFC) and total cost (TC) functions of a hypothetical firm are shown in the graph below. Study it and answer the questions that follow:\n(a) Determine the firm's\n(i) variable cost at output levels 2, 4 and 6\n(ii) average total cost at output levels 2 and 3\n(iii) marginal cost at output levels 4 and 6\n(b) If the price of the firm's product is $40, calculate the firm's profit or loss when the following units are sold:\n(i) 2 units; (ii) 4 units"
+    },
+    {
+      "number": 2,
+      "question": "The table below shows the incomes and rates of income tax levied on four professionals in an economy.\nProfession\nIncome per month($)\nTax rate %\nDisposable income ($)\nDoctor\n8,000\n10\nEngineer\n7,000\n12\nCivil servant\n5,000\n18\nNurse\n6,000\n15\nUse the above data to answer the questions that follows:\n(a) Calculate the disposable incomes of the four individuals\n(b) What system of taxtation was employed?\n(c) Give reasons for your answer in 2(b)\n(d) With the aid of a diagram, explain the system of taxation employed in 2(b)"
+    },
+    {
+      "number": 3,
+      "question": "(a) What is a trade union?\n(b) Describe any four functions of trade unions.\n(c) Outline any two weapons used by trade unions to achieve their objectives."
+    },
+    {
+      "number": 4,
+      "question": "(a) Outline any four objectives of a price control policy.\n(b) Highlight any four effects of a maximum price control policy."
+    },
+    {
+      "number": 5,
+      "question": "(a) What are infant industries?\n(b) State any four reasons for protecting infant industries.\n(c) Outline any three ways by which industries can be financed in West Africa."
+    },
+    {
+      "number": 6,
+      "question": "(a) What is balance of payment disequilibrium?\n(b) Explain the two types of balance of payment disequilibrium.\n(c) Highlight any four reasons most West African countries are experiencing balance of payment problem."
+    },
+    {
+      "number": 7,
+      "question": "(a) What is deflation?\n(b) Outline any three positive effects of deflation.\n(c) Explain the ways by which inflation affects any three functions of money."
+    },
+    {
+      "number": 8,
+      "question": "(a) What is protective tariff?\n(b) Outline any four reasons in favour of protective tariff.\n(c) State any two reasons against protective tariff."
+    }
+  ]
+}

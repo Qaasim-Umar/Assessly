@@ -1,0 +1,28 @@
+{
+  "subject": "Commerce",
+  "examType": "WAEC",
+  "year": 2022,
+  "objectiveQuestionCount": 50,
+  "theoryQuestionCount": 7,
+  "questionsWithImages": 1,
+  "uniqueImagesUploaded": 1,
+  "objectPrefix": "question-assets/waec/commerce/2022",
+  "generatedAt": "2026-09-15T14:42:00.623Z",
+  "questions": [
+    {
+      "sourceId": "63535",
+      "sourceUrl": "https://myschool.ng/classroom/commerce/63535",
+      "section": "theory",
+      "number": 4,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/3JRf6xHbiqDBCPMlmRLrNutcp071hI40khcAbr2k.jpeg",
+          "objectKey": "question-assets/waec/commerce/2022/3JRf6xHbiqDBCPMlmRLrNutcp071hI40khcAbr2k.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/commerce/2022/3JRf6xHbiqDBCPMlmRLrNutcp071hI40khcAbr2k.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 6906
+        }
+      ]
+    }
+  ]
+}

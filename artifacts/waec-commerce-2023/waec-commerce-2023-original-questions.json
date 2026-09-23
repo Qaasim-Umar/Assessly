@@ -1,0 +1,1301 @@
+{
+  "subject": "Commerce",
+  "year": 2023,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following is not a factor of production?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Capital",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Staffing",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Labour",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Land",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The excess value of total assets over total liabilites is",
+      "options": [
+        {
+          "key": "A",
+          "text": "capital owned",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "borrowed capital",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "paid-up capital",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "paid-up capital",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "An element of a valid contract is",
+      "options": [
+        {
+          "key": "A",
+          "text": "operation of law",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "performance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "breach",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "capacity to contract",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "Industrial, commercial and service are types of",
+      "options": [
+        {
+          "key": "A",
+          "text": "specialization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "occupation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "manufacturing",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "extraction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Operating a state owned enterprise with the intention of making more profit is",
+      "options": [
+        {
+          "key": "A",
+          "text": "nationalization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "deregulation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "privatization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "commercialization",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "An example of after-sales services is",
+      "options": [
+        {
+          "key": "A",
+          "text": "sorting and grading of goods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "granting of discount",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "provision of price list and terms",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "free replacement of parts",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "An organization that could strive for improvement in electricity and telephone services to users is",
+      "options": [
+        {
+          "key": "A",
+          "text": "a trade association",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a manufacturers' association",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a manufacturers' association",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a consumers'association",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "A bill of lading that is tagged clean means that the goods being delivered are",
+      "options": [
+        {
+          "key": "A",
+          "text": "on credit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "not damaged",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "paid for",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "duty free",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The function of money that makes it generally acceptable is",
+      "options": [
+        {
+          "key": "A",
+          "text": "unit of account",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "store of value",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "medium of exchange",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "standard of deferred payment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "Dissolution of a partnership could arise from",
+      "options": [
+        {
+          "key": "A",
+          "text": "fall in output",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "death of a member",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "non access to capital",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increase in market share",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "A problem associated with barter is",
+      "options": [
+        {
+          "key": "A",
+          "text": "poor road network delaying transportation of goods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "inability to measure what is to be exchanged",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "difficulty in collecting debt",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "inability to produce enough goods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "A voluntary association of businessmen who are not in the same line of business is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "bureau de change",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "trade association",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "chamber of commerce",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "trade union",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "A disadvantage of privatization is that",
+      "options": [
+        {
+          "key": "A",
+          "text": "there is decline in the supply of goods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "public interest outweighs the profit motive",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "income is unevenly distributed",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "there is less efficiency in the production of goods",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "A reduction in the value of a country's currency in relation to that of other countries is",
+      "options": [
+        {
+          "key": "A",
+          "text": "revaluation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "inflation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "devaluation",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "deflation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The means by which a firm obtains information before introducing new products is",
+      "options": [
+        {
+          "key": "A",
+          "text": "market segmentation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "advertising",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "promotion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "market research",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "A factor to be considered in selecting a means of transporting fish is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "demand for fish",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "supply of fish",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cost of fish",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "nature of the fish",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "A business that can obtain capital through of sale of shares is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "demurrage",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "freight",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "charge",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "dock due",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "Which of the following countries is not a member of the European Union?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Greece",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "France",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Denmark",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Bolivia",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Advertising designed to sell more of a company's products than other brands is",
+      "options": [
+        {
+          "key": "A",
+          "text": "persuasive",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "indirect",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "competitive",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "informative",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The reward for capital is",
+      "options": [
+        {
+          "key": "A",
+          "text": "rent",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "interest",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "profit",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "dividend",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Divesting government interest in a business to the public is",
+      "options": [
+        {
+          "key": "A",
+          "text": "commercialization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "deregulation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "privatization",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "nationalization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "Which of the following activities does not belong to the extractive industry?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Drilling",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Mining",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Barbing",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Farming",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "The use of brand names and trademarks is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "control the supply of goods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "prevent imitation by competitors",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "stabilize the prices of goods",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "make after-sale service possible",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "One of the aim of ECOWAS is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "ensure production of quality goods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "encourage foreign investments",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "improve transportation and communication",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "promote privatization policies",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "When a seller wishes to be paid before supplying goods, he would send the buyer a",
+      "options": [
+        {
+          "key": "A",
+          "text": "consular invoice",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "consignment note",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "proforma invoice",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "credit note",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "A similarity of private and public company is that they",
+      "options": [
+        {
+          "key": "A",
+          "text": "sell shares on the stock exchange",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have equal number of members",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "receive certificate of incorporation",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "are required to publish their final accounts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The term 2%/15 net 30 represents a",
+      "options": [
+        {
+          "key": "A",
+          "text": "seasonal discount",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "quantity discount",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "cash discount",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "trade discount",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Buying and selling products through a network of digital devices is",
+      "options": [
+        {
+          "key": "A",
+          "text": "e-commerce",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "e-payment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "e-transfer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "e-mail",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "A document in which the internal regulations of a company are stated is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Certificate of Incoporation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Articles of Association",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Memorandum of Association",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Partnership Deed",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "Which of the following is not a type of security?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Stock",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Overdraft",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Share",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Debenture",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "An advantage of road transport over other means of transport is that",
+      "options": [
+        {
+          "key": "A",
+          "text": "packing and loading is easy as activities are handled by experts",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "canteen services are provided during the course of transportation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "specific vehicles could be used to carry certain loads",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "terminal handling is eliminated by door-to-door delivery",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Which of the following modes of transport could be used to convey both liquid and gas?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Aeroplane",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Tanker",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Tramp",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Ferry",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Which of the following is not a form of sales promotion?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cash on delivery",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Cash on delivery",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Free samples",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Buy one get one free",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "The business in which sale of goods involves use of vehicles is a",
+      "options": [
+        {
+          "key": "A",
+          "text": "mobile shop",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "chain store",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "shopping mail",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "tied shop",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The arrangement for the conveyance of goods abroad is performed by the",
+      "options": [
+        {
+          "key": "A",
+          "text": "customs and excise authority",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ports authority",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "clearing and forwarding agents",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "chamber of commerce",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "An organizational chart is used to",
+      "options": [
+        {
+          "key": "A",
+          "text": "determine the departmental objectives and targets",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "show the hierarchy of staff",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "implement policies on staff welfare",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "measure variation on staff performance",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The rate at which a country's export exchange for its imports is",
+      "options": [
+        {
+          "key": "A",
+          "text": "terms of payment",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "terms of trade",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "balance of payment",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "balance of trade",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "A source of capital to a cooperative society is",
+      "options": [
+        {
+          "key": "A",
+          "text": "contribution",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "debenture",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "retained profit",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "ordinary share",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The department that ensures that products are made available to consumers is",
+      "options": [
+        {
+          "key": "A",
+          "text": "purchases",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "finance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "marketing",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "production",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "An advantage of advertising is that",
+      "options": [
+        {
+          "key": "A",
+          "text": "prices of products are reduced",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "awareness is created on the existence of products",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "quality of products is improved",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "distribution channels for products are improved",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The management function that is concerned with coordinating business resources efficiently is",
+      "options": [
+        {
+          "key": "A",
+          "text": "organizing",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "controlling",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "planning",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "motivation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Use the diagram to answer the question\nThe instrument in the diagram is a",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 42.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/commerce/2023/Tt7tkav22Opr1dMIL9Qz2wCBPFmDxTQNRNnkxNGk.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "cheque",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "money order",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "deposit slip",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "warrant",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Use the diagram to answer the question\nThe two lines on the instrument shows that it is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 43.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/commerce/2023/Tt7tkav22Opr1dMIL9Qz2wCBPFmDxTQNRNnkxNGk.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "altered",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "crossed",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "cancelled",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "paid",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "Use the diagram to answer the question\nThe instrument will not be valid on",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 44.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/commerce/2023/Tt7tkav22Opr1dMIL9Qz2wCBPFmDxTQNRNnkxNGk.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "September 25, 2023",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "July 25, 2023",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "October 25, 2023",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "June 25, 2023",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The bank that conducts research on an economy, thereby identifying obstacles to growth is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "commercial bank",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "mortgage bank",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "development bank",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "central bank",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "A duty of the principal to his agent is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "stop the sale of good in transit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "pay the agent for services rendered",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "disclose confidential information",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "renegotiate agreements made by the agent",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "One of the barriers to foreign trade is",
+      "options": [
+        {
+          "key": "A",
+          "text": "imposition of embargo",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "removal of tarrif",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "trade liberalization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "memorandum of understanding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "In a contract of sale, the amount deposited with the seller for a particular product by a buyer is",
+      "options": [
+        {
+          "key": "A",
+          "text": "consideration",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "warranty",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "counter offer",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "acceptance",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "a. Explain five factors that delayed the growth of commerce in West Africa\nb[i] Using appropriate headings, classify the following workers.\n- oil driller\nb[ii] Using appropriate headings, classify the following workers.\n- potter\nb[iii] Using appropriate headings, classify the following workers.\n- policemen\nb[iv] Using appropriate headings, classify the following workers.\n- brewer\nb[vi] Using appropriate headings, classify the following workers.\n- mason\nb[vii] Using appropriate headings, classify the following workers.\n- farmer"
+    },
+    {
+      "number": 2,
+      "question": "a. Victor and Samba have been partners for two years. They have had disagreements throughout the period and Samba requested for a dissoultion of the partnership so that he could start a sole proprietorship.\nState five problems Samba could face as a sole trader\nb. Victor and Samba have been partners for two years. They have had disagreements throughout the period and Samba requested for a dissoultion of the partnership so that he could start a sole proprietorship.\nState five benefits Samba could enjoy if he remained in the partnership"
+    },
+    {
+      "number": 3,
+      "question": "a. State four functions of warehousing\nb[i] State two features of each of the following retail outlets:\nchain stores\nb[ii] State two features of each of the following retail outlets:\nmobile shop\nb[iii] State two features of each of the following retail outlets:\nmail order business"
+    },
+    {
+      "number": 4,
+      "question": "a. As an employee of the stock exchange market, explain to a group of investors five securities they could trade in.\nb. State five duties of an agent to his principal."
+    },
+    {
+      "number": 5,
+      "question": "a. Differentiate between indent and quotation\nb[i] State four functions of each of the following organizations:\nexport promotion council\nb[ii] State four functions of each of the following organizations:\ncustoms and excise authority"
+    },
+    {
+      "number": 6,
+      "question": "a. What is tourism?\nb[i] State one negative effect of tourism on each of the following:\neconomy\nb[ii] State one negative effect of tourism on each of the following:\nb[iii] State one negative effect of tourism on each of the following:\nenvironment\nc[i] State two positive effects of tourism on each of the following:\neconomy\nc[ii] State two positive effects of tourism on each of the following:\nsociety\nc[iii] State two positive effects of tourism on each of the following:\nenvironment"
+    },
+    {
+      "number": 7,
+      "question": "a. State two differences between marketing and selling\nb. List four main elements of marketing mix\nc. Country Z has decided to leave the Economic Community of West African State (ECOWAS). As the adviser on the regional group, explain four benefits the country could derive from remaining in the group."
+    },
+    {
+      "number": 8,
+      "question": "The following information in the image above was extracted from the books of Lompat Ventures as at December 31, 2022.\na[i] Calculate:\nNet profit\na[ii] Calculate:\nWorking capital\na[iii] Calculate:\nRate of stock turnover",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 8.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/commerce/2023/maSOW1oGzWMAG4h3NTgXBNM9CL2qNqMlhfPVVfeS.png"
+    }
+  ]
+}

@@ -1,0 +1,1263 @@
+{
+  "subject": "Economics",
+  "year": 2017,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Economics is regarded as a science because?",
+      "options": [
+        {
+          "key": "A",
+          "text": "its issues can be easily verified by reference to facts",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "it adopts scientific methods in making its analysis",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "its issues are relevant for national development",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "its subject matter studies human behaviour",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "the opportunity cost of a worker going to the university is",
+      "options": [
+        {
+          "key": "A",
+          "text": "tuition, fees and books",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "boarding and lodging",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the wages given up to attend the university",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "transportation and entertainment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "which of the following items is not an example of circulating capital",
+      "options": [
+        {
+          "key": "A",
+          "text": "raw material",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "money",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "fuel",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "machinery",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "in a market economy, the problem of what goods to produced is solved primarily by",
+      "options": [
+        {
+          "key": "A",
+          "text": "directives of the government",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the pattern of consumers spending",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "producers of consumer goods",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "people producing what they want",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "if the weight of five puppies in kilograms are 3.5, 3.0, 4.2, 5.0 and 4.3, then mean weight of the puppies is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3.5 kg",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "4.0 kg",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "4.2 kg",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "5.0 kg",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "if the coefficient of cross elasticity of demand for goods Y and Z is positive, the two goods are?",
+      "options": [
+        {
+          "key": "A",
+          "text": "complements",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "substitutes",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "luxurious",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "inferior",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The difference between demand and wants is in the",
+      "options": [
+        {
+          "key": "A",
+          "text": "desire for the commodity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "significance of the commodity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ability to pay for the commodity",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "economic value of the commodity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "A demand curve parallel to the Y-axis indicates",
+      "options": [
+        {
+          "key": "A",
+          "text": "fairly elastic demand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "perfectly elastic demand",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "perfectly inelastic",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "fairly inelastic demand",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "which of the following is an example of derived demand",
+      "options": [
+        {
+          "key": "A",
+          "text": "textbook",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "labour",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "staple food",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "mobile phone",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "A rightward shift in the supply curve of a commodity is brought about by an increase in?",
+      "options": [
+        {
+          "key": "A",
+          "text": "the level of technology",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the price of the commodity",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "cost of production",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "taxation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Effective supply is the total amount of a commodity",
+      "options": [
+        {
+          "key": "A",
+          "text": "from a single producer",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "in the warehouse of producers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "offered for sale at a market place",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "produced for the market",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "price elasticity of supply can be influenced by the following factors except?",
+      "options": [
+        {
+          "key": "A",
+          "text": "time period",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cost of production",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "size of consumer income",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "nature of the product",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "increase in the supply of a product can be caused by?",
+      "options": [
+        {
+          "key": "A",
+          "text": "change and taste and fashion of consumers",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "increase in the income of consumers",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a fall in the cost of production",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "increase in the price of a product",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "a rational consumer will purchase a product whose price is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "greater than his marginal utility",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "less than his marginal utility",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "equal to his marginal utility",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "equal to his total utility",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "parallel markets are usually the results of",
+      "options": [
+        {
+          "key": "A",
+          "text": "excess supply",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the activities of rich individuals",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "price legislation",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "inadequate information",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Another term for equilibrium price is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "price floor",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "demand price",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "market clearing price",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "satisfactory price",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "when a firm is enjoying internal economies of scale, its?",
+      "options": [
+        {
+          "key": "A",
+          "text": "total cost of production is increasing",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "average fixed cost is rising continuously",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "average cost of production decreases as output increases",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "average revenue and marginal revenue are decreasing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The specialization of labour enhances production because people?",
+      "options": [
+        {
+          "key": "A",
+          "text": "can concentrate on all goods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "can efficiently produce their own needs",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "can save time and produce more",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "become experts in all areas of production",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "which of the following can be added to a firm's profit to obtain total revenue",
+      "options": [
+        {
+          "key": "A",
+          "text": "total variable cost",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "total fixed cost",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "marginal cost",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "total revenue",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The amount of money that a firm recieves from the sales of its output is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "total profit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "total revenue",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "total cost",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "average revenue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "which of the following is trueof the monopolist",
+      "options": [
+        {
+          "key": "A",
+          "text": "his average revenue curve is horizontal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "He determines both price and output",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "his demand and marginal revenue curve are the same",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "he determines either price or output",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "Equity shares form the bulk of the capital of a?",
+      "options": [
+        {
+          "key": "A",
+          "text": "private firm",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "public company",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "statutory company",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "limited partnership",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "if a state owned firm is sold through the stock market, the organisation becomes?",
+      "options": [
+        {
+          "key": "A",
+          "text": "partnership",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "private company",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "public limited company",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "public corporation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The total number of people of working age who are willing and prepared to work at a given wage rate is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "labour force",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "supply of labour",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "demand of labour",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "occupational demand for labour",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "A civil engineer who accepts to teach elementary science in a primary school because he cannot get a paid engineering job is an example of?",
+      "options": [
+        {
+          "key": "A",
+          "text": "structural unemployment",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "disguised unemployment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "residual unemployment",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "frictional unemployment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "which of the following is an implication of a large population",
+      "options": [
+        {
+          "key": "A",
+          "text": "decrease in crime rate",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "increase in food supply",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "decrease in standard of living",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "decrease in cost of living",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The system of agriculture which involves the cultivation of crops and rearing of animals for family consumption only is termed?",
+      "options": [
+        {
+          "key": "A",
+          "text": "peasant farming",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "plantation agriculture",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "commercial farming",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "subsistent farming",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "which of the following is a threat to the existence of middlemen",
+      "options": [
+        {
+          "key": "A",
+          "text": "consumers cooperative society",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "producers cooperative society",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "sales agents",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "large scale producers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "in an industrial area, the location of industries is particularly influenced by ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "extent of the division of labour",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "external economies",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "internal economies",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "nearness to financial institution",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "which of the following is a transfer income",
+      "options": [
+        {
+          "key": "A",
+          "text": "dividends",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "rent",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "pensions",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "interest",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "the value added method used in measuring national income is to",
+      "options": [
+        {
+          "key": "A",
+          "text": "measure output at factor cost",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "avoid multiple counting of output",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "deduct depreciation of capital assets",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "add net factor income from abroad",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "which of the following is most likely to be of benefit to a debtor",
+      "options": [
+        {
+          "key": "A",
+          "text": "inflation",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "deflation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "revaluation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "monetization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "A measure of the value of money in an economy is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "size of workers",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "general price",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "total level of savings",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "total amount of loans granted by the banks",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "one of the major functions of money is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "medium of exchange",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "stable in value",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "store of value",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "acceptance by the central bank",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The function that distinguishes commercial banks from the central bank is that the former",
+      "options": [
+        {
+          "key": "A",
+          "text": "is a lender of last resort",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "accepts deposits from the public",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "services the public debt",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "regulates foreign exchange",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Direct taxes include?",
+      "options": [
+        {
+          "key": "A",
+          "text": "excise duty",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ad valorem tax",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "specific tax",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "capital gain tax",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "The control of aggregate demand through changes in government spending and tax rates is referred to as?",
+      "options": [
+        {
+          "key": "A",
+          "text": "monetary policy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "government policy",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "income policy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "fiscal policy",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "which of the following is not a feature of economic underdevelopment",
+      "options": [
+        {
+          "key": "A",
+          "text": "monocultural economy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "high productivity",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "low life expectancy",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "income inequality",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "one way of speeding up the economic development of a country is by encouraging",
+      "options": [
+        {
+          "key": "A",
+          "text": "the consumption of consumer goods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "early marriage",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the importation of more consumer goods",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "savings and investment",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Dumping in international occurs when a foreign firm sells",
+      "options": [
+        {
+          "key": "A",
+          "text": "above its cost of production at home and abroad",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "below its cost of production at home and abroad",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "more goods to a country than the country has need of",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "below its cost of production in a foreign market",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Infant industries can be described as?",
+      "options": [
+        {
+          "key": "A",
+          "text": "newly established industries",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "industries enjoying tax holidays",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "industries producing baby products",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "newly commercialized industries",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Modern international trade is based on the principle of?",
+      "options": [
+        {
+          "key": "A",
+          "text": "absolute cost advantage",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "comparative advantage",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "terms of trade",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "balance of trade",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "which of the following terms of trade is recorded in a country's current account section of the balance of payments",
+      "options": [
+        {
+          "key": "A",
+          "text": "investment income",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "foreign direct investment",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "longterm capital flows",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "long-term loans",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "one problem facing the economic integration of countries in west Africa is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "presence of large and developed market",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "uneven development among west African countries",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "existence of different central banks in the countries",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "fairly of labour to move freely in the country",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "one objective of organisation of patroleum exporting countries (OPEC) is to?",
+      "options": [
+        {
+          "key": "A",
+          "text": "harmonize and stabilize oil prizes",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "ensure excess supply of oil to consuming countries",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "subsidize oil prices in member countries",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "assist member countries to exploit oil resources",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Which of the following resources is renewable",
+      "options": [
+        {
+          "key": "A",
+          "text": "coal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "iron ore",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "rice",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "limestone",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "the negative effects of mining in wast A frica does not include?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Reafforestation in rural communities",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "land degradation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "destruction of farm lands",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "pollution of water bodies",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "A dealer in deep freezers increased the price of his product from $450 to $500 and sales dropped from 800 units to 600 units a week.\nUse the information above to answer the questions that follow.\n(a)(i) Calculate the price elasticity of demand\n(ii) What type of elasticity is it? Explain your answer\n(b)Calculate the (i) total revenue of the company before and after price increase; (ii) change in total revenue.\n(c) What is the effect of the increase in price on the total revenue?\n(d) State two factors influencing price elasticity of demand."
+    },
+    {
+      "number": 2,
+      "question": "The market for apples is represented by the following demand and supply functions:\nQd = 30 - p;\nQs = 15 + 2p.\n(a) Prepare a demand and supply schedule for the market, given the prices $2.00, $4.00 and $7.00.\n(b) (i) Determine the equilibrium price and equilibrium quantity of apples in the market.\n(ii) If the price of apple is fixed at $3.00, what will be the excess demand or excess supply.\n(c) Suppose the demand function changed to Qd = 40 - p. Using the prices in (a) above:\n(i) prepare a new demand schedule;\n(ii) does it represent an increase or a decrease in demand?\n(iii) explain your answer in (c) (ii) above."
+    },
+    {
+      "number": 3,
+      "question": "(a) Define land as a factor of production.\n(b) State three features of land.\n(c) Explain four ways in which land contributes to the economic development of your country"
+    },
+    {
+      "number": 4,
+      "question": "(a) What is subsistence farming?\n(b) Distinguish between crop farming and livestock farming with specific examples.\n(c) Identify four measures that the government of your country can adopt to boost agricultural production."
+    },
+    {
+      "number": 5,
+      "question": "(a) State two features each of:\n(i) perfect competition; (ii)monopolistic competition.\n(b) What does it mean for a firm to be a : (i) price taker; (ii)price maker?\n(c) Explain the following sources of monopoly power: (i) acts of parliament; (ii) copyright; (iii) natural monopoly; (iv) cartel"
+    },
+    {
+      "number": 6,
+      "question": "(a) Define inflation.\n(b) Identify any three causes of: (i) demand-pull inflation; (ii) cost-push inflation ."
+    },
+    {
+      "number": 7,
+      "question": "(a) What is economic development?\n(b) State three features of a developing country.\n(c) Explain any four factors that can speed up the economic development of your country."
+    },
+    {
+      "number": 8,
+      "question": "(a) State two features each of: (i) free trade area; (ii) common markets.\n(b) outline two advantage and two disadvantage of a common market."
+    }
+  ]
+}

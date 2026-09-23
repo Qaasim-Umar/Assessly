@@ -1,0 +1,148 @@
+{
+  "subject": "Biology",
+  "examType": "WAEC",
+  "year": 2018,
+  "objectiveQuestionCount": 49,
+  "theoryQuestionCount": 17,
+  "questionsWithImages": 9,
+  "uniqueImagesUploaded": 9,
+  "objectPrefix": "question-assets/waec/biology/2018",
+  "generatedAt": "2026-09-14T16:45:04.750Z",
+  "questions": [
+    {
+      "sourceId": "48351",
+      "sourceUrl": "https://myschool.ng/classroom/biology/48351",
+      "section": "objective",
+      "number": 7,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/q1iJPt479ENaM9zFPuy4Hl4rgwnKMqgzZnmlRk7n.jpeg",
+          "objectKey": "question-assets/waec/biology/2018/q1iJPt479ENaM9zFPuy4Hl4rgwnKMqgzZnmlRk7n.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/biology/2018/q1iJPt479ENaM9zFPuy4Hl4rgwnKMqgzZnmlRk7n.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 14628
+        }
+      ]
+    },
+    {
+      "sourceId": "48354",
+      "sourceUrl": "https://myschool.ng/classroom/biology/48354",
+      "section": "objective",
+      "number": 8,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/M6KN52VZuK72ttXLBx5py4s0TPv0UWkBYHipsBp6.jpeg",
+          "objectKey": "question-assets/waec/biology/2018/M6KN52VZuK72ttXLBx5py4s0TPv0UWkBYHipsBp6.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/biology/2018/M6KN52VZuK72ttXLBx5py4s0TPv0UWkBYHipsBp6.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 14628
+        }
+      ]
+    },
+    {
+      "sourceId": "48409",
+      "sourceUrl": "https://myschool.ng/classroom/biology/48409",
+      "section": "objective",
+      "number": 19,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/tNQeFwgSz4j2pSC8vYvY6WeP00xJfJs9gBXMQsu9.jpeg",
+          "objectKey": "question-assets/waec/biology/2018/tNQeFwgSz4j2pSC8vYvY6WeP00xJfJs9gBXMQsu9.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/biology/2018/tNQeFwgSz4j2pSC8vYvY6WeP00xJfJs9gBXMQsu9.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 16967
+        }
+      ]
+    },
+    {
+      "sourceId": "48412",
+      "sourceUrl": "https://myschool.ng/classroom/biology/48412",
+      "section": "objective",
+      "number": 20,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/O5fIur4UNrpajkuydkpaYvdBfuH8lSZ2PUAxjhAh.jpeg",
+          "objectKey": "question-assets/waec/biology/2018/O5fIur4UNrpajkuydkpaYvdBfuH8lSZ2PUAxjhAh.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/biology/2018/O5fIur4UNrpajkuydkpaYvdBfuH8lSZ2PUAxjhAh.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 16967
+        }
+      ]
+    },
+    {
+      "sourceId": "48465",
+      "sourceUrl": "https://myschool.ng/classroom/biology/48465",
+      "section": "objective",
+      "number": 30,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/zzcQqpm3IEct8edoLSf27If18VeDnNL3vwmdo8CU.jpeg",
+          "objectKey": "question-assets/waec/biology/2018/zzcQqpm3IEct8edoLSf27If18VeDnNL3vwmdo8CU.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/biology/2018/zzcQqpm3IEct8edoLSf27If18VeDnNL3vwmdo8CU.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 20368
+        }
+      ]
+    },
+    {
+      "sourceId": "48500",
+      "sourceUrl": "https://myschool.ng/classroom/biology/48500",
+      "section": "objective",
+      "number": 42,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/BxEAvYWuBbkgyVm0mXUVCLWIEdsC8RV05YhalOpg.jpeg",
+          "objectKey": "question-assets/waec/biology/2018/BxEAvYWuBbkgyVm0mXUVCLWIEdsC8RV05YhalOpg.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/biology/2018/BxEAvYWuBbkgyVm0mXUVCLWIEdsC8RV05YhalOpg.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 20105
+        }
+      ]
+    },
+    {
+      "sourceId": "48514",
+      "sourceUrl": "https://myschool.ng/classroom/biology/48514",
+      "section": "objective",
+      "number": 46,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/apBlDnEjedRLwkRlD4j0jZSpaFJLKT4ZRv5NvKmn.jpeg",
+          "objectKey": "question-assets/waec/biology/2018/apBlDnEjedRLwkRlD4j0jZSpaFJLKT4ZRv5NvKmn.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/biology/2018/apBlDnEjedRLwkRlD4j0jZSpaFJLKT4ZRv5NvKmn.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 15725
+        }
+      ]
+    },
+    {
+      "sourceId": "48515",
+      "sourceUrl": "https://myschool.ng/classroom/biology/48515",
+      "section": "objective",
+      "number": 47,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/IggTjhhdRhAa3kSpxrfLXFWg5ll1EKnmoI8FsPGc.jpeg",
+          "objectKey": "question-assets/waec/biology/2018/IggTjhhdRhAa3kSpxrfLXFWg5ll1EKnmoI8FsPGc.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/biology/2018/IggTjhhdRhAa3kSpxrfLXFWg5ll1EKnmoI8FsPGc.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 15725
+        }
+      ]
+    },
+    {
+      "sourceId": "56366",
+      "sourceUrl": "https://myschool.ng/classroom/biology/56366",
+      "section": "theory",
+      "number": 12,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/Iu9mBjKqWt1tPAeLCGBVyBGy7B6dS1d9dg2aRRSD.png",
+          "objectKey": "question-assets/waec/biology/2018/Iu9mBjKqWt1tPAeLCGBVyBGy7B6dS1d9dg2aRRSD.png",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/biology/2018/Iu9mBjKqWt1tPAeLCGBVyBGy7B6dS1d9dg2aRRSD.png",
+          "contentType": "image/png",
+          "bytes": 37460
+        }
+      ]
+    }
+  ]
+}

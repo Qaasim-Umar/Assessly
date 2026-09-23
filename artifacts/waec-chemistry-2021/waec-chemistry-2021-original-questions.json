@@ -1,0 +1,1344 @@
+{
+  "subject": "Chemistry",
+  "year": 2021,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The hydrolysis of proteins by diluting mineral acids produces",
+      "options": [
+        {
+          "key": "A",
+          "text": "sucrose",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "glucose",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "amino acids",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "fatty acids",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Which of the following oxide causes acid rain?",
+      "options": [
+        {
+          "key": "A",
+          "text": "CO",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "NO",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "H\\(_{2}\\)O\\(_{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "NO\\(_{2}\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "The ratio of carbon atoms of hydrogen atoms in a hydrocarbon is 1:2. If its molecular mass is 56, what is its molecular formula?",
+      "options": [
+        {
+          "key": "A",
+          "text": "C\\(_{3}\\)H\\(_{6}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "C\\(_{4}\\)H\\(_{8}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "C\\(_{2}\\)H\\(_{4}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "CH\\(_{2}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "What is the relative molecular mass of the compound below?\n[H = 1.0; C = 12.0; O = 16.0]",
+      "options": [
+        {
+          "key": "A",
+          "text": "137",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "136",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "64",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "59",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Cathodic protection of metals is based on",
+      "options": [
+        {
+          "key": "A",
+          "text": "standard electrode potential of hydrogen",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "its electrical conductivity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "nature of oxides formed",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "relative tendencies of oxidation",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "If humid air is polluted by chlorine discharged, the air can be restored by sprinkling",
+      "options": [
+        {
+          "key": "A",
+          "text": "solid MnO\\(_{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "acidified KMnO\\(_{4}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "acidified FeSO\\(_{4}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "saturated NaCl(aq)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The alkanol represented by the structure above is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 7.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/chemistry/2021/1DJU2aFTSbX9k0eBFgnTnlhpfiBk9TeL8T5muHns.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "primary and dihydric",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "secondary and monohydric",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "tertiary and dihydric",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "secondary and dihydric",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Which of the following pairs of compounds would form a precipitate when their aqueous solutions are mixed?",
+      "options": [
+        {
+          "key": "A",
+          "text": "NaCl and KNO\\(_{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "KCL and NaNO\\(_{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "K\\(_{2}\\)SO\\(_{4}\\) and BaCl\\(_{2}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "NH\\(_{4}\\)NO\\(_{3}\\) and CO\\(_{3}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "Which of the following illustrates the variation of the rate of evolution of gas from a given length of magnesium ribbon (y-axis) with an increase in the concentration of the added (x-axis)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "Which of the graphs illustrates the variation of the p H of a given volume of strong acid solution (y-axis) with the volume of strong base titrated against its (x-axis)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Which of the graphs illustrates the variation of the solubility of a salt in water (y-axis), with an increase in temperature (x-axis) if the dissolution process is exothermic?",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The formation of ethene from dehydration of ethanol can be described as-------",
+      "options": [
+        {
+          "key": "A",
+          "text": "an addition reaction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "an elimination reaction",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "an oxidation reaction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a substitution reaction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "Which of the following gasses is highly soluble in water at room temperature",
+      "options": [
+        {
+          "key": "A",
+          "text": "ammonia",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "carbon (IV) oxide",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "chlorine",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "nitrogen",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "A molecular of phosphorus is",
+      "options": [
+        {
+          "key": "A",
+          "text": "diatomic",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "triatomic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "tetraatomic",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "monoatomic",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The most common method of preparing insoluble salts is by",
+      "options": [
+        {
+          "key": "A",
+          "text": "filtration",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "decomposition",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "neutralization",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "double decomposition",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "What number of moles of oxygen would exert a pressure of 10 atm at 320 K in an 8.2 d m\\(^{2}\\) cylinder?\n[R = 0.082 atm dm \\(^{3}\\) mol \\(^{-1}\\) K\\(^{-1}\\)]",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.32",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "1.56",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "3.13",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "31.25",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The basic property of salts used as drying agents is by?",
+      "options": [
+        {
+          "key": "A",
+          "text": "efforescence",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "high melting point",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "hygroscopy",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "low solubility",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "What would be observed when aqueous ammonia is added in drops and then in excess to a solution of copper(II) ions?",
+      "options": [
+        {
+          "key": "A",
+          "text": "blue precipitate is formed which is soluble in excess ammonia",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "brick red precipitate is produced which is insoluble in excess ammonia",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "white precipitate is formed which is excess in ammonia",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "green precipitate is formed which is insoluble in excess ammonia",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "When CuSO\\(_{4(aq)}\\) is added to Pb(NO\\(_{3}\\))\\(_{2(aq)}\\)--------",
+      "options": [
+        {
+          "key": "A",
+          "text": "there would be no visible change",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a blue precipitate would be formed",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the resulting solution would become colourless",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a white precipitate would be formed",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "Consider the structure above\nHow many carbon atoms does the parent chain contain?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 20.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/chemistry/2021/k21oxc3NoVyqTyhVMmsObnE4vB6Ndpbe76YXSEYs.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "5",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "4",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "2",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Under which conditions of pressure ( p ) and temperature (T ) would the volume of an inflated ballon increase? When",
+      "options": [
+        {
+          "key": "A",
+          "text": "P and T are increased",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "both T and P are decreased",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "T is increased and P is decreased",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "T is decreased and P is increased",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The collision between ideal gas molecules are considered to be perfectly elastic because",
+      "options": [
+        {
+          "key": "A",
+          "text": "they collide without losing energy",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "they move randomly in a straight line",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "their average kinetic energy is variable",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the distance between them is large compared to their size",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Elements with high ionization energies would-------",
+      "options": [
+        {
+          "key": "A",
+          "text": "lose electrons easily",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have large atomic radii",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "have high effective nuclear charges",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "have low atomic numbers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Which of the following statements about Group VII elements is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "they are present in the same physical state",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "they are strong reducing agents",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "their reactivity decreases down the group",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "they exist as monoatomic molecules",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "Which of the following cell notations represent the diagram?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 25.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/chemistry/2021/XNNqQFR1Z4uvQktcEaMgl862kF1CS1C9Ew99xNlz.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "B\\(^{2+}\\)/B/ /A/A\\(^{3+}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "A\\(^{3+}\\) /A/ /B/B\\(^{2+}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "B/B\\(^{2+}\\)/ /A/\\(^{3+}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "A/A\\(^{3+}\\)/ /B\\(^{2+}\\)/B",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Which of the following half reaction equations represent the reaction at the cathode",
+      "options": [
+        {
+          "key": "A",
+          "text": "A\\(^{3+_{(aq)}}\\)+3e\\(^{-}\\) \\(\\rightarrow\\) A\\(_{(s)}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "B\\(^{2+_{(aq)}}\\)+2e\\(^{-}\\) \\(\\rightarrow\\) B\\(_{(s)}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "A\\(_{(s)}\\) \\(\\rightarrow\\) \\(^{3+_{(aq)}}\\)+3e\\(^{-}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "B\\(_{(s)}\\) \\(\\rightarrow\\) B\\(^{2+_{(aq)}}\\) + 2e\\(^{-}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The reactivity of fluorine is high because of",
+      "options": [
+        {
+          "key": "A",
+          "text": "its high electronegativity",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "the small size of the fluorine atom",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the availability of d-orbitals",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the strong F-F bond",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "How many coulombs of electricity would liberate 1.08g of Ag from a solution of silver salt?\n[Ag = 108.0; 1F = 96500 C]",
+      "options": [
+        {
+          "key": "A",
+          "text": "96500 C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "9650 C",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "965 C",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "9.65 C",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The Bohr model of the atom proposed the existence of?",
+      "options": [
+        {
+          "key": "A",
+          "text": "the nucleus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "electron shells",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "nucleons",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "neutrons",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The 25&deg;C evaporation of a 100 cm\\(^{3}\\) solution of K\\(_{2}\\)CO\\(_{3}\\) to dryness gave 14g of the salt. What is the solubility of K\\(_{2}\\)CO\\(_{3}\\) at 25&deg;C? [K\\(_{2}\\)CO\\(_{3}\\) = 138]",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.01 mol dm\\(^{-3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.101 mol dm\\(^{-3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1.01 mol dm \\(^{-3}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "10.0 mol dm\\(^{-3}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Student X titrated 25 cm\\(^{3}\\) of Na\\(_{2}\\)CO\\(^{3}\\) with 0.1 mol dm\\(^{-3}\\) HCI, using methyl orange as indicator. Student Y carried out the same exercise but used phenolphthalein as an indicator. Which of the following statements about the titration is true ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "hydrogen chloride gas was released in the reactions in both titrations",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "the titer values obtained from the titration are equal",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the titer value obtained by X is twice that of Y",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "the titer value obtained by Y is twice that of X",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "What is the concentration of a solution which contains 0.28g of potassium hydroxide in 100 cm\\(^{3}\\) of solution [KOH = 56]",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.01 mol dm\\(^{-3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "0.05 mol dm\\(^{-3}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "0.10 mol dm\\(^{-3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.50 mol dm\\(^{-3}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "What is the empirical formula of a hydrocarbon containing 0.160 moles of carbon and 0.640 moles of hydrogen",
+      "options": [
+        {
+          "key": "A",
+          "text": "CH\\(_{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "CH\\(_{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "CH\\(_{4}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "C\\(_{2}\\)H\\(_{4}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Which of the following species has the largest ionic radius",
+      "options": [
+        {
+          "key": "A",
+          "text": "S\\(^{2-}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "A",
+          "text": "K\\(^{+}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "CI\\(^{-}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Ca\\(^{2+}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "Which of the following statements is correct about ionization energy? It",
+      "options": [
+        {
+          "key": "A",
+          "text": "decreases across the periods",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "results in the formation of an anion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "causes Metalic nuclei to disintegrate",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "decreases down the group",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Potassium trioxonitrate (V) can be obtained from its solution by----------",
+      "options": [
+        {
+          "key": "A",
+          "text": "distillation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "evapoartion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "crystallization",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "filtration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "An element, Q, contains 69% of\\(^{63}\\)Q and 31% of \\(^{65}\\)Q. What is the relative atomic mass of Q?",
+      "options": [
+        {
+          "key": "A",
+          "text": "63.0",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "63.6",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "65.0",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "69.0",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "The following ions have the same electron configuration except\n\\(_{8}\\)O, \\(_{12}\\)Mg, \\(_{13}\\)AI, \\(_{17}\\)CI",
+      "options": [
+        {
+          "key": "A",
+          "text": "CI\\(^{-}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "O\\(^{2-}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Mg\\(^{2+}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "AI\\(^{3+}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The region around the nucleus where electrons can be located is called?",
+      "options": [
+        {
+          "key": "A",
+          "text": "a spectra",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "an orbital",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "a quanta",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a field",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Protons and electrons are called fundamental particles because they----------",
+      "options": [
+        {
+          "key": "A",
+          "text": "are indivisible",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have different charges",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "are the lightest particles",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "are found in all matter",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The activation energy of the reaction is",
+      "options": [
+        {
+          "key": "A",
+          "text": "E\\(_{A}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "E\\(_{B}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "E\\(_{C}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "E\\(_{D}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The enthalpy change of the reaction is------------",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 42.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/chemistry/2021/5KyqeWnzogToBoKB0KHkX8u8j3sEhTNoSzOyKAt3.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "E\\(_{A}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "E\\(_{B}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "E\\(_{C}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "E\\(_{D}\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "The energy profile diagram illustrates-------------",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 42.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/chemistry/2021/5KyqeWnzogToBoKB0KHkX8u8j3sEhTNoSzOyKAt3.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "an endothermic reaction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "an exothermic reaction",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "a spontaneous reaction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "a redox reaction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "How many molecules of oxygen would occupy a volume of 2.24 cm\\(^{3}\\) at s.t.p ?\n[Molar volume at s.t.p = 22,400 cm\\(^{3}\\), Avogadro's number = 6.02 x 10\\(^{23}\\)]",
+      "options": [
+        {
+          "key": "A",
+          "text": "3.01 x 10\\(^{20}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "3.01 x 10\\(^{27}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "6.02 x 10\\(^{19}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "6.02 x 10\\(^{27}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The isotopes of neon are represented by the symbols \\(^{20}\\)\\(_{x}\\) Ne, \\(^{21}\\) \\(_{y}\\) Ne, and \\(^{22}\\) \\(_{z}\\) Ne. The relationship between x, y, and z is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "x > y > z",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "x < y < z",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "x = y= z",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "x < z < y",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Which of the following pairs of molecules form hydrogen bonds?",
+      "options": [
+        {
+          "key": "A",
+          "text": "C\\(_{2}\\)H\\(_{5}\\)OH and CH\\(_{3}\\)OH",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "CH\\(_{3}\\)OH and H\\(_{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "H\\(_{2}\\)S and CH\\(_{4}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "NH\\(_{3}\\) and SO\\(_{2}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "Which of the following statements about elements in Group VII is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Br\\(_{2}\\) will oxidize CI\\(^{-}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "F\\(_{2}\\) has the least tendency to be reduced",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Cl\\(_{2}\\) will oxidize I\\(^{-}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "l\\(_{2}\\) is a stronger oxidizing agent than F\\(_{2}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Electrovalent compounds normally ------------",
+      "options": [
+        {
+          "key": "A",
+          "text": "have low boiling points",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have mobile electrons",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "conduct electricity in the solid state",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "dissolve in polar solvent",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "A coordinate covalent bond could be formed between?",
+      "options": [
+        {
+          "key": "A",
+          "text": "NH\\(_{3}\\) and PCl\\(_{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "BCl\\(_{3}\\) and AlCl\\(_{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "BCl\\(_{3}\\) and NH\\(_{3}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "H\\(^{+}\\) and AlCl\\(_{3}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "question": "Which of the following scientists discovered the electrons?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Joseph J. Thompson",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "James Chadwick",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Amedeo Avogadro",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Ernest Rutherford",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) Distinguish between molecular formula and structural formula\n(b) List three factors that determine the ionization energy of an atom.\n(c) State the two conditions necessary for the establishment of a chemical equilibrium\n(d) Consider the following table\nElement\nA\nB\nC\nIonization energy KJ mol\\(^{-1}\\)\n619\n518\n594\n(d)(i) State which of the elements is the strongest reducing agent.\n(ii) Give a reason for the answer stated in (d)(i)\n(e) State Graham's law of diffusion\n(f) Consider the following salts: Mg(NO\\(_{3}\\))\\(_{2}\\), CaCO\\(_{3}\\), Na\\(_{2}\\)SO\\(_{4}\\). State which of the salts is/are:\n(i) readily soluble in water:\n(ii) insoluble in water.\n(g) Classily each of the following products as addition polymer or condensation polymer:\n(i) protein:\n(ii) perspex:\n(iii) nylon.\n(h) Define atomic radius.\n(i) Explain briefly why ethanol has a higher boiling point than propane even though they both have comparable molar masses.\n(j) State three significance of the pH value in everyday life."
+    },
+    {
+      "number": 2,
+      "question": "(a)i. State two characteristics of a homologous series.\n(ii) Explain briefly why there are differences in the reaction of ethane and ethene.\n(b) When crystals of sodium chloride were warmed with concentrated tetraoxosulphate( VI) acid, a gas was evolved.\n(i) Name the gas.\n(ii) State two physical properties of the gas.\n(iii) Write a balanced chemical equation for the reaction.\n(c)i. What are hydrocarbons?\n(ii) State two natural sources of hydrocarbons.\n(iii) A hydrocarbon contains 83% of carbon by mass. Calculate its empirical formula. [H=1.0, C=12.0]\n(d) Draw and label a diagram of a set-up that could be used to electroplate a copper ornament with silver"
+    },
+    {
+      "number": 3,
+      "question": "(a) In an experiment, 25.0 cm\\(^{3}\\) of H\\(_{2}\\)SO\\(_{4}\\) completely neutralized 24.0 cm\\(^{3}\\) of a 0.1 50 mol dm\\(^{-3}\\) aqueous KOH using a suitable indicator.\n(i) Write a balanced chemical equation for the reaction.\n(ii) Calculate the concentration of the acid solution.\n(b)i. A burning magnesium ribbon was placed in a gas jar containing Carbon (IV) oxide.\n- Write an equation for the reaction.\n- Explain briefly why the magnesium ribbon burns in carbon(lV) oxide although the gas does not support combustion.\n- Calculate the percentage mass of nitrogen in magnesium trioxonitrate (V). |N = 140. O = 16.0. Mg = 24.01]\n(c) Consider the following organic compound: CH\\(_{3}\\)CH\\(_{2}\\)CH = CHCOOH.\n(i) State two chemical reactions which could he sed te identify the compound.\n(ii) What would be observed in each of the reactions stated in c(i)\n(d) Describe briefly how soap is manufactured using pellets of sodium hydroxide and vegetable oil\n(e) Define the term electronegativity"
+    },
+    {
+      "number": 4,
+      "question": "(a) What is the structure of:\n(i) graphite:\n(ii) diamond\n(ii) Explain briefly why diamond is hard and a non-conductor of electricity while graphite is soft and an electrical conductor,\n(b)i. State what is achieved at each of the following stages in the purification of town water supply:\n- aeration;\n- screening\n- sedimentation.\n(ii) Name two substances responsible for hardness in water.\n(iii) State two methods for the removal of hardness in water.\n(iv) Give one disadvantage of hard water\n(c)i). Describe briefly the extraction of tin from its ore.\n(ii) Write a balanced chemical equation for the reaction.\n(iii) Write an equation for the reaction of tin with:\n- oxygen;\n- chlorine."
+    },
+    {
+      "number": 5,
+      "question": "(a)i. With the aid of an equation, explain briefly why aluminum metal is not affected by air.\n(ii) In the extraction of aluminum from bauxite, state the:\n- substance used for purifying the ore;\n- composition of the mixture electrolyzed.\n(b) ZnO is an amphoteric oxide. Write equations to illustrate this statement.\n(c)i) List three uses of sodium trioxocarbonate(IV).\n(ii) Explain briefly why a solution of trioxonitrate(V) acid turns yellowish on storage for some time.\n(ii) Describe briefly how trioxonitrate(V) ions could be tested for in the laboratory.\n(d) Write balanced chemical equations for the preparation of hydrogen chloride.\n(i) using concentrated H\\(_{2}\\)SO\\(_{4}\\):\n(ii) by direct combination of its constituent elements.\n(iii) State one use of hydrogen chloride."
+    }
+  ]
+}

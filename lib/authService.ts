@@ -222,20 +222,50 @@ export async function sendAdminPasswordReset(email: string): Promise<void> {
     throw new Error("Use the real email connected to your admin account.");
   }
 
-  const redirectTo =
-    typeof window === "undefined"
-      ? undefined
-      : `${window.location.origin}/dashboard/reset-password`;
-  const { error } = await supabase.auth.resetPasswordForEmail(
-    cleanEmail,
-    redirectTo ? { redirectTo } : undefined,
-  );
+  // No redirectTo → Supabase sends a 6-digit OTP instead of a magic link.
+  const { error } = await supabase.auth.resetPasswordForEmail(cleanEmail);
   if (error) {
     if (error.message.toLowerCase().includes("rate")) {
       throw new Error("Please wait before requesting another reset email.");
     }
     throw new Error(error.message);
   }
+}
+
+/**
+ * Verify a password-reset OTP and immediately update the password.
+ * Supabase's verifyOtp with type "recovery" establishes a recovery session;
+ * we then call updateUser to set the new password in one step.
+ */
+export async function verifyAdminResetOtpAndUpdatePassword(
+  email: string,
+  token: string,
+  password: string,
+): Promise<void> {
+  if (password.length < 6) throw new Error("Password must be at least 6 characters.");
+
+  const { error: verifyError } = await supabase.auth.verifyOtp({
+    email: email.trim().toLowerCase(),
+    token: token.trim(),
+    type: "recovery",
+  });
+  if (verifyError) {
+    if (verifyError.message.toLowerCase().includes("invalid") || verifyError.message.toLowerCase().includes("expired")) {
+      throw new Error("Invalid or expired code. Please check and try again.");
+    }
+    throw new Error(verifyError.message);
+  }
+
+  // Confirm this recovery session belongs to an admin account.
+  const profile = await getAdminProfile();
+  if (!profile) {
+    await supabase.auth.signOut();
+    throw new Error("This code is not for an admin account.");
+  }
+
+  const { error: updateError } = await supabase.auth.updateUser({ password });
+  if (updateError) throw new Error(updateError.message);
+  await supabase.auth.signOut();
 }
 
 export async function updateAdminPassword(password: string): Promise<void> {
@@ -420,20 +450,48 @@ export async function sendStudentPasswordReset(email: string): Promise<void> {
     throw new Error("Use the real email connected to your Individual student account.");
   }
 
-  const redirectTo =
-    typeof window === "undefined"
-      ? undefined
-      : `${window.location.origin}/student/reset-password`;
-  const { error } = await supabase.auth.resetPasswordForEmail(
-    cleanEmail,
-    redirectTo ? { redirectTo } : undefined,
-  );
+  // No redirectTo → Supabase sends a 6-digit OTP instead of a magic link.
+  const { error } = await supabase.auth.resetPasswordForEmail(cleanEmail);
   if (error) {
     if (error.message.toLowerCase().includes("rate")) {
       throw new Error("Please wait before requesting another reset email.");
     }
     throw new Error(error.message);
   }
+}
+
+/**
+ * Verify a password-reset OTP and immediately update the password.
+ */
+export async function verifyStudentResetOtpAndUpdatePassword(
+  email: string,
+  token: string,
+  password: string,
+): Promise<void> {
+  if (password.length < 6) throw new Error("Password must be at least 6 characters.");
+
+  const { error: verifyError } = await supabase.auth.verifyOtp({
+    email: email.trim().toLowerCase(),
+    token: token.trim(),
+    type: "recovery",
+  });
+  if (verifyError) {
+    if (verifyError.message.toLowerCase().includes("invalid") || verifyError.message.toLowerCase().includes("expired")) {
+      throw new Error("Invalid or expired code. Please check and try again.");
+    }
+    throw new Error(verifyError.message);
+  }
+
+  // Confirm this recovery session belongs to an individual student account.
+  const profile = await getStudentProfile();
+  if (!profile || profile.account_type !== "individual_student") {
+    await supabase.auth.signOut();
+    throw new Error("This code is not for an Individual student account.");
+  }
+
+  const { error: updateError } = await supabase.auth.updateUser({ password });
+  if (updateError) throw new Error(updateError.message);
+  await supabase.auth.signOut();
 }
 
 export async function updateStudentPassword(password: string): Promise<void> {

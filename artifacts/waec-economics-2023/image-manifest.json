@@ -1,0 +1,58 @@
+{
+  "subject": "Economics",
+  "examType": "WAEC",
+  "year": 2023,
+  "objectiveQuestionCount": 50,
+  "theoryQuestionCount": 8,
+  "questionsWithImages": 3,
+  "uniqueImagesUploaded": 3,
+  "objectPrefix": "question-assets/waec/economics/2023",
+  "generatedAt": "2026-09-15T14:10:51.828Z",
+  "questions": [
+    {
+      "sourceId": "68940",
+      "sourceUrl": "https://myschool.ng/classroom/economics/68940",
+      "section": "objective",
+      "number": 9,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/pzQvbcgydm58jrFauVyYQplQ6oWwAqQnlC2xjkfs.jpeg",
+          "objectKey": "question-assets/waec/economics/2023/pzQvbcgydm58jrFauVyYQplQ6oWwAqQnlC2xjkfs.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/economics/2023/pzQvbcgydm58jrFauVyYQplQ6oWwAqQnlC2xjkfs.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 11324
+        }
+      ]
+    },
+    {
+      "sourceId": "68963",
+      "sourceUrl": "https://myschool.ng/classroom/economics/68963",
+      "section": "objective",
+      "number": 19,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/5pEh4Nahegckp58LwBJ8FSQRkTVJXqBHNb6RkEK9.jpeg",
+          "objectKey": "question-assets/waec/economics/2023/5pEh4Nahegckp58LwBJ8FSQRkTVJXqBHNb6RkEK9.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/economics/2023/5pEh4Nahegckp58LwBJ8FSQRkTVJXqBHNb6RkEK9.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 14678
+        }
+      ]
+    },
+    {
+      "sourceId": "69123",
+      "sourceUrl": "https://myschool.ng/classroom/economics/69123",
+      "section": "theory",
+      "number": 1,
+      "images": [
+        {
+          "sourceUrl": "https://myschool.ng/storage/classroom/dB8HL9dXhudvHAMaOMubwDhzLtRUXFrXEmTds64B.jpeg",
+          "objectKey": "question-assets/waec/economics/2023/dB8HL9dXhudvHAMaOMubwDhzLtRUXFrXEmTds64B.jpg",
+          "publicUrl": "https://images.assessly.ng/question-assets/waec/economics/2023/dB8HL9dXhudvHAMaOMubwDhzLtRUXFrXEmTds64B.jpg",
+          "contentType": "image/jpeg",
+          "bytes": 10394
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1380 @@
+{
+  "subject": "Biology",
+  "year": 2018,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The scientist who introduced binomial nomenclature in the classification of organisms was",
+      "options": [
+        {
+          "key": "A",
+          "text": "Charles Darwin",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Carolus Linnaeus",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "John Ray",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Louis Pasteur",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Which of the following statements is true about arthropods?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Prothorax bears only legs",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Mesothorax bears only legs",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Metathorax bears only wings",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Prothorax bears only wings",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "What level of organization is Spirogyra?",
+      "options": [
+        {
+          "key": "A",
+          "text": "System",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Organ",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Cell",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Tissue",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "The streaming movement of cytoplasm within the Paramecium is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "Transpiration",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Digestion",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Cyclosis",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Osmosis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Which of the following organelles is found only in plant cells?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mitochondria",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Ribosomes",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Lysosomes",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Plastids",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "Active transport differs from diffusion in that active transport",
+      "options": [
+        {
+          "key": "A",
+          "text": "is a very fast process",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "allows the movement of substances against concentration gradient",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "takes place in both light and dark reaction of photosynthesis",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "occurs in both plant and animal tissues",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The diagrams above are illustrations of an experimental set-up to demonstrate a type of tropic response in plants. The type of response demonstrated is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 7.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2018/q1iJPt479ENaM9zFPuy4Hl4rgwnKMqgzZnmlRk7n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "phototropism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "geotropism",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "hydrotropism",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "thigmotropism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "The conclusion drawn from the experiment in the diagram above is that",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 8.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2018/M6KN52VZuK72ttXLBx5py4s0TPv0UWkBYHipsBp6.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "shoots of plants are negatively thigmotropic",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "shoots of plants are negatively geotropic",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "shoots of plants are positively phototropic",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "roots of plants are positively hydrotropic",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The odontoid process is found on the",
+      "options": [
+        {
+          "key": "A",
+          "text": "axis vetebra",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "atlas vetebra",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "thoracic vetebra",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "sacral vetebra",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "A seedling was made to stand in a solution of red ink for three hours and a transverse section of the stem was examined under the microscope. The process being investigated was",
+      "options": [
+        {
+          "key": "A",
+          "text": "the importance of micro elements to plants",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ascent of water through the xylem",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "diffusion of colored substances",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "distribution of food in plants",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Which of the following structures would carry out cellular respiration? A",
+      "options": [
+        {
+          "key": "A",
+          "text": "germinating seed",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "decolorised leaf",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "dry leaf",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "boiled cowpea",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "Which of the following is NOT an excretory product of animals?",
+      "options": [
+        {
+          "key": "A",
+          "text": "carbondioxide",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "urea",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "sweat",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "oxygen",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "An example of homeostasis in living organisms is",
+      "options": [
+        {
+          "key": "A",
+          "text": "cooling effect resulting from evaporation of water from the body surface",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "root hairs of a plant growing towards the source of light",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "changing of the body colour of chameleon to match the colour of the foliage on which it is resting",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the release of phosphorus into the phloem of a plant growing in a phosphorus-deficient soil",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "Ultrafiltration in the kidney takes place in the",
+      "options": [
+        {
+          "key": "A",
+          "text": "Renal vein",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Medulla",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Loop of Henle",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Bowman's Capsule",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "The thyroid gland is found at the base of the",
+      "options": [
+        {
+          "key": "A",
+          "text": "Midbrain",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Kidney",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Neck",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Liver",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Which of the following statements about the response of neurones to stimulus is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Neurons respond to stimulus of any strength",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Neurons respond to all stimuli applied in rapid succession",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Neurons respond more rapidly during the absolute refraction period",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Intensity of stimulus must reach a threshold value before the neurons can be excited",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Which of the following practices may lead to infection of the eye? Use of",
+      "options": [
+        {
+          "key": "A",
+          "text": "contact lenses",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "convex lenses",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "biconcave lenses",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "concave lenses",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "The structures for gaseous exchange in breathing roots are",
+      "options": [
+        {
+          "key": "A",
+          "text": "stomata",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "lenticels",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "cuticle",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "mitochondria",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "The diagram above is an illustration of the life cycle of an insect. The adult fly in this cycle is called",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 19.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2018/tNQeFwgSz4j2pSC8vYvY6WeP00xJfJs9gBXMQsu9.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Housefly",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Butterfly",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Cockroach",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Mosquito",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "In the diagram above, the larva is also known as",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 20.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2018/O5fIur4UNrpajkuydkpaYvdBfuH8lSZ2PUAxjhAh.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nymph",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Caterpillar",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Maggot",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Chrysalis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "The source of energy required by plants during food production is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Photosynthesis",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Chlorophyll",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Sunlight",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Microorganisms",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "One major difference between plant and animals nutrition is the ability of plants to synthesize",
+      "options": [
+        {
+          "key": "A",
+          "text": "Food for plants and animals",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Water for plants",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Water for animals",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Food for plants only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "By what process is starch converted into maltose?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hydrolysis",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Condensation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Translocation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Photosynthesis",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The ascent of water in tall trees is mainly due to",
+      "options": [
+        {
+          "key": "A",
+          "text": "adhesive forces",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "transpiration pull",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "root pressure",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cohesive forces",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The duodenum of a person was surgically removed. Which of the following substances would have their digestion affected?",
+      "options": [
+        {
+          "key": "A",
+          "text": "starch and protein only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "starch and lipids",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "starch, peptones and maltose",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "starch, protein and lipids",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "Which of the following dental formulae represents the dentition in rabbits?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(I\\frac{2}{1}\\) \\(C\\frac{0}{0}\\) \\(P\\frac{3}{2}\\) \\(M\\frac{3}{3}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(I\\frac{2}{2}\\) \\(C\\frac{1}{1}\\) \\(P\\frac{2}{2}\\) \\(M\\frac{3}{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(I\\frac{1}{2}\\) \\(C\\frac{0}{0}\\) \\(P\\frac{2}{3}\\) \\(M\\frac{3}{3}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(I\\frac{2}{1}\\) \\(C\\frac{0}{1}\\) \\(P\\frac{3}{2}\\) \\(M\\frac{3}{3}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The diagram above is an illustration of an experimental set-up to demonstrate a property of soil. The property of soil demonstrated is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 27.",
+      "options": [
+        {
+          "key": "A",
+          "text": "particle size",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "capillarity",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "colour",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "texture",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Which of the following statements would be a correct observation at the end of the experiment? Water moves",
+      "options": [
+        {
+          "key": "A",
+          "text": "highest in sandy soil",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "lowest in loamy soil",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "to the same level in all soil types",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "highest in clayey soil",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The most important factor(s) that influence(s) the ecological niche of an organism is/ are the",
+      "options": [
+        {
+          "key": "A",
+          "text": "water, light and predator-prey relationship",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "food and water availability",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "physical environment",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "competition for food and space",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The diagram above is an illustration of organisms in an air-tight aquarium.The most important factor needed by the organisms is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 30.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2018/zzcQqpm3IEct8edoLSf27If18VeDnNL3vwmdo8CU.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "light energy",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "low humidity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "oxygen",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "nitrate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "Which of the following instruments is used to determine the turbidity of water?",
+      "options": [
+        {
+          "key": "A",
+          "text": "hygrometer",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "hydrometer",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "secchi disc",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "rain gauge",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "In an ecosystem, the least efficient energy transfer link is from the",
+      "options": [
+        {
+          "key": "A",
+          "text": "secondary consumers to decomposers",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sun to producers",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "primary consumers to secondary consumers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "producer to primary consumers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Xerophytes have the following characteristics aimed at conserving water except",
+      "options": [
+        {
+          "key": "A",
+          "text": "thick cuticle",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "broad leaf surfaces",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "sunken stomata",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "waxy cuticle",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "An association between living organisms in which one lives on and feeds at the expense of the other is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "commensalism",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "predation",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "parasitism",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "mutualism",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "When large numbers of organisms share limited space and resources, the immediate result is",
+      "options": [
+        {
+          "key": "A",
+          "text": "extinction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "emigration",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "competition",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "immigration",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Which of the following disease ic caused by a bacterium?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ringworm",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "poliomyelitus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "syphilis",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "malaria",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Conservation of wildlife is necessary mainly because",
+      "options": [
+        {
+          "key": "A",
+          "text": "wild species cannot resist disease better than their domesticated species",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "many predator wild animals help in the control of pests",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "it prevents extinction of species",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "many people derive pleasure from observing wild animals",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Patients X and Y were likely transferred with blood of genotype",
+      "options": [
+        {
+          "key": "A",
+          "text": "OO",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "AO",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "BO",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "AA",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "What should the hospital have done to prevent X from showing the symptom described above? Patient X should have",
+      "options": [
+        {
+          "key": "A",
+          "text": "undergone an agglutination test",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "been asked for the blood group",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "been screened for HIV",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "undergone malaria test",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "The greatest contribution to genetic studies was made by",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gregor Mendel",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Thomas Morgan",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Charles Darwin",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Robert Hooke",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "The exchange of genes between homologous chromosomes is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "crossing over",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "back cross",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "test cross",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "mutation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The diagrams above are illustrations of the inheritance of coat colour in mice. J, K, L, M and N are parents. The cross between two parent mice gave rise to offspring P, Q, R and S. Which of the offspring are all homozygous?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 42.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2018/BxEAvYWuBbkgyVm0mXUVCLWIEdsC8RV05YhalOpg.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "P",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Q",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "S",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "R",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Genes that remain linked are those",
+      "options": [
+        {
+          "key": "A",
+          "text": "close to each other on the chromosomes",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "on the same locus on the chromosomes",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "on the homologous chromosomes",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "which are allelic pair",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "A plant cell has 14 chromosomes prior to mitosis. What is the number of chromosomes in the daughter cells?",
+      "options": [
+        {
+          "key": "A",
+          "text": "14",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "56",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "28",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "7",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The chemical bond that holds the bases of the two strands of DNA together is",
+      "options": [
+        {
+          "key": "A",
+          "text": "oxygen bond",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "hydrogen bond",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "electrovalent bond",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "covalent bond",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "The diagram above is an illustration of one of the theories of evolution. Who proposed the theory in the illustration?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 46.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2018/apBlDnEjedRLwkRlD4j0jZSpaFJLKT4ZRv5NvKmn.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Louis Pasteur",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Gregor Mendel",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Robert Hooke",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Jean Lamarck",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "The theory supports",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 47.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2018/IggTjhhdRhAa3kSpxrfLXFWg5ll1EKnmoI8FsPGc.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "natural selection",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "struggle for survival",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "independent assortment",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the use and disuse of body parts",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "In evolution, fossils are naturally preserved in",
+      "options": [
+        {
+          "key": "A",
+          "text": "rocks",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "water",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "chemicals",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "trees",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "Which of the following is not a social insect?",
+      "options": [
+        {
+          "key": "A",
+          "text": "termite",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "housefly",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "honeybee",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "ant",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) Explain briefly how the structure of each of the following cells relate to their functions:\n(i) Sperm cell\n(ii) Palisade cell.\n(b) Make a drawing, 8cm to -10cm long of the front view of the female reproductive system in humans and label fully.\n(c) State two differences between reproduction in mammals and in amphibians.\n(d) State two methods of birth control in humans."
+    },
+    {
+      "number": 2,
+      "question": "(a). Name the gases involved in the photosynthesis of a plant.\n(b) State one role each of the gases named in 2 (a).\n(c) (i) What is a variegated leaf?\n(ii)Which part of the variegated leaf would test positive when treated with iodine solution?\n(iii) State two reason for the answer in 2(c) (ii).\n(iv) Name one mineral element required by plants for the formation of the part that would test positive in 2(c)(ii).\n(d) The table below indicates different methods by which organism obtain food. Place the following organism under the heading in the table below: Human, Mushroom, Venus flytrap, Waterleaf plant, Tapeworm, Elephant grass, Housefly, Lichen, Spirogyra, Rhizopus.\nMode of Nutrition\nHolozoic\nParasitic\nSymbiotic\nSaprophytic\nAutotrophic"
+    },
+    {
+      "number": 3,
+      "question": "(a). Explain briefly the following terms:\n(i) Renewable natural resources\n(ii) Non -renewable natural resources;\n(b) Give two examples each of:\n(i) Renewable natural resources\n(ii) Non -renewable natural resources\n(c) State five ways of conserving forests\n(d) State four effects of adding animal manure to garden soil.\n(e) Give the possible genotypes in humans;"
+    },
+    {
+      "number": 4,
+      "question": "a. Explain briefly the following terms:\ni. gene;\nii. Hybrid;\niii. Trait.\n(b) Two heterozygous yellow flowers are crossed. Using a genetic diagram, state the phenotypic and genotypic ratios of the first filial generation.\n(c) State four transmitted characters in plants."
+    },
+    {
+      "number": 5,
+      "question": "(a)(1) Explain briefly chemosynthesis as a mode of nutrition.\n(ii) Give two examples of organism that carry out chemosynthesis.\n(b) List three gases in the atmosphere with their percentage composition.\nGases in the atmosphere\nPercentage composition\n(c) (i) State four characteristics of a salt marsh habitat.\n(ii) Explain briefly how plants are modified for anchorage in a salt marsh habitat.\n(d) (i) List four bacterial disease associated with poor food hygiene.\n(ii) State three effects of poor food hygiene.\n(e) A person was involved in a car accident and became unconscious due to excessive blood loss. Explain briefly how the blood lost could be restored.\n(f) State three differences between tillage and bush burning as farming practices.\nTillage\nBush burning"
+    },
+    {
+      "number": 6,
+      "question": "(a) State two roles each of the following compounds in respiration:\n(i) glucose;\n(ii) oxygen.\n(b) List two types of cellular respiration\n(c) Name the structures of gaseous exchange in the following organisms:\nS/N\nORGANISM\nSTRUCTURE OF GASEOUS EXCHANGE\n1\nAmeoba\n2\nTilapia\n3\nAdult Toad\n4\nGrasshopper\n(d) Make a diagram, 6 cm to 8 cm long of an open stoma in a leaf and label fully."
+    },
+    {
+      "number": 7,
+      "question": "(a)Describe briefly the process involved in the conversion of food to chyme in the stomach of a mammal.\n(b)Complete the table below by stating one enzyme, digestive juice, food acted upon and\nend-product in the corresponding spaces.\nOne Enzyme\nOne juice\nOne food acted upon\nOne end-product\nPepsin\n(i) -----------\nLipase\n(ii)---------------\n(iii)---------------\n(iv)---------------\n(v) --------------------\n(vi) -------------------\n(vii) -------------------\n(viii)-------------------\nMaltose\n(ix)-----------------------\n(c) Describe an experiment to show that carbon dioxide is necessary for photosynthesis."
+    },
+    {
+      "number": 8,
+      "question": "(a) Explain briefly the following terms:\necosystem;\nabiotic environment.\n(b) List three ecological factors each which are specific to:\naquatic habitats;\nterrestrial habitats.\n(c) State briefly the relationship between green grass and a rabbit in a given habitat.\n(d) Draw a typical pyramid of energy using four feeding levels."
+    },
+    {
+      "number": 9,
+      "question": "(a)(i) State Mendel’s laws of inheritance.\n(ii) State five applications of genetics in medicine.\n(iii) State three disadvantages of inbreeding.\n(b)(i) What is evolution?\n(ii) Distinguish between convergent evolution and divergent evolution."
+    },
+    {
+      "number": 10,
+      "question": "(a) State five processes involved in the water cycle.\n(b) Name one instrument used for measuring each of the following physical factors:\npH;\nlight intensity;\nturbidity;\ntemperature.\n(c) Explain briefly the contributions of the following scientists to the formulation of the cell theory:\nRobert Hooke;\nTheodore Schwann.\n(d) What is meant by each of the following terms:\nNastism\nTaxism\n(e) Make a diagram, 6 cm – 8 cm long of the human tongue illustrating the four areas of taste.\n(f)(i) List four ways through which microorganisms enter the human body.\n(ii) State three harmful effects of microorganisms to humans."
+    },
+    {
+      "number": 11,
+      "question": "Diagrams A, B and C are illustrations of different types of teeth in humans. Diagram D is a representation of the arrangement of teeth in the lower jaw of a human.\nStudy them and answer questions (a) to (f).\n(a) (i) Name the type of teeth in diagrams A, B , and C .\n(ii) Which of the teeth would be found in positions I, II and IV ?\n(iii)State one function each of the teeth illustrated in diagrams A, B and C.\n(iv) State one reason each for the answers in (a) (iii).\n(b)If the tooth labeled B is decayed, list two factors that may be responsible.\n(c)What is the total number of each of the teeth labeled A, B and C in the dentition of an adult human?\n(d)Which of the teeth would be absent in a rabbit?\n(e)(i) Name the tooth that would be found in position III of diagram D .\n(ii) In which of the parts labeled I, II, III and IV would a tooth not be found in an infant?\n(f) State five ways of caring for the teeth in humans."
+    },
+    {
+      "number": 12,
+      "question": "(a)(i) Identify organisms A and B . [2 marks]\n(ii) Name the parts labeled I to X . [5 marks]\n(b) State one function each of the parts labeled VI , VIII , IX and X . [4 marks]\n(c) Name the specific habitats of organisms A and B . [2 marks]\n(d) State three structural adaptations of organism A to its mode of life. [6 marks]\n(e)(i)State three structural similarities between organisms A and B [3 marks]\n(ii) State three structural differences between organisms A and B . [3 marks]\n(f)(i) Name the class of organisms A and B . [1 marks]\n(ii) State three reasons for the answer in 3 (f) (i) . [3 marks]\n(g)State one biological importance of organism A . [1 marks]",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 12.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2018/Iu9mBjKqWt1tPAeLCGBVyBGy7B6dS1d9dg2aRRSD.png"
+    },
+    {
+      "number": 13,
+      "question": "Diagrams A, B and C are illustrations of different types of teeth in humans. Diagram D is a representation of the arrangement of teeth in the lower jaw of a human.\nStudy them and answer questions (a) to (f).\n(a) (i) Name the type of teeth in diagrams A, B , and C .\n(ii) Which of the teeth would be found in positions I, II and IV ?\n(iii)State one function each of the teeth illustrated in diagrams A, B and C.\n(iv) State one reason each for the answers in (a) (iii).\n(b)If the tooth labeled B is decayed, list two factors that may be responsible.\n(c)What is the total number of each of the teeth labeled A, B and C in the dentition of an adult human?\n(d)Which of the teeth would be absent in a rabbit?\n(e)(i) Name the tooth that would be found in position III of diagram D .\n(ii) In which of the parts labeled I, II, III and IV would a tooth not be found in an infant?\n(f) State five ways of caring for the teeth in humans."
+    },
+    {
+      "number": 14,
+      "question": "Diagrams D, E and F are illustrations of tools used for ecological studies. Study them and answer questions (a) to (c).\n(a)(i) Identify diagrams D, E and F .\nName the parts labeled I to VIII .\nState one function each of the parts labeled I, III, IV, V and VII.\n(b) State one use each of the tools labeled D, E and F.\n(c) Describe briefly the use of each of the tools labeled D, E and F."
+    },
+    {
+      "number": 15,
+      "question": "The diagrams below are illustrations of two organisms. Study them and answer question 3 (a) to (f)\n(a)(i) Identify organisms A and B .\n(ii) Name the parts labeled I to X .\n(b) State one function each of the parts labeled VI , VIII , IX and X .\n(c) Name the specific habitats of organisms A and B.\n(d) State three structural adaptations of organism A to its mode of life.\n(e)(i)State three structural similarities between organisms A and B.\n(ii) State three structural differences between organisms A and B .\n(f)(i) Name the class of organisms A and B .\n(ii) State three reasons for the answer in (f) (i).\n(g)State one biological importance of organism A ."
+    },
+    {
+      "number": 16,
+      "question": "(a) Name five vertebrae in mammals with their corresponding locations in the table below.\n(b) State one function each of the following parts in a dicotyledonous leaf: (i) palisade; (ii) vascular bundle; (iii) epidermis.\n(c)State one function each of the following parts in the stem of a flowering plant: (i) sieve tube; (ii) cortex; (iii) pith.\n(d) In a tabular form, state:\n(i) two external structural differences between the stem and root of a maize seeding.\n(ii) two internal structural differences between the stem and root of a maize seeding"
+    },
+    {
+      "number": 17,
+      "question": ". Study specimens A and B and answer questions 1(a) to 1(c).\n(a)(i) Name the habitat of each of specimens A and B. (ii) Name the adult stages into which each of specimens A and B would develop.\n(iii) Name the phylum and class common to the adult stages into which each of specimens A and B.\n(b) State three observable features of biological significance in: (i) specimen A (ii) specimens B.\n(c)(i) State four observable structural differences between specimens A and B.\n(ii) State three observable similarities between specimens A and B.\n2. Study specimens C, D and E and answer questions 2(a) to 2(c).\n(a)(i) Name the organism from which each of specimens C, D and E are obtained.\n(ii) State the function common to specimens C, D and E.\n(iii) State three observable features which adapts specimen C to its function.\n(b)(i) State three observable structural similarities between specimens C and D.\n(ii) State three observable structural differences between specimens C and D.\n(c) Make a drawing 6cm - 8cm long of specimen C and label fully.\n(3) Study specimens K and L and answer questions 3(a) to 3(c).\n(a)(i) Name the floral parts of specimen K. (ii) Indicate the number of the floral parts in each whorl of specimen K.\n(b)(i) Name the sex of specimen K. (ii) Give one reason for your answer in 3(b)(i).\n(c)(i) What is the symmetry of specimen K?. (ii) Give one reason for your answer in 3(c)(i).\n(d) Name one pollinating agent of each of specimens K and L.\n(e) State four observable structural differences between specimens K and L.\n(f) Make a drawing 8cm - 10cm long of specimen K and label fully."
+    }
+  ]
+}

@@ -1,0 +1,1315 @@
+{
+  "subject": "Physics",
+  "year": 2016,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "The dimensions of momentum are",
+      "options": [
+        {
+          "key": "A",
+          "text": "MLT",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ML -1 T -1",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "MLT -1",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "ML -1 T",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "A student measures the volume of a liquid using a measuring cylinder. What else needs to be measured by the student in order to determine the density of the liquid?",
+      "options": [
+        {
+          "key": "A",
+          "text": "depth of the liquid in the cylinder",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "mass of the cylinder",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mass of the liquid",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "tempersture of the liquid",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "The diagram given, represents the graph of stress against strain for an elastic wire. The point Q on the graph is the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 3.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2016/17771436564_15356119_1247910778606920_446107373_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "elastic linit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "breaking point",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "yield point",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "proportional limit",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "A ball is dropped from the top of a tower. Due to air resistance,it reaches terminal velocity. Which of the following statement(s) about its motion is/are correct? i. The acceleration of the ball is zero. ii. The net force on the ball is zero. iii. The velocity of the ball increases.",
+      "options": [
+        {
+          "key": "A",
+          "text": "i only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "i and ii only",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "ii and iii only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "i, ii and iii",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "Which of the following substances lowers the surface tension of water?",
+      "options": [
+        {
+          "key": "A",
+          "text": "metal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sand",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "detergent",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "paper",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "An object of volume 400cm 3 and 2.5gcm -3 is suspended from a spring balance with half its volume immersed in water. Determine the reading on the spring balance. (Density of water = 1gcm -3 )",
+      "options": [
+        {
+          "key": "A",
+          "text": "1200g",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "1000g",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "800g",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "400g",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The diagram given illustrates a force-distance graph for the motion of a wooden block. Determine the work done on the block when moved through a distance of 5m.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 7.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2016/TAg9sdMArVrPtawuNFrP2xNfPA91TUT4sAcH0saB.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "4J",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "15J",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "5J",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "100J",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "The two person of a body undergoing a uniformly accelerated motion are (10s, 10ms -1 ) and (30s, 50ms -1 ). On the velocity-time graph pf the body.",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.5ms -2",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2.0ms -2",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "10.0ms -2",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "40.0ms -2",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "At a birthday party, the celebrant pops a corked fruit wine. If the cork shoots out of the bottle at an angle of 40 o to the horizontal and travels a horizontal distance of 4.50m in 1.25s. Calculate the initial speed of the cork.",
+      "options": [
+        {
+          "key": "A",
+          "text": "4.2ms -1",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "4.7ms -1",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "5.6ms -1",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "7.1ms -1",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "A uniform metre rule is balanced on a fulcrum placed at the 35cm mark by suspending a mass of 120g at the 10cm mark. Calculate the mass of the metre rule.",
+      "options": [
+        {
+          "key": "A",
+          "text": "60g",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "80g",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "120g",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "200g",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "A plank is placed along the path on which a wheel barrow containing sand is pushed at a construction site to prevent it from sticking as illustrated in the diagram given. The large area of the plank prevents the wheel barrow from getting stuck by",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 11.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2016/5924096412_15300564_1247911475273517_170541381_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "increasing the reaction on the ground",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "increasing the pressure on the ground",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "decreasing the pressure on the ground",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "decreasing the weight on the ground",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "When a body is thrown vertically upwards, its velocity at the maximum height is",
+      "options": [
+        {
+          "key": "A",
+          "text": "maximium",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "zero",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "double its initial value",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "half its initial value",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "Resonance occurs when one vibrating object causes a second object to vibrate at its own natural",
+      "options": [
+        {
+          "key": "A",
+          "text": "amplitude",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "speed",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "frequency",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "intensity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The mouth piece of a telephone handset converts",
+      "options": [
+        {
+          "key": "A",
+          "text": "electrical energy to sound energy",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "sound energy to electrical energy",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "sound energy to radiowave",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "radiowave to sound energy",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "In the clinical thermometer, the function of the kink is to i. Prevent the back flow of mercury after use. ii. Ensure the back flow of mercury after use. iii. Maintain the thermometric property of mercury. iv. Allow the temperature attained to be read.",
+      "options": [
+        {
+          "key": "A",
+          "text": "i only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "i and ii only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "i and iv only",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "iii and iv only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Which of the following statements correctly defines the boiling point of a liquid? The temperature at which the",
+      "options": [
+        {
+          "key": "A",
+          "text": "saturated vapour pressure equals the atmospheric pressure",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "molecules leaves the liquid at a rate equal to the rate at which they return",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "molecules leave the liquid at a rate higher than that at which they return",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "molecules leave the liquid at a rate lower than the rate at which they return",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "The diagram given is used to determine the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 17.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2016/4qzyaRbWdfyOHdpfnPJ5C2lwAGOfiSRTZXh3oYMh.png",
+      "options": [
+        {
+          "key": "A",
+          "text": "boiling point of water",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "atmospheric pressure",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "upper fixed point of a thermometer",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "amount of water in the atmosphere",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "An aluminium rod of length 1.8m at 10&deg;C is heated to proceed produce a difference in length of 0.007m. Calculate the temperature to which it is heated. (Linear expansivity of aluminium = 2.3 x 10\\(^{-5}\\)K\\(^{-1}\\)",
+      "options": [
+        {
+          "key": "A",
+          "text": "155 o C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "160 o C",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "169 o C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "179 o C",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "A mercury-in-glass thermometer read 4cm at ice point and 29cm at steam point. Calculate the temperature when the mercury level is at 9cm",
+      "options": [
+        {
+          "key": "A",
+          "text": "13 o C",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "20 o C",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "33 o C",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "38 o C",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "The continuous stirring in the method of mixtures to determine the specific thermal capacity of a substance ensures",
+      "options": [
+        {
+          "key": "A",
+          "text": "continuous dissipation of heat to the room",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "uniform distribution of thermal energy to all parts of the mixture",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "that the thermal energy is confined to the mixture",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "that there is rapid heat exchange",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Which of the following statements is correct about the effect of dissolved salt on the freezing point of water?",
+      "options": [
+        {
+          "key": "A",
+          "text": "the freezing point is lowered",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "the freezing point is increased",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "there is no change in the freezing point",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "the change in the freezing point depends on the temperature of the surrounding",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "A pressurized perfume bottle is left on the window pane of a room. What happens to he gas molecules of the perfume on a sunny day? They",
+      "options": [
+        {
+          "key": "A",
+          "text": "expand",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "collide less often",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "move more rapidly",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "contract",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Given that v, f and \\(\\lambda\\) are the velocity, frequency and wavelength of a wave respectively. Which of the following equations is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "v = f 2 \\(\\lambda\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "f = \\(\\frac{v}{\\lambda}\\)",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "f = \\(\\frac{v}{\\lambda^2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(\\lambda = \\frac{f}{v^2}\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "The distance between two successive trough of a wave is 0.4m. If the frequency of the source is 825Hz, Calculate the speed of the wave",
+      "options": [
+        {
+          "key": "A",
+          "text": "165.0 ms -1",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "330.0ms -1",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "41.5ms -1",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "85.0ms -1",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "X-rays and infrared rays are both electromagnetic. Which common property do the waves have? Both waves",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 25.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2016/16293069298_15327779_1250596775004987_1127560765_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "are longitudinal",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have same frequency",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "have the same wavelength",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "travel at the same speed in a vacuum",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The image formed by a concave mirror is real, inverted and magnified, when object is placed",
+      "options": [
+        {
+          "key": "A",
+          "text": "at the focus",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "at the centre of curvature",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "beyond the centre of curvature",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "between the centre of curvature and the focus",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "Total internal reflection. i. is a phenomenon of refraction of light. ii. occurs when light rays travel into a denser medium. iii. occurs when the critical angle is just exceeded. iv. is a phenomenon of reflection of light. Which of the statements above are correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "i and ii only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "i and iii only",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "i, ii and iii only",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "i, iii and iv only",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "Complementary colours are those which",
+      "options": [
+        {
+          "key": "A",
+          "text": "have the same refractive index",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "have the same wavelength",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "add-up to produce black light",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "add-up to produce white light",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "The diagram given illustrates the waveform of a note produced by vibrations in an air column of length L. If the speed of sound in air is V, derive an expression for the frequency of the notes",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 29.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2016/13330747962_15403056_1250595938338404_18417037_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(\\frac{V}{L}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(\\frac{5VL}{2}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(\\frac{5L}{4V}\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(\\frac{5V}{4L}\\)",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "The pair of musical instruments that works on the vibration of air in pipes is",
+      "options": [
+        {
+          "key": "A",
+          "text": "piano and the organ",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "guitar and the flute",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "trumpet and the violin",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "flute and the trumpet",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "An astronomical telescope has objectives and eye-piece lenses of focal length 3.5m and 5cm respectively. Determine the magnifying power of the telescope when in normal adjustment",
+      "options": [
+        {
+          "key": "A",
+          "text": "70.0",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "17.5",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "7.0",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "0.7",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "An aluminium cable of diameter 4 x 10 -3 m and resistivity 3.0 x 10 -8 \\(\\omega\\)m has a resistance of 21\\(\\Omega\\). Calculate the length of the cable. (\\(\\pi = 3.14\\))",
+      "options": [
+        {
+          "key": "A",
+          "text": "8.0 x 10 2 m",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "8.8 x 10 3 m",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "8.0 x 10 4 m",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "8.8 x 10 4 m",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "The electricity meters in houses measure energy unit consumed in",
+      "options": [
+        {
+          "key": "A",
+          "text": "kilowatt-hour",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "volt",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "ampere",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "coulomb",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "A man and his friend have masses 70kg and 60kg respectively. If they are seated 1.0m apart, calculate the gravitational force of attraction between them. (G = 6.67 x 10 -11 Nm 2 kg -2 )",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.59 x 10 -14 N",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "2.80 x 10 -7 N",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "1.30 x 10 -2 N",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "6.30 x 10 13 N",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "The p.d across a parallel-plate capacitor is 10 3 V. If the distance between the two plates is 10cm. Calculate the magnitude of the electric field strength between the plates.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.0 x 10 4 Vm -1",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "1.0 x 10 5 Vm -1",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "1.5 x 10 5 Vm -1",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "2.0 x 10 5 Vm -1",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Two different materials, rubbed against each other acquired opposite charges when separated. This is an example of charging by",
+      "options": [
+        {
+          "key": "A",
+          "text": "induction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "friction",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "conduction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "convection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Two different materials, rubbed against each other acquired opposite charges when separated. This is an example of charging by",
+      "options": [
+        {
+          "key": "A",
+          "text": "induction",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "friction",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "conduction",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "convection",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Which of the following factors does not affect the e.m.f of a primary cell? Its",
+      "options": [
+        {
+          "key": "A",
+          "text": "size",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "internal resistance",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "operating temperature",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "duration of usage",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "Two magnets are used to magnetize a soft iron bar PQ as illustrated in the diagram given. The correct polarity at P and Q respectively",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 39.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2016/11849609752_15403019_1250597178338280_865846056_n.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "S and N",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "N and N",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "S and S",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "N and S",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "In storing magnets, keepers are used to",
+      "options": [
+        {
+          "key": "A",
+          "text": "reduced self-demagnetization",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "cancel the effect of the earth's magnetic field",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "protect the magnet from stray electric field",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "increase the strangth of the magnets",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "A 10\\(\\mu\\)C charge moves with a velocity of 1.0 x 10 5 ms -1 at right angle to a uniform magnetic field of flux density 5.0 x 10 -4 T. Calculate the force on the charge",
+      "options": [
+        {
+          "key": "A",
+          "text": "5.0 x 10 -5 N",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "5.0 x 10 -4 N",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "5.0 x 10 5 N",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "5.0 x 10 6 N",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "Which of the following statements is not correct about steel and soft iron?",
+      "options": [
+        {
+          "key": "A",
+          "text": "steel is more magnetized than soft iron",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "permanent magnets are usually made of steel",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "soft iron is more readily magnetized than steel",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "soft iron more readily loses its magnetism than steel",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "What determines the polarity at the ends of an electromagnet? The",
+      "options": [
+        {
+          "key": "A",
+          "text": "magnitude of the current passing through the wire",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "material of the core of the magnet",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "material of the coil",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "direction of current in the wire",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "How many beta particle(s) are emitted in the radioactive decay of \\(^{198}_{79}Au \\leftarrow ^{198}_{80}Hg\\)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "2",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "3",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "5",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "The phenomenon by which two light atomic nuclear combine to form a heavy nuclide with the release of energy is known as",
+      "options": [
+        {
+          "key": "A",
+          "text": "radioactivity",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "nuclear fusion",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "nuclear fission",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "chain reaction",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "In a p-type semiconductor, the?",
+      "options": [
+        {
+          "key": "A",
+          "text": "number of holes are equal to the number of electrons",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "electrical resistivity increases",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "electrons are the majority charge carriers",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "holes are the majority charge carriers",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "Let \\(\\Delta\\)x be the uncertainty in the measurements of position and \\(\\Delta\\)p the uncertainty in measurement of momentum. The uncertainty principle relation is given as",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(\\Delta\\)x . \\(\\Delta\\)p = h",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "\\(\\Delta\\)x . \\(\\Delta\\)p \\(\\leq\\) = h",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(\\Delta\\)x . \\(\\Delta\\)p \\(\\geq\\) = h",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "\\(\\Delta\\)x . \\(\\Delta\\)p > h",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "State the dimension of; (a) impulse; (ii) acceleration; (iii) work"
+    },
+    {
+      "number": 2,
+      "question": "A projectile is fired with a velocity of 20 ms\\(^{-1}\\) at an angle of 40&deg; to the horizontal. Determine the components of the velocity of the projectile at its maximum height."
+    },
+    {
+      "number": 3,
+      "question": "State three different materials that can be used to demonstrate Brownian motion."
+    },
+    {
+      "number": 4,
+      "question": "An electron enters perpendicularly into a uniform magnetic field which has a flux density of 0.12 T This results in a magnetic force of 9.6 x 10\\(^{-2}\\) N on the electron. Calculate the speed of the electron as it enters the magnetic field. (e =1.6 x \\(10^{19}\\) C)"
+    },
+    {
+      "number": 5,
+      "question": "List three uses of rockets."
+    },
+    {
+      "number": 6,
+      "question": "(a) What is doping?\n(b) Explain how doping improves the conductivity of a semiconductor"
+    },
+    {
+      "number": 7,
+      "question": "The diagram above illustrates a cathode ray tube. Identify the components X, Y, and Z."
+    },
+    {
+      "number": 8,
+      "question": "(a) Explain the term net force.\n(b) Define the principle of conservation of linear momentum and state one example of it.\n(c) A ball of mass 200 g released from a height of 2.0 m hits a horizontal floor and rebounds to a height of 1.8 in. Calculate the impulse received by the floor. (g = 10 ms\\(^{-2}\\)).\n(d) A body of mass 20 g performs a simple harmonic motion at a frequency of 5 Hz. At a distance of 10 cm from the mean position, its velocity is 200 cms\\(^{-1}\\). Calculate its:\n(i) maximum displacement from the mean position;\n(ii) maximum velocity;\n(iii) maximum potential energy. (g = 10 ms\\(^{-2}\\) \\(\\pi\\) = 3.14)"
+    },
+    {
+      "number": 9,
+      "question": "(a) Explain the terms:\n(i) thermal equilibrium;\n(ii) fundamental interval.\n(b) List two uses of the hydraulic press.\n(c) Name the material used to reset the steel index in the Six's maximum and minimum thermometer.\n(d)(i) A nursing mother prepared her baby's milk mixture at 85&deg;C, in a feeding bottle. In order to cool it to 40&deg;C, she immersed the bottle in an aluminium bowl of heat capacity 90 JK\\(^{-1}\\) containing 500 g of water at 26&deg;C. If the mass of the mixture is 300g, calculate the specific heat capacity of the mixture. [Neglect heat losses and heat capacity of the bottle; specific heat capacity of water = 4200 J kg\\(^{-1}\\) K\\(^{-1}\\)]\n(ii) (\\(\\alpha\\)) Name two ways through which the bottle losses heat.\n(\\(\\beta\\)) Name two industrial processes in which heat exchanger is used."
+    },
+    {
+      "number": 10,
+      "question": "(a) Define critical angle.\n(b) How are anti-nodes created in a stationary wave?\n(c) The angle of minimum deviation of an equilateral triangular glass prism is 46.2&deg;. Calculate the refractive index of the glass.\n(d) An illuminated object is placed in front of a concave mirror and the position of a screen is adjusted in front of the mirror but no image is obtained on the screen. Give two possible reasons for this observation.\n(e) An illuminated object is placed at a distance of 75 cm from a converging lens of focal length 30 cm.\n(i) Determine the image distance.\n(ii) If the lens is replaced by another converging lens, the object has to be moved 25 cm further away to have its sharp image on the screen. Determine the focal length of the second lens."
+    },
+    {
+      "number": 11,
+      "question": "(a) Explain briefly dielectric strength.\n(b) An electromagnetic wave has its wavelength shorter than those of radiowave and microwave but longer than that of visible light.\n(i) Identify the wave.\n(ii) Name one suitable detector for the wave.\n(iii) Name one source of the wave.\n(c) An oil drop carrying a charge of 1.0 x 10\\(^{-19 }\\)C is found to remain at rest in a uniform electric field of intensity 1200 NC\\(^{-1}\\). Calculate the weight of the oil drop.\n(d) An RLC series circuit consists of a 100\\(\\Omega\\) resistor, 0.05 H inductor and a 25 \\(\\mu\\) capacitor. A 220 V, 50 Hz mains voltage is applied across the circuit. Calculate the:\n(i) impedance;\n(ii) current. (\\(\\pi\\) = 3.14)"
+    },
+    {
+      "number": 12,
+      "question": "(a) Explain the following terms:\n(i) mass defect;\n(ii) binding energy of a nucleus.\n(b)(i) Assuming the wave nature of an electron, what is the effect of decreasing the speed of a photoelectron on its; (\\(\\alpha\\)) wavelength? (\\(\\beta\\)) energy?\n(ii) A particle of friasS 4.4 x 10\\(^{-23}\\) kg moves with a velocity of 10\\(^5\\)ms\\(^{-1}\\). Calculate its wavelength. (h = 6.6 x 10\\(^{-34}\\) Js)\nThe diagram above shows part of a radioactive decay series. Use it to answer the following questions.\n(i) Name a pair of isotopes.\n(ii) Name the isotopes with which the series starts.\n(iii) Write down a nuclear equation for two ekgmples of each of: (\\(\\alpha\\)) alpha decay; (\\(\\beta\\)) beta decay."
+    },
+    {
+      "number": 13,
+      "question": "You are provided with a uniform metre rule, a knife-edge, some masses and other necessary materials.\ni. Determine and record the centre of gravity of the metre rule.\nii. Fix the 100g mass marked N at a point Y , the 80cm mark of the rule using a sellotape.\niii. Suspend another 50g mass marked M at X , a distance A = 1Ocm from the 0cm mark of the rule.\niv. Balance the arrangement horizontally on the knife edge as illustrated in the diagram above.\nv. Measure and record the distance B of a knife-edge from the 0cm mark of the rule.\nvi. Repeat the procedure for four other values of A =15cm, 20cm, 25cm and 30cm.\nvii. Tabulate your readings.\nviii. Plot a graph with B on the vertical axis and A on the horizontal axis.\nix. Determine the slope, s , of the graph.\nx. Also determine the intercept, c, on the vertical axis.\nxi. Evaluate:\n\\(\\propto\\)) = k\\(_{1}\\) = (\\(\\frac{1 - 2s}{s}\\))100\n(\\(\\beta\\)) = k\\(_{2}\\) = \\(\\frac{2c}{s}\\) = 160\nxii. State two precautions taken to obtain accurate results.\n(b)i. Define the moment of a force about a point.\nii. State two conditions under which a rigid body at rest remains in equilibrium when acted upon by non-parallel coplanar forces.",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded theory/practical image(s) mapped to question 13.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/physics/2016/Ale3DFZShCsJaYJIclsyvhrFnllfEhZ1eukUVUEy.png"
+    },
+    {
+      "number": 14,
+      "question": "You are provided with a beaker, a thermometer, a stirrer, a measuring cylinder, a bunsen burner, a wire gauze, a 50g mass, a pair of tongs, water, tripod stand, and other necessary materials.\ni. Using the measuring cylinder, measure 150cm\\(^{3}\\) of water into the beaker.\nii. Record the volume v of the water in the beaker\niii. Calculate the mass m of the water, given that m = pv and; p = 1gcm\\(_{-3}\\).\niv. Measure and record the initial temperature \\(\\theta_{0}\\) of the water in the beaker.\nv. Hold the 50g mass with the pair of tongs in the flame of the bunsen burner for 2 minutes.\nvi. Quickly transfer the 50g mass to water in the beaker.\nvii. Stir gently and record the highest temperature \\(\\theta_{1}\\), attained\nviii. Evaluate \\(\\theta\\) = (\\(\\theta_{1}\\) - \\(\\theta_{0}\\)).\nix. Empty the content of the beaker and repeat the procedures above for the values of v = 200cm\\(^{3}\\), 250cm\\(^{3}\\), 300cm\\(^{3}\\), and 350 cm\\(^{3}\\).\nx. Tabulate your readings.\nxi. Plot a graph with m on the vertical axis and \\(\\theta\\) on the horizontal axis.\nxii. Determine the slope, s, of the graph.\nxiii. Evaluate k = \\(\\frac{50}{s}\\).\nxiv. State two precautions taken to obtain accurate results.\n(b)i. Define heat capacity.\nii. An electric kettle rated 1.2kw is used to heat 800g of water initially at a temperature of 20 C. Neglecting heat losses, calculate the time taken for the kettle to heat the water to its boiling point. [Take the boiling point of water= 101 C specific heat capacity of water = 4200 Jkg' K'1 (odv)"
+    },
+    {
+      "number": 15,
+      "question": "You are provided with a variable d.c. power supply E , a 2\\(\\propto\\) standard resistor, a key, an ammeter, a voltmeter and other necessary materials.\ni. Set up a circuit as shown in the diagram above with E= 1.5V\nii. Close the key k .\niii. Take and record the voltmeter reading V .\niv. Take and record the corresponding ammeter reading l.\nv. Evaluate V \\(^{-1}\\) and l \\(^{-1}\\)\nvi. Repeat the procedure for four other values of E= 3.0V, 4.5V, 6.0V, and 7.4V.\nvii. Tabulate your readings.\nviii. Plot a graph with V\\(^{-1}\\) on the vertical axis and l\\(^{-1}\\) on the horizontal axis starting both axes from the origin (0, 0).\nix. Determine the slope, s , of the graph.\nx. Also determine the intercept, e , on the vertical axis.\nxi. State two precautions taken to obtain accurate results.\n(b)i. State two methods by which an electric current can be produced.\nii\nCalculate the value of R in the circuit diagram shown above, given that the effective resistance of the circuit is 4.0\\(\\Omega\\) and the internal resistance of the cell is negligible."
+    }
+  ]
+}

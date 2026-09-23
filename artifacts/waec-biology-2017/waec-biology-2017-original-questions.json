@@ -1,0 +1,1354 @@
+{
+  "subject": "Biology",
+  "year": 2017,
+  "exam_type": "waec",
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following groups of animals do not possess a nervous system?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Porifera",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Cnidaria",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Platyheminthes",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Nematoda",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question": "The structural similarities in Paramecium and Euglena are in the",
+      "options": [
+        {
+          "key": "A",
+          "text": "shape of locomotory organs",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "blunt anterior and pointed posterior",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "presence of micro and mega nuclei in both",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "presence of anterior and posterior contractile vacuoles",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question": "Which of the following organisms cannot exist freely on its own?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chlamydomonas",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Amoeba",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Paramecium",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Plasmodium",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question": "Which of the following cell organelles is the site for the production of ATP?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lysosome",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Nucleus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Mitochondrion",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Ribosome",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question": "An example of osmosis in plants is the",
+      "options": [
+        {
+          "key": "A",
+          "text": "movement of water through the xylem",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "loss of water vapour from the stomata",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "translocation of food through the phloem",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "absorption of water from the soil by the root",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question": "The organism that can carry out both autotropic and heterotrophic modes of nutritions is",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chlamydomonas",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Eudorina",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Euglena",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Spirogyra",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question": "The diagram above illustrates a part of the human skeleton. It represents the bones of the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 7.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/aRr7fGT8sogmcIwkHFYSSh7ZryF2EnekciXnLb1A.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "upper arm",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "lower arm",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "upper leg",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "lower leg",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question": "Which of the labelled parts of the diagram of the part of the human skeleton articulates with the head of the trochlea to form a hinge joint?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 8.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/sCheQQzcZCN2qsSKBszU2OFkmReVDZ6wr2Ht3k5K.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The diagram above illustrates a part of the human skeleton. The labelled part that provides surface for the attachment of the triceps is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 9.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/rnBzDqynQnCXOtAEV0nn07QPuksrptAmfo2zKAZj.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question": "The diagram above illustrates the transverse section of a",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 10.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/1IvwasqQuEA1UZKIt8AkJnVmVUGh5Vki3C9gBEMP.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "dicotyledonous root",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "monocotyledonous root",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "dicotyledonous stem",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "monocotyledonous stem",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question": "Which of the following actions does not occur during exhalation in man?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thoracic cavity decreases in volume",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Diaphragm flattens",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Ribs move down and in",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Air pressure increases in the thoracic cavity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question": "The diagram above is an illustration of the urinary tubule in a mammal. Which of the following substances is found in the part labelled II only?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 12.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/kpdZTDWxMJjF7mKNyzmFzL5B0HTKnDrCWYw20FKu.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lipid",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Glucose",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Urea",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Uric acid",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question": "The diagram above is an illustration of the urinary tubule in a mammal. The part which contains lowest concentration of urea is labelled",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 13.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/aWIJenNyysMHeASAuv3DBTfskT63WFDjiPvtNwL3.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "I",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "II",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "III",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question": "The diagram above is an illustration of the urinary tubule in a mammal. Which of the following substances is greater in concentration in the part labelled IV when compared to that part labelled I?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 14.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/UC72zOaPDbb6xynuWfqj9Qjs3QIrkAOmd9nb2EiC.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lipid",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Glucose",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Urea",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Uric acid",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question": "Deamination of amino acids in the liver produces",
+      "options": [
+        {
+          "key": "A",
+          "text": "blood sugar",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "glycogen",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "bile",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "urea",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Which of the following glands also serves as an exocrine gland?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ovary",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Pancreas",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Adrenal",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Thyroid",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question": "Which of the following sequences is the correct route of the transmission of impulses along a reflex arc?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\\(Receptor\\to sensory neuron \\to synapse \\to intermediate neuron \\to synapse \\to motor neuron \\to effector\\)",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "\\(Receptor \\to motor neuron \\to synapse \\to intermediate neuron \\to synapse \\to sensory neuron \\to effector\\)",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "\\(Effector \\to intermediate neuron \\to synapse \\to motor neuron \\to synapse \\to sensory neuron \\to receptor\\)",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "\\(Effector \\to motor neuron \\to synapse \\to sensory neuron \\to synapse \\to intermediate neuron \\to receptor\\)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question": "When viewing an object that is close to the human eye, the",
+      "options": [
+        {
+          "key": "A",
+          "text": "eye lens becomes thin",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "ciliary muscles relax",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "suspensory lens become taut",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "eye lens becomes fat",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question": "The diagram above is an illustration of the human sperm. The part labelled I is the",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 19.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/J7vtW8meS419nfSGQZPdVsCNhm4F4MNKEa7mWBOA.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "acrosome",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "nucleus",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "mitochondrion",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "tail",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question": "In the diagram of the human sperm above, the function of the part labelled II is to",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 20.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/kHsWFVT9JVtGigutQ2ZjPVkpyber3aIf5YXhVrXK.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "fuse the ovum during fertilization",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "generate the energy for the sperm to swim to the fallopian tube",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "help the sperm to swim forward",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "dissolve the membrane of the egg during fertilization",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question": "Which of the following types of placentation is not common amongst syncarpous pistils?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Marginal",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Axile",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Parietal",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Free central",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question": "The complex energy-rich organic matter which living organisms need for life is",
+      "options": [
+        {
+          "key": "A",
+          "text": "water",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "air",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "food",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "mineral salts",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question": "Which of the following processes are associated with photosynthesis? I. Energy from sunlight is absorbed II. Carbon dioxide is evolved III. Oxygen is given off IV. Glucose is synthesized",
+      "options": [
+        {
+          "key": "A",
+          "text": "I and II only",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "I, II and IV only",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "I, III and IV only",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "I, II, III and IV",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question": "Which of the following function is associated with calcium in plants? Formation of",
+      "options": [
+        {
+          "key": "A",
+          "text": "cell wall",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "ribosomes",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "proteins",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cell membrane",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question": "The diagram above shows the dentition of an organism. What organism is this?",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 25.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/sHExvLYWIfG15XZv2lwAAYrzYMIZ5AKbAXzYx66t.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "rabbit",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "cat",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "frog",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "man",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question": "The diagrams below show the dentition of an organism. The function of the teeth labelled X is for",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 26.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/fGPJod57jk2i87Bxr7xESKVrVN24gjwAESwZNGmH.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "biting and grasping",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "chewing and grinding",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "tearing and grasping",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "chewing and tearing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question": "The teeth which are absent in the young of the organism whose dentition is shown above is labelled",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 27.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/GhAb290SM03HcHYQvYOqroBwrwwTBQuWti4aELWb.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "W",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "X",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Y",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Z",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question": "The number of individuals that the environment can support over a long period of time is its",
+      "options": [
+        {
+          "key": "A",
+          "text": "growth rate",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "total capacity",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "population capacity",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "carrying capacity",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question": "A good site for secondary succession would be",
+      "options": [
+        {
+          "key": "A",
+          "text": "a sand dune",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "a bare rock",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "a land that has just had forest fire",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "a stretch of barren land",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question": "A population which exceeds its carrying capacity and then collapses is represented graphically by a",
+      "options": [
+        {
+          "key": "A",
+          "text": "bell-shaped curve",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "linear curve",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "sigmoid curve",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "skewed curve",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question": "The natural dwelling place of an organism is called its",
+      "options": [
+        {
+          "key": "A",
+          "text": "ecological niche",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "habitat",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "population",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "environment",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Which of the following ecological factors will result in food shortage?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Drought",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Low rate of reproduction",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Emigration",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Topography",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question": "Soil permeability refers to",
+      "options": [
+        {
+          "key": "A",
+          "text": "how easily water passes through the soil",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "the proportion of air in the soil",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "the proportion of water the soil holds",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "how well water rises up the soil",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "question": "Which of the following groups of organisms do not have members that can be called autotrophs?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Protists",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Mosses",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Chlorophyta",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Fungi",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "question": "Which of the following pyramids gives the most accurate picture of the relationships between at the various trophic levels in a food chain? A pyramid of",
+      "options": [
+        {
+          "key": "A",
+          "text": "numbers",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "energy",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "biomass",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "size",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "question": "Which of the following statements is not associated with pyramids of energy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Efficiency of energy transfer between trophic levels can be studied",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Comparisons of pyramids for different ecosystems can be made",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "More accurate comparisons of trophic levels",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Representation of numbers of organisms at different trophic levels",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "question": "Which of the following materials is not easily biodegradable?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Polythene bag",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "Cotton bag",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Hides and Skin bag",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Paper bag",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Which of the following pairs of organisms is in a mutualistic relationship?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hydra and Sea anemone",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Hermit crab and Sea anemone",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Dodder plant and Cocoa plant",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Mistletoe and Kolanut",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "question": "The establishment of game reserves and parks is a method of",
+      "options": [
+        {
+          "key": "A",
+          "text": "conserving natural resources",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "cultivating game",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "controlling pollution",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "cultural awareness",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "question": "Which of the following practices is not used in conserving water?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Afforestation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Damming",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Deforestation",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "Reforestation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "question": "Which of the following resources cannot be renewed?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Air",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Petroleum",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "Food crop",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Soil",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "question": "The type of variation illustrated above is",
+      "has_diagram": true,
+      "diagram_note": "Use the uploaded diagram mapped to question 42.",
+      "image_url": "https://images.assessly.ng/question-assets/waec/biology/2017/I4reijnHhXPlzDMEnB9Ma1SM0idbPhnzYmySc7ny.jpg",
+      "options": [
+        {
+          "key": "A",
+          "text": "continuous variation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "discontinuous variation",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "morphological variation",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "environmental variation",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "question": "Which of the following characters is not a morphological variation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "shape of the nose",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "colour of skin",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "colour of hair",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "tongue rolling",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "question": "An apple plant can produce sexually and asexually and it has 40 chromosomes in its leaf cells. How many chromosomes would be in each gamete and somatic cell?",
+      "options": [
+        {
+          "key": "A",
+          "text": "20 chromosomes in the gametes and 10 in the somatic cells",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "40 chromosomes in the gametes and 20 in the somatic cells",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "20 chromosomes in the gametes and 40 in the somatic cells",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "40 chromosomes in the gametes and 40 in the somatic cells",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "question": "Assuming that A is the gene for normal skin color and is dominant, while a is the gene for albinism and its recessive, what is the likely genotype of the couple which had 50% normal and 50% albino offspring?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AA, aa",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Aa, aa",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "AA, Aa",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Aa, Aa",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "question": "Which of the following statements is true about mutation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phenotype is not involved",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "Genotype is not involved",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "Artificial induction is not possible",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Genotype is involved",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "question": "One of the structural adaptations of mammals for movement on land is the development of the",
+      "options": [
+        {
+          "key": "A",
+          "text": "hollow bones",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "pentadactyl limb",
+          "is_correct": true
+        },
+        {
+          "key": "C",
+          "text": "fused thoracic bones",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "streamlined body",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Which of the following is NOT characteristic of social insects?",
+      "options": [
+        {
+          "key": "A",
+          "text": "All members are identical",
+          "is_correct": true
+        },
+        {
+          "key": "B",
+          "text": "There is division of labour",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "The members dwell in the same habitat",
+          "is_correct": false
+        },
+        {
+          "key": "D",
+          "text": "Some members protect the queen",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "question": "The gradual cumulative, adaptive and heritable changes in an organism over a long period of time resulting in new species is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "adaptation",
+          "is_correct": false
+        },
+        {
+          "key": "B",
+          "text": "survival",
+          "is_correct": false
+        },
+        {
+          "key": "C",
+          "text": "organic evolution",
+          "is_correct": true
+        },
+        {
+          "key": "D",
+          "text": "interspecific competition",
+          "is_correct": false
+        }
+      ]
+    }
+  ],
+  "theory_questions": [
+    {
+      "number": 1,
+      "question": "(a) (i) What is classification of living things?\n(ii) Name the scientist that developed the Binomial System of Classification\n(iii) State three reasons why it is necessary to classify living things\n(iv) List seven major groups into which taxonomists classify living things in order of hierarchy\n(b) state two features each which viruses have in common with: (i) living things\n(ii) non-living things\n(c) Name two viral disease each of:\n(i) plants\n(ii) humans"
+    },
+    {
+      "number": 2,
+      "question": "(a) State four characteristics of enzymes\n(b) (i) List two digestive enzymes produced in the duodenum of humans\n(ii) Name the substrate that each enzyme listed in 2(b)(i) acts on.\n(iii) State the products of each enzyme activity in 2(b)(ii)\n(c) (i) State one way in which chlorophyll is important in plants\n(ii) Name two macroelements that are required for the formation of chlorophyll in plants.\n(iii) State one deficiency symptom of each macroelement named in 2 (c) (ii) above\n(d) Outline the proce-dure used for testing for starch in a leaf"
+    },
+    {
+      "number": 3,
+      "question": "(a) Name one instrument used for collecting:\n(i) soil organism from a soil sample\n(ii) tiny insects from a leaf or a stem.\n(b) make a diagram 6 cm - 8 cm long of the instrument named in (a)(ii) above and label fully.\n(c) Explain briefly the relationship between three examples of symbiotic organisms."
+    },
+    {
+      "number": 4,
+      "question": "(a) A child belongs to blood group 0 and the mother be-longs to group B. With the aid of genetic cross, state the possible blood groups of the father.\n(b) (i) Name two forms of adaptive communication in animals\n(ii) State two reasons why organisms communicate with one an-other."
+    },
+    {
+      "number": 5,
+      "question": "(a) Explain briefly the process of perceiving smell in humans.\n(b) State the adaptive features of the egg of a domestic fowl\n(c) (i) What are autotrophs?\n(ii) Name two unicellular organisms that are autotrophs\n(d) State five functions of the World Health Organisation\n(e) Name two example each of plants and animals that live in a freshwater pond.\n(f) In the table below, state five differences between the skin of a mammal and the epidermis of a leaf.\n(g) A farmer has two plots of land; plots A and B. on Plot A the farmer planted several seeds of maize. On plot B, the farmer planted several seeds of maize and pepper in a small area. What type of competition would be observed on\n(i) Plot A\n(ii) Plot B"
+    },
+    {
+      "number": 6,
+      "question": "Study specimens F and G carefully and answer questions 2(a) and 2(b).\n(a) State three observable features of biological importance in: (i) specimen F; (ii) Specimen G.\n(b) (i) Classify specimens F and G as either stem tuber or root tuber. (ii) Give two reasons each for the answer in 2(b)(i).\nStudy specimens H and J and answer questions 2(c) to 2(e).\n(C) Classify specimens H and J into the class to which both belong.\n(d) (i) state four observable differences between specimens H and J. (ii) State four observable similarities between specimens H and J.\n(e) (i) State the feeding habits of each of specimens H and J. (ii) Name two observable features used for feeding in specimen J."
+    },
+    {
+      "number": 7,
+      "question": "Study specimens C, D and E carefully and answer questions 1(a) to 1(C).\n(a) (i) Name the phylum to which specimens C and E belong. (ii) State two reasons for the answer in 1(a)(i).\n(b) State three observable structural differences between the following specimens. (i)C and D (ii) C and E.\n(C) What is the relationship between specimens C and D?\n(d)(i)) Name the habitat of specimen D. (ii) State two ways in which specimen D is adapted to its habitat.\n(C) Make a drawing, 8cm - 10cm long of the dorsal view of specimen C and label fully."
+    },
+    {
+      "number": 8,
+      "question": "Study specimen R and answer questions 4(a) to 4(c).\n(a) (i) Name the phylum of specimen R. (ii) State two reasons for the answer in 4(a)(i).\n(iii) State the habitat of specimen R. (b) (i) State two structural features that adapt specimen R to its habitat. (ii) State three ways in which specimen R is of economic importance.\n(c) Make a drawing,8cm- 10cm long of the dorsal view of specimen R and label fully.\nStudy specimens S and T and answer questions 4(d) to 4(e).\n(d) What type of fruits are specimens S and T?\n(e) (i) State four observable differences between specimens S and T.\n(ii) State three observable similarities between specimens S and T."
+    }
+  ]
+}
