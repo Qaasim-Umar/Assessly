@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lora, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { PostHogProvider } from "@/components/PostHogProvider";
 import "./globals.css";
 
 const BASE_URL = "https://www.assessly.ng";
@@ -116,7 +117,12 @@ export default function RootLayout({
         />
       </head>
       <body className={`${lora.variable} ${plusJakartaSans.variable} min-h-screen bg-white`}>
-        {children}
+        <PostHogProvider
+          apiKey={process.env.POSTHOG_KEY!}
+          host={process.env.POSTHOG_HOST ?? "https://us.i.posthog.com"}
+        >
+          {children}
+        </PostHogProvider>
         <Analytics />
       </body>
     </html>
