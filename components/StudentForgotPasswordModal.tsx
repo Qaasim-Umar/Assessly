@@ -100,7 +100,7 @@ export default function StudentForgotPasswordModal({
             {step === "email" && "For Individual students with a real email on their account."}
             {step === "code" && (
               <>
-                Enter the 8-digit code sent to{" "}
+                Enter the 6-digit code sent to{" "}
                 <strong className="text-gray-900">{email.trim().toLowerCase()}</strong>.
               </>
             )}
@@ -155,20 +155,20 @@ export default function StudentForgotPasswordModal({
         {/* ── Step 2: code + new password ── */}
         {step === "code" && (
           <form onSubmit={handleVerifyAndUpdate} className="px-6 py-6 space-y-4">
-            {/* 8-digit OTP */}
+            {/* 6-digit OTP */}
             <div>
               <label htmlFor="student-reset-code" className="block text-xs font-semibold text-gray-700">
-                8-digit code
+                6-digit code
               </label>
               <input
                 id="student-reset-code"
                 type="text"
                 inputMode="numeric"
-                pattern="\d{8}"
-                maxLength={8}
+                pattern="\d{6}"
+                maxLength={6}
                 value={code}
-                onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 8))}
-                placeholder="00000000"
+                onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                placeholder="000000"
                 autoComplete="one-time-code"
                 autoFocus
                 required
@@ -230,7 +230,7 @@ export default function StudentForgotPasswordModal({
 
             <button
               type="submit"
-              disabled={loading || code.length < 8}
+              disabled={loading || code.length < 6}
               className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-green-700 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60"
             >
               {loading && <LoaderCircle size={17} className="animate-spin" aria-hidden="true" />}
